@@ -219,7 +219,11 @@ div#mc_embed_signup {
 
 .gslide-desc {
     color:#083429 !important;
-    font-family: clone-rounded-latin;
+}
+
+.gallery-desc {
+    display: block;
+    margin-top: -30px;
 }
 
 .bg-mountain {
