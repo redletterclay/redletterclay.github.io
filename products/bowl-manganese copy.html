@@ -15,24 +15,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
   </head>
-  <div class="container-fluid nav-stick sticky-top bg-white">
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <h1 class="navbar-brand fst-italic"><a href="/index.html" class="active">Red Letter Clay</a></h1>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse align-items-center justify-content-end" id="navbarSupportedContent">
-            <h3 class="navbar-nav pe-5"><a href="/shop.html">Shop</a></h3>
-            <h3 class="navbar-nav pe-5"><a href="/gallery.html" class="active">Gallery</a></h3>
-            <!-- <h3 class="navbar-nav pe-5"><a href="/journal/">Journal</a></h3> -->
-            <h3 class="navbar-nav pe-5"><a href="#calendar">Calendar</a></h3>
-            <!-- <h3 class="navbar-nav pe-5"><a href="/about.html">About</a></h3> -->
-            <h3 class="navbar-nav animate__animated animate__fadeIn"><button class="snipcart-checkout border border-0 cart pb-2"><i class="fa-solid fa-bag-shopping"></i></button></h3>
-        </div>
-      </div>
-    </nav>
-  </div>
   <script>
     window.SnipcartSettings = {
       publicApiKey: "NDA0M2E4MTAtNjEzOC00ZmI1LTk3ZDgtYjRmZmE3MjY1MjI4NjM4MjA3MTM4MDAzMDcwNjM2",
@@ -42,80 +24,87 @@
   
     (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('src[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
   </script>
-  <body>
-    <main>
-    <div class="container-fluid bg-dark pt-2 pb-2">
-      <div class="container gallery">
-    <div class="animate__animated fade-in">
-      <a href="/assets/img/gallery/gallery-01.jpg" class="img-fluid glightbox" data-zoomable="false">
-      <img src="/assets/img/gallery/gallery-01.jpg" class="img-fluid" /></a>
-    </div>
-    <div class="d-inline-flex mt-2">
-      <div class="me-2">
-        <a href="/assets/img/gallery/gallery-02.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/gallery-02.jpg" class="img-fluid cursor-zoom" /></a>
-      </div>
-      <div>
-      <a href="/assets/img/gallery/gallery-03.jpg" class="img-fluid glightbox" data-zoomable="false">
-        <img src="/assets/img/gallery/gallery-03.jpg" class="img-fluid" /></a>
-      </div>
-    </div>
-    <div class="mt-2">
-      <a href="/assets/img/gallery/gallery-07.jpg" class="img-fluid glightbox" data-zoomable="false">
-      <img src="/assets/img/gallery/gallery-07.jpg" class="img-fluid" /></a>
-    </div>
-    <div class="d-inline-flex mt-2">
-      <div>
-        <a href="/assets/img/gallery/gallery-04.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/gallery-04.jpg" class="img-fluid" /></a>
-      </div>
-      <div class="mx-2">
-        <a href="/assets/img/gallery/gallery-05.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/gallery-05.jpg" class="img-fluid" /></a>
-      </div>
-      <div>
-        <a href="/assets/img/gallery/gallery-06.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/gallery-06.jpg" class="img-fluid" /></a>
-      </div>
-    </div>
-    <div class="mt-2">
-      <a href="/assets/img/gallery/gallery-08.jpg" class="img-fluid glightbox" data-zoomable="false">
-      <img src="/assets/img/gallery/gallery-08.jpg" class="img-fluid" /></a>
-    </div>
-    <div class="d-inline-flex mt-2">
-      <div class="me-2">
-        <a href="/assets/img/gallery/gallery-09.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/gallery-09.jpg" class="img-fluid cursor-zoom" /></a>
-      </div>
-      <div>
-      <a href="/assets/img/gallery/gallery-10.jpg" class="img-fluid glightbox" data-zoomable="false">
-        <img src="/assets/img/gallery/gallery-10.jpg" class="img-fluid" /></a>
-      </div>
-    </div>
-    <div class="d-inline-flex mt-2">
-      <div>
-        <a href="/assets/img/gallery/gallery-11.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/gallery-11.jpg" class="img-fluid" /></a>
-      </div>
-      <div class="mx-2">
-        <a href="/assets/img/gallery/gallery-12.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/gallery-12.jpg" class="img-fluid" /></a>
-      </div>
-      <div>
-        <a href="/assets/img/gallery/gallery-13.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/gallery-13.jpg" class="img-fluid" /></a>
-      </div>
-    </div>
-    <div class="d-inline-flex mt-2">
-      <div class="me-2">
-        <a href="/assets/img/gallery/gallery-14.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/gallery-14.jpg" class="img-fluid cursor-zoom" /></a>
-      </div>
-      <div>
-      <a href="/assets/img/gallery/csong-blue-plate.jpg" class="img-fluid glightbox flex-fill" data-glightbox=" description: .gallery-desc" data-zoomable="false">
-        <img src="/assets/img/gallery/csong-blue-plate.jpg" class="img-fluid" /></a>
-        <div class="glightbox-dest gallery-desc">
-          <h5 class="text-center">Photo + Dessert by Christina Song</h5>
+  <div class="container-fluid nav-stick sticky-top bg-white">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <h1 class="navbar-brand fst-italic"><a href="/index.html" class="active">Red Letter Clay</a></h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse align-items-center justify-content-end" id="navbarSupportedContent">
+            <h3 class="navbar-nav pe-5"><a href="/shop.html" class="active">Shop</a></h3>
+            <h3 class="navbar-nav pe-5"><a href="/gallery.html">Gallery</a></h3>
+            <!-- <h3 class="navbar-nav pe-5"><a href="/journal/">Journal</a></h3> -->
+            <h3 class="navbar-nav pe-5"><a href="#calendar">Calendar</a></h3>
+            <!-- <h3 class="navbar-nav pe-5"><a href="/about.html">About</a></h3> -->
+            <h3 class="navbar-nav animate__animated animate__fadeIn"><button class="snipcart-checkout border border-0 cart pb-2"><i class="fa-solid fa-bag-shopping"></i></button></h3>
         </div>
       </div>
-    </div>
-    <div class="mt-2">
-      <a href="/assets/img/gallery/gallery-15.jpg" class="img-fluid glightbox flex-fill" data-zoomable="false">
-      <img src="/assets/img/gallery/gallery-15.jpg" class="img-fluid" /></a>
-    </div>
-</div>
-
+    </nav>
+  </div>
+  <body>
+    <main>
+    <div class="container pt-5">
+      <section class="product animate__animated animate__fadeIn">
+        <div class="container-fluid origin">
+          <div class="row">
+            <div class="col-lg-6 mb-5">    
+              <p><a href="/assets/img/gallery/gallery-02.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/gallery-02.jpg" class="img-fluid  cursor-zoom"></a></p>
+              
+              <div class="d-flex">
+                <div class="pe-3">
+                  <a href="/assets/img/gallery/gallery-03.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/gallery-03.jpg" class="img-fluid  cursor-zoom"></a></p>
+                </div>
+                <div>
+                  <a href="/assets/img/gallery/gallery-03.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/gallery-03.jpg" class="img-fluid  cursor-zoom"></a></p>
+                </div>
+              </div>
+              
+            </div>
+            <div class="col-lg-6">
+              <h2 class="text-black pe-2 mb-4">Manganese Drip Bowl - $38</h2>
+              <article class="ps-3"><p>White glossy glazed rice/side bowl. Inside is a fluid green glaze with metallic drips. A great pairing for rice, or side dishes.
+</p></article>
+              
+                <h5 class="alt mt-4 fw-semibold fst-italic">DETAILS</h5>
+                <ul class="details">
+                  
+                  <li><i class="fa-solid fa-caret-right pe-2 opacity-75"></i>Holds: 15 oz</li>
+                  
+                  
+                  <li><i class="fa-solid fa-caret-right pe-2 opacity-75"></i>Weight: 0.8 lbs</li>
+                  
+                  
+                  <li><i class="fa-solid fa-caret-right pe-2 opacity-75"></i>Height: 4.25 in</li>
+                  
+                  
+                  <li><i class="fa-solid fa-caret-right pe-2 opacity-75"></i>Width: 3.75 in</li>
+                  
+                </ul>
+              
+              <div class="d-flex justify-content-end animate__animated animate__flipInX animate__delay-1s">
+                <button class="btn btn-primary pt-3 pb-2 mb-3 rounded-pill snipcart-add-item w-50"
+                  data-item-id="C0001MANG"
+                  data-item-url="https://www.redletterclay.com/products/bowl-manganese%20copy.html"
+                  data-item-price="38"
+                  data-item-description="White glossy glazed rice/side bowl. Inside is a fluid green glaze with metallic drips. A great pairing for rice, or side dishes.
+"
+                  data-item-image="/assets/img/gallery/gallery-02.jpg"
+                  data-item-name="Manganese Drip Bowl"
+                  >
+                  <i class="fa-solid fa-circle-plus p-2"></i> Add to Cart
+                </button>
+              </div>
+              <blockquote class="mt-3 pt-4 pb-2 animate__animated animate__flipInX animate__delay-1s">
+                <h5 class="text-end text-uppercase alt opacity-75">Food safe <i class="fa-solid fa-utensils fc-1"></i></h5>
+                <h5 class="text-end text-uppercase alt opacity-75">Microwave and dishwasher safe <i class="fa-solid fa-shield fc-1"></i></h5>
+              </blockquote>
+              <h6 class="text-end">SKU: <span class="opacity-75">C0001MANG</span></h6>
+              <h3 class="pt-5 text-center"><a href="/shop.html"><i class="fa-solid fa-angles-left"></i> Continue Shopping</h3></a>
+            </div>
+          </div>
+        </div>
+        </section>
      </div>
      <div class="container-fluid hero-field">
     </div>

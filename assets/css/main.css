@@ -1,0 +1,373 @@
+.fc-1 {
+  color: #DF4F4F;
+}
+
+.fc-2 {
+  color: #F9E1B7;
+}
+
+.fc-3 {
+  color: #6E4E3C;
+}
+
+.fc-4 {
+  color: #FFEEEF;
+}
+
+.fc-5 {
+  color: #FFCED1;
+}
+
+.fc-6 {
+  color: #8C5C40;
+}
+
+body {
+  background: #ffffff;
+  color: #6E4E3C;
+  font-family: "Gelasio", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 100;
+  line-height: 2rem;
+  font-size: 1.25em;
+}
+
+body span.alt-font {
+  font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+h1 {
+  font-family: "Bitter", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 4.8rem;
+  line-height: 4.4rem;
+}
+
+h1.ital {
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.2rem;
+}
+
+h1.navbar-brand {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2.5rem;
+  letter-spacing: 0.06rem;
+}
+
+h1.rlc {
+  color: #DF4F4F;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-kerning: 4%;
+}
+
+h2 {
+  font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #8C5C40;
+  font-weight: 500;
+  font-size: 2.2rem;
+  line-height: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+h3 {
+  font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #8C5C40;
+  font-weight: 400;
+  line-height: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+h3.navbar-nav {
+  color: black;
+}
+
+h4 {
+  font-family: "Gelasio", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.9rem;
+}
+
+h5 {
+  font-family: "Gelasio", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 2.1rem;
+}
+
+h5.alt, h4.alt {
+  font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  letter-spacing: 0.05em;
+}
+
+h6 {
+  font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.bg-dark {
+  color: white;
+}
+
+.cart {
+  background-color: white;
+  display: inline-block;
+  min-width: 40px;
+  animation: fadeIn;
+}
+
+.snipcart-modal__container {
+  z-index: 999;
+}
+
+.nav-stick {
+  z-index: 1;
+}
+
+.card {
+  --bs-card-spacer-y: 0rem;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-cap-padding-y: 0rem;
+  --bs-card-cap-padding-x: 1rem;
+}
+
+blockquote {
+  border-color: #FFEEEF;
+  border-style: solid;
+  border-top-width: 4px;
+  border-bottom-width: 4px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+}
+
+main a {
+  color: #DF4F4F;
+  text-decoration: none;
+  border-style: dotted;
+  border-bottom-width: 2px;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+
+.navbar-nav a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  padding-bottom: 1px;
+  background-image: linear-gradient(#DF4F4F 0 0);
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, background-position 0s 0.3s; /*change after the size immediately*/
+}
+
+.navbar-nav a:hover {
+  border-color: #DF4F4F;
+  background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 2px;
+}
+
+.hero-footer a, .sub-footer a {
+  text-decoration: none;
+  border: 0px;
+}
+
+.navbar-nav a.active {
+  color: #DF4F4F;
+}
+
+h1.navbar-brand a.active {
+  color: #DF4F4F !important;
+  text-decoration: none;
+}
+
+ul.details {
+  font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: none;
+  list-style: none;
+  font-size: 1.25rem;
+  padding-left: 0.75em;
+}
+
+.hero-footer a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding-bottom: 1px;
+  background-image: linear-gradient(#DF4F4F 0 0);
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, background-position 0s 0.3s; /*change after the size immediately*/
+}
+
+.hero-footer a:hover {
+  border-color: #DF4F4F;
+  background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 2px;
+}
+
+.btn-secondary {
+  font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+  background: #F9E1B7;
+  filter: drop-shadow(2px 4px 0px #F9E1B7);
+  border: 0;
+  transition: 1s;
+}
+
+.btn-secondary:hover {
+  color: black;
+  background: #F9E1B7;
+  filter: drop-shadow(2px 4px 0px #8C5C40);
+}
+
+.btn-secondary:focus {
+  color: black !important;
+  background-color: #FFCED1 !important;
+}
+
+.btn-primary {
+  font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+  background-color: #DF4F4F;
+  filter: drop-shadow(2px 4px 0px #A73838);
+  border: 0;
+}
+
+.btn-primary:hover {
+  background-color: #FFCED1;
+  filter: drop-shadow(2px 4px 0px #6E4E3C);
+  color: #6E4E3C;
+}
+
+.btn-primary:focus {
+  background-color: #DF4F4F !important;
+  color: white;
+}
+
+.carousel-item {
+  transition: transform 1s ease;
+}
+
+.fade-in {
+  animation: fadeIn;
+  animation-duration: 2s;
+}
+
+.hero {
+  background-image: url("/assets/img/hero-jars.png");
+  background-size: cover;
+  position: cover;
+  background-position: bottom center;
+  min-height: 90vh;
+}
+
+.sub-footer {
+  background-image: url("/assets/img/paper.png");
+  position: fixed;
+  background-position: left left;
+  background-color: #F9E1B7;
+  border-color: white;
+  border-top-width: 4px;
+  border-bottom-width: 4px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-style: solid;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+  height: 100%;
+  width: 100vw;
+  right: 0;
+  top: 0;
+  left: 0;
+}
+
+.hero-field {
+  background-image: url("/assets/img/field.png");
+  background-size: cover;
+  position: relative;
+  background-position: top center;
+  min-height: 443px;
+}
+
+.hero-footer {
+  background-size: fixed;
+  -webkit-background-size: fixed;
+  -moz-background-size: fixed;
+  -o-background-size: fixed;
+  background-position: top center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/hero-footer.png");
+}
+
+.hero-footer h3 {
+  color: white !important;
+}
+
+.border-primary {
+  --bs-border-opacity: 1;
+  border-color: rgba(110, 78, 60, var(--bs-border-opacity)) !important;
+}
+
+.event {
+  outline: 4px solid #6E4E3C;
+  outline-offset: -15px;
+}
+
+.ls-0 {
+  letter-spacing: 0px;
+}
+
+button#mc-embedded-subscribe.button {
+  background-color: #E2D3C1;
+  color: #351F0D;
+  font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0rem;
+  background-color: #F9E1B7;
+  filter: drop-shadow(2px 4px 0px #6E4E3C);
+  border: 0;
+  text-transform: capitalize;
+  font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 200px;
+  transition: 0.3s;
+}
+
+button#mc-embedded-subscribe.button:hover {
+  background-color: #FFCED1;
+}
+
+button:hover i, a.btn:hover i {
+  animation: tada 1s infinite linear;
+}
+
+div#mc_embed_signup input {
+  display: inline-block;
+}
+
+input.email {
+  display: inline-block;
+  min-height: 50px;
+  padding: 6px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 0px;
+  box-shadow: rgba(10, 10, 10, 0.05) 0 1px 4px 0 inset;
+  width: 95%;
+}
+
+/*# sourceMappingURL=main.css.map */
