@@ -263,14 +263,6 @@ ul.details {
   animation-duration: 2s;
 }
 
-.hero {
-  background-image: url("/assets/img/hero-jars.png");
-  background-size: cover;
-  position: cover;
-  background-position: bottom center;
-  min-height: 90vh;
-}
-
 .sub-footer {
   background-image: url("/assets/img/Paper.png");
   position: fixed;
