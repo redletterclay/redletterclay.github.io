@@ -24,7 +24,7 @@
   
     (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('src[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
   </script>
-  <div class="container-fluid nav-stick sticky-top bg-white">
+  <div class="container-fluid nav-stick sticky-top bg-white fade-in">
     <nav class="navbar navbar-expand-lg">
       <div class="container">
         <h1 class="navbar-brand fst-italic"><a href="/" class="active">Red Letter Clay</a></h1>
@@ -45,8 +45,8 @@
   <body>
     <main>
     <div class="container pt-5">
-      <div class="row">
-    <div class="col-md-12 col-lg-4 align-self-center text-center">
+      <div class="row animate__animated animate__fadeIn">
+    <div class="col-md-12 col-lg-4  text-start align-self-center">
         <h3 class="pt-3 pb-5 me-5 fst-italic fw-medium">Thoughtfully made ceramics<br>for everyday enjoyment</h3>
     </div>
     <div class="col-md-12 col-lg-4">
@@ -59,55 +59,49 @@
         Insurance is added to orders over $100.</p>
     </div>
 </div>
-      <div class="container mt-5">
+      <div class="mt-5">
     <div class="d-flex flex-wrap flex-row animate__animated animate__slideInUp">
         
-        <div class="card col-sm-12 col-md-6 col-lg-4 py-4 border border-0">
-            <h2 class="card-title text-center">
-                Carved Bowl
-            </h2>
+        
+        <div class="card col-sm-12 col-md-6 col-lg-4 p-2 mt-5 border border-0">
             <div class="card-header bg-white border border-0">
                 <div class="d-flex align-items-center justify-content-between">
                     
                     <div>
-                    <h5 class="text-end">
-                        <i class="fa-solid fa-filter"></i> Wheel Thrown
-                    </a></h5>
+                        <h5 class="text-start alt sale text-danger"><i class="fa-solid fa-certificate"></i> SALE</h5>
                     </div>
                     
-                    
-                    <div>
-                        <h5 class="text-start alt sale text-danger"><i class="fa-solid fa-certificate"></i> ON SALE</h5>
-                    </div>
-                    
+                    <h2 class="card-title text-center fw-semibold">
+                        Carved Bowl
+                    </h2>
                 </div>
             </div>
             <div class="card-body border border-0">    
-                <a href="/products/carved-bowl.html"><img src="/assets/img/shop/live/carved-bowl-1.png" class="img-fluid"></a>
+                <a href="/products/B-0001-CRVD.html"><img src="/assets/img/shop/live/B-0001-CRVD-thumb.png" class="img-fluid"></a>
                 <p>
                     
 
                 </p>
                 <div class="d-flex align-items-center justify-content-between">
                     <div>
-                    <h6 class="text-end"><a href="/products/carved-bowl.html" class="btn btn-secondary pt-3 pb-2 px-5"
-                        data-item-id="B-0001-CRV"
-                        data-item-url="https://www.redletterclay.com/products/carved-bowl.html"
+                    <h6 class="text-end"><a href="/products/B-0001-CRVD.html" class="btn btn-secondary pt-3 pb-2 px-5"
+                        data-item-id="B-0001-CRVD"
+                        data-item-url="http://localhost:4000/products/B-0001-CRVD.html"
                         data-item-price="36"
                         data-item-description="A carved brown bowl perfect for entrees. Inside, white glaze drips to the center over a honey colored glaze.
 "
-                        data-item-image="/assets/img/shop/live/carved-bowl-1.png"
+                        data-item-image="B-0001-CRVD-1.jpg"
                         data-item-name="Carved Bowl"
                         >
                         <i class="fa-solid fa-tag"></i> Details
                     </a>
-                    <a href="/products/carved-bowl.html" class="invisible snipcart-add-item"
-                        data-item-id="B-0001-CRV"
-                        data-item-url="https://www.redletterclay.com/products/carved-bowl.html"
+                    <a href="/products/B-0001-CRVD.html" class="invisible snipcart-add-item"
+                        data-item-id="B-0001-CRVD"
+                        data-item-url="http://localhost:4000/products/B-0001-CRVD.html"
                         data-item-price="36"
                         data-item-description="A carved brown bowl perfect for entrees. Inside, white glaze drips to the center over a honey colored glaze.
 "
-                        data-item-image="/assets/img/shop/live/carved-bowl-1.png"
+                        data-item-image="B-0001-CRVD-1.jpg"
                         data-item-name="Carved Bowl"
                         >
                     </a>
@@ -120,53 +114,340 @@
             </div>
         </div>
         
-        <div class="card col-sm-12 col-md-6 col-lg-4 py-4 border border-0">
-            <h2 class="card-title text-center">
-                Agateware Box
-            </h2>
+        <div class="card col-sm-12 col-md-6 col-lg-4 p-2 mt-5 border border-0">
             <div class="card-header bg-white border border-0">
                 <div class="d-flex align-items-center justify-content-between">
                     
-                    <div>
-                    <h5 class="text-end">
-                        <i class="fa-solid fa-filter"></i> Handbuilt Pinch Pot
-                    </a></h5>
-                    </div>
+                    <div><h5>&nbsp;</h5></div>
                     
-                    
-                    <div>
-                        <h5 class="text-start alt sale text-danger"><i class="fa-solid fa-certificate"></i> ON SALE</h5>
-                    </div>
-                    
+                    <h2 class="card-title text-center fw-semibold">
+                        Wide Bowl
+                    </h2>
                 </div>
             </div>
             <div class="card-body border border-0">    
-                <a href="/products/green-box.html"><img src="/assets/img/shop/live/green-box-1.png" class="img-fluid"></a>
+                <a href="/products/B-0002-GWHT.html"><img src="/assets/img/shop/live/B-0002-GWHT-thumb.png" class="img-fluid rounded-4"></a>
                 <p>
                     
 
                 </p>
                 <div class="d-flex align-items-center justify-content-between">
                     <div>
-                    <h6 class="text-end"><a href="/products/green-box.html" class="btn btn-secondary pt-3 pb-2 px-5"
-                        data-item-id="NK-0001-BOX"
-                        data-item-url="https://www.redletterclay.com/products/green-box.html"
-                        data-item-price="80"
-                        data-item-description="A treasure box made from various stained clay bodies pressed together (known as agateware).
+                    <h6 class="text-end"><a href="/products/B-0002-GWHT.html" class="btn btn-secondary pt-3 pb-2 px-5"
+                        data-item-id="B-0002-GWHT"
+                        data-item-url="http://localhost:4000/products/B-0002-GWHT.html"
+                        data-item-price="40"
+                        data-item-description="This wide, footed bowl creates an elegant tablescape for your meals. Its rim drips with copper green wash with variation that makes each one-of-a-kind. Slip cast from an original wheel-thrown design.
 "
-                        data-item-image="/assets/img/shop/live/green-box-1.png"
-                        data-item-name="Agateware Box"
+                        data-item-image="B-0002-GWHT-1.jpg"
+                        data-item-name="Wide Bowl"
                         >
                         <i class="fa-solid fa-tag"></i> Details
                     </a>
-                    <a href="/products/green-box.html" class="invisible snipcart-add-item"
+                    <a href="/products/B-0002-GWHT.html" class="invisible snipcart-add-item"
+                        data-item-id="B-0002-GWHT"
+                        data-item-url="http://localhost:4000/products/B-0002-GWHT.html"
+                        data-item-price="40"
+                        data-item-description="This wide, footed bowl creates an elegant tablescape for your meals. Its rim drips with copper green wash with variation that makes each one-of-a-kind. Slip cast from an original wheel-thrown design.
+"
+                        data-item-image="B-0002-GWHT-1.jpg"
+                        data-item-name="Wide Bowl"
+                        >
+                    </a>
+                    </h6>
+                    </div>
+                    <div>
+                        <h4 class="text-center alt">$40</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-sm-12 col-md-6 col-lg-4 p-2 mt-5 border border-0">
+            <div class="card-header bg-white border border-0">
+                <div class="d-flex align-items-center justify-content-between">
+                    
+                    <div><h5>&nbsp;</h5></div>
+                    
+                    <h2 class="card-title text-center fw-semibold">
+                        Light Blue Bowl
+                    </h2>
+                </div>
+            </div>
+            <div class="card-body border border-0">    
+                <a href="/products/B-0003-MSNBLUE.html"><img src="/assets/img/shop/live/B-0003-MSNBLUE-thumb.png" class="img-fluid rounded-4"></a>
+                <p>
+                    
+
+                </p>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                    <h6 class="text-end"><a href="/products/B-0003-MSNBLUE.html" class="btn btn-secondary pt-3 pb-2 px-5"
+                        data-item-id="B-0003-MSNBLUE"
+                        data-item-url="http://localhost:4000/products/B-0003-MSNBLUE.html"
+                        data-item-price="40"
+                        data-item-description="Made from mason-stained clay, this bowl was thrown on the wheel and covered in a clear glaze to showcase the clay body. Entree sized.
+"
+                        data-item-image="B-0003-MSNBLUE-1.jpg"
+                        data-item-name="Light Blue Bowl"
+                        >
+                        <i class="fa-solid fa-tag"></i> Details
+                    </a>
+                    <a href="/products/B-0003-MSNBLUE.html" class="invisible snipcart-add-item"
+                        data-item-id="B-0003-MSNBLUE"
+                        data-item-url="http://localhost:4000/products/B-0003-MSNBLUE.html"
+                        data-item-price="40"
+                        data-item-description="Made from mason-stained clay, this bowl was thrown on the wheel and covered in a clear glaze to showcase the clay body. Entree sized.
+"
+                        data-item-image="B-0003-MSNBLUE-1.jpg"
+                        data-item-name="Light Blue Bowl"
+                        >
+                    </a>
+                    </h6>
+                    </div>
+                    <div>
+                        <h4 class="text-center alt">$40</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-sm-12 col-md-6 col-lg-4 p-2 mt-5 border border-0">
+            <div class="card-header bg-white border border-0">
+                <div class="d-flex align-items-center justify-content-between">
+                    
+                    <div><h5>&nbsp;</h5></div>
+                    
+                    <h2 class="card-title text-center fw-semibold">
+                        Mug
+                    </h2>
+                </div>
+            </div>
+            <div class="card-body border border-0">    
+                <a href="/products/C-0001-DUNE.html"><img src="/assets/img/shop/live/C-0001-DUNE-thumb.png" class="img-fluid rounded-4"></a>
+                <p>
+                    
+
+                </p>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                    <h6 class="text-end"><a href="/products/C-0001-DUNE.html" class="btn btn-secondary pt-3 pb-2 px-5"
+                        data-item-id="C-0001-DUNE"
+                        data-item-url="http://localhost:4000/products/C-0001-DUNE.html"
+                        data-item-price="38"
+                        data-item-description="An ample mug for coffee and tea fans. Soft curves give it a handmade look and feel. Dipped into a sandy colored desert glaze.
+"
+                        data-item-image="C-0001-DUNE-1.jpg"
+                        data-item-name="Mug"
+                        >
+                        <i class="fa-solid fa-tag"></i> Details
+                    </a>
+                    <a href="/products/C-0001-DUNE.html" class="invisible snipcart-add-item"
+                        data-item-id="C-0001-DUNE"
+                        data-item-url="http://localhost:4000/products/C-0001-DUNE.html"
+                        data-item-price="38"
+                        data-item-description="An ample mug for coffee and tea fans. Soft curves give it a handmade look and feel. Dipped into a sandy colored desert glaze.
+"
+                        data-item-image="C-0001-DUNE-1.jpg"
+                        data-item-name="Mug"
+                        >
+                    </a>
+                    </h6>
+                    </div>
+                    <div>
+                        <h4 class="text-center alt">$38</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-sm-12 col-md-6 col-lg-4 p-2 mt-5 border border-0">
+            <div class="card-header bg-white border border-0">
+                <div class="d-flex align-items-center justify-content-between">
+                    
+                    <div><h5>&nbsp;</h5></div>
+                    
+                    <h2 class="card-title text-center fw-semibold">
+                        Mug
+                    </h2>
+                </div>
+            </div>
+            <div class="card-body border border-0">    
+                <a href="/products/C-0002-GWHT.html"><img src="/assets/img/shop/live/C-0002-GWHT-thumb.png" class="img-fluid rounded-4"></a>
+                <p>
+                    
+
+                </p>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                    <h6 class="text-end"><a href="/products/C-0002-GWHT.html" class="btn btn-secondary pt-3 pb-2 px-5"
+                        data-item-id="C-0002-GWHT"
+                        data-item-url="http://localhost:4000/products/C-0002-GWHT.html"
+                        data-item-price="38"
+                        data-item-description="An ample mug for coffee and tea fans. Glossy white glaze with copper-green drips and a metallic black rim.
+"
+                        data-item-image="C-0002-GWHT-1.jpg"
+                        data-item-name="Mug"
+                        >
+                        <i class="fa-solid fa-tag"></i> Details
+                    </a>
+                    <a href="/products/C-0002-GWHT.html" class="invisible snipcart-add-item"
+                        data-item-id="C-0002-GWHT"
+                        data-item-url="http://localhost:4000/products/C-0002-GWHT.html"
+                        data-item-price="38"
+                        data-item-description="An ample mug for coffee and tea fans. Glossy white glaze with copper-green drips and a metallic black rim.
+"
+                        data-item-image="C-0002-GWHT-1.jpg"
+                        data-item-name="Mug"
+                        >
+                    </a>
+                    </h6>
+                    </div>
+                    <div>
+                        <h4 class="text-center alt">$38</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-sm-12 col-md-6 col-lg-4 p-2 mt-5 border border-0">
+            <div class="card-header bg-white border border-0">
+                <div class="d-flex align-items-center justify-content-between">
+                    
+                    <div><h5>&nbsp;</h5></div>
+                    
+                    <h2 class="card-title text-center fw-semibold">
+                        Concave Cup
+                    </h2>
+                </div>
+            </div>
+            <div class="card-body border border-0">    
+                <a href="/products/C-0003-GWHT.html"><img src="/assets/img/shop/live/C-0003-GWHT-thumb.png" class="img-fluid rounded-4"></a>
+                <p>
+                    
+
+                </p>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                    <h6 class="text-end"><a href="/products/C-0003-GWHT.html" class="btn btn-secondary pt-3 pb-2 px-5"
+                        data-item-id="C-0003-GWHT"
+                        data-item-url="http://localhost:4000/products/C-0003-GWHT.html"
+                        data-item-price="30"
+                        data-item-description="A concave cup that feels great in your hand. Glossy white glaze with copper-green drips and a metallic black rim.
+"
+                        data-item-image="C-0003-GWHT-1.jpg"
+                        data-item-name="Concave Cup"
+                        >
+                        <i class="fa-solid fa-tag"></i> Details
+                    </a>
+                    <a href="/products/C-0003-GWHT.html" class="invisible snipcart-add-item"
+                        data-item-id="C-0003-GWHT"
+                        data-item-url="http://localhost:4000/products/C-0003-GWHT.html"
+                        data-item-price="30"
+                        data-item-description="A concave cup that feels great in your hand. Glossy white glaze with copper-green drips and a metallic black rim.
+"
+                        data-item-image="C-0003-GWHT-1.jpg"
+                        data-item-name="Concave Cup"
+                        >
+                    </a>
+                    </h6>
+                    </div>
+                    <div>
+                        <h4 class="text-center alt">$30</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-sm-12 col-md-6 col-lg-4 p-2 mt-5 border border-0">
+            <div class="card-header bg-white border border-0">
+                <div class="d-flex align-items-center justify-content-between">
+                    
+                    <div><h5>&nbsp;</h5></div>
+                    
+                    <h2 class="card-title text-center fw-semibold">
+                        Mug
+                    </h2>
+                </div>
+            </div>
+            <div class="card-body border border-0">    
+                <a href="/products/C-0004-DUNE.html"><img src="/assets/img/shop/live/C-0004-DUNE-thumb.png" class="img-fluid rounded-4"></a>
+                <p>
+                    
+
+                </p>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                    <h6 class="text-end"><a href="/products/C-0004-DUNE.html" class="btn btn-secondary pt-3 pb-2 px-5"
+                        data-item-id="C-0004-DUNE"
+                        data-item-url="http://localhost:4000/products/C-0004-DUNE.html"
+                        data-item-price="38"
+                        data-item-description="An ample mug for coffee and tea fans. Dipped into a sandy colored desert glaze.
+"
+                        data-item-image="C-0004-DUNE-1.jpg"
+                        data-item-name="Mug"
+                        >
+                        <i class="fa-solid fa-tag"></i> Details
+                    </a>
+                    <a href="/products/C-0004-DUNE.html" class="invisible snipcart-add-item"
+                        data-item-id="C-0004-DUNE"
+                        data-item-url="http://localhost:4000/products/C-0004-DUNE.html"
+                        data-item-price="38"
+                        data-item-description="An ample mug for coffee and tea fans. Dipped into a sandy colored desert glaze.
+"
+                        data-item-image="C-0004-DUNE-1.jpg"
+                        data-item-name="Mug"
+                        >
+                    </a>
+                    </h6>
+                    </div>
+                    <div>
+                        <h4 class="text-center alt">$38</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-sm-12 col-md-6 col-lg-4 p-2 mt-5 border border-0">
+            <div class="card-header bg-white border border-0">
+                <div class="d-flex align-items-center justify-content-between">
+                    
+                    <div>
+                        <h5 class="text-start alt sale text-danger"><i class="fa-solid fa-certificate"></i> SALE</h5>
+                    </div>
+                    
+                    <h2 class="card-title text-center fw-semibold">
+                        Treasure Box
+                    </h2>
+                </div>
+            </div>
+            <div class="card-body border border-0">    
+                <a href="/products/NK-0001-BOX.html"><img src="/assets/img/shop/live/NK-0001-BOX-thumb.png" class="img-fluid"></a>
+                <p>
+                    
+
+                </p>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                    <h6 class="text-end"><a href="/products/NK-0001-BOX.html" class="btn btn-secondary pt-3 pb-2 px-5"
                         data-item-id="NK-0001-BOX"
-                        data-item-url="https://www.redletterclay.com/products/green-box.html"
+                        data-item-url="http://localhost:4000/products/NK-0001-BOX.html"
                         data-item-price="80"
                         data-item-description="A treasure box made from various stained clay bodies pressed together (known as agateware).
 "
-                        data-item-image="/assets/img/shop/live/green-box-1.png"
-                        data-item-name="Agateware Box"
+                        data-item-image="NK-0001-BOX-1.jpg"
+                        data-item-name="Treasure Box"
+                        >
+                        <i class="fa-solid fa-tag"></i> Details
+                    </a>
+                    <a href="/products/NK-0001-BOX.html" class="invisible snipcart-add-item"
+                        data-item-id="NK-0001-BOX"
+                        data-item-url="http://localhost:4000/products/NK-0001-BOX.html"
+                        data-item-price="80"
+                        data-item-description="A treasure box made from various stained clay bodies pressed together (known as agateware).
+"
+                        data-item-image="NK-0001-BOX-1.jpg"
+                        data-item-name="Treasure Box"
                         >
                     </a>
                     </h6>
@@ -178,57 +459,50 @@
             </div>
         </div>
         
-        <div class="card col-sm-12 col-md-6 col-lg-4 py-4 border border-0">
-            <h2 class="card-title text-center">
-                Mug
-            </h2>
+        <div class="card col-sm-12 col-md-6 col-lg-4 p-2 mt-5 border border-0">
             <div class="card-header bg-white border border-0">
                 <div class="d-flex align-items-center justify-content-between">
                     
-                    <div>
-                    <h5 class="text-end">
-                        <i class="fa-solid fa-filter"></i> Wheel Thrown
-                    </a></h5>
-                    </div>
-                    
-                    
                     <div><h5>&nbsp;</h5></div>
                     
+                    <h2 class="card-title text-center fw-semibold">
+                        Small Pitcher
+                    </h2>
                 </div>
             </div>
             <div class="card-body border border-0">    
-                <a href="/products/mug-green-white.html"><img src="/assets/img/shop/live/mug-green-white-1.png" class="img-fluid rounded-4"></a>
+                <a href="/products/P-0001-GWHT.html"><img src="/assets/img/shop/live/P-0001-GWHT-thumb.png" class="img-fluid rounded-4"></a>
                 <p>
                     
 
                 </p>
                 <div class="d-flex align-items-center justify-content-between">
                     <div>
-                    <h6 class="text-end"><a href="/products/mug-green-white.html" class="btn btn-secondary pt-3 pb-2 px-5"
-                        data-item-id="C-0001-WF"
-                        data-item-url="https://www.redletterclay.com/products/mug-green-white.html"
-                        data-item-price="38"
-                        data-item-description="An ample mug for coffee and tea addicts. Glossy white glaze with copper-green drips and a metallic black rim.
+                    <h6 class="text-end"><a href="/products/P-0001-GWHT.html" class="btn btn-secondary pt-3 pb-2 px-5"
+                        data-item-id="P-0001-GWHT"
+                        data-item-url="http://localhost:4000/products/P-0001-GWHT.html"
+                        data-item-price="26"
+                        data-item-description="This small bottle is perfect for holding oil, soysauce, sauces, cream, etc. Slip cast from an original design. Cork included.
 "
-                        data-item-image="/assets/img/shop/live/mug-green-white-1.png"
-                        data-item-name="Mug"
+                        data-item-image="P-0001-GWHT-1.jpg"
+                        data-item-name="Small Pitcher"
                         >
                         <i class="fa-solid fa-tag"></i> Details
                     </a>
-                    <a href="/products/mug-green-white.html" class="invisible snipcart-add-item"
-                        data-item-id="C-0001-WF"
-                        data-item-url="https://www.redletterclay.com/products/mug-green-white.html"
-                        data-item-price="38"
-                        data-item-description="An ample mug for coffee and tea addicts. Glossy white glaze with copper-green drips and a metallic black rim.
+                    <a href="/products/P-0001-GWHT.html" class="invisible snipcart-add-item"
+                        data-item-id="P-0001-GWHT"
+                        data-item-url="http://localhost:4000/products/P-0001-GWHT.html"
+                        data-item-price="26"
+                        data-item-description="This small bottle is perfect for holding oil, soysauce, sauces, cream, etc. Slip cast from an original design. Cork included.
 "
-                        data-item-image="/assets/img/shop/live/mug-green-white-1.png"
-                        data-item-name="Mug"
+                        data-item-image="P-0001-GWHT-1.jpg"
+                        data-item-name="Small Pitcher"
                         >
                     </a>
                     </h6>
                     </div>
                     <div>
-                        <h4 class="text-center alt">$38</h4>
+                        <h4 class="text-center alt">$26</h4>
                     </div>
                 </div>
             </div>
@@ -309,7 +583,7 @@ Chicago, IL
                   <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
                 </div> 
                 <div>
-                  <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button submit pt-2 rounded-pill pe-1"><i class="fa-solid fa-envelope-open-text pe-2"></i>Subscribe</button>
+                  <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button submit pt-2 pb-2 rounded-pill pe-1"><i class="fa-solid fa-envelope-open-text pe-2"></i>Subscribe</button>
                 </div>
                 <div id="mce-responses" class="clear foot">
                   <div class="response" id="mce-error-response" style="display:none"></div>

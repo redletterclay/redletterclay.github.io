@@ -22,6 +22,10 @@
   color: #8C5C40;
 }
 
+.fc-7 {
+  color: #A73838;
+}
+
 body {
   background: #ffffff;
   color: #6E4E3C;
@@ -143,6 +147,25 @@ blockquote {
 main a {
   color: #DF4F4F;
   text-decoration: none;
+  transition: 1s;
+}
+
+main a:hover {
+  color: #A73838;
+}
+
+main a i {
+  transition: 1s;
+}
+
+main a:hover i.slide {
+  color: #DF4F4F;
+  animation: slideOutRight 1s infinite ease-out;
+}
+
+a.ul {
+  color: #DF4F4F;
+  text-decoration: none;
   border-style: dotted;
   border-bottom-width: 2px;
   border-top-width: 0px;
@@ -217,7 +240,7 @@ ul.details {
   font-weight: 500;
   letter-spacing: 0.02rem;
   background: #F9E1B7;
-  filter: drop-shadow(2px 4px 0px #F9E1B7);
+  filter: drop-shadow(2px 4px 0px #8C5C40);
   border: 0;
   transition: 1s;
 }
@@ -225,7 +248,7 @@ ul.details {
 .btn-secondary:hover {
   color: black;
   background: #F9E1B7;
-  filter: drop-shadow(2px 4px 0px #8C5C40);
+  filter: drop-shadow(2px 4px 0px #A73838);
 }
 
 .btn-secondary:focus {
