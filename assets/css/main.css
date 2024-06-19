@@ -464,6 +464,11 @@ input.email {
   color: #A73838;
 }
 
+.snipcart-summary-fees__item {
+  font-size: 1.2rem;
+  font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 .snipcart-cart__footer-buttons {
   margin-bottom: 20px;
 }
