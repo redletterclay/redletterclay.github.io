@@ -412,7 +412,7 @@ input.email {
 }
 
 .snipcart-button-link {
-  color: #DF4F4F;
+  color: #A73838;
   font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1.6rem;
   font-weight: 500;
@@ -489,6 +489,30 @@ input.email {
   font-weight: 600;
 }
 
+.snipcart-cart-summary-item, .snipcart-form__label, .snipcart-shipping-address__subtitle, .snipcart-shipping-rates-list-item--right, legend {
+  font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.snipcart__box--badge {
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.snipcart__box--badge-highlight {
+  background-color: #FFEEEF;
+}
+
+.snipcart__font--slim, .snipcart-form__label {
+  font-weight: 400;
+}
+
+.snipcart__notice--with-icon {
+  font-size: 1.2rem;
+}
+
 .snipcart-modal__close-title {
   font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1.6rem;
@@ -498,13 +522,25 @@ input.email {
   font-weight: 400;
 }
 
+.snipcart-input__input, .snipcart-textbox, .snipcart-form__select {
+  font-family: "Gelasio", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.2rem;
+  text-transform: none;
+  color: #A73838;
+}
+
+.snipcart-form__select {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .snipcart-layout__content--side {
   border-left: 2px;
   border-color: #FFCED1;
   border-style: dotted;
 }
 
-.snipcart-cart-header__icon, .snipcart-modal__close, .snipcart-cart-header__close-button, .snipcart-cart-header .snipcart-modal__close-icon {
+.snipcart-cart-header__icon, .snipcart-modal__close, .snipcart-cart-header__close-button, .snipcart-cart-header .snipcart-modal__close-icon, .snipcart-billing-completed .snipcart-checkout-step__icon, .snipcart-shipping-completed .snipcart-checkout-step__icon {
   color: #A73838;
 }
 
