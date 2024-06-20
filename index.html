@@ -18,24 +18,54 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
   </head>
-  <div class="container-fluid nav-stick  hero fade-in">
-    <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid nav-stick  hero  fade-in">
+    <nav class="navbar navbar-expand-xl">
       <div class="container">
         <h1 class="navbar-brand fst-italic"><a href="/" class="active">Red Letter Clay</a></h1>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse align-items-center justify-content-end" id="navbarSupportedContent">
-            <h3 class="navbar-nav pe-5"><a href="/shop.html">Shop</a></h3>
-            <h3 class="navbar-nav pe-5"><a href="/gallery.html">Gallery</a></h3>
-            <!-- <h3 class="navbar-nav pe-5"><a href="/journal/">Journal</a></h3> -->
-            <h3 class="navbar-nav pe-5"><a href="#calendar">Calendar</a></h3>
-            <!-- <h3 class="navbar-nav pe-5"><a href="/about.html">About</a></h3> -->
-            <h3 class="navbar-nav animate__animated animate__fadeIn"><button class="snipcart-checkout border border-0 cart pb-2"><i class="fa-solid fa-bag-shopping"></i></button></h3>
+          <button class="navbar-toggler" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="d-none d-xl-inline-flex navbar-expand-xl flex-fill justify-content-around">
+              <h3 class="text-center"><a href="/shop.html">Shop</a></h3>
+              <h3 class="text-center"><a href="/gallery.html">Gallery</a></h3>
+              <h3 class="text-center"><a href="#calendar">Calendar</a></h3>
+              <h3 class="navbar-nav"><a href="/journal/">Journal</a></h3>
+              <h3 class="navbar-nav"><a href="/about.html">About</a></h3>
+              <button type="button" class="btn btn-cart bg-white position-relative snipcart-checkout me-3">
+                <i class="fa-solid fa-bag-shopping text-black fs-1"></i>
+                <span class="position-absolute top-0 start-100 translate-center badge rounded-pill bg-danger">
+                  <span class="snipcart-items-count animate__animated animate__flipInX"></span>
+                  <span class="visually-hidden">items in cart</span>
+                </span>
+              </button>
         </div>
       </div>
     </nav>
+</div>
+<div class="offcanvas h-auto offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+  <div class="offcanvas-header">
+    <div class="mx-auto">
+    <h1 id="offcanvasTopLabel" class="navbar-brand fst-italic"><a href="/" class="active">Red Letter Clay</a></h1>
   </div>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="text-center pb-3">
+      <button type="button" class="btn btn-cart bg-white position-relative snipcart-checkout" data-bs-dismiss="offcanvas"a>
+        <i class="fa-solid fa-bag-shopping text-black fs-1"></i>
+        <span class="position-absolute top-0 start-100 translate-center badge rounded-pill bg-danger">
+          <span class="snipcart-items-count animate__animated animate__flipInX"></span>
+          <span class="visually-hidden">items in cart</span>
+        </span>
+      </button>
+    </div>
+    <h3 class="navbar-nav text-center"><a href="/shop.html">Shop</a></h3>
+    <h3 class="navbar-nav text-center"><a href="/gallery.html">Gallery</a></h3>
+    <h3 class="navbar-nav text-center"><a href="#">Journal</a></h3>
+    <h3 class="navbar-nav text-center" data-bs-dismiss="offcanvas"><a href="#calendar">Calendar</a></h3>
+    <h3 class="navbar-nav text-center"><a href="#">About</a></h3>
+  </div>
+</div>
   <script>
     window.SnipcartSettings = {
       publicApiKey: "NDA0M2E4MTAtNjEzOC00ZmI1LTk3ZDgtYjRmZmE3MjY1MjI4NjM4MjA3MTM4MDAzMDcwNjM2",

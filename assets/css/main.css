@@ -114,18 +114,34 @@ h6 {
 }
 
 .cart {
-  background-color: white;
-  display: inline-block;
-  min-width: 40px;
   animation: fadeIn;
+}
+@media (width <= 1200px) {
+  .cart {
+    margin-top: 100px;
+  }
+}
+@media (width >= 1201px) {
+  .cart {
+    margin-top: 25px;
+  }
+}
+
+.border-cart {
+  border-color: #A73838 !important;
+  background-color: #FFEEEF;
+}
+
+.snipcart-items-count {
+  font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .snipcart-modal__container {
   z-index: 999;
 }
 
-.nav-stick {
-  z-index: 1;
+.nav-stick, .cart {
+  z-index: 20;
 }
 
 .card {
@@ -173,7 +189,7 @@ a.ul {
   border-right-width: 0px;
 }
 
-.navbar-nav a {
+.navbar-nav a, .navbar a {
   text-decoration: none;
   color: black;
   display: inline-block;
@@ -185,7 +201,7 @@ a.ul {
   transition: background-size 0.3s, background-position 0s 0.3s; /*change after the size immediately*/
 }
 
-.navbar-nav a:hover {
+.navbar-nav a:hover, .navbar a:hover {
   border-color: #DF4F4F;
   background-position: 100% 100%; /*OR bottom right*/
   background-size: 100% 2px;
@@ -196,7 +212,7 @@ a.ul {
   border: 0px;
 }
 
-.navbar-nav a.active {
+.navbar-nav a.active, .navbar a.active {
   color: #DF4F4F;
 }
 
