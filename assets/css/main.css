@@ -228,9 +228,23 @@ ul.details {
 }
 
 .hero-footer a:hover {
+  color: white;
+  text-decoration: none;
   border-color: #DF4F4F;
   background-position: 100% 100%; /*OR bottom right*/
   background-size: 100% 2px;
+}
+
+input.email {
+  display: inline-block;
+  min-height: 50px;
+  padding: 6px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 0px;
+  box-shadow: rgba(10, 10, 10, 0.05) 0 1px 4px 0 inset;
+  width: 95%;
 }
 
 .btn-secondary {
@@ -342,6 +356,10 @@ ul.details {
   letter-spacing: 0px;
 }
 
+.ls-1 {
+  letter-spacing: 0.08rem;
+}
+
 button#mc-embedded-subscribe.button {
   background-color: #E2D3C1;
   color: #351F0D;
@@ -373,16 +391,26 @@ div#mc_embed_signup input {
   display: inline-block;
 }
 
-input.email {
-  display: inline-block;
-  min-height: 50px;
-  padding: 6px;
-  border: 2px solid white;
-  background-color: transparent;
-  color: white;
+.form-input {
+  color: #A73838;
+  border-color: rgb(210, 210, 210);
+  border-style: solid;
+  border-width: 2px;
   border-radius: 0px;
   box-shadow: rgba(10, 10, 10, 0.05) 0 1px 4px 0 inset;
-  width: 95%;
+}
+
+.form-textarea {
+  font-family: #6E4E3C;
+  color: #A73838;
+  font-size: 1.2rem;
+  display: block;
+  min-height: 350px;
+  border-color: rgb(210, 210, 210);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0px;
+  box-shadow: rgba(10, 10, 10, 0.05) 0 1px 4px 0 inset;
 }
 
 .snipcart-input__input {
