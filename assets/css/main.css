@@ -127,6 +127,10 @@ h6 {
   }
 }
 
+.out-of-stock div.add_cart {
+  display: none;
+}
+
 .border-cart {
   border-color: #A73838 !important;
   background-color: #FFEEEF;
