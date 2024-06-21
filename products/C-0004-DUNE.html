@@ -260,10 +260,9 @@ Chicago, IL
     </div>
   </footer>
   </main>
-  </body>
   <script type="text/javascript">
     (async () => {
-      const url = new URL('https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-b0555dbe-54d6-4078-8379-18712b122089/redletter/getProduct');
+      const url = new URL('https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-02bd4a9b-cb71-49b3-966d-654becd1fccd/default/GetProduct');
       url.searchParams.set('productId', 'C-0004-DUNE');
       const response = await fetch(url);
       if (!response.ok) throw new Error(`Unexpected response status: ${response.status}`);
@@ -299,4 +298,5 @@ Chicago, IL
 
     gtag('config', 'G-BM1ZCVJZ0G');
   </script>
+  </body>
 </html>
