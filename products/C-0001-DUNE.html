@@ -272,7 +272,7 @@ Chicago, IL
         else callback();
       }
       onLoaded(() => {
-        const html = document.getElementsByTagName('html');
+        const html = document.getElementsByTagName('html')[0];
         html.classList.add('stock-determined');
         if (stock === 0) html.classList.add('out-of-stock')
       });
