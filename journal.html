@@ -27,7 +27,7 @@
   
     (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('src[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
   </script>
-  <div class="container-fluid nav-stick  fade-in">
+  <div class="container-fluid nav-stick sticky-top bg-white hero  fade-in">
     <nav class="navbar navbar-expand-xl">
       <div class="container">
         <h1 class="navbar-brand fst-italic"><a href="/" class="active">Red Letter Clay</a></h1>
@@ -81,34 +81,22 @@
   <body>
     <main>
     
+    <div class="container-fluid text-center">
+      <img src="/assets/img/hero-bottle.png" class="img-fluid animate__animated animate__fadeIn">
+    </div>
     
     <div class="container pt-5">
-      <div class="row gx-5">
-    <div class="col-md-6 col-sm-12">
-        <h1 class="ital mb-4">Hi!</h1>
-        <p>Have a question? Use this form to get in touch.</p>
-        <h3 class="pt-3">Order Inquiries</h3>
-        <p>Sorry, I'm unable to correspond about orders via Instagram DM. If this is a regarding an an order, please include your order number and I will get back with you as soon as possible.</p>
-        <img src="/assets/img/circle-smile-mug.png" class="img-fluid p-5" alt="Happy Customers" />
-    </div>
-    <div class="col-md-6 col-sm-12">
-        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mdknnnwd" method="post">
-            <fieldset id="fs-frm-inputs">
-                <h3 class="text-black"><label for="full-name"><i class="fa-regular fa-address-card fc-7 opacity-75"></i> Name</label></h3>
-                <input type="text" name="name" id="full-name" required="yes" class="w-100 ls-1 p-2 mb-4 form-input rounded-3" />
-                <h3 class="text-black"><label for="email-address"><i class="fa-solid fa-at fc-7 opacity-75"></i> Email Address</label></h3>
-                <input type="email" name="_replyto" id="email-address" required="yes" class="w-100 p-2 mb-4 form-input rounded-3" />
-                <h3 class="text-black"><label for="email-address"><i class="fa-solid fa-receipt fc-7 opacity-75"></i> Order #</label></h3>
-                <input type="order-number" name="order-number" id="order-number" placeholder="if applicable" required="" class="w-100 p-2 mb-4 rounded-3 form-input" />
-                <h3 class="text-black"><label for="message"><i class="fa-solid fa-wine-bottle fc-7 opacity-75"></i> Message</label></h3>
-                <textarea rows="5" name="message" id="message" class="w-100 rounded-3 fc-1 p-2 form-textarea" required="yes"></textarea>
-                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission" />
-            </fieldset>
-            <button type="submit" value="Submit" class="btn btn-primary submit py-2 pb-1 px-5 my-5 w-100 rounded-pill"><i class="fa-solid fa-paper-plane"></i> SEND</button>
-        </form>
-    </div>
-</div>
+      <h1>Latest Posts</h1>
+        <ul>
+          
+            <li>
+              <h2><a href="/2024/06/20/WAD-Cafe.html">Wad Cafe</a></h2>
+              <h2>Wad Cafe</h2>
+<p>20 Jun 2024</p>
 
+            </li>
+          
+        </ul>
      </div>
      <div class="container-fluid hero-field">
     </div>
