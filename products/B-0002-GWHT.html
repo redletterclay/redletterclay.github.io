@@ -256,15 +256,21 @@ Chicago, IL
   </main>
   <script type="text/javascript">
     (async () => {
-      const url = new URL('https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-02bd4a9b-cb71-49b3-966d-654becd1fccd/default/GetProduct');
+        const url = new URL('https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-02bd4a9b-cb71-49b3-966d-654becd1fccd/default/GetProduct');
       url.searchParams.set('productId', 'B-0002-GWHT');
       const response = await fetch(url);
       if (!response.ok) throw new Error(`Unexpected response status: ${response.status}`);
       const { stock } = await response.json();
-      const html = document.getElementsByTagName('html');
-      html.classList.add('stock-determined');
-      if (stock === 0) html.classList.add('out-of-stock')
-    })().catch(err => console.error({ err }))
+      const onLoaded = (callback) => {
+        if (document.readyState === 'loading') document.addEventListener("DOMContentLoaded", callback);
+        else callback();
+      }
+      onLoaded(() => {
+        const html = document.getElementsByTagName('html');
+        html.classList.add('stock-determined');
+        if (stock === 0) html.classList.add('out-of-stock')
+      });
+    })().catch(err => console.error({ err }));
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
