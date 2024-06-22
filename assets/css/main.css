@@ -473,6 +473,10 @@ div#mc_embed_signup input {
   font-size: 1.4rem;
 }
 
+.snipcart-base-button__icon {
+  color: white;
+}
+
 .snipcart__font--secondary, .snipcart__font--subtitle, .snipcart__font--subtitle-small {
   font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: black;
