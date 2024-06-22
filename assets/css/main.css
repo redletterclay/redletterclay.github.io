@@ -197,6 +197,15 @@ blockquote {
   border-left-width: 0px;
 }
 
+blockquote.event {
+  border-color: #F9E1B7;
+  border-style: solid;
+  border-top-width: 4px;
+  border-bottom-width: 4px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+}
+
 main a {
   color: #DF4F4F;
   text-decoration: none;
@@ -364,8 +373,6 @@ input.email {
   border-left-width: 0px;
   border-right-width: 0px;
   border-style: solid;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   position: relative;
   height: 100%;
   width: 100vw;
@@ -398,11 +405,6 @@ input.email {
 .border-primary {
   --bs-border-opacity: 1;
   border-color: rgba(110, 78, 60, var(--bs-border-opacity)) !important;
-}
-
-.event {
-  outline: 4px solid #6E4E3C;
-  outline-offset: -15px;
 }
 
 .ls-0 {
