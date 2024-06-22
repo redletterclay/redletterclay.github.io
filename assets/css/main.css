@@ -26,6 +26,10 @@
   color: #A73838;
 }
 
+.header-alt {
+  font-family: "Bitter", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 body {
   background: #ffffff;
   color: #6E4E3C;
@@ -125,6 +129,32 @@ h6 {
   .cart {
     margin-top: 25px;
   }
+}
+
+.out-of-stock .product-thumb {
+  position: relative;
+  display: inline-block;
+}
+
+.icon {
+  display: none;
+  width: 100%;
+  font-size: 2em;
+  position: absolute;
+  color: white;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.out-of-stock .product-thumb img {
+  opacity: 0.6;
+}
+
+.out-of-stock .product-thumb .icon {
+  padding: 1em;
+  display: block;
 }
 
 .out-of-stock div.add_cart {
