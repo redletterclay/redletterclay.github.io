@@ -167,7 +167,10 @@ h6 {
 }
 
 .snipcart-items-count {
-  font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Bitter", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  min-width: 8px;
+  min-height: 5px;
+  display: inline-block;
 }
 
 .snipcart-modal__container {
