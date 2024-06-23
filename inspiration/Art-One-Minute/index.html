@@ -27,7 +27,7 @@
   
     (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('src[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
   </script>
-  <div class="container-fluid nav-stick sticky-top bg-white fade-in">
+  <div class="container-fluid nav-stick  fade-in">
   <nav class="navbar navbar-expand-xl">
       <div class="container">
         <div>
@@ -90,71 +90,58 @@
     <main>
     
     
-    <div class="container animate__animated animate__fadeIn pt-5">
+    <div class="container-fluid">
+    <div class="container pt-5 animate__animated animate__fadeIn">
       <div class="row">
-        <div class="col-sm-12 col-xl-8">
-          <div class="d-flex flex-row flex-wrap gx-5">
-            
-            <div class="col-sm-12 col-xl-6 mb-3">
-                <div class="p-3 pt-0">
-                    <a href="/updates/WAD-Cafe/"><h2 class="ls-0"><i class="fa-solid fa-newspaper pe-2 fc-1"></i> WAD Cafe, Osaka Japan</h2>
-                    <img src="/assets/img/journal/wad-thumb.jpg" class="img-fluid border border-5 border-thumb rounded-3 shadow-fc7">
-                    </a>
-                    <h6 class="fc-6 fs-5 text-end fst-italic mt-2 opacity-50">June 20, 2024</h6>
-                </div>
-            </div>
-          
-            <div class="col-sm-12 col-xl-6 mb-3">
-                <div class="p-3 pt-0">
-                    <a href="/updates/Mingei-Museum/"><h2 class="ls-0"><i class="fa-solid fa-newspaper pe-2 fc-1"></i> Mingei Museum</h2>
-                    <img src="/assets/img/journal/wad-thumb.jpg" class="img-fluid border border-5 border-thumb rounded-3 shadow-fc7">
-                    </a>
-                    <h6 class="fc-6 fs-5 text-end fst-italic mt-2 opacity-50">June 20, 2024</h6>
-                </div>
-            </div>
-          
-            <div class="col-sm-12 col-xl-6 mb-3">
-                <div class="p-3 pt-0">
-                    <a href="/inspiration/Art-One-Minute/"><h2 class="ls-0"><i class="fa-solid fa-newspaper pe-2 fc-1"></i> Art One Minute</h2>
-                    <img src="/assets/img/journal/wad-thumb.jpg" class="img-fluid border border-5 border-thumb rounded-3 shadow-fc7">
-                    </a>
-                    <h6 class="fc-6 fs-5 text-end fst-italic mt-2 opacity-50">June 20, 2024</h6>
-                </div>
-            </div>
-          
+        <div class="col-sm-12 col-xl-6">
+          <h1>Art One Minute</h1>
+          <article class="pt-4">
+            <p><a href="https://www.instagram.com/wadcafe/?hl=en" target="_blank" alt="WAD Cafe Instagram"><i class="fa-brands fa-instagram"></i> Follow WAD Cafe on Instagram</a></p>
+
+<h3 id="ceramic-beginnings-in-japan">Ceramic Beginnings in Japan</h3>
+
+<p>https://www.youtube.com/@artoneminute2821</p>
+
+          </article>
         </div>
-        </div>
-        <div class="col-sm-12 col-xl-4">
-          <h3><i class="fa-solid fa-tags pe-2"></i> Tags</h3>
+        <div class="col-sm-12 col-xl-6">
+          <div class="d-flex flex-row justify-content-between align-items-center">
+            <div><h3 class="fc-7">June 20, 2024</h3></div>
+            <div>
+              <div class="post-categories">
+                
+                
+                <h6 class="fs-3 fw-light ls-0">FILED UNDER: <a href="/categories/#Inspiration">Inspiration</a></h6>
+                
+                
+              </div>
+            </div>
+          </div>
           
-          <div class="archive-group">
-            <ul>
-              <li>
-                <h6><a name="Inspiration" href="/categories/#Inspiration.html"> Inspiration</a></h6></li>
-            </ul>
-          </div>
-        
-          <div class="archive-group">
-            <ul>
-              <li>
-                <h6><a name="Updates" href="/categories/#Updates.html"> Updates</a></h6></li>
-            </ul>
-          </div>
-        
-          <h3><i class="fa-solid fa-link pe-2"></i> Links</h3>
-<ul>
-  
-    <li>
-      <h6><a href="https://www.gnarwareworkshop.com">GnarWare Workshop</a> - Chicago pottery studio in the Pilsen neighborhood.</h6>
-    </li>
-  
-</ul>
+            <img src="/assets/img/journal/wad-thumb.jpg" class="img-fluid rounded-4">
+          
+          
+          
+            <img src="/assets/img/journal/wad-osaka.jpg" class="img-fluid rounded-4 mt-4">
+          
+          
+            <h3>Osaka Manhole cover</h3>
+          
+          
+          <img src="/assets/img/journal/wad-dish.jpg" class="img-fluid rounded-4 mt-4">
+          
+          
+          
+          <img src="/assets/img/journal/wad-teabowl.jpg" class="img-fluid rounded-4 mt-4">
+          
+          
+          <a href="/journal/" class="btn btn-primary rounded-pill my-5 p-3"><i class="fa-solid fa-arrow-left pe-2"></i> Back to Journal</a>
         </div>
       </div>
-     </div>
     </div>
-      <div class="container-fluid hero-field">
-      </div>
+  </div>
+     <div class="container-fluid hero-field">
+    </div>
     <div class="container-fluid sub-footer animate__animated animate__fadeIn" id="calendar">
     <div class="container-fluid">
       <h2 class="text-center fw-semibold mt-4 pb-4 fc-3"><i class="fa-solid fa-shop pe-2"></i> <span class="fc-1">UPCOMING MARKETS</span></h2>

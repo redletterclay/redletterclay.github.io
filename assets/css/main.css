@@ -131,6 +131,10 @@ h6 {
   }
 }
 
+.border-thumb {
+  border-color: #DF4F4F !important;
+}
+
 .out-of-stock .product-thumb {
   position: relative;
   display: inline-block;
@@ -204,6 +208,12 @@ blockquote.event {
   border-bottom-width: 4px;
   border-right-width: 0px;
   border-left-width: 0px;
+}
+
+.shadow-fc7 {
+  filter: drop-shadow(2px 2px 0px rgba(167, 56, 56, 0.3));
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(167, 56, 56, 0.3);
 }
 
 main a {
