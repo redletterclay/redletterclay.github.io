@@ -27,28 +27,28 @@
   
     (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('src[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
   </script>
-  <div class="container-fluid nav-stick  fade-in">
+  <div class="container-fluid nav-stick sticky-top bg-white fade-in">
   <nav class="navbar navbar-expand-xl">
       <div class="container">
         <div>
           <h1 class="navbar-brand fst-italic shadow-fc7"><a href="/" class="active">Red Letter Clay</a></h1>
         </div>
         <div class="d-none d-xl-inline-flex navbar-expand-xl flex-fill justify-content-around">
-          <h3 class="text-center"><a href="/shop/">Shop</a></h3>
+          <!--<h3 class="text-center"><a href="/shop/">Shop</a></h3>-->
           <h3 class="text-center"><a href="/gallery/">Gallery</a></h3>
           <h3 class="text-center"><a href="#calendar">Calendar</a></h3>
           <h3 class="navbar-nav"><a href="/journal/" class="active">Journal</a></h3>
           <h3 class="navbar-nav"><a href="/about/">About</a></h3>
         </div>
-      </div>
-      <div class="d-flex flex-row justify-content-end align-items-center">
-        <div class="pe-2">
-          <button class="navbar-toggler" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        <div class="d-flex flex-row justify-content-end align-items-center">
+          <div class="pe-2">
+            <button class="navbar-toggler" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
         </div>
       </div>
-      <div class="me-4">
+      <!--<div class="me-4">
         <button type="button" class="btn btn-cart bg-white position-relative snipcart-checkout me-3">
           <i class="fa-solid fa-bag-shopping text-black fs-1"></i>
           <span class="position-absolute top-0 start-100 translate-center badge rounded-pill bg-danger">
@@ -56,7 +56,7 @@
             <span class="visually-hidden">items in cart</span>
           </span>
         </button>
-      </div>
+      </div>-->
     </nav>
 </div>
 <div class="offcanvas h-auto offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
@@ -67,7 +67,7 @@
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <div class="text-center mb-4">
+    <!--<div class="text-center mb-4">
       <button type="button" class="btn btn-cart bg-white position-relative snipcart-checkout" data-bs-dismiss="offcanvas"a>
         <i class="fa-solid fa-bag-shopping text-black fs-1"></i>
         <span class="position-absolute top-0 start-100 translate-center badge rounded-pill bg-danger">
@@ -75,8 +75,8 @@
           <span class="visually-hidden">items in cart</span>
         </span>
       </button>
-    </div>
-    <h3 class="navbar-nav text-center"><a href="/shop/">Shop</a></h3>
+    </div>-->
+    <!--<h3 class="navbar-nav text-center"><a href="/shop/">Shop</a></h3>-->
     <h3 class="navbar-nav text-center"><a href="/gallery/">Gallery</a></h3>
     <h3 class="navbar-nav text-center"><a href="/journal/">Journal</a></h3>
     <h3 class="navbar-nav text-center" data-bs-dismiss="offcanvas"><a href="#calendar">Calendar</a></h3>
@@ -174,16 +174,32 @@
     </div>
     <div class="container-fluid sub-footer animate__animated animate__fadeIn" id="calendar">
     <div class="container-fluid">
-      <h2 class="text-center fw-semibold mt-4 pb-4 fc-3"><i class="fa-solid fa-shop pe-2"></i> UPCOMING MARKETS</h2>
+      <h2 class="text-center fw-semibold mt-4 pb-4 fc-3"><i class="fa-solid fa-shop pe-2"></i> UPCOMING EVENTS</h2>
       <div class="row">
         
           <div class="col-lg-3 col-sm-6 shadow-fc7 ">
             <div class="bg-white p-4 rounded-4 mb-4">
-            <h2 class="text-uppercase text-end fw-medium shadow-fc7 ls-0">Sunday <span class="fc-1 fw-semibold">JUL 28</span><br><span class="fw-medium">1-6PM</span></h3>
+            <h2 class="text-uppercase text-end fw-medium shadow-fc7 ls-0">Saturday <span class="fc-1 fw-semibold">SEP 7</span><br><span class="fw-medium">11AM-12PM</span></h3>
+              <div class="my-4">
+                <blockquote class="mx-5 event">
+                <h3 class="fw-semibold text-center pt-3">Exhibition&#58; Community Unfolding a Path</h3>
+                <h5 class="text-center pb-3">Ariadna Ginez Studio @ Mana Contemporary <a href="https://maps.app.goo.gl/pvzdMVh2b5U3QUtq9" target="_blank" class="fc-1"><i class="fa-solid fa-map ps-2"></i> </a><br>
+              2233 S Throop St<br>
+Chicago, IL
+</h5>
+            </blockquote>
+            </div>
+            <h3 class="text-uppercase text-end fst-italic fw-light fs-5">2024</h3>
+          </div>
+          </div>
+        
+          <div class="col-lg-3 col-sm-6 shadow-fc7  opacity-75">
+            <div class="bg-white p-4 rounded-4 mb-4">
+            <h2 class="text-uppercase text-end fw-medium shadow-fc7 ls-0">Sunday <span class="fc-6">JUL 28</span><br><span class="fw-medium">1-6PM</span></h3>
               <div class="my-4">
                 <blockquote class="mx-5 event">
                 <h3 class="fw-semibold text-center pt-3">Secret Garden Arts</h3>
-                <h5 class="text-center pb-3">Marz Brewery <a href="https://maps.app.goo.gl/At5uuVACCCNQz5Py7" target="_blank" class="fc-1"><i class="fa-solid fa-map ps-2"></i> </a><br>
+                <h5 class="text-center pb-3">Marz Brewery <a href="https://maps.app.goo.gl/At5uuVACCCNQz5Py7" target="_blank" class="fc-6"><i class="fa-solid fa-map ps-2"></i> </a><br>
               3630 S Iron St<br>
 Chicago, IL
 </h5>
@@ -225,28 +241,12 @@ Chicago, IL
           </div>
           </div>
         
-          <div class="col-lg-3 col-sm-6 shadow-fc7  opacity-75">
-            <div class="bg-white p-4 rounded-4 mb-4">
-            <h2 class="text-uppercase text-end fw-medium shadow-fc7 ls-0">Saturday <span class="fc-6">DEC 16</span><br><span class="fw-medium">2PM-6PM</span></h3>
-              <div class="my-4">
-                <blockquote class="mx-5 event">
-                <h3 class="fw-semibold text-center pt-3">Holiday Market</h3>
-                <h5 class="text-center pb-3">GnarWare Workshop <a href="https://maps.app.goo.gl/h9i9FJcHpYUyNp7m7" target="_blank" class="fc-6"><i class="fa-solid fa-map ps-2"></i> </a><br>
-              1838 W Cermak Ave<br>
-Chicago, IL
-</h5>
-            </blockquote>
-            </div>
-            <h3 class="text-uppercase text-end fst-italic fw-light fs-5">2023</h3>
-          </div>
-          </div>
-        
       </div>
     </div>
   </div>
     <footer>
     <div class="container-fluid hero-footer animate__animated animate__fadeIn">
-      <div class="container ">
+      <div class="container">
         <div class="row pt-5 pb-5">
           <div class="col-sm-12 col-md-6">
               <!-- Begin Mailchimp Signup Form -->
