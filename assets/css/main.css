@@ -62,6 +62,11 @@ h1.navbar-brand {
   letter-spacing: 0.06rem;
 }
 
+@media (max-width: 800px) {
+  h1.navbar-brand {
+    font-size: 2rem;
+  }
+}
 h1.rlc {
   color: #DF4F4F;
   text-transform: uppercase;
