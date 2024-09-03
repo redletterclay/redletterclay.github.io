@@ -122,6 +122,11 @@ h6 {
   color: white;
 }
 
+.bg-gallery {
+  background-color: rgb(26, 26, 26);
+  color: white;
+}
+
 .cart {
   animation: fadeIn;
 }
@@ -294,6 +299,12 @@ ul.details {
 
 div#player {
   display: block;
+}
+
+.cursor-zoom {
+  cursor: -moz-zoom-in;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 
 .hero-footer a {
@@ -508,10 +519,6 @@ div#mc_embed_signup input {
   font-size: 1.4rem;
 }
 
-.snipcart-base-button__icon {
-  color: white;
-}
-
 .snipcart__font--secondary, .snipcart__font--subtitle, .snipcart__font--subtitle-small {
   font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: black;
@@ -550,14 +557,18 @@ div#mc_embed_signup input {
   transition: background-size 0.3s, background-position 0s 0.3s; /*change after the size immediately*/
 }
 
-@media only screen and (min-width: 768px) {
-  .snipcart-button-link:hover {
-    color: #DF4F4F !important;
-    border-color: #DF4F4F;
-    background-position: 100% 100%; /*OR bottom right*/
-    background-size: 100% 2px;
-  }
+.snipcart-button-link:hover {
+  color: #DF4F4F !important;
+  border-color: #DF4F4F;
+  background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 2px;
 }
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-secondary:hover {
+  background-color: #FFCED1 !important;
+  color: #351F0D;
+}
+
 .snipcart-button-icon.is-secondary {
   background-color: #FFCED1;
 }
@@ -571,19 +582,21 @@ div#mc_embed_signup input {
   padding-top: 4px;
 }
 
-@media only screen and (min-width: 768px) {
-  .snipcart-button-primary:hover, .snipcart-button-secondary:hover {
-    background-color: #FFCED1;
-    filter: drop-shadow(2px 4px 0px #6E4E3C);
-    color: white;
-  }
+.snipcart-base-button__label:hover {
+  color: #A73838;
 }
-@media only screen and (min-width: 768px) {
-  .snipcart-button-primary:focus, .snipcart-button-secondary:focus {
-    background-color: #DF4F4F !important;
-    color: white;
-  }
+
+.snipcart-button-primary:hover, .snipcart-button-secondary:hover {
+  background-color: #FFCED1;
+  filter: drop-shadow(2px 4px 0px #6E4E3C);
+  color: #6E4E3C !important;
 }
+
+.snipcart-button-primary:focus, .snipcart-button-secondary:focus {
+  background-color: #DF4F4F !important;
+  color: #6E4E3C;
+}
+
 .snipcart-cart__secondary-header-title, .snipcart-summary-fees__title--highlight {
   font-size: 1.6rem;
   color: #A73838;
