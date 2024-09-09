@@ -42,8 +42,12 @@ body {
   color: #6E4E3C;
   font-family: "Gelasio", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 500;
-  line-height: 2rem;
-  font-size: 1.25em;
+  line-height: 2.2rem;
+  font-size: 1.4em;
+}
+
+body p {
+  margin-bottom: 1.2em;
 }
 
 body span.alt-font {
