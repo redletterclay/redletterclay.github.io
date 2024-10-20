@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 svg#stamp {
   position: relative;
   display: inline-block;
