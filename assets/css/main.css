@@ -288,6 +288,12 @@ a.ul {
   border-right-width: 0px;
 }
 
+.navbar-nav a.link-no-ul, .navbar a.link-no-ul, .navbar-nav a.link-no-ul:hover, .navbar a.link-no-ul:hover {
+  transition: none !important;
+  text-decoration: none !important;
+  background-image: none !important;
+}
+
 .navbar-nav a, .navbar a {
   text-decoration: none;
   color: black;
