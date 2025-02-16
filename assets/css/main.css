@@ -154,6 +154,19 @@ h6 {
   color: white;
 }
 
+.bg-red {
+  background-color: #c12121;
+  color: #ffffff;
+}
+
+.bg-red h3, .bg-red li, .bg-red p, .bg-red a:hover {
+  color: white;
+}
+
+.bg-red a, .bg-red i {
+  color: #FFCED1;
+}
+
 .bg-gallery {
   background-color: rgb(26, 26, 26);
   color: white;
