@@ -13,3 +13,5 @@ permalink: /:categories/:title/
 collections:
   products:
     output: true
+
+destination: docs/
