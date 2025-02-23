@@ -1,10 +1,15 @@
----
-title: Redletterclay.Github.Io
-timezone: UTC
+url: "https://www.redletterclay.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "Red Letter Clay - Pottery by Davey Ball" # the name of your site, e.g. ACME Corp.
+description: A Chicago based ceramic studio featuring pottery by Davey Ball. Thoughtfully made ceramics for every day enjoyment.
+email: david@raygun.org
+
+plugins:
+ - jekyll-seo-tag
+ - jekyll-sitemap
+
+permalink: /:categories/:title/
+
 collections:
-  posts:
-    title: Posts
-    output: true
-  uploads:
-    title: Uploads
+  products:
     output: true

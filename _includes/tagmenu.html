@@ -1,0 +1,13 @@
+<div class="categories">
+    <form name="catmenu" action="">
+        <select name="selcat" id="dropdown" onchange="location=document.catmenu.selcat.options[document.catmenu.selcat.selectedIndex].value;" >
+            <option value="">STORY TAGS</option>
+            
+            {% assign sorted_tags = site.tags | sort %}
+            {% for tag in sorted_tags %}
+            <option value="{{site.url}}/tag/{{ tag[0] }}" class="capitalize">{{ tag[0] }}</option>
+            {% endfor %}
+        
+        </select>
+    </form>
+</div>

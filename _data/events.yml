@@ -1,0 +1,108 @@
+- day: Sun
+  month: FEB
+  date: 16
+  time: 11AM-6PM
+  name: Coffee & Community
+  location: Northside Cutlery
+  address: |
+   4316 N Lincoln Ave<br>
+   Chicago, IL
+  map: https://maps.app.goo.gl/tLoiHQKkPCe8tY758
+  year: 2025
+  upcoming: "no"
+- day: Sun
+  month: DEC
+  date: 15
+  time: 12PM-4PM
+  name: Le Loft Holiday Pop-Up Market
+  location: Le Loft
+  address: |
+   2418 W North Ave (2nd Flr)<br>
+   Chicago, IL
+  map: https://maps.app.goo.gl/n1dF34jwY46ru8rq7
+  year: 2024
+  upcoming: "no"
+- day: Sun
+  month: DEC
+  date: 8
+  time: 1PM-5PM
+  name: GnarWare Holiday Market
+  location: Bourbon on Division
+  address: |
+   2050 W Division St<br>
+   Chicago, IL
+  map: https://maps.app.goo.gl/gEWcoPh5jZyr7imz5
+  year: 2024
+  upcoming: "no"
+- day: Sat
+  month: SEP
+  date: 7
+  time: 11AM-12PM
+  name: Exhibition&#58; Community Unfolding a Path
+  location: Ariadna Ginez Studio @ Mana Contemporary
+  address: |
+   2233 S Throop St<br>
+   Chicago, IL
+  map: https://maps.app.goo.gl/pvzdMVh2b5U3QUtq9
+  year: 2024
+  upcoming: "no"
+- day: Sun
+  month: JUL
+  date: 28
+  time: 1-6PM
+  name: Secret Garden Arts
+  location: Marz Brewery
+  address: |
+   3630 S Iron St<br>
+   Chicago, IL
+  map: https://maps.app.goo.gl/At5uuVACCCNQz5Py7
+  year: 2024
+  upcoming: "no"
+- day: Sun
+  month: JUN
+  date: 2
+  time: 12-4PM
+  name: The Art of Pride
+  location: Hyde Park Art Center
+  address: |
+   5020 S Cornell Ave<br>
+   Chicago, IL
+  map: https://maps.app.goo.gl/dBD7CqVTeEdjhMfP7
+  year: 2024
+  upcoming: "no"
+- day: Sun
+  month: APR
+  date: 28
+  time: 11AM-4PM
+  name: Mothers Day Market
+  location: GnarWare Workshop
+  address: |
+   1838 W Cermak Ave<br>
+   Chicago, IL
+  map: https://maps.app.goo.gl/h9i9FJcHpYUyNp7m7
+  year: 2024
+  upcoming: "no"
+- day: Sat
+  month: DEC
+  date: 16
+  time: 2PM-6PM
+  name: Holiday Market
+  location: GnarWare Workshop
+  address: |
+   1838 W Cermak Ave<br>
+   Chicago, IL
+  map: https://maps.app.goo.gl/h9i9FJcHpYUyNp7m7
+  year: 2023
+  upcoming: "no"
+- day: Sun
+  month: JUN
+  date: 25
+  time: 2PM-6PM
+  name: Summer Sale
+  location: GnarWare Workshop
+  address: |
+   1838 W Cermak Ave<br>
+   Chicago, IL
+  map: https://maps.app.goo.gl/h9i9FJcHpYUyNp7m7
+  year: 2023
+  upcoming: "no"

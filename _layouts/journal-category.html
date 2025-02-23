@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  {% include header.html %}
+  {% include snipcart.html %}
+  {% include nav.html %}
+  <body>
+    <main class="overflow-x-hidden">
+    {% if page.hero-image %}
+    <div class="container-fluid text-center">
+      <img src="{{page.hero-image}}" class="img-fluid animate__animated animate__fadeIn">
+    </div>
+    {% elsif page.hero %}
+    <div class="container-fluid text-center">
+      <img src="/assets/img/hero-jars.png" class="img-fluid animate__animated animate__fadeIn">
+    </div>
+    {% else %}
+    {% endif %}
+    <div class="container animate__animated animate__fadeIn pt-5">
+      <div class="row">
+        <div class="col-sm-12 col-xl-12">
+          <h2>Filed Under: <span class="fc-7">{{page.category}}</span></h2>
+          <div class="d-flex flex-row flex-wrap gx-5">
+            {% assign filtered_posts = site.posts | where: 'category', page.category %}
+            {% for post in filtered_posts %}
+            <div class="col-sm-12 col-xl-4 mb-3">
+              <div class="p-3 pt-0">
+                <a href="{{post.url}}"><img src="{{post.thumb}}" class="img-fluid border border-5 border-thumb rounded-2 shadow-fc7 mb-3">
+                  <h2 class="ls-0"><i class="fa-solid fa-newspaper pe-2 fc-1"></i> {{post.title}}</h2>
+                  </a>
+                  <div class="d-flex justify-content-between align-items-stretch">
+                    <div>
+                      {% if post %}
+                        {% assign categories = post.categories %}
+                      {% else %}
+                        {% assign categories = page.categories %}
+                      {% endif %}
+                      <h6 class="fs-5 fc-6 opacity-75">
+                        {% for category in categories %}
+                        <i class="fa-solid fa-tags pe-2"></i> <a href="{{site.baseurl}}/journal/{{category|slugize}}/">{{category}}</a>
+                        {% unless forloop.last %}&nbsp;{% endunless %}
+                        {% endfor %}
+                      </h6>
+                    </div>
+                    <div>
+                      <h6 class="fc-6 fs-5 text-end fst-italic opacity-75 fw-light">{{ post.date | date: "%B %d, %Y" }}</h6>
+                    </div>
+                  </div>
+              </div>
+             </div>
+            {% endfor %}
+         </div>
+        </div>
+      </div>
+      <div class="row mt-5 bg-red p-4 pt-5 rounded-3">
+        <div class="col-4">
+          <h3><i class="fa-solid fa-tags pe-2"></i> Tags</h3>
+          <div class="archive-group">
+            <ul>
+              <li><h6 class="fs-5"><a href="/journal/">ALL</a></h6></li>
+          {% for category in site.categories %}
+              <li>{% capture category_name %}{{ category | first }}{% endcapture %}
+                <h6 class="fs-5"><a name="{{ category_name | slugize }}" href="/journal/{{ category_name }}/"> {{ category_name }}</a></h6></li>
+          {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="col-8">
+          {% include links.html %}
+        </div>
+      </div>
+     </div>
+    </div>
+      <div class="container-fluid hero-field" id="calendar">
+      </div>
+      <div class="container-fluid sub-footer animate__animated animate__fadeIn pb-5">
+    {% include calendar.html %}
+  </div>
+    {% include footer.html %}
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    const lightbox = GLightbox({
+      touchNavigation: true,
+      loop: true,
+      openEffect: 'bounce', // Define that we want the bounce animation on open
+      cssEfects: {
+        // register our new animation
+        bounce: { in: 'pulse', out: 'pulse' }
+      },
+      closeEffect: "none",
+      autoplayVideos: true
+    });
+  </script>
+  <script src="https://kit.fontawesome.com/90da15346b.js" crossorigin="anonymous"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM1ZCVJZ0G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BM1ZCVJZ0G');
+  </script>
+  </body>
+</html>

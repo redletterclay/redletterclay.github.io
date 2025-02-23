@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  {% include header.html %}
+  {% include nav.html %}
+  {% include snipcart.html %}
+  <body>
+    <main class="overflow-x-hidden">
+    <div class="container-fluid text-center">
+      <img src="/assets/img/hero-jars.png" class="img-fluid animate__animated animate__fadeIn">
+    </div>
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col">
+          <h1 class="ital animate__animated animate__fadeIn">Welcome to</h1>
+          <h1 class="rlc animate__animated animate__fadeIn">Red Letter Clay</h1>
+          <h2 class="pt-2 pb-5 animate__animated animate__fadeIn">a Chicago based ceramic studio featuring pottery by <a href="/about/" class="">Davey Ball</a></h2>
+        </div>
+      </div>
+      <div class="row align-items-center animate__animated animate__fadeIn animate__slow">
+        <div class="col-xl-6 col-xs-12 bg-red p-5 rounded-3 mb-5">
+          {{ content }}
+        </div>
+        <div class="col-xl-6 col-xs-12 animate__animated animate__fadeIn">
+          {% include carousel.html %}
+        </div>
+      </div>
+     </div>
+     <div class="container-fluid hero-field" id="calendar">
+    </div>
+    <div class="container-fluid sub-footer animate__animated animate__fadeIn">
+    {% include calendar.html %}
+    {% include footer-journal.html %}
+  </div>
+    {% include footer.html %}
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+      /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-50px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  </script>
+  <script type="text/javascript">
+    const lightbox = GLightbox({
+      touchNavigation: true,
+      loop: true,
+      openEffect: 'bounce', // Define that we want the bounce animation on open
+      cssEfects: {
+        // register our new animation
+        bounce: { in: 'pulse', out: 'pulse' }
+      },
+      closeEffect: "none",
+      autoplayVideos: true
+    });
+  </script>
+  <script src="https://kit.fontawesome.com/90da15346b.js" crossorigin="anonymous"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM1ZCVJZ0G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BM1ZCVJZ0G');
+  </script>
+  </body>
+</html>

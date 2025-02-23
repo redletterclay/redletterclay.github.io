@@ -1,0 +1,9 @@
+<h3><i class="fa-solid fa-link pe-2"></i> Links</h3>
+<ul>
+  {% for item in site.data.links limit:4 %}
+    <li>
+      <h6 class="fs-5"><a href="{{ item.url }}">{{ item.name }}</a></h6>
+      <p>{{ item.description }}</p>
+    </li>
+  {% endfor %}
+</ul>

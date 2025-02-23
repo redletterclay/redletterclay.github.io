@@ -1,0 +1,62 @@
+<div class="mb-5">
+    <div class="d-flex flex-wrap flex-row animate__animated animate__fadeIn">
+        {% assign sorted_products = site.products| sort: 'sku' %}
+        {% for product in sorted_products %}
+        <div class="card col-sm-12 col-md-6 col-lg-4 p-2 mt-5 border border-0 stockable" data-productId="{{product.sku}}">
+            <div class="card-header bg-white border border-0">
+                <div class="d-flex align-items-center justify-content-between">
+                    {% if product.sale %}
+                    <div>
+                        <h5 class="text-start alt sale text-danger"><i class="fa-solid fa-certificate"></i> SALE</h5>
+                    </div>
+                    {% else %}
+                    <div><h5>&nbsp;</h5></div>
+                    {% endif %}
+                    <h2 class="card-title text-center fw-semibold">
+                        {{ product.name }}
+                    </h2>
+                </div>
+            </div>
+            <div class="card-body border border-0">
+                <div class="product-thumb">
+                    <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                        <a href="{{ product.url }}"><span class="rounded-pill bg-white p-4"><i class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                      </div>
+                    <a href="{{ product.url }}"><img src="/assets/img/shop/live/{{ product.thumb }}" class="img-fluid{% if product.background %} rounded-4{% endif %}"></a>
+                 </div>
+                <p>
+                    {{ product.content | markdownify }}
+                </p>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                    <h6 class="text-end"><a href="{{ product.url }}" class="btn btn-secondary pt-3 pb-2 px-5"
+                        data-item-id="{{product.sku}}"
+                        data-item-url="{{site.url}}{{product.url}}"
+                        data-item-price="{{product.price}}"
+                        data-item-description="{{product.description}}"
+                        data-item-image="{{site.url}}{{product.url}}/assets/img/shop/live/{{product.thumb}}"
+                        data-item-name="{{product.name}}"
+                        >
+                        <i class="fa-solid fa-tag"></i> Details
+                    </a>
+                    <a href="{{product.url }}" class="invisible snipcart-add-item"
+                        data-item-id="{{product.sku}}"
+                        data-item-url="{{site.url}}{{product.url}}"
+                        data-item-price="{{product.price}}"
+                        data-item-description="{{product.description}}"
+                        data-item-image="{{site.url}}{{product.url}}/assets/img/shop/live/{{product.thumb}}"
+                        data-item-name="{{product.name}}"
+                        >
+                    </a>
+                    </h6>
+                    </div>
+                    <div>
+                        <h4 class="text-center alt">{% if product.price-og %}<span class="text-decoration-line-through opacity-50 fw-lighter pe-4">${{ product.price-og }}</span> ${{ product.price }}{% else %}${{ product.price}}{%endif %}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% include stockists.html %}
