@@ -1,4 +1,16 @@
 - day: Sun
+  month: MAY
+  date: 3
+  time: 12PM-4PM
+  name: Mother's Day Market
+  location: Gnarware Workshop
+  address: |
+   1838 W Cermak Ave<br>
+   Chicago, IL
+  map: https://maps.app.goo.gl/h9i9FJcHpYUyNp7m7
+  year: 2025
+  upcoming: "no"
+- day: Sun
   month: FEB
   date: 16
   time: 11AM-6PM
