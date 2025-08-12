@@ -1,4 +1,16 @@
 - day: Sat
+  month: AUG
+  date: 23
+  time: 3PM-9PM
+  name: Oddball Market
+  location: Thalia Hall
+  address: |
+   1807 S Allport St<br>
+   Chicago, IL
+  map: https://maps.app.goo.gl/EVZVV7BFagxE7cPy5
+  year: 2025
+  upcoming: "yes"
+- day: Sat
   month: MAY
   date: 3
   time: 12PM-4PM
