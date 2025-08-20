@@ -528,7 +528,7 @@ input.email {
 }
 
 // FORMS
-footer a.ml-onclick-form {
+.mlite a.ml-onclick-form {
   background-color: #E2D3C1;
   color: #351F0D;
   font-family: $headerFont2;
@@ -547,7 +547,7 @@ footer a.ml-onclick-form {
 }
 
 @media only screen and (min-width: 768px) {
-  footer a.ml-onclick-form:hover {
+  .mlite a.ml-onclick-form:hover {
     background-color:#FFCED1;
     color: #000000;
   }

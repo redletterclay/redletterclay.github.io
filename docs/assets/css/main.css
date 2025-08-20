@@ -541,7 +541,7 @@ input.email {
   letter-spacing: 0.08rem;
 }
 
-footer a.ml-onclick-form {
+.mlite a.ml-onclick-form {
   background-color: #E2D3C1;
   color: #351F0D;
   font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -560,7 +560,7 @@ footer a.ml-onclick-form {
 }
 
 @media only screen and (min-width: 768px) {
-  footer a.ml-onclick-form:hover {
+  .mlite a.ml-onclick-form:hover {
     background-color: #FFCED1;
     color: #000000;
   }

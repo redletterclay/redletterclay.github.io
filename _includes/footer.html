@@ -8,7 +8,9 @@
             {% for item in site.data.newsletter limit:1 %}
                 <h5 class="text-white mb-4 header-alt fs-5 alt text-uppercase"><a href="{{item.url}}" alt="{{item.name}}"><i class="fa-solid fa-bullhorn fc-2 pe-2"></i> {{item.name}}</a></h5>
               {% endfor %}
-              <a class="ml-onclick-form pt-2 pb-2 rounded-pill pe-1 text-center" href="javascript:void(0)" onclick="ml('show', 'UCLL6U', true)"><i class="fa-solid fa-envelope-open-text pe-2"></i>Subscribe</a>
+              <div class="mlite">
+              <a class="ml-onclick-form pt-2 pb-1 rounded-pill pe-1 text-center" href="javascript:void(0)" onclick="ml('show', 'UCLL6U', true)"><i class="fa-solid fa-envelope-open-text pe-2"></i>Subscribe</a>
+              </div>
           </div>
           <div class="col-sm-12 col-md-5 text-center">
             <div class="d-flex flex-row-reverse mt-5 mt-md-0 pb-3">
