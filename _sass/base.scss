@@ -528,7 +528,7 @@ input.email {
 }
 
 // FORMS
-button#mc-embedded-subscribe.button{
+footer a.ml-onclick-form {
   background-color: #E2D3C1;
   color: #351F0D;
   font-family: $headerFont2;
@@ -544,12 +544,12 @@ button#mc-embedded-subscribe.button{
   font-weight: 600;
   display: inline-block;
   min-width: 200px;
-  transition: 0.3s;
 }
 
 @media only screen and (min-width: 768px) {
-  button#mc-embedded-subscribe.button:hover {
+  footer a.ml-onclick-form:hover {
     background-color:#FFCED1;
+    color: #000000;
   }
 }
 
