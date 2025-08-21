@@ -71,50 +71,31 @@
           </article>
         </div>
       </div>
-      <div class="row pb-4">
-        <div class="col-sm-12 col-md-8 mx-auto text-center">
-          {% if page.image-1 %}
-          <a href="{{page.image-1}}" class="glightbox"{% if page.image-1-caption %} data-description="{{page.image-1-caption}}"{% endif %}><img src="{{page.image-1}}" class="img-fluid mt-5 rounded-2"></a>
-          {% endif %}
-          {% if page.image-1-caption %}
-          <h6 class="mt-3">{{page.image-1-caption}}</h6>
-          {% endif %}
-          {% if page.image-3 %}
-          <div class="row">
-            <div class="col-6"><a href="{{page.image-2}}" class="glightbox"{% if page.image-2-caption %} data-description="{{page.image-2-caption}}"{% endif %}><img src="{{page.image-2}}" class="img-fluid rounded-2 mt-4"></a>
-              {% if page.image-2-caption %}
-              <h6 class="mt-3">{{page.image-2-caption}}</h6>
-              {% endif %}
-            </div>
-            <div class="col-6"><a href="{{page.image-3}}" class="glightbox"{% if page.image-3-caption %} data-description="{{page.image-3-caption}}"{% endif %}><img src="{{page.image-3}}" class="img-fluid rounded-2 mt-4"></a>
-              {% if page.image-3-caption %}
-              <h6 class="mt-3">{{page.image-3-caption}}</h6>
-              {% endif %}
-            </div>
-          </div>
-          {% endif %}
-          {% unless page.image-3 %}
-          <div class="row">
-            <div class="col">
-              <a href="{{page.image-2}}" class="glightbox"{% if page.image-2-caption %} data-description="{{page.image-2-caption}}"{% endif %}><img src="{{page.image-2}}" class="img-fluid rounded-2 mt-4"></a>
-              {% if page.image-2-caption %}
-                <h6 class="mt-3">{{page.image-2-caption}}</h6>
-              {% endif %}
-              </div>
-          </div>
-          {% endunless %}
-          {% if page.image-4 %}
-          <div class="row">
-            <div class="col">
-              <a href="{{page.image-4}}" class="glightbox"{% if page.image-4-caption %} data-description="{{page.image-4-caption}}"{% endif %}><img src="{{page.image-4}}" class="img-fluid rounded-2 mt-4"></a>
-              {% if page.image-4-caption %}
-                <h6 class="mt-3">{{page.image-4-caption}}</h6>
-              {% endif %}
-            </div>
-          </div>
-          {% endif %}
+      <div class="row row-cols-1 row-cols-lg-2">
+        {% if page.image-1 %}
+        <div class="col">
+          <a href="{{page.image-1}}" class="glightbox"{% if page.image-1-caption %} data-glightbox="description: {{page.image-1-caption}}; descPosition: bottom;"{% endif %}><img src="{{page.image-1}}" class="img-fluid rounded-3"></a>
+          <h6 class="mt-1">{% if page.image-1-caption %}{{page.image-1-caption}}{% endif %}</h6>
         </div>
-      </div>
+        {% endif %}
+        {% if page.image-2 %}
+        <div class="col">
+          <a href="{{page.image-2}}" class="glightbox"{% if page.image-2-caption %} data-glightbox="description: {{page.image-2-caption}}; descPosition: bottom;"{% endif %}><img src="{{page.image-2}}" class="img-fluid rounded-3"></a>
+          <h6 class="mt-1">{% if page.image-2-caption %}{{page.image-2-caption}}{% endif %}</h6>
+        </div>
+        {% endif %}
+        {% if page.image-3 %}
+        <div class="col">
+          <a href="{{page.image-3}}" class="glightbox"{% if page.image-3-caption %} data-glightbox="description: {{page.image-3-caption}}; descPosition: bottom;"{% endif %}><img src="{{page.image-3}}" class="img-fluid rounded-3"></a>
+          <h6 class="mt-1">{% if page.image-3-caption %}{{page.image-3-caption}}{% endif %}</h6>
+        </div>
+        {% endif %}
+        {% if page.image-4 %}
+        <div class="col">
+          <a href="{{page.image-4}}" class="glightbox"{% if page.image-4-caption %} data-glightbox="description: {{page.image-4-caption}}; descPosition: bottom;"{% endif %}><img src="{{page.image-4}}" class="img-fluid rounded-3"></a>
+          <h6 class="mt-1">{% if page.image-4-caption %}{{page.image-4-caption}}{% endif %}</h6>
+        </div>
+        {% endif %}
     </div>
     <div class="container bg-red">
       <div class="row d-flex justify-content-between p-4 mt-2">

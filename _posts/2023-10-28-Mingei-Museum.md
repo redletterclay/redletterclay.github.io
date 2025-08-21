@@ -12,7 +12,7 @@ image-1-caption: Ceramic bottle, disguised as a book.
 image-2: /assets/img/journal/mingei-slipware.jpg
 image-2-caption: British slipware. Still very popular in Japan.
 image-3: /assets/img/journal/mingei-fuji-plate.jpg
-image-3-caption: Mount Fuji plate (a stunner)
+image-3-caption: Mount Fuji plate
 image-4: /assets/img/journal/mingei-goblets.jpg
 ---
 The Mingei movement in Japan was studied by the Bauhaus school founders in its early formation. Coined by Yanagi Sōetsu, he believed beauty could be found in ordinary and utilitarian everyday objects made by nameless craftspeople (as opposed to higher forms of art created by named artists). 
