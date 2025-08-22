@@ -20,6 +20,9 @@ permalink: /gallery/
         <img src="/assets/img/gallery/L2-teapot-bottom.jpg" class="img-fluid cursor-zoom"></a>
       </div>
     </div>
+    <div class="d-inline-flex mb-2">
+      <a href="/assets/img/gallery/square-vase.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/square-vase.jpg" class="img-fluid cursor-zoom"></a>
+    </div>
     <div class="d-inline-flex">
       <div class="me-2 mb-2">
         <a href="/assets/img/gallery/juicer-01.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/juicer-01.jpg" class="img-fluid cursor-zoom"></a>
