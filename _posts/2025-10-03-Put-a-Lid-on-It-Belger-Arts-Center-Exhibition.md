@@ -17,11 +17,10 @@ thumb: /assets/img/journal/belger-arts-thumb.jpg
             <div><p><a href="https://maps.app.goo.gl/Smcp35xuuNm8djDs5" target="_blank">12011 Tracy Avenue<br>
         Kansas City, MO 64108</a></p></div>
         <a href="https://maps.app.goo.gl/Smcp35xuuNm8djDs5" target="_blank"><img src="/assets/img/journal/belger-arts-map.png" alt="Juicer" class="img-fluid rounded-3 mb-4 p-5"></a>
-        <a class="btn btn-primary pt-3 pb-2 pe-4 mb-3 rounded-pill w-100"><i class="fa-solid fa-store p-2"></i> Shop the Exhibition</a>
-        <a href="https://belgerarts.org/put-a-lid-on-it" alt="Shop the Exhibition" target="_blank"><img src="/assets/img/journal/belger-arts-shop-exhibition.jpg" class="img-fluid rounded-3 mb-4"></a>
-        <a href="/assets/img/journal/belger-arts-pots-process.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-pots-process.jpg" alt="Image of Lidded Pot" class="img-fluid rounded-3 mb-4"></a>
     </div>
     <div class="col-md-7 col-sm-12">
+    <a class="btn btn-primary pt-3 pb-2 pe-4 mb-3 rounded-pill w-100"><i class="fa-solid fa-store p-2"></i> Shop the Exhibition</a>
+        <a href="https://belgerarts.org/put-a-lid-on-it" alt="Shop the Exhibition" target="_blank"><img src="/assets/img/journal/belger-arts-shop-exhibition.jpg" class="img-fluid rounded-3 mb-4"></a>
         <a href="/assets/img/journal/belger-arts-pot-01.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-pot-01.jpg" alt="Image of Lidded Pot" class="img-fluid rounded-3 mb-4"></a>
         <a href="/assets/img/journal/belger-arts-pot-02.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-pot-02.jpg" alt="Image of Lidded Pot" class="img-fluid rounded-3 mb-4"></a>
         <a href="/assets/img/journal/belger-arts-pot-03.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-pot-03.jpg" alt="Image of Lidded Pot" class="img-fluid rounded-3 mb-4"></a>
@@ -29,5 +28,6 @@ thumb: /assets/img/journal/belger-arts-thumb.jpg
         <a href="/assets/img/journal/belger-arts-pot-05.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-pot-05.jpg" alt="Image of Lidded Pot" class="img-fluid rounded-3 mb-4"></a>
         <a href="/assets/img/journal/belger-arts-pot-06.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-pot-06.jpg" alt="Image of Lidded Pot" class="img-fluid rounded-3 mb-4"></a>
         <a href="/assets/img/journal/belger-arts-pot-07.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-pot-07.jpg" alt="Image of Lidded Pot" class="img-fluid rounded-3 mb-4"></a>
+        <a href="/assets/img/journal/belger-arts-pots-process.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-pots-process.jpg" alt="Image of Lidded Pot" class="img-fluid rounded-3 mb-4"></a>
     </div>
 </div>
