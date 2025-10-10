@@ -8,6 +8,7 @@ description: |
 
  <p>Put a Lid on It features imaginative work by over 100 artists, each contributing lidded vessels and covered dishes across a vibrant range of media and unique styles.</p>
  <p>The exhibition runs until January 4, 2026.</p>
+ <p><a href="https://belgerarts.org/put-a-lid-on-it-lidded-invitational" target="_blank"><i class="fa-regular fa-circle-right"></i> Visit the Exhibition Website</a></p>
 nav: sticky
 thumb: /assets/img/journal/belger-arts-thumb.jpg
 ---
