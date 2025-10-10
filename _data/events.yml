@@ -1,3 +1,15 @@
+- day: Fri
+  month: OCT
+  date: 3
+  time: 6PM-8PM
+  name: Put a Lid on It Exhibition
+  location: Belger Arts Center
+  address: |
+   12011 Tracy Ave<br>
+   Kansas City, MO
+  map: https://maps.app.goo.gl/Smcp35xuuNm8djDs5
+  year: 2025
+  upcoming: "no"
 - day: Sat
   month: AUG
   date: 23
@@ -9,7 +21,7 @@
    Chicago, IL
   map: https://maps.app.goo.gl/EVZVV7BFagxE7cPy5
   year: 2025
-  upcoming: "yes"
+  upcoming: "no"
 - day: Sat
   month: MAY
   date: 3
