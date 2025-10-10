@@ -16,7 +16,7 @@
           <div class="d-none d-xl-flex navbar-expand-xl flex-fill justify-content-evenly pt-3">
             <h3 class="navbar-nav text-center"><a href="/shop/"{% if page.layout == "shop" %} class="active"{% elsif page.layout == "product" %} class="active"{% endif %}>Shop</a></h3>
             <h3 class="text-center navbar-nav"><a href="/gallery/"{% if page.layout == "gallery" %} class="active"{% elsif page.active == "gal" %} class="active"{% endif %}>Gallery</a></h3>
-            <h3 class="navbar-nav text-center"><a href="#calendar">Calendar</a></h3>
+            <h3 class="navbar-nav text-center"><a href="/events/" {% if page.layout == "events" %} class="active"{% elsif page.active == "events" %} class="active"{% endif %}>Calendar</a></h3>
             <h3 class="navbar-nav"><a href="/journal/"{% if page.layout == "journal" %} class="active"{% endif %}{% if page.layout == "post" %} class="active"{% endif %}{% if page.layout == "journal-category" %} class="active"{% endif %}>Journal</a></h3>
             <h3 class="navbar-nav"><a href="/about/"{% if page.title == "About Me" %} class="active"{% endif %}>About</a></h3>
           </div>
@@ -78,7 +78,7 @@
     <h3 class="navbar-nav text-center"><a href="/shop/"{% if page.layout == "shop" %} class="active"{% elsif page.layout == "product" %} class="active"{% endif %}>Shop</a></h3>
     <h3 class="navbar-nav text-center"><a href="/gallery/"{% if page.layout == "gallery" %} class="active"{% endif %}{% if page.permalink] == "/gallery/mugs/" %} class="active"{% endif %}>Gallery</a></h3>
     <h3 class="navbar-nav text-center"><a href="/journal/"{% if page.layout == "journal" %} class="active"{% endif %}{% if page.layout == "post" %} class="active"{% endif %}{% if page.layout == "journal-category" %} class="active"{% endif %}>Journal</a></h3>
-    <h3 class="navbar-nav text-center" data-bs-dismiss="offcanvas"><a href="#calendar">Calendar</a></h3>
+    <h3 class="navbar-nav text-center" data-bs-dismiss="offcanvas"><a href="/events/">Calendar</a></h3>
     <h3 class="navbar-nav text-center"><a href="/contact/"{% if page.title == "Contact" %} class="active"{% endif %}>Contact</a></h3>
     <h3 class="navbar-nav text-center"><a href="/sales/"{% if page.title == "Sales Conditions" %} class="active"{% endif %}>Sales + Returns</a></h3>
     <h3 class="navbar-nav text-center"><a href="/frequently-asked-questions/"{% if page.title == "Frequently Asked Questions" %} class="active"{% endif %}>FAQ</a></h3>
