@@ -19,6 +19,7 @@ thumb: /assets/img/journal/belger-arts-thumb.jpg
         Kansas City, MO 64108</a></p></div>
         <a href="https://maps.app.goo.gl/Smcp35xuuNm8djDs5" target="_blank"><img src="/assets/img/journal/belger-arts-map.png" alt="Belger Art Center Map" class="img-fluid rounded-3 mb-4 p-5"></a>
         <img src="/assets/img/journal/belger-arts-flyer.png" alt="Put a Lid on It Exhibition Flyer" class="img-fluid rounded-3 p-5">
+        <a href="/assets/img/journal/belger-arts-flyer-1.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-flyer-1.jpg" alt="Put a Lid on It Exhibition Flyer" class="img-fluid rounded-3 mb-4"></a>
     </div>
     <div class="col-md-7 col-sm-12">
     <a class="btn btn-primary pt-3 pb-2 pe-4 mb-3 rounded-pill w-100" href="https://belgerarts.org/put-a-lid-on-it"><i class="fa-solid fa-store p-2"></i> Shop the Exhibition</a>
