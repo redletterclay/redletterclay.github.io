@@ -1,3 +1,15 @@
+- day: Sat
+  month: DEC
+  date: 13
+  time: 6PM-8PM
+  name: Gnarly or Nice Market
+  location: Co-prosperity Sphere
+  address: |
+   3219 S Morgan Street<br>
+   Chicago, IL 60608
+  map: https://maps.app.goo.gl/riSgCYyHTWwG1Kk18
+  year: 2025
+  upcoming: "yes"
 - day: Fri
   month: OCT
   date: 3
