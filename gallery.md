@@ -9,7 +9,7 @@ permalink: /gallery/
 <div class="animate__animated fade-in container g-5">
     <div>
       <a href="/assets/img/gallery/gallery-01.jpg" class="img-fluid glightbox" data-zoomable="false">
-      <img src="/assets/img/gallery/gallery-01.jpg" class="img-fluid cursor-zoom"></a>
+      <img src="/assets/img/gallery/gallery-01.jpg" class="img-fluid cursor-zoo"></a>
     </div>
     <div class="d-inline-flex">
       <div class="me-2 mb-2">
@@ -18,6 +18,27 @@ permalink: /gallery/
       <div>
       <a href="/assets/img/gallery/L2-teapot-bottom.jpg" class="img-fluid glightbox" data-zoomable="false">
         <img src="/assets/img/gallery/L2-teapot-bottom.jpg" class="img-fluid cursor-zoom"></a>
+      </div>
+    </div>
+    <div class="d-inline-flex">
+      <div class="me-2 mb-2">
+        <a href="/assets/img/gallery/lidded-jar-green-exterior.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/lidded-jar-green-exterior.jpg" class="img-fluid cursor-zoom"></a>
+      </div>
+      <div>
+      <a href="/assets/img/gallery/lidded-jar-green-interior.jpg" class="img-fluid glightbox" data-zoomable="false">
+        <img src="/assets/img/gallery/lidded-jar-green-interior.jpg" class="img-fluid cursor-zoom"></a>
+      </div>
+    </div>
+    <div class="d-inline-flex mb-2">
+      <a href="/assets/img/gallery/pink-tea-set.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/pink-tea-set.jpg" class="img-fluid cursor-zoom"></a>
+    </div>
+    <div class="d-inline-flex">
+      <div class="me-2 mb-2">
+        <a href="/assets/img/gallery/lidded-jar-blue-petal-trays.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/lidded-jar-blue-petal-trays.jpg" class="img-fluid cursor-zoom"></a>
+      </div>
+      <div>
+      <a href="/assets/img/gallery/lidded-jar-blue-interior.jpg" class="img-fluid glightbox" data-zoomable="false">
+        <img src="/assets/img/gallery/lidded-jar-blue-interior.jpg" class="img-fluid cursor-zoom"></a>
       </div>
     </div>
     <div class="d-inline-flex mb-2">
@@ -34,6 +55,15 @@ permalink: /gallery/
     </div>
     <div>
       <a href="/assets/img/gallery/lidded-jars-blue.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/lidded-jars-blue.jpg" class="img-fluid cursor-zoom"></a>
+    </div>
+    <div class="d-inline-flex">
+      <div class="me-2 mb-2">
+        <a href="/assets/img/gallery/bowls-3-sizes.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/bowls-3-sizes.jpg" class="img-fluid cursor-zoom"></a>
+      </div>
+      <div>
+      <a href="/assets/img/gallery/bowls-set-of-2.jpg" class="img-fluid glightbox" data-zoomable="false">
+        <img src="/assets/img/gallery/bowls-set-of-2.jpg" class="img-fluid cursor-zoom"></a>
+      </div>
     </div>
     <div>
       <a href="/assets/img/gallery/planter-blue.jpg" class="img-fluid glightbox" data-zoomable="false">
