@@ -11,6 +11,10 @@ permalink: /gallery/
       <a href="/assets/img/gallery/gallery-01.jpg" class="img-fluid glightbox" data-zoomable="false">
       <img src="/assets/img/gallery/gallery-01.jpg" class="img-fluid cursor-zoo"></a>
     </div>
+    <div class="py-2">
+      <a href="/assets/img/gallery/washi-paper-lantern.jpg" class="img-fluid glightbox" data-zoomable="false">
+      <img src="/assets/img/gallery/washi-paper-lantern.jpg" class="img-fluid cursor-zoo"></a>
+    </div>
     <div class="d-inline-flex">
       <div class="me-2 mb-2">
         <a href="/assets/img/gallery/L1-teapot-side.jpg" class="img-fluid glightbox" data-zoomable="false"><img src="/assets/img/gallery/L1-teapot-side.jpg" class="img-fluid cursor-zoom"></a>
