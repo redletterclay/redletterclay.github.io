@@ -1,3 +1,15 @@
+- day: Sun
+  month: DEC
+  date: 14
+  time: 5PM-11PM
+  name: Oddball Market
+  location: Broken Hearts
+  address: |
+   1009 W Lake St<br>
+   Chicago, IL 60607
+  map: https://maps.app.goo.gl/GEGgrpWyuuVfQWyH9
+  year: 2025
+  upcoming: "yes"
 - day: Sat
   month: DEC
   date: 13
