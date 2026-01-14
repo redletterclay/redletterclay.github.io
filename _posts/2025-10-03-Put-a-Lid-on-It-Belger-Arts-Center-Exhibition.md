@@ -13,24 +13,56 @@ nav: sticky
 thumb: /assets/img/journal/belger-arts-thumb.jpg
 ---
 <div class="row mb-5">
-    <div class="col-md-5 col-sm-12 text-center">
-            <div><h3>Belger Arts Crane Yard</h3></div>
-            <div><p><a href="https://maps.app.goo.gl/Smcp35xuuNm8djDs5" target="_blank">12011 Tracy Avenue<br>
-        Kansas City, MO 64108</a></p></div>
-        <a href="https://maps.app.goo.gl/Smcp35xuuNm8djDs5" target="_blank"><img src="/assets/img/journal/belger-arts-map.png" alt="Belger Art Center Map" class="img-fluid rounded-3 mb-4 p-5"></a>
-        <img src="/assets/img/journal/belger-arts-flyer.png" alt="Put a Lid on It Exhibition Flyer" class="img-fluid rounded-3 p-5">
+    <div class="col-md-6 col-sm-12 text-center">
         <a href="/assets/img/journal/belger-arts-flyer-1.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-flyer-1.jpg" alt="Put a Lid on It Exhibition Flyer" class="img-fluid rounded-3 mb-4"></a>
     </div>
-    <div class="col-md-7 col-sm-12">
-    <a class="btn btn-primary pt-3 pb-2 pe-4 mb-3 rounded-pill w-100" href="https://belgerarts.org/put-a-lid-on-it"><i class="fa-solid fa-store p-2"></i> Shop the Exhibition</a>
-        <a href="https://belgerarts.org/put-a-lid-on-it" alt="Shop the Exhibition" target="_blank"><img src="/assets/img/journal/belger-arts-shop-exhibition.jpg" class="img-fluid rounded-3 mb-4"></a>
-        <a href="/assets/img/journal/belger-arts-pot-01.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-pot-01.jpg" alt="Image of Lidded Pot" class="img-fluid rounded-3 mb-4"></a>
-        <a href="/assets/img/journal/belger-arts-pot-02.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-pot-02.jpg" alt="Image of Lidded Pot" class="img-fluid rounded-3 mb-4"></a>
-        <a href="/assets/img/journal/belger-arts-pot-03.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-pot-03.jpg" alt="Image of Lidded Pot" class="img-fluid rounded-3 mb-4"></a>
-        <a href="/assets/img/journal/belger-arts-pot-04.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-pot-04.jpg" alt="Image of Lidded Pot" class="img-fluid rounded-3 mb-4"></a>
-        <a href="/assets/img/journal/belger-arts-pot-05.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-pot-05.jpg" alt="Image of Lidded Pot" class="img-fluid rounded-3 mb-4"></a>
-        <a href="/assets/img/journal/belger-arts-pot-06.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-pot-06.jpg" alt="Image of Lidded Pot" class="img-fluid rounded-3 mb-4"></a>
-        <a href="/assets/img/journal/belger-arts-pot-07.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-pot-07.jpg" alt="Image of Lidded Pot" class="img-fluid rounded-3 mb-4"></a>
-        <a href="/assets/img/journal/belger-arts-pots-process.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-pots-process.jpg" alt="Image of Lidded Pot" class="img-fluid rounded-3 mb-4"></a>
+    <div class="col-md-6 col-sm-12">
+        <div id="carouselBelger" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="/assets/img/journal/belger-arts-pot-01.jpg" class="d-block w-100" alt="Image of Lidded Pot">
+                </div>
+                <div class="carousel-item">
+                <img src="/assets/img/journal/belger-arts-pot-02.jpg" class="d-block w-100" alt="Image of Lidded Pot">
+                </div>
+                <div class="carousel-item">
+                <img src="/assets/img/journal/belger-arts-pot-03.jpg" class="d-block w-100" alt="Image of Lidded Pot">
+                </div>
+                <div class="carousel-item">
+                <img src="/assets/img/journal/belger-arts-pot-04.jpg" class="d-block w-100" alt="Image of Lidded Pot">
+                </div>
+                <div class="carousel-item">
+                <img src="/assets/img/journal/belger-arts-pot-05.jpg" class="d-block w-100" alt="Image of Lidded Pot">
+                </div>
+                <div class="carousel-item">
+                <img src="/assets/img/journal/belger-arts-pot-06.jpg" class="d-block w-100" alt="Image of Lidded Pot">
+                </div>
+                <div class="carousel-item">
+                <img src="/assets/img/journal/belger-arts-pot-07.jpg" class="d-block w-100" alt="Image of Lidded Pot">
+                </div>
+                <div class="carousel-item">
+                <img src="/assets/img/journal/belger-arts-pots-process.jpg" class="d-block w-100" alt="Image of Lidded Pot">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselBelger" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselBelger" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 col-6-md text-center">
+        <div><h3>Belger Arts Crane Yard</h3></div>
+        <div>
+            <p><a href="https://maps.app.goo.gl/Smcp35xuuNm8djDs5" target="_blank">12011 Tracy Avenue<br>
+            Kansas City, MO 64108</a>
+            </p>
+        </div>
+        <a href="https://maps.app.goo.gl/Smcp35xuuNm8djDs5" target="_blank"><img src="/assets/img/journal/belger-arts-map.png" alt="Belger Art Center Map" class="img-fluid rounded-3 p-5"></a>
     </div>
 </div>
