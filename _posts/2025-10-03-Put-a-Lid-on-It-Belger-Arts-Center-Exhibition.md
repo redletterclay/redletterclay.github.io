@@ -8,16 +8,22 @@ description: |
 
  <p>Put a Lid on It features imaginative work by over 100 artists, each contributing lidded vessels and covered dishes across a vibrant range of media and unique styles.</p>
  <p>The exhibition runs until January 4, 2026.</p>
- <p><a href="https://belgerarts.org/put-a-lid-on-it-lidded-invitational" target="_blank"><i class="fa-regular fa-circle-right"></i> Visit the Exhibition Website</a></p>
+ <div><h3>Belger Arts Crane Yard</h3></div>
+ <div>
+ <p><a href="https://maps.app.goo.gl/Smcp35xuuNm8djDs5" target="_blank">12011 Tracy Avenue<br>
+ Kansas City, MO 64108</a>
+ </p>
+  <p><a href="https://belgerarts.org/put-a-lid-on-it-lidded-invitational" target="_blank"><i class="fa-regular fa-circle-right"></i> <span class="text-light">Visit the Exhibition Website</span></a></p>
+ </div>
 nav: sticky
-thumb: /assets/img/journal/belger-arts-thumb.jpg
+thumb: /assets/img/journal/belger-arts-flyer-2.png
 ---
 <div class="row mb-5">
     <div class="col-md-6 col-sm-12 text-center">
         <a href="/assets/img/journal/belger-arts-flyer-1.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-flyer-1.jpg" alt="Put a Lid on It Exhibition Flyer" class="img-fluid rounded-3 mb-4"></a>
     </div>
     <div class="col-md-6 col-sm-12">
-        <div id="carouselBelger" class="carousel slide carousel-fade">
+        <div id="carouselBelger" class="carousel carousel-dark slide carousel-fade">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                 <img src="/assets/img/journal/belger-arts-pot-01.jpg" class="d-block w-100" alt="Image of Lidded Pot">
@@ -53,16 +59,5 @@ thumb: /assets/img/journal/belger-arts-thumb.jpg
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-12 col-6-md text-center">
-        <div><h3>Belger Arts Crane Yard</h3></div>
-        <div>
-            <p><a href="https://maps.app.goo.gl/Smcp35xuuNm8djDs5" target="_blank">12011 Tracy Avenue<br>
-            Kansas City, MO 64108</a>
-            </p>
-        </div>
-        <a href="https://maps.app.goo.gl/Smcp35xuuNm8djDs5" target="_blank"><img src="/assets/img/journal/belger-arts-map.png" alt="Belger Art Center Map" class="img-fluid rounded-3 p-5"></a>
     </div>
 </div>
