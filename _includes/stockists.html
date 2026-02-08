@@ -1,40 +1,31 @@
-<div class="container">
-    <div class="row animate__animated animate__fadeIn bg-red rounded-2 px-3 py-5 mb-5">
-        <div class="col-md-12 col-lg-4 pb-4">
-            <h3 class="fw-medium fc-1 text-md-start text-center">Purchase In Person <i class="fa-solid fa-play fc-7 ps-3"></i><i class="fa-solid fa-play fc-7"></i><i class="fa-solid fa-play fc-7"></i></h3>
-        </div>
-        <div class="col-md-12 col-lg-8">
-            <h3 class="fw-medium"><i class="fa-solid fa-store fc-7 pe-2 mb-5"></i> Stockists</h3>
-                <div class="d-flex mb-5">
-                    <div class="w-25">
-                        <img src="/assets/img/stockist-northside-cutlery.jpg" alt="Northside Cutlery" class="img-fluid border border-white border-3">
-                    </div> 
-                    <div class="w-75 ps-3">
-                        <h3><a href="https://northsidecutlery.com/" target="_blank" alt="Northside Cutlery" class="text-white">Northside Cutlery</a></h3>
-                        <p>Kitchen retail supply store in Lincoln Square with a focus on knife sharpening services.</p>
-                        <h3 class="fs-5 text-end"><a href="https://maps.app.goo.gl/HDhnfRkjrxFgRYYQA" target="_blank"><i class="fa-solid fa-map pe-2" aria-hidden="true"></i>4316 N Lincoln Ave, Chicago, IL</a></h3>
+<div class="container stockists">
+    <div class="row animate__animated animate__fadeIn bg-red rounded-2 px-3 py-5 mb-5 justify-content-center">
+        <div class="col-12 col-md-8">
+            <h3 class="fw-medium text-center"><i class="fa-solid fa-store fc-7"></i> Stockists</h3>
+            <hr class="border-3 pb-4">
+            
+            {% for stockist in site.data.stockists %}
+            <div class="d-flex gap-3 mb-5 align-items-center">
+                <div class="flex-fill {% if stockist.current == false %}out-of-stock{% endif %}">
+                    <div class="product-thumb">
+                        <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                            <a href="{{ stockist.url }}" class="text-black"><span class="rounded-pill bg-white p-4"><i
+                                        class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> OUT OF STOCK</span></a>
+                        </div>
+                        <img src="{{ stockist.thumb }}" alt="{{ stockist.name }}" class="img-fluid border border-white border-3">
                     </div>
+                </div> 
+                <div class="flex-fill">
+                    <h3 class="text-center text-md-start"><a href="{{ stockist.url }}" target="_blank" alt="{{ stockist.name }}" class="text-white">{{ stockist.name }}</a></h3>
+                    <p>{{ stockist.info }}</p>
+                    <h3 class="fs-5 text-center text-md-end"><a href="{{ stockist.map }}" target="_blank"><i class="fa-solid fa-map pe-2" aria-hidden="true"></i>{{ stockist.address }}</a></h3>
                 </div>
-                <div class="d-flex mb-5">
-                    <div class="w-25">
-                        <img src="/assets/img/stockist-spilt-milk.jpg" alt="Spilt Milk Pastry" class="img-fluid border border-white border-3">
-                    </div> 
-                    <div class="w-75 ps-3">
-                        <h3><a href="https://www.spiltmilkpastry.com/" target="_blank" alt="Northside Cutlery" class="text-white">Spilt Milk Pastry</a></h3>
-                        <p>Located in Oak Park, Illinois, Spilt Milk Pastry works with local farmers to source ingredients for their baked goods. They carry my handmade mugs.</p>
-                        <h3 class="fs-5 text-end"><a href="https://maps.app.goo.gl/ehCpNZ3X8E6Hg9Kj7" target="_blank"><i class="fa-solid fa-map pe-2" aria-hidden="true"></i>811 South Blvd, Oak Park, IL</a></h3>
-                    </div>
-                </div>
-                <div class="d-flex">
-                    <div class="w-25">
-                        <img src="/assets/img/stockist-buddy.jpg" alt="Buddy Gallery in the Chicago Cultural Center" class="img-fluid border border-white border-3">
-                    </div> 
-                    <div class="w-75 ps-3">
-                        <h3><a href="https://hi-buddy.org/" target="_blank" alt="Buddy Gallery Chicago Cultural Center" class="text-white">Buddy Gallery in the Chicago Cultural Center</a></h3>
-                        <p>Buddy is a store in the Chicago Cultural Center in downtown Chicago with the mission of supporting and showcasing local artists, makers, and small businesses.</p>
-                        <h3 class="fs-5 text-end"><a href="https://maps.app.goo.gl/VpNLTR7LeLq3uJb39" target="_blank"><i class="fa-solid fa-map pe-2" aria-hidden="true"></i>79 E Washington St, Chicago, IL</a></h3>
-                    </div>   
-                </div>
+            </div>
+            {% unless forloop.last %}
+            <hr class="border-3 pb-4">
+            {% endunless %}
+            {% endfor %}
+            
         </div>
     </div>
 </div>

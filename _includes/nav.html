@@ -1,4 +1,4 @@
-<div class="container-fluid nav-stick {% if page.nav == 'sticky'%}sticky-top bg-white{% endif %}{% if page.hero %} hero {% endif %}">
+<div class="container-fluid nav-stick sticky-top bg-white{% if page.hero %} hero {% endif %}">
   <nav class="navbar navbar-expand-xl">
       <div class="container">
         <div class="d-inline-flex flex-fill align-items-center justify-content-between">
@@ -20,23 +20,15 @@
             <h3 class="navbar-nav"><a href="/journal/"{% if page.layout == "journal" %} class="active"{% endif %}{% if page.layout == "post" %} class="active"{% endif %}{% if page.layout == "journal-category" %} class="active"{% endif %}>Journal</a></h3>
             <h3 class="navbar-nav"><a href="/about/"{% if page.title == "About Me" %} class="active"{% endif %}>About</a></h3>
           </div>
-          {% if page.layout == "shop-live" %}
-      <div class="d-block animate__animated animate__fadeInDownBig cart-block">
-        <button type="button" class="btn btn-cart bg-white position-relative snipcart-checkout mt-1">
-          <i class="fa-solid fa-bag-shopping text-black fs-1"></i>
-        </button>
-      </div>
-      {% elsif page.layout == "product" %}
-      <div class="d-inline-block animate__animated animate__fadeInDownBig">
-        <button type="button" class="btn btn-cart bg-white position-relative snipcart-checkout mt-1">
-          <i class="fa-solid fa-bag-shopping text-black fs-1"></i>
-          <!--<span class="position-absolute top-0 start-100 translate-center badge rounded-pill bg-danger">
-            <span class="snipcart-items-count animate__animated animate__flipInX"></span>
-            <span class="visually-hidden">items in cart</span>
-          </span>-->
-        </button>
-      </div>
-      {% endif %}
+          {% for item in site.data.ecommerce limit:1 %}
+            {% if site.data.ecommerce.live %}
+              <div class="d-block animate__animated animate__flipInX cart-block">
+                <button type="button" class="btn btn-cart bg-white position-relative snipcart-checkout mt-1">
+                  <i class="fa-solid fa-bag-shopping text-black fs-1"></i>
+                </button>
+              </div>
+            {% endif %}
+          {% endfor %}
           <div class="d-inline-flex justify-content-end">
             <button class="navbar-toggler" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>

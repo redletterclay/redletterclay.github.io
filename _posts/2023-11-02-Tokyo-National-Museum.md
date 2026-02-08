@@ -8,10 +8,19 @@ description: |
 nav: sticky
 thumb: /assets/img/journal/tokyo-national-museum-thumb.jpg
 thumb-caption: Egyptian pot that pre-dates hieroglyphics
-image-1: /assets/img/journal/tokyo-national-museum-teapot.jpg
-image-2: /assets/img/journal/tokyo-national-museum-three-color-glaze.jpg
-image-2-caption: Chinese Three Color Glaze (8th Century)
-image-3: /assets/img/journal/tokyo-national-museum-vase.jpg
-image-4: /assets/img/journal/tokyo-national-museum-celadon.jpg
-image-4-caption: 16th Century Chinese Celadon Pots
+gallery:
+ - items:
+    - url: /assets/img/journal/tokyo-national-museum-teapot.jpg
+      title: Teapot
+      flex: fill
+    - url: /assets/img/journal/tokyo-national-museum-three-color-glaze.jpg
+      title: Chinese Three Color Glaze (8th Century Tang Dynasty)
+      flex: fill
+ - items:
+    - url: /assets/img/journal/tokyo-national-museum-vase.jpg
+      title: Vase
+      flex: fill
+    - url: /assets/img/journal/tokyo-national-museum-celadon.jpg
+      title: 16th Century Chinese Celadon Pots
+      flex: fill
 ---

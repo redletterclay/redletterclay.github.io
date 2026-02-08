@@ -1,62 +1,123 @@
-<div class="mb-5">
-    <div class="d-flex flex-wrap flex-row animate__animated animate__fadeIn">
-        {% assign sorted_products = site.products| sort: 'sku' %}
-        {% for product in sorted_products %}
-        <div class="card col-sm-12 col-md-6 col-lg-4 p-2 mt-5 border border-0 stockable" data-productId="{{product.sku}}">
-            <div class="card-header bg-white border border-0">
-                <div class="d-flex align-items-center justify-content-between">
-                    {% if product.sale %}
-                    <div>
-                        <h5 class="text-start alt sale text-danger"><i class="fa-solid fa-certificate"></i> SALE</h5>
-                    </div>
-                    {% else %}
-                    <div><h5>&nbsp;</h5></div>
-                    {% endif %}
-                    <h2 class="card-title text-center fw-semibold">
-                        {{ product.name }}
+<div
+    class="d-flex container flex-wrap flex-row animate__animated animate__fadeIn justify-content-center justify-content-md-start">
+    {% if page.tag and site.data.ecommerce.live %}
+    {% assign sorted_products = site.products | where: "tag", page.tag %}
+    {% else %}
+    {% assign sorted_products =paginator.posts %}
+    {% endif %}
+    {% for product in sorted_products %}
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="{{product.sku}}">
+        <div class="card-header bg-white border border-0">
+            <div
+                class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="{{ product.url }}">{{ product.name }}</a>
                     </h2>
                 </div>
+                {% if product.sale %}
+                <div class="pe-3 text-end">
+                    <h3 class="text-start alt sale fc-1"><span class="text-black">SALE</span> <i
+                            class="fa-solid fa-certificate"></i></h3>
+                </div>
+                {% else %}
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                {% endif %}
             </div>
-            <div class="card-body border border-0">
-                <div class="product-thumb">
-                    <div class="icon text-center fs-5 text-black fw-bold header-alt">
-                        <a href="{{ product.url }}"><span class="rounded-pill bg-white p-4"><i class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
-                      </div>
-                    <a href="{{ product.url }}"><img src="/assets/img/shop/live/{{ product.thumb }}" class="img-fluid{% if product.background %} rounded-4{% endif %}"></a>
-                 </div>
-                <p>
-                    {{ product.content | markdownify }}
-                </p>
-                <div class="d-flex align-items-center justify-content-between">
-                    <div>
-                    <h6 class="text-end"><a href="{{ product.url }}" class="btn btn-secondary pt-3 pb-2 px-5"
-                        data-item-id="{{product.sku}}"
-                        data-item-url="{{site.url}}{{product.url}}"
-                        data-item-price="{{product.price}}"
-                        data-item-description="{{product.description}}"
-                        data-item-image="{{site.url}}{{product.url}}/assets/img/shop/live/{{product.thumb}}"
-                        data-item-name="{{product.name}}"
-                        >
-                        <i class="fa-solid fa-tag"></i> Details
-                    </a>
-                    <a href="{{product.url }}" class="invisible snipcart-add-item"
-                        data-item-id="{{product.sku}}"
-                        data-item-url="{{site.url}}{{product.url}}"
-                        data-item-price="{{product.price}}"
-                        data-item-description="{{product.description}}"
-                        data-item-image="{{site.url}}{{product.url}}/assets/img/shop/live/{{product.thumb}}"
-                        data-item-name="{{product.name}}"
-                        >
-                    </a>
-                    </h6>
-                    </div>
-                    <div>
-                        <h4 class="text-center alt">{% if product.price-og %}<span class="text-decoration-line-through opacity-50 fw-lighter pe-4">${{ product.price-og }}</span> ${{ product.price }}{% else %}${{ product.price}}{%endif %}</h4>
-                    </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="{{ product.url }}"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="{{ product.url }}"><img src="/assets/img/shop/live/{{ product.thumb }}"
+                        class="img-fluid{% if product.background %} rounded-4{% endif %}"></a>
+            </div>
+            <p>
+                {{ product.content | markdownify }}
+            </p>
+            <div class="hstack justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-start alt">{% if product.price-og %}<span
+                            class="text-decoration-line-through opacity-50 fw-lighter">${{ product.price-og }}</span>
+                        ${{ product.price }}{% else %}${{ product.price}}{%endif %}</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="{{ product.url }}"
+                            data-item-id="{{product.sku}}" data-item-url="{{site.url}}{{product.url}}"
+                            data-item-price="{{product.price}}" data-item-description="{{product.description}}"
+                            data-item-image="{{site.url}}{{product.url}}/assets/img/shop/live/{{product.thumb}}"
+                            data-item-name="{{product.name}}">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
                 </div>
             </div>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
+    <!-- Simple Pagination Controls -->
+{% if paginator.total_pages > 1 %}
+<div class="container my-5">
+    <nav aria-label="Product pagination">
+        <ul class="pagination justify-content-center">
+            <!-- First Page -->
+            {% if paginator.previous_page %}
+            <li class="page-item d-none d-sm-block">
+                <a class="page-link rounded rounded-pill" href="{{ site.baseurl }}/shop/" aria-label="First">
+                    <i class="fa-solid fa-angles-left"></i>
+                </a>
+            </li>
+            {% endif %}
+            
+            <!-- Previous Page -->
+            {% if paginator.previous_page %}
+            <li class="page-item">
+                <a class="page-link rounded rounded-pill" href="{{ paginator.previous_page_path | prepend: site.baseurl }}" aria-label="Previous">
+                    <i class="fa-solid fa-chevron-left"></i> Previous
+                </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled d-none d-sm-block">
+                <span class="page-link rounded rounded-pill"><i class="fa-solid fa-chevron-left"></i> Previous</span>
+            </li>
+            {% endif %}
+
+            <!-- Page Number Display -->
+            <li class="page-item active px-0 px-md-3 d-none d-sm-block">
+                <span class="page-link">
+                    Page {{ paginator.page }} of {{ paginator.total_pages }}
+                </span>
+            </li>
+
+            <!-- Next Page -->
+            {% if paginator.next_page %}
+            <li class="page-item">
+                <a class="page-link rounded rounded-pill" href="{{ paginator.next_page_path | prepend: site.baseurl }}" aria-label="Next">
+                    Next <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+                <span class="page-link rounded rounded-pill">Next <i class="fa-solid fa-chevron-right"></i></span>
+            </li>
+            {% endif %}
+            
+            <!-- Last Page -->
+            {% if paginator.next_page %}
+            <li class="page-item d-none d-sm-block">
+                <a class="page-link rounded rounded-pill" href="{{ site.baseurl }}/shop/page/{{ paginator.total_pages }}/" aria-label="Last">
+                    <i class="fa-solid fa-angles-right"></i>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+{% endif %}
 </div>
 {% include stockists.html %}

@@ -1,0 +1,21 @@
+- name: Northside Cutlery
+  info: Kitchen retail supply store in Lincoln Square with a focus on knife sharpening services.
+  address: 4316 N Lincoln Ave, Chicago, IL
+  map: https://maps.app.goo.gl/a1pXBNeH8bv1RrxL7
+  thumb: /assets/img/stockist-northside-cutlery.jpg
+  url: https://northsidecutlery.com
+  current: true
+- name: Buddy Gallery
+  info: Located in the Chicago Cultural Center in downtown Chicago, Buddy supports and showcases local artists, makers and small businesses that work in the city.
+  map: https://maps.app.goo.gl/vxb5ZhpbAUL5Si1j7
+  thumb: /assets/img/stockist-buddy.jpg
+  address: 79 E Washington St, Chicago, IL
+  url: https://hi-buddy.org
+  current: true
+- name: Spilt Milk Pastry
+  info: Located in Oak Park, Illinois, Spilt Milk Pastry works with local farmers to source ingredients for their baked goods. They carry my handmade mugs.
+  map: https://maps.app.goo.gl/qzJp9MdgFqSHmniU8
+  thumb: /assets/img/stockist-spilt-milk.jpg
+  address: 811 South Blvd, Oak Park, IL
+  url: https://www.spiltmilkpastry.com
+  current: false

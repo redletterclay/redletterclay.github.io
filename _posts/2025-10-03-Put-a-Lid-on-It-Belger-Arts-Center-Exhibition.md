@@ -17,47 +17,32 @@ description: |
  </div>
 nav: sticky
 thumb: /assets/img/journal/belger-arts-flyer-2.png
+gallery:
+ - items:
+    - url: /assets/img/journal/belger-arts-pot-01.jpg
+      title: Lidded pot in show
+      flex: fill
+    - url: /assets/img/journal/belger-arts-pot-02.jpg
+      title: Lidded pot in show
+      flex: fill
+ - items:
+    - url: /assets/img/journal/belger-arts-pot-04.jpg
+      title: Lidded pot in show
+      flex: fill
+    - url: /assets/img/journal/belger-arts-pot-05.jpg
+      title: Lidded pot in show
+      flex: fill
+    - url: /assets/img/journal/belger-arts-pot-06.jpg
+      title: Lidded pot in show
+      flex: fill
+ - items:
+    - url: /assets/img/journal/belger-arts-pot-07.jpg
+      title: Lidded pot in show
+      flex: fill
+    - url: /assets/img/journal/belger-arts-pots-process.jpg
+      title: Pot in process (before firing)
+      flex: fill
 ---
-<div class="row mb-5">
-    <div class="col-md-6 col-sm-12 text-center">
-        <a href="/assets/img/journal/belger-arts-flyer-1.jpg" class="glightbox"><img src="/assets/img/journal/belger-arts-flyer-1.jpg" alt="Put a Lid on It Exhibition Flyer" class="img-fluid rounded-3 mb-4"></a>
-    </div>
-    <div class="col-md-6 col-sm-12">
-        <div id="carouselBelger" class="carousel carousel-dark slide carousel-fade">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                <img src="/assets/img/journal/belger-arts-pot-01.jpg" class="d-block w-100" alt="Image of Lidded Pot">
-                </div>
-                <div class="carousel-item">
-                <img src="/assets/img/journal/belger-arts-pot-02.jpg" class="d-block w-100" alt="Image of Lidded Pot">
-                </div>
-                <div class="carousel-item">
-                <img src="/assets/img/journal/belger-arts-pot-03.jpg" class="d-block w-100" alt="Image of Lidded Pot">
-                </div>
-                <div class="carousel-item">
-                <img src="/assets/img/journal/belger-arts-pot-04.jpg" class="d-block w-100" alt="Image of Lidded Pot">
-                </div>
-                <div class="carousel-item">
-                <img src="/assets/img/journal/belger-arts-pot-05.jpg" class="d-block w-100" alt="Image of Lidded Pot">
-                </div>
-                <div class="carousel-item">
-                <img src="/assets/img/journal/belger-arts-pot-06.jpg" class="d-block w-100" alt="Image of Lidded Pot">
-                </div>
-                <div class="carousel-item">
-                <img src="/assets/img/journal/belger-arts-pot-07.jpg" class="d-block w-100" alt="Image of Lidded Pot">
-                </div>
-                <div class="carousel-item">
-                <img src="/assets/img/journal/belger-arts-pots-process.jpg" class="d-block w-100" alt="Image of Lidded Pot">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselBelger" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselBelger" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
+<div class="text-center">
+<a href="/assets/img/journal/belger-arts-flyer-1.jpg" class="glightbox" alt="Belger Arts Flyer for 'Put a Lid on It' Exhibition"><img src="/assets/img/journal/belger-arts-flyer-1.jpg" alt="Put a Lid on It Exhibition Flyer" class="img-fluid rounded-3 mb-4" style="height: 600px;"></a>
 </div>

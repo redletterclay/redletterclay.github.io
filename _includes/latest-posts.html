@@ -1,9 +1,11 @@
+<div class="hstack gap-3 flex-wrap">
   {% for post in site.posts %}
-    <div class="col-sm-12 col-xl-4">
-        <div class="p-3 pt-0">
+    <div class="flex-fill" style="min-width: 280px; max-width: 400px;">
+        <div class="p-3 pt-0 h-100">
             <a href="{{post.url}}"><h2 class="ls-0"><i class="fa-solid fa-newspaper pe-2 fc-1"></i> {{post.title}}</h2>
             <img src="{{post.thumb}}" class="img-fluid border border-5 border-thumb rounded-3 shadow-fc7">
             </a>
         </div>
     </div>
   {% endfor %}
+</div>

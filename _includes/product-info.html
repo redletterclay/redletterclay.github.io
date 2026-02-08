@@ -1,0 +1,111 @@
+{%- comment -%} Product Header {%- endcomment -%}
+{% assign weight_lb = page.weight-g | divided_by: 453.592 %}
+<div class="hstack align-items-start justify-content-between border-bottom-0 border-right-0 border border-2 pt-3 px-3 mb-3">
+  <div>
+    <h2 class="fc-1 pe-2">{{ page.name }}</h2>
+  </div>
+  <div>
+    <h2 class="text-black text-end">
+      {% if page.price-og %}
+      <span class="text-decoration-line-through opacity-25 fw-light pe-3">${{ page.price-og }}</span>
+      {% endif %}
+      ${{ page.price }}
+      {% if page.sale %}
+      <br><span class="text-start alt sale text-danger fs-4">
+        <i class="fa-solid fa-certificate"></i> ON SALE
+      </span>
+      {% endif %}
+    </h2>
+  </div>
+</div>
+
+{%- comment -%} Product Description {%- endcomment -%}
+<article class="ps-3">
+  <p>{{ page.description }}</p>
+  {% if page.process %}
+  <p class="text-end"><a href="{{page.process}}" alt="Behind the Making">Behind the making</a></p>
+  {% endif %}
+</article>
+
+{%- comment -%} Product Details {%- endcomment -%}
+{% if page.height or page.weight or page.width or page.holds %}
+<div class="d-none d-md-flex align-items-bottom">
+  <h5 class="alt w-semibold fst-italic px-3">
+    <i class="fa-solid fa-tag fc-1"></i> DETAILS
+  </h5>
+  <hr class="flex-grow-1 me-3 border-2 animate__animated animate__zoomIn ps-5">
+</div>
+<ul class="details ps-3">
+  {% if page.holds %}
+  <li><i class="fa-solid fa-caret-right pe-2 fc-7"></i><span class="fw-normal">Holds</span>: {{ page.holds }}</li>
+  {% endif %}
+  {% if page.weight-g %}
+  <li><i class="fa-solid fa-caret-right pe-2 fc-7"></i><span class="fw-normal">Weight</span>: {{ weight_lb | round: 2 }} pounds</li>
+  {% endif %}
+  {% if page.height %}
+  <li><i class="fa-solid fa-caret-right pe-2 fc-7"></i><span class="fw-normal">Height</span>: {{ page.height }}</li>
+  {% endif %}
+  {% if page.width %}
+  <li><i class="fa-solid fa-caret-right pe-2 fc-7"></i><span class="fw-normal">Width</span>: {{ page.width }}</li>
+  {% endif %}
+  {% if page.length %}
+  <li><i class="fa-solid fa-caret-right pe-2 fc-7"></i><span class="fw-normal">Length</span>: {{ page.length }}</li>
+  {% endif %}
+</ul>
+{% endif %}
+
+{%- comment -%} Add to Cart Section {%- endcomment -%}
+<div class="row add_cart py-3 pt-3">
+  <div class="col-12 mx-auto">
+    <button class="btn btn-primary pt-3 pb-2 pe-4 mb-3 rounded-pill w-100 snipcart-add-item animate__animated animate__flipInX animate__delay-1s"
+      data-item-id="{{ page.sku }}"
+      data-item-url="{{ site.url }}{{ page.url }}"
+      data-item-price="{{ page.price }}"
+      data-item-description="{{ page.description }}"
+      data-item-image="{{ site.url }}/assets/img/shop/live/{{ page.thumb }}"
+      data-item-weight="{{ page.weight-g }}"
+      data-item-name="{{ page.name }}">
+      <i class="fa-solid fa-circle-plus p-2"></i> Add to Cart
+    </button>
+
+    {%- comment -%} Product Features {%- endcomment -%}
+    <div class="pt-4 pb-2">
+      {% if page.dishwasher %}
+      <hr class="border-2">
+      <h5 class="text-end text-uppercase alt opacity-75">
+        Food safe <i class="fa-solid fa-utensils fc-1"></i>
+      </h5>
+      {% endif %}
+      {% if page.food %}
+      <h5 class="text-end text-uppercase alt opacity-75">
+        Microwave and dishwasher safe <i class="fa-solid fa-shield fc-1"></i>
+      </h5>
+      <hr class="border-2">
+      {% endif %}
+    </div>
+
+    {%- comment -%} SKU {%- endcomment -%}
+    <h6 class="text-end mb-5">
+      <i class="fa-solid fa-barcode"></i> SKU: <span class="opacity-75">{{ page.sku }}</span>
+    </h6>
+
+    {%- comment -%} Continue Shopping Button {%- endcomment -%}
+    <div class="pt-4 mb-5 pb-2">
+      <a href="/shop/" class="text-center pt-3 pb-2 pe-4 mb-3 fw-semibold btn btn-outline-primary rounded-pill w-100">
+        <i class="fa-solid fa-cart-shopping fc-7 pe-2 no-anim"></i> Continue Shopping 
+        <i class="fa-solid fa-angles-right fc-7 slide"></i>
+      </a>
+    </div>
+    <hr class="mb-5">
+
+    {% include shipping-details.html %}
+
+    {% if page.featured-image %}
+    <div class="pt-4">
+      <a href="{{page.featured-image}}" class="img-fluid glightbox" data-zoomable="true">
+      <img src="{{page.featured-image}}" class="img-fluid cursor-zoom" alt="{{ page.name }} - Featured Image">
+    </a>
+    </div>
+    {% endif %}
+  </div>
+</div>

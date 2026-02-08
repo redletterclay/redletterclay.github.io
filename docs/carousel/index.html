@@ -1,0 +1,2337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Carousel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .carousel-wrapper {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+
+        .carousel-container {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            padding: 0 1rem;
+        }
+
+        .carousel-card {
+            min-width: 300px;
+            max-width: 350px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #c12121;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .carousel-btn:hover {
+            background-color: #FFCED1;
+            color: #6E4E3C;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .carousel-btn.prev {
+            left: 10px;
+        }
+
+        .carousel-btn.next {
+            right: 10px;
+        }
+
+        /* Card styles */
+        .card {
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            min-height: 200px;
+            border: 2px solid #8C5C40;
+        }
+
+        .card-body {
+            overflow: hidden;
+        }
+
+        .card-body img {
+            transition: transform 0.3s ease;
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        .card:hover .card-body img {
+            transform: scale(1.1);
+        }
+
+        .product-thumb {
+            position: relative;
+        }
+
+        .icon {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+        }
+
+        .out-of-stock .icon {
+            display: block;
+        }
+
+        .out-of-stock img {
+            opacity: 0.6;
+        }
+
+        h2.card-title a {
+            color: #c12121;
+            text-decoration: none;
+        }
+
+        .fc-1 {
+            color: #c12121;
+        }
+
+        .alt {
+            font-family: 'Mohave', sans-serif;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid my-5">
+        <h1 class="text-center mb-4" style="font-family: 'Bitter', serif; color: #c12121;">Featured Products</h1>
+        
+        <div class="carousel-wrapper">
+            <button class="carousel-btn prev" id="prevBtn" aria-label="Previous">
+                <i class="fa-solid fa-chevron-left fa-lg"></i>
+            </button>
+            
+            <div class="carousel-container" id="carouselContainer">
+              
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="T-0001-PNK">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/T-0001-PNK/">Petal Tray</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/T-0001-PNK/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/T-0001-PNK/"><img src="/assets/img/shop/live/T-0001-PNK-thumb.jpg"
+                        class="img-fluid"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$20</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/T-0001-PNK/"
+                            data-item-id="T-0001-PNK" data-item-url="https://www.redletterclay.com/products/T-0001-PNK/"
+                            data-item-price="20" data-item-description="A slipcast petal tray glazed in pink and white. Great for condiments/sauces, holding jewelry and small bites.
+"
+                            data-item-image="https://www.redletterclay.com/products/T-0001-PNK//assets/img/shop/live/T-0001-PNK-thumb.jpg"
+                            data-item-name="Petal Tray">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="T-0002-PNK">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/T-0002-PNK/">Petal Tray</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/T-0002-PNK/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/T-0002-PNK/"><img src="/assets/img/shop/live/T-0001-PNK-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$20</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/T-0002-PNK/"
+                            data-item-id="T-0002-PNK" data-item-url="https://www.redletterclay.com/products/T-0002-PNK/"
+                            data-item-price="20" data-item-description="A slipcast petal tray glazed in pink and white. Great for condiments/sauces, holding jewelry and small bites.
+"
+                            data-item-image="https://www.redletterclay.com/products/T-0002-PNK//assets/img/shop/live/T-0001-PNK-thumb.jpg"
+                            data-item-name="Petal Tray">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="P-0001-PNK">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/P-0001-PNK/">Cruet</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/P-0001-PNK/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/P-0001-PNK/"><img src="/assets/img/shop/live/P-0001-PNK-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$32</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/P-0001-PNK/"
+                            data-item-id="P-0001-PNK" data-item-url="https://www.redletterclay.com/products/P-0001-PNK/"
+                            data-item-price="32" data-item-description="A small bottle perfect for dressings, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.
+"
+                            data-item-image="https://www.redletterclay.com/products/P-0001-PNK//assets/img/shop/live/P-0001-PNK-thumb.jpg"
+                            data-item-name="Cruet">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="P-0004-PNK">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/P-0004-PNK/">Cruet</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/P-0004-PNK/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/P-0004-PNK/"><img src="/assets/img/shop/live/P-0004-PNK-thumb.jpg"
+                        class="img-fluid"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$32</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/P-0004-PNK/"
+                            data-item-id="P-0004-PNK" data-item-url="https://www.redletterclay.com/products/P-0004-PNK/"
+                            data-item-price="32" data-item-description="A small bottle perfect for dressings, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.
+"
+                            data-item-image="https://www.redletterclay.com/products/P-0004-PNK//assets/img/shop/live/P-0004-PNK-thumb.jpg"
+                            data-item-name="Cruet">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0008-PNK">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0008-PNK/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0008-PNK/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0008-PNK/"><img src="/assets/img/shop/live/M-0008-PNK-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0008-PNK/"
+                            data-item-id="M-0008-PNK" data-item-url="https://www.redletterclay.com/products/M-0008-PNK/"
+                            data-item-price="42" data-item-description="An square mug for coffee and tea fans alike. Decorated with a pink and white design using wax resist.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0008-PNK//assets/img/shop/live/M-0008-PNK-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="P-0002-BLU">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/P-0002-BLU/">Cruet</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/P-0002-BLU/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/P-0002-BLU/"><img src="/assets/img/shop/live/P-0002-BLU-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$32</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/P-0002-BLU/"
+                            data-item-id="P-0002-BLU" data-item-url="https://www.redletterclay.com/products/P-0002-BLU/"
+                            data-item-price="32" data-item-description="A small bottle perfect for dressings, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.
+"
+                            data-item-image="https://www.redletterclay.com/products/P-0002-BLU//assets/img/shop/live/P-0002-BLU-thumb.jpg"
+                            data-item-name="Cruet">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="B-0001-GRN">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/B-0001-GRN/">SM Bowl</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/B-0001-GRN/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/B-0001-GRN/"><img src="/assets/img/shop/live/B-0001-GRN-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$32</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/B-0001-GRN/"
+                            data-item-id="B-0001-GRN" data-item-url="https://www.redletterclay.com/products/B-0001-GRN/"
+                            data-item-price="32" data-item-description="A small wheel thrown bowl for ice cream, snacks, rice, etc. Decorated in a glacial green and blue glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/B-0001-GRN//assets/img/shop/live/B-0001-GRN-thumb.jpg"
+                            data-item-name="SM Bowl">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0009-GRN">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0009-GRN/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0009-GRN/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0009-GRN/"><img src="/assets/img/shop/live/M-0009-GRN-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0009-GRN/"
+                            data-item-id="M-0009-GRN" data-item-url="https://www.redletterclay.com/products/M-0009-GRN/"
+                            data-item-price="42" data-item-description="A large mug for coffee and tea fans alike. Decorated in a glacial green and blue glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0009-GRN//assets/img/shop/live/M-0009-GRN-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0015-GRN">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0015-GRN/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0015-GRN/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0015-GRN/"><img src="/assets/img/shop/live/M-0015-GRN-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0015-GRN/"
+                            data-item-id="M-0015-GRN" data-item-url="https://www.redletterclay.com/products/M-0015-GRN/"
+                            data-item-price="42" data-item-description="An ample handmade mug for coffee and tea fans alike. Decorated in a glacial green and blue glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0015-GRN//assets/img/shop/live/M-0015-GRN-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0010-GRN">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0010-GRN/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0010-GRN/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0010-GRN/"><img src="/assets/img/shop/live/M-0010-GRN-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0010-GRN/"
+                            data-item-id="M-0010-GRN" data-item-url="https://www.redletterclay.com/products/M-0010-GRN/"
+                            data-item-price="42" data-item-description="A wide mug for coffee and tea fans alike. Decorated in a glacial green and blue glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0010-GRN//assets/img/shop/live/M-0010-GRN-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="C-0003-GRN">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/C-0003-GRN/">Cup</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/C-0003-GRN/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/C-0003-GRN/"><img src="/assets/img/shop/live/C-0003-GRN-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$32</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/C-0003-GRN/"
+                            data-item-id="C-0003-GRN" data-item-url="https://www.redletterclay.com/products/C-0003-GRN/"
+                            data-item-price="32" data-item-description="Slender tapered cup for drinks or to hold pens, pencils and paint brushes. Decorated in a glacial green and blue glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/C-0003-GRN//assets/img/shop/live/C-0003-GRN-thumb.jpg"
+                            data-item-name="Cup">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="C-0004-GRN">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/C-0004-GRN/">Cup</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/C-0004-GRN/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/C-0004-GRN/"><img src="/assets/img/shop/live/C-0004-GRN-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$32</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/C-0004-GRN/"
+                            data-item-id="C-0004-GRN" data-item-url="https://www.redletterclay.com/products/C-0004-GRN/"
+                            data-item-price="32" data-item-description="Slender tapered cup for drinks or to hold pens, pencils and paint brushes. Decorated in a glacial green and blue glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/C-0004-GRN//assets/img/shop/live/C-0004-GRN-thumb.jpg"
+                            data-item-name="Cup">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0019-GRN">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0019-GRN/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0019-GRN/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0019-GRN/"><img src="/assets/img/shop/live/M-0019-GRN-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0019-GRN/"
+                            data-item-id="M-0019-GRN" data-item-url="https://www.redletterclay.com/products/M-0019-GRN/"
+                            data-item-price="42" data-item-description="An ample handmade mug for coffee and tea fans alike. Decorated in a glacial green and blue glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0019-GRN//assets/img/shop/live/M-0019-GRN-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0020-GRN">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0020-GRN/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0020-GRN/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0020-GRN/"><img src="/assets/img/shop/live/M-0020-GRN-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0020-GRN/"
+                            data-item-id="M-0020-GRN" data-item-url="https://www.redletterclay.com/products/M-0020-GRN/"
+                            data-item-price="42" data-item-description="An ample handmade mug for coffee and tea fans alike. Decorated in a glacial green and blue glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0020-GRN//assets/img/shop/live/M-0020-GRN-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0011-BLU">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0011-BLU/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div class="pe-3 text-end">
+                    <h3 class="text-start alt sale fc-1"><span
+                            class="text-black">SALE</span> <i class="fa-solid fa-certificate"></i></h3>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0011-BLU/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0011-BLU/"><img src="/assets/img/shop/live/M-0011-BLU-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt"><span
+                            class="text-decoration-line-through opacity-50 fw-lighter">$42</span>
+                        $36</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0011-BLU/"
+                            data-item-id="M-0011-BLU" data-item-url="https://www.redletterclay.com/products/M-0011-BLU/"
+                            data-item-price="36" data-item-description="A large mug for coffee and tea fans alike. Decorated in a glacial blue and purple glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0011-BLU//assets/img/shop/live/M-0011-BLU-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="J-0003-BLU">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/J-0003-BLU/">Round Jar</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/J-0003-BLU/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/J-0003-BLU/"><img src="/assets/img/shop/live/J-0003-BLU-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$60</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/J-0003-BLU/"
+                            data-item-id="J-0003-BLU" data-item-url="https://www.redletterclay.com/products/J-0003-BLU/"
+                            data-item-price="60" data-item-description="A wheel thrown round jar in a glacial blue and white glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/J-0003-BLU//assets/img/shop/live/J-0003-BLU-thumb.jpg"
+                            data-item-name="Round Jar">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0002-PUR">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0002-PUR/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0002-PUR/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0002-PUR/"><img src="/assets/img/shop/live/M-0002-PUR-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0002-PUR/"
+                            data-item-id="M-0002-PUR" data-item-url="https://www.redletterclay.com/products/M-0002-PUR/"
+                            data-item-price="42" data-item-description="An wide based mug for coffee and tea fans with a thick handle providing a handmade feel decorated in a purple and white glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0002-PUR//assets/img/shop/live/M-0002-PUR-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0005-PUR">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0005-PUR/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0005-PUR/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0005-PUR/"><img src="/assets/img/shop/live/M-0005-PUR-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0005-PUR/"
+                            data-item-id="M-0005-PUR" data-item-url="https://www.redletterclay.com/products/M-0005-PUR/"
+                            data-item-price="42" data-item-description="An large mug for coffee and tea fans alike with a thick handle for a handmade feel. Decorated in a purple and white glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0005-PUR//assets/img/shop/live/M-0005-PUR-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0014-GRN">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0014-GRN/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0014-GRN/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0014-GRN/"><img src="/assets/img/shop/live/M-0014-GRN-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0014-GRN/"
+                            data-item-id="M-0014-GRN" data-item-url="https://www.redletterclay.com/products/M-0014-GRN/"
+                            data-item-price="42" data-item-description="A handmade mug for coffee and tea fans alike. Decorated in a light green and white glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0014-GRN//assets/img/shop/live/M-0014-GRN-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0021-GRN">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0021-GRN/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0021-GRN/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0021-GRN/"><img src="/assets/img/shop/live/M-0021-GRN-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0021-GRN/"
+                            data-item-id="M-0021-GRN" data-item-url="https://www.redletterclay.com/products/M-0021-GRN/"
+                            data-item-price="42" data-item-description="An ample handmade mug for coffee and tea fans alike. Decorated in a glacial green and white glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0021-GRN//assets/img/shop/live/M-0021-GRN-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="J-0001-GRN">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/J-0001-GRN/">Textured Jar</a>
+                    </h2>
+                </div>
+                
+                <div class="pe-3 text-end">
+                    <h3 class="text-start alt sale fc-1"><span
+                            class="text-black">SALE</span> <i class="fa-solid fa-certificate"></i></h3>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/J-0001-GRN/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/J-0001-GRN/"><img src="/assets/img/shop/live/J-0001-GRN-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt"><span
+                            class="text-decoration-line-through opacity-50 fw-lighter">$60</span>
+                        $50</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/J-0001-GRN/"
+                            data-item-id="J-0001-GRN" data-item-url="https://www.redletterclay.com/products/J-0001-GRN/"
+                            data-item-price="50" data-item-description="A textured lidded jar in a satin matte green glaze. Lined with a sandy shino.
+"
+                            data-item-image="https://www.redletterclay.com/products/J-0001-GRN//assets/img/shop/live/J-0001-GRN-thumb.jpg"
+                            data-item-name="Textured Jar">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0006-GRN">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0006-GRN/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0006-GRN/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0006-GRN/"><img src="/assets/img/shop/live/M-0006-GRN-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0006-GRN/"
+                            data-item-id="M-0006-GRN" data-item-url="https://www.redletterclay.com/products/M-0006-GRN/"
+                            data-item-price="42" data-item-description="An large mug for coffee and tea fans. Decorated in a purple polka dot and dark green glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0006-GRN//assets/img/shop/live/M-0006-GRN-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="B-0006-PUR">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/B-0006-PUR/">Berry Bowl</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/B-0006-PUR/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/B-0006-PUR/"><img src="/assets/img/shop/live/B-0006-PUR-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$36</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/B-0006-PUR/"
+                            data-item-id="B-0006-PUR" data-item-url="https://www.redletterclay.com/products/B-0006-PUR/"
+                            data-item-price="36" data-item-description="A small colander for washing berries and fruit.
+"
+                            data-item-image="https://www.redletterclay.com/products/B-0006-PUR//assets/img/shop/live/B-0006-PUR-thumb.jpg"
+                            data-item-name="Berry Bowl">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0007-GRN">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0007-GRN/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0007-GRN/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0007-GRN/"><img src="/assets/img/shop/live/M-0007-GRN-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0007-GRN/"
+                            data-item-id="M-0007-GRN" data-item-url="https://www.redletterclay.com/products/M-0007-GRN/"
+                            data-item-price="42" data-item-description="An large mug for coffee and tea fans alike. Decorated in a green glaze that breaks brown reminiscent of Danish modern design.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0007-GRN//assets/img/shop/live/M-0007-GRN-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="PNT-0001-GRN">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/PNT-0001-GRN/">SM Planter</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/PNT-0001-GRN/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/PNT-0001-GRN/"><img src="/assets/img/shop/live/PNT-0001-GRN-thumb.jpg"
+                        class="img-fluid"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$55</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/PNT-0001-GRN/"
+                            data-item-id="PNT-0001-GRN" data-item-url="https://www.redletterclay.com/products/PNT-0001-GRN/"
+                            data-item-price="55" data-item-description="A small planter in a dark green glaze breaking brown around the rim. Perfect size for a succulent. Includes matching tray.
+"
+                            data-item-image="https://www.redletterclay.com/products/PNT-0001-GRN//assets/img/shop/live/PNT-0001-GRN-thumb.jpg"
+                            data-item-name="SM Planter">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="J-0004-BLU">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/J-0004-BLU/">Textured Jar</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/J-0004-BLU/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/J-0004-BLU/"><img src="/assets/img/shop/live/J-0004-BLU-thumb.jpg"
+                        class="img-fluid"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$60</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/J-0004-BLU/"
+                            data-item-id="J-0004-BLU" data-item-url="https://www.redletterclay.com/products/J-0004-BLU/"
+                            data-item-price="60" data-item-description="A textured lidded jar in a satin matte cobalt and green glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/J-0004-BLU//assets/img/shop/live/J-0004-BLU-thumb.jpg"
+                            data-item-name="Textured Jar">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="J-0002-BLU">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/J-0002-BLU/">Textured Jar</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/J-0002-BLU/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/J-0002-BLU/"><img src="/assets/img/shop/live/J-0002-BLU-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$60</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/J-0002-BLU/"
+                            data-item-id="J-0002-BLU" data-item-url="https://www.redletterclay.com/products/J-0002-BLU/"
+                            data-item-price="60" data-item-description="A textured lidded jar in a satin matte cobalt and green glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/J-0002-BLU//assets/img/shop/live/J-0002-BLU-thumb.jpg"
+                            data-item-name="Textured Jar">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="P-0003-BRN">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/P-0003-BRN/">Cruet</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/P-0003-BRN/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/P-0003-BRN/"><img src="/assets/img/shop/live/P-0003-BRN-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$32</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/P-0003-BRN/"
+                            data-item-id="P-0003-BRN" data-item-url="https://www.redletterclay.com/products/P-0003-BRN/"
+                            data-item-price="32" data-item-description="A small bottle perfect for dressings, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.
+"
+                            data-item-image="https://www.redletterclay.com/products/P-0003-BRN//assets/img/shop/live/P-0003-BRN-thumb.jpg"
+                            data-item-name="Cruet">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="B-0005-GRN">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/B-0005-GRN/">MD Bowl</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/B-0005-GRN/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/B-0005-GRN/"><img src="/assets/img/shop/live/B-0005-GRN-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$36</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/B-0005-GRN/"
+                            data-item-id="B-0005-GRN" data-item-url="https://www.redletterclay.com/products/B-0005-GRN/"
+                            data-item-price="36" data-item-description="A small to medium sized wheel thrown bowl great for pasta and rice entrees sized glazed in an olive green glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/B-0005-GRN//assets/img/shop/live/B-0005-GRN-thumb.jpg"
+                            data-item-name="MD Bowl">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="C-0001-BRN">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/C-0001-BRN/">SM Cups</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/C-0001-BRN/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/C-0001-BRN/"><img src="/assets/img/shop/live/C-0001-BRN-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$32</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/C-0001-BRN/"
+                            data-item-id="C-0001-BRN" data-item-url="https://www.redletterclay.com/products/C-0001-BRN/"
+                            data-item-price="32" data-item-description="Pair of small faceted cups perfect for sipping sake, whiskey, or espresso.
+"
+                            data-item-image="https://www.redletterclay.com/products/C-0001-BRN//assets/img/shop/live/C-0001-BRN-thumb.jpg"
+                            data-item-name="SM Cups">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0012-BRN">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0012-BRN/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0012-BRN/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0012-BRN/"><img src="/assets/img/shop/live/M-0012-BRN-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0012-BRN/"
+                            data-item-id="M-0012-BRN" data-item-url="https://www.redletterclay.com/products/M-0012-BRN/"
+                            data-item-price="42" data-item-description="A handmade mug for coffee and tea fans alike. Decorated in a brown glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0012-BRN//assets/img/shop/live/M-0012-BRN-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0003-TEM">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0003-TEM/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0003-TEM/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0003-TEM/"><img src="/assets/img/shop/live/M-0003-TEM-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0003-TEM/"
+                            data-item-id="M-0003-TEM" data-item-url="https://www.redletterclay.com/products/M-0003-TEM/"
+                            data-item-price="42" data-item-description="An mug for coffee and tea fans alike decorated in a Temmouku style black and brown glaze with subtle hints of blue.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0003-TEM//assets/img/shop/live/M-0003-TEM-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="B-0002-BLK">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/B-0002-BLK/">MD Bowl</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/B-0002-BLK/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/B-0002-BLK/"><img src="/assets/img/shop/live/B-0002-BLK-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/B-0002-BLK/"
+                            data-item-id="B-0002-BLK" data-item-url="https://www.redletterclay.com/products/B-0002-BLK/"
+                            data-item-price="42" data-item-description="A medium wheel thrown bowl for entrees. Dipped in a black glaze, with carvings around the outside.
+"
+                            data-item-image="https://www.redletterclay.com/products/B-0002-BLK//assets/img/shop/live/B-0002-BLK-thumb.jpg"
+                            data-item-name="MD Bowl">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="B-0003-COP">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/B-0003-COP/">MD Bowl</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/B-0003-COP/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/B-0003-COP/"><img src="/assets/img/shop/live/B-0003-COP-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$46</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/B-0003-COP/"
+                            data-item-id="B-0003-COP" data-item-url="https://www.redletterclay.com/products/B-0003-COP/"
+                            data-item-price="46" data-item-description="A medium wheel thrown handled bowl for entrees and great for soups. Dipped in a white glaze with handmade handles decorated in a green copper wash.
+"
+                            data-item-image="https://www.redletterclay.com/products/B-0003-COP//assets/img/shop/live/B-0003-COP-thumb.jpg"
+                            data-item-name="MD Bowl">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="B-0004-COP">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/B-0004-COP/">SM Bowl</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/B-0004-COP/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/B-0004-COP/"><img src="/assets/img/shop/live/B-0004-COP-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$32</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/B-0004-COP/"
+                            data-item-id="B-0004-COP" data-item-url="https://www.redletterclay.com/products/B-0004-COP/"
+                            data-item-price="32" data-item-description="A small wheel thrown bowl for ice cream, snacks, rice, etc. Decorated in a white glaze with the rim brushed in a green copper wash.
+"
+                            data-item-image="https://www.redletterclay.com/products/B-0004-COP//assets/img/shop/live/B-0004-COP-thumb.jpg"
+                            data-item-name="SM Bowl">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="C-0002-COP">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/C-0002-COP/">Cup</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/C-0002-COP/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/C-0002-COP/"><img src="/assets/img/shop/live/C-0002-COP-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$32</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/C-0002-COP/"
+                            data-item-id="C-0002-COP" data-item-url="https://www.redletterclay.com/products/C-0002-COP/"
+                            data-item-price="32" data-item-description="Large cup for drinks or to hold pens, pencils and paint brushes. Glazed white and brushed with a green copper wash around the rim.
+"
+                            data-item-image="https://www.redletterclay.com/products/C-0002-COP//assets/img/shop/live/C-0002-COP-thumb.jpg"
+                            data-item-name="Cup">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0004-COP">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0004-COP/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0004-COP/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0004-COP/"><img src="/assets/img/shop/live/M-0004-COP-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0004-COP/"
+                            data-item-id="M-0004-COP" data-item-url="https://www.redletterclay.com/products/M-0004-COP/"
+                            data-item-price="42" data-item-description="An mug for coffee and tea fans alike decorated in a white glaze and copper wash.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0004-COP//assets/img/shop/live/M-0004-COP-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0013-COP">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0013-COP/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0013-COP/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0013-COP/"><img src="/assets/img/shop/live/M-0013-COP-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0013-COP/"
+                            data-item-id="M-0013-COP" data-item-url="https://www.redletterclay.com/products/M-0013-COP/"
+                            data-item-price="42" data-item-description="A handmade mug for coffee and tea fans alike. Decorated in a white glaze brushed with a green copper wash.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0013-COP//assets/img/shop/live/M-0013-COP-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0018-COP">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0018-COP/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0018-COP/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0018-COP/"><img src="/assets/img/shop/live/M-0018-COP-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0018-COP/"
+                            data-item-id="M-0018-COP" data-item-url="https://www.redletterclay.com/products/M-0018-COP/"
+                            data-item-price="42" data-item-description="An ample handmade mug for coffee and tea fans alike. Decorated in a white glaze with the rim brushed with a green copper wash.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0018-COP//assets/img/shop/live/M-0018-COP-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0016-WHT">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0016-WHT/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0016-WHT/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0016-WHT/"><img src="/assets/img/shop/live/M-0016-WHT-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0016-WHT/"
+                            data-item-id="M-0016-WHT" data-item-url="https://www.redletterclay.com/products/M-0016-WHT/"
+                            data-item-price="42" data-item-description="An ample handmade mug for coffee and tea fans alike. Decorated in a white glaze and slightly pink on the inside.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0016-WHT//assets/img/shop/live/M-0016-WHT-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="M-0017-WHT">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/M-0017-WHT/">Mug</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/M-0017-WHT/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/M-0017-WHT/"><img src="/assets/img/shop/live/M-0017-WHT-thumb.jpg"
+                        class="img-fluid rounded-4"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$42</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/M-0017-WHT/"
+                            data-item-id="M-0017-WHT" data-item-url="https://www.redletterclay.com/products/M-0017-WHT/"
+                            data-item-price="42" data-item-description="An ample handmade mug for coffee and tea fans alike. Decorated in a white glaze.
+"
+                            data-item-image="https://www.redletterclay.com/products/M-0017-WHT//assets/img/shop/live/M-0017-WHT-thumb.jpg"
+                            data-item-name="Mug">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="P-0005-COP">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/P-0005-COP/">Cruet</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/P-0005-COP/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/P-0005-COP/"><img src="/assets/img/shop/live/P-0005-COP-thumb.jpg"
+                        class="img-fluid"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$32</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/P-0005-COP/"
+                            data-item-id="P-0005-COP" data-item-url="https://www.redletterclay.com/products/P-0005-COP/"
+                            data-item-price="32" data-item-description="A small bottle perfect for dressings, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.
+"
+                            data-item-image="https://www.redletterclay.com/products/P-0005-COP//assets/img/shop/live/P-0005-COP-thumb.jpg"
+                            data-item-name="Cruet">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="P-0006-COP">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/P-0006-COP/">Cruet</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/P-0006-COP/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/P-0006-COP/"><img src="/assets/img/shop/live/P-0006-COP-thumb.jpg"
+                        class="img-fluid"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$32</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/P-0006-COP/"
+                            data-item-id="P-0006-COP" data-item-url="https://www.redletterclay.com/products/P-0006-COP/"
+                            data-item-price="32" data-item-description="A small bottle perfect for dressings, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.
+"
+                            data-item-image="https://www.redletterclay.com/products/P-0006-COP//assets/img/shop/live/P-0006-COP-thumb.jpg"
+                            data-item-name="Cruet">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="P-0007-COP">
+        <div class="card-header bg-white border border-0">
+            <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+                <div>
+                    <h2 class="card-title fw-semibold ps-3 fc-1">
+                        <a href="/products/P-0007-COP/">Cruet</a>
+                    </h2>
+                </div>
+                
+                <div>
+                    <h5>&nbsp;</h5>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card-body text-center border border-0">
+            <div class="product-thumb">
+                <div class="icon text-center fs-5 text-black fw-bold header-alt">
+                    <a href="/products/P-0007-COP/"><span class="rounded-pill bg-white p-4"><i
+                                class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+                </div>
+                <a href="/products/P-0007-COP/"><img src="/assets/img/shop/live/P-0007-COP-thumb.jpg"
+                        class="img-fluid"></a>
+            </div>
+            <p>
+                
+
+            </p>
+            <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div>
+                    <h4 class="text-center alt">$32</h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/P-0007-COP/"
+                            data-item-id="P-0007-COP" data-item-url="https://www.redletterclay.com/products/P-0007-COP/"
+                            data-item-price="32" data-item-description="A small bottle perfect for dressings, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.
+"
+                            data-item-image="https://www.redletterclay.com/products/P-0007-COP//assets/img/shop/live/P-0007-COP-thumb.jpg"
+                            data-item-name="Cruet">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+                <!-- Product 1 -->
+                <div class="carousel-card card border-0 stockable">
+                    <div class="card-header bg-white border-0">
+                        <div class="d-flex justify-content-between align-items-center border-bottom border-2 pt-2">
+                            <div>
+                                <h2 class="card-title fw-semibold ps-3 fc-1">
+                                    <a href="#">Vintage Wine Glass</a>
+                                </h2>
+                            </div>
+                            <div class="pe-3 text-end">
+                                <h3 class="text-start alt sale fc-1"><span class="text-black">SALE</span> <i class="fa-solid fa-certificate"></i></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center border-0">
+                        <div class="product-thumb">
+                            <a href="#">
+                                <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=400" class="img-fluid rounded-4" alt="Product">
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between border-top border-2 px-3 pt-3">
+                            <div>
+                                <h4 class="text-center alt"><span class="text-decoration-line-through opacity-50 fw-lighter">$45</span> $35</h4>
+                            </div>
+                            <div>
+                                <h4 class="text-end alt fw-normal text-uppercase fs-3">
+                                    <a href="#"><i class="fa-solid fa-tag"></i> Details</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-btn next" id="nextBtn" aria-label="Next">
+                <i class="fa-solid fa-chevron-right fa-lg"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const container = document.getElementById('carouselContainer');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        
+        let scrollAmount = 0;
+        const cardWidth = 400; // Approximate card width including gap
+        
+        function updateButtons() {
+            const maxScroll = container.scrollWidth - container.clientWidth;
+            prevBtn.disabled = container.scrollLeft <= 0;
+            nextBtn.disabled = container.scrollLeft >= maxScroll - 10;
+        }
+        
+        prevBtn.addEventListener('click', () => {
+            container.scrollBy({
+                left: -cardWidth,
+                behavior: 'smooth'
+            });
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            container.scrollBy({
+                left: cardWidth,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Update button states on scroll
+        container.addEventListener('scroll', updateButtons);
+        
+        // Initialize button states
+        updateButtons();
+        
+        // Update on window resize
+        window.addEventListener('resize', updateButtons);
+    </script>
+</body>
+</html>

@@ -9,17 +9,27 @@ description: |
  <p><a href="https://www.youtube.com/watch?v=AoyyPsn-ow0" target="_blank" alt="Takeshi Tasuda Live Demonstration"><i class="fa-brands fa-youtube"></i> Demonstration Video</a></p>
 nav: sticky
 thumb: /assets/img/journal/takeshi-yasuda.jpg
+gallery:
+ - items:
+    - url: /assets/img/journal/takeshi-yasuda-01.jpg
+      title: Platter
+      flex: fill
+    - url: /assets/img/journal/takeshi-yasuda-02.jpg
+      title: Platter Pedestal
+      flex: fill
+ - items:
+    - url: /assets/img/journal/takeshi-yasuda-03.jpg
+      title: Bowls
+      flex: fill
+    - url: /assets/img/journal/takeshi-yasuda-04.jpg
+      title: Goblets
+      flex: fill
+ - items:
+    - url: /assets/img/journal/takeshi-yasuda-05.jpg
+      title: Vase
+      flex: fill
+    - url: /assets/img/journal/takeshi-yasuda-06.jpg
+      title: Teapot
+      flex: fill
 video-youtube: 6KS-bIPW3J4
 ---
-<div class="row mb-5">
-    <div class="col-6">
-        <a href="/assets/img/journal/takeshi-yasuda-01.jpg" class="glightbox"><img src="/assets/img/journal/takeshi-yasuda-01.jpg" alt="Takeshi Yasuda Pot" class="img-fluid rounded-3 mb-4"></a>
-        <a href="/assets/img/journal/takeshi-yasuda-03.jpg" class="glightbox"><img src="/assets/img/journal/takeshi-yasuda-03.jpg" alt="Takeshi Yasuda Pot" class="img-fluid rounded-3 mb-4"></a>
-        <a href="/assets/img/journal/takeshi-yasuda-05.jpg" class="glightbox"><img src="/assets/img/journal/takeshi-yasuda-05.jpg" alt="Takeshi Yasuda Pot" class="img-fluid rounded-3 mb-4"></a>
-    </div>
-    <div class="col-6">
-        <a href="/assets/img/journal/takeshi-yasuda-02.jpg" class="glightbox"><img src="/assets/img/journal/takeshi-yasuda-02.jpg" alt="Takeshi Yasuda Pot" class="img-fluid rounded-3 mb-4"></a>
-        <a href="/assets/img/journal/takeshi-yasuda-04.jpg" class="glightbox"><img src="/assets/img/journal/takeshi-yasuda-04.jpg" alt="Takeshi Yasuda Pot" class="img-fluid rounded-3 mb-4"></a>
-        <a href="/assets/img/journal/takeshi-yasuda-06.jpg" class="glightbox"><img src="/assets/img/journal/takeshi-yasuda-06.jpg" alt="Takeshi Yasuda Pot" class="img-fluid rounded-3 mb-4"></a>
-    </div>
-</div>

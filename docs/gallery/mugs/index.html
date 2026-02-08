@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
+<html lang=" en-US">
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>Red Letter Clay - Pottery by Davey Ball</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    <link id="snipcart-theme" type="text/css"
-    href="https://app.snipcart.com/themes/base/snipcart.css" 
-    rel="stylesheet" />
+
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Gelasio:ital,wght@0,400..700;1,400..700&family=Mohave:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+      <!-- DNS prefetch and preconnect -->
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+      <link rel="dns-prefetch" href="//app.snipcart.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <!-- Preload critical CSS files -->
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Vollkorn:ital,wght@0,400..700;1,400..700&family=Mohave:ital,wght@0,300..700;1,300..700&display=swap">
+      <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+      <link rel="preload" as="style" href="https://app.snipcart.com/themes/base/snipcart.css">
+
+      <!-- Loading CSS -->
+      <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Vollkorn:ital,wght@0,400..700;1,400..700&family=Mohave:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+      <link id="snipcart-theme" type="text/css" href="https://app.snipcart.com/themes/base/snipcart.css" rel="stylesheet" />
+
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
 <!-- MailerLite Universal -->
 <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
@@ -50,7 +57,7 @@
 <!-- End Jekyll SEO tag -->
 
   </head>
-  <div class="container-fluid nav-stick sticky-top bg-white">
+<div class="container-fluid nav-stick sticky-top bg-white">
   <nav class="navbar navbar-expand-xl">
       <div class="container">
         <div class="d-inline-flex flex-fill align-items-center justify-content-between">
@@ -67,11 +74,19 @@
           </div>
           <div class="d-none d-xl-flex navbar-expand-xl flex-fill justify-content-evenly pt-3">
             <h3 class="navbar-nav text-center"><a href="/shop/">Shop</a></h3>
-            <h3 class="text-center navbar-nav"><a href="/gallery/" class="active">Gallery</a></h3>
+            <h3 class="text-center navbar-nav"><a href="/gallery/">Gallery</a></h3>
             <h3 class="navbar-nav text-center"><a href="/events/" >Calendar</a></h3>
             <h3 class="navbar-nav"><a href="/journal/">Journal</a></h3>
             <h3 class="navbar-nav"><a href="/about/">About</a></h3>
           </div>
+          
+            
+              <div class="d-block animate__animated animate__flipInX cart-block">
+                <button type="button" class="btn btn-cart bg-white position-relative snipcart-checkout mt-1">
+                  <i class="fa-solid fa-bag-shopping text-black fs-1"></i>
+                </button>
+              </div>
+            
           
           <div class="d-inline-flex justify-content-end">
             <button class="navbar-toggler" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" aria-label="Toggle navigation">
@@ -122,221 +137,383 @@
     <h2 class="navbar-nav text-center mt-4"><a href="https://www.instagram.com/red_letter_clay"><span class="text-light"><i class="fa-brands fa-instagram text-white" alt="Instagram Profile"></i></span></a></h2>
   </div>
 </div>
-  <script>
+<script>
     window.SnipcartSettings = {
       publicApiKey: "NDA0M2E4MTAtNjEzOC00ZmI1LTk3ZDgtYjRmZmE3MjY1MjI4NjM4MjA3MTM4MDAzMDcwNjM2",
       loadStrategy: "on-user-interaction",
-      modalStyle: "side",
     };
   
     (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('src[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
-  </script>
-  <body>
-    <main class="overflow-x-hidden">
+</script>
+<script>
+(function () {
+  // ─── Configuration ────────────────────────────────────────────────────────
+  var PICKUP_METHOD_NAME = "Local Pick-Up";
+  var DISCOUNT_CODE      = "LOCALPICKUP15";
+  // ──────────────────────────────────────────────────────────────────────────
+
+  // ─── State ────────────────────────────────────────────────────────────────
+  // Whether the discount is currently applied on the Snipcart side.
+  var applied = false;
+
+  // Lock flag — prevents a second apply/remove call from firing while
+  // the first one is still in-flight.  This is what was causing the
+  // infinite loop: every failed attempt left `applied` as false, so the
+  // next store tick immediately tried again.
+  var pending = false;
+  // ──────────────────────────────────────────────────────────────────────────
+
+
+  /**
+   * isShippingReady
+   * Returns true only when the cart has a fully populated shipping
+   * selection.  Calling applyDiscount before this is true will always
+   * 400 — Snipcart needs valid shipping details to process a discount
+   * against the cart total.
+   */
+  function isShippingReady(cart) {
+    return (
+      cart &&
+      cart.shippingDetails &&
+      cart.shippingDetails.method &&       // a method has been chosen
+      cart.shippingDetails.address &&      // address exists
+      cart.shippingDetails.address.country // and has at least a country
+    );
+  }
+
+
+  /**
+   * evaluate
+   * Core logic — called from both the event listener and the store
+   * subscriber.  Bails out early in every case where an API call would
+   * be premature or redundant.
+   */
+  function evaluate() {
+    // If an apply/remove is already in flight, do nothing.
+    if (pending) return;
+
+    var state = Snipcart.store.getState();
+    if (!state || !state.cart) return;
+
+    var cart = state.cart;
+
+    // Don't touch the discount API until shipping is fully ready.
+    if (!isShippingReady(cart)) return;
+
+    var selectedMethod = cart.shippingDetails.method;
+    var isPickup       = (selectedMethod === PICKUP_METHOD_NAME);
+
+    if (isPickup && !applied) {
+      applyDiscount();
+    } else if (!isPickup && applied) {
+      removeDiscount();
+    }
+  }
+
+
+  /**
+   * applyDiscount
+   */
+  async function applyDiscount() {
+    pending = true;
+    try {
+      await Snipcart.api.cart.applyDiscount(DISCOUNT_CODE);
+      applied = true;
+      console.log("[LocalPickupDiscount] ✓ 15% discount applied (" + DISCOUNT_CODE + ")");
+    } catch (err) {
+      // Log the full error so you can see exactly what Snipcart returned.
+      // If you still see 400s after creating the discount, check that
+      // Test/Live mode in the dashboard matches your storefront.
+      console.warn(
+        "[LocalPickupDiscount] ✗ applyDiscount failed — " +
+        "check that '" + DISCOUNT_CODE + "' exists in your current " +
+        "dashboard environment (Test vs Live).",
+        err
+      );
+    } finally {
+      pending = false;   // release the lock regardless of success/failure
+    }
+  }
+
+
+  /**
+   * removeDiscount
+   */
+  async function removeDiscount() {
+    pending = true;
+    try {
+      await Snipcart.api.cart.removeDiscount(DISCOUNT_CODE);
+      applied = false;
+      console.log("[LocalPickupDiscount] ✓ 15% discount removed (" + DISCOUNT_CODE + ")");
+    } catch (err) {
+      console.warn("[LocalPickupDiscount] ✗ removeDiscount failed.", err);
+    } finally {
+      pending = false;
+    }
+  }
+
+
+  /**
+   * init
+   * Wires up two listeners after Snipcart is fully ready:
+   *   • shipping.selected  — instant reaction when customer picks a method
+   *   • store.subscribe    — safety-net for page reloads mid-checkout
+   */
+  function init() {
+    Snipcart.events.on("shipping.selected", function () {
+      // Re-evaluate on every shipping selection change.
+      // We read the method from the store inside evaluate() rather than
+      // from the event payload so both code-paths use identical logic.
+      evaluate();
+    });
+
+    Snipcart.store.subscribe(evaluate);
+
+    console.log("[LocalPickupDiscount] ✓ Initialized.");
+  }
+
+
+  // ─── Bootstrap ────────────────────────────────────────────────────────────
+  document.addEventListener("snipcart.ready", init);
+
+})();
+</script>
+
+<body>
+  <main class="overflow-x-hidden">
     <div class="container-fluid gx-0">
-      <div class="bg-red p-3 mx-auto">
-        <h3 class="mt-3 text-center"><a href="/gallery" alt="Featured">Featured</a> | <a href="/gallery/mugs" alt="Mug Gallery">Mugs</a></h3>
-      </div>
-      <div class="d-flex p-4 flex-wrap mx-auto">
+      <div class="d-none d-md-flex align-items-center gap-4 mb-5 animate__animated animate__fadeIn">
+    <hr class="flex-grow-1 me-3 fc-1 border-2">
+    <div class="d-flex flex-wrap justify-content-center tags gap-4">
+      <a href="/gallery/" class="text-decoration-none btn btn-outline-primary rounded-pill pt-3 px-4 text-center text-nowrap d-inline-block animate__animated animate__flipInX">Featured</a>
+      <a href="/gallery/mugs/" class="text-decoration-none btn btn-outline-primary rounded-pill pt-3 px-4 text-center text-nowrap d-inline-block animate__animated animate__flipInX current">Mugs</a>
+    </div>
+    <hr class="flex-grow-1 ms-3 fc-1 border-2">
+</div>
+<!-- Mobile: Dropdown Menu -->
+<div class="d-md-none mb-5 animate__animated animate__fadeIn px-5 text-center">
+    <select class="form-select form-select-lg rounded-pill py-3 px-4 text-center" onchange="if (this.value) window.location.href=this.value" style="font-family: 'Mohave', sans-serif; font-size: 1.6rem; font-weight: 500; letter-spacing: 0.02rem; background-color: #c12121; color: white; border: 0; text-transform: uppercase;">
+        <option value="">Browse By : MUGS</option>
+        <option value="/gallery/">Featured</option>
+        <option value="/gallery/mugs/">Mugs</option>
+    </select>
+</div>
+    </div>
+    <div class="container-fluid">
+      <div class="d-flex flex-wrap gap-3">
         
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-029.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-029.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-028.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-028.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-027.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-027.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-026.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-026.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-025.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-025.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-cups-001.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-cups-001.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-024.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-024.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-023.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-023.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/mug-pair-mint-25.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/mug-pair-mint-25.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-022.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-022.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-021.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-021.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-020.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-020.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-019.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-019.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-018.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-018.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-017.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-017.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-016.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-016.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-015.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-015.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-014.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-014.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-002.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-002.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-003.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-003.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-004.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-004.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-007.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-007.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-006.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-006.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-005.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-005.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-008.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-008.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-009.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-009.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-010.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-010.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
-            <div class="w-25 animate__animated animate__fadeIn gallery">
-                <a href="/assets/img/gallery/mugs/gallery-mug-013.jpg" class="glightbox"><img src="/assets/img/gallery/mugs/gallery-mug-013.jpg" alt="Mug 1" class="img-fluid"></a>
-            </div>
-        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-030.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-030.jpg" alt="Mug">
+          </a>
         </div>
-     </div>
-     <div class="container-fluid hero-field" id="calendar">
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-031.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-031.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-029.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-029.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-028.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-028.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-027.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-027.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-026.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-026.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-025.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-025.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-015.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-015.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-024.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-024.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-023.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-023.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/mug-pair-mint-25.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/mug-pair-mint-25.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-022.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-022.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-033.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-033.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-034.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-034.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-035.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-035.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-036.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-036.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-037.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-037.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-016.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-016.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-014.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-014.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-007.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-007.jpg" alt="Mug">
+          </a>
+        </div>
+        
+        <div class="bento-item animate__animated animate__zoomIn" style="flex: 0 0 calc(33.333% - 1rem); aspect-ratio: 1/1;">
+          <a href="/assets/img/gallery/mugs/gallery-mug-038.jpg" class="glightbox">
+            <img src="/assets/img/gallery/mugs/gallery-mug-038.jpg" alt="Mug">
+          </a>
+        </div>
+        
+      </div>
+    </div>
+    <div class="container-fluid hero-field" id="calendar">
     </div>
     <div class="container-fluid sub-footer animate__animated animate__fadeIn">
-    <div class="container-fluid pt-5">
-    <div class="row flex-col flex-wrap flex-fill justify-content-between">
+      <div class="container-fluid pt-5">
+    <div class="hstack gap-3 flex-wrap">
         
-        <div class="col-lg-3 col-xl-3 p-3 flex-fill">
-            <div class="bg-red-alt p-3 rounded-4 event">
+        <div class="flex-fill" style="min-width: 220px;">
+            <div class="bg-red-3 p-3 rounded-4 event h-100">
                 <div class="d-flex align-items-stretch">
-                    <div class="w-50">
+                    <div class="flex-shrink-0">
                         <h2 class="text-white"><span class="fc-2">Sun</span><br>DEC 14</h2>
                         <h3 class="text-white fs-4">5PM-11PM</h3>
                         <h3 class="text-white fs-4 opacity-50">2025</h3>
                     </div>
-                    <div class="w-50">
+                    <div class="flex-fill">
                         <h3 class="text-center fs-4"><span class="fc-2">Oddball Market</span></h3>
-                        <hr class="text-white border-3">
-                        <h5 class="text-white text-center fs-6">Broken Hearts<br>
+                        <hr class="text-white border-2 mx-5">
+                        `<h5 class="text-white text-center">Broken Hearts<br>
                         1009 W Lake St<br>
 Chicago, IL 60607
- <a href="https://maps.app.goo.gl/GEGgrpWyuuVfQWyH9" target="_blank" class="fc-1"><i class="fa-solid fa-map ps-2"></i></a>
+ <a href="https://maps.app.goo.gl/GEGgrpWyuuVfQWyH9" target="_blank" class="fc-1"><i class="fa-solid fa-map ps-2 text-white"></i></a>
                         </h5>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="col-lg-3 col-xl-3 p-3 flex-fill">
-            <div class="bg-red-alt p-3 rounded-4 event">
+        <div class="flex-fill" style="min-width: 220px;">
+            <div class="bg-red-3 p-3 rounded-4 event h-100">
                 <div class="d-flex align-items-stretch">
-                    <div class="w-50">
+                    <div class="flex-shrink-0">
                         <h2 class="text-white"><span class="fc-2">Sat</span><br>DEC 13</h2>
                         <h3 class="text-white fs-4">1PM-5PM</h3>
                         <h3 class="text-white fs-4 opacity-50">2025</h3>
                     </div>
-                    <div class="w-50">
+                    <div class="flex-fill">
                         <h3 class="text-center fs-4"><span class="fc-2">Gnarly or Nice Market</span></h3>
-                        <hr class="text-white border-3">
-                        <h5 class="text-white text-center fs-6">Co-prosperity Sphere<br>
+                        <hr class="text-white border-2 mx-5">
+                        `<h5 class="text-white text-center">Co-prosperity Sphere<br>
                         3219 S Morgan Street<br>
 Chicago, IL 60608
- <a href="https://maps.app.goo.gl/riSgCYyHTWwG1Kk18" target="_blank" class="fc-1"><i class="fa-solid fa-map ps-2"></i></a>
+ <a href="https://maps.app.goo.gl/riSgCYyHTWwG1Kk18" target="_blank" class="fc-1"><i class="fa-solid fa-map ps-2 text-white"></i></a>
                         </h5>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="col-lg-3 col-xl-3 p-3 flex-fill">
-            <div class="bg-red-alt p-3 rounded-4 event">
+        <div class="flex-fill" style="min-width: 220px;">
+            <div class="bg-red-3 p-3 rounded-4 event h-100">
                 <div class="d-flex align-items-stretch">
-                    <div class="w-50">
+                    <div class="flex-shrink-0">
                         <h2 class="text-white"><span class="fc-2">Fri</span><br>OCT 3</h2>
                         <h3 class="text-white fs-4">6PM-8PM</h3>
                         <h3 class="text-white fs-4 opacity-50">2025</h3>
                     </div>
-                    <div class="w-50">
+                    <div class="flex-fill">
                         <h3 class="text-center fs-4"><span class="fc-2">Put a Lid on It Exhibition</span></h3>
-                        <hr class="text-white border-3">
-                        <h5 class="text-white text-center fs-6">Belger Arts Center<br>
+                        <hr class="text-white border-2 mx-5">
+                        `<h5 class="text-white text-center">Belger Arts Center<br>
                         12011 Tracy Ave<br>
 Kansas City, MO
- <a href="https://maps.app.goo.gl/Smcp35xuuNm8djDs5" target="_blank" class="fc-6"><i class="fa-solid fa-map ps-2"></i></a>
+ <a href="https://maps.app.goo.gl/Smcp35xuuNm8djDs5" target="_blank" class="fc-6"><i class="fa-solid fa-map ps-2 text-white"></i></a>
                         </h5>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="col-lg-3 col-xl-3 p-3 flex-fill">
-            <div class="bg-red-alt p-3 rounded-4 event">
+        <div class="flex-fill" style="min-width: 220px;">
+            <div class="bg-red-3 p-3 rounded-4 event h-100">
                 <div class="d-flex align-items-stretch">
-                    <div class="w-50">
+                    <div class="flex-shrink-0">
                         <h2 class="text-white"><span class="fc-2">Sat</span><br>AUG 23</h2>
                         <h3 class="text-white fs-4">3PM-9PM</h3>
                         <h3 class="text-white fs-4 opacity-50">2025</h3>
                     </div>
-                    <div class="w-50">
+                    <div class="flex-fill">
                         <h3 class="text-center fs-4"><span class="fc-2">Oddball Market</span></h3>
-                        <hr class="text-white border-3">
-                        <h5 class="text-white text-center fs-6">Thalia Hall<br>
+                        <hr class="text-white border-2 mx-5">
+                        `<h5 class="text-white text-center">Thalia Hall<br>
                         1807 S Allport St<br>
 Chicago, IL
- <a href="https://maps.app.goo.gl/EVZVV7BFagxE7cPy5" target="_blank" class="fc-6"><i class="fa-solid fa-map ps-2"></i></a>
+ <a href="https://maps.app.goo.gl/EVZVV7BFagxE7cPy5" target="_blank" class="fc-6"><i class="fa-solid fa-map ps-2 text-white"></i></a>
                         </h5>
                     </div>
                 </div>
@@ -348,9 +525,16 @@ Chicago, IL
         <h3 class="text-end pe-4 pt-2"><a href="/events/" title="Event Archive"><i class="fa-regular fa-circle-right"></i> Event Archive</a></h3>
     </div>
 </div>
-    <div class="container pt-5">
+      <div class="container pt-5">
     <div class="row flex-col flex-wrap">
       <h2 class="fw-semibold fc-7 text-center">Latest Journal Entries</h2>
+        
+        <div class="col-lg-3 col-md-6">
+            <div class="rounded-4 m-1">
+                <a href="/process/Slipcast-Bottle/"><img src="/assets/img/journal/process/bottle/bottle-thumb.jpg" class="img-fluid rounded-4 border-thumb border border-5">
+                <h3 class="my-4">Slipcast Bottle Process</h3></a>
+            </div>
+        </div>
         
         <div class="col-lg-3 col-md-6">
             <div class="rounded-4 m-1">
@@ -371,13 +555,6 @@ Chicago, IL
             <div class="rounded-4 m-1">
                 <a href="/process/Sculptural-Juicer/"><img src="/assets/img/journal/process/juicer/juicer-thumb.jpg" class="img-fluid rounded-4 border-thumb border border-5">
                 <h3 class="my-4">Sculptural Juicer</h3></a>
-            </div>
-        </div>
-        
-        <div class="col-lg-3 col-md-6">
-            <div class="rounded-4 m-1">
-                <a href="/workshops/Tomoo-Hamada-Theaster-Gates/"><img src="/assets/img/journal/tomohamada/tomo-thumb.jpg" class="img-fluid rounded-4 border-thumb border border-5">
-                <h3 class="my-4">Tomoo Hamada @ Rebuild Foundation</h3></a>
             </div>
         </div>
         
@@ -415,7 +592,9 @@ Chicago, IL
     </div>
   </footer>
   </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript">
@@ -436,10 +615,11 @@ Chicago, IL
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM1ZCVJZ0G"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-BM1ZCVJZ0G');
   </script>
-  </body>
+</body>
+
 </html>

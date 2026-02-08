@@ -1,17 +1,83 @@
 url: "https://www.redletterclay.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Red Letter Clay - Pottery by Davey Ball" # the name of your site, e.g. ACME Corp.
-description: A Chicago based ceramic studio featuring pottery by Davey Ball. Thoughtfully made ceramics for every day enjoyment.
+description: Handmade pottery by Davey Ball. Made in Chicago.
 email: david@raygun.org
+image: https://www.redletterclay.com/assets/img/gallery/slipcast-work.jpg
 
 plugins:
  - jekyll-seo-tag
  - jekyll-sitemap
+ - jekyll-paginate-v2
+
+pagination:
+  enabled: true
+  collection: 'products'
+  per_page: 12
+  permalink: '/page/:num/'
+  title: ':title - Page :num'
+  limit: 0
+  trail: 
+    before: 2
+    after: 2
+
+pagination:
+  enabled: true
+  per_page: 12
+  permalink: '/page/:num/'
+  title: ':title - Page :num'
+  limit: 0
+  trail: 
+    before: 2
+    after: 2
 
 permalink: /:categories/:title/
 
 collections:
   products:
     output: true
+    order:
+      - T-0001-PNK.md
+      - T-0002-PNK.md
+      - P-0001-PNK.md
+      - P-0004-PNK.md
+      - M-0008-PNK.md
+      - P-0002-BLU.md
+      - B-0001-GRN.md
+      - M-0001-GRN.md
+      - M-0009-GRN.md
+      - M-0015-GRN.md
+      - M-0010-GRN.md
+      - C-0003-GRN.md
+      - C-0004-GRN.md
+      - M-0019-GRN.md
+      - M-0020-GRN.md
+      - M-0011-BLU.md
+      - J-0003-BLU.md
+      - M-0002-PUR.md
+      - M-0005-PUR.md
+      - M-0014-GRN.md
+      - M-0021-GRN.md
+      - J-0001-GRN.md
+      - M-0006-GRN.md
+      - B-0006-PUR.md
+      - M-0007-GRN.md
+      - PNT-0001-GRN.md
+      - J-0004-BLU.md
+      - J-0002-BLU.md
+      - P-0003-BRN.md
+      - B-0005-GRN.md
+      - C-0001-BRN.md
+      - M-0012-BRN.md
+      - M-0003-TEM.md
+      - B-0002-BLK.md
+      - B-0003-COP.md
+      - B-0004-COP.md
+      - C-0002-COP.md
+      - M-0004-COP.md
+      - M-0013-COP.md
+      - M-0018-COP.md
+      - M-0016-WHT.md
+      - M-0017-WHT.md
 
 destination: docs/

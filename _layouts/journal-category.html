@@ -5,36 +5,27 @@
   {% include nav.html %}
   <body>
     <main class="overflow-x-hidden">
-    {% if page.hero-image %}
-    <div class="container-fluid text-center">
-      <img src="{{page.hero-image}}" class="img-fluid animate__animated animate__fadeIn">
-    </div>
-    {% elsif page.hero %}
-    <div class="container-fluid text-center">
-      <img src="/assets/img/hero-jars.png" class="img-fluid animate__animated animate__fadeIn">
-    </div>
-    {% else %}
-    {% endif %}
-    <div class="container animate__animated animate__fadeIn pt-5">
+      {% include journal-tag-filter.html %}
+    <div class="container">
       <div class="row">
         <div class="col-sm-12 col-xl-12">
-          <h2>Filed Under: <span class="fc-7">{{page.category}}</span></h2>
+          <h2 class="animate__animated animate__slideInDown mb-4">Filed Under: <span class="fc-7">{{page.category}}</span></h2>
           <div class="d-flex flex-row flex-wrap gx-5">
             {% assign filtered_posts = site.posts | where: 'category', page.category %}
             {% for post in filtered_posts %}
             <div class="col-sm-12 col-xl-4 mb-3">
               <div class="p-3 pt-0">
-                <a href="{{post.url}}"><img src="{{post.thumb}}" class="img-fluid border border-5 border-thumb rounded-2 shadow-fc7 mb-3">
-                  <h2 class="ls-0"><i class="fa-solid fa-newspaper pe-2 fc-1"></i> {{post.title}}</h2>
+                <a href="{{post.url}}"><img src="{{post.thumb}}" class="img-fluid border border-5 border-thumb rounded-2 shadow-fc7 mb-3 animate__animated animate__jackInTheBox">
+                  <h2 class="ls-0 animate__animated animate__flipInX"><i class="fa-solid fa-newspaper pe-2 fc-1"></i> {{post.title}}</h2>
                   </a>
-                  <div class="d-flex justify-content-between align-items-stretch">
+                  <div class="hstack justify-content-between">
                     <div>
                       {% if post %}
                         {% assign categories = post.categories %}
                       {% else %}
                         {% assign categories = page.categories %}
                       {% endif %}
-                      <h6 class="fs-5 fc-6 opacity-75">
+                      <h6 class="fs-5 fc-6 opacity-75 animate__animated animate__flipInX animate__delay-1s">
                         {% for category in categories %}
                         <i class="fa-solid fa-tags pe-2"></i> <a href="{{site.baseurl}}/journal/{{category|slugize}}/">{{category}}</a>
                         {% unless forloop.last %}&nbsp;{% endunless %}
@@ -42,7 +33,7 @@
                       </h6>
                     </div>
                     <div>
-                      <h6 class="fc-6 fs-5 text-end fst-italic opacity-75 fw-light">{{ post.date | date: "%B %d, %Y" }}</h6>
+                      <h6 class="fc-6 fs-5 text-end fst-italic opacity-75 fw-light animate__animated animate__flipInX animate__delay-1s">{{ post.date | date: "%B %d, %Y" }}</h6>
                     </div>
                   </div>
               </div>

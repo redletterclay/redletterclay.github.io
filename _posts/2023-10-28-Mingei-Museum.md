@@ -1,19 +1,26 @@
 ---
 layout: post
-category: [ travel ]
+category: travel
 title: Mingei Museum
 description: |
  <h3>Ordinary People's Crafts</h3>
  <p>A visit to the Mingei Museum in the Sangenjaya neighborhood of Tokyo.</p>
 nav: sticky
 thumb: /assets/img/journal/mingei-entrance.jpg
-image-1: /assets/img/journal/mingei-book-bottle.jpg
-image-1-caption: Ceramic bottle, disguised as a book.
-image-2: /assets/img/journal/mingei-slipware.jpg
-image-2-caption: British slipware. Still very popular in Japan.
-image-3: /assets/img/journal/mingei-fuji-plate.jpg
-image-3-caption: Mount Fuji plate
-image-4: /assets/img/journal/mingei-goblets.jpg
+gallery:
+ - items:
+    - url: /assets/img/journal/mingei-book-bottle.jpg
+      title: Ceramic bottle, disguised as book.
+      flex: fill
+    - url: /assets/img/journal/mingei-slipware.jpg
+      title: British slipware. Still very popular in Japan.
+      flex: fill
+ - items:
+    - url: /assets/img/journal/mingei-fuji-plate.jpg
+      title: Mount Fuji plate
+      flex: fill
+    - url: /assets/img/journal/mingei-goblets.jpg
+      title: Goblets
 ---
 The Mingei movement in Japan was studied by the Bauhaus school founders in its early formation. Coined by Yanagi Sōetsu, he believed beauty could be found in ordinary and utilitarian everyday objects made by nameless craftspeople (as opposed to higher forms of art created by named artists). 
 

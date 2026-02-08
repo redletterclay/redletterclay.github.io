@@ -5,5 +5,5 @@ nav: sticky
 description: |
  A Chicago based ceramic studio featuring pottery by Davey Ball.
 permalink: /gallery/mugs/
-active: gal
+active: mugs
 ---

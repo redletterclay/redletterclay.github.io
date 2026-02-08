@@ -1,70 +1,104 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  {% include header.html %}
-  {% include snipcart.html %}
-  {% include nav.html %}
-  <body>
-    <main class="overflow-x-hidden">
-    {% if page.hero-image %}
-    <div class="container-fluid text-center">
-      <img src="{{page.hero-image}}" class="img-fluid animate__animated animate__fadeIn">
-    </div>
-    {% elsif page.hero %}
-    <div class="container-fluid text-center">
-      <img src="/assets/img/hero-jars.png" class="img-fluid animate__animated animate__fadeIn">
-    </div>
-    {% else %}
-    {% endif %}
-    <div class="container animate__animated animate__fadeIn">
-      <div class="row">
-        <div class="col-sm-12 col-xl-12">
-          <div class="d-flex flex-row flex-wrap gx-5">
-            {% for post in site.posts %}
-            <div class="col-sm-12 col-xl-4 mb-3">
-                <div class="p-3 pt-0">
-                  <a href="{{post.url}}"><img src="{{post.thumb}}" class="img-fluid border border-5 border-thumb rounded-2 shadow-fc7 mb-3">
-                    <h2 class="ls-0"><i class="fa-solid fa-newspaper pe-2 fc-1"></i> {{post.title}}</h2>
-                    </a>
-                    <div class="d-flex justify-content-between align-items-stretch">
-                      <div>
-                        <h6 class="fs-5 fc-6 opacity-75"><a href="/journal/{{ post.category}}"><i class="fa-solid fa-tags pe-2"></i> {{post.category}}</a></h6>
-                      </div>
-                      <div>
-                        <h6 class="fc-6 fs-5 text-end fst-italic opacity-75 fw-light">{{ post.date | date: "%B %d, %Y" }}</h6>
-                      </div>
-                    </div>
-                </div>
+<html lang="{{ site.lang | default: " en-US" }}">
+{% include header.html %}
+{% include snipcart.html %}
+{% include nav.html %}
+<body>
+  <main class="overflow-x-hidden">
+    {% include journal-tag-filter.html %}
+    <div class="container">
+      <div class="d-flex flex-row flex-wrap gx-5">
+        {% for post in paginator.posts %}
+        <div class="col-sm-12 col-xl-4 mb-3">
+          <div class="p-3 pt-0">
+            <a href="{{post.url}}"><img src="{{post.thumb}}"
+                class="img-fluid border border-5 border-thumb rounded-2 shadow-fc7 mb-3 animate__animated animate__jackInTheBox">
+              <h2 class="ls-0 animate__animated animate__flipInX animate__delay-0.5s"><i class="fa-solid fa-newspaper pe-2 fc-1"></i> {{post.title}}</h2>
+            </a>
+            <div class="hstack justify-content-between animate__animated animate__flipInX animate__delay-1s">
+              <div>
+                <h6 class="fs-5 fc-6 opacity-75"><a href="/journal/{{ post.category}}"><i
+                      class="fa-solid fa-tags pe-2"></i> {{post.category}}</a></h6>
+              </div>
+              <div>
+                <h6 class="fc-6 fs-5 text-end fst-italic opacity-75 fw-light">{{ post.date | date: "%B %d, %Y" }}
+                </h6>
+              </div>
             </div>
-          {% endfor %}
-         </div>
-        </div>
-      </div>
-      <div class="row mt-5 bg-red p-4 pt-5 rounded-3">
-        <div class="col-4">
-          <h3><i class="fa-solid fa-tags pe-2"></i> Tags</h3>
-          <div class="archive-group">
-            <ul>
-              <li><h6 class="fs-5"><a href="/journal/">ALL</a></h6></li>
-            {% for category in site.categories %}
-              <li>{% capture category_name %}{{ category | first }}{% endcapture %}<h6 class="fs-5"><a name="{{ category_name | slugize }}" href="/journal/{{ category_name }}/"> {{ category_name }}</a></h6></li>
-            {% endfor %}
-            </ul>
           </div>
         </div>
-        <div class="col-8">
-          {% include links.html %}
-        </div>
+        {% endfor %}
+        <!-- Simple Pagination Controls -->
+{% if paginator.total_pages > 1 %}
+<div class="container my-5">
+    <nav aria-label="Product pagination">
+        <ul class="pagination justify-content-center">
+            <!-- First Page -->
+            {% if paginator.previous_page %}
+            <li class="page-item pt-3">
+                <a class="page-link rounded rounded-pill" href="{{ site.baseurl }}/shop/" aria-label="First">
+                    <i class="fa-solid fa-angles-left"></i>
+                </a>
+            </li>
+            {% endif %}
+            
+            <!-- Previous Page -->
+            {% if paginator.previous_page %}
+            <li class="page-item pt-3">
+                <a class="page-link rounded rounded-pill" href="{{ paginator.previous_page_path | prepend: site.baseurl }}" aria-label="Previous">
+                    <i class="fa-solid fa-chevron-left"></i> Previous
+                </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled pt-3">
+                <span class="page-link rounded rounded-pill"><i class="fa-solid fa-chevron-left"></i> Previous</span>
+            </li>
+            {% endif %}
+
+            <!-- Page Number Display -->
+            <li class="page-item active px-0 px-md-3 pt-3">
+                <span class="page-link">
+                    Page {{ paginator.page }} of {{ paginator.total_pages }}
+                </span>
+            </li>
+
+            <!-- Next Page -->
+            {% if paginator.next_page %}
+            <li class="page-item pt-3">
+                <a class="page-link rounded rounded-pill" href="{{ paginator.next_page_path | prepend: site.baseurl }}" aria-label="Next">
+                    Next <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled pt-3">
+                <span class="page-link rounded rounded-pill">Next <i class="fa-solid fa-chevron-right"></i></span>
+            </li>
+            {% endif %}
+            
+            <!-- Last Page -->
+            {% if paginator.next_page %}
+            <li class="page-item pt-3">
+                <a class="page-link rounded rounded-pill" href="{{ site.baseurl }}/page{{ paginator.total_pages }}/" aria-label="Last">
+                    <i class="fa-solid fa-angles-right"></i>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+{% endif %}
       </div>
-     </div>
     </div>
-      <div class="container-fluid hero-field" id="calendar">
-      </div>
-      <div class="container-fluid sub-footer animate__animated animate__fadeIn pb-5">
-    {% include calendar.html %}
-  </div>
+    <div class="container-fluid hero-field" id="calendar">
+    </div>
+    <div class="container-fluid sub-footer animate__animated animate__fadeIn pb-5">
+      {% include calendar.html %}
+    </div>
     {% include footer.html %}
   </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript">
@@ -85,10 +119,11 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM1ZCVJZ0G"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-BM1ZCVJZ0G');
   </script>
-  </body>
+</body>
+
 </html>

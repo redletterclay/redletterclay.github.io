@@ -1,0 +1,33 @@
+{%- comment -%} Collect all unique categories {%- endcomment -%}
+{% assign all_categories = "" | split: "" %}
+{% for post in site.posts %}
+  {% for category in post.categories %}
+    {% unless all_categories contains category %}
+      {% assign all_categories = all_categories | push: category %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+{% assign sorted_categories = all_categories | sort %}
+
+<div class="d-none d-md-flex align-items-center gap-4 mb-5">
+  <hr class="flex-grow-1 me-3 fc-1 border-2 animate__animated animate__zoomIn">
+  <div class="d-flex flex-wrap justify-content-center tags gap-4">
+    <a href="/journal/" class="{% unless page.category %}current {% endunless %}text-decoration-none btn btn-outline-primary rounded-pill pt-3 px-4 text-center text-nowrap d-inline-block animate__animated animate__flipInX">ALL</a>
+    {% for category in sorted_categories %}
+    <a href="/journal/{{ category | slugify }}/" class="{% if page.category == category %}current {% endif %}text-decoration-none btn btn-outline-primary rounded-pill pt-3 px-4 text-center text-nowrap d-inline-block animate__animated animate__flipInX">
+      {{ category | capitalize }}
+    </a>
+    {% endfor %}
+  </div>
+  <hr class="flex-grow-1 ms-3 fc-1 border-2 animate__animated animate__zoomIn">
+</div>
+
+{%- comment -%} Mobile: Dropdown Menu {%- endcomment -%}
+<div class="d-md-none mb-5 animate__animated animate__fadeIn px-5 text-center">
+  <select class="form-select form-select-lg rounded-pill py-3 px-4 text-center" onchange="if (this.value) window.location.href=this.value" style="font-family: 'Mohave', sans-serif; font-size: 1.6rem; font-weight: 500; letter-spacing: 0.02rem; background-color: #c12121; color: white; border: 0; text-transform: uppercase;">
+    <option value="/journal/" {% unless page.category %}selected{% endunless %}>ALL</option>
+    {% for category in sorted_categories %}
+    <option value="/journal/{{ category | slugify }}/" {% if page.category == category %}selected{% endif %}>{{ category | capitalize }}</option>
+    {% endfor %}
+  </select>
+</div>

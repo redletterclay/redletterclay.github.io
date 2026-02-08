@@ -1,0 +1,19 @@
+{% assign live_announcements = site.data.announcement | where: "live", true %}
+<div class="row justify-content-center mb-5 mt-4 mt-md-0">
+    <div class="col-12 col-lg-7">
+        {% for item in live_announcements %}
+        <div class="bg-light pt-4 pb-1 px-4 ms-0 mx-md-4 rounded-3 border border-2 animate__animated animate__flipInX animate__delay-1s">
+            <div class="text-center text-md-start">
+                <h6 class="fs-3 fw-normal ls-0">
+                <span class="fs-5"><i class="fa-solid fa-newspaper pe-1"></i> LATEST NEWS</span>
+                </h6>
+                <h3><a href="{{item.url}}">{{item.name}}</a></h3>
+                <p>{{item.info}}</p>
+            </div>
+            <div class="ms-0 ms-md-4 mt-0 text-center text-md-end">
+                <h5><a href="{{item.url}}" class="text-nowrap"><i class="fa-regular fa-circle-right"></i> {{item.cta}}</a></h5>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

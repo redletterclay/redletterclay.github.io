@@ -1,0 +1,16 @@
+<div class="d-none d-md-flex align-items-center gap-4 mb-5 animate__animated animate__fadeIn">
+    <hr class="flex-grow-1 me-3 fc-1 border-2">
+    <div class="d-flex flex-wrap justify-content-center tags gap-4">
+      <a href="/gallery/" class="text-decoration-none btn btn-outline-primary rounded-pill pt-3 px-4 text-center text-nowrap d-inline-block animate__animated animate__flipInX{% if page.active == "gallery" %} current{%endif%}">Featured</a>
+      <a href="/gallery/mugs/" class="text-decoration-none btn btn-outline-primary rounded-pill pt-3 px-4 text-center text-nowrap d-inline-block animate__animated animate__flipInX{% if page.active == "mugs" %} current{%endif%}">Mugs</a>
+    </div>
+    <hr class="flex-grow-1 ms-3 fc-1 border-2">
+</div>
+<!-- Mobile: Dropdown Menu -->
+<div class="d-md-none mb-5 animate__animated animate__fadeIn px-5 text-center">
+    <select class="form-select form-select-lg rounded-pill py-3 px-4 text-center" onchange="if (this.value) window.location.href=this.value" style="font-family: 'Mohave', sans-serif; font-size: 1.6rem; font-weight: 500; letter-spacing: 0.02rem; background-color: #c12121; color: white; border: 0; text-transform: uppercase;">
+        <option value="">Browse By {% if page.active == "mugs" %}: MUGS{% else %} FEATURED{%endif%}</option>
+        <option value="/gallery/">Featured</option>
+        <option value="/gallery/mugs/">Mugs</option>
+    </select>
+</div>

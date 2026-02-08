@@ -1,0 +1,39 @@
+{%- comment -%} Collect all unique tags {%- endcomment -%}
+{% assign all_tags = "" | split: "" %}
+{% for product in site.products %}
+  {% if product.tags %}
+    {% for tag in product.tags %}
+      {% unless all_tags contains tag %}
+        {% assign all_tags = all_tags | push: tag %}
+      {% endunless %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% assign sorted_tags = all_tags | sort %}
+
+{% if site.data.ecommerce.live %}
+{%- comment -%} Desktop: Button Layout {%- endcomment -%}
+<div class="d-none d-md-flex align-items-center gap-4 mb-5">
+  <hr class="flex-grow-1 me-3 fc-1 border-2 animate__animated animate__zoomIn">
+  <div class="d-flex flex-wrap justify-content-center tags gap-4">
+    <a href="/shop/" class="{% unless page.tag %}current {%endunless%}text-decoration-none btn btn-outline-primary rounded-pill pt-3 px-4 text-center text-nowrap d-inline-block animate__animated animate__flipInX">ALL</a>
+    {% for tag in sorted_tags %}
+    <a href="/shop/{{ tag | slugify }}/" class="{% if page.tag contains tag %}current {% endif %}text-decoration-none btn btn-outline-primary rounded-pill pt-3 px-4 text-center text-nowrap d-inline-block animate__animated animate__flipInX">
+      {{ tag | capitalize }}
+    </a>
+    {% endfor %}
+  </div>
+  <hr class="flex-grow-1 ms-3 fc-1 border-2 animate__animated animate__zoomIn">
+</div>
+
+{%- comment -%} Mobile: Dropdown Menu {%- endcomment -%}
+<div class="d-md-none mb-5 animate__animated animate__fadeIn px-5 text-center pt-2">
+  <select class="form-select form-select-lg rounded-pill py-3 px-4 text-center btn-outline-primary" onchange="if (this.value) window.location.href=this.value">
+    <option value="">Browse By {% if page.tag %}:{% assign tag_display = page.tag | join: "," | split: "," | first %} {{ tag_display | capitalize }}{% else %} ALL{% endif %}</option>
+    <option value="/shop/">ALL</option>
+    {% for tag in sorted_tags %}
+    <option value="/shop/{{ tag | slugify }}/">{{ tag | capitalize }}</option>
+    {% endfor %}
+  </select>
+</div>
+{% endif %}

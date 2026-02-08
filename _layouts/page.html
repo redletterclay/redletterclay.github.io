@@ -16,8 +16,27 @@
     {% else %}
     {% endif %}
     <div class="container">
-      {{ content }}
-     </div>
+      <div class="row pt-5">
+        <div class="col-12">
+          <h1 class="mb-4 animate__animated animate__slideInDown">{{page.title}}</h1>
+        </div>
+      </div>
+      <div class="row g-5 px-4 px-sm-0 pt-5">
+        <div class="col-12 col-md-7 animate__animated animate__fadeIn">
+          {% if page.sub-title %}
+            <h3>{{page.sub-title}}</h3>
+          {% endif %}
+          {{content}}
+        </div>
+        <div class="col-12 col-md-5 animate__animated animate__fadeIn">
+          {% if page.right-title %}
+          <h3 class="text-center">{{page.right-title}}</h3>
+          {% endif%}
+          {{page.right-content}}
+          {% include shipping-details.html %}
+        </div>
+      </div>
+    </div>
      <div class="container-fluid hero-field">
     </div>
     <div class="container-fluid sub-footer animate__animated animate__fadeIn pb-5" id="calendar">

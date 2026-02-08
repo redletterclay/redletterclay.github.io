@@ -1,21 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  {% include header.html %}
-  {% include nav.html %}
-  <body>
-    <main class="overflow-x-hidden">
-    {% if page.hero-image %}
-    <div class="container-fluid text-center">
-      <img src="{{page.hero-image}}" class="img-fluid animate__animated animate__fadeIn">
-    </div>
-    {% elsif page.hero %}
-    <div class="container-fluid text-center">
-      <img src="/assets/img/hero-jars.png" class="img-fluid animate__animated animate__fadeIn">
-    </div>
-    {% else %}
-    {% endif %}
-    <div class="container-fluid bg-red animate__animated animate__fadeIn">
-      <div class="container">
+<html lang="{{ site.lang | default: " en-US" }}">
+{% include header.html %}
+{% include snipcart.html %}
+{% include nav.html %}
+
+<body>
+  <main class="overflow-x-hidden">
+    {% include journal-tag-filter.html %}
+    <div class="container-fluid bg-red">
+      <div class="container animate__animated animate__fadeIn">
         <div class="row">
           <div class="col-12 mx-auto">
             <h1 class="pt-5 pb-4">{{page.title}}</h1>
@@ -25,106 +18,144 @@
           </div>
           <div class="col-12 col-sm-5 mx-auto pb-4">
             {% if page.thumb %}
-              <a href="{{page.thumb}}" class="glightbox"><img src="{{page.thumb}}" class="img-fluid border border-5 border-white d-block mx-auto rounded-2"></a>
-              {% endif %}
-              {% if page.thumb-caption %}
-              <h6 class="pt-3">{{page.thumb-caption}}</h6>
+            <a href="{{page.thumb}}" class="glightbox"><img src="{{page.thumb}}"
+                class="img-fluid border border-5 border-white d-block mx-auto rounded-2"></a>
+            {% endif %}
+            {% if page.thumb-caption %}
+            <h6 class="pt-3">{{page.thumb-caption}}</h6>
             {% endif %}
           </div>
-          <div class="d-flex justify-content-between pb-4">
-              <div>
-                <h3 class="fc-7">{{ page.date | date: "%B %d, %Y" }}</h3>
+          <div class="d-flex justify-content-between pb-4 mt-3">
+            <div class="border-top border-2">
+              <h6 class="fs-3 fw-normal ls-0 text-start pt-2"><span class="fs-5"><i class="fa-solid fa-clock pe-1"></i>
+                  POSTED</span><br>
+                {{ page.date | date: "%B %d, %Y" }}
                 {% if post %}
-                  {% assign categories = post.categories %}
+                {% assign categories = post.categories %}
                 {% else %}
-                  {% assign categories = page.categories %}
+                {% assign categories = page.categories %}
                 {% endif %}
-              </div>
-              <div>
-                <h6 class="fs-3 fw-normal ls-0"><i class="fa-solid fa-tags pe-2"></i> FILED UNDER: 
-                  {% for category in categories %}
-                  <a href="{{site.baseurl}}/journal/{{category|slugize}}/">{{category}}</a>
-                  {% unless forloop.last %}&nbsp;{% endunless %}
-                  {% endfor %}
-                  </h6>
-              </div>
+              </h6>
             </div>
+            <div class="border-top border-2">
+              <h6 class="fs-3 fw-normal ls-0 text-end pt-2"><span class="fs-5"><i class="fa-solid fa-tags pe-1"></i>
+                  FILED UNDER</span><br>
+                {% for category in categories %}
+                <a href="{{site.baseurl}}/journal/{{category|slugize}}/">{{category}}</a>
+                {% unless forloop.last %}&nbsp;{% endunless %}
+                {% endfor %}
+              </h6>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="container-fluid bg-black">
       {% if page.video-youtube %}
-      <div class="container plyr__video-embed py-5" id="player">
-        <iframe
-          src="https://www.youtube.com/embed/{{page.video-youtube}}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=0&amp;playsinline=0&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
-          allowfullscreen
-          allow="autoplay"
-          width="100%"
-          height=729"
-        ></iframe>
+      <div class="container-fluid bg-black">
+        <div class="container plyr__video-embed py-5" id="player">
+          <iframe
+            src="https://www.youtube.com/embed/{{page.video-youtube}}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=0&amp;playsinline=0&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+            allowfullscreen allow="autoplay" width="100%" height=729"></iframe>
+        </div>
       </div>
       {% endif %}
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 mx-auto">
-          <article class="mt-5">
+      {% assign content_stripped = content | strip %}
+      {% if content_stripped != "" %}
+      <div class="container">
+        <div class="row gap-5 pt-5 pb-3">
+          <div class="col-12 mx-auto">
             {{ content }}
-          </article>
+          </div>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-lg-2">
-        {% if page.image-1 %}
-        <div class="col">
-          <a href="{{page.image-1}}" class="glightbox"{% if page.image-1-caption %} data-glightbox="description: {{page.image-1-caption}}; descPosition: bottom;"{% endif %}><img src="{{page.image-1}}" class="img-fluid rounded-3"></a>
-          <h6 class="mt-1">{% if page.image-1-caption %}{{page.image-1-caption}}{% endif %}</h6>
-        </div>
-        {% endif %}
-        {% if page.image-2 %}
-        <div class="col">
-          <a href="{{page.image-2}}" class="glightbox"{% if page.image-2-caption %} data-glightbox="description: {{page.image-2-caption}}; descPosition: bottom;"{% endif %}><img src="{{page.image-2}}" class="img-fluid rounded-3"></a>
-          <h6 class="mt-1">{% if page.image-2-caption %}{{page.image-2-caption}}{% endif %}</h6>
-        </div>
-        {% endif %}
-        {% if page.image-3 %}
-        <div class="col">
-          <a href="{{page.image-3}}" class="glightbox"{% if page.image-3-caption %} data-glightbox="description: {{page.image-3-caption}}; descPosition: bottom;"{% endif %}><img src="{{page.image-3}}" class="img-fluid rounded-3"></a>
-          <h6 class="mt-1">{% if page.image-3-caption %}{{page.image-3-caption}}{% endif %}</h6>
-        </div>
-        {% endif %}
-        {% if page.image-4 %}
-        <div class="col">
-          <a href="{{page.image-4}}" class="glightbox"{% if page.image-4-caption %} data-glightbox="description: {{page.image-4-caption}}; descPosition: bottom;"{% endif %}><img src="{{page.image-4}}" class="img-fluid rounded-3"></a>
-          <h6 class="mt-1">{% if page.image-4-caption %}{{page.image-4-caption}}{% endif %}</h6>
-        </div>
-        {% endif %}
-    </div>
-    <div class="container bg-red rounded rounded-3">
-      <div class="row d-flex justify-content-between p-4">
-        <h3 class="fc-7 text-center mb-3">Explore More</h3>
-        <div class="col-sm-12 col-lg-3">
+      {% endif %}
+    {% if page.gallery %}
+      <div class="container pt-3">
+        {% for section in page.gallery %}
+          <div class="d-flex gap-3 mb-3 {% if section.direction == 'column' %}flex-column{% endif %}">
+            {% for item in section.items %}
+              {% if item.stack %}
+                <!-- Stacked items -->
+                <div class="flex-{{ item.flex | default: '1' }} d-flex flex-column gap-3">
+                  {% for stacked_item in item.stack %}
+                    <div class="bento-item flex-fill">
+                      <a href="{{ stacked_item.url }}" class="img-fluid glightbox" data-zoomable="false" data-glightbox="description: {{ stacked_item.title }}">
+                        <img src="{{ stacked_item.url }}" alt="{{ stacked_item.title }}" class="cursor-zoom">
+                      </a>
+                      <div class="bento-overlay hstack justify-content-between">
+                        <h5>{{ stacked_item.title }}</h5>
+                        <h54><i class="fa-solid fa-magnifying-glass-plus fc-1"></i></h5>
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              {% else %}
+                <!-- Single item -->
+                <div class="bento-item flex-{{ item.flex | default: 'fill' }}">
+                  <a href="{{ item.url }}" class="img-fluid glightbox" data-zoomable="false" data-glightbox="description: {{ item.title }}">
+                    <img src="{{ item.url }}" alt="{{ item.alt }}" class="cursor-zoom">
+                  </a>
+                  <div class="bento-overlay hstack justify-content-between">
+                    <h5>{{ item.title }}</h5>
+                    <h5><i class="fa-solid fa-magnifying-glass-plus fc-1"></i></h5>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    <div class="container-fluid bg-red">
+      <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center p-4">
+
+        <!-- Explore More - Order 1 on mobile -->
+          <h3 class="fc-7 text-center order-1 order-lg-2 flex-shrink-0">Explore More</h3>
+
+        <!-- Previous - Order 3 on mobile, 1 on desktop -->
+        <div class="order-3 order-lg-1">
           {% if page.previous.url %}
-            <div class="text-start py-3"><a href="{{page.previous.url}}"></a><a class="prev" href="{{page.previous.url}}"><img src="{{page.previous.thumb}}" class="img-fluid border border-5 border-white"></a></div>
-            <h3 class="text-start"><a class="prev" href="{{page.previous.url}}"><i class="fa-solid fa-arrow-left pe-2"></i> {{page.previous.title}}</a></h3>
-        {% endif %}
+          <div class="text-center text-lg-start py-3">
+            <a href="{{page.previous.url}}">
+              <img src="{{page.previous.thumb}}" class="img-fluid border border-5 border-white"
+                style="max-width: 350px;">
+            </a>
+          </div>
+          <h3 class="text-center text-lg-start">
+            <a class="prev" href="{{page.previous.url}}">
+              <i class="fa-solid fa-arrow-left pe-2"></i> {{page.previous.title}}
+            </a>
+          </h3>
+          {% endif %}
         </div>
-        <div class="col-sm-12 col-lg-3">
-        {% if page.next.url %}
-            <div class="text-end py-3"><a href="{{page.next.url}}"><img src="{{page.next.thumb}}" class="img-fluid border border-5 border-white"></a></div>
-            <h3 class="text-end"><a class="next" href="{{page.next.url}}">{{page.next.title}} <i class="fa-solid fa-arrow-right ps-2"></i></a></h3>
-        {% endif %}
+
+        <!-- Next - Order 2 on mobile, 3 on desktop -->
+        <div class="order-2 order-lg-3">
+          {% if page.next.url %}
+          <div class="text-center text-lg-end py-3">
+            <a href="{{page.next.url}}">
+              <img src="{{page.next.thumb}}" class="img-fluid border border-5 border-white" style="max-width: 350px;">
+            </a>
+          </div>
+          <h3 class="text-center text-lg-end">
+            <a class="next" href="{{page.next.url}}">
+              {{page.next.title}} <i class="fa-solid fa-arrow-right ps-2"></i>
+            </a>
+          </h3>
+          {% endif %}
         </div>
       </div>
     </div>
-  </div>
-     <div class="container-fluid hero-field" id="calendar">
+    <div class="container-fluid hero-field" id="calendar">
     </div>
     <div class="container-fluid sub-footer animate__animated animate__fadeIn pb-5">
-    {% include calendar.html %}
+      {% include calendar.html %}
     </div>
     {% include footer.html %}
   </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript">
@@ -145,10 +176,13 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM1ZCVJZ0G"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-BM1ZCVJZ0G');
+
   </script>
-  </body>
+  
+</body>
+
 </html>

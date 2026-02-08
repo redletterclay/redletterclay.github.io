@@ -3,38 +3,25 @@
   {% include header.html %}
   {% include nav.html %}
   {% include snipcart.html %}
+  <link rel="preload" as="image" href="/assets/img/gallery/L1-teapot-side.jpg" fetchpriority="high">
   <body>
     <main class="overflow-x-hidden">
-    <div class="container-fluid text-center">
-      <img src="/assets/img/hero-jars.png" class="img-fluid animate__animated animate__fadeIn">
-    </div>
-    <div class="container pt-5">
-      <div class="row">
-        <div class="col text-center">
-          <h1 class="ital animate__animated animate__fadeIn">Welcome to</h1>
-          <h1 class="rlc animate__animated animate__fadeIn">Red Letter Clay</h1>
-          <h2 class="pt-2 pb-5 animate__animated animate__fadeIn">a Chicago based ceramic studio featuring pottery by <a href="/about/" class="">Davey Ball</a></h2>
-        </div>
-      </div>
-      <div class="row justify-content-between align-items-center animate__animated animate__fadeIn animate__slow">
-        <div class="col-xl-6 col-xs-12 bg-red p-5 rounded-3 mb-5">
+    {% include landing-hero.html %}
+    <div class="container-fluid">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-lg-7 bg-red p-5 rounded-0">
+          <div class="p-0 pt-md-4 ps-md-5 statement-lead">
           {{ content }}
-        </div>
-        <div class="col-xl-5 col-xs-12 animate__animated animate__fadeIn">
-          {% include carousel.html %}
-          <div class="text-center pt-5">
-            {% for item in site.data.announcement limit:1 %}
-              <h4 class="mt-5"><a href="{{item.url}}">{{item.name}}</a></h4>
-              <p>{{item.info}}</p>
-              <h5 class="text-end"><a href="{{item.url}}"><i class="fa-regular fa-circle-right"></i> More Info</a></h5>
-            {% endfor %}
           </div>
+        </div>
+        <div class="col-12 col-lg-5 animate__animated animate__fadeIn p-5">
+          {% include carousel.html %}
         </div>
       </div>
      </div>
      <div class="container-fluid hero-field" id="calendar">
     </div>
-    <div class="container-fluid sub-footer animate__animated animate__fadeIn">
+    <div class="container-fluid sub-footer">
     {% include calendar.html %}
     {% include footer-journal.html %}
   </div>
