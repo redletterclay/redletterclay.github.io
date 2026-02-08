@@ -1,9 +1,9 @@
 ---
 layout: default
-title: About
 description: |
  A Chicago based ceramic studio featuring pottery by Davey Ball. Thoughtfully made ceramics for every day enjoyment.
 hero: yes
+image: /assets/img/gallery/slipcast-work.jpg
 nav: sticky
 ---
 <h2 class="text-white">From Industrial to Intentional</h2>
