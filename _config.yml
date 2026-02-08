@@ -3,7 +3,12 @@ baseurl: "" # the subpath of your site, e.g. /blog
 title: "Red Letter Clay" # the name of your site, e.g. ACME Corp.
 description: Handmade pottery by Davey Ball — Made in Chicago
 email: david@raygun.org
-image: /assets/img/gallery/social-open-graph.jpg
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/social-open-graph.jpg
 
 plugins:
  - jekyll-seo-tag
