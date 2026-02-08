@@ -13,6 +13,9 @@
       <link rel="dns-prefetch" href="//app.snipcart.com" />
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      {% if page.preload %}
+      <link rel="preload" href="{{page.preload}}" as="image">
+      {% endif %}
 
       <!-- Preload critical CSS files -->
       <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Vollkorn:ital,wght@0,400..700;1,400..700&family=Mohave:ital,wght@0,300..700;1,300..700&display=swap">

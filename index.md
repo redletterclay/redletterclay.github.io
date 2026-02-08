@@ -1,10 +1,8 @@
 ---
 layout: default
-description: |
- A Chicago based ceramic studio featuring pottery by Davey Ball. Thoughtfully made ceramics for every day enjoyment.
 hero: yes
-image: /assets/img/gallery/slipcast-work.jpg
 nav: sticky
+preload: /assets/img/gallery/L1-teapot-side.jpg
 ---
 <h2 class="text-white">From Industrial to Intentional</h2>
 My first experience with exceptional handmade ceramics wasn't until my mid 30's, in <a href="/travel/WAD-Cafe/" alt="WAD Tea Cafe Osaka Japan">a tea cafe in Osaka, Japan</a>. Growing up in America I was accustomed to industrialized tableware - both at home and dining out.

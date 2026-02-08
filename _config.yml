@@ -1,9 +1,9 @@
 url: "https://www.redletterclay.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-title: "Red Letter Clay - Pottery by Davey Ball" # the name of your site, e.g. ACME Corp.
-description: Handmade pottery by Davey Ball. Made in Chicago.
+title: "Red Letter Clay" # the name of your site, e.g. ACME Corp.
+description: Handmade pottery by Davey Ball — Made in Chicago
 email: david@raygun.org
-image: https://www.redletterclay.com/assets/img/gallery/slipcast-work.jpg
+image: /assets/img/gallery/social-open-graph.jpg
 
 plugins:
  - jekyll-seo-tag

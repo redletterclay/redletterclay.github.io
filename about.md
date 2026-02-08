@@ -1,8 +1,6 @@
 ---
 layout: about
 title: About Me
-description: |
-  A Chicago based ceramic studio featuring pottery by Davey Ball.
 hero: no
 nav: sticky
 ---
@@ -19,7 +17,7 @@ nav: sticky
         </div>
     </div>
     <div class="col-12 col-lg-5 animate__animated animate__fadeIn">
-        <img src="/assets/img/davey.png" class="img-fluid p-5" alt="Davey Ball">
+        <img src="/assets/img/davey.png" class="img-fluid p-2 p-md-5 pt-5" alt="Davey Ball">
         {% include announcement.html %}
     </div>
 </div>
