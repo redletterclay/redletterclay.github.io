@@ -1136,6 +1136,14 @@ transition: fadeIn 0.3s ease;
   cursor: zoom-in;
 }
 
+.ornament img {
+    width: 40px;
+    animation-delay: 600ms;
+  }
+.announcement-box {
+  animation-delay: 600ms;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 767px) {
   .d-flex.gap-3.mb-3 {
@@ -1144,6 +1152,9 @@ transition: fadeIn 0.3s ease;
   
   .bento-item {
     min-height: 250px;
+  }
+  .ornament img {
+    width: 25px;
   }
   
   /* Show overlay by default on mobile */

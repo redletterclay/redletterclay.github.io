@@ -1,9 +1,7 @@
 - name: The Shop is Now Open!
-  info: Pots are now available for purchase online. Currently shipping to the United States. <ul><li>Save 15% with local pickup in Chicago.</li><li class="fw-bold">Free Shipping!</li></ul>
-  cta: Browse the Collection
-  url: /shop/
-  live: no
+  info: Pots are now available for purchase online. Currently shipping to the United States.</p><p><i class="fa-solid fa-angles-right fc-1"></i> <span class="fw-bold">15% OFF</span> with local pickup in Chicago.<br><i class="fa-solid fa-angles-right fc-1"></i> <span class="fw-bold">Free Shipping!</span>
+  live: true
 - name: Put a Lid on It Exhibition
   info: October 3, 2025 - January 4, 2026<br>(Belger Arts Center - St Louis, MO)
   url: /exhibitions/Put-a-Lid-on-It-Belger-Arts-Center-Exhibition/
-  live: no
+  live: false

@@ -3,7 +3,7 @@ layout: product
 nav: sticky
 name: SM Planter
 sku: PNT-0001-GRN
-price: 55
+price: 65
 thumb: PNT-0001-GRN-thumb.jpg
 image: PNT-0001-GRN-01.jpg
 image-2: PNT-0001-GRN-02.jpg

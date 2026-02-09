@@ -1574,6 +1574,15 @@ div.tags .btn {
   cursor: zoom-in;
 }
 
+.ornament img {
+  width: 40px;
+  animation-delay: 600ms;
+}
+
+.announcement-box {
+  animation-delay: 600ms;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 767px) {
   .d-flex.gap-3.mb-3 {
@@ -1581,6 +1590,9 @@ div.tags .btn {
   }
   .bento-item {
     min-height: 250px;
+  }
+  .ornament img {
+    width: 25px;
   }
   /* Show overlay by default on mobile */
   .bento-overlay {
