@@ -52,12 +52,12 @@
 <meta property="og:site_name" content="Red Letter Clay" />
 <meta property="og:image" content="https://www.redletterclay.com/P-0002-BLU-01.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-02-08T19:07:41-06:00" />
+<meta property="article:published_time" content="2026-02-08T19:22:27-06:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://www.redletterclay.com/P-0002-BLU-01.jpg" />
 <meta property="twitter:title" content="P 0002 Blu" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-08T19:07:41-06:00","datePublished":"2026-02-08T19:07:41-06:00","description":"A small bottle perfect for dressings, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.","headline":"P 0002 Blu","image":"https://www.redletterclay.com/P-0002-BLU-01.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.redletterclay.com/products/P-0002-BLU/"},"url":"https://www.redletterclay.com/products/P-0002-BLU/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-02-08T19:22:27-06:00","datePublished":"2026-02-08T19:22:27-06:00","description":"A small bottle perfect for dressings, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.","headline":"P 0002 Blu","image":"https://www.redletterclay.com/P-0002-BLU-01.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.redletterclay.com/products/P-0002-BLU/"},"url":"https://www.redletterclay.com/products/P-0002-BLU/"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -73,137 +73,79 @@
 </script>
 <script>
 (function () {
-  // ─── Configuration ────────────────────────────────────────────────────────
-  var PICKUP_METHOD_NAME = "LOCALPICKUP15";
-  var DISCOUNT_CODE      = "LOCALPICKUP15";
-  // ──────────────────────────────────────────────────────────────────────────
+  // ── Configuration ───────────────────────────────────────
+  var PICKUP_METHOD = "Local Pick-Up";      // must match shippingDetails.method exactly
+  var DISCOUNT_CODE = "LOCALPICKUP15";      // the code from your Snipcart dashboard discount
 
-  // ─── State ────────────────────────────────────────────────────────────────
-  // Whether the discount is currently applied on the Snipcart side.
-  var applied = false;
+  var discountActive = false;
+  var previousMethod = null;
 
-  // Lock flag — prevents a second apply/remove call from firing while
-  // the first one is still in-flight.  This is what was causing the
-  // infinite loop: every failed attempt left `applied` as false, so the
-  // next store tick immediately tried again.
-  var pending = false;
-  // ──────────────────────────────────────────────────────────────────────────
-
-
-  /**
-   * isShippingReady
-   * Returns true only when the cart has a fully populated shipping
-   * selection.  Calling applyDiscount before this is true will always
-   * 400 — Snipcart needs valid shipping details to process a discount
-   * against the cart total.
-   */
-  function isShippingReady(cart) {
-    return (
-      cart &&
-      cart.shippingDetails &&
-      cart.shippingDetails.method &&       // a method has been chosen
-      cart.shippingDetails.address &&      // address exists
-      cart.shippingDetails.address.country // and has at least a country
-    );
+  // ── Wait for Snipcart to be ready ───────────────────────
+  function whenReady(cb) {
+    var poll = setInterval(function () {
+      if (window.Snipcart && window.Snipcart.store && window.Snipcart.store.subscribe) {
+        clearInterval(poll);
+        cb();
+      }
+    }, 200);
   }
 
-
-  /**
-   * evaluate
-   * Core logic — called from both the event listener and the store
-   * subscriber.  Bails out early in every case where an API call would
-   * be premature or redundant.
-   */
+  // ── Evaluate current cart state ─────────────────────────
   function evaluate() {
-    // If an apply/remove is already in flight, do nothing.
-    if (pending) return;
-
     var state = Snipcart.store.getState();
     if (!state || !state.cart) return;
 
     var cart = state.cart;
+    var method = cart.shippingDetails && cart.shippingDetails.method;
 
-    // Don't touch the discount API until shipping is fully ready.
-    if (!isShippingReady(cart)) return;
+    // Only act when the shipping method actually changes
+    if (method === previousMethod) return;
+    previousMethod = method;
 
-    var selectedMethod = cart.shippingDetails.method;
-    var isPickup       = (selectedMethod === PICKUP_METHOD_NAME);
+    console.log("[Snipcart] Shipping method changed to:", method);
 
-    if (isPickup && !applied) {
+    var isPickup = (method === PICKUP_METHOD);
+    var alreadyApplied = cart.discounts && cart.discounts.items &&
+      cart.discounts.items.some(function (d) { return d.code === DISCOUNT_CODE; });
+
+    if (isPickup && !alreadyApplied) {
       applyDiscount();
-    } else if (!isPickup && applied) {
+    } else if (!isPickup && alreadyApplied) {
       removeDiscount();
     }
   }
 
-
-  /**
-   * applyDiscount
-   */
-  async function applyDiscount() {
-    pending = true;
-    try {
-      await Snipcart.api.cart.applyDiscount(DISCOUNT_CODE);
-      applied = true;
-      console.log("[LocalPickupDiscount] ✓ 15% discount applied (" + DISCOUNT_CODE + ")");
-    } catch (err) {
-      // Log the full error so you can see exactly what Snipcart returned.
-      // If you still see 400s after creating the discount, check that
-      // Test/Live mode in the dashboard matches your storefront.
-      console.warn(
-        "[LocalPickupDiscount] ✗ applyDiscount failed — " +
-        "check that '" + DISCOUNT_CODE + "' exists in your current " +
-        "dashboard environment (Test vs Live).",
-        err
-      );
-    } finally {
-      pending = false;   // release the lock regardless of success/failure
-    }
-  }
-
-
-  /**
-   * removeDiscount
-   */
-  async function removeDiscount() {
-    pending = true;
-    try {
-      await Snipcart.api.cart.removeDiscount(DISCOUNT_CODE);
-      applied = false;
-      console.log("[LocalPickupDiscount] ✓ 15% discount removed (" + DISCOUNT_CODE + ")");
-    } catch (err) {
-      console.warn("[LocalPickupDiscount] ✗ removeDiscount failed.", err);
-    } finally {
-      pending = false;
-    }
-  }
-
-
-  /**
-   * init
-   * Wires up two listeners after Snipcart is fully ready:
-   *   • shipping.selected  — instant reaction when customer picks a method
-   *   • store.subscribe    — safety-net for page reloads mid-checkout
-   */
-  function init() {
-    Snipcart.events.on("shipping.selected", function () {
-      // Re-evaluate on every shipping selection change.
-      // We read the method from the store inside evaluate() rather than
-      // from the event payload so both code-paths use identical logic.
-      evaluate();
+  // ── Apply discount ──────────────────────────────────────
+  function applyDiscount() {
+    Snipcart.api.cart.applyDiscount(DISCOUNT_CODE).then(function (res) {
+      discountActive = true;
+      console.log("[Snipcart] ✓ LOCALPICKUP discount APPLIED", res);
+    }).catch(function (err) {
+      console.warn("[Snipcart] ✗ Apply discount failed:", err);
     });
+  }
 
+  // ── Remove discount ─────────────────────────────────────
+  function removeDiscount() {
+    Snipcart.api.cart.removeDiscount(DISCOUNT_CODE).then(function (res) {
+      discountActive = false;
+      console.log("[Snipcart] ✓ LOCALPICKUP discount REMOVED", res);
+    }).catch(function (err) {
+      console.warn("[Snipcart] ✗ Remove discount failed:", err);
+    });
+  }
+
+  // ── Main setup ──────────────────────────────────────────
+  whenReady(function () {
+    // Subscribe to the Redux store — fires on every state change
     Snipcart.store.subscribe(evaluate);
 
-    console.log("[LocalPickupDiscount] ✓ Initialized.");
-  }
-
-
-  // ─── Bootstrap ────────────────────────────────────────────────────────────
-  document.addEventListener("snipcart.ready", init);
+    console.log("[Snipcart] ✓ Local Pick-Up auto-discount listener registered.");
+  });
 
 })();
 </script>
+
   <div class="container-fluid nav-stick sticky-top bg-white">
   <nav class="navbar navbar-expand-xl">
       <div class="container">
