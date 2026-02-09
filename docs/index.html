@@ -207,6 +207,7 @@
     <div
     class="d-flex container flex-wrap flex-row animate__animated animate__fadeIn justify-content-center justify-content-md-start">
     
+    
     <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
         data-productId="T-0001-PNK">
         <div class="card-header bg-white border border-0">
@@ -238,7 +239,7 @@
             </p>
             <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
                 <div>
-                    <h4 class="text-center alt">$34</h4>
+                    <h4 class="text-center alt">$34 <a alt="Local Price" aria-disabled="true" data-bs-toggle="tooltip" data-bs-title="Illinois customers: choose Local Pick-Up and receive 15% off your order. The discount will be refunded after checkout." class="text-muted"><i class="fa-solid fa-map-pin opacity-50"></i> $28</a></h4>
                 </div>
                 <div class="d-inline-block card-details">
                     <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/T-0001-PNK/"
@@ -254,6 +255,7 @@
             </div>
         </div>
     </div>
+    
     
     <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
         data-productId="J-0004-BLU">
@@ -286,7 +288,7 @@
             </p>
             <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
                 <div>
-                    <h4 class="text-center alt">$65</h4>
+                    <h4 class="text-center alt">$65 <a alt="Local Price" aria-disabled="true" data-bs-toggle="tooltip" data-bs-title="Illinois customers: choose Local Pick-Up and receive 15% off your order. The discount will be refunded after checkout." class="text-muted"><i class="fa-solid fa-map-pin opacity-50"></i> $55</a></h4>
                 </div>
                 <div class="d-inline-block card-details">
                     <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/J-0004-BLU/"
@@ -302,6 +304,7 @@
             </div>
         </div>
     </div>
+    
     
     <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
         data-productId="B-0002-BLK">
@@ -334,7 +337,7 @@
             </p>
             <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
                 <div>
-                    <h4 class="text-center alt">$52</h4>
+                    <h4 class="text-center alt">$52 <a alt="Local Price" aria-disabled="true" data-bs-toggle="tooltip" data-bs-title="Illinois customers: choose Local Pick-Up and receive 15% off your order. The discount will be refunded after checkout." class="text-muted"><i class="fa-solid fa-map-pin opacity-50"></i> $44</a></h4>
                 </div>
                 <div class="d-inline-block card-details">
                     <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="/products/B-0002-BLK/"
@@ -589,6 +592,10 @@ Chicago, IL
       closeEffect: "none",
       autoplayVideos: true
     });
+  </script>
+    <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
   </script>
   <script src="https://kit.fontawesome.com/90da15346b.js" crossorigin="anonymous"></script>
   <!-- Google tag (gtag.js) -->

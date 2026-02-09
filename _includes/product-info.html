@@ -1,6 +1,7 @@
 {%- comment -%} Product Header {%- endcomment -%}
 {% assign weight_lb = page.weight-g | divided_by: 453.592 %}
-<div class="hstack align-items-start justify-content-between border-bottom-0 border-right-0 border border-2 pt-3 px-3 mb-3">
+{% assign local_price = page.price | times: 0.85 | money %}
+<div class="hstack align-items-start justify-content-between border-bottom-0 border-right-0 border border-2 pt-3 px-3">
   <div>
     <h2 class="fc-1 pe-2">{{ page.name }}</h2>
   </div>
@@ -17,6 +18,9 @@
       {% endif %}
     </h2>
   </div>
+</div>
+<div class="hstack px-3 justify-content-end mb-3 gap-0">
+  <h2 class="text-black text-end fs-3"><span class="fs-6">LOCAL PICK-UP PRICE</span><br><a alt="Local Price" aria-disabled="true" data-bs-toggle="tooltip" data-bs-title="Illinois customers: choose Local Pick-Up and receive 15% off your order. The discount will be refunded after checkout." class="text-muted"><i class="fa-solid fa-map-pin opacity-75"></i> ${{local_price}}</a></h2>
 </div>
 
 {%- comment -%} Product Description {%- endcomment -%}

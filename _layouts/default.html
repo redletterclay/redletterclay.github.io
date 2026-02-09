@@ -56,6 +56,10 @@
       autoplayVideos: true
     });
   </script>
+    <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
   <script src="https://kit.fontawesome.com/90da15346b.js" crossorigin="anonymous"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM1ZCVJZ0G"></script>

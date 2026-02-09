@@ -72,6 +72,10 @@
       autoplayVideos: true
     });
   </script>
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
 
   {%- comment -%} Google Analytics {%- endcomment -%}
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM1ZCVJZ0G"></script>

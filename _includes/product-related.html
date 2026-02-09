@@ -18,6 +18,7 @@
     <section class="related-products">
       <div class="row">
         {% for product in found_products %}
+        {% assign local_price = product.price | times: 0.85 | floor %}
           <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
               data-productId="{{product.sku}}">
             <div class="card-header bg-white border border-0">
@@ -50,7 +51,7 @@
               </p>
               <div class="d-flex align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
                 <div>
-                  <h4 class="text-center alt">{% if product.price-og %}<span class="text-decoration-line-through opacity-50 fw-lighter">${{ product.price-og }}</span> ${{ product.price }}{% else %}${{ product.price}}{%endif %}</h4>
+                  <h4 class="text-center alt">{% if product.price-og %}<span class="text-decoration-line-through opacity-50 fw-lighter">${{ product.price-og }}</span> ${{ product.price }}{% else %}${{ product.price}}{%endif %} <a alt="Local Price" aria-disabled="true" data-bs-toggle="tooltip" data-bs-title="Illinois customers: choose Local Pick-Up and receive 15% off your order. The discount will be refunded after checkout." class="text-muted"><i class="fa-solid fa-map-pin opacity-50"></i> ${{local_price}}</a></h4>
                 </div>
                 <div class="d-inline-block card-details pe-5">
                   <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="{{ product.url }}"
