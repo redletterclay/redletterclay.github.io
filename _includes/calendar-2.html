@@ -1,0 +1,28 @@
+<div class="container-fluid pt-5">
+    <div class="hstack gap-3 flex-wrap">
+        {% for item in site.data.events limit:4 %}
+        <div class="flex-fill" style="min-width: 220px;">
+            <div class="bg-red-3 p-3 rounded-4 event h-100">
+                <div class="d-flex align-items-stretch">
+                    <div class="vstack">
+                        <h2 class="text-white"><span class="fc-2">{{ item.day }}</span><br>{{item.month}} {{item.date}}</h2>
+                        <h3 class="text-white fs-4">{{item.time}}</h3>
+                        <h3 class="text-white fs-4 opacity-50">{{item.year}}</h3>
+                    </div>
+                    <div class="flex-fill">
+                        <h3 class="text-center fs-4"><span class="fc-2">{{item.name}}</span></h3>
+                        <hr class="text-white border-2 mx-5">
+                        <h5 class="text-white text-center">{{item.location}}<br>
+                        {{item.address}} <a href="{{item.map}}" target="_blank" class="{% if item.upcoming == 
+                            'yes'%}fc-1{% else %}fc-6{% endif %}"><i class="fa-solid fa-map ps-2 text-white"></i></a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row">
+        <h3 class="text-end pe-4 pt-2"><a href="/events/" title="Event Archive"><i class="fa-regular fa-circle-right"></i> Event Archive</a></h3>
+    </div>
+</div>

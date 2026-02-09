@@ -173,6 +173,14 @@ h6 {
   letter-spacing: 0.03em;
 }
 
+div.eyebrow {
+  font-family: $headerFont2;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1rem;
+  padding-top: 0.3em;
+}
+
 .bg-dark {
   color: white;
 }
