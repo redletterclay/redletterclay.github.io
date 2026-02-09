@@ -1216,6 +1216,10 @@ div.tags .btn {
   animation-delay: 0.7s;
 }
 
+.upcoming-4 {
+  idth: 250px;
+}
+
 .card, .event {
   --animate-duration: 800ms;
 }
@@ -1579,8 +1583,27 @@ div.tags .btn {
   animation-delay: 600ms;
 }
 
+.ornament-bottom {
+  width: 40px;
+  animation-delay: 600ms;
+}
+
 .announcement-box {
   animation-delay: 600ms;
+}
+
+.no-hover-btn,
+.no-hover-btn:hover,
+.no-hover-btn:focus,
+.no-hover-btn:active {
+  /* Use the same colors as the normal state for the primary button */
+  background-color: #f8f9fa; /* Primary background color */
+  color: #6E4E3C; /* Text color */
+  border-color: #c12121; /* Border color */
+  text-decoration: none; /* Remove any text decoration on hover */
+  /* Ensure no shadow or transition effects on hover/focus/active */
+  box-shadow: none;
+  transition: none;
 }
 
 /* Mobile responsiveness */
