@@ -1,6 +1,6 @@
 - name: The Shop is Now Open!
   info: |
-   Pots are now available for purchase online. Currently shipping to the United States.</p>
+   <p>Pots are now available for purchase online. Currently shipping to the United States.</p>
    <div class="hstack p-0 g-0">
    <div class="w-50 text-start"><h3 class="fc-6">15% OFF with local Chicago pick-up</h3></div>
    <div class="w-50 text-end"><h3 class="fc-6">Free Shipping</h3></div>
