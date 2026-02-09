@@ -72,11 +72,11 @@
 <script>
 (function () {
   // ── Configuration ───────────────────────────────────────
-  var PICKUP_METHOD = "Local Pick-Up Chicago Only";      // must match shippingDetails.method exactly
+  var PICKUP_METHOD = "Local Pick-Up";      // must match shippingDetails.method exactly
   var DISCOUNT_CODE = "LOCALPICKUP15";      // the code from your Snipcart dashboard discount
 
-  var discountActive = false;
-  var previousMethod = null;
+  var lastCheckedMethod = null;
+  var checkInProgress = false;
 
   // ── Wait for Snipcart to be ready ───────────────────────
   function whenReady(cb) {
@@ -90,46 +90,53 @@
 
   // ── Evaluate current cart state ─────────────────────────
   function evaluate() {
+    if (checkInProgress) return; // Prevent concurrent checks
+    
     var state = Snipcart.store.getState();
     if (!state || !state.cart) return;
 
     var cart = state.cart;
     var method = cart.shippingDetails && cart.shippingDetails.method;
-
-    // Only act when the shipping method actually changes
-    if (method === previousMethod) return;
-    previousMethod = method;
-
-    console.log("[Snipcart] Shipping method changed to:", method);
+    
+    if (!method) return; // No shipping method selected yet
 
     var isPickup = (method === PICKUP_METHOD);
     var alreadyApplied = cart.discounts && cart.discounts.items &&
       cart.discounts.items.some(function (d) { return d.code === DISCOUNT_CODE; });
 
+    console.log("[Snipcart] Check - Method:", method, "| IsPickup:", isPickup, "| DiscountApplied:", alreadyApplied);
+
+    // Apply logic based on current state, not previous state
     if (isPickup && !alreadyApplied) {
       applyDiscount();
     } else if (!isPickup && alreadyApplied) {
       removeDiscount();
     }
+    
+    lastCheckedMethod = method;
   }
 
   // ── Apply discount ──────────────────────────────────────
   function applyDiscount() {
+    checkInProgress = true;
     Snipcart.api.cart.applyDiscount(DISCOUNT_CODE).then(function (res) {
-      discountActive = true;
-      console.log("[Snipcart] ✓ LOCALPICKUP discount APPLIED", res);
+      console.log("[Snipcart] ✓ LOCALPICKUP15 discount APPLIED", res);
+      checkInProgress = false;
     }).catch(function (err) {
       console.warn("[Snipcart] ✗ Apply discount failed:", err);
+      checkInProgress = false;
     });
   }
 
   // ── Remove discount ─────────────────────────────────────
   function removeDiscount() {
+    checkInProgress = true;
     Snipcart.api.cart.removeDiscount(DISCOUNT_CODE).then(function (res) {
-      discountActive = false;
-      console.log("[Snipcart] ✓ LOCALPICKUP discount REMOVED", res);
+      console.log("[Snipcart] ✓ LOCALPICKUP15 discount REMOVED", res);
+      checkInProgress = false;
     }).catch(function (err) {
       console.warn("[Snipcart] ✗ Remove discount failed:", err);
+      checkInProgress = false;
     });
   }
 

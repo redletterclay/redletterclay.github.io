@@ -2,8 +2,8 @@
   info: |
    <p>Pots are now available for purchase online. Currently shipping to the United States.</p>
    <div class="hstack p-0 g-0">
-   <div class="w-50 text-start"><h3 class="fc-6">15% OFF with local Chicago pick-up</h3></div>
-   <div class="w-50 text-end"><h3 class="fc-6">Free Shipping</h3></div>
+   <div class="w-50 text-start"><h3 class="fc-6 fs-4">15% OFF with local Chicago pick-up</h3></div>
+   <div class="w-50 text-end"><h3 class="fc-6 fs-4">Free Shipping</h3></div>
    </div>
   live: true
   temp: <h3><a href="/shop/" class="btn btn-outline-primary no-hover-btn pt-2"><i class="fa-solid fa-tag fc-1"></i> 15% OFF with local pickup in Chicago</a></h3>

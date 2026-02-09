@@ -1,13 +1,13 @@
 {% assign live_announcements = site.data.announcement | where: "live", true %}
 {% for item in live_announcements %}
 <div class="bg-light rounded-3 border border-2 animate__animated animate__flipInX announcement-box">
-    <div class="pt-5 pb-1 px-4 ms-0 mx-md-4 text-center text-md-start">
-        <h3 class="text-center fs-2"><a href="{{item.url}}" alt="Shop Now" class="fw-semibold">{{item.name}}</a></h3>
+    <div class="pt-5 pb-1 px-4 ms-0 mx-md-4 text-center">
+        <h3 class="text-center"><a href="{{item.url}}" alt="Shop Now" class="fw-semibold">{{item.name}}</a></h3><hr>
         <p class="text-center">{{item.info}}</p>
     </div>
     {% if item.cta %}
     <div class="ms-0 ms-md-4 mt-0 text-start text-md-end">
-        <h5><a href="{{item.url}}" class="text-nowrap"><i class="fa-regular fa-circle-right"></i> {{item.cta}}</a></h5>
+        <h5 class="fs-2"><a href="{{item.url}}" class="text-nowrap"><i class="fa-regular fa-circle-right"></i> {{item.cta}}</a></h5>
     </div>
     {% endif %}
 </div>

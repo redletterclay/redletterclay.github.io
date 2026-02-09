@@ -18,6 +18,7 @@ nav: sticky
     </div>
     <div class="col-12 col-lg-5 animate__animated animate__fadeIn">
         <img src="/assets/img/davey.png" class="img-fluid p-2 p-md-5 pt-5" alt="Davey Ball">
+        <div class="px-3 px-5-md">
         {% include announcement.html %}
     </div>
 </div>
