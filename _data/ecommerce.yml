@@ -1,7 +1,8 @@
 live: true
 shipping-headline: FREE Shipping to United States
 shipping-copy: |
- Orders ship USPS Ground Advantage. <br>Insurance is added to orders over $100.
+ <p class="text-center">Orders ship USPS Ground Advantage. <br>Insurance is added to orders over $100.</p>
 local-pick-up-headline: Local Pick Up Available
 local-pick-up-copy: |
- Receive 15% off your total when you opt for local pick-up. Illinois residents can schedule a time to pick up in person in the Pilsen neighborhood of Chicago.
+ <p class="text-center">Receive 15% off your total when you opt for local pick-up (refunded after checkout).</p>
+ <p class="text-center">Illinois residents can schedule a time to pick up in person in the Pilsen neighborhood of Chicago.</p>
