@@ -15,6 +15,9 @@
           </div>
           <div class="col-12 col-sm-7">
             <p>{{page.description}}</p>
+            {% if page.description-2 %}
+            {{page.description-2}}
+            {% endif %}
           </div>
           <div class="col-12 col-sm-5 mx-auto pb-4">
             {% if page.thumb %}

@@ -1,8 +1,6 @@
 ---
 layout: page
-title: Sales & Returns
-description: |
- A Chicago based ceramic studio featuring pottery by Davey Ball. Thoughtfully made ceramics for every day enjoyment.
+title: Sales & Return Policies
 nav: sticky
 ---
 <p>Red Letter Clay is located in the Pilsen neighborhood of Chicago and is owned and operated by Davey Ball. Each piece is made by hand, so there may be slight differences because of how they are made, glazed, or fired.</p>

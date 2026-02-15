@@ -4,8 +4,6 @@ title: Have a Question?
 sub-title: Use This Form to Get in Touch
 right-content: |
  <img src="/assets/img/circle-smile-mug.png" class="img-fluid text-center mb-5" alt="Happy Customers">
-description: |
- A Chicago based ceramic studio featuring pottery by Davey Ball. Thoughtfully made ceramics for every day enjoyment.
 hero: no
 nav: sticky
 ---

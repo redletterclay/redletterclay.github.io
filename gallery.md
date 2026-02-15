@@ -1,10 +1,8 @@
 ---
 layout: gallery
-title: Gallery - Red Letter Clay
+title: Gallery
 nav: sticky
 active: gallery
-description: |
-  A Chicago based ceramic studio featuring pottery by Davey Ball.
 ---
 <div class="animate__animated fade-in container-fluid mt-4">
     <!-- Section 1: Large feature with stacked side items -->

@@ -1,6 +1,7 @@
 ---
 layout: about
-title: About Me
+title: About Davey Ball | Chicago Potter & Ceramic Artist
+description: Meet Davey Ball, Chicago-based ceramic artist behind Red Letter Clay. Discover the story behind thoughtfully made pottery inspired by Japanese and mid-century ceramics.
 hero: no
 nav: sticky
 ---

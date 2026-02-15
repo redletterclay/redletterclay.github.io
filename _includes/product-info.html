@@ -6,12 +6,9 @@
     <h2 class="fc-1 pe-2">{{ page.name }}</h2>
   </div>
   <div>
-    <h2 class="text-black text-end">
-      {% if page.price-og %}
-      <span class="text-decoration-line-through opacity-25 fw-light pe-3">${{ page.price-og }}</span>
-      {% endif %}
-      ${{ page.price }}
-      {% if page.sale %}
+    <h2 class="text-black text-end">${{ page.price }}
+      {% if page.sale-price %}
+      <span class="text-decoration-line-through opacity-25 fw-light pe-3">${{ page.sale-price }}</span>
       <br><span class="text-start alt sale text-danger fs-4">
         <i class="fa-solid fa-certificate"></i> ON SALE
       </span>
@@ -19,16 +16,22 @@
     </h2>
   </div>
 </div>
-<div class="text-black text-end px-3 text-end eyebrow text-muted pb-2 pb-md-0">LOCAL PICK-UP PRICE</div>
+<div class="text-black text-end px-3 text-end eyebrow text-muted fc-6 opacity-75 pb-2 pb-md-0">LOCAL PICK-UP PRICE</div>
 <div class="hstack px-3 justify-content-end gap-0">
-  <h2 class="text-black text-end fs-3"><a alt="Local Price" aria-disabled="true" data-bs-toggle="tooltip" data-bs-title="Illinois customers: choose Local Pick-Up and receive 15% off your order. The discount will be refunded after checkout." class="text-muted"><i class="fa-solid fa-map-pin opacity-75"></i> ${{local_price}}</a></h2>
+  <h2 class="text-black text-end fs-3 text-muted opacity-75"><a alt="Local Price" aria-disabled="true"
+      data-bs-toggle="tooltip"
+      data-bs-title="Illinois customers: choose Local Pick-Up and receive 15% off your order. The discount will be refunded after checkout."
+      class="text-muted"><i class="fa-solid fa-map-pin opacity-75"></i> ${{local_price}}</a></h2>
 </div>
 
 {%- comment -%} Product Description {%- endcomment -%}
 <article class="ps-3">
   <p>{{ page.description }}</p>
+  {% if page.description-2 %}
+  <p>{{page.description-2}}</p>
+  {% endif %}
   {% if page.process %}
-  <p class="text-end"><a href="{{page.process}}" alt="Behind the Making">Behind the making</a></p>
+  <p class="text-end"><a href="{{page.process}}"><i class="fa-regular fa-circle-right pe-2"></i>Behind the making</a></p>
   {% endif %}
 </article>
 
@@ -45,7 +48,8 @@
   <li><i class="fa-solid fa-caret-right pe-2 fc-7"></i><span class="fw-normal">Holds</span>: {{ page.holds }}</li>
   {% endif %}
   {% if page.weight-g %}
-  <li><i class="fa-solid fa-caret-right pe-2 fc-7"></i><span class="fw-normal">Weight</span>: {{ weight_lb | round: 2 }} pounds</li>
+  <li><i class="fa-solid fa-caret-right pe-2 fc-7"></i><span class="fw-normal">Weight</span>: {{ weight_lb | round: 2 }}
+    pounds</li>
   {% endif %}
   {% if page.height %}
   <li><i class="fa-solid fa-caret-right pe-2 fc-7"></i><span class="fw-normal">Height</span>: {{ page.height }}</li>
@@ -62,55 +66,53 @@
 {%- comment -%} Add to Cart Section {%- endcomment -%}
 <div class="row add_cart py-3 pt-3">
   <div class="col-12 mx-auto">
-    <button class="btn btn-primary pt-3 pb-2 pe-4 mb-3 rounded-pill w-100 snipcart-add-item animate__animated animate__flipInX animate__delay-1s"
-      data-item-id="{{ page.sku }}"
-      data-item-url="{{ site.url }}{{ page.url }}"
-      data-item-price="{{ page.price }}"
+    <button
+      class="btn btn-primary pt-3 pb-2 pe-4 mb-3 rounded-pill w-100 snipcart-add-item animate__animated animate__flipInX animate__delay-1s"
+      data-item-id="{{ page.sku }}" data-item-url="{{ site.url }}{{ page.url }}" data-item-price="{{ page.price }}"
       data-item-description="{{ page.description }}"
-      data-item-image="{{ site.url }}/assets/img/shop/live/{{ page.thumb }}"
-      data-item-weight="{{ page.weight-g }}"
+      data-item-image="{{ site.url }}/assets/img/shop/live/{{ page.thumb }}" data-item-weight="{{ page.weight-g }}"
       data-item-name="{{ page.name }}">
       <i class="fa-solid fa-circle-plus p-2"></i> Add to Cart
     </button>
 
     {%- comment -%} Product Features {%- endcomment -%}
-    <div class="pt-4 pb-2">
+    <div class="pt-4">
       {% if page.dishwasher %}
-      <hr class="border-2">
-      <h5 class="text-end text-uppercase alt opacity-75">
-        Food safe <i class="fa-solid fa-utensils fc-1"></i>
-      </h5>
+      <hr class="border-2 mx-3">
+      <div class="hstack justify-content-center pt-2">
+        <h5 class="text-uppercase alt"><i class="fa-solid fa-utensils fc-1 pe-2"></i>Food safe</h5>
+      </div>
       {% endif %}
       {% if page.food %}
-      <h5 class="text-end text-uppercase alt opacity-75">
-        Microwave and dishwasher safe <i class="fa-solid fa-shield fc-1"></i>
-      </h5>
-      <hr class="border-2">
+      <div class="hstack justify-content-center">
+        <h5 class="text-uppercase alt"> <i class="fa-solid fa-shield fc-1 pe-2"></i>Microwave and dishwasher safe</h5>
+      </div>
       {% endif %}
+      <hr class="border-2 mx-3">
     </div>
+    {% if page.firing-method %}
+    <h6>
+      <div class="hstack justify-content-between px-3 pt-3">
+        <div><i class="fa-solid fa-dungeon pe-2 fc-7"></i><span class="fw-normal">Firing Method</span>:</div>
+        <div>{{ page.firing-method }}</div>
+      </div>
+    </h6>
+    {% endif %}
 
     {%- comment -%} SKU {%- endcomment -%}
     <h6 class="text-end mb-5">
-      <i class="fa-solid fa-barcode"></i> SKU: <span class="opacity-75">{{ page.sku }}</span>
+      <div class="hstack justify-content-between px-3">
+        <div><i class="fa-solid fa-barcode fc-7 pe-1"></i> SKU:</div>
+        <div>{{ page.sku }}</div>
+      </div>
     </h6>
 
     {%- comment -%} Continue Shopping Button {%- endcomment -%}
     <div class="pt-4 mb-5 pb-2">
       <a href="/shop/" class="text-center pt-3 pb-2 pe-4 mb-3 fw-semibold btn btn-outline-primary rounded-pill w-100">
-        <i class="fa-solid fa-cart-shopping fc-7 pe-2 no-anim"></i> Continue Shopping 
+        <i class="fa-solid fa-cart-shopping fc-7 pe-2 no-anim"></i> Continue Shopping
         <i class="fa-solid fa-angles-right fc-7 slide"></i>
       </a>
     </div>
-    <hr class="mb-5">
-
-    {% include shipping-details.html %}
-
-    {% if page.featured-image %}
-    <div class="pt-4">
-      <a href="{{page.featured-image}}" class="img-fluid glightbox" data-zoomable="true">
-      <img src="{{page.featured-image}}" class="img-fluid cursor-zoom" alt="{{ page.name }} - Featured Image">
-    </a>
-    </div>
-    {% endif %}
   </div>
 </div>

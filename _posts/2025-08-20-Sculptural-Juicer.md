@@ -3,7 +3,8 @@ layout: post
 category: process
 title: Sculptural Juicer
 description: |
- <p>Some new ceramic work — a juicer and cup. This piece is a technically advanced form incorporating wheel throwing, slab handbuilding, carving, and coils. The cup could be nice for making salad dressings, and it juices nicely!</p>
+ Some new ceramic work — a juicer and cup. This piece is a technically advanced form incorporating wheel throwing, slab handbuilding, carving, and coils. The cup could be nice for making salad dressings, and it juices nicely!
+description-2: |
  <p>Functional objects are harder to construct than one would think. Often, it requires trial and error over multiple attempts to gather enough experiential knowledge to create successful pots.</p>
 nav: sticky
 thumb: /assets/img/journal/process/juicer/juicer-thumb.jpg

@@ -4,8 +4,6 @@ title: Frequently Asked Questions
 right-title: Is Yours Not Listed?
 right-content: |
  <p class="text-center me-4"><a href="/contact/" alt="Contact Form" class="btn btn-primary mt-2 mb-5 rounded-pill px-5 pt-3 w-100"><i class="fa-solid fa-hand pe-2"></i> Ask Away!</a></p>
-description: |
- A Chicago based ceramic studio featuring pottery by Davey Ball. Thoughtfully made ceramics for every day enjoyment.
 nav: sticky
 hero: no
 ---

@@ -4,33 +4,33 @@
       <i class="fa-solid fa-circle text-danger" aria-hidden="true"></i> SOLD!
     </span>
   </div>
-  
-  <a href="/assets/img/shop/live/{{ page.image }}" class="img-fluid glightbox cursor-zoom" data-zoomable="true">
-    <img src="/assets/img/shop/live/{{ page.image }}" class="img-fluid cursor-zoom rounded rounded-3" alt="{{ page.name }}">
+
+  <a href="{{ page.image }}" class="img-fluid glightbox cursor-zoom" data-zoomable="true">
+    <img src="{{ page.image }}" class="img-fluid cursor-zoom rounded rounded-3" alt="{{ page.title }}">
   </a>
 
   {%- comment -%} Additional Images {%- endcomment -%}
   {% if page.image-2 and page.image-3 %}
   <div class="d-flex pt-3 gap-3">
-    <a href="/assets/img/shop/live/{{ page.image-2 }}" class="img-fluid glightbox" data-zoomable="true">
-      <img src="/assets/img/shop/live/{{ page.image-2 }}" class="img-fluid cursor-zoom rounded rounded-3" alt="{{ page.name }} - Image 2">
+    <a href="{{ page.image-2 }}" class="img-fluid glightbox" data-zoomable="true">
+      <img src="{{ page.image-2 }}" class="img-fluid cursor-zoom rounded rounded-3" alt="{{ page.title }} - Image 2">
     </a>
-    <a href="/assets/img/shop/live/{{ page.image-3 }}" class="img-fluid glightbox" data-zoomable="true">
-      <img src="/assets/img/shop/live/{{ page.image-3 }}" class="img-fluid cursor-zoom rounded rounded-3" alt="{{ page.name }} - Image 3">
+    <a href="{{ page.image-3 }}" class="img-fluid glightbox" data-zoomable="true">
+      <img src="{{ page.image-3 }}" class="img-fluid cursor-zoom rounded rounded-3" alt="{{ page.title }} - Image 3">
     </a>
   </div>
   {% elsif page.image-2 %}
   <div class="d-flex pt-4">
-    <a href="/assets/img/shop/live/{{ page.image-2 }}" class="img-fluid glightbox" data-zoomable="true">
-      <img src="/assets/img/shop/live/{{ page.image-2 }}" class="img-fluid cursor-zoom rounded rounded-3" alt="{{ page.name }} - Image 2">
+    <a href="{{ page.image-2 }}" class="img-fluid glightbox" data-zoomable="true">
+      <img src="{{ page.image-2 }}" class="img-fluid cursor-zoom rounded rounded-3" alt="{{ page.title }} - Image 2">
     </a>
   </div>
   {% endif %}
 
   {% if page.image-4 %}
   <div class="d-flex pt-3">
-    <a href="/assets/img/shop/live/{{ page.image-4 }}" class="img-fluid glightbox" data-zoomable="true">
-      <img src="/assets/img/shop/live/{{ page.image-4 }}" class="img-fluid cursor-zoom rounded rounded-3" alt="{{ page.name }} - Image 4">
+    <a href="{{ page.image-4 }}" class="img-fluid glightbox" data-zoomable="true">
+      <img src="{{ page.image-4 }}" class="img-fluid cursor-zoom rounded rounded-3" alt="{{ page.title }} - Image 4">
     </a>
   </div>
   {% endif %}

@@ -1,8 +1,6 @@
 ---
 layout: events
-title: Events - Red Letter Clay
+title: In-Person Markets & Pop-Ups
 nav: sticky
-description: |
- A Chicago based ceramic studio featuring pottery by Davey Ball.
 permalink: /events/
 ---

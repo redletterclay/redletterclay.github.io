@@ -1,9 +1,7 @@
 ---
 layout: collection
-title: Gallery - Red Letter Clay
+title: Mug Gallery
 nav: sticky
-description: |
- A Chicago based ceramic studio featuring pottery by Davey Ball.
 permalink: /gallery/mugs/
 active: mugs
 ---

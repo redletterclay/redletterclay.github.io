@@ -3,7 +3,7 @@ layout: post
 category: process
 title: Slipcast Bottle Process
 description: |
- <p>A behind the scenes look at the making of the bottle slipcast mold that I made from an original design.</p>
+ A behind the scenes look at the making of the bottle slipcast mold that I made from an original design.
 nav: sticky
 thumb: /assets/img/journal/process/bottle/bottle-thumb.jpg
 gallery:

@@ -1,7 +1,7 @@
 url: "https://www.redletterclay.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-title: "Red Letter Clay" # the name of your site, e.g. ACME Corp.
-description: Handmade pottery by Davey Ball — Made in Chicago
+title: "Handmade Pottery & Ceramics - Red Letter Clay by Davey Ball - Made in Chicago" # the name of your site, e.g. ACME Corp.
+description: Thoughtfully made ceramic mugs, bowls, vases & planters by Chicago artist Davey Ball. Unique stoneware pottery for everyday use. Shop online or visit at local markets.
 email: david@raygun.org
 
 defaults:
