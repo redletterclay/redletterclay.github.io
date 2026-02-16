@@ -73,9 +73,12 @@
             </p>
             <div class="hstack align-items-center justify-content-between border-top-0 border-2 border px-3 pt-3">
                 <div>
-                    <h4 class="text-center alt">{% if product.price-og %}<span
-                            class="text-decoration-line-through opacity-50 fw-lighter">${{ product.price-og }}</span>
-                        ${{ product.price }}{% else %}${{ product.price}}{%endif %} <a alt="Local Price" aria-disabled="true" data-bs-toggle="tooltip" data-bs-title="Illinois customers: choose Local Pick-Up and receive 15% off your order. The discount will be refunded after checkout." class="text-muted"><i class="fa-solid fa-map-pin opacity-50"></i> ${{local_price}}</a></h4>
+                    <h4 class="text-center alt">
+                        {% if product.sale-price %}<span
+                            class="text-decoration-line-through opacity-50 fw-lighter">${{ product.sale-price }}</span>
+                        ${{ product.price }}{% else %}${{ product.price}}
+                        {%endif %}
+                         <a alt="Local Price" class="fc-5" aria-disabled="true" data-bs-toggle="tooltip" data-bs-title="Illinois customers: choose Local Pick-Up and receive 15% off your order. The discount will be refunded after checkout."<i class="fa-solid fa-map-pin opacity-75"></i> ${{local_price}}</a></h4>
                 </div>
                 <div class="d-inline-block card-details">
                     <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="{{ product.url }}"
