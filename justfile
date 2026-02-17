@@ -2,8 +2,7 @@
 
 # hello is recipe's name
 build:
-  bundle exec jekyll build
-  cp CNAME docs/
+  bash build.sh
 
 serve:
   bundle exec jekyll serve
