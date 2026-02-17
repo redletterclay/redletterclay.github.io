@@ -24,7 +24,7 @@ jobs:
           bundler-cache: true
 
       - name: Build
-        run: bash build.sh
+        run: bundle exec jekyll build
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
@@ -32,3 +32,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
           publish_branch: gh-pages
+          CNAME: redletterclay.com
