@@ -925,12 +925,16 @@ div#mc_embed_signup input {
   opacity: 1 !important; /* Optional: ensures it's solid white, not transparent */
 }
 
-body[data-local-pickup-discount=false] .price-local {
+.price-local, .price-ship {
   display: none;
 }
 
+body[data-local-pickup-discount=false] .price-local {
+  display: block;
+}
+
 body[data-local-pickup-discount=true] .price-ship {
-  display: none;
+  display: block;
 }
 
 /* Remove gradient from glightbox description on mobile */
@@ -1857,12 +1861,12 @@ body[data-local-pickup-discount=false][data-local-pickup-zone=true]:not([data-lo
   transition: transform 0.15s ease-in-out;
 }
 .local-pickup-switch:focus-visible {
-  outline: 2px solid #0d6efd;
+  outline: 2px solid #24A9CA;
   outline-offset: 2px;
 }
 
 body[data-local-pickup-discount=true] .local-pickup-switch {
-  background-color: #0d6efd;
+  background-color: #24A9CA;
 }
 body[data-local-pickup-discount=true] .local-pickup-switch::after {
   transform: translateX(1.5em);
