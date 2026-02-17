@@ -33,3 +33,14 @@ jobs:
           publish_dir: ./docs
           publish_branch: gh-pages
           CNAME: redletterclay.com
+
+      - name: Wait 5m for Pages deployment
+        run: sleep 300
+
+      - name: Trigger Snipcart recrawl
+        run: |
+          curl -sS -X POST "https://app.snipcart.com/api/products" \
+            -H "Accept: application/json" \
+            -H "Content-Type: application/json" \
+            -u "${{ secrets.SNIPCART_API_KEY }}:" \
+            -d '{"fetchUrl": "https://redletterclay.com/snipcart.json"}'
