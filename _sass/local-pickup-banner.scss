@@ -1,0 +1,73 @@
+// Local pickup banner: hidden by default, shown only when body has
+// data-local-pickup-discount="false" and data-local-pickup-zone="true"
+// and data-local-pickup-dismissed is not "true"
+.local-pickup-banner {
+  display: none;
+}
+
+body[data-local-pickup-discount="false"][data-local-pickup-zone="true"]:not([data-local-pickup-dismissed="true"]) .local-pickup-banner {
+  display: block;
+}
+
+.local-pickup-banner {
+  background-color: $color-theme-7;
+  color: $color-theme-4;
+  padding: 0.6rem 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.local-pickup-banner__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1.25rem;
+}
+
+.local-pickup-banner__text {
+  margin: 0;
+}
+
+.local-pickup-banner__text strong {
+  color: $color-theme-2;
+}
+
+.local-pickup-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.local-pickup-banner__btn {
+  font-family: $headerFont;
+  font-size: 0.95rem;
+  padding: 0.35rem 0.75rem;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.local-pickup-banner__btn--apply {
+  background-color: $color-theme-2;
+  color: $color-theme-3;
+}
+
+.local-pickup-banner__btn--apply:hover {
+  background-color: darken($color-theme-2, 8%);
+}
+
+.local-pickup-banner__btn--dismiss {
+  background: transparent;
+  color: $color-theme-4;
+  text-decoration: underline;
+}
+
+.local-pickup-banner__btn--dismiss:hover {
+  color: $backgroundColor;
+}

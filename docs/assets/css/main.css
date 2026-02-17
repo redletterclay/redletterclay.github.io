@@ -1742,5 +1742,75 @@ div.tags .btn {
     transform: translateY(0);
   }
 }
+.local-pickup-banner {
+  display: none;
+}
+
+body[data-local-pickup-discount=false][data-local-pickup-zone=true]:not([data-local-pickup-dismissed=true]) .local-pickup-banner {
+  display: block;
+}
+
+.local-pickup-banner {
+  background-color: #A73838;
+  color: #FFEEEF;
+  padding: 0.6rem 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.local-pickup-banner__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1.25rem;
+}
+
+.local-pickup-banner__text {
+  margin: 0;
+}
+
+.local-pickup-banner__text strong {
+  color: #F9E1B7;
+}
+
+.local-pickup-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.local-pickup-banner__btn {
+  font-family: "Bitter", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.95rem;
+  padding: 0.35rem 0.75rem;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.local-pickup-banner__btn--apply {
+  background-color: #F9E1B7;
+  color: #6E4E3C;
+}
+
+.local-pickup-banner__btn--apply:hover {
+  background-color: #f6d191;
+}
+
+.local-pickup-banner__btn--dismiss {
+  background: transparent;
+  color: #FFEEEF;
+  text-decoration: underline;
+}
+
+.local-pickup-banner__btn--dismiss:hover {
+  color: #ffffff;
+}
 
 /*# sourceMappingURL=main.css.map */
