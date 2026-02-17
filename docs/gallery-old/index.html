@@ -151,6 +151,36 @@
 <script src="/assets/js/geolocation.js"></script>
 
   <body>
+    <div class="local-pickup-banner" role="region" aria-label="Local pickup discount">
+  <div class="local-pickup-banner__inner">
+    <p class="local-pickup-banner__text">
+      <strong>15% off</strong> when you pick up in the Chicago area. Add items to your cart and choose Local Pick-Up at
+      checkout.
+    </p>
+    <div class="local-pickup-banner__actions">
+      <button type="button" class="local-pickup-banner__btn local-pickup-banner__btn--apply" data-action="apply">
+        Apply 15% off
+      </button>
+      <button type="button" class="local-pickup-banner__btn local-pickup-banner__btn--dismiss" data-action="dismiss"
+        aria-label="Dismiss banner">
+        Dismiss
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    const banner = document.querySelector('.local-pickup-banner');
+    banner?.addEventListener('click', function (e) {
+      const btn = e.target.closest('[data-action]');
+      if (btn?.getAttribute('data-action') === 'apply') {
+        window.dispatchEvent(new CustomEvent('rlc.local_pickup_banner.apply_clicked'));
+      } else if (btn?.getAttribute('data-action') === 'dismiss') {
+        window.dispatchEvent(new CustomEvent('rlc.local_pickup_banner.dismiss_clicked'));
+      }
+    });
+  })();
+</script>
     <main class="overflow-x-hidden">
     <div class="container-fluid">
       <div class="d-none d-md-flex align-items-center gap-4 mb-5 animate__animated animate__fadeIn">

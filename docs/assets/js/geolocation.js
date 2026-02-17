@@ -48,7 +48,7 @@
   //
 
   function getStorageItemWithTtl(storage, key) {
-    const encoded = safeStorage.getItem(storage, key);
+    const encoded = storage.getItem(key);
     if (encoded) {
       const [expiresAt, value] = JSON.parse(encoded);
       if (Date.now() < expiresAt) {
@@ -61,6 +61,6 @@
   function setStorageItemWithTtl(storage, key, value, ttl) {
     const expiresAt = Date.now() + ttl;
     const encoded = JSON.stringify([expiresAt, value]);
-    safeStorage.setItem(storage, key, encoded);
+    storage.setItem(key, encoded);
   }
 })();

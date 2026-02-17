@@ -37,8 +37,14 @@
   });
 
   //
-  // event listeners for local pickup banner
+  // local pickup banner
   //
+
+  try {
+    if (sessionStorage.getItem("rlc.local-pickup-dismissed") === "true") {
+      document.body.setAttribute("data-local-pickup-dismissed", "true");
+    }
+  } catch {}
 
   window.addEventListener("rlc.local_pickup_banner.dismiss_clicked", () => {
     document.body.setAttribute("data-local-pickup-dismissed", "true");
@@ -58,8 +64,10 @@
 
   function updateAttr() {
     const state = Snipcart.store.getState();
+    if (state.cart.status === 0) return;
     const items = state.cart.discounts.items;
     const hasLocalDiscount = items.some((d) => d.code === DISCOUNT_CODE);
+    console.log("hasLocalDiscount", hasLocalDiscount, state);
     document.body.setAttribute(
       "data-local-pickup-discount",
       hasLocalDiscount.toString(),
