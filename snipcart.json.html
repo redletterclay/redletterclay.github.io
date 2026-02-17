@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /snipcart.json
+---
+[
+{% for product in site.products %}
+  {
+    "id": {{ product.sku | jsonify }},
+    "name": {{ product.name | jsonify }},
+    "price": {{ product.price }},
+    "url": {{ site.url | append: product.url | jsonify }},
+    "description": {{ product.description | strip_newlines | jsonify }},
+    "image": {{ site.url | append: product.url | append: '/assets/img/shop/live/' | append: product.thumb | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
