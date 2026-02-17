@@ -1,0 +1,399 @@
+[
+
+  {
+    "id": "T-0001-PNK",
+    "name": "Petal Tray",
+    "price": 34,
+    "url": "https://www.redletterclay.com/products/T-0001-PNK/",
+    "description": "A slipcast ceramic petal tray glazed in soft pink and white, designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.",
+    "image": "https://www.redletterclay.com/products/T-0001-PNK//assets/img/shop/live/T-0001-PNK-thumb.jpg"
+  },
+
+  {
+    "id": "T-0002-PNK",
+    "name": "Petal Tray",
+    "price": 34,
+    "url": "https://www.redletterclay.com/products/T-0002-PNK/",
+    "description": "A slipcast ceramic petal tray glazed in soft pink and white, designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.",
+    "image": "https://www.redletterclay.com/products/T-0002-PNK//assets/img/shop/live/T-0001-PNK-thumb.jpg"
+  },
+
+  {
+    "id": "P-0001-PNK",
+    "name": "Cruet",
+    "price": 42,
+    "url": "https://www.redletterclay.com/products/P-0001-PNK/",
+    "description": "A small bottle perfect for broth, soy sauce, salad dressings, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.",
+    "image": "https://www.redletterclay.com/products/P-0001-PNK//assets/img/shop/live/P-0001-PNK-thumb.jpg"
+  },
+
+  {
+    "id": "P-0004-PNK",
+    "name": "Cruet",
+    "price": 42,
+    "url": "https://www.redletterclay.com/products/P-0004-PNK/",
+    "description": "A small bottle perfect for broth, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.",
+    "image": "https://www.redletterclay.com/products/P-0004-PNK//assets/img/shop/live/P-0004-PNK-thumb.jpg"
+  },
+
+  {
+    "id": "M-0008-PNK",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0008-PNK/",
+    "description": "A square wheel-thrown and altered mug designed for coffee and tea lovers alike. The softly defined corners give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0008-PNK//assets/img/shop/live/M-0008-PNK-thumb.jpg"
+  },
+
+  {
+    "id": "P-0002-BLU",
+    "name": "Cruet",
+    "price": 42,
+    "url": "https://www.redletterclay.com/products/P-0002-BLU/",
+    "description": "A small bottle perfect for broth, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.",
+    "image": "https://www.redletterclay.com/products/P-0002-BLU//assets/img/shop/live/P-0002-BLU-thumb.jpg"
+  },
+
+  {
+    "id": "B-0001-GRN",
+    "name": "SM Bowl",
+    "price": 42,
+    "url": "https://www.redletterclay.com/products/B-0001-GRN/",
+    "description": "A small wheel thrown bowl for ice cream, snacks, rice, etc. Decorated in a glacial green and blue glaze.",
+    "image": "https://www.redletterclay.com/products/B-0001-GRN//assets/img/shop/live/B-0001-GRN-thumb.jpg"
+  },
+
+  {
+    "id": "M-0009-GRN",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0009-GRN/",
+    "description": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The thick handle and barreled body give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0009-GRN//assets/img/shop/live/M-0009-GRN-thumb.jpg"
+  },
+
+  {
+    "id": "M-0015-GRN",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0015-GRN/",
+    "description": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The tall curved body give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0015-GRN//assets/img/shop/live/M-0015-GRN-thumb.jpg"
+  },
+
+  {
+    "id": "M-0010-GRN",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0010-GRN/",
+    "description": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The wide barreled body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0010-GRN//assets/img/shop/live/M-0010-GRN-thumb.jpg"
+  },
+
+  {
+    "id": "C-0003-GRN",
+    "name": "Cup",
+    "price": 40,
+    "url": "https://www.redletterclay.com/products/C-0003-GRN/",
+    "description": "Glazed in a glacial green and blue, each cup carries subtle variation and depth. Wheel-thrown from durable stoneware, it’s made to be used daily — whether for drink or creative workspaces.",
+    "image": "https://www.redletterclay.com/products/C-0003-GRN//assets/img/shop/live/C-0003-GRN-thumb.jpg"
+  },
+
+  {
+    "id": "C-0004-GRN",
+    "name": "Cup",
+    "price": 40,
+    "url": "https://www.redletterclay.com/products/C-0004-GRN/",
+    "description": "Glazed in a glacial green and blue, each cup carries subtle variation and depth. Wheel-thrown from durable stoneware, it’s made to be used daily — whether for drink or creative workspaces.",
+    "image": "https://www.redletterclay.com/products/C-0004-GRN//assets/img/shop/live/C-0004-GRN-thumb.jpg"
+  },
+
+  {
+    "id": "M-0019-GRN",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0019-GRN/",
+    "description": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The wide barreled body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0019-GRN//assets/img/shop/live/M-0019-GRN-thumb.jpg"
+  },
+
+  {
+    "id": "M-0020-GRN",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0020-GRN/",
+    "description": "A wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0020-GRN//assets/img/shop/live/M-0020-GRN-thumb.jpg"
+  },
+
+  {
+    "id": "M-0011-BLU",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0011-BLU/",
+    "description": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0011-BLU//assets/img/shop/live/M-0011-BLU-thumb.jpg"
+  },
+
+  {
+    "id": "J-0003-BLU",
+    "name": "Round Jar",
+    "price": 65,
+    "url": "https://www.redletterclay.com/products/J-0003-BLU/",
+    "description": "A textured ceramic lidded jar finished in a blue white glaze, offering a soft, earthy surface with subtle depth and variation.",
+    "image": "https://www.redletterclay.com/products/J-0003-BLU//assets/img/shop/live/J-0003-BLU-thumb.jpg"
+  },
+
+  {
+    "id": "M-0002-PUR",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0002-PUR/",
+    "description": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0002-PUR//assets/img/shop/live/M-0002-PUR-thumb.jpg"
+  },
+
+  {
+    "id": "M-0005-PUR",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0005-PUR/",
+    "description": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0005-PUR//assets/img/shop/live/M-0005-PUR-thumb.jpg"
+  },
+
+  {
+    "id": "M-0014-GRN",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0014-GRN/",
+    "description": "An ample wheel-thrown and altered mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0014-GRN//assets/img/shop/live/M-0014-GRN-thumb.jpg"
+  },
+
+  {
+    "id": "M-0021-GRN",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0021-GRN/",
+    "description": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0021-GRN//assets/img/shop/live/M-0021-GRN-thumb.jpg"
+  },
+
+  {
+    "id": "J-0001-GRN",
+    "name": "Textured Jar",
+    "price": 65,
+    "url": "https://www.redletterclay.com/products/J-0001-GRN/",
+    "description": "A textured ceramic lidded jar finished in a satin matte green glaze, offering a soft, earthy surface with subtle depth and variation.",
+    "image": "https://www.redletterclay.com/products/J-0001-GRN//assets/img/shop/live/J-0001-GRN-thumb.jpg"
+  },
+
+  {
+    "id": "M-0006-GRN",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0006-GRN/",
+    "description": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0006-GRN//assets/img/shop/live/M-0006-GRN-thumb.jpg"
+  },
+
+  {
+    "id": "B-0006-PUR",
+    "name": "Berry Bowl",
+    "price": 48,
+    "url": "https://www.redletterclay.com/products/B-0006-PUR/",
+    "description": "A small berry bowl for rinsing fresh fruit and vegetables, complete with handbuilt handles. Perfect for spring mornings and summer gatherings. Decorated with purple and green dip glazes.",
+    "image": "https://www.redletterclay.com/products/B-0006-PUR//assets/img/shop/live/B-0006-PUR-thumb.jpg"
+  },
+
+  {
+    "id": "M-0007-GRN",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0007-GRN/",
+    "description": "An ample wheel-thrown mug with carvings designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0007-GRN//assets/img/shop/live/M-0007-GRN-thumb.jpg"
+  },
+
+  {
+    "id": "PNT-0001-GRN",
+    "name": "SM Planter",
+    "price": 65,
+    "url": "https://www.redletterclay.com/products/PNT-0001-GRN/",
+    "description": "Small stoneware planter in a dark green glaze with brown variation at the rim. Perfect for a succulent. Matching tray included.",
+    "image": "https://www.redletterclay.com/products/PNT-0001-GRN//assets/img/shop/live/PNT-0001-GRN-thumb.jpg"
+  },
+
+  {
+    "id": "J-0004-BLU",
+    "name": "Textured Jar",
+    "price": 65,
+    "url": "https://www.redletterclay.com/products/J-0004-BLU/",
+    "description": "A textured ceramic lidded jar finished in a satin cobalt blue glaze, offering a soft, earthy surface with subtle depth and variation.",
+    "image": "https://www.redletterclay.com/products/J-0004-BLU//assets/img/shop/live/J-0004-BLU-thumb.jpg"
+  },
+
+  {
+    "id": "J-0002-BLU",
+    "name": "Textured Jar",
+    "price": 65,
+    "url": "https://www.redletterclay.com/products/J-0002-BLU/",
+    "description": "A textured ceramic lidded jar finished in a satin cobalt blue glaze, offering a soft, earthy surface with subtle depth and variation.",
+    "image": "https://www.redletterclay.com/products/J-0002-BLU//assets/img/shop/live/J-0002-BLU-thumb.jpg"
+  },
+
+  {
+    "id": "P-0003-BRN",
+    "name": "Cruet",
+    "price": 42,
+    "url": "https://www.redletterclay.com/products/P-0003-BRN/",
+    "description": "A small bottle perfect for broth, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.",
+    "image": "https://www.redletterclay.com/products/P-0003-BRN//assets/img/shop/live/P-0003-BRN-thumb.jpg"
+  },
+
+  {
+    "id": "B-0005-GRN",
+    "name": "MD Bowl",
+    "price": 42,
+    "url": "https://www.redletterclay.com/products/B-0005-GRN/",
+    "description": "A small to medium sized wheel thrown bowl great for pasta and rice entrees sized glazed in an olive green glaze.",
+    "image": "https://www.redletterclay.com/products/B-0005-GRN//assets/img/shop/live/B-0005-GRN-thumb.jpg"
+  },
+
+  {
+    "id": "C-0001-BRN",
+    "name": "SM Cups",
+    "price": 42,
+    "url": "https://www.redletterclay.com/products/C-0001-BRN/",
+    "description": "A pair of small faceted cups designed for sipping sake, whiskey, tequila, or espresso. The hand-faceted surfaces create subtle angles that catch the light while offering a comfortable, tactile grip. Their compact size makes them ideal for intimate pours and slow, intentional sipping.",
+    "image": "https://www.redletterclay.com/products/C-0001-BRN//assets/img/shop/live/C-0001-BRN-thumb.jpg"
+  },
+
+  {
+    "id": "M-0012-BRN",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0012-BRN/",
+    "description": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0012-BRN//assets/img/shop/live/M-0012-BRN-thumb.jpg"
+  },
+
+  {
+    "id": "M-0003-TEM",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0003-TEM/",
+    "description": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0003-TEM//assets/img/shop/live/M-0003-TEM-thumb.jpg"
+  },
+
+  {
+    "id": "B-0002-BLK",
+    "name": "MD Bowl",
+    "price": 52,
+    "url": "https://www.redletterclay.com/products/B-0002-BLK/",
+    "description": "A medium wheel thrown bowl perfect for entrees. Dipped in a black glaze, with carvings decorating the outside providing a tactile experience and visual interest.",
+    "image": "https://www.redletterclay.com/products/B-0002-BLK//assets/img/shop/live/B-0002-BLK-thumb.jpg"
+  },
+
+  {
+    "id": "B-0003-COP",
+    "name": "MD Bowl",
+    "price": 52,
+    "url": "https://www.redletterclay.com/products/B-0003-COP/",
+    "description": "Wheel-thrown and perfectly sized for entrées or soups, this bowl includes handmade handles for comfortable, easy serving.",
+    "image": "https://www.redletterclay.com/products/B-0003-COP//assets/img/shop/live/B-0003-COP-thumb.jpg"
+  },
+
+  {
+    "id": "B-0004-COP",
+    "name": "SM Bowl",
+    "price": 42,
+    "url": "https://www.redletterclay.com/products/B-0004-COP/",
+    "description": "This small wheel-thrown bowl is ideal for ice cream, snacks, or rice, glazed in white and accented with a green copper wash along the rim.",
+    "image": "https://www.redletterclay.com/products/B-0004-COP//assets/img/shop/live/B-0004-COP-thumb.jpg"
+  },
+
+  {
+    "id": "C-0002-COP",
+    "name": "Cup",
+    "price": 40,
+    "url": "https://www.redletterclay.com/products/C-0002-COP/",
+    "description": "Glazed in a clean white finish and accented with a hand-brushed green copper wash around the rim, each cup carries subtle variation and depth. Wheel-thrown from durable stoneware, it’s made to be used daily — whether for drink or creative workspaces.",
+    "image": "https://www.redletterclay.com/products/C-0002-COP//assets/img/shop/live/C-0002-COP-thumb.jpg"
+  },
+
+  {
+    "id": "M-0004-COP",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0004-COP/",
+    "description": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0004-COP//assets/img/shop/live/M-0004-COP-thumb.jpg"
+  },
+
+  {
+    "id": "M-0013-COP",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0013-COP/",
+    "description": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0013-COP//assets/img/shop/live/M-0013-COP-thumb.jpg"
+  },
+
+  {
+    "id": "M-0018-COP",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0018-COP/",
+    "description": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0018-COP//assets/img/shop/live/M-0018-COP-thumb.jpg"
+  },
+
+  {
+    "id": "M-0016-WHT",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0016-WHT/",
+    "description": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0016-WHT//assets/img/shop/live/M-0016-WHT-thumb.jpg"
+  },
+
+  {
+    "id": "M-0017-WHT",
+    "name": "Mug",
+    "price": 50,
+    "url": "https://www.redletterclay.com/products/M-0017-WHT/",
+    "description": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.",
+    "image": "https://www.redletterclay.com/products/M-0017-WHT//assets/img/shop/live/M-0017-WHT-thumb.jpg"
+  },
+
+  {
+    "id": "P-0005-COP",
+    "name": "Cruet",
+    "price": 42,
+    "url": "https://www.redletterclay.com/products/P-0005-COP/",
+    "description": "A small bottle perfect for broth, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.",
+    "image": "https://www.redletterclay.com/products/P-0005-COP//assets/img/shop/live/P-0005-COP-thumb.jpg"
+  },
+
+  {
+    "id": "P-0006-COP",
+    "name": "Cruet",
+    "price": 42,
+    "url": "https://www.redletterclay.com/products/P-0006-COP/",
+    "description": "A small bottle perfect for broth, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.",
+    "image": "https://www.redletterclay.com/products/P-0006-COP//assets/img/shop/live/P-0006-COP-thumb.jpg"
+  },
+
+  {
+    "id": "P-0007-COP",
+    "name": "Cruet",
+    "price": 42,
+    "url": "https://www.redletterclay.com/products/P-0007-COP/",
+    "description": "A small bottle perfect for broth, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.",
+    "image": "https://www.redletterclay.com/products/P-0007-COP//assets/img/shop/live/P-0007-COP-thumb.jpg"
+  }
+
+]
