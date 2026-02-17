@@ -63,12 +63,10 @@
   // keep track of local pickup discount
   //
 
-  updateAttr();
   Snipcart.store.subscribe(updateAttr);
 
   function updateAttr() {
     const state = Snipcart.store.getState();
-    if (state.cart.status === 0) return;
     const items = state.cart.discounts.items;
     const hasLocalDiscount = items.some((d) => d.code === DISCOUNT_CODE);
     document.body.setAttribute(

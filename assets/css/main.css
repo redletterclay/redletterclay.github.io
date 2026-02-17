@@ -925,6 +925,14 @@ div#mc_embed_signup input {
   opacity: 1 !important; /* Optional: ensures it's solid white, not transparent */
 }
 
+body[data-local-pickup-discount=false] .price-local {
+  display: none;
+}
+
+body[data-local-pickup-discount=true] .price-ship {
+  display: none;
+}
+
 /* Remove gradient from glightbox description on mobile */
 @media (max-width: 768px) {
   .gslide-description,
@@ -1225,7 +1233,7 @@ div.tags .btn {
 }
 
 .upcoming-4 {
-  idth: 250px;
+  width: 250px;
 }
 
 .card, .event {
@@ -1751,11 +1759,12 @@ body[data-local-pickup-discount=false][data-local-pickup-zone=true]:not([data-lo
 }
 
 .local-pickup-banner {
-  background-color: #A73838;
+  background-color: #ad1d1d;
   color: #FFEEEF;
   padding: 0.6rem 0;
   font-size: 1.1rem;
   line-height: 1.4;
+  min-height: 54px;
 }
 
 .local-pickup-banner__inner {
@@ -1785,13 +1794,15 @@ body[data-local-pickup-discount=false][data-local-pickup-zone=true]:not([data-lo
 }
 
 .local-pickup-banner__btn {
-  font-family: "Bitter", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Mohave", -apple-system, BlinkMacSystemFont, Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 0.95rem;
   padding: 0.35rem 0.75rem;
+  padding-top: 0.5rem;
   border: none;
   border-radius: 2px;
   cursor: pointer;
   white-space: nowrap;
+  font-weight: 500;
 }
 
 .local-pickup-banner__btn--apply {
