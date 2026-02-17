@@ -158,29 +158,17 @@
       checkout.
     </p>
     <div class="local-pickup-banner__actions">
-      <button type="button" class="local-pickup-banner__btn local-pickup-banner__btn--apply" data-action="apply">
+      <button type="button" class="local-pickup-banner__btn local-pickup-banner__btn--apply" data-action="apply_local_pickup_discount">
         Apply 15% off
       </button>
-      <button type="button" class="local-pickup-banner__btn local-pickup-banner__btn--dismiss" data-action="dismiss"
+      <button type="button" class="local-pickup-banner__btn local-pickup-banner__btn--dismiss" data-action="dismiss_local_pickup_banner"
         aria-label="Dismiss banner">
         Dismiss
       </button>
     </div>
   </div>
 </div>
-<script>
-  (function () {
-    const banner = document.querySelector('.local-pickup-banner');
-    banner?.addEventListener('click', function (e) {
-      const btn = e.target.closest('[data-action]');
-      if (btn?.getAttribute('data-action') === 'apply') {
-        window.dispatchEvent(new CustomEvent('rlc.local_pickup_banner.apply_clicked'));
-      } else if (btn?.getAttribute('data-action') === 'dismiss') {
-        window.dispatchEvent(new CustomEvent('rlc.local_pickup_banner.dismiss_clicked'));
-      }
-    });
-  })();
-</script>
+
     <main class="overflow-x-hidden">
     
     

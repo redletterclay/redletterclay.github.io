@@ -46,13 +46,17 @@
     }
   } catch {}
 
-  window.addEventListener("rlc.local_pickup_banner.dismiss_clicked", () => {
-    document.body.setAttribute("data-local-pickup-dismissed", "true");
-    sessionStorage.setItem("rlc.local-pickup-dismissed", "true");
-  });
-
-  window.addEventListener("rlc.local_pickup_banner.apply_clicked", () => {
-    Snipcart.api.cart.applyDiscount(DISCOUNT_CODE);
+  document.addEventListener("click", function (e) {
+    const btn = e.target.closest("[data-action]");
+    switch (btn?.getAttribute("data-action")) {
+      case "apply_local_pickup_discount":
+        Snipcart.api.cart.applyDiscount(DISCOUNT_CODE);
+        break;
+      case "dismiss_local_pickup_banner":
+        document.body.setAttribute("data-local-pickup-dismissed", "true");
+        sessionStorage.setItem("rlc.local-pickup-dismissed", "true");
+        break;
+    }
   });
 
   //
@@ -67,7 +71,6 @@
     if (state.cart.status === 0) return;
     const items = state.cart.discounts.items;
     const hasLocalDiscount = items.some((d) => d.code === DISCOUNT_CODE);
-    console.log("hasLocalDiscount", hasLocalDiscount, state);
     document.body.setAttribute(
       "data-local-pickup-discount",
       hasLocalDiscount.toString(),
