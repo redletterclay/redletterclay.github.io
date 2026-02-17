@@ -718,6 +718,15 @@ div#mc_embed_signup input {
   opacity: 1 !important; /* Optional: ensures it's solid white, not transparent */
 }
 
+
+body[data-local-pickup-discount="false"] .price-local {
+  display: none;
+}
+body[data-local-pickup-discount="true"] .price-ship {
+  display: none;
+}
+
+
 /* Remove gradient from glightbox description on mobile */
 @media (max-width: 768px) {
   .gslide-description,
@@ -993,7 +1002,7 @@ div.tags .btn {
 .btn.animate__flipInX:nth-child(7) { animation-delay: 0.7s; }
 
 .upcoming-4 {
-  idth: 250px;
+  width: 250px;
 }
 
 .card, .event {
