@@ -2,7 +2,7 @@
 
 # hello is recipe's name
 build:
-  bash build.sh
+  bundle exec jekyll build
 
 serve:
   bundle exec jekyll serve
