@@ -42,7 +42,7 @@
                 {{ product.content | markdownify }}
             </p>
             <div class="hstack justify-content-between border-top-0 border-2 border px-3 pt-3">
-                <div>
+                <div class="animate__animated animate__flipInX animate__delay-1s">
                     <h4 class="text-start alt">{% if product.price-og %}<span
                             class="text-decoration-line-through opacity-50 fw-lighter">${{ product.price-og }}</span>
                         ${{ product.price }}{% else %}

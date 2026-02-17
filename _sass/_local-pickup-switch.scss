@@ -37,14 +37,14 @@
   }
 
   &:focus-visible {
-    outline: 2px solid #0d6efd;
+    outline: 2px solid #24A9CA;
     outline-offset: 2px;
   }
 }
 
 // ON: discount applied — knob right, active background
 body[data-local-pickup-discount="true"] .local-pickup-switch {
-  background-color: #0d6efd;
+  background-color: #24A9CA;
 
   &::after {
     transform: translateX(1.5em);

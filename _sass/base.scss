@@ -718,12 +718,15 @@ div#mc_embed_signup input {
   opacity: 1 !important; /* Optional: ensures it's solid white, not transparent */
 }
 
-
-body[data-local-pickup-discount="false"] .price-local {
+.price-local, .price-ship {
   display: none;
 }
+
+body[data-local-pickup-discount="false"] .price-local {
+  display: block;
+}
 body[data-local-pickup-discount="true"] .price-ship {
-  display: none;
+  display: block;
 }
 
 

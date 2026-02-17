@@ -22,10 +22,13 @@
           </div>
           {% for item in site.data.ecommerce limit:1 %}
             {% if site.data.ecommerce.live %}
-              <div class="d-flex align-items-center gap-2 animate__animated animate__flipInX cart-block">
-                <div class="form-check form-switch local-pickup-switch-wrapper mb-0 mt-1">
+              <div class="form-check form-switch local-pickup-switch-wrapper mb-0 mt-1">
+                <div class="vstack align-items-center">
+                  <h6 class="text-black">LOCAL PICK-UP</h6>
                   <button type="button" class="local-pickup-switch" role="switch" data-action="toggle_local_pickup_discount" aria-label="Local pickup 15% off"></button>
                 </div>
+              </div>
+              <div class="d-flex align-items-center gap-2 animate__animated animate__flipInX cart-block">
                 <button type="button" class="btn btn-cart bg-white position-relative snipcart-checkout mt-1">
                   <i class="fa-solid fa-bag-shopping text-black fs-1"></i>
                 </button>
