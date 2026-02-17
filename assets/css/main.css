@@ -1824,4 +1824,60 @@ body[data-local-pickup-discount=false][data-local-pickup-zone=true]:not([data-lo
   color: #ffffff;
 }
 
+.local-pickup-switch-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.local-pickup-switch {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  width: 3em;
+  height: 1.5em;
+  border-radius: 2em;
+  background-color: #dee2e6;
+  position: relative;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease-in-out;
+}
+.local-pickup-switch::after {
+  content: "";
+  position: absolute;
+  top: 0.25em;
+  left: 0.25em;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease-in-out;
+}
+.local-pickup-switch:focus-visible {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+body[data-local-pickup-discount=true] .local-pickup-switch {
+  background-color: #0d6efd;
+}
+body[data-local-pickup-discount=true] .local-pickup-switch::after {
+  transform: translateX(1.5em);
+}
+
+body[data-local-pickup-discount=false] .local-pickup-switch::after,
+body:not([data-local-pickup-discount]) .local-pickup-switch::after {
+  transform: translateX(0);
+}
+
+body[data-local-pickup-inflight=true] .local-pickup-switch,
+body:not([data-local-pickup-discount]) .local-pickup-switch {
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 /*# sourceMappingURL=main.css.map */

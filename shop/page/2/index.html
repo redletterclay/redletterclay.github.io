@@ -68,7 +68,7 @@
       <strong>15% off</strong> when you pick up in the Chicago area.
     </p>
     <div class="local-pickup-banner__actions">
-      <button type="button" class="local-pickup-banner__btn local-pickup-banner__btn--apply" data-action="apply_local_pickup_discount">
+      <button type="button" class="local-pickup-banner__btn local-pickup-banner__btn--apply" data-action="toggle_local_pickup_discount">
         Apply 15% off
       </button>
       <button type="button" class="local-pickup-banner__btn local-pickup-banner__btn--dismiss" data-action="dismiss_local_pickup_banner"
@@ -114,7 +114,10 @@
           </div>
           
             
-              <div class="d-block animate__animated animate__flipInX cart-block">
+              <div class="d-flex align-items-center gap-2 animate__animated animate__flipInX cart-block">
+                <div class="form-check form-switch local-pickup-switch-wrapper mb-0 mt-1">
+                  <button type="button" class="local-pickup-switch" role="switch" data-action="toggle_local_pickup_discount" aria-label="Local pickup 15% off"></button>
+                </div>
                 <button type="button" class="btn btn-cart bg-white position-relative snipcart-checkout mt-1">
                   <i class="fa-solid fa-bag-shopping text-black fs-1"></i>
                 </button>
