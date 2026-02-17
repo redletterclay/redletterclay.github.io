@@ -1,37 +1,62 @@
 {%- comment -%} Product Header {%- endcomment -%}
 {% assign weight_lb = page.weight-g | divided_by: 453.592 %}
-{% assign local_price = page.price | times: 0.85 | money %}
+{% assign calculated_price = page.price | times: 0.85 | round: 2 %}
+{% assign price_parts = calculated_price | split: '.' %}
+{% assign dollars = price_parts[0] %}
+{% assign cents = price_parts[1] | default: '00' %}
+
+{% if cents.size == 1 %}
+  {% assign cents = cents | append: '0' %}
+{% elsif cents.size == 0 %}
+  {% assign cents = '00' %}
+{% endif %}
+
+{% assign local_price = dollars | append: '.' | append: cents %}
 <div class="hstack align-items-start justify-content-between border-bottom-0 border-right-0 border border-2 pt-3 px-3">
   <div>
     <h2 class="fc-1 pe-2">{{ page.name }}</h2>
   </div>
+  {% if page.sale-price %}
   <div>
-    <h2 class="text-black text-end">${{ page.price }}
-      {% if page.sale-price %}
+    <h2 class="text-black text-end">
       <span class="text-decoration-line-through opacity-25 fw-light pe-3">${{ page.sale-price }}</span>
       <br><span class="text-start alt sale text-danger fs-4">
         <i class="fa-solid fa-certificate"></i> ON SALE
       </span>
-      {% endif %}
     </h2>
   </div>
+  {% endif %}
 </div>
-<div class="text-black text-end px-3 text-end eyebrow text-muted fc-6 opacity-75 pb-2 pb-md-0">LOCAL PICK-UP PRICE</div>
-<div class="hstack px-3 justify-content-end gap-0">
-  <h2 class="text-black text-end fs-3 text-muted opacity-75"><a alt="Local Price" aria-disabled="true"
-      data-bs-toggle="tooltip"
-      data-bs-title="Receive 15% off your order with local pick-up in Chicago."
-      class="text-muted"><i class="fa-solid fa-map-pin opacity-75"></i> ${{local_price}}</a></h2>
+<div class="hstack justify-content-between border-top-0 border-bottom-0 border-right-0 border border-2">
+    <div class="vstack">
+      <div class="px-3 text-start eyebrow fc-3 pb-2 pb-md-0 opacity-50"><a alt="Local Price" aria-disabled="true"
+            data-bs-toggle="tooltip" data-bs-title="Free Shipping to United States"><i class="fa-solid fa-truck-fast fc-1"></i> SHIPPED</a></div>
+      <div class="px-3 gap-0">
+        <h2 class="text-black fs-3"><a alt="Local Price" aria-disabled="true"
+            data-bs-toggle="tooltip" data-bs-title="Free Shipping to United States"> ${{page.price}}</a></h2>
+      </div>
+    </div>
+    <div class="vstack">
+      <div class="fc-3 text-end px-3 text-end eyebrow fc-6 pb-2 pb-md-0 opacity-50"><a alt="Local Price" aria-disabled="true"
+          data-bs-toggle="tooltip" data-bs-title="Receive 15% off your order with local pick-up in Chicago."><i class="fa-solid fa-map-pin fc-1"></i> LOCAL PICK-UP</a>
+    </div>
+    <div class="px-3 justify-content-end gap-0">
+      <h2 class="text-black text-end fs-3"><a alt="Local Price" aria-disabled="true"
+          data-bs-toggle="tooltip" data-bs-title="Receive 15% off your order with local pick-up in Chicago."> ${{local_price}}</a></h2>
+    </div>
+  </div>
 </div>
 
+
 {%- comment -%} Product Description {%- endcomment -%}
-<article class="ps-3">
+<article class="ps-3 pt-3">
   <p>{{ page.description }}</p>
   {% if page.description-2 %}
   <p>{{page.description-2}}</p>
   {% endif %}
   {% if page.process %}
-  <p class="text-end"><a href="{{page.process}}"><i class="fa-regular fa-circle-right pe-2"></i>Behind the making</a></p>
+  <p class="text-end"><a href="{{page.process}}"><i class="fa-regular fa-circle-right pe-2"></i>Behind the making</a>
+  </p>
   {% endif %}
 </article>
 

@@ -722,10 +722,10 @@ div#mc_embed_signup input {
   display: none;
 }
 
-body[data-local-pickup-discount="false"] .price-local {
+body[data-local-pickup-discount="true"] .price-local {
   display: block;
 }
-body[data-local-pickup-discount="true"] .price-ship {
+body[data-local-pickup-discount="false"] .price-ship {
   display: block;
 }
 
@@ -1048,11 +1048,45 @@ to {
     position: relative;
     overflow: hidden;
     border-radius: 12px;
-    min-height: 200px;
 }
 
 .card-body {
     overflow: hidden;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .card-details {
+    opacity: 1 !important;
+  }
+  
+  .card:hover .card-body img,
+  .card:active .card-body img {
+    transform: scale(1.05);
+  }
+  
+  .card:hover .card-details h4 i {
+    animation: none !important;
+  }
+}
+/* Larger tap targets on mobile */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 2rem;
+  }
+  
+  .product-thumb a {
+    display: block;
+    padding: 1rem;
+    margin: -1rem;
+  }
+}
+
+/* Visual feedback on tap */
+@media (hover: none) {
+  .card:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
 }
 
 .card-details {
