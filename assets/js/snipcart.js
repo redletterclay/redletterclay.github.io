@@ -18,24 +18,6 @@
     }),
   ]);
 
-  Snipcart.events.on("shipping.selected", (shippingMethod) => {
-    (async () => {
-      const isLocalPickup =
-        shippingMethod.method === "Local Pick-Up in Chicago";
-      if (isLocalPickup) {
-        console.log("Snipcart discount: applying");
-        await Snipcart.api.cart.applyDiscount(DISCOUNT_CODE);
-        console.log("Snipcart discount: applied");
-      } else {
-        console.log("Snipcart discount: removing");
-        await Snipcart.api.cart.removeDiscount(DISCOUNT_CODE);
-        console.log("Snipcart discount: removed");
-      }
-    })().catch((err) => {
-      console.warn("Snipcart discount update failed:", err);
-    });
-  });
-
   //
   // local pickup banner
   //
@@ -46,11 +28,27 @@
     }
   } catch {}
 
-  document.addEventListener("click", function (e) {
-    const btn = e.target.closest("[data-action]");
-    switch (btn?.getAttribute("data-action")) {
-      case "apply_local_pickup_discount":
-        Snipcart.api.cart.applyDiscount(DISCOUNT_CODE);
+  document.addEventListener("click", async (e) => {
+    switch (e.target.closest("[data-action]")?.getAttribute("data-action")) {
+      case "toggle_local_pickup_discount":
+        if (
+          document.body.getAttribute("data-local-pickup-inflight") === "true"
+        ) {
+          return;
+        }
+
+        document.body.setAttribute("data-local-pickup-inflight", "true");
+        try {
+          if (
+            document.body.getAttribute("data-local-pickup-discount") === "true"
+          ) {
+            await Snipcart.api.cart.removeDiscount(DISCOUNT_CODE);
+          } else {
+            await Snipcart.api.cart.applyDiscount(DISCOUNT_CODE);
+          }
+        } finally {
+          document.body.setAttribute("data-local-pickup-inflight", "false");
+        }
         break;
       case "dismiss_local_pickup_banner":
         document.body.setAttribute("data-local-pickup-dismissed", "true");
