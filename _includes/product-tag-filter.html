@@ -27,7 +27,7 @@
 </div>
 
 {%- comment -%} Mobile: Dropdown Menu {%- endcomment -%}
-<div class="d-md-none mb-5 animate__animated animate__fadeIn px-5 text-center pt-2">
+<div class="d-md-none pb-1 animate__animated animate__fadeIn px-5 text-center pt-2">
   <select class="form-select form-select-lg rounded-pill py-3 px-4 text-center btn-outline-primary" onchange="if (this.value) window.location.href=this.value">
     <option value="">Browse By {% if page.tag %}:{% assign tag_display = page.tag | join: "," | split: "," | first %} {{ tag_display | capitalize }}{% else %} ALL{% endif %}</option>
     <option value="/shop/">ALL</option>
