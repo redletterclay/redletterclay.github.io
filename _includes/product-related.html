@@ -1,74 +1,101 @@
 {% if page.related_products %}
 {% assign found_products = "" | split: "" %}
 {% for sku in page.related_products %}
-  {% for product in site.products %}
-    {% if product.sku == sku %}
-      {% assign found_products = found_products | push: product %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
+{% for product in site.products %}
+
+{% if product.sku == sku %}
+{% assign found_products = found_products | push: product %}
+{% break %}
+{% endif %}
 {% endfor %}
-  <div class="row">
+{% endfor %}
+<div class="row">
   {% if found_products.size > 0 %}
   <div class="d-md-flex align-items-center gap-4 mb-5">
-      <hr class="flex-grow-1 me-3 fc-1 border-2 animate__animated animate__zoomIn">
-      <h2 class="text-center fc-1 fw-semibold">Make It A Set</h2>
-      <hr class="flex-grow-1 me-3 fc-1 border-2 animate__animated animate__zoomIn">
-    </div>
-    <section class="related-products">
-      <div class="row">
-        {% for product in found_products %}
-        {% assign local_price = product.price | times: 0.85 | floor %}
-          <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
-              data-productId="{{product.sku}}">
-            <div class="card-header bg-white border border-0">
-              <div class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
-                <div>
-                  <h2 class="card-title fw-semibold ps-3 fc-1">
-                    <a href="{{ product.url }}">{{ product.name }}</a>
-                  </h2>
-                </div>
-                {% if product.sale %}
-                <div class="pe-3 text-end">
-                  <h3 class="text-start alt sale fc-1"><span class="text-black">SALE</span> <i class="fa-solid fa-certificate"></i></h3>
-                </div>
-                {% else %}
-                <div>
-                  <h5>&nbsp;</h5>
-                </div>
-                {% endif %}
-              </div>
-            </div>
-            <div class="card-body text-center border border-0">
-              <div class="product-thumb">
-                <div class="icon text-center fs-5 text-black fw-bold header-alt">
-                  <a href="{{ product.url }}"><span class="rounded-pill bg-white p-4"><i class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
-                </div>
-                <a href="{{ product.url }}"><img src="/assets/img/shop/live/{{ product.thumb }}" class="img-fluid{% if product.background %} rounded-4{% endif %}"></a>
-              </div>
-              <p>
-                {{ product.content | markdownify }}
-              </p>
-              <div class="hstack justify-content-between border-top-0 border-2 border px-3 pt-3">
-                  <h4 class="alt">{% if product.price-og %}<span class="text-decoration-line-through opacity-50 fw-lighter">${{ product.price-og }}</span> ${{ product.price }}{% else %}${{ product.price}}{%endif %} <a alt="Local Price" aria-disabled="true" data-bs-toggle="tooltip" data-bs-title="Illinois customers: choose Local Pick-Up and receive 15% off your order. The discount will be refunded after checkout." class="text-muted"><i class="fa-solid fa-map-pin opacity-50"></i> ${{local_price}}</a></h4>
-                <div class="d-inline-block card-details pe-5">
-                  <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="{{ product.url }}"
-                      data-item-id="{{product.sku}}" 
-                      data-item-url="{{site.url}}{{product.url}}"
-                      data-item-price="{{product.price}}" 
-                      data-item-description="{{product.description}}"
-                      data-item-image="{{site.url}}/assets/img/shop/live/{{product.thumb}}"
-                      data-item-name="{{product.name}}">
-                      <i class="fa-solid fa-tag"></i> Details
-                    </a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    </section>
-  {% endif %}
+    <hr class="flex-grow-1 me-3 fc-1 border-2 animate__animated animate__zoomIn">
+    <h2 class="text-center fc-1 fw-semibold">Make It A Set</h2>
+    <hr class="flex-grow-1 me-3 fc-1 border-2 animate__animated animate__zoomIn">
   </div>
+  <section class="related-products">
+    <div class="row">
+      {% for product in found_products %}
+      {% assign calculated_price = product.price | times: 0.85 | round: 2 %}
+{% assign price_parts = calculated_price | split: '.' %}
+{% assign dollars = price_parts[0] %}
+{% assign cents = price_parts[1] | default: '00' %}
+
+{% if cents.size == 1 %}
+{% assign cents = cents | append: '0' %}
+{% elsif cents.size == 0 %}
+{% assign cents = '00' %}
+{% endif %}
+{% assign local_price = dollars | append: '.' | append: cents %}
+      <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
+        data-productId="{{product.sku}}">
+        <div class="card-header bg-white border border-0">
+          <div
+            class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
+            <div>
+              <h2 class="card-title fw-semibold ps-3 fc-1">
+                <a href="{{ product.url }}">{{ product.name }}</a>
+              </h2>
+            </div>
+            {% if product.sale %}
+            <div class="pe-3 text-end">
+              <h3 class="text-start alt sale fc-1"><span class="text-black">SALE</span> <i
+                  class="fa-solid fa-certificate"></i></h3>
+            </div>
+            {% else %}
+            <div>
+              <h5>&nbsp;</h5>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        <div class="card-body text-center border border-0">
+          <div class="product-thumb">
+            <div class="icon text-center fs-5 text-black fw-bold header-alt">
+              <a href="{{ product.url }}"><span class="rounded-pill bg-white p-4"><i
+                    class="fa-solid fa-circle text-danger pe-2" aria-hidden="true"></i> SOLD!</span></a>
+            </div>
+            <a href="{{ product.url }}"><img src="/assets/img/shop/live/{{ product.thumb }}"
+                class="img-fluid{% if product.background %} rounded-4{% endif %}"></a>
+          </div>
+          <p>
+            {{ product.content | markdownify }}
+          </p>
+          <div class="hstack justify-content-between border-top-0 border-2 border px-3 pt-3">
+                <div class="animate__animated animate__flipInX animate__delay-1s">
+                    <h4 class="text-start alt">{% if product.price-og %}<span
+                            class="text-decoration-line-through opacity-50 fw-lighter">${{ product.price-og }}</span>
+                        ${{ product.price }}{% else %}
+                        <div class="price-ship"><a alt="Local Price" aria-disabled="true"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="Free Shipping to United States."
+                            >
+                            ${{ product.price}} <i class="fa-solid fa-truck-fast fc-7 opacity-50"></i></div>
+                        <div class="price-local">
+                            <a alt="Local Price" aria-disabled="true" data-bs-toggle="tooltip" data-bs-title="Receive 15% off your order with local pick-up in Chicago.">${{local_price}} <i class="fa-solid fa-map-pin fc-7 opacity-50"></i></a></span>
+                        {%endif %}
+                        </div>
+                    </h4>
+                </div>
+                <div class="d-inline-block card-details">
+                    <h4 class="text-end alt fw-normal text-uppercase fs-3"><a href="{{ product.url }}"
+                            data-item-id="{{product.sku}}" data-item-url="{{site.url}}{{product.url}}"
+                            data-item-price="{{product.price}}" data-item-description="{{product.description}}"
+                            data-item-image="{{site.url}}{{product.url}}/assets/img/shop/live/{{product.thumb}}"
+                            data-item-name="{{product.name}}">
+                            <i class="fa-solid fa-tag"></i> Details
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</div>
 {% endif %}

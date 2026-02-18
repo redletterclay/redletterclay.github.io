@@ -6,7 +6,18 @@
     {% assign sorted_products = paginator.posts %}
     {% endif %}
     {% for product in sorted_products %}
-    {% assign local_price = product.price | times: 0.85 | floor %}
+    {% assign calculated_price = product.price | times: 0.85 | round: 2 %}
+    {% assign price_parts = calculated_price | split: '.' %}
+    {% assign dollars = price_parts[0] %}
+    {% assign cents = price_parts[1] | default: '00' %}
+
+    {% if cents.size == 1 %}
+    {% assign cents = cents | append: '0' %}
+    {% elsif cents.size == 0 %}
+    {% assign cents = '00' %}
+    {% endif %}
+
+    {% assign local_price = dollars | append: '.' | append: cents %}
     <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
         data-productId="{{product.sku}}">
         <div class="card-header bg-white border border-0">
