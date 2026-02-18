@@ -1,4 +1,4 @@
-<div class="product-thumb">
+<div class="d-none d-sm-block product-thumb">
   <div class="icon text-center text-black fw-bold header-alt">
     <span class="rounded-pill bg-white p-4">
       <i class="fa-solid fa-circle text-danger" aria-hidden="true"></i> SOLD!
@@ -35,3 +35,30 @@
   </div>
   {% endif %}
 </div>
+{% assign carousel_images = "" | split: "" %}
+{% if page.image %}{% assign carousel_images = carousel_images | push: page.image %}{% endif %}
+{% if page.image-2 %}{% assign carousel_images = carousel_images | push: page.image-2 %}{% endif %}
+{% if page.image-3 %}{% assign carousel_images = carousel_images | push: page.image-3 %}{% endif %}
+{% if page.image-4 %}{% assign carousel_images = carousel_images | push: page.image-4 %}{% endif %}
+
+{% if carousel_images.size > 0 %}
+<div id="carouselExample" class="carousel slide d-block d-sm-none">
+  <div class="carousel-inner">
+    {% for img in carousel_images %}
+    <div class="carousel-item product-thumb{% if forloop.first %} active{% endif %}">
+      <img src="{{ img }}" class="d-block w-100" alt="Product image {{ forloop.index }}">
+    </div>
+    {% endfor %}
+  </div>
+  {% if carousel_images.size > 1 %}
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  {% endif %}
+</div>
+{% endif %}
