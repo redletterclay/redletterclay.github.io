@@ -1881,6 +1881,10 @@ body[data-local-pickup-discount=false][data-local-pickup-zone=true]:not([data-lo
   align-items: center;
 }
 
+.form-switch {
+  padding-left: 0 !important;
+}
+
 .local-pickup-switch {
   margin: 0;
   padding: 0;
