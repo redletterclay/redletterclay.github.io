@@ -777,6 +777,20 @@ input.email {
   transition: transform 1s ease;
 }
 
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23c12121'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23c12121'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 2rem;
+  opacity: 1;
+}
+
 .fade-in {
   animation: fadeIn;
   animation-duration: 2s;
@@ -1783,6 +1797,11 @@ div.tags .btn {
     transform: translateY(0);
   }
 }
+.banner-container {
+  min-height: 55px;
+  display: block;
+}
+
 .local-pickup-banner {
   display: none;
 }

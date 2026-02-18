@@ -71,25 +71,27 @@
 <script src="/assets/js/snipcart.js"></script>
 <script src="/assets/js/geolocation.js"></script>
 
-<div class="local-pickup-banner bg-red animate__animated animate__slideInDown" role="region" aria-label="Local pickup discount">
-  <div class="local-pickup-banner__inner">
-    <p class="local-pickup-banner__text">
-      <strong>15% off</strong> when you pick up in the Chicago area.
-    </p>
-    <div class="local-pickup-banner__actions">
-      <button type="button" class="local-pickup-banner__btn local-pickup-banner__btn--apply" data-action="toggle_local_pickup_discount">
-        Apply 15% off
-      </button>
-      <button type="button" class="local-pickup-banner__btn local-pickup-banner__btn--dismiss" data-action="dismiss_local_pickup_banner"
-        aria-label="Dismiss banner">
-        Dismiss
-      </button>
+<div class="container-fluid g-0 banner-container">
+  <div class="local-pickup-banner bg-red animate__animated animate__slideInDown" role="region" aria-label="Local pickup discount">
+    <div class="local-pickup-banner__inner">
+      <p class="local-pickup-banner__text">
+        <strong>15% off</strong> when you pick up in the Chicago area.
+      </p>
+      <div class="local-pickup-banner__actions">
+        <button type="button" class="local-pickup-banner__btn local-pickup-banner__btn--apply" data-action="toggle_local_pickup_discount">
+          Apply 15% off
+        </button>
+        <button type="button" class="local-pickup-banner__btn local-pickup-banner__btn--dismiss" data-action="dismiss_local_pickup_banner"
+          aria-label="Dismiss banner">
+          Dismiss
+        </button>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="container-fluid nav-stick sticky-top bg-white">
-  <nav class="navbar navbar-expand-xl">
+  <nav class="navbar navbar-expand-xl mb-4">
       <div class="container-fluid">
         <div class="d-inline-flex flex-fill align-items-center justify-content-between">
           <div class="pe-4 animate__animated animate__jackInTheBox animate__delay-0.5s">
@@ -498,7 +500,7 @@ Chicago, IL
               </div>
           </div>
           <div class="col-sm-12 col-md-5 text-center">
-            <div class="hstack justify-content-around flex-row-reverse mt-5 mt-md-0 pb-3">
+            <div class="hstack justify-content-between flex-row-reverse mt-5 mt-md-0 pb-3">
               <h3 class="fw-semibold"><a href="/frequently-asked-questions/">FAQ</a></h3>
               <h3 class="fw-semibold"><a href="/sales/">Sales + Returns</a></h3>
               <h3 class="fw-semibold"><a href="/contact/">Contact</a></h3>
