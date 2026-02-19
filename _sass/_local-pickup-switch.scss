@@ -1,7 +1,10 @@
 // Header local pickup switch (button styled as Bootstrap switch).
 // State is driven by body data attributes; no JS for visual state.
-
 .local-pickup-switch-wrapper {
+  display: none;
+}
+
+body[data-local-pickup-zone="true"] .local-pickup-switch-wrapper {
   display: inline-flex;
   align-items: center;
 }

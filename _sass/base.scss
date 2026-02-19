@@ -268,6 +268,11 @@ div.product-thumb[data-stock="0"] .icon, div.stockable[data-stock="0"] .icon {
   display: inline-block;
 }
 
+.price-placholder {
+  height: 45px;
+  width: 100%;
+  display: block;
+}
 
 .out-of-stock .product-thumb {
   position: relative;
