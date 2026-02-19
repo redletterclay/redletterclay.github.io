@@ -14,6 +14,7 @@ $color-theme-4: #FFEEEF;
 $color-theme-5: #FFCED1;
 $color-theme-6: #8C5C40;
 $color-theme-7: #A73838;
+$color-theme-8: #24A9CA;
 
 $navbar-padding-y: 20px;
 
@@ -250,6 +251,23 @@ background-image: url("data:image/svg+xml,%3Csvg width='32' height='26' viewBox=
 .border-thumb {
   border-color: $color-theme-1 !important;
 }
+
+div[data-stock="0"] button {
+  display: none;
+}
+
+div.product-thumb[data-stock="0"], div.stockable[data-stock="0"] {
+  position: relative;
+  display: inline-block;
+}
+div.product-thumb[data-stock="0"] img, div.stockable[data-stock="0"] img {
+  opacity: 0.6;
+}
+div.product-thumb[data-stock="0"] .icon, div.stockable[data-stock="0"] .icon {
+  padding: 1em;
+  display: block;
+}
+
 
 .out-of-stock .product-thumb {
   position: relative;
