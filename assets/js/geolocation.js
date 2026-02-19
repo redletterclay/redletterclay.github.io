@@ -1,5 +1,5 @@
 (async () => {
-  const LOCAL_ZONE_STATES = ["IL", "CA"];
+  const LOCAL_ZONE_STATES = ["IL", "CA", "NY"];
 
   await new Promise((resolve) => {
     if (document.body) {
