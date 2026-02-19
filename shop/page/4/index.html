@@ -249,7 +249,7 @@
 
     
     <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
-        data-productId="M-0004-COP">
+        data-product-id="M-0004-COP">
         <div class="card-header bg-white border border-0">
             <div
                 class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
@@ -316,7 +316,7 @@
 
     
     <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
-        data-productId="M-0013-COP">
+        data-product-id="M-0013-COP">
         <div class="card-header bg-white border border-0">
             <div
                 class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
@@ -383,7 +383,7 @@
 
     
     <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
-        data-productId="M-0018-COP">
+        data-product-id="M-0018-COP">
         <div class="card-header bg-white border border-0">
             <div
                 class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
@@ -450,7 +450,7 @@
 
     
     <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
-        data-productId="M-0016-WHT">
+        data-product-id="M-0016-WHT">
         <div class="card-header bg-white border border-0">
             <div
                 class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
@@ -517,7 +517,7 @@
 
     
     <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
-        data-productId="M-0017-WHT">
+        data-product-id="M-0017-WHT">
         <div class="card-header bg-white border border-0">
             <div
                 class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
@@ -584,7 +584,7 @@
 
     
     <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
-        data-productId="P-0005-COP">
+        data-product-id="P-0005-COP">
         <div class="card-header bg-white border border-0">
             <div
                 class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
@@ -651,7 +651,7 @@
 
     
     <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
-        data-productId="P-0006-COP">
+        data-product-id="P-0006-COP">
         <div class="card-header bg-white border border-0">
             <div
                 class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
@@ -718,7 +718,7 @@
 
     
     <div class="card col-sm-12 col-md-6 col-lg-4 border border-0 stockable mb-5 animate__animated animate__zoomIn"
-        data-productId="P-0007-COP">
+        data-product-id="P-0007-COP">
         <div class="card-header bg-white border border-0">
             <div
                 class="d-flex border-bottom-0 border-right-0 justify-content-between align-items-center border border-2 pt-2">
@@ -1129,42 +1129,7 @@ Chicago, IL
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript">
-          (async () => {
-            if (document.readyState === 'loading') {
-              await new Promise((resolve) =>
-                document.addEventListener('DOMContentLoaded', resolve),
-              );
-            }
-
-          const stockables = new Map(
-            [...document.getElementsByClassName('stockable')].map((stockable) => {
-              return [stockable.dataset.productid, stockable];
-            }),
-          );
-
-          let page = 1;
-          while (stockables.size > 0) {
-            const url = new URL('https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-02bd4a9b-cb71-49b3-966d-654becd1fccd/default/GetProducts');
-            url.searchParams.set('page', `${page}`);
-            const response = await fetch(url);
-            if (!response.ok) throw new Error(`Unexpected response status: ${response.status}`);
-            const body = await response.json();
-            for (const item of body.items) {
-              const { id, stock } = item;
-              const el = stockables.get(id);
-              if (el) {
-                if (stock === 0) el.classList.add('out-of-stock');
-                stockables.delete(id);
-              }
-            }
-            if (body.finished) break;
-            page += 1;
-          }
-          })().catch((err) => {
-            console.error({ err });
-          });
-  </script>
+  <script src="/assets/js/stock.js"></script>
   <script type="text/javascript">
     const lightbox = GLightbox({
       touchNavigation: true,
