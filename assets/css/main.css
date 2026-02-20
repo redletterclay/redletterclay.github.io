@@ -1964,4 +1964,16 @@ body:not([data-local-pickup-discount]) .local-pickup-switch {
   cursor: not-allowed;
 }
 
+.price-both, .price-shipped {
+  display: none;
+}
+
+body[data-local-pickup-zone=false] .price-shipped {
+  display: inline-block;
+}
+
+body[data-local-pickup-zone=true] .price-both {
+  display: flex;
+}
+
 /*# sourceMappingURL=main.css.map */
