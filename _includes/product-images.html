@@ -5,57 +5,116 @@
     </span>
   </div>
 
-  <a href="{{ page.image }}" class="img-fluid glightbox cursor-zoom" data-zoomable="true">
-    <img src="{{ page.image }}" class="img-fluid cursor-zoom rounded rounded-3" alt="{{ page.title }}">
+  <a
+    href="{{ page.image }}"
+    class="img-fluid glightbox cursor-zoom"
+    data-zoomable="true"
+  >
+    <img
+      src="{{ page.image }}"
+      class="img-fluid cursor-zoom rounded rounded-3"
+      alt="{{ page.title }}"
+    />
   </a>
 
-  {%- comment -%} Additional Images {%- endcomment -%}
-  {% if page.image-2 and page.image-3 %}
+  {%- comment -%} Additional Images {%- endcomment -%} {% if page.image-2 and
+  page.image-3 %}
   <div class="d-flex pt-3 gap-3">
-    <a href="{{ page.image-2 }}" class="img-fluid glightbox" data-zoomable="true">
-      <img src="{{ page.image-2 }}" class="img-fluid cursor-zoom rounded rounded-3" alt="{{ page.title }} - Image 2">
+    <a
+      href="{{ page.image-2 }}"
+      class="img-fluid glightbox"
+      data-zoomable="true"
+    >
+      <img
+        src="{{ page.image-2 }}"
+        class="img-fluid cursor-zoom rounded rounded-3"
+        alt="{{ page.title }} - Image 2"
+      />
     </a>
-    <a href="{{ page.image-3 }}" class="img-fluid glightbox" data-zoomable="true">
-      <img src="{{ page.image-3 }}" class="img-fluid cursor-zoom rounded rounded-3" alt="{{ page.title }} - Image 3">
+    <a
+      href="{{ page.image-3 }}"
+      class="img-fluid glightbox"
+      data-zoomable="true"
+    >
+      <img
+        src="{{ page.image-3 }}"
+        class="img-fluid cursor-zoom rounded rounded-3"
+        alt="{{ page.title }} - Image 3"
+      />
     </a>
   </div>
   {% elsif page.image-2 %}
   <div class="d-flex pt-4">
-    <a href="{{ page.image-2 }}" class="img-fluid glightbox" data-zoomable="true">
-      <img src="{{ page.image-2 }}" class="img-fluid cursor-zoom rounded rounded-3" alt="{{ page.title }} - Image 2">
+    <a
+      href="{{ page.image-2 }}"
+      class="img-fluid glightbox"
+      data-zoomable="true"
+    >
+      <img
+        src="{{ page.image-2 }}"
+        class="img-fluid cursor-zoom rounded rounded-3"
+        alt="{{ page.title }} - Image 2"
+      />
     </a>
   </div>
-  {% endif %}
-
-  {% if page.image-4 %}
+  {% endif %} {% if page.image-4 %}
   <div class="d-flex pt-3">
-    <a href="{{ page.image-4 }}" class="img-fluid glightbox" data-zoomable="true">
-      <img src="{{ page.image-4 }}" class="img-fluid cursor-zoom rounded rounded-3" alt="{{ page.title }} - Image 4">
+    <a
+      href="{{ page.image-4 }}"
+      class="img-fluid glightbox"
+      data-zoomable="true"
+    >
+      <img
+        src="{{ page.image-4 }}"
+        class="img-fluid cursor-zoom rounded rounded-3"
+        alt="{{ page.title }} - Image 4"
+      />
     </a>
   </div>
   {% endif %}
 </div>
-{% assign carousel_images = "" | split: "" %}
-{% if page.image %}{% assign carousel_images = carousel_images | push: page.image %}{% endif %}
-{% if page.image-2 %}{% assign carousel_images = carousel_images | push: page.image-2 %}{% endif %}
-{% if page.image-3 %}{% assign carousel_images = carousel_images | push: page.image-3 %}{% endif %}
-{% if page.image-4 %}{% assign carousel_images = carousel_images | push: page.image-4 %}{% endif %}
-
-{% if carousel_images.size > 0 %}
-<div id="carouselExample" class="carousel slide d-block d-sm-none">
+{% assign carousel_images = "" | split: "" %} {% if page.image %}{% assign
+carousel_images = carousel_images | push: page.image %}{% endif %} {% if
+page.image-2 %}{% assign carousel_images = carousel_images | push: page.image-2
+%}{% endif %} {% if page.image-3 %}{% assign carousel_images = carousel_images |
+push: page.image-3 %}{% endif %} {% if page.image-4 %}{% assign carousel_images
+= carousel_images | push: page.image-4 %}{% endif %} {% if carousel_images.size
+> 0 %}
+<div id="carouselExample" class="carousel slide d-block d-sm-none product-thumb" data-product-id="{{page.sku}}">
   <div class="carousel-inner">
     {% for img in carousel_images %}
-    <div class="carousel-item product-thumb{% if forloop.first %} active{% endif %}">
-      <img src="{{ img }}" class="d-block w-100" alt="Product image {{ forloop.index }}">
+    <div
+      class="carousel-item product-thumb{% if forloop.first %} active{% endif %}"
+    >
+    <div class="icon text-center text-black fw-bold header-alt">
+    <span class="rounded-pill bg-white p-4 fs-6">
+      <i class="fa-solid fa-circle text-danger" aria-hidden="true"></i> SOLD!
+    </span>
+    </div> 
+      <img
+        src="{{ img }}"
+        class="d-block w-100"
+        alt="Product image {{ forloop.index }}"
+      />
     </div>
     {% endfor %}
   </div>
   {% if carousel_images.size > 1 %}
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExample"
+    data-bs-slide="prev"
+  >
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExample"
+    data-bs-slide="next"
+  >
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
