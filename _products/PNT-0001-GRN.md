@@ -15,4 +15,8 @@ height: 4.25 inches
 weight-g: 587
 firing-method: ▵ 6 electric oxydation
 tag: [ plant ]
+related_products:
+ - "M-0007-GRN"
+ - "M-0026-GRN"
+ - "PNT-0002-GRN"
 ---

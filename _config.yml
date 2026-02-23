@@ -50,6 +50,8 @@ collections:
       - P-0002-BLU.md
       - B-0001-GRN.md
       - M-0001-GRN.md
+      - M-0027-GRN.md
+      - M-0028-GRN.md
       - M-0009-GRN.md
       - M-0015-GRN.md
       - M-0010-GRN.md
@@ -59,7 +61,10 @@ collections:
       - M-0020-GRN.md
       - M-0011-BLU.md
       - J-0003-BLU.md
+      - J-0005-PUR.md
       - M-0002-PUR.md
+      - M-0025-PUR.md
+      - M-0024-PUR.md
       - M-0005-PUR.md
       - M-0014-GRN.md
       - M-0021-GRN.md
@@ -67,6 +72,7 @@ collections:
       - M-0006-GRN.md
       - B-0006-PUR.md
       - M-0007-GRN.md
+      - M-0026-GRN.md
       - PNT-0001-GRN.md
       - J-0004-BLU.md
       - J-0002-BLU.md
@@ -75,7 +81,10 @@ collections:
       - C-0001-BRN.md
       - M-0012-BRN.md
       - M-0003-TEM.md
+      - T-0003-BLK.md
       - B-0002-BLK.md
+      - B-0007-BLK.md
+      - T-0004-COP.md
       - B-0003-COP.md
       - B-0004-COP.md
       - C-0002-COP.md
@@ -84,5 +93,6 @@ collections:
       - M-0018-COP.md
       - M-0016-WHT.md
       - M-0017-WHT.md
+      - M-0023-WHT.md
 
 destination: docs/
