@@ -19,9 +19,9 @@
     {% assign sorted_products = site.products | where: "featured", true | limit: 3 %}
     {% assign live_announcements = site.data.announcement | where: "live", true %}
     {% if live_announcements %}
-    <div class="row justify-content-center py-4 mt-md-0">
+    <div class="row justify-content-center px-3 px-lg-0 py-5 my-5 mt-md-0">
         <div class="col-12 col-lg-7">
-        {% include announcement.html %}
+            {% include announcement.html %}
         </div>
     </div>
     {% endif %}
