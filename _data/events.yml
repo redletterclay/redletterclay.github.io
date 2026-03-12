@@ -1,4 +1,28 @@
 - day: Sun
+  month: MAY
+  date: 31
+  time: 11AM-6PM
+  name: The Chicago Pottery Market
+  location: Wilderhouse
+  address: |
+   1339 N Damen Ave<br>
+   Chicago, IL 60607
+  map: https://maps.app.goo.gl/ZNpf2Dm1cszeLA3cA
+  year: 2026
+  upcoming: "yes"
+- day: Sat
+  month: MAY
+  date: 30
+  time: 11AM-6PM
+  name: The Chicago Pottery Market
+  location: Wilderhouse
+  address: |
+   1339 N Damen Ave<br>
+   Chicago, IL 60607
+  map: https://maps.app.goo.gl/ZNpf2Dm1cszeLA3cA
+  year: 2026
+  upcoming: "yes"
+- day: Sun
   month: DEC
   date: 14
   time: 5PM-11PM
@@ -9,7 +33,7 @@
    Chicago, IL 60607
   map: https://maps.app.goo.gl/GEGgrpWyuuVfQWyH9
   year: 2025
-  upcoming: "yes"
+  upcoming: "no"
 - day: Sat
   month: DEC
   date: 13
@@ -21,7 +45,7 @@
    Chicago, IL 60608
   map: https://maps.app.goo.gl/riSgCYyHTWwG1Kk18
   year: 2025
-  upcoming: "yes"
+  upcoming: "no"
 - day: Fri
   month: OCT
   date: 3

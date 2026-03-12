@@ -1,9 +1,9 @@
 - name: The Shop is Now Open!
   info: |
    <p>Handmade pots are available for purchase online and currently ship anywhere in the United States.</p>
-   <div class="hstack justify-content-between p-0 g-0">
-   <div class="text-start"><h3 class="fc-6 fs-4">Pick Up in Chicago for <span class="fw-bold">15% off</span><br></h3></div>
-   <div class="text-end"><h3 class="fc-6 fs-4 fw-bold">Free Shipping</h3></div>
+   <div class="row justify-content-between">
+   <div class="col-12 col-md-6"><h3 class="fc-6 fs-4">Pick Up in Chicago for <span class="fw-bold">15% off</span><br></h3></div>
+   <div class="col-12 col-md-6"><h3 class="fc-6 fs-4"><span class="fw-bold">Free Shipping</span> (USA)</h3></div>
    </div>
   live: true
   url: /shop/
