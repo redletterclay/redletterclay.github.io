@@ -70,10 +70,12 @@ collections:
       - M-0021-GRN.md
       - J-0001-GRN.md
       - M-0006-GRN.md
+      - B-0008-GRN.md
       - B-0006-PUR.md
       - M-0007-GRN.md
       - M-0026-GRN.md
       - PNT-0001-GRN.md
+      - PNT-0002-GRN.md
       - J-0004-BLU.md
       - J-0002-BLU.md
       - P-0003-BRN.md
@@ -81,9 +83,11 @@ collections:
       - C-0001-BRN.md
       - M-0012-BRN.md
       - M-0003-TEM.md
+      - M-0022-BLK.md
       - T-0003-BLK.md
       - B-0002-BLK.md
       - B-0007-BLK.md
+      - P-0005-COP.md
       - T-0004-COP.md
       - B-0003-COP.md
       - B-0004-COP.md
