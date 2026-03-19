@@ -253,9 +253,14 @@ async function PostNav({ post }: { post: Post }) {
 }
 
 export async function generateMetadata({ params: paramsPromise }: Args): Promise<Metadata> {
-  const { slug = '' } = await paramsPromise
+  const { category, slug = '' } = await paramsPromise
   const post = await queryPostBySlug({ slug: decodeURIComponent(slug) })
-  return generateMeta({ doc: post })
+  const thumb = post?.thumb && typeof post.thumb !== 'string' ? post.thumb : null
+  return generateMeta({
+    doc: post,
+    thumbImage: thumb as any,
+    url: `/journal/${category}/${slug}`,
+  })
 }
 
 const queryPostBySlug = cache(async ({ slug }: { slug: string }) => {

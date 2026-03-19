@@ -9,6 +9,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Stockists } from '@/components/Stockists'
 import { getServerSideURL } from '@/utilities/getURL'
+import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 import { ShopTagFilter } from '../../shop/ShopTagFilter'
 import { ProductAddToCart } from './ProductAddToCart.client'
 import { ProductImages } from './ProductImages.client'
@@ -386,16 +387,25 @@ export async function generateMetadata({ params: paramsPromise }: Args): Promise
   const product = result.docs?.[0] as any
   const firstImage = product?.images?.[0]?.image && typeof product.images[0].image !== 'string' ? product.images[0].image : null
   const thumb = product?.thumb && typeof product.thumb !== 'string' ? product.thumb : null
-  const ogImage = firstImage || thumb
+  const ogImageDoc = firstImage || thumb
+  const ogImageUrl = ogImageDoc
+    ? ((ogImageDoc as any).imagekitUrl || ogImageDoc.url || '').startsWith('http')
+      ? (ogImageDoc as any).imagekitUrl || ogImageDoc.url
+      : `https://www.redletterclay.com${ogImageDoc.url}`
+    : undefined
 
-  const pageTitle = product?.title || product?.name || 'Shop'
+  const pageTitle = product?.name || product?.title || 'Shop'
+  const description = firstParagraphText(product?.description) ?? ''
 
   return {
     title: pageTitle,
-    openGraph: {
+    description,
+    openGraph: mergeOpenGraph({
       title: pageTitle,
-      images: ogImage?.url ? [{ url: ogImage.url, alt: ogImage.alt || product.name || product.title }] : undefined,
-    },
+      description,
+      url: `/products/${sku}`,
+      images: ogImageUrl ? [{ url: ogImageUrl, alt: ogImageDoc?.alt || pageTitle }] : undefined,
+    }),
   }
 }
 

@@ -77,7 +77,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL(getServerSideURL()),
+  metadataBase: new URL('https://www.redletterclay.com'),
   title: {
     default: 'Handmade Pottery & Ceramics - Red Letter Clay by Davey Ball - Made in Chicago',
     template: '%s | Handmade Pottery & Ceramics - Red Letter Clay by Davey Ball - Made in Chicago',
