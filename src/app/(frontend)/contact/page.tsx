@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from 'next/types'
+import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 
 export const dynamic = 'force-static'
 
@@ -143,5 +144,6 @@ export function generateMetadata(): Metadata {
   return {
     title: 'Contact | Red Letter Clay',
     description: 'Get in touch with Davey Ball at Red Letter Clay. Questions about orders, local pickup in Chicago, or just want to say hello.',
+    openGraph: mergeOpenGraph({ title: 'Contact | Red Letter Clay', description: 'Get in touch with Davey Ball at Red Letter Clay. Questions about orders, local pickup in Chicago, or just want to say hello.', url: '/contact' }),
   }
 }

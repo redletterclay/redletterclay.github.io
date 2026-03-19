@@ -66,7 +66,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const postPages: MetadataRoute.Sitemap = postsResult.docs
     .filter((p: any) => p.slug && p.category)
     .map((p: any) => ({
-      url: `${BASE_URL}/${p.category}/${p.slug}/`,
+      url: `${BASE_URL}/journal/${p.category}/${p.slug}/`,
       lastModified: p.updatedAt ? new Date(p.updatedAt) : undefined,
     }))
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next/types'
+import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 
 export const dynamic = 'force-static'
 
@@ -94,5 +95,10 @@ export function generateMetadata(): Metadata {
   return {
     title: 'Sales & Return Policies | Red Letter Clay',
     description: 'Sales, return and exchange policies for Red Letter Clay handmade ceramics. Information on local pickup, shipping, and care for your pottery.',
+    openGraph: mergeOpenGraph({
+      title: 'Sales & Return Policies | Red Letter Clay',
+      description: 'Sales, return and exchange policies for Red Letter Clay handmade ceramics. Information on local pickup, shipping, and care for your pottery.',
+      url: '/sales',
+    }),
   }
 }

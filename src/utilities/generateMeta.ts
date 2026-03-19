@@ -27,8 +27,11 @@ export const generateMeta = async (args: {
   // Prefer explicit meta image, then post thumb, then default
   const ogImage = getImageURL(doc?.meta?.image || thumbImage || null)
 
-  const title = doc?.meta?.title || 'Red Letter Clay'
-  const description = doc?.meta?.description || ''
+  const docTitle = (doc as any)?.title || (doc as any)?.name || ''
+  const title = doc?.meta?.title || docTitle || 'Red Letter Clay'
+
+  const defaultDescription = 'Thoughtfully made ceramic mugs, bowls, vases & planters by Chicago artist Davey Ball. Unique stoneware pottery for everyday use. Shop online or visit at local markets.'
+  const description = doc?.meta?.description || defaultDescription
 
   return {
     description,

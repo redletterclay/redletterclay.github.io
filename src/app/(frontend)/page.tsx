@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from 'next'
+import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
@@ -291,4 +292,9 @@ export const metadata: Metadata = {
   title: 'Red Letter Clay — Handmade Ceramics in Chicago',
   description:
     'Handmade pottery by Davey Ball, made in Chicago. Shop mugs, bowls, vases and more.',
+  openGraph: mergeOpenGraph({
+    title: 'Red Letter Clay — Handmade Ceramics in Chicago',
+    description: 'Handmade pottery by Davey Ball, made in Chicago. Shop mugs, bowls, vases and more.',
+    url: '/',
+  }),
 }

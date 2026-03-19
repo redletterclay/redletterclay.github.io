@@ -1,4 +1,5 @@
 import type { Metadata } from 'next/types'
+import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 import Link from 'next/link'
@@ -82,5 +83,6 @@ export function generateMetadata(): Metadata {
   return {
     title: 'FAQ | Red Letter Clay',
     description: 'Frequently asked questions about Red Letter Clay pottery — shipping, local pickup in Chicago, care instructions, and more.',
+    openGraph: mergeOpenGraph({ title: 'FAQ | Red Letter Clay', description: 'Frequently asked questions about Red Letter Clay pottery — shipping, local pickup in Chicago, care instructions, and more.', url: '/faq' }),
   }
 }

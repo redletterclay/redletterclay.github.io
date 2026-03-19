@@ -1,4 +1,5 @@
 import type { Metadata } from 'next/types'
+import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
@@ -27,43 +28,101 @@ export default async function EventsPage() {
   const now = new Date()
   now.setHours(0, 0, 0, 0)
 
-  const upcoming = [...events.docs]
-    .filter((e: any) => new Date(e.startDate) >= now)
-    .reverse()
+  const upcoming = [...events.docs].filter((e: any) => new Date(e.startDate) >= now).reverse()
   const past = events.docs.filter((e: any) => new Date(e.startDate) < now)
 
   return (
     <main style={{ overflowX: 'hidden' }}>
       <div className="container-fluid" style={{ padding: '0 1.25rem', paddingTop: '1rem' }}>
-
         {/* Top two-column layout */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'stretch', gap: '1.5rem', marginBottom: '2rem' }}>
-
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'stretch',
+            gap: '1.5rem',
+            marginBottom: '2rem',
+          }}
+        >
           {/* Col 1 — market carousel */}
           <div className="events-col-image" style={{ flex: '1 1 300px' }}>
             <EventsCarousel />
           </div>
 
           {/* Col 2 — h1 + upcoming events */}
-          <div className="events-col-content" style={{ flex: '2 1 400px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <h1 className="animate__animated animate__slideInDown" style={{ textAlign: 'center', padding: '2rem 0 1rem' }}>
-              Exhibitions, Markets &amp; Pop-Ups
+          <div
+            className="events-col-content"
+            style={{
+              flex: '2 1 400px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+            }}
+          >
+            <h1
+              className="animate__animated animate__slideInDown"
+              style={{ textAlign: 'center', padding: '2rem 0 1rem' }}
+            >
+              Exhibitions &amp; Markets
             </h1>
-            <p className="animate__animated animate__fadeIn animate__delay-1s" style={{ textAlign: 'center', marginTop: '3rem', marginBottom: '1.25rem', padding: '0 3rem' }}>
-              I typically do 4-6 markets a year, mostly around Chicago.<br />The best way to know where I&apos;ll be next is to join the mailing list.
+            <p
+              className="animate__animated animate__fadeIn animate__delay-1s"
+              style={{
+                textAlign: 'center',
+                marginTop: '3rem',
+                marginBottom: '1.25rem',
+                padding: '0 3rem',
+              }}
+            >
+              I typically do 4-6 markets a year, mostly around Chicago.
+              <br />
+              The best way to know where I&apos;ll be next is to join the mailing list.
             </p>
-            <div className="animate__animated animate__flipInX animate__delay-1s" style={{ textAlign: 'center', padding: '3rem 0 5rem' }}>
+            <div
+              className="animate__animated animate__flipInX animate__delay-1s"
+              style={{ textAlign: 'center', padding: '3rem 0 5rem' }}
+            >
               <SubscribeButton />
             </div>
             {upcoming.length > 0 && (
-              <section className="animate__animated animate__fadeIn animate__delay-1s" style={{ marginBottom: '2rem' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                  <hr style={{ flex: 1, borderColor: '#ffe0e2', borderWidth: '1px', borderStyle: 'solid' }} className="animate__animated animate__zoomIn animate__delay-2s" />
+              <section
+                className="animate__animated animate__fadeIn animate__delay-1s"
+                style={{ marginBottom: '2rem' }}
+              >
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '1rem',
+                    marginBottom: '1.5rem',
+                  }}
+                >
+                  <hr
+                    style={{
+                      flex: 1,
+                      borderColor: '#ffe0e2',
+                      borderWidth: '1px',
+                      borderStyle: 'solid',
+                    }}
+                    className="animate__animated animate__zoomIn animate__delay-2s"
+                  />
                   <h2 style={{ margin: 0, whiteSpace: 'nowrap' }}>
-                    <i className="fa-solid fa-calendar-days fc-1" style={{ marginRight: '0.5rem' }} aria-hidden="true" />
+                    <i
+                      className="fa-solid fa-calendar-days fc-1"
+                      style={{ marginRight: '0.5rem' }}
+                      aria-hidden="true"
+                    />
                     Upcoming
                   </h2>
-                  <hr style={{ flex: 1, borderColor: '#ffe0e2', borderWidth: '1px', borderStyle: 'solid' }} className="animate__animated animate__zoomIn animate__delay-2s" />
+                  <hr
+                    style={{
+                      flex: 1,
+                      borderColor: '#ffe0e2',
+                      borderWidth: '1px',
+                      borderStyle: 'solid',
+                    }}
+                    className="animate__animated animate__zoomIn animate__delay-2s"
+                  />
                 </div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
                   {upcoming.map((event: any) => (
@@ -77,10 +136,28 @@ export default async function EventsPage() {
 
         {past.length > 0 && (
           <section style={{ paddingBottom: '2rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-              <hr style={{ flex: 1, borderColor: '#ffe0e2', borderWidth: '1px', borderStyle: 'solid' }} className="animate__animated animate__zoomIn" />
+            <div
+              style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}
+            >
+              <hr
+                style={{
+                  flex: 1,
+                  borderColor: '#ffe0e2',
+                  borderWidth: '1px',
+                  borderStyle: 'solid',
+                }}
+                className="animate__animated animate__zoomIn"
+              />
               <h2 style={{ margin: 0, whiteSpace: 'nowrap' }}>Past Events</h2>
-              <hr style={{ flex: 1, borderColor: '#ffe0e2', borderWidth: '1px', borderStyle: 'solid' }} className="animate__animated animate__zoomIn" />
+              <hr
+                style={{
+                  flex: 1,
+                  borderColor: '#ffe0e2',
+                  borderWidth: '1px',
+                  borderStyle: 'solid',
+                }}
+                className="animate__animated animate__zoomIn"
+              />
             </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
               {past.map((event: any) => (
@@ -106,10 +183,16 @@ export default async function EventsPage() {
   )
 }
 
-
 export function generateMetadata(): Metadata {
   return {
     title: 'Exhibitions, Markets & Pop-Ups | Red Letter Clay',
-    description: 'Find Red Letter Clay at upcoming and past ceramic markets, exhibitions and pop-up events in Chicago and beyond.',
+    description:
+      'Find Red Letter Clay at upcoming and past ceramic markets, exhibitions and pop-up events in Chicago and beyond.',
+    openGraph: mergeOpenGraph({
+      title: 'Exhibitions, Markets & Pop-Ups | Red Letter Clay',
+      description:
+        'Find Red Letter Clay at upcoming and past ceramic markets, exhibitions and pop-up events in Chicago and beyond.',
+      url: '/events',
+    }),
   }
 }

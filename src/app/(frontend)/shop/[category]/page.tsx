@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from 'next/types'
+import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
@@ -135,6 +136,11 @@ export async function generateMetadata({ params: paramsPromise }: Args): Promise
   return {
     title: `Shop ${category.charAt(0).toUpperCase() + category.slice(1)} | Red Letter Clay`,
     description: `Handmade ${category} ceramics by Davey Ball at Red Letter Clay — wheel-thrown stoneware made in Chicago. Free shipping to the United States.`,
+    openGraph: mergeOpenGraph({
+      title: `Shop ${category.charAt(0).toUpperCase() + category.slice(1)} | Red Letter Clay`,
+      description: `Handmade ${category} ceramics by Davey Ball at Red Letter Clay — wheel-thrown stoneware made in Chicago. Free shipping to the United States.`,
+      url: `/shop/${category}`,
+    }),
   }
 }
 

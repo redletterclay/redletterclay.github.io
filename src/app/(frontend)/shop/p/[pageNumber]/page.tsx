@@ -1,4 +1,5 @@
 import type { Metadata } from 'next/types'
+import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 import React from 'react'
@@ -56,7 +57,15 @@ export default async function ShopPageN({ params: paramsPromise }: Args) {
 
 export async function generateMetadata({ params: paramsPromise }: Args): Promise<Metadata> {
   const { pageNumber } = await paramsPromise
-  return { title: `Shop — Page ${pageNumber}` }
+  return {
+    title: `Shop — Page ${pageNumber}`,
+    description: 'Shop handmade stoneware pottery by Davey Ball — mugs, bowls, vases, planters and more. Made in Chicago. Free shipping to the United States.',
+    openGraph: mergeOpenGraph({
+      title: `Shop — Page ${pageNumber}`,
+      description: 'Shop handmade stoneware pottery by Davey Ball — mugs, bowls, vases, planters and more. Made in Chicago. Free shipping to the United States.',
+      url: `/shop/p/${pageNumber}`,
+    }),
+  }
 }
 
 export async function generateStaticParams() {

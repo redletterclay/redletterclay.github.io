@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from 'next/types'
+import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 import Link from 'next/link'
@@ -110,5 +111,6 @@ export function generateMetadata(): Metadata {
     title: 'About Davey Ball Chicago Potter & Ceramic Artist',
     description:
       'Meet Davey Ball, Chicago-based ceramic artist behind Red Letter Clay. Discover the story behind thoughtfully made pottery inspired by Japanese and mid-century ceramics.',
+    openGraph: mergeOpenGraph({ title: 'About Davey Ball Chicago Potter & Ceramic Artist', description: 'Meet Davey Ball, Chicago-based ceramic artist behind Red Letter Clay. Discover the story behind thoughtfully made pottery inspired by Japanese and mid-century ceramics.', url: '/about' }),
   }
 }

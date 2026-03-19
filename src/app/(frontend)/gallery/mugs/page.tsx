@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from 'next/types'
+import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 import GalleryClient from '../page.client'
 import { Last4Events } from '@/components/UpcomingEvents/Last4Events'
 import { GalleryFilter } from '../GalleryFilter'
@@ -76,5 +77,10 @@ export function generateMetadata(): Metadata {
   return {
     title: 'Mug Gallery | Red Letter Clay',
     description: 'Handmade ceramic mugs by Davey Ball at Red Letter Clay — wheel-thrown stoneware mugs made in Chicago.',
+    openGraph: mergeOpenGraph({
+      title: 'Mug Gallery | Red Letter Clay',
+      description: 'Handmade ceramic mugs by Davey Ball at Red Letter Clay — wheel-thrown stoneware mugs made in Chicago.',
+      url: '/gallery/mugs',
+    }),
   }
 }
