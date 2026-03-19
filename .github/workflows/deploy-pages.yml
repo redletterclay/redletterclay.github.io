@@ -14,9 +14,39 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+      DATABASE_URL: postgresql://payload:password@localhost:5432/payload
+      PAYLOAD_SECRET: ${{ secrets.PAYLOAD_SECRET }}
+      NEXT_PUBLIC_SERVER_URL: https://redletterclay.com
+      NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT: https://ik.imagekit.io/raygun
+      IMAGEKIT_PUBLIC_KEY: public_Q2fTsXleg/A7qsgEk8TmGXpmNho=
+      IMAGEKIT_PRIVATE_KEY: ${{ secrets.IMAGEKIT_PRIVATE_KEY }}
+      NEXT_PUBLIC_SNIPCART_API_KEY: N2M2YjYyZjYtNzI1Yy00YjgzLTgzNGQtOTYwNmVlNDNiZmM5NjM4MjA3MTM4MDAzMDcwNjM2
+
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: payload
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: payload
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Restore database snapshot
+        run: psql -h localhost -U payload -d payload < db/snapshot.sql
+        env:
+          PGPASSWORD: password
 
       - name: Set up Node
         uses: actions/setup-node@v4
