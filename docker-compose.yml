@@ -1,0 +1,36 @@
+name: redletterclay
+
+services:
+  app:
+    image: node:22-alpine
+    ports:
+      - "3000:3000"
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /Users/david/Sites/redletterclay.github.io:/jekyll-source:ro
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgresql://payload:password@db:5432/payload
+      - NODE_ENV=development
+    depends_on:
+      - db
+    command: sh -c "npm install && npm run dev"
+
+  db:
+    image: postgres:16
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: payload
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: payload
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  pg_data:
+    external: true
+    name: payload-site_pg_data

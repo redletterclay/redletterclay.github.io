@@ -1,0 +1,14 @@
+/**
+ * Formats an array of author name strings into a prettified string.
+ * @param authors - Array of author name strings.
+ * @returns A prettified string of authors.
+ */
+export const formatAuthors = (authors: Array<{ name?: string | null }>) => {
+  const authorNames = authors.map((author) => author.name).filter(Boolean) as string[]
+
+  if (authorNames.length === 0) return ''
+  if (authorNames.length === 1) return authorNames[0]
+  if (authorNames.length === 2) return `${authorNames[0]} and ${authorNames[1]}`
+
+  return `${authorNames.slice(0, -1).join(', ')} and ${authorNames[authorNames.length - 1]}`
+}
