@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 
-const LOCAL_ZONE_STATES = ['IL', 'CA', 'WI', 'IN', 'MI', 'IA']
+const LOCAL_ZONE_STATES = ['IL', 'WI', 'IN', 'MI', 'IA']
 const DISCOUNT_CODE = 'LOCALPICKUP15'
 
 function getStorageItemWithTtl(storage: Storage, key: string): string | null {
@@ -38,7 +38,12 @@ export function LocalPickupScript() {
           const data = await res.json()
           regionCode = data.region_code
           if (regionCode) {
-            setStorageItemWithTtl(localStorage, 'localPickupZoneRegionCode', regionCode, 10 * 60 * 1000)
+            setStorageItemWithTtl(
+              localStorage,
+              'localPickupZoneRegionCode',
+              regionCode,
+              10 * 60 * 1000,
+            )
           }
         } catch {}
       }
@@ -76,7 +81,9 @@ export function LocalPickupScript() {
         document.body.setAttribute('data-local-pickup-discount', hasDiscount.toString())
         if (hasDiscount) {
           document.body.removeAttribute('data-local-pickup-dismissed')
-          try { sessionStorage.removeItem('rlc.local-pickup-dismissed') } catch {}
+          try {
+            sessionStorage.removeItem('rlc.local-pickup-dismissed')
+          } catch {}
         }
       }
       w.Snipcart.store.subscribe(updateAttr)
@@ -101,7 +108,9 @@ export function LocalPickupScript() {
             break
           case 'dismiss_local_pickup_banner':
             document.body.setAttribute('data-local-pickup-dismissed', 'true')
-            try { sessionStorage.setItem('rlc.local-pickup-dismissed', 'true') } catch {}
+            try {
+              sessionStorage.setItem('rlc.local-pickup-dismissed', 'true')
+            } catch {}
             break
         }
       })
@@ -148,9 +157,23 @@ export function LocalPickupBanner() {
 
 export function LocalPickupToggle() {
   return (
-    <div className="local-pickup-switch-wrapper form-check form-switch" style={{ margin: 0, marginTop: '0.25rem', paddingRight: '1rem' }}>
+    <div
+      className="local-pickup-switch-wrapper form-check form-switch"
+      style={{ margin: 0, marginTop: '0.25rem', paddingRight: '1rem' }}
+    >
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <h6 className="local-pickup-label" style={{ color: 'black', margin: 0, marginBottom: '0.15rem', fontWeight: 500, fontSize: '0.65rem' }}>LOCAL PICK-UP</h6>
+        <h6
+          className="local-pickup-label"
+          style={{
+            color: 'black',
+            margin: 0,
+            marginBottom: '0.15rem',
+            fontWeight: 500,
+            fontSize: '0.65rem',
+          }}
+        >
+          LOCAL PICK-UP
+        </h6>
         <button
           type="button"
           className="local-pickup-switch"

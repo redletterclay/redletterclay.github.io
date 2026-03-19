@@ -3,7 +3,7 @@
 import Link from 'next/link'
 
 const JOURNAL_CATEGORIES = [
-  'exhibitions', 'inspiration', 'process', 'travel', 'video', 'workshops',
+  'exhibitions', 'process', 'travel', 'video', 'workshops',
 ] as const
 
 interface Props {

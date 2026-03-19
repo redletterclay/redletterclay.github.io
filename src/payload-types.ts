@@ -287,7 +287,7 @@ export interface Post {
       }[]
     | null;
   relatedPosts?: (number | Post)[] | null;
-  category?: ('exhibitions' | 'inspiration' | 'process' | 'travel' | 'video' | 'workshops') | null;
+  category?: ('exhibitions' | 'process' | 'travel' | 'video' | 'workshops') | null;
   meta?: {
     title?: string | null;
     description?: string | null;

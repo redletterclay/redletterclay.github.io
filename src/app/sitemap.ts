@@ -12,7 +12,6 @@ const BASE_URL = (process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.redlettercl
 const SHOP_TAGS = ['display', 'drink', 'eat', 'plant', 'pour', 'store']
 const JOURNAL_CATEGORIES = [
   'exhibitions',
-  'inspiration',
   'process',
   'travel',
   'updates',

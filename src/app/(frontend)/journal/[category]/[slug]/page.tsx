@@ -24,7 +24,7 @@ import { JournalCategoryFilter } from '../../JournalCategoryFilter'
 import { YouTubeFacade } from './YouTubeFacade.client'
 
 const JOURNAL_CATEGORIES = [
-  'exhibitions', 'inspiration', 'process', 'travel', 'video', 'workshops',
+  'exhibitions', 'process', 'travel', 'video', 'workshops',
 ] as const
 type JournalCategory = (typeof JOURNAL_CATEGORIES)[number]
 

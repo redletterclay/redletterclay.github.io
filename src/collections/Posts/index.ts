@@ -176,7 +176,6 @@ export const Posts: CollectionConfig<'posts'> = {
               type: 'select',
               options: [
                 'exhibitions',
-                'inspiration',
                 'process',
                 'travel',
                 'video',

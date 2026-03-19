@@ -36,7 +36,6 @@ const getPagesSitemap = unstable_cache(
     const staticPages = [
       '/journal',
       '/journal/exhibitions',
-      '/journal/inspiration',
       '/journal/process',
       '/journal/travel',
       '/journal/updates',

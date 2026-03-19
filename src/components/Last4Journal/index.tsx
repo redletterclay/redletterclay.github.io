@@ -27,7 +27,7 @@ export async function Last4Journal() {
           const thumb = post.thumb && typeof post.thumb !== 'string' ? post.thumb : null
           return (
             <div key={post.id} className="event-col">
-              <Link href={`/${post.category}/${post.slug}`}>
+              <Link href={`/journal/${post.category}/${post.slug}`}>
                 {thumb && (
                   <img
                     src={thumb.url}

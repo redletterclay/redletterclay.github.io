@@ -11,7 +11,7 @@ import { JournalCategoryFilter } from '../JournalCategoryFilter'
 export const revalidate = 600
 
 const JOURNAL_CATEGORIES = [
-  'exhibitions', 'inspiration', 'process', 'travel', 'video', 'workshops',
+  'exhibitions', 'process', 'travel', 'video', 'workshops',
 ] as const
 type JournalCategory = (typeof JOURNAL_CATEGORIES)[number]
 
