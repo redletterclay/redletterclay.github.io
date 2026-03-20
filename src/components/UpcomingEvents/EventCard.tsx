@@ -42,7 +42,7 @@ export function EventCard({ event, isUpcoming = false }: { event: any; isUpcomin
 
         {/* Row 4: YEAR | MAP */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-          <h3 style={{ margin: 0, fontWeight: 200, fontSize: '1.5rem', opacity: 0.5 }}>
+          <h3 style={{ margin: 0, fontWeight: 200, fontSize: '1.5rem', color: isUpcoming ? '#c12121' : '#8C5C40' }}>
             {year}
           </h3>
           {event.mapUrl && (
