@@ -1067,6 +1067,11 @@ div.stockable[data-stock="0"] .icon { padding: 1em; display: inline-block; }
 .out-of-stock .product-thumb img { opacity: 0.6; }
 .out-of-stock .product-thumb .icon { padding: 1em; display: block; }
 .out-of-stock div.add_cart { display: none; }
+.icon span { white-space: nowrap; max-width: 100%; box-sizing: border-box; display: inline-block; }
+@media (max-width: 768px) {
+  .icon { font-size: 0.85em; }
+  .icon span { padding: 0.5rem 0.75rem !important; }
+}
 
 /* GLightbox white overlay, no shadow/border on image */
 .goverlay { background: #fff !important; }
