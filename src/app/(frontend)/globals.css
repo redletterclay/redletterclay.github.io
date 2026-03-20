@@ -1086,6 +1086,7 @@ div.stockable[data-stock="0"] .icon { padding: 1em; display: inline-block; }
 .goverlay { background: #fff !important; }
 .gslide-image img { box-shadow: none !important; border: none !important; outline: none !important; }
 .glightbox-clean .gslide-media { -webkit-box-shadow: none !important; box-shadow: none !important; }
+.glightbox-mobile .glightbox-container .gslide-description { background: none !important; }
 @keyframes glightbox-slide-up {
   from { opacity: 0; transform: translateY(40px); }
   to   { opacity: 1; transform: translateY(0); }
