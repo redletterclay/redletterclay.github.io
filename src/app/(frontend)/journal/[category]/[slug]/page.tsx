@@ -18,6 +18,7 @@ import { LivePreviewListener } from '@/components/LivePreviewListener'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { marked } from 'marked'
+import RichText from '@/components/RichText'
 import { Last4Events } from '@/components/UpcomingEvents/Last4Events'
 import { JournalCategoryFilter } from '../../JournalCategoryFilter'
 import { YouTubeFacade } from './YouTubeFacade.client'
@@ -58,6 +59,7 @@ export default async function JournalPost({ params: paramsPromise }: Args) {
 
   const rawBody = (post as any).body as string | null
   const body = rawBody ? (marked(rawBody) as string) : null
+  const bodyRich = (post as any).bodyRich ?? null
   const gallery = (post as any).gallery as any[] | null
   const videoYoutube = (post as any).videoYoutube as string | null
   const videoThumb = (post as any).videoThumb
@@ -75,8 +77,16 @@ export default async function JournalPost({ params: paramsPromise }: Args) {
       {/* bg-red header */}
       <PostHero post={post} />
 
-      {/* Body content */}
-      {body && body.trim() && (
+      {/* Body content — bodyRich (Lexical) takes priority over legacy markdown body */}
+      {bodyRich ? (
+        <div className="container" style={{ paddingTop: '2.5rem', paddingBottom: '1rem' }}>
+          <div style={{ maxWidth: '48rem', margin: '0 auto' }}>
+            <div className="journal-body" style={{ fontFamily: 'var(--font-body)', fontSize: '1.4rem', lineHeight: '2.1rem' }}>
+              <RichText data={bodyRich} enableGutter={false} enableProse={false} />
+            </div>
+          </div>
+        </div>
+      ) : body && body.trim() ? (
         <div className="container" style={{ paddingTop: '2.5rem', paddingBottom: '1rem' }}>
           <div style={{ maxWidth: '48rem', margin: '0 auto' }}>
             <div
@@ -86,7 +96,7 @@ export default async function JournalPost({ params: paramsPromise }: Args) {
             />
           </div>
         </div>
-      )}
+      ) : null}
 
       {/* YouTube embed */}
       {videoYoutube && (

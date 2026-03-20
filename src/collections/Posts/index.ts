@@ -118,6 +118,24 @@ export const Posts: CollectionConfig<'posts'> = {
               },
             },
             {
+              name: 'bodyRich',
+              type: 'richText',
+              label: 'Body (Rich Text)',
+              editor: lexicalEditor({
+                features: ({ rootFeatures }) => [
+                  ...rootFeatures,
+                  HeadingFeature({ enabledHeadingSizes: ['h1', 'h2', 'h3', 'h4'] }),
+                  BlocksFeature({ blocks: [Banner, Code, MediaBlock] }),
+                  FixedToolbarFeature(),
+                  InlineToolbarFeature(),
+                  HorizontalRuleFeature(),
+                ],
+              }),
+              admin: {
+                description: 'Use this for new posts. If filled, this renders instead of the markdown Body field above.',
+              },
+            },
+            {
               name: 'videoYoutube',
               type: 'text',
               label: 'YouTube Video ID',

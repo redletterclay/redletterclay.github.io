@@ -266,6 +266,24 @@ export interface Post {
    */
   body?: string | null;
   /**
+   * Use this for new posts. If filled, this renders instead of the markdown Body field above.
+   */
+  bodyRich?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  /**
    * Optional. Paste just the video ID (e.g. dQw4w9WgXcQ), not the full URL. Renders full-width below the body.
    */
   videoYoutube?: string | null;
@@ -1349,6 +1367,7 @@ export interface PostsSelect<T extends boolean = true> {
   description?: T;
   descriptionTwo?: T;
   body?: T;
+  bodyRich?: T;
   videoYoutube?: T;
   videoThumb?: T;
   gallery?:
