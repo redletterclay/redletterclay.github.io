@@ -125,8 +125,8 @@ export default async function EventsPage() {
                   />
                 </div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-                  {upcoming.map((event: any) => (
-                    <EventCard key={event.id} event={event} isUpcoming={true} />
+                  {upcoming.map((event: any, i: number) => (
+                    <EventCard key={event.id} event={event} isUpcoming={true} scrollReveal delay={(i % 3) * 100} />
                   ))}
                 </div>
               </section>
@@ -160,8 +160,8 @@ export default async function EventsPage() {
               />
             </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-              {past.map((event: any) => (
-                <EventCard key={event.id} event={event} isUpcoming={false} />
+              {past.map((event: any, i: number) => (
+                <EventCard key={event.id} event={event} isUpcoming={false} scrollReveal delay={(i % 3) * 100} />
               ))}
             </div>
           </section>

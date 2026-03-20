@@ -1,9 +1,42 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect, useRef } from 'react'
 
 const MONTH_ABBR = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
 const DAY_ABBR = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
 
-export function EventCard({ event, isUpcoming = false }: { event: any; isUpcoming?: boolean }) {
+export function EventCard({
+  event,
+  isUpcoming = false,
+  scrollReveal = false,
+  delay = 0,
+}: {
+  event: any
+  isUpcoming?: boolean
+  scrollReveal?: boolean
+  delay?: number
+}) {
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!scrollReveal) return
+    const el = ref.current
+    if (!el) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => el.classList.add('scroll-reveal-visible'), delay)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.1 },
+    )
+
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [scrollReveal, delay])
+
   const d = new Date(event.startDate)
   const month = MONTH_ABBR[d.getUTCMonth()]
   const day = DAY_ABBR[d.getUTCDay()]
@@ -11,9 +44,9 @@ export function EventCard({ event, isUpcoming = false }: { event: any; isUpcomin
   const year = d.getUTCFullYear()
 
   return (
-    <div className="event-col">
+    <div ref={ref} className={`event-col${scrollReveal ? ' scroll-reveal' : ''}`}>
       <div
-        className="event animate__animated animate__zoomIn"
+        className="event"
         style={{ borderRadius: '1rem', border: '3px solid #dc3545', padding: '0.75rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', flex: 1 }}
       >
         {/* Row 1: DAY DATE MONTH | TIME */}

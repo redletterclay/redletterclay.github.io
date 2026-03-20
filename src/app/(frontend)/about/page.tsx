@@ -22,13 +22,13 @@ export default async function AboutPage() {
 
   return (
     <main style={{ overflowX: 'hidden' }}>
-      <div className="container-fluid" style={{ paddingLeft: '1rem', paddingRight: '1rem' }}>
+      <div className="container-fluid about-hero-container" style={{ paddingLeft: 0, paddingRight: '1rem' }}>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
 
           {/* Red statement column */}
           <div
             className="bg-red about-text-col"
-            style={{ flex: '1 1 300px', maxWidth: '58.33%', padding: '2rem 3rem 3rem' }}
+            style={{ flex: '1 1 300px', maxWidth: '58.33%', padding: '2rem 3rem 3rem 3rem' }}
           >
             <div className="statement-lead animate__animated animate__fadeIn">
               <h1 className="ital" style={{ marginBottom: '1.5rem', color: 'white' }}>Hi!</h1>
