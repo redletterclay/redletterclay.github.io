@@ -30,12 +30,47 @@ async function run() {
     console.warn(`Thumbnail not found: ${thumbPath}`)
   }
 
-  // Jekyll info HTML uses Bootstrap grid — convert to inline-flex equivalent
-  const info = `<p>Handmade pots are available for purchase online and currently ship anywhere in the United States.</p>
-<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:0.5rem;">
-  <h3 class="fc-6">Pick Up in Chicago for <strong>15% off</strong></h3>
-  <h3 class="fc-6"><strong>Free Shipping</strong> to USA</h3>
-</div>`
+  const info = {
+    root: {
+      type: 'root',
+      format: '',
+      indent: 0,
+      version: 1,
+      direction: 'ltr' as const,
+      children: [
+        {
+          type: 'paragraph',
+          format: '',
+          indent: 0,
+          version: 1,
+          direction: 'ltr' as const,
+          children: [
+            {
+              type: 'text',
+              format: 0,
+              version: 1,
+              text: 'Handmade pots are available for purchase online and currently ship anywhere in the United States.',
+              style: '',
+              mode: 'normal' as const,
+              detail: 0,
+            },
+          ],
+        },
+        {
+          type: 'paragraph',
+          format: '',
+          indent: 0,
+          version: 1,
+          direction: 'ltr' as const,
+          children: [
+            { type: 'text', format: 1, version: 1, text: 'Free Shipping', style: '', mode: 'normal' as const, detail: 0 },
+            { type: 'text', format: 0, version: 1, text: ' to USA  •  Pick Up in Chicago for ', style: '', mode: 'normal' as const, detail: 0 },
+            { type: 'text', format: 1, version: 1, text: '15% off', style: '', mode: 'normal' as const, detail: 0 },
+          ],
+        },
+      ],
+    },
+  }
 
   await payload.updateGlobal({
     slug: 'announcement',
