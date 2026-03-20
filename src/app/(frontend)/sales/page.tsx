@@ -22,7 +22,7 @@ export default function SalesPage() {
           </h1>
         </div>
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '3rem', paddingBottom: '4rem' }}>
+        <div className="two-col-layout" style={{ display: 'flex', flexWrap: 'wrap', gap: '3rem', paddingBottom: '4rem' }}>
 
           {/* Left: content */}
           <div className="animate__animated animate__fadeIn" style={{ flex: '1 1 300px', maxWidth: '58%', minWidth: 0 }}>
@@ -53,7 +53,7 @@ export default function SalesPage() {
               <a href="mailto:david@raygun.org?subject=Damaged Shipment">via email</a>{' '}
               and I will begin the claims process.
             </p>
-            <h3>USPS Proof of Damage Requirements</h3>
+            <h3 style={{ marginBottom: '1rem' }}>USPS Proof of Damage Requirements</h3>
             <ul>
               <li>Photos that clearly show the extent of damage will help with your case. For damaged claims, you&rsquo;ll also need to provide an estimate of the repair costs from a reputable dealer.</li>
               <li>Save the original packaging and everything in the package until your claim is settled.</li>

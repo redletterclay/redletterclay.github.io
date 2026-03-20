@@ -29,7 +29,7 @@ export default async function FaqPage() {
           </h1>
         </div>
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '3rem', paddingTop: '2rem', paddingBottom: '4rem' }}>
+        <div className="two-col-layout" style={{ display: 'flex', flexWrap: 'wrap', gap: '3rem', paddingTop: '2rem', paddingBottom: '4rem' }}>
 
           {/* Left: FAQ content */}
           <div className="animate__animated animate__fadeIn" style={{ flex: '1 1 300px', maxWidth: '58%', minWidth: 0 }}>

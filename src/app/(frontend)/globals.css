@@ -234,6 +234,8 @@ html[data-theme='light'] {
 
 /* ─── RLC Typography ─────────────────────────────────────────────────────── */
 
+li { margin-bottom: 0.5rem; }
+
 h1 {
   font-family: var(--font-heading);
   font-size: 4rem;
@@ -673,6 +675,11 @@ a.ul {
   border-width: 2px;
   box-shadow: rgba(10, 10, 10, .05) 0 1px 4px 0 inset;
 }
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: #c12121;
+  box-shadow: rgba(193, 33, 33, .15) 0 1px 6px 0 inset;
+}
 
 /* ─── Buttons ─────────────────────────────────────────────────────────────── */
 .btn {
@@ -841,6 +848,20 @@ a.ul {
 @media (max-width: 768px) {
   .card h2 { font-size: 1.6rem; line-height: 2rem; }
   .card { margin-bottom: 2rem; }
+  .card-details { display: none !important; }
+  .card-border-bottom { justify-content: center !important; }
+  .card-border-bottom h4 { text-align: center !important; }
+  .statement-col h2 { text-align: center; }
+  /* Footer */
+  .footer-occasional { display: none; }
+  .email-signup { text-align: center; }
+  .mlite { width: 100%; }
+  .mlite a { display: block; width: 100%; text-align: center; box-sizing: border-box; }
+  .footer-instagram { text-align: center !important; }
+  /* Two-col pages (contact, sales, faq) */
+  .two-col-layout > div { max-width: 100% !important; }
+  /* Shop + gallery selects */
+  .form-select { text-align: center; }
 }
 
 .card-details {

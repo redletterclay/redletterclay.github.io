@@ -19,7 +19,7 @@ export default function ContactPage() {
         {/* Two-col layout */}
         <div
           className="animate__animated animate__fadeIn"
-          style={{ display: 'flex', flexWrap: 'wrap', gap: '3rem', paddingTop: '2rem', paddingBottom: '2rem' }}
+          className="two-col-layout" style={{ display: 'flex', flexWrap: 'wrap', gap: '3rem', paddingTop: '2rem', paddingBottom: '2rem' }}
         >
           {/* Left: form */}
           <div style={{ flex: '1 1 300px', maxWidth: '58%', minWidth: 0 }}>

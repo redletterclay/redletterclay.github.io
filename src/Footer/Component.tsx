@@ -37,7 +37,7 @@ export async function Footer() {
             <div style={{ flex: '1 1 300px' }}>
               <article>
                 <h3 className="email-signup" style={{ color: 'white' }}>
-                  Sign up for occasional updates about future sales
+                  Sign up for <span className="footer-occasional">occasional </span>updates about future sales
                 </h3>
               </article>
               {latestNewsletter?.url && (
@@ -88,7 +88,7 @@ export async function Footer() {
                   <Link href="/contact" style={{ color: 'white' }}>Contact</Link>
                 </h3>
               </div>
-              <h3 style={{ fontWeight: 300, textAlign: 'right' }}>
+              <h3 className="footer-instagram" style={{ fontWeight: 300, textAlign: 'right' }}>
                 <a
                   href="https://www.instagram.com/red_letter_clay"
                   target="_blank"

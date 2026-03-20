@@ -19,9 +19,9 @@ export async function Last4Journal() {
 
   return (
     <div className="container-fluid" style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
-      <h3 className="fc-7" style={{ textAlign: 'center', paddingBottom: '1rem' }}>
+      <h2 className="fc-7" style={{ textAlign: 'center', paddingBottom: '1rem', fontWeight: 600, fontSize: '2.2rem', lineHeight: '3rem' }}>
         Latest Journal Entries
-      </h3>
+      </h2>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', justifyContent: 'center' }}>
         {result.docs.map((post: any) => {
           const thumb = post.thumb && typeof post.thumb !== 'string' ? post.thumb : null

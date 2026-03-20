@@ -49,7 +49,7 @@ export const RLCHeaderClient: React.FC = () => {
 
             {/* Left: stamp + brand */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}>
-              <Link href="/" className="nav-link-no-ul animate__animated animate__jackInTheBox animate__delay-1s" style={{ display: 'flex', alignItems: 'center' }}>
+              <Link key={pathname} href="/" className="nav-link-no-ul animate__animated animate__jackInTheBox animate__delay-1s" style={{ display: 'flex', alignItems: 'center' }}>
                 <Image
                   src="/assets/img/SVG/logo-stamp.svg"
                   alt=""
