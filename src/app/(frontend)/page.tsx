@@ -11,6 +11,7 @@ import { EventCard } from '@/components/UpcomingEvents/EventCard'
 import { ProductCard } from '@/components/ProductCard'
 import { ShopStockChecker } from './shop/ShopStockChecker.client'
 import { Last4Journal } from '@/components/Last4Journal'
+import RichText from '@/components/RichText'
 
 export const dynamic = 'force-static'
 export const revalidate = 600
@@ -83,9 +84,9 @@ export default async function HomePage() {
               <h1 className="ital" style={{ textAlign: 'center' }}>Welcome to</h1>
               <h1 className="rlc" style={{ textAlign: 'center' }}>Red Letter Clay</h1>
               <hr style={{ marginTop: '1rem', marginBottom: '1rem', width: '50%', marginInline: 'auto', borderTop: '2px solid #8C5C40', borderBottom: 'none', opacity: 1 }} />
-              <h2 style={{ paddingTop: '0.5rem', textAlign: 'center' }}>
+              <h4 style={{ paddingTop: '0.5rem', textAlign: 'center', fontSize: '1.4rem' }}>
                 Made in Chicago by <Link href="/about/">Davey Ball</Link>
-              </h2>
+              </h4>
             </div>
           </div>
         </div>
@@ -247,9 +248,9 @@ function AnnouncementBox({ announcement }: { announcement: any }) {
             flexWrap: 'wrap',
             alignItems: 'stretch',
             justifyContent: 'center',
-            borderLeft: '3px solid #dee2e6',
-            borderRight: '3px solid #dee2e6',
-            borderBottom: '3px solid #dee2e6',
+            borderLeft: '3px solid #c12121',
+            borderRight: '3px solid #c12121',
+            borderBottom: '3px solid #c12121',
           }}
         >
           <div
@@ -263,7 +264,7 @@ function AnnouncementBox({ announcement }: { announcement: any }) {
             }}
           >
             {announcement.info && (
-              <div dangerouslySetInnerHTML={{ __html: announcement.info }} />
+              <RichText data={announcement.info} enableGutter={false} enableProse={false} />
             )}
             {announcement.cta && (
               <h5 style={{ marginTop: '0.75rem', marginBottom: 0 }}>

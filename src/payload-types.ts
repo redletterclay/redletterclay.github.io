@@ -2005,7 +2005,21 @@ export interface Stockist {
 export interface Announcement {
   id: number;
   name?: string | null;
-  info?: string | null;
+  info?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   live?: boolean | null;
   url?: string | null;
   thumb?: (number | null) | Media;

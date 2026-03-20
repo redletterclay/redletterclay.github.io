@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict n3HWg0293jXxiG5KAcvqcjPiw4ISvPLdT8E2jGTuk9vYpBPfrOwhQln216cVjWy
+\restrict Zu2dARcegFvUXaDccXqqji1aWAUkgE9Zq7qvMgvn5b20C7qIwrtwjM6odR3KNCd
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -942,13 +942,13 @@ ALTER SEQUENCE public._posts_v_version_gallery_items_id_seq OWNED BY public._pos
 CREATE TABLE public.announcement (
     id integer NOT NULL,
     name character varying,
-    info character varying,
     live boolean DEFAULT false,
     url character varying,
     thumb_id integer,
     cta character varying,
     updated_at timestamp(3) with time zone,
-    created_at timestamp(3) with time zone
+    created_at timestamp(3) with time zone,
+    info jsonb
 );
 
 
@@ -3420,8 +3420,8 @@ COPY public._posts_v_version_gallery_items (_order, _parent_id, id, image_id, al
 -- Data for Name: announcement; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.announcement (id, name, info, live, url, thumb_id, cta, updated_at, created_at) FROM stdin;
-1	The Shop is Now Open!	<p>Handmade pots are available for purchase online and currently ship anywhere in the United States.</p>\n<div class="row justify-content-between">\n<div class="col-12 col-md-6"><h3 class="fc-6 fs-4">Pick Up in Chicago for <span class="fw-bold">15% off</span><br></h3></div>\n<div class="col-12 col-md-6"><h3 class="fc-6 fs-4"><span class="fw-bold">Free Shipping</span> (USA)</h3></div>\n</div>\n	t	/shop/	329	\N	2026-03-17 18:19:25.846+00	2026-03-17 18:19:25.846+00
+COPY public.announcement (id, name, live, url, thumb_id, cta, updated_at, created_at, info) FROM stdin;
+1	The Shop is Now Open!	t	/shop/	329	\N	2026-03-20 04:28:55.961+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Handmade pots are available for purchase online and currently ship anywhere in the United States.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"tag": "h3", "type": "heading", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Pick Up in Chicago for 15% off", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"tag": "h3", "type": "heading", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Free Shipping (USA)", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}], "direction": null}}
 \.
 
 
@@ -4338,7 +4338,11 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 6	20260318_191703	5	2026-03-18 19:17:08.293+00	2026-03-18 19:17:08.293+00
 2	20260317_061117	1	2026-03-17 06:12:15.302+00	2026-03-17 06:12:15.302+00
 5	20260318_181856	4	2026-03-18 18:25:43.589+00	2026-03-18 18:25:43.589+00
-1	dev	-1	2026-03-20 03:34:39.157+00	2026-03-16 16:07:06.694+00
+7	20260320_041255	6	2026-03-20 04:16:57.288+00	2026-03-20 04:16:57.288+00
+1	dev	-1	2026-03-20 04:18:11.116+00	2026-03-16 16:07:06.694+00
+8	20260317_180300	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
+9	20260318_161820	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
+10	20260320_033436	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 \.
 
 
@@ -5546,21 +5550,21 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 150, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 152, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 268, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 270, true);
 
 
 --
 -- Name: payload_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_migrations_id_seq', 6, true);
+SELECT pg_catalog.setval('public.payload_migrations_id_seq', 10, true);
 
 
 --
@@ -9418,5 +9422,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict n3HWg0293jXxiG5KAcvqcjPiw4ISvPLdT8E2jGTuk9vYpBPfrOwhQln216cVjWy
+\unrestrict Zu2dARcegFvUXaDccXqqji1aWAUkgE9Zq7qvMgvn5b20C7qIwrtwjM6odR3KNCd
 

@@ -34,7 +34,7 @@ async function run() {
   const info = `<p>Handmade pots are available for purchase online and currently ship anywhere in the United States.</p>
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:0.5rem;">
   <h3 class="fc-6">Pick Up in Chicago for <strong>15% off</strong></h3>
-  <h3 class="fc-6"><strong>Free Shipping</strong> (USA)</h3>
+  <h3 class="fc-6"><strong>Free Shipping</strong> to USA</h3>
 </div>`
 
   await payload.updateGlobal({
