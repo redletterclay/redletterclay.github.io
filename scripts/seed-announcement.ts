@@ -33,14 +33,14 @@ async function run() {
   const info = {
     root: {
       type: 'root',
-      format: '',
+      format: '' as const,
       indent: 0,
       version: 1,
       direction: 'ltr' as const,
       children: [
         {
           type: 'paragraph',
-          format: '',
+          format: '' as const,
           indent: 0,
           version: 1,
           direction: 'ltr' as const,
@@ -58,7 +58,7 @@ async function run() {
         },
         {
           type: 'paragraph',
-          format: '',
+          format: '' as const,
           indent: 0,
           version: 1,
           direction: 'ltr' as const,
