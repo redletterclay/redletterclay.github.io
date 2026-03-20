@@ -11,9 +11,8 @@ export function GLightboxInit() {
         ;(window as any).__lightbox = (window as any).GLightbox({
           touchNavigation: true,
           loop: true,
-          openEffect: 'bounce',
-          cssEfects: { bounce: { in: 'pulse', out: 'pulse' } },
-          closeEffect: 'none',
+          openEffect: 'fade',
+          closeEffect: 'fade',
           autoplayVideos: true,
         })
       }}

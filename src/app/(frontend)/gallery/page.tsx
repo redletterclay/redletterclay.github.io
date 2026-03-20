@@ -4,7 +4,6 @@ import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 import React from 'react'
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
-import GalleryClient from './page.client'
 import { Last4Events } from '@/components/UpcomingEvents/Last4Events'
 import { GalleryFilter } from './GalleryFilter'
 
@@ -17,8 +16,6 @@ export default async function GalleryPage() {
 
   return (
     <main style={{ overflowX: 'hidden' }}>
-      <GalleryClient />
-
       <div className="container-fluid animate__animated animate__fadeIn gallery-container" style={{ marginTop: '1rem' }}>
         <GalleryFilter active="gallery" />
 

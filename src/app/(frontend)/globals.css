@@ -1080,6 +1080,13 @@ div.stockable[data-stock="0"] .icon { padding: 1em; display: inline-block; }
 .goverlay { background: #fff !important; }
 .gslide-image img { box-shadow: none !important; border: none !important; outline: none !important; }
 .glightbox-clean .gslide-media { -webkit-box-shadow: none !important; box-shadow: none !important; }
+@keyframes glightbox-slide-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.glightbox-open .gcontainer {
+  animation: glightbox-slide-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
 
 /* ── Staggered animation delays (copied from Jekyll) ──────────────────────── */
 

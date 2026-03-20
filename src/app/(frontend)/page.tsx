@@ -60,8 +60,9 @@ export default async function HomePage() {
             style={{ flex: '1 1 400px', overflow: 'hidden' }}
           >
             <img
-              src="/assets/img/gallery/L1-teapot-side.jpg"
+              src="https://ik.imagekit.io/raygun/redletterclay/L1-teapot-side.jpg"
               alt="Teapot"
+              className="animate__animated animate__fadeIn"
               style={{ width: '100%', display: 'block', borderRadius: '0 0 1rem 0' }}
             />
           </div>

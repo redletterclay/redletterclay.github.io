@@ -19,7 +19,6 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { marked } from 'marked'
 import { Last4Events } from '@/components/UpcomingEvents/Last4Events'
-import { GLightboxInit } from '@/app/(frontend)/GLightboxInit.client'
 import { JournalCategoryFilter } from '../../JournalCategoryFilter'
 import { YouTubeFacade } from './YouTubeFacade.client'
 
@@ -66,7 +65,6 @@ export default async function JournalPost({ params: paramsPromise }: Args) {
   return (
     <article style={{ overflowX: 'hidden' }}>
       <PageClient />
-      <GLightboxInit />
       <PayloadRedirects disableNotFound url={url} />
       {draft && <LivePreviewListener />}
 

@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from 'next/types'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
-import GalleryClient from '../page.client'
 import { Last4Events } from '@/components/UpcomingEvents/Last4Events'
 import { GalleryFilter } from '../GalleryFilter'
 
@@ -34,8 +33,6 @@ const MUGS = [
 export default function MugsGalleryPage() {
   return (
     <main style={{ overflowX: 'hidden' }}>
-      <GalleryClient />
-
       <div className="container-fluid gallery-container" style={{ marginTop: '1.5rem' }}>
         {/* Gallery filter */}
         <GalleryFilter active="mugs" />

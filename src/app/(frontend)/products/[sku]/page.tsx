@@ -222,24 +222,24 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
                 {/* Food/dishwasher safe */}
                 {(product.foodSafe || product.dishwasherSafe) && (
                   <div style={{ paddingTop: '1rem' }}>
-                    <hr style={{ borderWidth: '2px', margin: '0 0.75rem 0.75rem', borderColor: '#FFCED1' }} />
+                    <hr style={{ borderWidth: '2px', margin: '0 0 0.75rem', borderColor: '#FFCED1' }} />
                     {product.foodSafe && (
-                      <div style={{ display: 'flex', justifyContent: 'flex-start', paddingBottom: '0.25rem' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingLeft: '0.75rem', paddingRight: '0.75rem', paddingBottom: '0.25rem' }}>
+                        <i className="fa-solid fa-utensils fc-1" aria-hidden="true" />
                         <h5 className="alt" style={{ textTransform: 'uppercase', margin: 0, color: '#6E4E3C' }}>
-                          <i className="fa-solid fa-utensils fc-1" style={{ marginRight: '0.5rem' }} aria-hidden="true" />
                           Food safe
                         </h5>
                       </div>
                     )}
                     {product.dishwasherSafe && (
-                      <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingLeft: '0.75rem', paddingRight: '0.75rem' }}>
+                        <i className="fa-solid fa-shield fc-1" aria-hidden="true" />
                         <h5 className="alt" style={{ textTransform: 'uppercase', margin: 0, color: '#6E4E3C' }}>
-                          <i className="fa-solid fa-shield fc-1" style={{ marginRight: '0.5rem' }} aria-hidden="true" />
                           Microwave and dishwasher safe
                         </h5>
                       </div>
                     )}
-                    <hr style={{ borderWidth: '2px', margin: '0.75rem 0.75rem 0', borderColor: '#FFCED1' }} />
+                    <hr style={{ borderWidth: '2px', margin: '0.75rem 0 0', borderColor: '#FFCED1' }} />
                   </div>
                 )}
 

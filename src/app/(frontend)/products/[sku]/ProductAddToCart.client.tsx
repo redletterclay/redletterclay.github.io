@@ -80,7 +80,7 @@ export function ProductAddToCart({ sku, price, name, imageUrl, description }: Pr
           </h5>
           <select
             className="form-select"
-            style={{ width: '80px', marginLeft: '0.75rem', border: '2px solid #6E4E3C', textAlign: 'center', color: '#6E4E3C', fontWeight: 600 }}
+            style={{ width: '80px', marginLeft: '0.75rem', border: '2px solid #FFCED1', textAlign: 'center', color: '#6E4E3C', fontWeight: 600 }}
             value={quantity}
             onChange={(e) => setQuantity(Number(e.target.value))}
           >
