@@ -684,6 +684,7 @@ a.ul {
 /* ─── Buttons ─────────────────────────────────────────────────────────────── */
 .btn {
   display: inline-block;
+  box-sizing: border-box;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;

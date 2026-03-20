@@ -224,7 +224,7 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
                   <div style={{ paddingTop: '1rem' }}>
                     <hr style={{ borderWidth: '2px', margin: '0 0.75rem 0.75rem', borderColor: '#FFCED1' }} />
                     {product.foodSafe && (
-                      <div style={{ display: 'flex', justifyContent: 'center', paddingBottom: '0.25rem' }}>
+                      <div style={{ display: 'flex', justifyContent: 'flex-start', paddingBottom: '0.25rem' }}>
                         <h5 className="alt" style={{ textTransform: 'uppercase', margin: 0, color: '#6E4E3C' }}>
                           <i className="fa-solid fa-utensils fc-1" style={{ marginRight: '0.5rem' }} aria-hidden="true" />
                           Food safe
@@ -232,7 +232,7 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
                       </div>
                     )}
                     {product.dishwasherSafe && (
-                      <div style={{ display: 'flex', justifyContent: 'center' }}>
+                      <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
                         <h5 className="alt" style={{ textTransform: 'uppercase', margin: 0, color: '#6E4E3C' }}>
                           <i className="fa-solid fa-shield fc-1" style={{ marginRight: '0.5rem' }} aria-hidden="true" />
                           Microwave and dishwasher safe
