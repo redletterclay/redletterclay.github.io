@@ -861,7 +861,9 @@ a.ul {
   /* Two-col pages (contact, sales, faq) */
   .two-col-layout > div { max-width: 100% !important; }
   /* Shop + gallery selects */
-  .form-select { text-align: center; }
+  .form-select { text-align: center; text-align-last: center; }
+  /* Ensure x-axis padding on content pages */
+  .container { padding-left: 1rem !important; padding-right: 1rem !important; }
 }
 
 .card-details {
