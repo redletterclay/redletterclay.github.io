@@ -17,17 +17,20 @@ import { imagekit, IMAGEKIT_FOLDER } from '../utilities/imagekit'
 let uploadQueue: Promise<void> = Promise.resolve()
 
 function queueUpload(task: () => Promise<void>): void {
-  uploadQueue = uploadQueue.then(() => task()).catch(() => {})
+  uploadQueue = uploadQueue
+    .then(() => new Promise<void>((r) => setTimeout(r, 500))) // brief gap between uploads
+    .then(() => task())
+    .catch(() => {})
 }
 
-async function uploadWithRetry(task: () => Promise<void>, retries = 3): Promise<void> {
+async function uploadWithRetry(task: () => Promise<void>, retries = 5): Promise<void> {
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
       await task()
       return
     } catch (err) {
       if (attempt === retries) throw err
-      await new Promise((r) => setTimeout(r, attempt * 1500))
+      await new Promise((r) => setTimeout(r, attempt * 2000))
     }
   }
 }

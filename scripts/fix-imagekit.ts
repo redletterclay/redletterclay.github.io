@@ -44,24 +44,28 @@ async function main() {
     const filename = (doc as any).filename as string
     if (!filename) continue
 
-    // Search for the file under jekyll-source
+    // Search for the file: check public/media first, then jekyll-source
     const candidates = [
+      path.join('/app/public/media', filename),
       path.join(JEKYLL_ROOT, 'assets/img', filename),
       path.join(JEKYLL_ROOT, 'assets/img/journal', filename),
       path.join(JEKYLL_ROOT, 'assets/img/shop/live', filename),
     ]
 
-    // Also try recursive find
     let found: string | null = null
     for (const p of candidates) {
       if (fs.existsSync(p)) { found = p; break }
     }
     if (!found) {
-      // Recursive search under jekyll-source
+      // Recursive search under public/media and jekyll-source
       try {
         const { execSync } = await import('child_process')
-        const result = execSync(`find ${JEKYLL_ROOT} -name "${filename}" 2>/dev/null | head -1`).toString().trim()
-        if (result) found = result
+        const r1 = execSync(`find /app/public/media -name "${filename}" 2>/dev/null | head -1`).toString().trim()
+        if (r1) { found = r1 }
+        else {
+          const r2 = execSync(`find ${JEKYLL_ROOT} -name "${filename}" 2>/dev/null | head -1`).toString().trim()
+          if (r2) found = r2
+        }
       } catch {}
     }
 
