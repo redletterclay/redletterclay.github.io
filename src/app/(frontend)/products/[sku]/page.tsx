@@ -394,7 +394,7 @@ export async function generateMetadata({ params: paramsPromise }: Args): Promise
       : `https://www.redletterclay.com${ogImageDoc.url}`
     : undefined
 
-  const pageTitle = product?.name || product?.title || 'Shop'
+  const pageTitle = product?.title || product?.name || 'Shop'
   const description = firstParagraphText(product?.description) ?? ''
 
   return {

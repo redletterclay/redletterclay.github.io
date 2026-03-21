@@ -13,6 +13,25 @@ import { anyone } from '../access/anyone'
 import { authenticated } from '../access/authenticated'
 import { imagekit, IMAGEKIT_FOLDER } from '../utilities/imagekit'
 
+// Serial upload queue — prevents ImageKit rate-limit errors on batch uploads
+let uploadQueue: Promise<void> = Promise.resolve()
+
+function queueUpload(task: () => Promise<void>): void {
+  uploadQueue = uploadQueue.then(() => task()).catch(() => {})
+}
+
+async function uploadWithRetry(task: () => Promise<void>, retries = 3): Promise<void> {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      await task()
+      return
+    } catch (err) {
+      if (attempt === retries) throw err
+      await new Promise((r) => setTimeout(r, attempt * 1500))
+    }
+  }
+}
+
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
@@ -48,10 +67,10 @@ export const Media: CollectionConfig = {
         const docMimeType = doc.mimeType
         const payload = req.payload
 
-        // Defer completely outside the current request/response cycle so the admin
-        // UI receives the media upload response before we do any further DB writes.
-        setTimeout(async () => {
-          try {
+        // Queue uploads serially so batch uploads don't hit ImageKit rate limits.
+        // Each upload retries up to 3 times with backoff before giving up.
+        queueUpload(() =>
+          uploadWithRetry(async () => {
             const { toFile } = await import('@imagekit/nodejs')
             const buffer = fs.readFileSync(filePath)
             const ikFile = await toFile(buffer, docFilename, { type: docMimeType })
@@ -61,18 +80,16 @@ export const Media: CollectionConfig = {
               folder: IMAGEKIT_FOLDER,
               useUniqueFileName: false,
             })
-            // Use db.updateOne without req so there's no shared transaction context
-            // and no Payload hook/event pipeline is triggered.
             await payload.db.updateOne({
               collection: 'media',
               id: docId,
               data: { imagekitUrl: ikResponse.url },
             })
             payload.logger.info(`ImageKit upload: ${ikResponse.url}`)
-          } catch (err) {
-            payload.logger.warn(`ImageKit upload failed for ${docFilename}: ${err}`)
-          }
-        }, 0)
+          }).catch((err) => {
+            payload.logger.warn(`ImageKit upload failed for ${docFilename} after retries: ${err}`)
+          }),
+        )
 
         return doc
       },
