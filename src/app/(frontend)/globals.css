@@ -1101,6 +1101,7 @@ div.stockable[data-stock="0"] .icon { padding: 1em; display: inline-block; }
 .gslide-image img { box-shadow: none !important; border: none !important; outline: none !important; }
 .glightbox-clean .gslide-media { -webkit-box-shadow: none !important; box-shadow: none !important; }
 .glightbox-mobile .glightbox-container .gslide-description { background: none !important; }
+.safe-and-amp { display: none; }
 /* Scroll-reveal fade-up */
 .scroll-reveal {
   opacity: 0;
@@ -1291,6 +1292,8 @@ div.tags .btn { --animate-duration: 600ms; }
 @media (max-width: 768px) {
   .pagination { flex-wrap: wrap; justify-content: center; }
   .page-link { font-size: 1.1rem; padding: 0.4rem 0.8rem; min-width: 40px; }
+  .safe-and-word { display: none; }
+  .safe-and-amp { display: inline; }
 }
 
 /* ─── Events ─────────────────────────────────────────────────────────────── */

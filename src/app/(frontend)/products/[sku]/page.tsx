@@ -224,18 +224,18 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
                   <div style={{ paddingTop: '1rem' }}>
                     <hr style={{ borderWidth: '2px', margin: '0 0 0.75rem', borderColor: '#FFCED1' }} />
                     {product.foodSafe && (
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingLeft: '0.75rem', paddingRight: '0.75rem', paddingBottom: '0.25rem' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingLeft: '0.75rem', paddingRight: '0.75rem', paddingBottom: '0.25rem', fontSize: '1.25rem' }}>
                         <i className="fa-solid fa-utensils fc-1" aria-hidden="true" />
-                        <h5 className="alt" style={{ textTransform: 'uppercase', margin: 0, color: '#6E4E3C' }}>
+                        <h5 className="alt" style={{ textTransform: 'uppercase', margin: 0, color: '#6E4E3C', fontSize: 'inherit' }}>
                           Food safe
                         </h5>
                       </div>
                     )}
                     {product.dishwasherSafe && (
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingLeft: '0.75rem', paddingRight: '0.75rem' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingLeft: '0.75rem', paddingRight: '0.75rem', fontSize: '1.25rem' }}>
                         <i className="fa-solid fa-shield fc-1" aria-hidden="true" />
-                        <h5 className="alt" style={{ textTransform: 'uppercase', margin: 0, color: '#6E4E3C' }}>
-                          Microwave and dishwasher safe
+                        <h5 className="alt" style={{ textTransform: 'uppercase', margin: 0, color: '#6E4E3C', fontSize: 'inherit' }}>
+                          Microwave <span className="safe-and-word">and</span><span className="safe-and-amp">&amp;</span> dishwasher safe
                         </h5>
                       </div>
                     )}
@@ -245,12 +245,12 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
 
                 <ul className="details">
                   {product.firingMethod && (
-                    <li style={{ display: 'flex', justifyContent: 'space-between', marginTop: '2rem' }}>
+                    <li style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '0.25rem', marginTop: '2rem' }}>
                       <span>
                         <i className="fa-solid fa-dungeon fc-7" style={{ marginRight: '0.5rem' }} aria-hidden="true" />
                         <span style={{ fontWeight: 400 }}>Firing Method</span>
                       </span>
-                      <span>{firingMethodLabels[product.firingMethod] ?? product.firingMethod}</span>
+                      <span style={{ textAlign: 'right', flexShrink: 0 }}>{firingMethodLabels[product.firingMethod] ?? product.firingMethod}</span>
                     </li>
                   )}
                   <li style={{ display: 'flex', justifyContent: 'space-between' }}>
