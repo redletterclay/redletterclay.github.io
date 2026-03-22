@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict YkMOEQRd9H15Sl5JBZkCxGdJoE1aIAuQg6OKiBDv3TpZSFrCuM8Vq8dUjwWd9vV
+\restrict chQFQXsuSngIWMuEYfqnarU6aAKZcppVE0Jrisqehvjzr5cWHl1IkuZJeEtbEsj
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -3636,14 +3636,15 @@ COPY public.gallery (id, updated_at, created_at) FROM stdin;
 
 COPY public.gallery_blocks_equal_row (_order, _parent_id, _path, id, block_name, image_fit) FROM stdin;
 2	1	rows	69b99b48aa9ac96a311211dd	\N	cover
-3	1	rows	69b99b48aa9ac96a311211e1	\N	cover
-4	1	rows	69b99b48aa9ac96a311211e4	\N	cover
-5	1	rows	69b99b48aa9ac96a311211e8	\N	cover
-6	1	rows	69b99b48aa9ac96a311211eb	\N	cover
-7	1	rows	69b99b48aa9ac96a311211ef	\N	cover
-8	1	rows	69b99b48aa9ac96a311211f3	\N	cover
-9	1	rows	69b99b48aa9ac96a311211f6	\N	cover
-10	1	rows	69b99b48aa9ac96a311211fa	\N	cover
+3	1	rows	69bf5a3ae2d1da234e7e6c30	\N	cover
+4	1	rows	69b99b48aa9ac96a311211e1	\N	cover
+5	1	rows	69b99b48aa9ac96a311211e4	\N	cover
+6	1	rows	69b99b48aa9ac96a311211e8	\N	cover
+7	1	rows	69b99b48aa9ac96a311211eb	\N	cover
+8	1	rows	69b99b48aa9ac96a311211ef	\N	cover
+9	1	rows	69b99b48aa9ac96a311211f3	\N	cover
+10	1	rows	69b99b48aa9ac96a311211f6	\N	cover
+11	1	rows	69b99b48aa9ac96a311211fa	\N	cover
 \.
 
 
@@ -3655,6 +3656,8 @@ COPY public.gallery_blocks_equal_row_items (_order, _parent_id, id, image_id, ti
 1	69b99b48aa9ac96a311211dd	69b99b48aa9ac96a311211da	333	Luminary with Washi Paper
 2	69b99b48aa9ac96a311211dd	69b99b48aa9ac96a311211db	308	Luminary Lit
 3	69b99b48aa9ac96a311211dd	69b99b48aa9ac96a311211dc	334	Luminary with Washi Paper
+1	69bf5a3ae2d1da234e7e6c30	69bf5a3ee2d1da234e7e6c32	372	Lidded Jar, Mug, Petal Trays
+2	69bf5a3ae2d1da234e7e6c30	69bf60f0e2d1da234e7e6c34	373	Lidded Jar, Bottle & Plate, Petal Tray
 1	69b99b48aa9ac96a311211e1	69b99b48aa9ac96a311211de	335	Canteen Vase
 2	69b99b48aa9ac96a311211e1	69b99b48aa9ac96a311211df	336	Canteen Vase
 3	69b99b48aa9ac96a311211e1	69b99b48aa9ac96a311211e0	337	Canteen Vase
@@ -4360,7 +4363,7 @@ COPY public.payload_locked_documents_rels (id, "order", parent_id, path, pages_i
 
 COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM stdin;
 3	20260317_155832	2	2026-03-17 16:08:56.588+00	2026-03-17 16:08:56.587+00
-1	dev	-1	2026-03-22 02:45:05.819+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-03-22 03:03:57.166+00	2026-03-16 16:07:06.694+00
 4	20260317_163359	3	2026-03-17 16:35:45.671+00	2026-03-17 16:35:45.67+00
 6	20260318_191703	5	2026-03-18 19:17:08.293+00	2026-03-18 19:17:08.293+00
 2	20260317_061117	1	2026-03-17 06:12:15.302+00	2026-03-17 06:12:15.302+00
@@ -4393,6 +4396,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 53	collection-products-70	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-22 02:40:08.361+00	2026-03-21 02:24:53.59+00
 14	collection-users	{}	2026-03-16 17:21:21.413+00	2026-03-16 17:21:21.413+00
 15	browse-by-folder	{}	2026-03-16 17:21:44.903+00	2026-03-16 17:21:44.903+00
+18	global-gallery	{"fields": {"rows": {"collapsed": ["69bf5a3ae2d1da234e7e6c30"]}}, "editViewType": "default"}	2026-03-22 03:26:14.835+00	2026-03-17 16:39:13.008+00
 3	collection-posts	{"limit": 10, "editViewType": "default"}	2026-03-16 18:17:09.442+00	2026-03-16 17:13:52.931+00
 12	collection-media	{"limit": 25, "editViewType": "default"}	2026-03-19 01:45:38.168+00	2026-03-16 17:20:25.569+00
 8	global-newsletter	{"fields": {"issues": {"collapsed": ["69b839aa6d92c3003142e83b", "69b839aa6d92c3003142e83c", "69b839aa6d92c3003142e83d", "69b839aa6d92c3003142e83e", "69b839aa6d92c3003142e83f"]}}, "editViewType": "default"}	2026-03-16 18:20:44.082+00	2026-03-16 17:16:11.257+00
@@ -4402,7 +4406,6 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 17	nav	{"open": true}	2026-03-17 16:35:48.642+00	2026-03-17 16:35:48.643+00
 26	collection-products-56	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 04:02:15.948+00	2026-03-19 00:19:14.941+00
 38	collection-products-17	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 04:04:22.349+00	2026-03-19 04:04:22.35+00
-18	global-gallery	{"fields": {"rows": {"collapsed": ["69b97ffffe7a631901c668d1", "69b97ffffe7a631901c668d5", "69b97ffffe7a631901c668d8", "69b97ffffe7a631901c668dc", "69b97ffffe7a631901c668df", "69b97ffffe7a631901c668e3", "69b97ffffe7a631901c668e7", "69b97ffffe7a631901c668ea", "69b97ffffe7a631901c668ee"]}}, "editViewType": "default"}	2026-03-17 16:39:29.492+00	2026-03-17 16:39:13.008+00
 19	global-faq	{"editViewType": "default"}	2026-03-17 20:18:36.242+00	2026-03-17 20:18:36.246+00
 30	collection-products-60	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 04:05:43.242+00	2026-03-19 01:20:03.815+00
 40	collection-products-32	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 04:17:10.312+00	2026-03-19 04:17:10.312+00
@@ -4458,6 +4461,7 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 187	\N	53	user	1
 22	\N	14	user	1
 23	\N	15	user	1
+188	\N	18	user	1
 93	\N	20	user	1
 26	\N	3	user	1
 30	\N	8	user	1
@@ -4467,7 +4471,6 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 41	\N	17	user	1
 104	\N	28	user	1
 105	\N	23	user	1
-44	\N	18	user	1
 45	\N	19	user	1
 106	\N	23	user	1
 107	\N	29	user	1
@@ -5635,14 +5638,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 180, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 183, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 325, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 328, true);
 
 
 --
@@ -5663,7 +5666,7 @@ SELECT pg_catalog.setval('public.payload_preferences_id_seq', 56, true);
 -- Name: payload_preferences_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 187, true);
+SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 188, true);
 
 
 --
@@ -9507,5 +9510,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict YkMOEQRd9H15Sl5JBZkCxGdJoE1aIAuQg6OKiBDv3TpZSFrCuM8Vq8dUjwWd9vV
+\unrestrict chQFQXsuSngIWMuEYfqnarU6aAKZcppVE0Jrisqehvjzr5cWHl1IkuZJeEtbEsj
 
