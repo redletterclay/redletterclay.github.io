@@ -174,7 +174,7 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
                     </h5>
                     <hr className="animate__animated animate__zoomIn opacity-60" style={{ flexGrow: 1, borderWidth: '1px', margin: 0 }} />
                   </div>
-                  <ul className="details">
+                  <ul className="details" style={{ marginTop: '1rem', marginBottom: 0 }}>
                     {product.holds && (
                       <li>
                         <i className="fa-solid fa-caret-right fc-7" style={{ marginRight: '0.5rem' }} aria-hidden="true" />
@@ -347,7 +347,7 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
 
       {/* Related products — "Make It A Set" */}
       {product.relatedProducts && product.relatedProducts.length > 0 && (
-        <div className="container" style={{ paddingTop: '1rem', paddingBottom: '2rem' }}>
+        <div className="container-fluid" style={{ paddingTop: '1rem', paddingBottom: '2rem' }}>
           <ShopStockChecker />
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
             <hr className="animate__animated animate__zoomIn opacity-60" style={{ flexGrow: 1, borderWidth: '1px', margin: 0 }} />
