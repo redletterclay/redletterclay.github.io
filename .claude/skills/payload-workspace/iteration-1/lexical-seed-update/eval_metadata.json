@@ -1,0 +1,6 @@
+{
+  "eval_id": 3,
+  "eval_name": "lexical-seed-update",
+  "prompt": "The Announcement global's `info` field was just changed from `textarea` to Lexical `richText`. Update the seed-announcement.ts script to match.",
+  "assertions": []
+}

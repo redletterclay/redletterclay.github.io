@@ -20,6 +20,7 @@ async function run() {
   await payload.updateGlobal({
     slug: 'links',
     data: { links },
+    overrideAccess: true,
     context: { disableRevalidate: true },
   })
 

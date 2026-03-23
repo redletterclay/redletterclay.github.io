@@ -63,9 +63,9 @@ async function run() {
           version: 1,
           direction: 'ltr' as const,
           children: [
-            { type: 'text', format: 1 as const, version: 1, text: 'Free Shipping', style: '', mode: 'normal' as const, detail: 0 },
+            { type: 'text', format: 1, version: 1, text: 'Free Shipping', style: '', mode: 'normal' as const, detail: 0 },
             { type: 'text', format: 0 as const, version: 1, text: ' to USA  •  Pick Up in Chicago for ', style: '', mode: 'normal' as const, detail: 0 },
-            { type: 'text', format: 1 as const, version: 1, text: '15% off', style: '', mode: 'normal' as const, detail: 0 },
+            { type: 'text', format: 1, version: 1, text: '15% off', style: '', mode: 'normal' as const, detail: 0 },
           ],
         },
       ],
@@ -74,7 +74,6 @@ async function run() {
 
   await payload.updateGlobal({
     slug: 'announcement',
-    overrideAccess: true,
     data: {
       name: 'The Shop is Now Open!',
       info,

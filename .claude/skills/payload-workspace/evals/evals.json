@@ -1,0 +1,11 @@
+{
+  "skill_name": "payload",
+  "evals": [
+    {
+      "id": 3,
+      "prompt": "The Announcement global's `info` field was just changed from `textarea` to Lexical `richText`. Update the seed-announcement.ts script to match.",
+      "expected_output": "Updated seed-announcement.ts using correct Lexical node structure with `as const` on format and direction fields",
+      "files": []
+    }
+  ]
+}
