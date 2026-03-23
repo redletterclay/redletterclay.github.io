@@ -27,7 +27,7 @@ export const Stockists: React.FC = async () => {
         }}
       >
         <div className="stockists-inner">
-          <h3 style={{ fontWeight: 500, textAlign: 'center' }}>
+          <h3 id="shop-in-person" style={{ fontWeight: 500, textAlign: 'center' }}>
             <i className="fa-solid fa-store fc-7" style={{ marginRight: '0.5rem' }} aria-hidden="true" />
             Shop In-Person
           </h3>

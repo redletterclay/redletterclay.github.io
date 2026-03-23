@@ -42,7 +42,7 @@ export default async function AboutPage() {
               </p>
               <p>
                 I sell at a{' '}
-                <Link href="/shop/">couple stores in the Chicago area</Link>, and you can find me at a few
+                <Link href="/shop/#shop-in-person">couple stores in the Chicago area</Link>, and you can find me at a few
                 markets in-person a few times a year. You can subscribe to my mailing list below for
                 occasional updates throughout the year.
               </p>
