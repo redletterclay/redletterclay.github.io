@@ -302,7 +302,7 @@ function AnnouncementBox({ announcement }: { announcement: any }) {
             borderRadius: '9999px 9999px 0 0',
           }}
         >
-          <h3 style={{ textAlign: 'center', margin: 0, color: 'white' }}>
+          <h3 style={{ textAlign: 'center', margin: 0, color: 'white', fontSize: '2rem' }}>
             <a
               href={announcement.url}
               style={{ fontWeight: 400, color: 'white', textDecoration: 'none' }}
