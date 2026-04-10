@@ -847,12 +847,6 @@ a.ul {
     flex: 0 0 100% !important;
   }
 }
-@media (min-width: 768px) {
-  .featured-products-grid {
-    padding-left: 3rem !important;
-    padding-right: 3rem !important;
-  }
-}
 
 /* ─── Cards ──────────────────────────────────────────────────────────────── */
 .card {

@@ -122,6 +122,7 @@ export interface Config {
     links: Link;
     newsletter: Newsletter;
     faq: Faq;
+    'collection-title': CollectionTitle;
   };
   globalsSelect: {
     header: HeaderSelect<false> | HeaderSelect<true>;
@@ -132,6 +133,7 @@ export interface Config {
     links: LinksSelect<false> | LinksSelect<true>;
     newsletter: NewsletterSelect<false> | NewsletterSelect<true>;
     faq: FaqSelect<false> | FaqSelect<true>;
+    'collection-title': CollectionTitleSelect<false> | CollectionTitleSelect<true>;
   };
   locale: null;
   widgets: {
@@ -2078,6 +2080,16 @@ export interface Faq {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "collection-title".
+ */
+export interface CollectionTitle {
+  id: number;
+  title?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "header_select".
  */
 export interface HeaderSelect<T extends boolean = true> {
@@ -2250,6 +2262,16 @@ export interface FaqSelect<T extends boolean = true> {
         answer?: T;
         id?: T;
       };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "collection-title_select".
+ */
+export interface CollectionTitleSelect<T extends boolean = true> {
+  title?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

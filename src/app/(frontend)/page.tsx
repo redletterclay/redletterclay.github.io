@@ -16,17 +16,16 @@ import RichText from '@/components/RichText'
 export const dynamic = 'force-static'
 export const revalidate = 600
 
-
 export default async function HomePage() {
   const payload = await getPayload({ config: configPromise })
 
-  const [featuredRes, announcementRes, eventsRes] = await Promise.all([
+  const [featuredRes, announcementRes, eventsRes, collectionTitleRes] = await Promise.all([
     payload.find({
       collection: 'products',
       depth: 1,
-      limit: 6,
+      limit: 0,
       overrideAccess: false,
-      sort: 'sku',
+      sort: '_order',
       where: { featured: { equals: true } },
     }),
     payload.findGlobal({ slug: 'announcement', depth: 1 }).catch(() => null),
@@ -37,11 +36,13 @@ export default async function HomePage() {
       overrideAccess: false,
       sort: '-startDate',
     }),
+    payload.findGlobal({ slug: 'collection-title', depth: 0 }).catch(() => null),
   ])
 
   const featured = featuredRes.docs
   const announcement = announcementRes as any
   const events = eventsRes.docs
+  const collectionTitle = (collectionTitleRes as any)?.title || null
 
   return (
     <main style={{ overflowX: 'hidden' }}>
@@ -56,10 +57,7 @@ export default async function HomePage() {
           }}
         >
           {/* Teapot image — hidden on mobile */}
-          <div
-            className="hero-teapot-col"
-            style={{ flex: '1 1 400px', overflow: 'hidden' }}
-          >
+          <div className="hero-teapot-col" style={{ flex: '1 1 400px', overflow: 'hidden' }}>
             <img
               src="https://ik.imagekit.io/raygun/redletterclay/L1-teapot-side.jpg"
               alt="Teapot"
@@ -73,17 +71,52 @@ export default async function HomePage() {
             {/* Ornaments */}
             <div
               className="ornament"
-              style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'center', marginBottom: '1rem', gap: '0.5rem' }}
+              style={{
+                display: 'flex',
+                alignItems: 'baseline',
+                justifyContent: 'center',
+                marginBottom: '1rem',
+                gap: '0.5rem',
+              }}
             >
-              <img src="https://ik.imagekit.io/raygun/redletterclay/Petal%20Left.png" alt="" style={{ width: 40 }} className="animate__animated animate__fadeInLeft" />
-              <img src="https://ik.imagekit.io/raygun/redletterclay/Petal%20Tall.png" alt="" style={{ width: 40, paddingBottom: '0.5rem' }} className="animate__animated animate__fadeInDown" />
-              <img src="https://ik.imagekit.io/raygun/redletterclay/Petal%20Right.png" alt="" style={{ width: 40 }} className="animate__animated animate__fadeInRight" />
+              <img
+                src="https://ik.imagekit.io/raygun/redletterclay/Petal%20Left.png"
+                alt=""
+                style={{ width: 40 }}
+                className="animate__animated animate__fadeInLeft"
+              />
+              <img
+                src="https://ik.imagekit.io/raygun/redletterclay/Petal%20Tall.png"
+                alt=""
+                style={{ width: 40, paddingBottom: '0.5rem' }}
+                className="animate__animated animate__fadeInDown"
+              />
+              <img
+                src="https://ik.imagekit.io/raygun/redletterclay/Petal%20Right.png"
+                alt=""
+                style={{ width: 40 }}
+                className="animate__animated animate__fadeInRight"
+              />
             </div>
 
             <div style={{ padding: '0 1.5rem' }}>
-              <h1 className="ital" style={{ textAlign: 'center' }}>Welcome to</h1>
-              <h1 className="rlc" style={{ textAlign: 'center' }}>Red Letter Clay</h1>
-              <hr style={{ marginTop: '1rem', marginBottom: '1rem', width: '50%', marginInline: 'auto', borderTop: '2px solid #8C5C40', borderBottom: 'none', opacity: 1 }} />
+              <h1 className="ital" style={{ textAlign: 'center' }}>
+                Welcome to
+              </h1>
+              <h1 className="rlc" style={{ textAlign: 'center' }}>
+                Red Letter Clay
+              </h1>
+              <hr
+                style={{
+                  marginTop: '1rem',
+                  marginBottom: '1rem',
+                  width: '50%',
+                  marginInline: 'auto',
+                  borderTop: '2px solid #8C5C40',
+                  borderBottom: 'none',
+                  opacity: 1,
+                }}
+              />
               <h4 style={{ paddingTop: '0.5rem', textAlign: 'center', fontSize: '1.4rem' }}>
                 Made in Chicago by <Link href="/about/">Davey Ball</Link>
               </h4>
@@ -116,18 +149,44 @@ export default async function HomePage() {
             paddingInline: '1.5rem',
           }}
         >
-          <hr style={{ flex: 1, borderColor: '#c12121', borderWidth: '2px', borderStyle: 'solid' }} className="animate__animated animate__zoomIn" />
+          <hr
+            style={{ flex: 1, borderColor: '#c12121', borderWidth: '2px', borderStyle: 'solid' }}
+            className="animate__animated animate__zoomIn"
+          />
           <Link
             href="/shop/"
             className="btn btn-outline-primary animate__animated animate__flipInX"
-            style={{ borderRadius: '9999px', padding: '0.5rem 2rem', textAlign: 'center', whiteSpace: 'nowrap' }}
+            style={{
+              borderRadius: '9999px',
+              padding: '0.5rem 2rem',
+              textAlign: 'center',
+              whiteSpace: 'nowrap',
+            }}
           >
-            <i className="fa-solid fa-cart-shopping fc-1 no-anim" style={{ marginRight: '0.5rem' }} aria-hidden="true" />
+            <i
+              className="fa-solid fa-cart-shopping fc-1 no-anim"
+              style={{ marginRight: '0.5rem' }}
+              aria-hidden="true"
+            />
             Shop{' '}
-            <i className="fa-solid fa-angles-right fc-7 slide" style={{ marginLeft: '0.5rem' }} aria-hidden="true" />
+            <i
+              className="fa-solid fa-angles-right fc-7 slide"
+              style={{ marginLeft: '0.5rem' }}
+              aria-hidden="true"
+            />
           </Link>
-          <hr style={{ flex: 1, borderColor: '#c12121', borderWidth: '2px', borderStyle: 'solid' }} className="animate__animated animate__zoomIn" />
+          <hr
+            style={{ flex: 1, borderColor: '#c12121', borderWidth: '2px', borderStyle: 'solid' }}
+            className="animate__animated animate__zoomIn"
+          />
         </div>
+
+        {/* Collection Title */}
+        {collectionTitle && (
+          <h2 className="fc-1" style={{ textAlign: 'center', paddingInline: '1rem', paddingBlock: '2rem' }}>
+            {collectionTitle}
+          </h2>
+        )}
 
         {/* Featured products */}
         {featured.length > 0 && (
@@ -174,23 +233,28 @@ export default async function HomePage() {
             <h2 style={{ color: 'white' }}>Crafted, Not Manufactured</h2>
             <p>
               My hope as a potter is to create pieces that make your daily ceremonies more special:
-              your morning cup of coffee, tending to your houseplants, or meals with family and friends.
-              I believe handmade pots enrich regular activities in our lives. You develop connections
-              with your objects through use. These moments of experiencing thoughtful intention connect
-              us beyond what a machine or mold could provide.
+              your morning cup of coffee, tending to your houseplants, or meals with family and
+              friends. I believe handmade pots enrich regular activities in our lives. You develop
+              connections with your objects through use. These moments of experiencing thoughtful
+              intention connect us beyond what a machine or mold could provide.
             </p>
             <p>
-              It&rsquo;s not just potters who keep handmade ceramics alive, it&rsquo;s the people who
-              use and enjoy them too. And for that, I would like to thank{' '}
+              It&rsquo;s not just potters who keep handmade ceramics alive, it&rsquo;s the people
+              who use and enjoy them too. And for that, I would like to thank{' '}
               <em style={{ fontStyle: 'italic', fontWeight: 300 }}>you</em> for checking out my work
               and supporting my craft. &mdash;{' '}
-              <Link href="/about/" style={{ color: '#FFCED1' }}>Davey</Link>
+              <Link href="/about/" style={{ color: '#FFCED1' }}>
+                Davey
+              </Link>
             </p>
           </div>
         </div>
 
         {/* Carousel column */}
-        <div className="carousel-col" style={{ flex: '1 1 300px', maxWidth: '41.66%', padding: '0 3rem' }}>
+        <div
+          className="carousel-col"
+          style={{ flex: '1 1 300px', maxWidth: '41.66%', padding: '0 3rem' }}
+        >
           <HomeCarousel />
         </div>
       </div>
@@ -232,10 +296,17 @@ function AnnouncementBox({ announcement }: { announcement: any }) {
         {/* Header */}
         <div
           className="bg-red-alt"
-          style={{ padding: '1rem 1.5rem 0.5rem', width: '100%', borderRadius: '9999px 9999px 0 0' }}
+          style={{
+            padding: '1rem 1.5rem 0.5rem',
+            width: '100%',
+            borderRadius: '9999px 9999px 0 0',
+          }}
         >
           <h3 style={{ textAlign: 'center', margin: 0, color: 'white' }}>
-            <a href={announcement.url} style={{ fontWeight: 400, color: 'white', textDecoration: 'none' }}>
+            <a
+              href={announcement.url}
+              style={{ fontWeight: 400, color: 'white', textDecoration: 'none' }}
+            >
               {announcement.name}
             </a>
           </h3>
@@ -289,14 +360,13 @@ function AnnouncementBox({ announcement }: { announcement: any }) {
   )
 }
 
-
 export const metadata: Metadata = {
   title: 'Red Letter Clay — Handmade Ceramics in Chicago',
-  description:
-    'Handmade pottery by Davey Ball, made in Chicago. Shop mugs, bowls, vases and more.',
+  description: 'Handmade pottery by Davey Ball, made in Chicago. Shop mugs, bowls, vases and more.',
   openGraph: mergeOpenGraph({
     title: 'Red Letter Clay — Handmade Ceramics in Chicago',
-    description: 'Handmade pottery by Davey Ball, made in Chicago. Shop mugs, bowls, vases and more.',
+    description:
+      'Handmade pottery by Davey Ball, made in Chicago. Shop mugs, bowls, vases and more.',
     url: '/',
   }),
 }
