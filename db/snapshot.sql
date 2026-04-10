@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict LIOTGaUEPKghlOUEbFrDp7ghq7rN80cnF3VbAhc65S3XA4W5RVR9eeTBgVwxK5a
+\restrict Bh8J1C3zOM0PeoGsTnhzqTTsfKGDgDWQX3yDlVVUIrRipTGbzcpW5xZI9a1ssPd
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -3460,7 +3460,7 @@ COPY public._posts_v_version_gallery_items (_order, _parent_id, id, image_id, al
 --
 
 COPY public.announcement (id, name, live, url, thumb_id, cta, updated_at, created_at, info) FROM stdin;
-1	The Shop is Now Open!	t	/shop/	329	\N	2026-03-20 04:58:38.518+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Handmade pots are available for purchase online and currently ship anywhere in the United States.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"tag": "h3", "type": "heading", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Pick Up in Chicago for 15% off", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"tag": "h3", "type": "heading", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Free Shipping (USA)", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}], "direction": null}}
+1	Moms Love Pottery	t	/shop/	475	\N	2026-04-10 17:28:56.115+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Order by May 1st to ensure your gift arrives in time for Mother's Day!", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"tag": "h3", "type": "heading", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Pick Up in Chicago for 15% off", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"tag": "h3", "type": "heading", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Free Shipping (USA)", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}], "direction": null}}
 \.
 
 
@@ -4466,7 +4466,7 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 8	20260317_180300	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 9	20260318_161820	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 10	20260320_033436	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
-1	dev	-1	2026-04-10 16:22:40.478+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-04-10 17:30:02.579+00	2026-03-16 16:07:06.694+00
 \.
 
 
@@ -5575,7 +5575,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	c4aa8d2a-cd18-45fc-9076-10bf41b6d131	2026-04-10 15:19:23.471+00	2026-04-10 17:19:23.471+00
+1	1	d6d69541-e606-43a4-8f4b-c76d321d1430	2026-04-10 17:28:12.192+00	2026-04-10 19:28:12.192+00
 \.
 
 
@@ -5828,14 +5828,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 246, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 249, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 453, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 456, true);
 
 
 --
@@ -9708,5 +9708,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict LIOTGaUEPKghlOUEbFrDp7ghq7rN80cnF3VbAhc65S3XA4W5RVR9eeTBgVwxK5a
+\unrestrict Bh8J1C3zOM0PeoGsTnhzqTTsfKGDgDWQX3yDlVVUIrRipTGbzcpW5xZI9a1ssPd
 
