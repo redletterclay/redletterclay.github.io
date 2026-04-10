@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from 'next/types'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 
@@ -124,9 +125,20 @@ export default async function EventsPage() {
                     className="animate__animated animate__zoomIn animate__delay-2s"
                   />
                 </div>
+                <img
+                  src="https://ik.imagekit.io/raygun/redletterclay/chicago-pottery-market.webp"
+                  alt="Chicago Pottery Market"
+                  style={{ width: '450px', display: 'block', margin: '0 auto' }}
+                />
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
                   {upcoming.map((event: any, i: number) => (
-                    <EventCard key={event.id} event={event} isUpcoming={true} scrollReveal delay={(i % 3) * 100} />
+                    <EventCard
+                      key={event.id}
+                      event={event}
+                      isUpcoming={true}
+                      scrollReveal
+                      delay={(i % 3) * 100}
+                    />
                   ))}
                 </div>
               </section>
@@ -161,7 +173,13 @@ export default async function EventsPage() {
             </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
               {past.map((event: any, i: number) => (
-                <EventCard key={event.id} event={event} isUpcoming={false} scrollReveal delay={(i % 3) * 100} />
+                <EventCard
+                  key={event.id}
+                  event={event}
+                  isUpcoming={false}
+                  scrollReveal
+                  delay={(i % 3) * 100}
+                />
               ))}
             </div>
           </section>
