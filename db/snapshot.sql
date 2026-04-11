@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict GCPivnPHFKtcIhimWMVGHSFKsxJEqNreQEJrslbOFmxXFRcRbLobdPNUCws5RWd
+\restrict ZF4FY8wClXOv1Dl9UNRJdYYWHAG4daYRn9qHL4hMC3U3N2qmf66bgCeAI3jGJxV
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -4291,6 +4291,11 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 510	\N	\N	\N	2026-04-09 04:58:03.107+00	2026-04-09 04:57:58.421+00	/api/media/file/P-0010-BRN-02.jpg	\N	P-0010-BRN-02.jpg	image/jpeg	305085	1820	1366	50	50	/api/media/file/P-0010-BRN-02-300x225.jpg	300	225	image/jpeg	4776	P-0010-BRN-02-300x225.jpg	/api/media/file/P-0010-BRN-02-500x500.jpg	500	500	image/jpeg	15145	P-0010-BRN-02-500x500.jpg	/api/media/file/P-0010-BRN-02-600x450.jpg	600	450	image/jpeg	13353	P-0010-BRN-02-600x450.jpg	/api/media/file/P-0010-BRN-02-900x675.jpg	900	675	image/jpeg	25624	P-0010-BRN-02-900x675.jpg	/api/media/file/P-0010-BRN-02-1400x1051.jpg	1400	1051	image/jpeg	52197	P-0010-BRN-02-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/P-0010-BRN-02-1200x630.jpg	1200	630	image/jpeg	34026	P-0010-BRN-02-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/P-0010-BRN-02.jpg
 511	\N	\N	\N	2026-04-09 04:58:04.702+00	2026-04-09 04:57:59.229+00	/api/media/file/P-0010-BRN-03.jpg	\N	P-0010-BRN-03.jpg	image/jpeg	384890	1820	1366	50	50	/api/media/file/P-0010-BRN-03-300x225.jpg	300	225	image/jpeg	5265	P-0010-BRN-03-300x225.jpg	/api/media/file/P-0010-BRN-03-500x500.jpg	500	500	image/jpeg	18836	P-0010-BRN-03-500x500.jpg	/api/media/file/P-0010-BRN-03-600x450.jpg	600	450	image/jpeg	16329	P-0010-BRN-03-600x450.jpg	/api/media/file/P-0010-BRN-03-900x675.jpg	900	675	image/jpeg	32549	P-0010-BRN-03-900x675.jpg	/api/media/file/P-0010-BRN-03-1400x1051.jpg	1400	1051	image/jpeg	67605	P-0010-BRN-03-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/P-0010-BRN-03-1200x630.jpg	1200	630	image/jpeg	45252	P-0010-BRN-03-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/P-0010-BRN-03.jpg
 512	\N	\N	\N	2026-04-09 04:58:08.664+00	2026-04-09 04:58:06.903+00	/api/media/file/P-0010-BRN-04.jpg	\N	P-0010-BRN-04.jpg	image/jpeg	377820	1820	1366	50	50	/api/media/file/P-0010-BRN-04-300x225.jpg	300	225	image/jpeg	5604	P-0010-BRN-04-300x225.jpg	/api/media/file/P-0010-BRN-04-500x500.jpg	500	500	image/jpeg	17610	P-0010-BRN-04-500x500.jpg	/api/media/file/P-0010-BRN-04-600x450.jpg	600	450	image/jpeg	15593	P-0010-BRN-04-600x450.jpg	/api/media/file/P-0010-BRN-04-900x675.jpg	900	675	image/jpeg	29562	P-0010-BRN-04-900x675.jpg	/api/media/file/P-0010-BRN-04-1400x1051.jpg	1400	1051	image/jpeg	60139	P-0010-BRN-04-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/P-0010-BRN-04-1200x630.jpg	1200	630	image/jpeg	43110	P-0010-BRN-04-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/P-0010-BRN-04.jpg
+513	\N	\N	\N	2026-04-11 02:37:49.333+00	2026-04-11 02:37:45.874+00	/api/media/file/M-0042-PUR-01.jpg	\N	M-0042-PUR-01.jpg	image/jpeg	600258	1820	1366	50	50	/api/media/file/M-0042-PUR-01-300x225.jpg	300	225	image/jpeg	8002	M-0042-PUR-01-300x225.jpg	/api/media/file/M-0042-PUR-01-500x500.jpg	500	500	image/jpeg	31213	M-0042-PUR-01-500x500.jpg	/api/media/file/M-0042-PUR-01-600x450.jpg	600	450	image/jpeg	27028	M-0042-PUR-01-600x450.jpg	/api/media/file/M-0042-PUR-01-900x675.jpg	900	675	image/jpeg	52545	M-0042-PUR-01-900x675.jpg	/api/media/file/M-0042-PUR-01-1400x1051.jpg	1400	1051	image/jpeg	105126	M-0042-PUR-01-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0042-PUR-01-1200x630.jpg	1200	630	image/jpeg	74722	M-0042-PUR-01-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0042-PUR-01.jpg
+514	\N	\N	\N	2026-04-11 02:37:50.646+00	2026-04-11 02:37:47.889+00	/api/media/file/M-0042-PUR-thumb.jpg	\N	M-0042-PUR-thumb.jpg	image/jpeg	135298	400	400	50	50	/api/media/file/M-0042-PUR-thumb-300x300.jpg	300	300	image/jpeg	12283	M-0042-PUR-thumb-300x300.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	https://ik.imagekit.io/raygun/redletterclay/M-0042-PUR-thumb.jpg
+516	\N	\N	\N	2026-04-11 02:37:58.594+00	2026-04-11 02:37:55.647+00	/api/media/file/M-0042-PUR-03.jpg	\N	M-0042-PUR-03.jpg	image/jpeg	832354	1820	1366	50	50	/api/media/file/M-0042-PUR-03-300x225.jpg	300	225	image/jpeg	10863	M-0042-PUR-03-300x225.jpg	/api/media/file/M-0042-PUR-03-500x500.jpg	500	500	image/jpeg	41068	M-0042-PUR-03-500x500.jpg	/api/media/file/M-0042-PUR-03-600x450.jpg	600	450	image/jpeg	36193	M-0042-PUR-03-600x450.jpg	/api/media/file/M-0042-PUR-03-900x675.jpg	900	675	image/jpeg	70639	M-0042-PUR-03-900x675.jpg	/api/media/file/M-0042-PUR-03-1400x1051.jpg	1400	1051	image/jpeg	140304	M-0042-PUR-03-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0042-PUR-03-1200x630.jpg	1200	630	image/jpeg	97394	M-0042-PUR-03-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0042-PUR-03.jpg
+515	\N	\N	\N	2026-04-11 02:37:57.137+00	2026-04-11 02:37:55.15+00	/api/media/file/M-0042-PUR-02.jpg	\N	M-0042-PUR-02.jpg	image/jpeg	577037	1820	1366	50	50	/api/media/file/M-0042-PUR-02-300x225.jpg	300	225	image/jpeg	7415	M-0042-PUR-02-300x225.jpg	/api/media/file/M-0042-PUR-02-500x500.jpg	500	500	image/jpeg	29589	M-0042-PUR-02-500x500.jpg	/api/media/file/M-0042-PUR-02-600x450.jpg	600	450	image/jpeg	25534	M-0042-PUR-02-600x450.jpg	/api/media/file/M-0042-PUR-02-900x675.jpg	900	675	image/jpeg	50187	M-0042-PUR-02-900x675.jpg	/api/media/file/M-0042-PUR-02-1400x1051.jpg	1400	1051	image/jpeg	101532	M-0042-PUR-02-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0042-PUR-02-1200x630.jpg	1200	630	image/jpeg	68747	M-0042-PUR-02-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0042-PUR-02.jpg
+517	\N	\N	\N	2026-04-11 02:38:06.059+00	2026-04-11 02:38:03.22+00	/api/media/file/M-0042-PUR-04.jpg	\N	M-0042-PUR-04.jpg	image/jpeg	886449	1820	1366	50	50	/api/media/file/M-0042-PUR-04-300x225.jpg	300	225	image/jpeg	11242	M-0042-PUR-04-300x225.jpg	/api/media/file/M-0042-PUR-04-500x500.jpg	500	500	image/jpeg	43627	M-0042-PUR-04-500x500.jpg	/api/media/file/M-0042-PUR-04-600x450.jpg	600	450	image/jpeg	38121	M-0042-PUR-04-600x450.jpg	/api/media/file/M-0042-PUR-04-900x675.jpg	900	675	image/jpeg	75034	M-0042-PUR-04-900x675.jpg	/api/media/file/M-0042-PUR-04-1400x1051.jpg	1400	1051	image/jpeg	149582	M-0042-PUR-04-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0042-PUR-04-1200x630.jpg	1200	630	image/jpeg	104479	M-0042-PUR-04-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0042-PUR-04.jpg
 \.
 
 
@@ -4466,7 +4471,7 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 8	20260317_180300	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 9	20260318_161820	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 10	20260320_033436	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
-1	dev	-1	2026-04-10 18:16:58.429+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-04-11 02:42:58.306+00	2026-03-16 16:07:06.694+00
 \.
 
 
@@ -4501,7 +4506,6 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 13	collection-categories	{"limit": 10}	2026-03-16 23:51:17.919+00	2026-03-16 17:21:19.723+00
 57	collection-products-73	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-04-09 03:21:42.112+00	2026-04-09 03:14:13.852+00
 60	collection-products-76	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-04-09 04:11:42.202+00	2026-04-09 04:05:51.818+00
-62	collection-products-78	{"fields": {"_index-1": {"tabIndex": 2}}}	2026-04-09 04:19:52.774+00	2026-04-09 04:19:52.777+00
 17	nav	{"open": true}	2026-03-17 16:35:48.642+00	2026-03-17 16:35:48.643+00
 38	collection-products-17	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 04:04:22.349+00	2026-03-19 04:04:22.35+00
 19	global-faq	{"editViewType": "default"}	2026-03-17 20:18:36.242+00	2026-03-17 20:18:36.246+00
@@ -4518,6 +4522,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 26	collection-products-56	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-04-10 16:34:11.079+00	2026-03-19 00:19:14.941+00
 40	collection-products-32	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-04-10 16:46:46.686+00	2026-03-19 04:17:10.312+00
 21	collection-products-48	{"fields": {"_index-1-0-1": {"tabIndex": 0}}}	2026-03-18 18:55:54.895+00	2026-03-18 18:37:16.858+00
+62	collection-products-78	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-04-11 02:31:38.979+00	2026-04-09 04:19:52.777+00
 54	collection-products-71	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-21 03:14:09.581+00	2026-03-21 02:42:14.187+00
 56	collection-products-18	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-22 02:37:43.153+00	2026-03-22 02:37:43.154+00
 31	collection-products-62	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-03-29 20:38:27.479+00	2026-03-19 01:30:13.934+00
@@ -4541,7 +4546,8 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 41	collection-products-24	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-04-10 16:18:30.945+00	2026-03-19 04:18:36.341+00
 27	collection-products-51	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-04-10 16:41:40.452+00	2026-03-19 00:25:03.125+00
 61	collection-products-77	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-04-10 16:46:18.986+00	2026-04-09 04:13:31.139+00
-1	collection-products	{"sort": "_order", "limit": 100, "columns": [{"active": true, "accessor": "sku"}, {"active": true, "accessor": "thumb"}, {"active": false, "accessor": "adminTitle"}, {"active": true, "accessor": "title"}, {"active": true, "accessor": "price"}, {"active": true, "accessor": "featured"}, {"active": false, "accessor": "id"}, {"active": false, "accessor": "name"}, {"active": false, "accessor": "tags"}, {"active": false, "accessor": "featuredImage"}, {"active": false, "accessor": "images"}, {"active": false, "accessor": "description"}, {"active": false, "accessor": "width"}, {"active": false, "accessor": "height"}, {"active": false, "accessor": "weight"}, {"active": false, "accessor": "holds"}, {"active": false, "accessor": "firingMethod"}, {"active": false, "accessor": "foodSafe"}, {"active": false, "accessor": "dishwasherSafe"}, {"active": false, "accessor": "relatedProducts"}, {"active": false, "accessor": "updatedAt"}, {"active": true, "accessor": "createdAt"}, {"active": false, "accessor": "makingLinks"}, {"active": false, "accessor": "length"}, {"active": false, "accessor": "meta.overview"}, {"active": false, "accessor": "meta.title"}, {"active": false, "accessor": "meta.description"}, {"active": false, "accessor": "meta.image"}, {"active": false, "accessor": "meta.preview"}], "editViewType": "default"}	2026-04-09 03:43:47.859+00	2026-03-16 17:10:33.961+00
+68	collection-products-83	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-04-11 02:38:31.801+00	2026-04-11 02:38:31.802+00
+1	collection-products	{"sort": "_order", "limit": 100, "columns": [{"active": true, "accessor": "sku"}, {"active": true, "accessor": "thumb"}, {"active": false, "accessor": "adminTitle"}, {"active": true, "accessor": "title"}, {"active": true, "accessor": "price"}, {"active": true, "accessor": "featured"}, {"active": false, "accessor": "id"}, {"active": false, "accessor": "name"}, {"active": false, "accessor": "tags"}, {"active": false, "accessor": "featuredImage"}, {"active": false, "accessor": "images"}, {"active": false, "accessor": "description"}, {"active": false, "accessor": "width"}, {"active": false, "accessor": "height"}, {"active": false, "accessor": "weight"}, {"active": false, "accessor": "holds"}, {"active": false, "accessor": "firingMethod"}, {"active": false, "accessor": "foodSafe"}, {"active": false, "accessor": "dishwasherSafe"}, {"active": false, "accessor": "relatedProducts"}, {"active": false, "accessor": "updatedAt"}, {"active": true, "accessor": "createdAt"}, {"active": false, "accessor": "makingLinks"}, {"active": false, "accessor": "length"}, {"active": false, "accessor": "meta.overview"}, {"active": false, "accessor": "meta.title"}, {"active": false, "accessor": "meta.description"}, {"active": false, "accessor": "meta.image"}, {"active": false, "accessor": "meta.preview"}], "editViewType": "default"}	2026-04-11 02:42:20.471+00	2026-03-16 17:10:33.961+00
 \.
 
 
@@ -4550,6 +4556,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 --
 
 COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FROM stdin;
+248	\N	1	user	1
 3	\N	2	user	1
 176	\N	54	user	1
 178	\N	55	user	1
@@ -4587,10 +4594,8 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 65	\N	21	user	1
 125	\N	34	user	1
 126	\N	35	user	1
-214	\N	1	user	1
 218	\N	59	user	1
 220	\N	60	user	1
-222	\N	62	user	1
 136	\N	38	user	1
 139	\N	39	user	1
 142	\N	42	user	1
@@ -4617,6 +4622,8 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 240	\N	27	user	1
 241	\N	61	user	1
 242	\N	40	user	1
+244	\N	62	user	1
+247	\N	68	user	1
 \.
 
 
@@ -4819,6 +4826,7 @@ COPY public.products (id, admin_title, sku, title, name, price, featured, thumb_
 79	M-0040-PNK — Sm Mug	M-0040-PNK	Latte Mug - Pink & White	Sm Mug	40	f	501	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A compact 9oz wheel-thrown mug designed for coffee and tea lovers alike. The curved body and one-finger handle design give the form a distinctive silhouette while maintaining a comfortable grip in hand.  A perfect size for lattes, macchiatos and cortados.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	3.4	2.5	273	9	electric-6	t	t	2026-04-10 18:16:30.172+00	2026-04-09 04:32:44.131+00	a1r	475	\N	\N	\N	\N
 81	P-0009-GRN — Cruet	P-0009-GRN	Ceramic Cruet - Green & White	Cruet	42	f	505	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small bottle perfect for broth, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Its compact size makes it easy to handle at the table while adding a thoughtful, handmade touch to everyday meals and gatherings.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	2.5	4.25	273	6.8	electric-6	t	t	2026-04-09 04:53:44.969+00	2026-04-09 04:53:24.783+00	a39	\N	\N	\N	\N	\N
 51	T-0001-PNK — Petal Tray	T-0001-PNK	Petal Tray - Pink & White	Petal Tray	30	t	244	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray glazed in soft pink and white, designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.6	0.75	110	\N	electric-6	t	t	2026-04-10 16:41:43.044+00	2026-03-17 18:17:54.334+00	a0	69	5.5	\N	\N	\N
+83	M-0042-PUR — Mug	M-0042-PUR	Ceramic Mug - Blue & White Striped	Mug	50	f	514	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and handle design give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	3.25	4.5	368	16.75	electric-6	t	t	2026-04-11 02:42:33.41+00	2026-04-11 02:34:17.924+00	adr	\N	\N	\N	\N	\N
 12	Ceramic Cup - Glacial Green	C-0004-GRN	Ceramic Cup - Glacial Green	Cup	40	f	50	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Glazed in a glacial green and blue, each cup carries subtle variation and depth. Wheel-thrown from durable stoneware, it’s made to be used daily — whether for drink or creative workspaces.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textFormat": 0}], "direction": "ltr"}}	3.5	5.25	382	14.4	electric-6	t	t	2026-03-18 19:12:27.957+00	2026-03-17 18:15:03.029+00	ab	\N	\N	\N	\N	\N
 13	Textured Storage Jar - Green	J-0001-GRN	Textured Storage Jar - Green	Textured Jar	65	f	54	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A textured ceramic lidded jar finished in a satin matte green glaze, offering a soft, earthy surface with subtle depth and variation.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Both functional and decorative, this stoneware jar transitions beautifully from kitchen counter to open shelving, adding texture, intention, and artisan character to your everyday storage.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.5	4.25	421	12	electric-6	t	t	2026-03-18 19:13:32.434+00	2026-03-17 18:15:08.217+00	an	58	\N	\N	\N	\N
 82	P-0010-BRN — Cruet	P-0010-BRN	Ceramic Cruet - Brown	Cruet	42	f	509	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small bottle perfect for broth, soy sauce, salad dressings, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Its compact size makes it easy to handle at the table while adding a thoughtful, handmade touch to everyday meals and gatherings.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	2.5	4.25	273	6.8	electric-6	t	t	2026-04-09 04:59:43.812+00	2026-04-09 04:59:43.81+00	b0e	\N	\N	\N	\N	\N
@@ -4913,6 +4921,10 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 1	9	69b99a1baa9ac96a311210c8	37
 2	9	69b99a1baa9ac96a311210c9	38
 4	77	69d7272235106f65daff1c5e	490
+1	83	69d9b42d11dbe2d7446d7739	513
+2	83	69d9b43411dbe2d7446d773b	515
+3	83	69d9b43911dbe2d7446d773d	516
+4	83	69d9b43d11dbe2d7446d773f	517
 1	26	69b99a69aa9ac96a31121105	125
 2	26	69b99a69aa9ac96a31121106	126
 3	26	69b99a69aa9ac96a31121107	127
@@ -5335,6 +5347,10 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 488	1	10	relatedProducts	4
 489	2	10	relatedProducts	34
 490	3	10	relatedProducts	20
+850	1	83	relatedProducts	75
+851	2	83	relatedProducts	40
+852	3	83	relatedProducts	17
+853	4	83	relatedProducts	21
 710	1	70	relatedProducts	56
 711	2	70	relatedProducts	40
 712	3	70	relatedProducts	18
@@ -5377,6 +5393,7 @@ COPY public.products_tags ("order", parent_id, value, id) FROM stdin;
 1	41	drink	248
 1	40	drink	249
 1	21	drink	250
+1	83	drink	554
 1	13	store	253
 1	22	drink	254
 1	73	eat	476
@@ -5575,7 +5592,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	d6d69541-e606-43a4-8f4b-c76d321d1430	2026-04-10 17:28:12.192+00	2026-04-10 19:28:12.192+00
+1	1	29d97f42-1629-442f-8c96-461c497a308a	2026-04-11 02:19:15.853+00	2026-04-11 04:19:15.853+00
 \.
 
 
@@ -5772,7 +5789,7 @@ SELECT pg_catalog.setval('public.links_id_seq', 1, true);
 -- Name: media_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.media_id_seq', 512, true);
+SELECT pg_catalog.setval('public.media_id_seq', 517, true);
 
 
 --
@@ -5828,14 +5845,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 256, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 257, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 465, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 467, true);
 
 
 --
@@ -5849,14 +5866,14 @@ SELECT pg_catalog.setval('public.payload_migrations_id_seq', 10, true);
 -- Name: payload_preferences_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_id_seq', 67, true);
+SELECT pg_catalog.setval('public.payload_preferences_id_seq', 68, true);
 
 
 --
 -- Name: payload_preferences_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 242, true);
+SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 248, true);
 
 
 --
@@ -5877,21 +5894,21 @@ SELECT pg_catalog.setval('public.posts_rels_id_seq', 1, false);
 -- Name: products_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_id_seq', 82, true);
+SELECT pg_catalog.setval('public.products_id_seq', 83, true);
 
 
 --
 -- Name: products_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_rels_id_seq', 845, true);
+SELECT pg_catalog.setval('public.products_rels_id_seq', 853, true);
 
 
 --
 -- Name: products_tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_tags_id_seq', 551, true);
+SELECT pg_catalog.setval('public.products_tags_id_seq', 554, true);
 
 
 --
@@ -9708,5 +9725,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict GCPivnPHFKtcIhimWMVGHSFKsxJEqNreQEJrslbOFmxXFRcRbLobdPNUCws5RWd
+\unrestrict ZF4FY8wClXOv1Dl9UNRJdYYWHAG4daYRn9qHL4hMC3U3N2qmf66bgCeAI3jGJxV
 
