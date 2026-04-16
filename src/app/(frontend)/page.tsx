@@ -133,7 +133,7 @@ export default async function HomePage() {
               padding: '2rem 1rem 2rem',
             }}
           >
-            <div style={{ width: '100%', maxWidth: '900px' }}>
+            <div style={{ width: '100%', maxWidth: '1200px' }}>
               <AnnouncementBox announcement={announcement} />
             </div>
           </div>
@@ -183,7 +183,10 @@ export default async function HomePage() {
 
         {/* Collection Title */}
         {collectionTitle && (
-          <h2 className="fc-1" style={{ textAlign: 'center', paddingInline: '1rem', paddingBlock: '2rem' }}>
+          <h2
+            className="fc-1"
+            style={{ textAlign: 'center', paddingInline: '1rem', paddingBlock: '2rem' }}
+          >
             {collectionTitle}
           </h2>
         )}
@@ -299,7 +302,6 @@ function AnnouncementBox({ announcement }: { announcement: any }) {
           style={{
             padding: '1rem 1.5rem 0.5rem',
             width: '100%',
-            borderRadius: '9999px 9999px 0 0',
           }}
         >
           <h3 style={{ textAlign: 'center', margin: 0, color: 'white', fontSize: '2rem' }}>
@@ -346,7 +348,7 @@ function AnnouncementBox({ announcement }: { announcement: any }) {
             )}
           </div>
           {announcement.thumb && typeof announcement.thumb !== 'string' && (
-            <div style={{ flex: '0 0 auto', width: '100%', maxWidth: '300px', margin: '0 auto' }}>
+            <div style={{ flex: '0 0 auto', width: '100%', maxWidth: '600px', margin: '0 auto' }}>
               <img
                 src={announcement.thumb.url}
                 alt={announcement.thumb.alt || ''}
