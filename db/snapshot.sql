@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict v9oLEo4LpNNdNcNpFEhi4repHXkQsu9BPErKixz9LRwhTCfDZzPZj69BqMi4dQr
+\restrict anYVfFRP6Sr9nvfNUe0mBDleS7Gp9FUWwOvR4SmwAQcJta3cNPal2pu0r3VYOlq
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -4313,11 +4313,12 @@ COPY public.newsletter (id, updated_at, created_at) FROM stdin;
 --
 
 COPY public.newsletter_issues (_order, _parent_id, id, name, url) FROM stdin;
-1	1	69b99b2daa9ac96a311211d1	2025 Holiday Markets » Bridgeport & West Loop Venues	https://preview.mailerlite.io/emails/webview/1180415/173072140190352712
-2	1	69b99b2daa9ac96a311211d2	Put a Lid on It Exhibition @ Belger Arts Center (St Louis, MO)	https://preview.mailerlite.io/emails/webview/1180415/165915421823731444
-3	1	69b99b2daa9ac96a311211d3	Oddball Market @ Thalia Hall Block Party (Pilsen, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/163272327241402286
-4	1	69b99b2daa9ac96a311211d4	New Store Partnership - Northside Cutlery (Lincoln Square, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/146465753395102952
-5	1	69b99b2daa9ac96a311211d5	New Store Partnership - Spilt Milk Pastry (Oak Park, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/147339301509662186
+1	1	69f500001558293d9f08123c	Shop Mothers Day + The Chicago Pottery Market	https://preview.mailerlite.io/preview/1180415/emails/186098830926677956
+2	1	69b99b2daa9ac96a311211d1	2025 Holiday Markets » Bridgeport & West Loop Venues	https://preview.mailerlite.io/emails/webview/1180415/173072140190352712
+3	1	69b99b2daa9ac96a311211d2	Put a Lid on It Exhibition @ Belger Arts Center (St Louis, MO)	https://preview.mailerlite.io/emails/webview/1180415/165915421823731444
+4	1	69b99b2daa9ac96a311211d3	Oddball Market @ Thalia Hall Block Party (Pilsen, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/163272327241402286
+5	1	69b99b2daa9ac96a311211d4	New Store Partnership - Northside Cutlery (Lincoln Square, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/146465753395102952
+6	1	69b99b2daa9ac96a311211d5	New Store Partnership - Spilt Milk Pastry (Oak Park, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/147339301509662186
 \.
 
 
@@ -4471,7 +4472,7 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 8	20260317_180300	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 9	20260318_161820	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 10	20260320_033436	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
-1	dev	-1	2026-04-11 02:44:06.629+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-05-01 19:31:57.991+00	2026-03-16 16:07:06.694+00
 \.
 
 
@@ -5592,7 +5593,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	29d97f42-1629-442f-8c96-461c497a308a	2026-04-11 02:19:15.853+00	2026-04-11 04:19:15.853+00
+1	1	503d73d1-1582-41cc-834d-5e07d99271ce	2026-05-01 19:33:13.912+00	2026-05-01 21:33:13.912+00
 \.
 
 
@@ -5845,14 +5846,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 257, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 258, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 467, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 468, true);
 
 
 --
@@ -9725,5 +9726,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict v9oLEo4LpNNdNcNpFEhi4repHXkQsu9BPErKixz9LRwhTCfDZzPZj69BqMi4dQr
+\unrestrict anYVfFRP6Sr9nvfNUe0mBDleS7Gp9FUWwOvR4SmwAQcJta3cNPal2pu0r3VYOlq
 
