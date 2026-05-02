@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 5R6dFXn07SawAog3SDDbD6MXBUK8dgHJygL1tvfqQgTp5d6qAS58OZvwkzx3iEV
+\restrict yC1w6tx70aXxeaV8L8cDQPwrU5e6GuBqN0RNyEONebT4uOHqaPP9u3mSBHtFS5A
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -4482,7 +4482,7 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 8	20260317_180300	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 9	20260318_161820	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 10	20260320_033436	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
-1	dev	-1	2026-05-02 02:06:25.948+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-05-02 02:07:37.192+00	2026-03-16 16:07:06.694+00
 \.
 
 
@@ -4493,6 +4493,7 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM stdin;
 69	collection-products-84	{"fields": {"_index-1": {"tabIndex": 2}}}	2026-05-02 01:54:55.491+00	2026-05-02 01:51:51.858+00
 2	collection-pages	{"limit": 10}	2026-03-16 17:13:14.133+00	2026-03-16 17:10:36.269+00
+60	collection-products-76	{"fields": {"_index-1": {"tabIndex": 2}}}	2026-05-02 02:08:10.318+00	2026-04-09 04:05:51.818+00
 5	global-stockists	{"editViewType": "default"}	2026-03-16 17:16:02.967+00	2026-03-16 17:16:02.969+00
 6	global-announcement	{"editViewType": "default"}	2026-03-16 17:16:07.07+00	2026-03-16 17:16:07.071+00
 7	global-links	{"editViewType": "default"}	2026-03-16 17:16:09.792+00	2026-03-16 17:16:09.793+00
@@ -4517,7 +4518,6 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 34	collection-products-64	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 02:27:45.238+00	2026-03-19 02:20:41.213+00
 13	collection-categories	{"limit": 10}	2026-03-16 23:51:17.919+00	2026-03-16 17:21:19.723+00
 57	collection-products-73	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-04-09 03:21:42.112+00	2026-04-09 03:14:13.852+00
-60	collection-products-76	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-04-09 04:11:42.202+00	2026-04-09 04:05:51.818+00
 17	nav	{"open": true}	2026-03-17 16:35:48.642+00	2026-03-17 16:35:48.643+00
 38	collection-products-17	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 04:04:22.349+00	2026-03-19 04:04:22.35+00
 19	global-faq	{"editViewType": "default"}	2026-03-17 20:18:36.242+00	2026-03-17 20:18:36.246+00
@@ -4537,6 +4537,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 62	collection-products-78	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-04-11 02:31:38.979+00	2026-04-09 04:19:52.777+00
 54	collection-products-71	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-21 03:14:09.581+00	2026-03-21 02:42:14.187+00
 68	collection-products-83	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-05-02 01:46:13.978+00	2026-04-11 02:38:31.802+00
+70	collection-products-85	{"fields": {"_index-1": {"tabIndex": 2}}}	2026-05-02 02:08:17.675+00	2026-05-02 02:08:17.676+00
 56	collection-products-18	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-22 02:37:43.153+00	2026-03-22 02:37:43.154+00
 31	collection-products-62	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-03-29 20:38:27.479+00	2026-03-19 01:30:13.934+00
 29	collection-products-59	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-03-29 20:38:58.826+00	2026-03-19 00:52:08.202+00
@@ -4582,11 +4583,13 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 253	\N	1	user	1
 183	\N	22	user	1
 254	\N	69	user	1
+255	\N	60	user	1
 186	\N	56	user	1
 187	\N	53	user	1
 22	\N	14	user	1
 23	\N	15	user	1
 188	\N	18	user	1
+256	\N	70	user	1
 26	\N	3	user	1
 190	\N	31	user	1
 191	\N	30	user	1
@@ -4609,7 +4612,6 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 125	\N	34	user	1
 126	\N	35	user	1
 218	\N	59	user	1
-220	\N	60	user	1
 136	\N	38	user	1
 139	\N	39	user	1
 142	\N	42	user	1
@@ -4845,7 +4847,7 @@ COPY public.products (id, admin_title, sku, title, name, price, featured, thumb_
 13	Textured Storage Jar - Green	J-0001-GRN	Textured Storage Jar - Green	Textured Jar	65	f	54	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A textured ceramic lidded jar finished in a satin matte green glaze, offering a soft, earthy surface with subtle depth and variation.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Both functional and decorative, this stoneware jar transitions beautifully from kitchen counter to open shelving, adding texture, intention, and artisan character to your everyday storage.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.5	4.25	421	12	electric-6	t	t	2026-03-18 19:13:32.434+00	2026-03-17 18:15:08.217+00	an	58	\N	\N	\N	\N
 8	B-0008-GRN — MD Bowl	B-0008-GRN	Carved Stoneware Bowl - Green	MD Bowl	52	f	32	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A medium wheel thrown bowl perfect for entrees. Dipped in a verdant green glaze.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware bowls are made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	6.75	3.5	554	30	electric-6	t	t	2026-04-11 02:47:23.883+00	2026-03-17 18:14:48.377+00	ami	\N	\N	\N	\N	\N
 82	P-0010-BRN — Cruet	P-0010-BRN	Ceramic Cruet - Brown	Cruet	42	f	509	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small bottle perfect for broth, soy sauce, salad dressings, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Its compact size makes it easy to handle at the table while adding a thoughtful, handmade touch to everyday meals and gatherings.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	2.5	4.25	273	6.8	electric-6	t	t	2026-04-11 02:48:06.46+00	2026-04-09 04:59:43.81+00	b05i	\N	\N	\N	\N	\N
-85	M-0044-PNK — Mug	M-0044-PNK	Ceramic Mug - Pink	Mug	50	f	527	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and handle design give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	\N	\N	\N	\N	electric-6	f	f	2026-05-02 02:06:07.74+00	2026-05-02 02:05:46.781+00	a1k	\N	\N	\N	\N	\N
+85	M-0044-PNK — Mug	M-0044-PNK	Ceramic Mug - Pink	Mug	50	f	527	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and handle design give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.75	4.25	399	16.6	electric-6	t	t	2026-05-02 02:09:42.747+00	2026-05-02 02:05:46.781+00	a1k	\N	\N	\N	\N	\N
 9	Faceted Sipping Cups - Brown	C-0001-BRN	Faceted Sipping Cups - Brown	SM Cups	42	f	36	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A pair of small faceted cups designed for sipping sake, whiskey, tequila, or espresso. The hand-faceted surfaces create subtle angles that catch the light while offering a comfortable, tactile grip. Their compact size makes them ideal for intimate pours and slow, intentional sipping.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A versatile addition to any barware or espresso setup, they balance function, craftsmanship, and everyday elegance.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	2.25	2.4	123	3.4	electric-6	t	t	2026-03-18 19:14:31.284+00	2026-03-17 18:14:51.874+00	az	39	\N	\N	\N	\N
 7	Carved Stoneware Bowl - Black	B-0007-BLK	Carved Stoneware Bowl - Black	MD Bowl	52	f	28	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A medium wheel thrown bowl perfect for entrees. Dipped in a black glaze, with carvings decorating the outside providing a tactile experience and visual interest.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware bowls are made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	6.75	2.75	471	24	electric-6	t	t	2026-03-18 19:15:00.82+00	2026-03-17 18:14:45.237+00	b05	10	\N	\N	\N	\N
 27	M-0011-BLU — Mug	M-0011-BLU	Ceramic Mug - Glacial Blue	Mug	50	f	129	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.75	4.9	450	21.2	electric-6	t	t	2026-03-19 04:28:06.367+00	2026-03-17 18:16:13.402+00	ae	\N	\N	\N	\N	\N
@@ -4901,13 +4903,17 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 2	34	69b99a8daa9ac96a31121126	166
 3	34	69b99a8daa9ac96a31121127	167
 4	34	69b99a8daa9ac96a31121128	168
+1	85	69f55bd12d04a45db62c2cbb	523
 1	27	69b99a6daa9ac96a31121109	130
 2	27	69b99a6daa9ac96a3112110a	131
 3	27	69b99a6daa9ac96a3112110b	132
+2	85	69f55bd62d04a45db62c2cbd	524
+3	85	69f55bda2d04a45db62c2cbf	525
 1	73	69d71b4b00eb0cbb3b798779	463
 2	73	69d71b5700eb0cbb3b79877b	464
 3	73	69d71b5d00eb0cbb3b79877d	465
 4	27	69b99a6daa9ac96a3112110c	133
+4	85	69f55bdf2d04a45db62c2cc1	526
 1	38	69b99a9eaa9ac96a31121135	185
 2	38	69b99a9eaa9ac96a31121136	186
 1	30	69b99a7aaa9ac96a31121115	145
@@ -5124,10 +5130,6 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 3	49	69b99accaa9ac96a3112115f	240
 4	52	69b99ad7aa9ac96a31121168	252
 3	79	69d72bd935106f65daff1c6c	503
-1	85	69f55bd12d04a45db62c2cbb	523
-2	85	69f55bd62d04a45db62c2cbd	524
-3	85	69f55bda2d04a45db62c2cbf	525
-4	85	69f55bdf2d04a45db62c2cc1	526
 1	46	69b99ac2aa9ac96a31121154	225
 2	46	69b99ac2aa9ac96a31121155	226
 3	46	69b99ac2aa9ac96a31121156	227
@@ -5304,9 +5306,6 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 863	1	84	relatedProducts	76
 864	2	84	relatedProducts	45
 865	3	84	relatedProducts	80
-869	1	85	relatedProducts	84
-870	2	85	relatedProducts	45
-871	3	85	relatedProducts	76
 645	1	65	relatedProducts	19
 646	2	65	relatedProducts	9
 647	3	65	relatedProducts	28
@@ -5387,6 +5386,9 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 718	1	5	relatedProducts	28
 719	2	5	relatedProducts	9
 720	3	5	relatedProducts	49
+872	1	85	relatedProducts	84
+873	2	85	relatedProducts	45
+874	3	85	relatedProducts	76
 730	1	60	relatedProducts	51
 731	2	60	relatedProducts	36
 732	3	60	relatedProducts	62
@@ -5439,7 +5441,7 @@ COPY public.products_tags ("order", parent_id, value, id) FROM stdin;
 1	47	pour	265
 1	9	drink	267
 1	28	drink	268
-1	85	drink	562
+1	85	drink	563
 1	7	eat	275
 1	48	pour	276
 1	74	display	484
@@ -5876,14 +5878,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 260, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 261, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 472, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 474, true);
 
 
 --
@@ -5897,14 +5899,14 @@ SELECT pg_catalog.setval('public.payload_migrations_id_seq', 10, true);
 -- Name: payload_preferences_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_id_seq', 69, true);
+SELECT pg_catalog.setval('public.payload_preferences_id_seq', 70, true);
 
 
 --
 -- Name: payload_preferences_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 254, true);
+SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 256, true);
 
 
 --
@@ -5932,14 +5934,14 @@ SELECT pg_catalog.setval('public.products_id_seq', 85, true);
 -- Name: products_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_rels_id_seq', 871, true);
+SELECT pg_catalog.setval('public.products_rels_id_seq', 874, true);
 
 
 --
 -- Name: products_tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_tags_id_seq', 562, true);
+SELECT pg_catalog.setval('public.products_tags_id_seq', 563, true);
 
 
 --
@@ -9756,5 +9758,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 5R6dFXn07SawAog3SDDbD6MXBUK8dgHJygL1tvfqQgTp5d6qAS58OZvwkzx3iEV
+\unrestrict yC1w6tx70aXxeaV8L8cDQPwrU5e6GuBqN0RNyEONebT4uOHqaPP9u3mSBHtFS5A
 
