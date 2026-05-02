@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict yC1w6tx70aXxeaV8L8cDQPwrU5e6GuBqN0RNyEONebT4uOHqaPP9u3mSBHtFS5A
+\restrict uUwvF0zITu1HDrfjrCegXCBXqscHnPTVNL9y3PiL1jXujbMSpmPinZZTtzkNG5K
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -4238,6 +4238,7 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 415	\N	\N	\N	2026-03-19 02:31:52.846+00	2026-03-19 02:31:51.955+00	/api/media/file/M-0030-BRN-03.jpg	\N	M-0030-BRN-03.jpg	image/jpeg	756133	1820	1366	50	50	/api/media/file/M-0030-BRN-03-300x225.jpg	300	225	image/jpeg	10410	M-0030-BRN-03-300x225.jpg	/api/media/file/M-0030-BRN-03-500x500.jpg	500	500	image/jpeg	36885	M-0030-BRN-03-500x500.jpg	/api/media/file/M-0030-BRN-03-600x450.jpg	600	450	image/jpeg	32692	M-0030-BRN-03-600x450.jpg	/api/media/file/M-0030-BRN-03-900x675.jpg	900	675	image/jpeg	62884	M-0030-BRN-03-900x675.jpg	/api/media/file/M-0030-BRN-03-1400x1051.jpg	1400	1051	image/jpeg	126898	M-0030-BRN-03-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0030-BRN-03-1200x630.jpg	1200	630	image/jpeg	88709	M-0030-BRN-03-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0030-BRN-03.jpg
 409	\N	\N	\N	2026-03-19 02:11:55.773+00	2026-03-19 02:11:55.773+00	/api/media/file/M-0029-PUR-02.jpg	\N	M-0029-PUR-02.jpg	image/jpeg	651202	1820	1366	50	50	/api/media/file/M-0029-PUR-02-300x225.jpg	300	225	image/jpeg	7809	M-0029-PUR-02-300x225.jpg	/api/media/file/M-0029-PUR-02-500x500.jpg	500	500	image/jpeg	30976	M-0029-PUR-02-500x500.jpg	/api/media/file/M-0029-PUR-02-600x450.jpg	600	450	image/jpeg	26616	M-0029-PUR-02-600x450.jpg	/api/media/file/M-0029-PUR-02-900x675.jpg	900	675	image/jpeg	53817	M-0029-PUR-02-900x675.jpg	/api/media/file/M-0029-PUR-02-1400x1051.jpg	1400	1051	image/jpeg	111485	M-0029-PUR-02-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0029-PUR-02-1200x630.jpg	1200	630	image/jpeg	76608	M-0029-PUR-02-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0029-PUR-02.jpg
 416	\N	\N	\N	2026-03-19 02:31:54.183+00	2026-03-19 02:31:53.078+00	/api/media/file/M-0030-BRN-04.jpg	\N	M-0030-BRN-04.jpg	image/jpeg	741949	1820	1366	50	50	/api/media/file/M-0030-BRN-04-300x225.jpg	300	225	image/jpeg	9069	M-0030-BRN-04-300x225.jpg	/api/media/file/M-0030-BRN-04-500x500.jpg	500	500	image/jpeg	33817	M-0030-BRN-04-500x500.jpg	/api/media/file/M-0030-BRN-04-600x450.jpg	600	450	image/jpeg	29159	M-0030-BRN-04-600x450.jpg	/api/media/file/M-0030-BRN-04-900x675.jpg	900	675	image/jpeg	58252	M-0030-BRN-04-900x675.jpg	/api/media/file/M-0030-BRN-04-1400x1051.jpg	1400	1051	image/jpeg	120641	M-0030-BRN-04-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0030-BRN-04-1200x630.jpg	1200	630	image/jpeg	84504	M-0030-BRN-04-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0030-BRN-04.jpg
+530	\N	\N	\N	2026-05-02 02:17:21.279+00	2026-05-02 02:17:18.279+00	/api/media/file/B-0009-GRN-thumb.jpg	\N	B-0009-GRN-thumb.jpg	image/jpeg	146031	400	400	50	50	/api/media/file/B-0009-GRN-thumb-300x300.jpg	300	300	image/jpeg	12643	B-0009-GRN-thumb-300x300.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	https://ik.imagekit.io/raygun/redletterclay/B-0009-GRN-thumb.jpg
 419	\N	\N	\N	2026-03-19 02:40:22.506+00	2026-03-19 02:40:20.924+00	/api/media/file/J-0006-BLU-01.jpg	\N	J-0006-BLU-01.jpg	image/jpeg	213239	2000	1333	50	50	/api/media/file/J-0006-BLU-01-300x200.jpg	300	200	image/jpeg	4796	J-0006-BLU-01-300x200.jpg	/api/media/file/J-0006-BLU-01-500x500.jpg	500	500	image/jpeg	21669	J-0006-BLU-01-500x500.jpg	/api/media/file/J-0006-BLU-01-600x400.jpg	600	400	image/jpeg	15272	J-0006-BLU-01-600x400.jpg	/api/media/file/J-0006-BLU-01-900x600.jpg	900	600	image/jpeg	32015	J-0006-BLU-01-900x600.jpg	/api/media/file/J-0006-BLU-01-1400x933.jpg	1400	933	image/jpeg	72343	J-0006-BLU-01-1400x933.jpg	/api/media/file/J-0006-BLU-01-1920x1280.jpg	1920	1280	image/jpeg	126038	J-0006-BLU-01-1920x1280.jpg	/api/media/file/J-0006-BLU-01-1200x630.jpg	1200	630	image/jpeg	52419	J-0006-BLU-01-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/J-0006-BLU-01.jpg
 420	\N	\N	\N	2026-03-19 02:40:23.263+00	2026-03-19 02:40:22.509+00	/api/media/file/J-0006-BLU-02.jpg	\N	J-0006-BLU-02.jpg	image/jpeg	252788	2000	1333	50	50	/api/media/file/J-0006-BLU-02-300x200.jpg	300	200	image/jpeg	6448	J-0006-BLU-02-300x200.jpg	/api/media/file/J-0006-BLU-02-500x500.jpg	500	500	image/jpeg	30703	J-0006-BLU-02-500x500.jpg	/api/media/file/J-0006-BLU-02-600x400.jpg	600	400	image/jpeg	21208	J-0006-BLU-02-600x400.jpg	/api/media/file/J-0006-BLU-02-900x600.jpg	900	600	image/jpeg	44604	J-0006-BLU-02-900x600.jpg	/api/media/file/J-0006-BLU-02-1400x933.jpg	1400	933	image/jpeg	100345	J-0006-BLU-02-1400x933.jpg	/api/media/file/J-0006-BLU-02-1920x1280.jpg	1920	1280	image/jpeg	172500	J-0006-BLU-02-1920x1280.jpg	/api/media/file/J-0006-BLU-02-1200x630.jpg	1200	630	image/jpeg	72123	J-0006-BLU-02-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/J-0006-BLU-02.jpg
 421	\N	\N	\N	2026-03-19 02:40:24.405+00	2026-03-19 02:40:23.229+00	/api/media/file/J-0006-BLU-03.jpg	\N	J-0006-BLU-03.jpg	image/jpeg	273094	2000	1333	50	50	/api/media/file/J-0006-BLU-03-300x200.jpg	300	200	image/jpeg	7338	J-0006-BLU-03-300x200.jpg	/api/media/file/J-0006-BLU-03-500x500.jpg	500	500	image/jpeg	33809	J-0006-BLU-03-500x500.jpg	/api/media/file/J-0006-BLU-03-600x400.jpg	600	400	image/jpeg	24021	J-0006-BLU-03-600x400.jpg	/api/media/file/J-0006-BLU-03-900x600.jpg	900	600	image/jpeg	50331	J-0006-BLU-03-900x600.jpg	/api/media/file/J-0006-BLU-03-1400x933.jpg	1400	933	image/jpeg	111229	J-0006-BLU-03-1400x933.jpg	/api/media/file/J-0006-BLU-03-1920x1280.jpg	1920	1280	image/jpeg	190251	J-0006-BLU-03-1920x1280.jpg	/api/media/file/J-0006-BLU-03-1200x630.jpg	1200	630	image/jpeg	82622	J-0006-BLU-03-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/J-0006-BLU-03.jpg
@@ -4306,6 +4307,13 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 527	\N	\N	\N	2026-05-02 02:04:28.893+00	2026-05-02 02:04:26.242+00	/api/media/file/M-0044-PNK-thumb.jpg	\N	M-0044-PNK-thumb.jpg	image/jpeg	130811	400	400	50	50	/api/media/file/M-0044-PNK-thumb-300x300.jpg	300	300	image/jpeg	10550	M-0044-PNK-thumb-300x300.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	https://ik.imagekit.io/raygun/redletterclay/M-0044-PNK-thumb.jpg
 525	\N	\N	\N	2026-05-02 02:04:26.151+00	2026-05-02 02:04:24.863+00	/api/media/file/M-0044-PNK-03.jpg	\N	M-0044-PNK-03.jpg	image/jpeg	706278	1820	1366	50	50	/api/media/file/M-0044-PNK-03-300x225.jpg	300	225	image/jpeg	8619	M-0044-PNK-03-300x225.jpg	/api/media/file/M-0044-PNK-03-500x500.jpg	500	500	image/jpeg	32965	M-0044-PNK-03-500x500.jpg	/api/media/file/M-0044-PNK-03-600x450.jpg	600	450	image/jpeg	28506	M-0044-PNK-03-600x450.jpg	/api/media/file/M-0044-PNK-03-900x675.jpg	900	675	image/jpeg	56211	M-0044-PNK-03-900x675.jpg	/api/media/file/M-0044-PNK-03-1400x1051.jpg	1400	1051	image/jpeg	114535	M-0044-PNK-03-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0044-PNK-03-1200x630.jpg	1200	630	image/jpeg	82517	M-0044-PNK-03-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0044-PNK-03.jpg
 526	\N	\N	\N	2026-05-02 02:04:27.685+00	2026-05-02 02:04:25.777+00	/api/media/file/M-0044-PNK-04.jpg	\N	M-0044-PNK-04.jpg	image/jpeg	791608	1820	1366	50	50	/api/media/file/M-0044-PNK-04-300x225.jpg	300	225	image/jpeg	9479	M-0044-PNK-04-300x225.jpg	/api/media/file/M-0044-PNK-04-500x500.jpg	500	500	image/jpeg	37048	M-0044-PNK-04-500x500.jpg	/api/media/file/M-0044-PNK-04-600x450.jpg	600	450	image/jpeg	32166	M-0044-PNK-04-600x450.jpg	/api/media/file/M-0044-PNK-04-900x675.jpg	900	675	image/jpeg	63705	M-0044-PNK-04-900x675.jpg	/api/media/file/M-0044-PNK-04-1400x1051.jpg	1400	1051	image/jpeg	128701	M-0044-PNK-04-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0044-PNK-04-1200x630.jpg	1200	630	image/jpeg	91017	M-0044-PNK-04-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0044-PNK-04.jpg
+528	\N	\N	\N	2026-05-02 02:17:18.734+00	2026-05-02 02:17:16.181+00	/api/media/file/B-0009-GRN-01.jpg	\N	B-0009-GRN-01.jpg	image/jpeg	1026349	1820	1366	50	50	/api/media/file/B-0009-GRN-01-300x225.jpg	300	225	image/jpeg	10711	B-0009-GRN-01-300x225.jpg	/api/media/file/B-0009-GRN-01-500x500.jpg	500	500	image/jpeg	46655	B-0009-GRN-01-500x500.jpg	/api/media/file/B-0009-GRN-01-600x450.jpg	600	450	image/jpeg	39244	B-0009-GRN-01-600x450.jpg	/api/media/file/B-0009-GRN-01-900x675.jpg	900	675	image/jpeg	82622	B-0009-GRN-01-900x675.jpg	/api/media/file/B-0009-GRN-01-1400x1051.jpg	1400	1051	image/jpeg	174766	B-0009-GRN-01-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/B-0009-GRN-01-1200x630.jpg	1200	630	image/jpeg	115872	B-0009-GRN-01-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/B-0009-GRN-01.jpg
+529	\N	\N	\N	2026-05-02 02:17:20.224+00	2026-05-02 02:17:17.714+00	/api/media/file/B-0009-GRN-03.jpg	\N	B-0009-GRN-03.jpg	image/jpeg	1056895	1820	1366	50	50	/api/media/file/B-0009-GRN-03-300x225.jpg	300	225	image/jpeg	10723	B-0009-GRN-03-300x225.jpg	/api/media/file/B-0009-GRN-03-500x500.jpg	500	500	image/jpeg	45858	B-0009-GRN-03-500x500.jpg	/api/media/file/B-0009-GRN-03-600x450.jpg	600	450	image/jpeg	39418	B-0009-GRN-03-600x450.jpg	/api/media/file/B-0009-GRN-03-900x675.jpg	900	675	image/jpeg	83458	B-0009-GRN-03-900x675.jpg	/api/media/file/B-0009-GRN-03-1400x1051.jpg	1400	1051	image/jpeg	178353	B-0009-GRN-03-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/B-0009-GRN-03-1200x630.jpg	1200	630	image/jpeg	128199	B-0009-GRN-03-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/B-0009-GRN-03.jpg
+531	\N	\N	\N	2026-05-02 02:19:03.565+00	2026-05-02 02:19:01.709+00	/api/media/file/B-0009-GRN-3.jpg	\N	B-0009-GRN-3.jpg	image/jpeg	791516	1820	1366	50	50	/api/media/file/B-0009-GRN-3-300x225.jpg	300	225	image/jpeg	8284	B-0009-GRN-3-300x225.jpg	/api/media/file/B-0009-GRN-3-500x500.jpg	500	500	image/jpeg	35167	B-0009-GRN-3-500x500.jpg	/api/media/file/B-0009-GRN-3-600x450.jpg	600	450	image/jpeg	30847	B-0009-GRN-3-600x450.jpg	/api/media/file/B-0009-GRN-3-900x675.jpg	900	675	image/jpeg	64584	B-0009-GRN-3-900x675.jpg	/api/media/file/B-0009-GRN-3-1400x1051.jpg	1400	1051	image/jpeg	136835	B-0009-GRN-3-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/B-0009-GRN-3-1200x630.jpg	1200	630	image/jpeg	100839	B-0009-GRN-3-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/B-0009-GRN-3.jpg
+532	\N	\N	\N	2026-05-02 02:24:24.823+00	2026-05-02 02:24:22.884+00	/api/media/file/B-0010-GRN-01.jpg	\N	B-0010-GRN-01.jpg	image/jpeg	1027783	1820	1366	50	50	/api/media/file/B-0010-GRN-01-300x225.jpg	300	225	image/jpeg	10664	B-0010-GRN-01-300x225.jpg	/api/media/file/B-0010-GRN-01-500x500.jpg	500	500	image/jpeg	46241	B-0010-GRN-01-500x500.jpg	/api/media/file/B-0010-GRN-01-600x450.jpg	600	450	image/jpeg	39082	B-0010-GRN-01-600x450.jpg	/api/media/file/B-0010-GRN-01-900x675.jpg	900	675	image/jpeg	82897	B-0010-GRN-01-900x675.jpg	/api/media/file/B-0010-GRN-01-1400x1051.jpg	1400	1051	image/jpeg	176734	B-0010-GRN-01-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/B-0010-GRN-01-1200x630.jpg	1200	630	image/jpeg	125115	B-0010-GRN-01-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/B-0010-GRN-01.jpg
+533	\N	\N	\N	2026-05-02 02:24:25.789+00	2026-05-02 02:24:23.409+00	/api/media/file/B-0010-GRN-thumb.jpg	\N	B-0010-GRN-thumb.jpg	image/jpeg	173347	400	400	50	50	/api/media/file/B-0010-GRN-thumb-300x300.jpg	300	300	image/jpeg	14596	B-0010-GRN-thumb-300x300.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	https://ik.imagekit.io/raygun/redletterclay/B-0010-GRN-thumb.jpg
+534	\N	\N	\N	2026-05-02 02:24:33.336+00	2026-05-02 02:24:31.858+00	/api/media/file/B-0010-GRN-02.jpg	\N	B-0010-GRN-02.jpg	image/jpeg	709907	1820	1366	50	50	/api/media/file/B-0010-GRN-02-300x225.jpg	300	225	image/jpeg	7999	B-0010-GRN-02-300x225.jpg	/api/media/file/B-0010-GRN-02-500x500.jpg	500	500	image/jpeg	32257	B-0010-GRN-02-500x500.jpg	/api/media/file/B-0010-GRN-02-600x450.jpg	600	450	image/jpeg	28849	B-0010-GRN-02-600x450.jpg	/api/media/file/B-0010-GRN-02-900x675.jpg	900	675	image/jpeg	59328	B-0010-GRN-02-900x675.jpg	/api/media/file/B-0010-GRN-02-1400x1051.jpg	1400	1051	image/jpeg	124903	B-0010-GRN-02-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/B-0010-GRN-02-1200x630.jpg	1200	630	image/jpeg	92681	B-0010-GRN-02-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/B-0010-GRN-02.jpg
+535	\N	\N	\N	2026-05-02 02:26:37.342+00	2026-05-02 02:26:35.857+00	/api/media/file/B-0010-GRN-4.jpg	\N	B-0010-GRN-4.jpg	image/jpeg	999940	1820	1366	50	50	/api/media/file/B-0010-GRN-4-300x225.jpg	300	225	image/jpeg	10641	B-0010-GRN-4-300x225.jpg	/api/media/file/B-0010-GRN-4-500x500.jpg	500	500	image/jpeg	44290	B-0010-GRN-4-500x500.jpg	/api/media/file/B-0010-GRN-4-600x450.jpg	600	450	image/jpeg	38574	B-0010-GRN-4-600x450.jpg	/api/media/file/B-0010-GRN-4-900x675.jpg	900	675	image/jpeg	81487	B-0010-GRN-4-900x675.jpg	/api/media/file/B-0010-GRN-4-1400x1051.jpg	1400	1051	image/jpeg	173862	B-0010-GRN-4-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/B-0010-GRN-4-1200x630.jpg	1200	630	image/jpeg	128865	B-0010-GRN-4-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/B-0010-GRN-4.jpg
 \.
 
 
@@ -4482,7 +4490,7 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 8	20260317_180300	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 9	20260318_161820	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 10	20260320_033436	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
-1	dev	-1	2026-05-02 02:07:37.192+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-05-02 02:28:26.339+00	2026-03-16 16:07:06.694+00
 \.
 
 
@@ -4494,6 +4502,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 69	collection-products-84	{"fields": {"_index-1": {"tabIndex": 2}}}	2026-05-02 01:54:55.491+00	2026-05-02 01:51:51.858+00
 2	collection-pages	{"limit": 10}	2026-03-16 17:13:14.133+00	2026-03-16 17:10:36.269+00
 60	collection-products-76	{"fields": {"_index-1": {"tabIndex": 2}}}	2026-05-02 02:08:10.318+00	2026-04-09 04:05:51.818+00
+72	collection-products-87	{"fields": {"_index-1": {"tabIndex": 2}}}	2026-05-02 02:27:36.766+00	2026-05-02 02:25:58.686+00
 5	global-stockists	{"editViewType": "default"}	2026-03-16 17:16:02.967+00	2026-03-16 17:16:02.969+00
 6	global-announcement	{"editViewType": "default"}	2026-03-16 17:16:07.07+00	2026-03-16 17:16:07.071+00
 7	global-links	{"editViewType": "default"}	2026-03-16 17:16:09.792+00	2026-03-16 17:16:09.793+00
@@ -4560,7 +4569,8 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 41	collection-products-24	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-04-10 16:18:30.945+00	2026-03-19 04:18:36.341+00
 27	collection-products-51	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-04-10 16:41:40.452+00	2026-03-19 00:25:03.125+00
 61	collection-products-77	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-04-10 16:46:18.986+00	2026-04-09 04:13:31.139+00
-1	collection-products	{"sort": "_order", "limit": 100, "columns": [{"active": true, "accessor": "sku"}, {"active": true, "accessor": "thumb"}, {"active": false, "accessor": "adminTitle"}, {"active": true, "accessor": "title"}, {"active": true, "accessor": "price"}, {"active": true, "accessor": "featured"}, {"active": false, "accessor": "id"}, {"active": false, "accessor": "name"}, {"active": false, "accessor": "tags"}, {"active": false, "accessor": "featuredImage"}, {"active": false, "accessor": "images"}, {"active": false, "accessor": "description"}, {"active": false, "accessor": "width"}, {"active": false, "accessor": "height"}, {"active": false, "accessor": "weight"}, {"active": false, "accessor": "holds"}, {"active": false, "accessor": "firingMethod"}, {"active": false, "accessor": "foodSafe"}, {"active": false, "accessor": "dishwasherSafe"}, {"active": false, "accessor": "relatedProducts"}, {"active": false, "accessor": "updatedAt"}, {"active": true, "accessor": "createdAt"}, {"active": false, "accessor": "makingLinks"}, {"active": false, "accessor": "length"}, {"active": false, "accessor": "meta.overview"}, {"active": false, "accessor": "meta.title"}, {"active": false, "accessor": "meta.description"}, {"active": false, "accessor": "meta.image"}, {"active": false, "accessor": "meta.preview"}], "editViewType": "default"}	2026-05-02 01:54:13.88+00	2026-03-16 17:10:33.961+00
+1	collection-products	{"sort": "-sku", "limit": 100, "columns": [{"active": true, "accessor": "sku"}, {"active": true, "accessor": "thumb"}, {"active": false, "accessor": "adminTitle"}, {"active": true, "accessor": "title"}, {"active": true, "accessor": "price"}, {"active": true, "accessor": "featured"}, {"active": false, "accessor": "id"}, {"active": false, "accessor": "name"}, {"active": false, "accessor": "tags"}, {"active": false, "accessor": "featuredImage"}, {"active": false, "accessor": "images"}, {"active": false, "accessor": "description"}, {"active": false, "accessor": "width"}, {"active": false, "accessor": "height"}, {"active": false, "accessor": "weight"}, {"active": false, "accessor": "holds"}, {"active": false, "accessor": "firingMethod"}, {"active": false, "accessor": "foodSafe"}, {"active": false, "accessor": "dishwasherSafe"}, {"active": false, "accessor": "relatedProducts"}, {"active": false, "accessor": "updatedAt"}, {"active": true, "accessor": "createdAt"}, {"active": false, "accessor": "makingLinks"}, {"active": false, "accessor": "length"}, {"active": false, "accessor": "meta.overview"}, {"active": false, "accessor": "meta.title"}, {"active": false, "accessor": "meta.description"}, {"active": false, "accessor": "meta.image"}, {"active": false, "accessor": "meta.preview"}], "editViewType": "default"}	2026-05-02 02:14:39.49+00	2026-03-16 17:10:33.961+00
+71	collection-products-86	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-05-02 02:25:44.927+00	2026-05-02 02:18:37.222+00
 \.
 
 
@@ -4580,7 +4590,6 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 11	\N	9	user	1
 12	\N	10	user	1
 13	\N	11	user	1
-253	\N	1	user	1
 183	\N	22	user	1
 254	\N	69	user	1
 255	\N	60	user	1
@@ -4591,6 +4600,7 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 188	\N	18	user	1
 256	\N	70	user	1
 26	\N	3	user	1
+257	\N	1	user	1
 190	\N	31	user	1
 191	\N	30	user	1
 30	\N	8	user	1
@@ -4600,9 +4610,11 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 193	\N	23	user	1
 35	\N	13	user	1
 194	\N	20	user	1
+260	\N	71	user	1
 198	\N	37	user	1
 41	\N	17	user	1
 104	\N	28	user	1
+262	\N	72	user	1
 45	\N	19	user	1
 201	\N	33	user	1
 205	\N	57	user	1
@@ -4850,7 +4862,9 @@ COPY public.products (id, admin_title, sku, title, name, price, featured, thumb_
 85	M-0044-PNK — Mug	M-0044-PNK	Ceramic Mug - Pink	Mug	50	f	527	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and handle design give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.75	4.25	399	16.6	electric-6	t	t	2026-05-02 02:09:42.747+00	2026-05-02 02:05:46.781+00	a1k	\N	\N	\N	\N	\N
 9	Faceted Sipping Cups - Brown	C-0001-BRN	Faceted Sipping Cups - Brown	SM Cups	42	f	36	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A pair of small faceted cups designed for sipping sake, whiskey, tequila, or espresso. The hand-faceted surfaces create subtle angles that catch the light while offering a comfortable, tactile grip. Their compact size makes them ideal for intimate pours and slow, intentional sipping.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A versatile addition to any barware or espresso setup, they balance function, craftsmanship, and everyday elegance.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	2.25	2.4	123	3.4	electric-6	t	t	2026-03-18 19:14:31.284+00	2026-03-17 18:14:51.874+00	az	39	\N	\N	\N	\N
 7	Carved Stoneware Bowl - Black	B-0007-BLK	Carved Stoneware Bowl - Black	MD Bowl	52	f	28	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A medium wheel thrown bowl perfect for entrees. Dipped in a black glaze, with carvings decorating the outside providing a tactile experience and visual interest.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware bowls are made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	6.75	2.75	471	24	electric-6	t	t	2026-03-18 19:15:00.82+00	2026-03-17 18:14:45.237+00	b05	10	\N	\N	\N	\N
+86	B-0009-GRN — Berry Bowl	B-0009-GRN	Stoneware Berry Bowl - Green	Berry Bowl	48	f	530	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small berry bowl for rinsing fresh fruit and vegetables, complete with handbuilt handles. Perfect for spring mornings and summer gatherings. Decorated with a verdant green dip glaze.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware is made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	6	3	526	\N	electric-6	t	t	2026-05-02 02:25:55.697+00	2026-05-02 02:18:35.65+00	b0e	\N	\N	\N	\N	\N
 27	M-0011-BLU — Mug	M-0011-BLU	Ceramic Mug - Glacial Blue	Mug	50	f	129	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.75	4.9	450	21.2	electric-6	t	t	2026-03-19 04:28:06.367+00	2026-03-17 18:16:13.402+00	ae	\N	\N	\N	\N	\N
+87	B-0010-GRN — Berry Bowl	B-0010-GRN	Stoneware Berry Bowl - Green	Berry Bowl	48	f	533	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small berry bowl for rinsing fresh fruit and vegetables, complete with handbuilt handles. Perfect for spring mornings and summer gatherings. Decorated with a verdant green dip glaze.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware is made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	5.75	2.75	526	\N	electric-6	t	t	2026-05-02 02:28:19.068+00	2026-05-02 02:25:35.506+00	b0f	\N	\N	\N	\N	\N
 28	Ceramic Mug - Brown	M-0012-BRN	Ceramic Mug - Brown	Mug	50	f	134	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.5 inches\\	4.25	342	17.15	electric-6	t	t	2026-03-18 19:14:35.751+00	2026-03-17 18:16:18.005+00	b00	39	\N	\N	\N	\N
 39	M-0023-WHY — Mug	M-0023-WHY	Ceramic Mug - White	Mug	50	f	189	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.5	4.75	361	15.75	electric-6	t	t	2026-04-09 04:05:00.024+00	2026-03-17 18:17:06.678+00	9y	\N	\N	\N	\N	\N
 38	M-0022-BLK — Mug	M-0022-BLK	Ceramic Mug - Black	Mug	50	f	184	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.5	4.75	361	15.75	electric-6	t	t	2026-04-10 15:21:43.858+00	2026-03-17 18:17:02.914+00	b02	10	\N	\N	\N	\N
@@ -4951,6 +4965,8 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 1	12	69b99a27aa9ac96a311210d0	51
 2	12	69b99a27aa9ac96a311210d1	52
 3	12	69b99a27aa9ac96a311210d2	53
+1	87	69f560f3d095a4535f1bcdd5	532
+2	87	69f560fad095a4535f1bcdd7	534
 1	40	69b99aa7aa9ac96a3112113d	195
 2	40	69b99aa7aa9ac96a3112113e	196
 3	40	69b99aa7aa9ac96a3112113f	197
@@ -4962,6 +4978,7 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 2	29	69b99a76aa9ac96a31121112	141
 3	29	69b99a76aa9ac96a31121113	142
 4	29	69b99a76aa9ac96a31121114	143
+3	87	69f560fed095a4535f1bcdd9	535
 1	65	69bb604dbfb95e406fd6c973	413
 2	65	69bb6052bfb95e406fd6c975	414
 3	65	69bb6058bfb95e406fd6c977	415
@@ -5130,6 +5147,9 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 3	49	69b99accaa9ac96a3112115f	240
 4	52	69b99ad7aa9ac96a31121168	252
 3	79	69d72bd935106f65daff1c6c	503
+1	86	69f55f032d04a45db62c2cc3	528
+2	86	69f55f202d04a45db62c2cc5	531
+3	86	69f55f262d04a45db62c2cc7	529
 1	46	69b99ac2aa9ac96a31121154	225
 2	46	69b99ac2aa9ac96a31121155	226
 3	46	69b99ac2aa9ac96a31121156	227
@@ -5452,8 +5472,10 @@ COPY public.products_tags ("order", parent_id, value, id) FROM stdin;
 1	27	drink	399
 1	4	eat	280
 1	10	drink	281
+1	86	eat	569
 1	29	drink	283
 1	34	drink	284
+1	87	eat	571
 1	30	drink	401
 1	37	drink	402
 1	46	pour	229
@@ -5822,7 +5844,7 @@ SELECT pg_catalog.setval('public.links_id_seq', 1, true);
 -- Name: media_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.media_id_seq', 527, true);
+SELECT pg_catalog.setval('public.media_id_seq', 535, true);
 
 
 --
@@ -5878,14 +5900,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 261, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 267, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 474, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 486, true);
 
 
 --
@@ -5899,14 +5921,14 @@ SELECT pg_catalog.setval('public.payload_migrations_id_seq', 10, true);
 -- Name: payload_preferences_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_id_seq', 70, true);
+SELECT pg_catalog.setval('public.payload_preferences_id_seq', 72, true);
 
 
 --
 -- Name: payload_preferences_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 256, true);
+SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 262, true);
 
 
 --
@@ -5927,7 +5949,7 @@ SELECT pg_catalog.setval('public.posts_rels_id_seq', 1, false);
 -- Name: products_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_id_seq', 85, true);
+SELECT pg_catalog.setval('public.products_id_seq', 87, true);
 
 
 --
@@ -5941,7 +5963,7 @@ SELECT pg_catalog.setval('public.products_rels_id_seq', 874, true);
 -- Name: products_tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_tags_id_seq', 563, true);
+SELECT pg_catalog.setval('public.products_tags_id_seq', 571, true);
 
 
 --
@@ -9758,5 +9780,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict yC1w6tx70aXxeaV8L8cDQPwrU5e6GuBqN0RNyEONebT4uOHqaPP9u3mSBHtFS5A
+\unrestrict uUwvF0zITu1HDrfjrCegXCBXqscHnPTVNL9y3PiL1jXujbMSpmPinZZTtzkNG5K
 
