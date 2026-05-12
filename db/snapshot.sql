@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict JxQcKxFV5KXC16Pyz9s8wwResfdgJ8Chqao3dncljNKvpFJfnRYSgcxZXxKlRGb
+\restrict 9rWHgrzDg1QFPEWf4FlivzPLmSIkRiVeWiRlDlzWWA6lvXgsThZMb0DEXSMGdMN
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -4481,6 +4481,7 @@ COPY public.payload_kv (id, key, data) FROM stdin;
 --
 
 COPY public.payload_locked_documents (id, global_slug, updated_at, created_at) FROM stdin;
+376	announcement	2026-05-12 16:09:05.558+00	2026-05-12 16:08:58.895+00
 \.
 
 
@@ -4489,6 +4490,7 @@ COPY public.payload_locked_documents (id, global_slug, updated_at, created_at) F
 --
 
 COPY public.payload_locked_documents_rels (id, "order", parent_id, path, pages_id, posts_id, media_id, categories_id, users_id, redirects_id, forms_id, form_submissions_id, search_id, payload_folders_id, products_id, events_id) FROM stdin;
+698	\N	376	user	\N	\N	\N	\N	1	\N	\N	\N	\N	\N	\N	\N
 \.
 
 
@@ -5850,7 +5852,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	3b1a8645-91da-4bea-9566-9b55600963ae	2026-05-12 13:57:27.15+00	2026-05-12 15:57:27.15+00
+1	1	991b1384-1638-448d-a0fd-57f9336f03db	2026-05-12 16:08:53.578+00	2026-05-12 18:08:53.578+00
 \.
 
 
@@ -6103,14 +6105,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 375, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 376, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 697, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 698, true);
 
 
 --
@@ -9983,5 +9985,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict JxQcKxFV5KXC16Pyz9s8wwResfdgJ8Chqao3dncljNKvpFJfnRYSgcxZXxKlRGb
+\unrestrict 9rWHgrzDg1QFPEWf4FlivzPLmSIkRiVeWiRlDlzWWA6lvXgsThZMb0DEXSMGdMN
 
