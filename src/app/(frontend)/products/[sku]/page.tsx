@@ -16,6 +16,7 @@ import { ProductImages } from './ProductImages.client'
 import { ProductCard } from '@/components/ProductCard'
 import { ShopStockChecker } from '../../shop/ShopStockChecker.client'
 import RichText from '@/components/RichText'
+import { PricingNote } from '@/components/PricingNote'
 
 export const dynamic = 'force-static'
 
@@ -70,6 +71,7 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
     <main style={{ overflowX: 'hidden' }}>
       {/* Tag filter — highlight the product's own tag(s), never "All" */}
       <ShopTagFilter current={product.tags?.length ? product.tags : undefined} />
+      <PricingNote />
 
       {/* Product layout */}
       <div className="container" style={{ paddingTop: '2rem' }}>

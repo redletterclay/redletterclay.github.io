@@ -156,23 +156,28 @@ export default async function HomePage() {
           />
           <Link
             href="/shop/"
-            className="btn btn-outline-primary animate__animated animate__flipInX"
+            className="btn animate__animated animate__flipInX"
             style={{
               borderRadius: '9999px',
               padding: '0.5rem 2rem',
               textAlign: 'center',
               whiteSpace: 'nowrap',
+              backgroundColor: '#24A9CA',
+              color: 'white',
+              border: '2px solid #24A9CA',
+              fontSize: '1.4rem',
+              fontFamily: 'var(--font-heading2)',
             }}
           >
             <i
-              className="fa-solid fa-cart-shopping fc-1 no-anim"
-              style={{ marginRight: '0.5rem' }}
+              className="fa-solid fa-cart-shopping no-anim"
+              style={{ marginRight: '0.5rem', color: 'white' }}
               aria-hidden="true"
             />
             Shop{' '}
             <i
-              className="fa-solid fa-angles-right fc-7 slide"
-              style={{ marginLeft: '0.5rem' }}
+              className="fa-solid fa-angles-right slide"
+              style={{ marginLeft: '0.5rem', color: 'white' }}
               aria-hidden="true"
             />
           </Link>
@@ -207,13 +212,13 @@ export default async function HomePage() {
               {featured.map((product: any) => (
                 <ProductCard key={product.id} product={product} featured={true} />
               ))}
-            </div>
-            <div className="container" style={{ textAlign: 'right', paddingBottom: '3rem' }}>
-              <h3 style={{ paddingRight: '1rem', paddingTop: '0.5rem' }}>
-                <Link href="/shop/" title="Shop Handmade Ceramics">
-                  <i className="fa-regular fa-circle-right" aria-hidden="true" /> See More
-                </Link>
-              </h3>
+              <div style={{ width: '100%', textAlign: 'right', paddingTop: '0.5rem', paddingBottom: '3rem', paddingRight: '0.75rem' }}>
+                <h3 style={{ margin: 0 }}>
+                  <Link href="/shop/" title="Shop Handmade Ceramics" style={{ color: '#24A9CA' }}>
+                    <i className="fa-regular fa-circle-right" aria-hidden="true" /> See More
+                  </Link>
+                </h3>
+              </div>
             </div>
           </>
         )}
@@ -335,6 +340,8 @@ function AnnouncementBox({ announcement }: { announcement: any }) {
               flexDirection: 'column',
               justifyContent: 'center',
               textAlign: 'center',
+              fontSize: '1.6rem',
+              lineHeight: '2.5rem',
             }}
           >
             {announcement.info && (

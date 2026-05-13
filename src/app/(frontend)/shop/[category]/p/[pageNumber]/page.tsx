@@ -9,6 +9,7 @@ import { ShopTagFilter } from '../../../ShopTagFilter'
 import { ShopStockChecker } from '../../../ShopStockChecker.client'
 import { ProductCard } from '@/components/ProductCard'
 import { ShopPagination } from '../../../ShopPagination'
+import { PricingNote } from '@/components/PricingNote'
 
 export const revalidate = 600
 
@@ -42,6 +43,7 @@ export default async function ShopCategoryPageN({ params: paramsPromise }: Args)
     <main style={{ overflowX: 'hidden' }}>
       <ShopStockChecker />
       <ShopTagFilter current={category} />
+      <PricingNote />
 
       <div className="container-fluid" style={{ padding: '0 0.5rem' }}>
         <div className="animate__animated animate__fadeIn" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>

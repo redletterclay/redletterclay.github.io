@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict qVSGbaakMQZ69XOmJGjIMg2zfN2VaNqGkb886jxAVUGdO6zUbM79ltZnzXZWWh2
+\restrict 0bcjDiqmFZqVrHOaiqjcAdbBxssVp8kwunr9OfaZsOEWJkcmLtHVhmGOtGk9L0s
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -3460,7 +3460,7 @@ COPY public._posts_v_version_gallery_items (_order, _parent_id, id, image_id, al
 --
 
 COPY public.announcement (id, name, live, url, thumb_id, cta, updated_at, created_at, info) FROM stdin;
-1	Shop in Person at My Next Market	t	/shop/	552	\N	2026-05-12 16:11:08.105+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Join me and over 50 ceramicists May 30 + 31 at The Chicago Pottery Market, sponsored by ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a03394c0e5ae159276faa1a", "type": "link", "fields": {"url": "https://www.wilderhouse.com/", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Wilderhouse", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": ". See the ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a03509b0e5ae159276faa24", "type": "link", "fields": {"url": "/events", "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Calendar", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " for more details.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}
+1	Shop in Person at My Next Market	t	/shop/	552	\N	2026-05-13 19:00:40.624+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Join me and over 50 ceramicists ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "May 30 + 31", "type": "text", "style": "", "detail": 0, "format": 1, "version": 1}, {"mode": "normal", "text": " at The Chicago Pottery Market, sponsored by ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a03394c0e5ae159276faa1a", "type": "link", "fields": {"url": "https://www.wilderhouse.com/", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Wilderhouse", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": ".", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "See the ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a03509b0e5ae159276faa24", "type": "link", "fields": {"url": "/events", "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Calendar", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " for more details.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}
 \.
 
 
@@ -4502,11 +4502,11 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 6	20260318_191703	5	2026-03-18 19:17:08.293+00	2026-03-18 19:17:08.293+00
 2	20260317_061117	1	2026-03-17 06:12:15.302+00	2026-03-17 06:12:15.302+00
 5	20260318_181856	4	2026-03-18 18:25:43.589+00	2026-03-18 18:25:43.589+00
+1	dev	-1	2026-05-13 20:08:27.379+00	2026-03-16 16:07:06.694+00
 7	20260320_041255	6	2026-03-20 04:16:57.288+00	2026-03-20 04:16:57.288+00
 8	20260317_180300	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 9	20260318_161820	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 10	20260320_033436	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
-1	dev	-1	2026-05-13 16:18:56.736+00	2026-03-16 16:07:06.694+00
 \.
 
 
@@ -5850,7 +5850,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	15339426-b883-437d-a5d7-59d9b3532fbd	2026-05-13 16:08:07.652+00	2026-05-13 18:08:07.652+00
+1	1	a30888e1-8722-475d-943d-b8e47151c865	2026-05-13 18:59:13.47+00	2026-05-13 20:59:13.47+00
 \.
 
 
@@ -6103,14 +6103,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 386, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 389, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 718, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 721, true);
 
 
 --
@@ -9983,5 +9983,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict qVSGbaakMQZ69XOmJGjIMg2zfN2VaNqGkb886jxAVUGdO6zUbM79ltZnzXZWWh2
+\unrestrict 0bcjDiqmFZqVrHOaiqjcAdbBxssVp8kwunr9OfaZsOEWJkcmLtHVhmGOtGk9L0s
 

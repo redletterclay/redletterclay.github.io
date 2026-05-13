@@ -11,6 +11,7 @@ import { ShopTagFilter } from './ShopTagFilter'
 import { ShopStockChecker } from './ShopStockChecker.client'
 import { ProductCard, localPrice } from '@/components/ProductCard'
 import { ShopPagination } from './ShopPagination'
+import { PricingNote } from '@/components/PricingNote'
 
 export const dynamic = 'force-static'
 export const revalidate = 600
@@ -35,6 +36,25 @@ export default async function ShopPage() {
       {/* Tag filter */}
       <ShopTagFilter />
 
+      {/* Tax + shipping note */}
+      <p
+        style={{
+          textAlign: 'center',
+          fontSize: '1.3rem',
+          color: '#8C5C40',
+          margin: '0.5rem 0 0',
+          letterSpacing: '0.02em',
+          fontFamily: 'var(--font-heading2)',
+        }}
+      >
+        <i
+          className="fa-solid fa-face-grin-wide"
+          style={{ marginRight: '0.4rem', color: '#24A9CA' }}
+          aria-hidden="true"
+        />
+        Simple pricing: All totals include shipping and tax.
+      </p>
+
       {/* Product grid */}
       <div className="container-fluid" style={{ padding: '0 0.5rem' }}>
         <div
@@ -57,47 +77,80 @@ export default async function ShopPage() {
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem' }}>
           <div style={{ flex: '1 1 280px', textAlign: 'center' }}>
             <h3 style={{ fontWeight: 500, paddingBottom: '0.75rem', textAlign: 'center' }}>
-              <i className="fa-solid fa-route fc-7" style={{ marginRight: '0.5rem' }} aria-hidden="true" />
+              <i
+                className="fa-solid fa-route fc-7"
+                style={{ marginRight: '0.5rem' }}
+                aria-hidden="true"
+              />
               Local Pick Up Available
             </h3>
             <p style={{ textAlign: 'center' }}>
               Receive 15% off your total when you opt for local pick-up.
             </p>
             <p style={{ textAlign: 'center' }}>
-              Illinois residents can schedule a time to pick up in person in the Pilsen neighborhood of Chicago.
+              Illinois residents can schedule a time to pick up in person in the Pilsen neighborhood
+              of Chicago.
             </p>
           </div>
           <div style={{ flex: '1 1 280px' }}>
             <h3 style={{ fontWeight: 500, paddingBottom: '0.75rem', textAlign: 'center' }}>
-              <i className="fa-solid fa-truck-fast fc-7" style={{ marginRight: '0.5rem' }} aria-hidden="true" />
+              <i
+                className="fa-solid fa-truck-fast fc-7"
+                style={{ marginRight: '0.5rem' }}
+                aria-hidden="true"
+              />
               FREE Shipping to United States
             </h3>
             <p style={{ textAlign: 'center' }}>
-              Orders ship USPS Ground Advantage.<br />Insurance is added to orders over $100.
+              Orders ship USPS Ground Advantage.
+              <br />
+              Insurance is added to orders over $100.
             </p>
           </div>
           <div style={{ flex: '1 1 280px', textAlign: 'center' }}>
             <h3 style={{ fontWeight: 500, paddingBottom: '0.75rem', textAlign: 'center' }}>
-              <i className="fa-solid fa-circle-check fc-7" style={{ marginRight: '0.5rem' }} aria-hidden="true" />
+              <i
+                className="fa-solid fa-circle-check fc-7"
+                style={{ marginRight: '0.5rem' }}
+                aria-hidden="true"
+              />
               Plan for Success
             </h3>
             <p style={{ textAlign: 'center', paddingLeft: '0.75rem', paddingRight: '0.75rem' }}>
-              If possible, consider shipping to a business address where packages are often received and brought inside quickly. Postal workers often throw boxes over gates onto hard surfaces and while each order is packaged carefully, this extra step helps.
+              If possible, consider shipping to a business address where packages are often received
+              and brought inside quickly. Postal workers often throw boxes over gates onto hard
+              surfaces and while each order is packaged carefully, this extra step helps.
             </p>
           </div>
         </div>
 
         {/* Made in Chicago */}
         <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '3rem' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', maxWidth: '280px' }}>
-            <h3 className="fc-1" style={{ marginBottom: '0.75rem' }}>Made in Chicago</h3>
-            <Link href="/about" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center',
+              maxWidth: '280px',
+            }}
+          >
+            <h3 className="fc-1" style={{ marginBottom: '0.75rem' }}>
+              Made in Chicago
+            </h3>
+            <Link
+              href="/about"
+              style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+            >
               <img
                 src="https://ik.imagekit.io/raygun/redletterclay/davey.png"
                 alt="by Davey Ball"
                 style={{ maxWidth: '150%', padding: '0 1.25rem' }}
               />
-              <h3 style={{ paddingTop: '0.75rem', fontStyle: 'italic', fontWeight: 500 }} className="fc-1">
+              <h3
+                style={{ paddingTop: '0.75rem', fontStyle: 'italic', fontWeight: 500 }}
+                className="fc-1"
+              >
                 by Davey Ball
               </h3>
             </Link>
@@ -116,11 +169,16 @@ export default async function ShopPage() {
   )
 }
 
-
 export function generateMetadata(): Metadata {
   return {
     title: 'Shop Handmade Ceramics | Red Letter Clay',
-    description: 'Shop handmade stoneware pottery by Davey Ball — mugs, bowls, vases, planters and more. Made in Chicago. Free shipping to the United States.',
-    openGraph: mergeOpenGraph({ title: 'Shop Handmade Ceramics | Red Letter Clay', description: 'Shop handmade stoneware pottery by Davey Ball — mugs, bowls, vases, planters and more. Made in Chicago. Free shipping to the United States.', url: '/shop' }),
+    description:
+      'Shop handmade stoneware pottery by Davey Ball — mugs, bowls, vases, planters and more. Made in Chicago. Free shipping to the United States.',
+    openGraph: mergeOpenGraph({
+      title: 'Shop Handmade Ceramics | Red Letter Clay',
+      description:
+        'Shop handmade stoneware pottery by Davey Ball — mugs, bowls, vases, planters and more. Made in Chicago. Free shipping to the United States.',
+      url: '/shop',
+    }),
   }
 }

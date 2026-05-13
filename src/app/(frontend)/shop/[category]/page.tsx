@@ -12,6 +12,7 @@ import { ShopTagFilter } from '../ShopTagFilter'
 import { ShopStockChecker } from '../ShopStockChecker.client'
 import { ProductCard, localPrice } from '@/components/ProductCard'
 import { ShopPagination } from '../ShopPagination'
+import { PricingNote } from '@/components/PricingNote'
 
 export const revalidate = 600
 
@@ -46,6 +47,7 @@ export default async function ShopCategoryPage({ params: paramsPromise }: Args) 
       <ShopStockChecker />
       {/* Tag filter */}
       <ShopTagFilter current={category} />
+      <PricingNote />
 
       {/* Product grid */}
       <div className="container-fluid" style={{ padding: '0 0.5rem' }}>
