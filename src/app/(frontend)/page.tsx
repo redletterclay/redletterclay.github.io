@@ -12,6 +12,7 @@ import { ProductCard } from '@/components/ProductCard'
 import { ShopStockChecker } from './shop/ShopStockChecker.client'
 import { Last4Journal } from '@/components/Last4Journal'
 import RichText from '@/components/RichText'
+import { PricingNote } from '@/components/PricingNote'
 
 export const dynamic = 'force-static'
 export const revalidate = 600
@@ -186,6 +187,7 @@ export default async function HomePage() {
             className="animate__animated animate__zoomIn"
           />
         </div>
+        <PricingNote />
 
         {/* Collection Title */}
         {collectionTitle && (

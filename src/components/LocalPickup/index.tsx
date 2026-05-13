@@ -60,9 +60,9 @@ export function LocalPickupScript() {
     ;(async () => {
       const w = window as any
 
-      // Restore dismissed state from sessionStorage
+      // Restore dismissed state from localStorage (1-week TTL)
       try {
-        if (sessionStorage.getItem('rlc.local-pickup-dismissed') === 'true') {
+        if (getStorageItemWithTtl(localStorage, 'rlc.local-pickup-dismissed') === 'true') {
           document.body.setAttribute('data-local-pickup-dismissed', 'true')
         }
       } catch {}
@@ -82,7 +82,7 @@ export function LocalPickupScript() {
         if (hasDiscount) {
           document.body.removeAttribute('data-local-pickup-dismissed')
           try {
-            sessionStorage.removeItem('rlc.local-pickup-dismissed')
+            localStorage.removeItem('rlc.local-pickup-dismissed')
           } catch {}
         }
       }
@@ -109,7 +109,7 @@ export function LocalPickupScript() {
           case 'dismiss_local_pickup_banner':
             document.body.setAttribute('data-local-pickup-dismissed', 'true')
             try {
-              sessionStorage.setItem('rlc.local-pickup-dismissed', 'true')
+              setStorageItemWithTtl(localStorage, 'rlc.local-pickup-dismissed', 'true', 7 * 24 * 60 * 60 * 1000)
             } catch {}
             break
         }

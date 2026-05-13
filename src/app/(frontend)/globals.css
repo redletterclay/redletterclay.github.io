@@ -1097,6 +1097,11 @@ div.stockable[data-stock="0"] .icon { padding: 1em; display: inline-block; }
 .glightbox-mobile .glightbox-container .gslide-description { background: none !important; }
 .safe-and-amp { display: none; }
 /* Scroll-reveal fade-up */
+/* Hide "shipping and" in PricingNote when local pickup discount is active */
+body[data-local-pickup-discount="true"] .pricing-note-shipping {
+  display: none;
+}
+
 .scroll-reveal {
   opacity: 0;
   transform: translateY(28px);

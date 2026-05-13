@@ -1,6 +1,7 @@
 export function PricingNote() {
   return (
     <p
+      className="animate__animated animate__fadeIn animate__delay-1s"
       style={{
         textAlign: 'center',
         fontSize: '1.3rem',
@@ -15,7 +16,7 @@ export function PricingNote() {
         style={{ marginRight: '0.4rem', color: '#24A9CA' }}
         aria-hidden="true"
       />
-      Simple pricing: All totals include shipping and tax.
+      Simple pricing: All totals include <span className="pricing-note-shipping">shipping and </span>tax.
     </p>
   )
 }
