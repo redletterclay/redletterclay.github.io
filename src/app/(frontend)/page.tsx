@@ -145,6 +145,7 @@ export default async function HomePage() {
             display: 'flex',
             alignItems: 'center',
             gap: '1rem',
+            paddingTop: '2rem',
             paddingBottom: '2rem',
             paddingInline: '1.5rem',
           }}

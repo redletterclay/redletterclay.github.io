@@ -48,7 +48,7 @@ export const RLCHeaderClient: React.FC = () => {
           <div className="rlc-nav-outer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', gap: '0.5rem' }}>
 
             {/* Left: stamp + brand */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0, paddingLeft: '1rem' }}>
               <Link key={pathname} href="/" className="nav-link-no-ul animate__animated animate__jackInTheBox animate__delay-1s" style={{ display: 'flex', alignItems: 'center' }}>
                 <Image
                   src="/assets/img/SVG/logo-stamp.svg"
@@ -78,7 +78,7 @@ export const RLCHeaderClient: React.FC = () => {
             </div>
 
             {/* Right: local pickup toggle + cart + hamburger */}
-            <div className="rlc-nav-right" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}>
+            <div className="rlc-nav-right" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0, paddingRight: '1rem' }}>
               <LocalPickupToggle />
               <CartButton />
               {/* Hamburger — hidden at 1200px+ via CSS */}

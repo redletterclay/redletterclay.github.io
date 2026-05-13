@@ -20,20 +20,20 @@ export function EventsCarousel() {
   }, [])
 
   return (
-    <div style={{ position: 'relative' }}>
+    <div style={{ position: 'relative', width: '100%', paddingBottom: '100%' }}>
       {SLIDES.map((slide, i) => (
         <img
           key={slide.src}
           src={slide.src}
           alt={slide.alt}
           style={{
+            position: 'absolute',
+            inset: 0,
             width: '100%',
-            display: 'block',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center center',
             borderRadius: '1rem',
-            objectFit: 'contain',
-            position: i === 0 ? 'relative' : 'absolute',
-            top: i === 0 ? undefined : 0,
-            left: 0,
             opacity: i === index ? 1 : 0,
             transition: 'opacity 0.8s ease-in-out',
           }}

@@ -51,23 +51,23 @@ export function EventCard({
       >
         {/* Row 1: DAY DATE MONTH | TIME */}
         <div className="event-row1" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-          <h2 className="fc-1" style={{ margin: 0, fontWeight: 500, fontSize: '2rem' }}>
+          <h2 className="fc-1" style={{ margin: 0, fontWeight: 400, fontSize: '1.4rem' }}>
             {day}, {month} {date}
           </h2>
           {event.time && (
-            <h2 style={{ margin: 0, fontWeight: 500, fontSize: '2rem' }}>{event.time}</h2>
+            <h2 style={{ margin: 0, fontWeight: 400, fontSize: '1.4rem' }}>{event.time}</h2>
           )}
         </div>
 
         {/* Row 2: TITLE */}
-        <h3 style={{ textAlign: 'center', fontWeight: 600, fontSize: '1.5rem', margin: 0, paddingTop: '3rem' }}>
+        <h3 style={{ textAlign: 'center', fontWeight: 700, fontSize: '2rem', margin: 0, paddingTop: '2rem' }}>
           {event.url ? (
             <a href={event.url} target="_blank" rel="noopener noreferrer">{event.title}</a>
           ) : event.title}
         </h3>
 
         {/* Row 3: ADDRESS */}
-        <h5 style={{ textAlign: 'center', lineHeight: '1.6rem', margin: '0.75rem 0 0', fontSize: '1.1rem', paddingBottom: '3rem' }}>
+        <h5 style={{ textAlign: 'center', lineHeight: '1.5rem', margin: '0.75rem 0 0', fontSize: '1rem', paddingBottom: '2rem' }}>
           {event.location}
           {event.location && event.address && <br />}
           {event.address}
@@ -75,7 +75,7 @@ export function EventCard({
 
         {/* Row 4: YEAR | MAP */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-          <h3 style={{ margin: 0, fontWeight: 200, fontSize: '1.5rem', color: isUpcoming ? '#c12121' : '#8C5C40' }}>
+          <h3 style={{ margin: 0, fontWeight: 200, fontSize: '1.1rem', color: isUpcoming ? '#c12121' : '#8C5C40' }}>
             {year}
           </h3>
           {event.mapUrl && (

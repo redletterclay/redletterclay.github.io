@@ -42,147 +42,157 @@ export default async function EventsPage() {
         >
           Exhibitions &amp; Markets
         </h1>
-        {/* Top two-column layout */}
+        {/* Row 1 — carousel | text + subscribe */}
         <div
           style={{
             display: 'flex',
             flexWrap: 'wrap',
-            alignItems: 'stretch',
+            alignItems: 'flex-start',
             gap: '1.5rem',
             marginBottom: '2rem',
           }}
         >
           {/* Col 1 — market carousel */}
-          <div className="events-col-image" style={{ flex: '1 1 300px' }}>
+          <div className="events-col-image" style={{ flex: '1 1 380px' }}>
             <ScrollReveal delay={200}>
               <EventsCarousel />
             </ScrollReveal>
           </div>
 
-          {/* Col 2 — text + subscribe + upcoming events */}
+          {/* Col 2 — text + subscribe */}
           <div
             className="events-col-content"
             style={{
-              flex: '2 1 400px',
+              flex: '1 1 300px',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
+              gap: '1rem',
             }}
           >
-            <div
-              style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '1rem',
-              }}
-            >
-              <ScrollReveal className="w-full md:w-[70%]" delay={450}>
-                <p
-                  style={{
-                    textAlign: 'center',
-                    margin: '1.5rem 0',
-                    padding: '1.25rem 1.5rem',
-                    borderRadius: '0.5rem',
-                  }}
-                >
-                  I typically do 4-6 markets a year, mostly around Chicago. The best way to know
-                  where I&apos;ll be next is to join the mailing list.
-                </p>
-              </ScrollReveal>
-              <ScrollReveal className="w-full md:w-[30%]" delay={600}>
-                <div style={{ textAlign: 'center', padding: '0 0 1.5rem' }}>
-                  <SubscribeButton />
-                </div>
-              </ScrollReveal>
-            </div>
-            {upcoming.length > 0 && (
-              <section style={{ marginBottom: '2rem' }}>
-                <ScrollReveal delay={750}>
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      gap: '1rem',
-                      marginBottom: '1.5rem',
-                    }}
-                  >
-                    <h2 style={{ margin: 0, whiteSpace: 'nowrap', paddingTop: '2rem' }}>
-                      <i
-                        className="fa-solid fa-calendar-days fc-1"
-                        style={{ marginRight: '0.5rem' }}
-                        aria-hidden="true"
-                      />
-                      Upcoming
-                    </h2>
-                  </div>
-                </ScrollReveal>
-                <ScrollReveal delay={900}>
-                  <img
-                    src="https://ik.imagekit.io/raygun/redletterclay/chicago-pottery-market.webp"
-                    alt="Chicago Pottery Market"
-                    style={{ width: '450px', display: 'block', margin: '0 auto' }}
-                  />
-                </ScrollReveal>
-                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-                  {upcoming.map((event: any, i: number) => (
-                    <EventCard
-                      key={event.id}
-                      event={event}
-                      isUpcoming={true}
-                      scrollReveal
-                      delay={(i % 3) * 100}
-                    />
-                  ))}
-                </div>
-              </section>
-            )}
+            <ScrollReveal delay={450}>
+              <p
+                style={{
+                  textAlign: 'center',
+                  margin: '1.5rem 0',
+                  padding: '1.25rem 1.5rem',
+                  borderRadius: '0.5rem',
+                }}
+              >
+                I typically do 4-6 markets a year, mostly around Chicago. The best way to know where
+                I&apos;ll be next is to join the mailing list.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal delay={600}>
+              <div style={{ textAlign: 'center', padding: '0 0 1.5rem' }}>
+                <SubscribeButton />
+              </div>
+            </ScrollReveal>
           </div>
         </div>
+
+        {/* Row 2 — upcoming events */}
+        {upcoming.length > 0 && (
+          <section style={{ paddingTop: '3rem', marginBottom: '2rem' }}>
+            <ScrollReveal delay={750}>
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1rem',
+                  marginBottom: '1.5rem',
+                }}
+              >
+                <hr
+                  style={{
+                    flex: 1,
+                    borderColor: '#ffe0e2',
+                    borderWidth: '1px',
+                    borderStyle: 'solid',
+                  }}
+                />
+                <h2 style={{ margin: 0, whiteSpace: 'nowrap' }}>
+                  <i
+                    className="fa-solid fa-calendar-days fc-1"
+                    style={{ marginRight: '0.5rem' }}
+                    aria-hidden="true"
+                  />
+                  Upcoming
+                </h2>
+                <hr
+                  style={{
+                    flex: 1,
+                    borderColor: '#ffe0e2',
+                    borderWidth: '1px',
+                    borderStyle: 'solid',
+                  }}
+                />
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={900}>
+              <img
+                src="https://ik.imagekit.io/raygun/redletterclay/chicago-pottery-market.webp"
+                alt="Chicago Pottery Market"
+                style={{ maxWidth: '450px', width: '100%', display: 'block', margin: '0 auto' }}
+              />
+            </ScrollReveal>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+              {upcoming.map((event: any, i: number) => (
+                <EventCard
+                  key={event.id}
+                  event={event}
+                  isUpcoming={true}
+                  scrollReveal
+                  delay={(i % 3) * 100}
+                />
+              ))}
+            </div>
+          </section>
+        )}
       </div>
 
       {past.length > 0 && (
-        <section style={{ paddingBottom: '2rem' }}>
-          <ScrollReveal>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '1rem',
-                marginBottom: '1.5rem',
-              }}
-            >
-              <hr
+        <section style={{ paddingTop: '3rem', paddingBottom: '2rem' }}>
+          <div className="container">
+            <ScrollReveal>
+              <div
                 style={{
-                  flex: 1,
-                  borderColor: '#ffe0e2',
-                  borderWidth: '1px',
-                  borderStyle: 'solid',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1rem',
+                  marginBottom: '1.5rem',
                 }}
-              />
-              <h2 style={{ margin: 0, whiteSpace: 'nowrap' }}>Past Events</h2>
-              <hr
-                style={{
-                  flex: 1,
-                  borderColor: '#ffe0e2',
-                  borderWidth: '1px',
-                  borderStyle: 'solid',
-                }}
-              />
+              >
+                <hr
+                  style={{
+                    flex: 1,
+                    borderColor: '#ffe0e2',
+                    borderWidth: '1px',
+                    borderStyle: 'solid',
+                  }}
+                />
+                <h2 style={{ margin: 0, whiteSpace: 'nowrap' }}>Past Events</h2>
+                <hr
+                  style={{
+                    flex: 1,
+                    borderColor: '#ffe0e2',
+                    borderWidth: '1px',
+                    borderStyle: 'solid',
+                  }}
+                />
+              </div>
+            </ScrollReveal>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+              {past.map((event: any, i: number) => (
+                <EventCard
+                  key={event.id}
+                  event={event}
+                  isUpcoming={false}
+                  scrollReveal
+                  delay={Math.min(i * 100, 800)}
+                />
+              ))}
             </div>
-          </ScrollReveal>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-            {past.map((event: any, i: number) => (
-              <EventCard
-                key={event.id}
-                event={event}
-                isUpcoming={false}
-                scrollReveal
-                delay={Math.min(i * 100, 800)}
-              />
-            ))}
           </div>
         </section>
       )}

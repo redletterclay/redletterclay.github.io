@@ -7,7 +7,7 @@ export function SubscribeButton() {
     <div className="mlite">
       {/* ml('show', 'UCLL6U', true) — same call as Jekyll site */}
       <a
-        className="ml-onclick-form pt-2 pb-1 text-center"
+        className="ml-onclick-form btn pt-2 pb-1 text-center"
         style={{ borderRadius: '9999px', paddingLeft: '1rem', paddingRight: '1rem' }}
         href="javascript:void(0)"
         onClick={() => {
