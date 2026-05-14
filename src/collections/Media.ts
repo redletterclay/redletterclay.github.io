@@ -78,6 +78,31 @@ export const Media: CollectionConfig = {
         return doc
       },
     ],
+    afterDelete: [
+      ({ doc, req }) => {
+        if (!doc.filename) return
+        const docFilename = doc.filename
+        const payload = req.payload
+        // Delete from ImageKit asynchronously — don't block the Payload response
+        ;(async () => {
+          try {
+            const results = await imagekit.files.list({
+              searchQuery: `name = "${docFilename}"`,
+              includeFolder: IMAGEKIT_FOLDER,
+            })
+            const file = (results as any[]).find(
+              (f: any) => f.filePath === `${IMAGEKIT_FOLDER}/${docFilename}`,
+            )
+            if (file) {
+              await imagekit.files.delete(file.fileId)
+              payload.logger.info(`ImageKit delete: ${file.filePath}`)
+            }
+          } catch (err) {
+            payload.logger.warn(`ImageKit delete failed for ${docFilename}: ${err}`)
+          }
+        })()
+      },
+    ],
     afterChange: [
       ({ doc, req }) => {
         // Only upload to ImageKit when a file is actually present (create or file replacement)

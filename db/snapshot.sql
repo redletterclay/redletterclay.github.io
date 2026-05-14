@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict kPy6owZBiH5nLHSso4bHdQeQSm7Spu0YGQNmNO8b0kcXvobuplpuWdFqkSnXL8V
+\restrict t9VhfPchNFqdbQSSKOkiMkuKZXNbgJGeaMuu76mAg6DxqAkmmn75Nbhn3L0ZO1d
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -3563,7 +3563,7 @@ COPY public._posts_v_version_gallery_items (_order, _parent_id, id, image_id, al
 --
 
 COPY public.announcement (id, name, live, url, thumb_id, cta, updated_at, created_at, info) FROM stdin;
-1	Shop in Person at My Next Market	t	/shop/	552	\N	2026-05-13 19:00:40.624+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Join me and over 50 ceramicists ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "May 30 + 31", "type": "text", "style": "", "detail": 0, "format": 1, "version": 1}, {"mode": "normal", "text": " at The Chicago Pottery Market, sponsored by ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a03394c0e5ae159276faa1a", "type": "link", "fields": {"url": "https://www.wilderhouse.com/", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Wilderhouse", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": ".", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "See the ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a03509b0e5ae159276faa24", "type": "link", "fields": {"url": "/events", "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Calendar", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " for more details.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}
+1	Shop in Person at My Next Market	t	/shop/	552	\N	2026-05-14 21:29:19.974+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Join me and over 50 ceramicists ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "May 30 + 31", "type": "text", "style": "", "detail": 0, "format": 1, "version": 1}, {"mode": "normal", "text": " at The Chicago Pottery Market, sponsored by ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a03394c0e5ae159276faa1a", "type": "link", "fields": {"url": "https://www.wilderhouse.com/", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Wilderhouse", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": ".", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Entry is free, and if you’re visiting on Sunday, the Wicker Park Farmers Market is just a block away. I’ll have plenty of new work with me—hope to see you there.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "See the ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a03509b0e5ae159276faa24", "type": "link", "fields": {"url": "/events", "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Calendar", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " for more details.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}
 \.
 
 
@@ -4460,8 +4460,8 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 557	\N	\N	\N	2026-05-14 20:18:44.512+00	2026-05-14 20:18:39.867+00	/api/media/file/LgHero-berry-bowl.jpg	\N	LgHero-berry-bowl.jpg	image/jpeg	294691	2560	1600	50	50	/api/media/file/LgHero-berry-bowl-300x188.jpg	300	188	image/jpeg	11060	LgHero-berry-bowl-300x188.jpg	/api/media/file/LgHero-berry-bowl-500x500.jpg	500	500	image/jpeg	45125	LgHero-berry-bowl-500x500.jpg	/api/media/file/LgHero-berry-bowl-600x375.jpg	600	375	image/jpeg	35062	LgHero-berry-bowl-600x375.jpg	/api/media/file/LgHero-berry-bowl-900x563.jpg	900	563	image/jpeg	73313	LgHero-berry-bowl-900x563.jpg	/api/media/file/LgHero-berry-bowl-1400x875.jpg	1400	875	image/jpeg	158032	LgHero-berry-bowl-1400x875.jpg	/api/media/file/LgHero-berry-bowl-1920x1200.jpg	1920	1200	image/jpeg	266741	LgHero-berry-bowl-1920x1200.jpg	/api/media/file/LgHero-berry-bowl-1200x630.jpg	1200	630	image/jpeg	111498	LgHero-berry-bowl-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-berry-bowl.jpg
 558	\N	\N	\N	2026-05-14 20:18:45.952+00	2026-05-14 20:18:41.47+00	/api/media/file/LgHero-petal-trays.jpg	\N	LgHero-petal-trays.jpg	image/jpeg	248711	2560	1600	50	50	/api/media/file/LgHero-petal-trays-300x188.jpg	300	188	image/jpeg	14885	LgHero-petal-trays-300x188.jpg	/api/media/file/LgHero-petal-trays-500x500.jpg	500	500	image/jpeg	41721	LgHero-petal-trays-500x500.jpg	/api/media/file/LgHero-petal-trays-600x375.jpg	600	375	image/jpeg	41576	LgHero-petal-trays-600x375.jpg	/api/media/file/LgHero-petal-trays-900x563.jpg	900	563	image/jpeg	78173	LgHero-petal-trays-900x563.jpg	/api/media/file/LgHero-petal-trays-1400x875.jpg	1400	875	image/jpeg	154718	LgHero-petal-trays-1400x875.jpg	/api/media/file/LgHero-petal-trays-1920x1200.jpg	1920	1200	image/jpeg	254315	LgHero-petal-trays-1920x1200.jpg	/api/media/file/LgHero-petal-trays-1200x630.jpg	1200	630	image/jpeg	101683	LgHero-petal-trays-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-petal-trays.jpg
 559	\N	\N	\N	2026-05-14 20:45:24.542+00	2026-05-14 20:45:21.803+00	/api/media/file/LgHero-berry-bowl-1.jpg	\N	LgHero-berry-bowl-1.jpg	image/jpeg	302658	2560	1600	50	50	/api/media/file/LgHero-berry-bowl-1-300x188.jpg	300	188	image/jpeg	11132	LgHero-berry-bowl-1-300x188.jpg	/api/media/file/LgHero-berry-bowl-1-500x500.jpg	500	500	image/jpeg	45387	LgHero-berry-bowl-1-500x500.jpg	/api/media/file/LgHero-berry-bowl-1-600x375.jpg	600	375	image/jpeg	35383	LgHero-berry-bowl-1-600x375.jpg	/api/media/file/LgHero-berry-bowl-1-900x563.jpg	900	563	image/jpeg	74326	LgHero-berry-bowl-1-900x563.jpg	/api/media/file/LgHero-berry-bowl-1-1400x875.jpg	1400	875	image/jpeg	161494	LgHero-berry-bowl-1-1400x875.jpg	/api/media/file/LgHero-berry-bowl-1-1920x1200.jpg	1920	1200	image/jpeg	274475	LgHero-berry-bowl-1-1920x1200.jpg	/api/media/file/LgHero-berry-bowl-1-1200x630.jpg	1200	630	image/jpeg	113313	LgHero-berry-bowl-1-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-berry-bowl-1.jpg
-560	\N	\N	\N	2026-05-14 20:46:29.522+00	2026-05-14 20:46:27.955+00	/api/media/file/LgHero-bottles-1.jpg	\N	LgHero-bottles-1.jpg	image/jpeg	305402	2560	1600	50	50	/api/media/file/LgHero-bottles-1-300x188.jpg	300	188	image/jpeg	11549	LgHero-bottles-1-300x188.jpg	/api/media/file/LgHero-bottles-1-500x500.jpg	500	500	image/jpeg	38912	LgHero-bottles-1-500x500.jpg	/api/media/file/LgHero-bottles-1-600x375.jpg	600	375	image/jpeg	33972	LgHero-bottles-1-600x375.jpg	/api/media/file/LgHero-bottles-1-900x563.jpg	900	563	image/jpeg	67926	LgHero-bottles-1-900x563.jpg	/api/media/file/LgHero-bottles-1-1400x875.jpg	1400	875	image/jpeg	143961	LgHero-bottles-1-1400x875.jpg	/api/media/file/LgHero-bottles-1-1920x1200.jpg	1920	1200	image/jpeg	244839	LgHero-bottles-1-1920x1200.jpg	/api/media/file/LgHero-bottles-1-1200x630.jpg	1200	630	image/jpeg	103844	LgHero-bottles-1-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-bottles-1.jpg
 561	\N	\N	\N	2026-05-14 20:53:15.133+00	2026-05-14 20:53:13.125+00	/api/media/file/LgHero-bottles.jpg	\N	LgHero-bottles.jpg	image/jpeg	309465	2560	1600	50	50	/api/media/file/LgHero-bottles-300x188.jpg	300	188	image/jpeg	11493	LgHero-bottles-300x188.jpg	/api/media/file/LgHero-bottles-500x500.jpg	500	500	image/jpeg	38901	LgHero-bottles-500x500.jpg	/api/media/file/LgHero-bottles-600x375.jpg	600	375	image/jpeg	34185	LgHero-bottles-600x375.jpg	/api/media/file/LgHero-bottles-900x563.jpg	900	563	image/jpeg	67953	LgHero-bottles-900x563.jpg	/api/media/file/LgHero-bottles-1400x875.jpg	1400	875	image/jpeg	144966	LgHero-bottles-1400x875.jpg	/api/media/file/LgHero-bottles-1920x1200.jpg	1920	1200	image/jpeg	247867	LgHero-bottles-1920x1200.jpg	/api/media/file/LgHero-bottles-1200x630.jpg	1200	630	image/jpeg	101351	LgHero-bottles-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-bottles.jpg
+563	\N	\N	\N	2026-05-14 21:32:13.838+00	2026-05-14 21:32:11.907+00	/api/media/file/green-bowl-and-petal-trays.jpg	\N	green-bowl-and-petal-trays.jpg	image/jpeg	587778	4062	2708	50	50	/api/media/file/green-bowl-and-petal-trays-300x200.jpg	300	200	image/jpeg	7716	green-bowl-and-petal-trays-300x200.jpg	/api/media/file/green-bowl-and-petal-trays-500x500.jpg	500	500	image/jpeg	29370	green-bowl-and-petal-trays-500x500.jpg	/api/media/file/green-bowl-and-petal-trays-600x400.jpg	600	400	image/jpeg	22410	green-bowl-and-petal-trays-600x400.jpg	/api/media/file/green-bowl-and-petal-trays-900x600.jpg	900	600	image/jpeg	44836	green-bowl-and-petal-trays-900x600.jpg	/api/media/file/green-bowl-and-petal-trays-1400x933.jpg	1400	933	image/jpeg	102868	green-bowl-and-petal-trays-1400x933.jpg	/api/media/file/green-bowl-and-petal-trays-1920x1280.jpg	1920	1280	image/jpeg	193618	green-bowl-and-petal-trays-1920x1280.jpg	/api/media/file/green-bowl-and-petal-trays-1200x630.jpg	1200	630	image/jpeg	68728	green-bowl-and-petal-trays-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/green-bowl-and-petal-trays.jpg
 \.
 
 
@@ -4634,11 +4634,11 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 6	20260318_191703	5	2026-03-18 19:17:08.293+00	2026-03-18 19:17:08.293+00
 2	20260317_061117	1	2026-03-17 06:12:15.302+00	2026-03-17 06:12:15.302+00
 5	20260318_181856	4	2026-03-18 18:25:43.589+00	2026-03-18 18:25:43.589+00
-1	dev	-1	2026-05-14 20:49:16.651+00	2026-03-16 16:07:06.694+00
 7	20260320_041255	6	2026-03-20 04:16:57.288+00	2026-03-20 04:16:57.288+00
 8	20260317_180300	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 9	20260318_161820	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 10	20260320_033436	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
+1	dev	-1	2026-05-14 21:33:14.564+00	2026-03-16 16:07:06.694+00
 11	20260513_products_thumb_array	7	2026-05-14 00:04:04.985+00	2026-05-14 00:04:04.984+00
 \.
 
@@ -4658,7 +4658,6 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 9	global-header	{"editViewType": "default"}	2026-03-16 17:16:22.252+00	2026-03-16 17:16:22.254+00
 10	global-footer	{"editViewType": "default"}	2026-03-16 17:16:24.879+00	2026-03-16 17:16:24.88+00
 11	collection-redirects	{}	2026-03-16 17:16:30.831+00	2026-03-16 17:16:30.831+00
-75	collection-products-90	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-05-12 16:36:52.121+00	2026-05-02 03:17:56.53+00
 51	collection-products-68	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-21 03:17:13.326+00	2026-03-21 01:53:41.481+00
 28	collection-products-8	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 00:35:34.752+00	2026-03-19 00:35:34.753+00
 78	collection-products-1	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-05-12 16:37:20.428+00	2026-05-08 19:47:29.669+00
@@ -4680,6 +4679,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 66	collection-products-45	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-07 19:03:03.878+00	2026-04-09 04:59:27.582+00
 104	global-hero-images	{"editViewType": "default"}	2026-05-14 20:10:28.95+00	2026-05-14 20:10:28.969+00
 69	collection-products-84	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 01:12:24.395+00	2026-05-02 01:51:51.858+00
+75	collection-products-90	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-14 21:32:37.561+00	2026-05-02 03:17:56.53+00
 64	collection-products-80	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 15:22:28.293+00	2026-04-09 04:39:08.126+00
 17	nav	{"open": true}	2026-03-17 16:35:48.642+00	2026-03-17 16:35:48.643+00
 30	collection-products-60	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 16:12:02.358+00	2026-03-19 01:20:03.815+00
@@ -4786,7 +4786,6 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 30	\N	8	user	1
 31	\N	16	user	1
 360	\N	56	user	1
-361	\N	75	user	1
 362	\N	78	user	1
 35	\N	13	user	1
 363	\N	12	user	1
@@ -4803,6 +4802,7 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 375	\N	71	user	1
 376	\N	73	user	1
 377	\N	104	user	1
+378	\N	75	user	1
 274	\N	60	user	1
 278	\N	52	user	1
 125	\N	34	user	1
@@ -5079,10 +5079,10 @@ COPY public.products (id, admin_title, sku, title, name, price, featured, thumb_
 87	B-0010-GRN — Berry Bowl	B-0010-GRN	Stoneware Berry Bowl - Green	Berry Bowl	48	t	533	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small berry bowl for rinsing fresh fruit and vegetables, complete with handbuilt handles. Perfect for spring mornings and summer gatherings. Decorated with a verdant green dip glaze.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware is made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	5.75	2.75	526	\N	electric-6	t	t	2026-05-14 20:04:37.488+00	2026-05-02 02:25:35.506+00	b0f	\N	\N	\N	\N
 28	M-0012-BRN — Mug	M-0012-BRN	Ceramic Mug - Brown	Mug	50	f	134	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.5 inches\\	4.25	342	17.15	electric-6	t	t	2026-05-11 13:22:33.868+00	2026-03-17 18:16:18.005+00	b00	\N	\N	\N	\N
 88	J-0008-GRN — Jar	J-0008-GRN	Ceramic Jar - Green	Jar	75	t	543	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A ceramic lidded jar finished in a verdant green glaze, offering a surface with subtle depth and variation. Topped with an arrowhead knob that encourages the hand to see what's hidden inside. Interior glazed purple.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Both functional and decorative, this stoneware jar transitions beautifully from kitchen counter to open shelving, adding one-of-a-kind visual interest, intention, and artisan character to your everyday storage.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.5	7.5	533	20.5	electric-6	t	t	2026-05-14 20:06:07.495+00	2026-05-02 02:33:29.852+00	b0g	\N	\N	\N	\N
+89	B-0011-BLU — Med Bowl	B-0011-BLU	Ceramic Bowl - Blue	Med Bowl	42	f	546	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A medium wheel thrown bowl perfect for entrees. Dipped in a rustic bluish green glaze.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware bowls are made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	5.3	3.6	428	23.8	electric-6	t	t	2026-05-14 21:32:29.539+00	2026-05-02 03:10:47.57+00	a2gi	\N	\N	\N	\N
 39	M-0023-WHY — Mug	M-0023-WHY	Ceramic Mug - White	Mug	50	f	189	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.5	4.75	361	15.75	electric-6	t	t	2026-05-07 18:41:27.219+00	2026-03-17 18:17:06.678+00	9y	\N	\N	\N	\N
-89	B-0011-BLU — Med Bowl	B-0011-BLU	Ceramic Bowl - Blue	Med Bowl	42	f	546	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A medium wheel thrown bowl perfect for entrees. Dipped in a rustic bluish green glaze.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware bowls are made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	5.3	3.6	428	23.8	electric-6	t	t	2026-05-08 16:47:41.949+00	2026-05-02 03:10:47.57+00	a2gi	\N	\N	\N	\N
 38	M-0022-BLK — Mug	M-0022-BLK	Ceramic Mug - Black	Mug	50	f	184	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.5	4.75	361	15.75	electric-6	t	t	2026-05-11 13:46:30.455+00	2026-03-17 18:17:02.914+00	b02	\N	\N	\N	\N
-90	B-0012-BLU — Med Bowl	B-0012-BLU	Ceramic Bowl - Blue Green	Med Bowl	42	t	549	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A medium wheel thrown bowl perfect for entrees. Dipped in a rustic bluish green glaze.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware bowls are made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	5.75	3.5	482	28	electric-6	t	t	2026-05-12 16:36:55.865+00	2026-05-02 03:17:44.185+00	a2gr	\N	\N	\N	\N
+90	B-0012-BLU — Med Bowl	B-0012-BLU	Ceramic Bowl - Blue Green	Med Bowl	42	t	549	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A medium wheel thrown bowl perfect for entrees. Dipped in a rustic bluish green glaze.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware bowls are made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	5.75	3.5	482	28	electric-6	t	t	2026-05-14 21:32:44.12+00	2026-05-02 03:17:44.185+00	a2gr	\N	\N	\N	\N
 44	M-0028-GRN — Mug	M-0028-GRN	Ceramic Mug - Green & Yellow	Mug	50	t	214	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug with carvings designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.75	4.5	412	19.3	electric-6	t	t	2026-05-08 20:00:49.258+00	2026-03-17 18:17:30.03+00	a6	\N	\N	\N	\N
 51	T-0001-PNK — Petal Tray	T-0001-PNK	Petal Tray - Pink & White	Petal Tray	30	t	244	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray glazed in soft pink and white, designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.6	0.75	110	\N	electric-6	t	t	2026-05-14 16:48:28.79+00	2026-03-17 18:17:54.334+00	a0	5.5	\N	\N	\N
 80	M-0041-PNK — Sm Mug	M-0041-PNK	Latte Mug - Pink & White	Sm Mug	40	t	496	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A compact 9oz wheel-thrown mug designed for coffee and tea lovers alike. The curved body and one-finger handle design give the form a distinctive silhouette while maintaining a comfortable grip in hand. A perfect size for lattes, macchiatos and cortados.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.4	2.5	273	9	electric-6	t	t	2026-05-08 15:25:56.708+00	2026-04-09 04:38:56.883+00	a1n	\N	\N	\N	\N
@@ -5132,6 +5132,8 @@ COPY public.products_featured_image (id, _order, _parent_id, image_id) FROM stdi
 6a05fe6b2ffd8d48fff01a24	5	74	372
 6a053d0846d7e2494724c9c0	1	86	556
 6a053d1546d7e2494724c9c2	1	87	556
+6a063f6872864ee13e883e16	1	89	563
+6a063f7772864ee13e883e18	1	90	563
 6a053ec746d7e2494724c9c8	1	45	555
 3	2	45	223
 6a053ef146d7e2494724c9ca	1	46	555
@@ -5349,6 +5351,9 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 1	87	69f560f3d095a4535f1bcdd5	532
 2	87	69f560fad095a4535f1bcdd7	534
 3	87	69f560fed095a4535f1bcdd9	535
+1	89	69f56ae7b0fc7844540edafc	544
+2	89	69f56aebb0fc7844540edafe	547
+3	89	69f56af4b0fc7844540edb00	545
 1	75	69d7200500eb0cbb3b798785	476
 2	75	69d7200b00eb0cbb3b798787	477
 3	75	69d7200f00eb0cbb3b798789	478
@@ -5366,14 +5371,8 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 1	60	69bb4c32ca37cd57293813f7	391
 2	60	69bb4c37ca37cd57293813f9	392
 3	60	69bb4c3cca37cd57293813fb	393
-1	90	69f56cc8b0fc7844540edb02	548
-2	90	69f56cd2b0fc7844540edb04	550
-3	90	69f56ce8760f978f9fb38d25	551
 1	63	69bb55335f7adf28fb6e26d4	403
 2	63	69bb55375f7adf28fb6e26d6	404
-1	89	69f56ae7b0fc7844540edafc	544
-2	89	69f56aebb0fc7844540edafe	547
-3	89	69f56af4b0fc7844540edb00	545
 1	50	69b99acfaa9ac96a31121160	242
 2	50	69b99acfaa9ac96a31121161	243
 1	70	69be0179ed49f1d9464815e9	447
@@ -5397,6 +5396,9 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 2	2	69b99a01aa9ac96a311210b5	8
 3	2	69b99a01aa9ac96a311210b6	9
 3	15	69b99a35aa9ac96a311210db	67
+1	90	69f56cc8b0fc7844540edb02	548
+2	90	69f56cd2b0fc7844540edb04	550
+3	90	69f56ce8760f978f9fb38d25	551
 1	85	69f55bd12d04a45db62c2cbb	523
 2	85	69f55bd62d04a45db62c2cbd	524
 3	85	69f55bda2d04a45db62c2cbf	525
@@ -5559,16 +5561,16 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 666	2	63	relatedProducts	66
 667	3	63	relatedProducts	57
 1255	4	29	relatedProducts	53
+1469	1	89	relatedProducts	59
+1470	2	89	relatedProducts	68
 1272	1	67	relatedProducts	64
 1273	2	67	relatedProducts	55
 1109	1	64	relatedProducts	55
 1110	2	64	relatedProducts	41
 1274	3	67	relatedProducts	17
 1275	4	67	relatedProducts	75
-1290	1	90	relatedProducts	71
-1291	2	90	relatedProducts	59
-1292	3	90	relatedProducts	89
-1293	4	90	relatedProducts	68
+1471	3	89	relatedProducts	90
+1472	4	89	relatedProducts	72
 1111	3	64	relatedProducts	56
 1112	4	64	relatedProducts	67
 1121	1	37	relatedProducts	30
@@ -5638,10 +5640,14 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 1054	3	44	relatedProducts	36
 1055	4	44	relatedProducts	78
 1064	1	35	relatedProducts	1
+1473	1	90	relatedProducts	71
 432	1	22	relatedProducts	6
 913	1	69	relatedProducts	62
+1474	2	90	relatedProducts	59
 1370	1	47	relatedProducts	45
 1371	2	47	relatedProducts	48
+1475	3	90	relatedProducts	89
+1476	4	90	relatedProducts	68
 914	2	69	relatedProducts	39
 915	3	69	relatedProducts	32
 916	4	69	relatedProducts	33
@@ -5772,10 +5778,6 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 985	2	66	relatedProducts	89
 986	3	66	relatedProducts	90
 987	4	66	relatedProducts	68
-988	1	89	relatedProducts	59
-989	2	89	relatedProducts	68
-990	3	89	relatedProducts	90
-991	4	89	relatedProducts	72
 1389	1	81	relatedProducts	74
 1390	2	81	relatedProducts	58
 1391	3	81	relatedProducts	43
@@ -5865,10 +5867,11 @@ COPY public.products_tags ("order", parent_id, value, id) FROM stdin;
 1	87	eat	771
 1	77	drink	703
 1	18	drink	704
-1	90	eat	705
 1	1	eat	706
 1	40	drink	249
 1	88	store	773
+1	89	eat	774
+1	90	eat	775
 1	83	drink	554
 1	22	drink	254
 1	43	drink	637
@@ -5951,7 +5954,6 @@ COPY public.products_tags ("order", parent_id, value, id) FROM stdin;
 1	66	store	615
 1	3	eat	690
 1	4	eat	691
-1	89	eat	616
 1	10	drink	692
 1	29	drink	693
 1	34	drink	694
@@ -6283,7 +6285,7 @@ SELECT pg_catalog.setval('public.links_id_seq', 1, true);
 -- Name: media_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.media_id_seq', 561, true);
+SELECT pg_catalog.setval('public.media_id_seq', 563, true);
 
 
 --
@@ -6339,14 +6341,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 447, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 453, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 829, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 837, true);
 
 
 --
@@ -6367,7 +6369,7 @@ SELECT pg_catalog.setval('public.payload_preferences_id_seq', 104, true);
 -- Name: payload_preferences_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 377, true);
+SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 378, true);
 
 
 --
@@ -6402,14 +6404,14 @@ SELECT pg_catalog.setval('public.products_id_seq', 90, true);
 -- Name: products_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_rels_id_seq', 1468, true);
+SELECT pg_catalog.setval('public.products_rels_id_seq', 1476, true);
 
 
 --
 -- Name: products_tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_tags_id_seq', 773, true);
+SELECT pg_catalog.setval('public.products_tags_id_seq', 775, true);
 
 
 --
@@ -10324,5 +10326,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict kPy6owZBiH5nLHSso4bHdQeQSm7Spu0YGQNmNO8b0kcXvobuplpuWdFqkSnXL8V
+\unrestrict t9VhfPchNFqdbQSSKOkiMkuKZXNbgJGeaMuu76mAg6DxqAkmmn75Nbhn3L0ZO1d
 

@@ -60,20 +60,38 @@ export default async function HomePage() {
       {/* ── Landing Hero ────────────────────────────────────────────────── */}
       <LgHero images={heroImages.length > 0 ? heroImages : [heroFallback]} />
       <div className="container-fluid" style={{ padding: 0 }}>
-        {/* Announcement box */}
-        {announcement?.live && (
+        {/* Warm linen background: hero landing zone → Shop button */}
+        <div style={{ background: '#faf7f4', position: 'relative', paddingBottom: '5rem', overflow: 'hidden' }}>
+          {/* Announcement box */}
+          {announcement?.live && (
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                padding: '2rem 1rem 2rem',
+              }}
+            >
+              <div style={{ width: '100%', maxWidth: '1200px' }}>
+                <AnnouncementBox announcement={announcement} />
+              </div>
+            </div>
+          )}
+
+          {/* White half-circle cutout at bottom center — frames the Shop button below */}
           <div
             style={{
-              display: 'flex',
-              justifyContent: 'center',
-              padding: '2rem 1rem 2rem',
+              position: 'absolute',
+              bottom: -150,
+              left: '50%',
+              transform: 'translateX(-50%)',
+              width: 180,
+              height: 180,
+              background: 'white',
+              borderRadius: '50%',
+              zIndex: 2,
             }}
-          >
-            <div style={{ width: '100%', maxWidth: '1200px' }}>
-              <AnnouncementBox announcement={announcement} />
-            </div>
-          </div>
-        )}
+          />
+        </div>{/* end linen background */}
 
         {/* Shop CTA */}
         <div
@@ -84,6 +102,8 @@ export default async function HomePage() {
             paddingTop: '2rem',
             paddingBottom: '2rem',
             paddingInline: '1.5rem',
+            position: 'relative',
+            zIndex: 3,
           }}
         >
           <hr
