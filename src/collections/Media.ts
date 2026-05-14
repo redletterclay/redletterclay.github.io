@@ -48,6 +48,30 @@ export const Media: CollectionConfig = {
     update: authenticated,
   },
   hooks: {
+    beforeOperation: [
+      ({ operation, req }) => {
+        if (operation !== 'create') return
+        const file = (req as any).file
+        if (!file?.name) return
+        const mediaDir = path.resolve(dirname, '../../public/media')
+        // Remove existing files with the same base name (including size variants)
+        // so Payload doesn't append -1, -2, etc. to the filename.
+        try {
+          const ext = path.extname(file.name)
+          const base = path.basename(file.name, ext)
+          const entries = fs.readdirSync(mediaDir)
+          for (const entry of entries) {
+            const entryBase = path.basename(entry, path.extname(entry))
+            // Match exact name or size variants like name-300x200
+            if (entryBase === base || /^.+-\d+x\d+$/.test(entryBase) && entryBase.startsWith(base + '-')) {
+              fs.unlinkSync(path.join(mediaDir, entry))
+            }
+          }
+        } catch {
+          // If the file doesn't exist yet, that's fine
+        }
+      },
+    ],
     afterRead: [
       ({ doc }) => {
         if (doc.imagekitUrl) doc.url = doc.imagekitUrl
@@ -82,6 +106,7 @@ export const Media: CollectionConfig = {
               fileName: docFilename,
               folder: IMAGEKIT_FOLDER,
               useUniqueFileName: false,
+              overwriteFile: true,
             })
             await payload.db.updateOne({
               collection: 'media',

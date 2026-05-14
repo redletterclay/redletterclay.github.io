@@ -13,6 +13,7 @@ import { ShopStockChecker } from './shop/ShopStockChecker.client'
 import { Last4Journal } from '@/components/Last4Journal'
 import RichText from '@/components/RichText'
 import { PricingNote } from '@/components/PricingNote'
+import { LgHero } from '@/components/LgHero'
 
 export const dynamic = 'force-static'
 export const revalidate = 600
@@ -20,7 +21,7 @@ export const revalidate = 600
 export default async function HomePage() {
   const payload = await getPayload({ config: configPromise })
 
-  const [featuredRes, announcementRes, eventsRes, collectionTitleRes] = await Promise.all([
+  const [featuredRes, announcementRes, eventsRes, collectionTitleRes, heroImagesRes] = await Promise.all([
     payload.find({
       collection: 'products',
       depth: 1,
@@ -38,93 +39,27 @@ export default async function HomePage() {
       sort: '-startDate',
     }),
     payload.findGlobal({ slug: 'collection-title', depth: 0 }).catch(() => null),
+    payload.findGlobal({ slug: 'hero-images', depth: 1 }).catch(() => null),
   ])
 
   const featured = featuredRes.docs
   const announcement = announcementRes as any
   const events = eventsRes.docs
   const collectionTitle = (collectionTitleRes as any)?.title || null
+  const heroImagesData = heroImagesRes as any
+  const heroImages: { url: string; alt?: string }[] = (heroImagesData?.images || [])
+    .map((row: any) => row.image && typeof row.image === 'object' ? { url: row.image.url, alt: row.alt || row.image.alt || '' } : null)
+    .filter(Boolean)
+  const heroFallback = heroImagesData?.fallback && typeof heroImagesData.fallback === 'object'
+    ? { url: heroImagesData.fallback.url, alt: heroImagesData.fallback.alt || '' }
+    : { url: 'https://ik.imagekit.io/raygun/redletterclay/jaw-bottle-tray-periwinkle-1.jpg', alt: 'Red Letter Clay ceramics' }
 
   return (
     <main style={{ overflowX: 'hidden' }}>
       <ShopStockChecker />
       {/* ── Landing Hero ────────────────────────────────────────────────── */}
+      <LgHero images={heroImages.length > 0 ? heroImages : [heroFallback]} />
       <div className="container-fluid" style={{ padding: 0 }}>
-        <div
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            alignItems: 'center',
-          }}
-        >
-          {/* Teapot image — hidden on mobile */}
-          <div className="hero-teapot-col" style={{ flex: '1 1 400px', overflow: 'hidden' }}>
-            <img
-              src="https://ik.imagekit.io/raygun/redletterclay/L1-teapot-side.jpg"
-              alt="Teapot"
-              className="animate__animated animate__fadeIn"
-              style={{ width: '100%', display: 'block', borderRadius: '0 0 1rem 0' }}
-            />
-          </div>
-
-          {/* Title + ornament */}
-          <div style={{ flex: '1 1 300px', textAlign: 'center', padding: '2rem 1rem' }}>
-            {/* Ornaments */}
-            <div
-              className="ornament"
-              style={{
-                display: 'flex',
-                alignItems: 'baseline',
-                justifyContent: 'center',
-                marginBottom: '1rem',
-                gap: '0.5rem',
-              }}
-            >
-              <img
-                src="https://ik.imagekit.io/raygun/redletterclay/Petal%20Left.png"
-                alt=""
-                style={{ width: 40 }}
-                className="animate__animated animate__fadeInLeft"
-              />
-              <img
-                src="https://ik.imagekit.io/raygun/redletterclay/Petal%20Tall.png"
-                alt=""
-                style={{ width: 40, paddingBottom: '0.5rem' }}
-                className="animate__animated animate__fadeInDown"
-              />
-              <img
-                src="https://ik.imagekit.io/raygun/redletterclay/Petal%20Right.png"
-                alt=""
-                style={{ width: 40 }}
-                className="animate__animated animate__fadeInRight"
-              />
-            </div>
-
-            <div style={{ padding: '0 1.5rem' }}>
-              <h1 className="ital" style={{ textAlign: 'center' }}>
-                Welcome to
-              </h1>
-              <h1 className="rlc" style={{ textAlign: 'center' }}>
-                Red Letter Clay
-              </h1>
-              <hr
-                style={{
-                  marginTop: '1rem',
-                  marginBottom: '1rem',
-                  width: '50%',
-                  marginInline: 'auto',
-                  borderTop: '2px solid #8C5C40',
-                  borderBottom: 'none',
-                  opacity: 1,
-                }}
-              />
-              <h4 style={{ paddingTop: '0.5rem', textAlign: 'center', fontSize: '1.4rem' }}>
-                Made in Chicago by <Link href="/about/">Davey Ball</Link>
-              </h4>
-            </div>
-          </div>
-        </div>
-
         {/* Announcement box */}
         {announcement?.live && (
           <div

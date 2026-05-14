@@ -9,6 +9,7 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+      - /app/.next
       - /Users/david/Sites/redletterclay.github.io:/jekyll-source:ro
     env_file:
       - .env

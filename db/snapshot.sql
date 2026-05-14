@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 3DbI4qxPsc7o59f1lqiwQOw4IiAXxMmNrrNCo3Xj9LxbjDswjoIOhTkhDFlSr93
+\restrict kPy6owZBiH5nLHSso4bHdQeQSm7Spu0YGQNmNO8b0kcXvobuplpuWdFqkSnXL8V
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -1651,6 +1651,51 @@ ALTER SEQUENCE public.header_rels_id_seq OWNED BY public.header_rels.id;
 
 
 --
+-- Name: hero_images; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.hero_images (
+    id integer NOT NULL,
+    updated_at timestamp(3) with time zone,
+    created_at timestamp(3) with time zone,
+    fallback_id integer
+);
+
+
+--
+-- Name: hero_images_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.hero_images_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: hero_images_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.hero_images_id_seq OWNED BY public.hero_images.id;
+
+
+--
+-- Name: hero_images_images; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.hero_images_images (
+    _order integer NOT NULL,
+    _parent_id integer NOT NULL,
+    id character varying NOT NULL,
+    image_id integer NOT NULL,
+    alt character varying
+);
+
+
+--
 -- Name: links; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3072,6 +3117,13 @@ ALTER TABLE ONLY public.header_rels ALTER COLUMN id SET DEFAULT nextval('public.
 
 
 --
+-- Name: hero_images id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.hero_images ALTER COLUMN id SET DEFAULT nextval('public.hero_images_id_seq'::regclass);
+
+
+--
 -- Name: links id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -3825,6 +3877,26 @@ COPY public.header_rels (id, "order", parent_id, path, pages_id, posts_id) FROM 
 
 
 --
+-- Data for Name: hero_images; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.hero_images (id, updated_at, created_at, fallback_id) FROM stdin;
+1	2026-05-14 20:53:56.07+00	2026-05-14 20:11:04.502+00	559
+\.
+
+
+--
+-- Data for Name: hero_images_images; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.hero_images_images (_order, _parent_id, id, image_id, alt) FROM stdin;
+1	1	6a0634aac6d4604d31b8b208	561	\N
+2	1	6a0634afc6d4604d31b8b20a	558	\N
+3	1	6a0634efc6d4604d31b8b20c	559	\N
+\.
+
+
+--
 -- Data for Name: links; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -4385,6 +4457,11 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 554	Berry Bowl with Seed Trays	\N	\N	2026-05-14 03:09:52.076+00	2026-05-14 03:09:49.572+00	/api/media/file/berry-bowl-seed-trays.jpg	\N	berry-bowl-seed-trays.jpg	image/jpeg	392755	2000	1333	50	50	/api/media/file/berry-bowl-seed-trays-300x200.jpg	300	200	image/jpeg	11495	berry-bowl-seed-trays-300x200.jpg	/api/media/file/berry-bowl-seed-trays-500x500.jpg	500	500	image/jpeg	43565	berry-bowl-seed-trays-500x500.jpg	/api/media/file/berry-bowl-seed-trays-600x400.jpg	600	400	image/jpeg	36515	berry-bowl-seed-trays-600x400.jpg	/api/media/file/berry-bowl-seed-trays-900x600.jpg	900	600	image/jpeg	76559	berry-bowl-seed-trays-900x600.jpg	/api/media/file/berry-bowl-seed-trays-1400x933.jpg	1400	933	image/jpeg	172221	berry-bowl-seed-trays-1400x933.jpg	/api/media/file/berry-bowl-seed-trays-1920x1280.jpg	1920	1280	image/jpeg	295654	berry-bowl-seed-trays-1920x1280.jpg	/api/media/file/berry-bowl-seed-trays-1200x630.jpg	1200	630	image/jpeg	114205	berry-bowl-seed-trays-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/berry-bowl-seed-trays.jpg
 555	Bottle Cruets Lined Up	\N	\N	2026-05-14 03:17:19.524+00	2026-05-14 03:17:16.022+00	/api/media/file/bottle-lineup.jpg	\N	bottle-lineup.jpg	image/jpeg	605925	2000	1333	50	50	/api/media/file/bottle-lineup-300x200.jpg	300	200	image/jpeg	11456	bottle-lineup-300x200.jpg	/api/media/file/bottle-lineup-500x500.jpg	500	500	image/jpeg	33818	bottle-lineup-500x500.jpg	/api/media/file/bottle-lineup-600x400.jpg	600	400	image/jpeg	33895	bottle-lineup-600x400.jpg	/api/media/file/bottle-lineup-900x600.jpg	900	600	image/jpeg	68110	bottle-lineup-900x600.jpg	/api/media/file/bottle-lineup-1400x933.jpg	1400	933	image/jpeg	151382	bottle-lineup-1400x933.jpg	/api/media/file/bottle-lineup-1920x1280.jpg	1920	1280	image/jpeg	265194	bottle-lineup-1920x1280.jpg	/api/media/file/bottle-lineup-1200x630.jpg	1200	630	image/jpeg	104679	bottle-lineup-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/bottle-lineup.jpg
 556	Berry Bowl and Seed Trays	\N	\N	2026-05-14 15:34:57.182+00	2026-05-14 15:34:54.917+00	/api/media/file/berry-bowl-seed-trays-updated.jpg	\N	berry-bowl-seed-trays-updated.jpg	image/jpeg	516004	2000	1333	50	50	/api/media/file/berry-bowl-seed-trays-updated-300x200.jpg	300	200	image/jpeg	11469	berry-bowl-seed-trays-updated-300x200.jpg	/api/media/file/berry-bowl-seed-trays-updated-500x500.jpg	500	500	image/jpeg	43613	berry-bowl-seed-trays-updated-500x500.jpg	/api/media/file/berry-bowl-seed-trays-updated-600x400.jpg	600	400	image/jpeg	36542	berry-bowl-seed-trays-updated-600x400.jpg	/api/media/file/berry-bowl-seed-trays-updated-900x600.jpg	900	600	image/jpeg	76714	berry-bowl-seed-trays-updated-900x600.jpg	/api/media/file/berry-bowl-seed-trays-updated-1400x933.jpg	1400	933	image/jpeg	173273	berry-bowl-seed-trays-updated-1400x933.jpg	/api/media/file/berry-bowl-seed-trays-updated-1920x1280.jpg	1920	1280	image/jpeg	297989	berry-bowl-seed-trays-updated-1920x1280.jpg	/api/media/file/berry-bowl-seed-trays-updated-1200x630.jpg	1200	630	image/jpeg	114795	berry-bowl-seed-trays-updated-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/berry-bowl-seed-trays-updated.jpg
+557	\N	\N	\N	2026-05-14 20:18:44.512+00	2026-05-14 20:18:39.867+00	/api/media/file/LgHero-berry-bowl.jpg	\N	LgHero-berry-bowl.jpg	image/jpeg	294691	2560	1600	50	50	/api/media/file/LgHero-berry-bowl-300x188.jpg	300	188	image/jpeg	11060	LgHero-berry-bowl-300x188.jpg	/api/media/file/LgHero-berry-bowl-500x500.jpg	500	500	image/jpeg	45125	LgHero-berry-bowl-500x500.jpg	/api/media/file/LgHero-berry-bowl-600x375.jpg	600	375	image/jpeg	35062	LgHero-berry-bowl-600x375.jpg	/api/media/file/LgHero-berry-bowl-900x563.jpg	900	563	image/jpeg	73313	LgHero-berry-bowl-900x563.jpg	/api/media/file/LgHero-berry-bowl-1400x875.jpg	1400	875	image/jpeg	158032	LgHero-berry-bowl-1400x875.jpg	/api/media/file/LgHero-berry-bowl-1920x1200.jpg	1920	1200	image/jpeg	266741	LgHero-berry-bowl-1920x1200.jpg	/api/media/file/LgHero-berry-bowl-1200x630.jpg	1200	630	image/jpeg	111498	LgHero-berry-bowl-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-berry-bowl.jpg
+558	\N	\N	\N	2026-05-14 20:18:45.952+00	2026-05-14 20:18:41.47+00	/api/media/file/LgHero-petal-trays.jpg	\N	LgHero-petal-trays.jpg	image/jpeg	248711	2560	1600	50	50	/api/media/file/LgHero-petal-trays-300x188.jpg	300	188	image/jpeg	14885	LgHero-petal-trays-300x188.jpg	/api/media/file/LgHero-petal-trays-500x500.jpg	500	500	image/jpeg	41721	LgHero-petal-trays-500x500.jpg	/api/media/file/LgHero-petal-trays-600x375.jpg	600	375	image/jpeg	41576	LgHero-petal-trays-600x375.jpg	/api/media/file/LgHero-petal-trays-900x563.jpg	900	563	image/jpeg	78173	LgHero-petal-trays-900x563.jpg	/api/media/file/LgHero-petal-trays-1400x875.jpg	1400	875	image/jpeg	154718	LgHero-petal-trays-1400x875.jpg	/api/media/file/LgHero-petal-trays-1920x1200.jpg	1920	1200	image/jpeg	254315	LgHero-petal-trays-1920x1200.jpg	/api/media/file/LgHero-petal-trays-1200x630.jpg	1200	630	image/jpeg	101683	LgHero-petal-trays-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-petal-trays.jpg
+559	\N	\N	\N	2026-05-14 20:45:24.542+00	2026-05-14 20:45:21.803+00	/api/media/file/LgHero-berry-bowl-1.jpg	\N	LgHero-berry-bowl-1.jpg	image/jpeg	302658	2560	1600	50	50	/api/media/file/LgHero-berry-bowl-1-300x188.jpg	300	188	image/jpeg	11132	LgHero-berry-bowl-1-300x188.jpg	/api/media/file/LgHero-berry-bowl-1-500x500.jpg	500	500	image/jpeg	45387	LgHero-berry-bowl-1-500x500.jpg	/api/media/file/LgHero-berry-bowl-1-600x375.jpg	600	375	image/jpeg	35383	LgHero-berry-bowl-1-600x375.jpg	/api/media/file/LgHero-berry-bowl-1-900x563.jpg	900	563	image/jpeg	74326	LgHero-berry-bowl-1-900x563.jpg	/api/media/file/LgHero-berry-bowl-1-1400x875.jpg	1400	875	image/jpeg	161494	LgHero-berry-bowl-1-1400x875.jpg	/api/media/file/LgHero-berry-bowl-1-1920x1200.jpg	1920	1200	image/jpeg	274475	LgHero-berry-bowl-1-1920x1200.jpg	/api/media/file/LgHero-berry-bowl-1-1200x630.jpg	1200	630	image/jpeg	113313	LgHero-berry-bowl-1-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-berry-bowl-1.jpg
+560	\N	\N	\N	2026-05-14 20:46:29.522+00	2026-05-14 20:46:27.955+00	/api/media/file/LgHero-bottles-1.jpg	\N	LgHero-bottles-1.jpg	image/jpeg	305402	2560	1600	50	50	/api/media/file/LgHero-bottles-1-300x188.jpg	300	188	image/jpeg	11549	LgHero-bottles-1-300x188.jpg	/api/media/file/LgHero-bottles-1-500x500.jpg	500	500	image/jpeg	38912	LgHero-bottles-1-500x500.jpg	/api/media/file/LgHero-bottles-1-600x375.jpg	600	375	image/jpeg	33972	LgHero-bottles-1-600x375.jpg	/api/media/file/LgHero-bottles-1-900x563.jpg	900	563	image/jpeg	67926	LgHero-bottles-1-900x563.jpg	/api/media/file/LgHero-bottles-1-1400x875.jpg	1400	875	image/jpeg	143961	LgHero-bottles-1-1400x875.jpg	/api/media/file/LgHero-bottles-1-1920x1200.jpg	1920	1200	image/jpeg	244839	LgHero-bottles-1-1920x1200.jpg	/api/media/file/LgHero-bottles-1-1200x630.jpg	1200	630	image/jpeg	103844	LgHero-bottles-1-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-bottles-1.jpg
+561	\N	\N	\N	2026-05-14 20:53:15.133+00	2026-05-14 20:53:13.125+00	/api/media/file/LgHero-bottles.jpg	\N	LgHero-bottles.jpg	image/jpeg	309465	2560	1600	50	50	/api/media/file/LgHero-bottles-300x188.jpg	300	188	image/jpeg	11493	LgHero-bottles-300x188.jpg	/api/media/file/LgHero-bottles-500x500.jpg	500	500	image/jpeg	38901	LgHero-bottles-500x500.jpg	/api/media/file/LgHero-bottles-600x375.jpg	600	375	image/jpeg	34185	LgHero-bottles-600x375.jpg	/api/media/file/LgHero-bottles-900x563.jpg	900	563	image/jpeg	67953	LgHero-bottles-900x563.jpg	/api/media/file/LgHero-bottles-1400x875.jpg	1400	875	image/jpeg	144966	LgHero-bottles-1400x875.jpg	/api/media/file/LgHero-bottles-1920x1200.jpg	1920	1200	image/jpeg	247867	LgHero-bottles-1920x1200.jpg	/api/media/file/LgHero-bottles-1200x630.jpg	1200	630	image/jpeg	101351	LgHero-bottles-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-bottles.jpg
 \.
 
 
@@ -4557,12 +4634,12 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 6	20260318_191703	5	2026-03-18 19:17:08.293+00	2026-03-18 19:17:08.293+00
 2	20260317_061117	1	2026-03-17 06:12:15.302+00	2026-03-17 06:12:15.302+00
 5	20260318_181856	4	2026-03-18 18:25:43.589+00	2026-03-18 18:25:43.589+00
+1	dev	-1	2026-05-14 20:49:16.651+00	2026-03-16 16:07:06.694+00
 7	20260320_041255	6	2026-03-20 04:16:57.288+00	2026-03-20 04:16:57.288+00
 8	20260317_180300	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 9	20260318_161820	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 10	20260320_033436	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 11	20260513_products_thumb_array	7	2026-05-14 00:04:04.985+00	2026-05-14 00:04:04.984+00
-1	dev	-1	2026-05-14 19:37:14.393+00	2026-03-16 16:07:06.694+00
 \.
 
 
@@ -4601,6 +4678,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 34	collection-products-64	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 02:27:45.238+00	2026-03-19 02:20:41.213+00
 13	collection-categories	{"limit": 10}	2026-03-16 23:51:17.919+00	2026-03-16 17:21:19.723+00
 66	collection-products-45	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-07 19:03:03.878+00	2026-04-09 04:59:27.582+00
+104	global-hero-images	{"editViewType": "default"}	2026-05-14 20:10:28.95+00	2026-05-14 20:10:28.969+00
 69	collection-products-84	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 01:12:24.395+00	2026-05-02 01:51:51.858+00
 64	collection-products-80	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 15:22:28.293+00	2026-04-09 04:39:08.126+00
 17	nav	{"open": true}	2026-03-17 16:35:48.642+00	2026-03-17 16:35:48.643+00
@@ -4632,12 +4710,12 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 103	collection-products-34	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-12 14:21:45.855+00	2026-05-12 14:21:45.856+00
 41	collection-products-24	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-05-12 16:26:40.21+00	2026-03-19 04:18:36.341+00
 37	collection-products-67	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-05-12 16:27:05.563+00	2026-03-19 03:06:08.217+00
-73	collection-products-88	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-05-12 16:27:19.011+00	2026-05-02 02:34:12.273+00
 61	collection-products-77	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-05-12 16:35:35.011+00	2026-04-09 04:13:31.139+00
 56	collection-products-18	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-05-12 16:36:27.352+00	2026-03-22 02:37:43.154+00
 23	collection-products-55	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-14 02:46:35.624+00	2026-03-18 19:52:20.363+00
 31	collection-products-62	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-14 02:53:02.341+00	2026-03-19 01:30:13.934+00
 25	collection-products-57	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-14 03:20:14.72+00	2026-03-19 00:07:46.991+00
+73	collection-products-88	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-14 20:05:29.569+00	2026-05-02 02:34:12.273+00
 52	collection-products-69	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-07 15:57:39.252+00	2026-03-21 02:08:27.468+00
 27	collection-products-51	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 01:06:53.348+00	2026-03-19 00:25:03.125+00
 70	collection-products-85	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 01:10:26.837+00	2026-05-02 02:08:17.676+00
@@ -4664,7 +4742,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 97	collection-products-7	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-11 14:03:02.918+00	2026-05-11 14:03:02.923+00
 101	collection-products-10	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-11 14:26:25.114+00	2026-05-11 14:26:25.115+00
 1	collection-products	{"sort": "sku", "limit": 100, "columns": [{"active": true, "accessor": "sku"}, {"active": true, "accessor": "thumb"}, {"active": false, "accessor": "adminTitle"}, {"active": true, "accessor": "title"}, {"active": true, "accessor": "price"}, {"active": true, "accessor": "featured"}, {"active": false, "accessor": "id"}, {"active": false, "accessor": "name"}, {"active": false, "accessor": "tags"}, {"active": false, "accessor": "featuredImage"}, {"active": false, "accessor": "images"}, {"active": false, "accessor": "description"}, {"active": false, "accessor": "width"}, {"active": false, "accessor": "height"}, {"active": false, "accessor": "weight"}, {"active": false, "accessor": "holds"}, {"active": false, "accessor": "firingMethod"}, {"active": false, "accessor": "foodSafe"}, {"active": false, "accessor": "dishwasherSafe"}, {"active": false, "accessor": "relatedProducts"}, {"active": false, "accessor": "updatedAt"}, {"active": true, "accessor": "createdAt"}, {"active": false, "accessor": "makingLinks"}, {"active": false, "accessor": "length"}, {"active": false, "accessor": "meta.overview"}, {"active": false, "accessor": "meta.title"}, {"active": false, "accessor": "meta.description"}, {"active": false, "accessor": "meta.image"}, {"active": false, "accessor": "meta.preview"}], "editViewType": "default"}	2026-05-14 02:14:02.886+00	2026-03-16 17:10:33.961+00
-71	collection-products-86	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-14 03:09:15.24+00	2026-05-02 02:18:37.222+00
+71	collection-products-86	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-14 20:03:35.183+00	2026-05-02 02:18:37.222+00
 74	collection-products-89	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 16:47:13.74+00	2026-05-02 03:10:49.211+00
 77	collection-products-81	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 19:41:49.099+00	2026-05-08 19:41:49.1+00
 80	collection-products-44	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 20:00:22.531+00	2026-05-08 20:00:22.533+00
@@ -4703,7 +4781,6 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 22	\N	14	user	1
 23	\N	15	user	1
 188	\N	18	user	1
-356	\N	73	user	1
 26	\N	3	user	1
 359	\N	61	user	1
 30	\N	8	user	1
@@ -4720,10 +4797,12 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 367	\N	31	user	1
 45	\N	19	user	1
 368	\N	57	user	1
-369	\N	71	user	1
 370	\N	72	user	1
 371	\N	25	user	1
 373	\N	20	user	1
+375	\N	71	user	1
+376	\N	73	user	1
+377	\N	104	user	1
 274	\N	60	user	1
 278	\N	52	user	1
 125	\N	34	user	1
@@ -4995,11 +5074,11 @@ COPY public.products (id, admin_title, sku, title, name, price, featured, thumb_
 85	M-0044-PNK — Mug	M-0044-PNK	Ceramic Mug - Pink	Mug	50	f	527	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and handle design give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.75	4.25	399	16.6	electric-6	t	t	2026-05-08 01:10:32.993+00	2026-05-02 02:05:46.781+00	a1k	\N	\N	\N	\N
 9	C-0001-BRN — SM Cups	C-0001-BRN	Faceted Sipping Cups - Brown	SM Cups	42	f	36	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A pair of small faceted cups designed for sipping sake, whiskey, tequila, or espresso. The hand-faceted surfaces create subtle angles that catch the light while offering a comfortable, tactile grip. Their compact size makes them ideal for intimate pours and slow, intentional sipping.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A versatile addition to any barware or espresso setup, they balance function, craftsmanship, and everyday elegance.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	2.25	2.4	123	3.4	electric-6	t	t	2026-05-11 13:21:58.563+00	2026-03-17 18:14:51.874+00	az	\N	\N	\N	\N
 7	B-0007-BLK — MD Bowl	B-0007-BLK	Carved Stoneware Bowl - Black	MD Bowl	52	f	28	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A medium wheel thrown bowl perfect for entrees. Dipped in a black glaze, with carvings decorating the outside providing a tactile experience and visual interest.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware bowls are made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	6.75	2.75	471	24	electric-6	t	t	2026-05-11 14:03:10.629+00	2026-03-17 18:14:45.237+00	b05	\N	\N	\N	\N
-86	B-0009-GRN — Berry Bowl	B-0009-GRN	Stoneware Berry Bowl - Green	Berry Bowl	48	t	530	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small berry bowl for rinsing fresh fruit and vegetables, complete with handbuilt handles. Perfect for spring mornings and summer gatherings. Decorated with a verdant green dip glaze.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware is made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	6	3	526	\N	electric-6	t	t	2026-05-14 15:35:24.209+00	2026-05-02 02:18:35.65+00	b0e	\N	\N	\N	\N
+86	B-0009-GRN — Berry Bowl	B-0009-GRN	Stoneware Berry Bowl - Green	Berry Bowl	48	t	530	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small berry bowl for rinsing fresh fruit and vegetables, complete with handbuilt handles. Perfect for spring mornings and summer gatherings. Decorated with a verdant green dip glaze.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware is made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	6	3	526	\N	electric-6	t	t	2026-05-14 20:04:04.616+00	2026-05-02 02:18:35.65+00	b0e	\N	\N	\N	\N
 27	M-0011-BLU — Mug	M-0011-BLU	Ceramic Mug - Glacial Blue	Mug	50	f	129	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.75	4.9	450	21.2	electric-6	t	t	2026-03-19 04:28:06.367+00	2026-03-17 18:16:13.402+00	ae	\N	\N	\N	\N
-87	B-0010-GRN — Berry Bowl	B-0010-GRN	Stoneware Berry Bowl - Green	Berry Bowl	48	t	533	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small berry bowl for rinsing fresh fruit and vegetables, complete with handbuilt handles. Perfect for spring mornings and summer gatherings. Decorated with a verdant green dip glaze.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware is made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	5.75	2.75	526	\N	electric-6	t	t	2026-05-14 15:35:36.332+00	2026-05-02 02:25:35.506+00	b0f	\N	\N	\N	\N
+87	B-0010-GRN — Berry Bowl	B-0010-GRN	Stoneware Berry Bowl - Green	Berry Bowl	48	t	533	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small berry bowl for rinsing fresh fruit and vegetables, complete with handbuilt handles. Perfect for spring mornings and summer gatherings. Decorated with a verdant green dip glaze.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware is made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	5.75	2.75	526	\N	electric-6	t	t	2026-05-14 20:04:37.488+00	2026-05-02 02:25:35.506+00	b0f	\N	\N	\N	\N
 28	M-0012-BRN — Mug	M-0012-BRN	Ceramic Mug - Brown	Mug	50	f	134	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.5 inches\\	4.25	342	17.15	electric-6	t	t	2026-05-11 13:22:33.868+00	2026-03-17 18:16:18.005+00	b00	\N	\N	\N	\N
-88	J-0008-GRN — Jar	J-0008-GRN	Ceramic Jar - Green	Jar	75	t	543	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A ceramic lidded jar finished in a verdant green glaze, offering a surface with subtle depth and variation. Topped with an arrowhead knob that encourages the hand to see what's hidden inside. Interior glazed purple.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Both functional and decorative, this stoneware jar transitions beautifully from kitchen counter to open shelving, adding one-of-a-kind visual interest, intention, and artisan character to your everyday storage.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.5	7.5	533	20.5	electric-6	t	t	2026-05-12 16:27:21.402+00	2026-05-02 02:33:29.852+00	b0g	\N	\N	\N	\N
+88	J-0008-GRN — Jar	J-0008-GRN	Ceramic Jar - Green	Jar	75	t	543	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A ceramic lidded jar finished in a verdant green glaze, offering a surface with subtle depth and variation. Topped with an arrowhead knob that encourages the hand to see what's hidden inside. Interior glazed purple.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Both functional and decorative, this stoneware jar transitions beautifully from kitchen counter to open shelving, adding one-of-a-kind visual interest, intention, and artisan character to your everyday storage.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.5	7.5	533	20.5	electric-6	t	t	2026-05-14 20:06:07.495+00	2026-05-02 02:33:29.852+00	b0g	\N	\N	\N	\N
 39	M-0023-WHY — Mug	M-0023-WHY	Ceramic Mug - White	Mug	50	f	189	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.5	4.75	361	15.75	electric-6	t	t	2026-05-07 18:41:27.219+00	2026-03-17 18:17:06.678+00	9y	\N	\N	\N	\N
 89	B-0011-BLU — Med Bowl	B-0011-BLU	Ceramic Bowl - Blue	Med Bowl	42	f	546	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A medium wheel thrown bowl perfect for entrees. Dipped in a rustic bluish green glaze.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware bowls are made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	5.3	3.6	428	23.8	electric-6	t	t	2026-05-08 16:47:41.949+00	2026-05-02 03:10:47.57+00	a2gi	\N	\N	\N	\N
 38	M-0022-BLK — Mug	M-0022-BLK	Ceramic Mug - Black	Mug	50	f	184	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.5	4.75	361	15.75	electric-6	t	t	2026-05-11 13:46:30.455+00	2026-03-17 18:17:02.914+00	b02	\N	\N	\N	\N
@@ -5051,6 +5130,8 @@ COPY public.products_featured_image (id, _order, _parent_id, image_id) FROM stdi
 31	1	80	475
 6a05fe622ffd8d48fff01a22	4	74	373
 6a05fe6b2ffd8d48fff01a24	5	74	372
+6a053d0846d7e2494724c9c0	1	86	556
+6a053d1546d7e2494724c9c2	1	87	556
 6a053ec746d7e2494724c9c8	1	45	555
 3	2	45	223
 6a053ef146d7e2494724c9ca	1	46	555
@@ -5064,8 +5145,6 @@ COPY public.products_featured_image (id, _order, _parent_id, image_id) FROM stdi
 6a053f8546d7e2494724c9d2	1	58	555
 6a053f9646d7e2494724c9d4	1	81	555
 6a053f9f46d7e2494724c9d6	1	82	555
-6a053d0846d7e2494724c9c0	1	86	556
-6a053d1546d7e2494724c9c2	1	87	556
 6a05122246d7e2494724c970	1	51	553
 30	2	51	69
 6a052cef46d7e2494724c972	3	51	374
@@ -5134,7 +5213,6 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 2	82	69d7321735106f65daff1c7c	510
 3	82	69d7322035106f65daff1c7e	511
 4	82	69d7322435106f65daff1c80	512
-1	87	69f560f3d095a4535f1bcdd5	532
 3	80	69d72d4235106f65daff1c72	499
 1	72	69be0c008101ffc3865d90a6	457
 2	77	69d7271835106f65daff1c5a	487
@@ -5145,13 +5223,11 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 2	42	69b99ab1aa9ac96a31121146	206
 3	77	69d7271d35106f65daff1c5c	489
 4	77	69d7272235106f65daff1c5e	490
-2	87	69f560fad095a4535f1bcdd7	534
 4	27	69b99a6daa9ac96a3112110c	133
 3	42	69b99ab1aa9ac96a31121147	207
 2	72	69be0c048101ffc3865d90a8	458
 3	72	69be0c098101ffc3865d90aa	459
 4	72	69be0c0d8101ffc3865d90ac	460
-3	87	69f560fed095a4535f1bcdd9	535
 1	55	69bb0da7db4eab779b712e99	368
 2	55	69bb0dacdb4eab779b712e9b	369
 3	55	69bb0db0db4eab779b712e9d	370
@@ -5181,10 +5257,14 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 4	69	69bdfdaeed49f1d9464815e7	444
 3	28	69b99a72aa9ac96a3112110f	137
 4	28	69b99a72aa9ac96a31121110	138
+1	88	69f562ad6a89551009457af6	540
+2	88	69f562b36a89551009457af8	542
+3	88	69f562ca6a89551009457afa	538
 1	22	69b99a54aa9ac96a311210f5	105
 2	22	69b99a54aa9ac96a311210f6	106
 3	22	69b99a54aa9ac96a311210f7	107
 4	22	69b99a54aa9ac96a311210f8	108
+4	88	69f562d16a89551009457afc	537
 1	79	69d72bc535106f65daff1c68	500
 1	83	69d9b42d11dbe2d7446d7739	513
 2	83	69d9b43411dbe2d7446d773b	515
@@ -5263,6 +5343,12 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 1	62	69bb512f5f7adf28fb6e26ce	399
 2	62	69bb51335f7adf28fb6e26d0	400
 3	62	69bb51385f7adf28fb6e26d2	402
+1	86	69f55f032d04a45db62c2cc3	528
+2	86	69f55f202d04a45db62c2cc5	531
+3	86	69f55f262d04a45db62c2cc7	529
+1	87	69f560f3d095a4535f1bcdd5	532
+2	87	69f560fad095a4535f1bcdd7	534
+3	87	69f560fed095a4535f1bcdd9	535
 1	75	69d7200500eb0cbb3b798785	476
 2	75	69d7200b00eb0cbb3b798787	477
 3	75	69d7200f00eb0cbb3b798789	478
@@ -5273,17 +5359,13 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 1	58	69bb40e3ca37cd57293813eb	383
 2	58	69bb40e8ca37cd57293813ed	384
 3	58	69bb40eeca37cd57293813ef	385
-1	88	69f562ad6a89551009457af6	540
 1	21	69b99a50aa9ac96a311210f1	100
 2	21	69b99a50aa9ac96a311210f2	101
 3	21	69b99a50aa9ac96a311210f3	102
 4	21	69b99a50aa9ac96a311210f4	103
-2	88	69f562b36a89551009457af8	542
 1	60	69bb4c32ca37cd57293813f7	391
 2	60	69bb4c37ca37cd57293813f9	392
 3	60	69bb4c3cca37cd57293813fb	393
-3	88	69f562ca6a89551009457afa	538
-4	88	69f562d16a89551009457afc	537
 1	90	69f56cc8b0fc7844540edb02	548
 2	90	69f56cd2b0fc7844540edb04	550
 3	90	69f56ce8760f978f9fb38d25	551
@@ -5393,9 +5475,6 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 2	16	69b99a3aaa9ac96a311210de	72
 3	16	69b99a3aaa9ac96a311210df	73
 4	16	69b99a3aaa9ac96a311210e0	74
-1	86	69f55f032d04a45db62c2cc3	528
-2	86	69f55f202d04a45db62c2cc5	531
-3	86	69f55f262d04a45db62c2cc7	529
 1	44	69b99abaaa9ac96a3112114d	215
 1	9	69b99a1baa9ac96a311210c8	37
 1	25	69b99a63aa9ac96a31121101	120
@@ -5465,10 +5544,14 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 389	1	31	relatedProducts	36
 390	2	31	relatedProducts	35
 391	3	31	relatedProducts	1
+1457	1	87	relatedProducts	86
+1458	2	87	relatedProducts	88
 1346	1	45	relatedProducts	51
 1347	2	45	relatedProducts	15
 1348	3	45	relatedProducts	24
 1349	4	45	relatedProducts	79
+1459	3	87	relatedProducts	52
+1460	4	87	relatedProducts	2
 1252	1	29	relatedProducts	48
 1253	2	29	relatedProducts	34
 1254	3	29	relatedProducts	4
@@ -5568,7 +5651,6 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 1386	2	58	relatedProducts	78
 1387	3	58	relatedProducts	74
 1388	4	58	relatedProducts	1
-1397	1	86	relatedProducts	87
 1065	2	35	relatedProducts	11
 1066	3	35	relatedProducts	26
 1067	4	35	relatedProducts	36
@@ -5576,7 +5658,6 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 1077	2	15	relatedProducts	27
 1078	3	15	relatedProducts	51
 1079	4	15	relatedProducts	55
-1398	2	86	relatedProducts	88
 1240	1	3	relatedProducts	34
 1241	2	3	relatedProducts	4
 1242	3	3	relatedProducts	29
@@ -5603,7 +5684,6 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 1267	4	32	relatedProducts	77
 1423	3	55	relatedProducts	40
 929	1	39	relatedProducts	38
-1276	1	88	relatedProducts	8
 1113	1	21	relatedProducts	18
 1114	2	21	relatedProducts	40
 420	1	40	relatedProducts	18
@@ -5611,7 +5691,6 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 422	3	40	relatedProducts	41
 1115	3	21	relatedProducts	41
 1116	4	21	relatedProducts	67
-1277	2	88	relatedProducts	86
 930	2	39	relatedProducts	62
 931	3	39	relatedProducts	32
 932	4	39	relatedProducts	77
@@ -5674,6 +5753,10 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 1190	3	28	relatedProducts	73
 1191	4	28	relatedProducts	45
 964	4	79	relatedProducts	78
+1465	1	88	relatedProducts	87
+1466	2	88	relatedProducts	86
+1467	3	88	relatedProducts	52
+1468	4	88	relatedProducts	2
 1056	1	11	relatedProducts	12
 1057	2	11	relatedProducts	26
 1058	3	11	relatedProducts	25
@@ -5710,8 +5793,6 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 1006	3	71	relatedProducts	89
 1007	4	71	relatedProducts	90
 1071	4	36	relatedProducts	25
-1399	1	87	relatedProducts	86
-1400	2	87	relatedProducts	88
 1429	1	59	relatedProducts	89
 1430	2	59	relatedProducts	90
 1105	1	41	relatedProducts	18
@@ -5768,6 +5849,10 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 1287	2	18	relatedProducts	40
 1288	3	18	relatedProducts	41
 1289	4	18	relatedProducts	70
+1453	1	86	relatedProducts	87
+1454	2	86	relatedProducts	88
+1455	3	86	relatedProducts	52
+1456	4	86	relatedProducts	7
 \.
 
 
@@ -5776,12 +5861,14 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 --
 
 COPY public.products_tags ("order", parent_id, value, id) FROM stdin;
-1	88	store	700
+1	86	eat	770
+1	87	eat	771
 1	77	drink	703
 1	18	drink	704
 1	90	eat	705
 1	1	eat	706
 1	40	drink	249
+1	88	store	773
 1	83	drink	554
 1	22	drink	254
 1	43	drink	637
@@ -5802,9 +5889,7 @@ COPY public.products_tags ("order", parent_id, value, id) FROM stdin;
 1	58	pour	740
 1	81	pour	741
 1	82	pour	742
-1	86	eat	743
 1	41	drink	651
-1	87	eat	744
 1	64	drink	652
 1	25	drink	235
 1	31	drink	236
@@ -5992,7 +6077,9 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	37736e99-56c2-4b7d-b41b-00295d31b180	2026-05-14 15:25:56.78+00	2026-05-14 19:24:09.485+00
+1	1	92aee338-21c3-45a0-bb05-664a096d21e8	2026-05-14 20:03:17.99+00	2026-05-14 22:03:17.99+00
+2	1	6f35127a-47c7-43ec-8706-4866605f50d5	2026-05-14 20:18:17.286+00	2026-05-14 22:18:17.286+00
+3	1	dc5edb06-336c-469e-affd-af29d28b98ff	2026-05-14 20:44:56.701+00	2026-05-14 22:44:56.701+00
 \.
 
 
@@ -6179,6 +6266,13 @@ SELECT pg_catalog.setval('public.header_rels_id_seq', 1, false);
 
 
 --
+-- Name: hero_images_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.hero_images_id_seq', 1, true);
+
+
+--
 -- Name: links_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -6189,7 +6283,7 @@ SELECT pg_catalog.setval('public.links_id_seq', 1, true);
 -- Name: media_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.media_id_seq', 556, true);
+SELECT pg_catalog.setval('public.media_id_seq', 561, true);
 
 
 --
@@ -6245,14 +6339,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 435, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 447, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 813, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 829, true);
 
 
 --
@@ -6266,14 +6360,14 @@ SELECT pg_catalog.setval('public.payload_migrations_id_seq', 11, true);
 -- Name: payload_preferences_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_id_seq', 103, true);
+SELECT pg_catalog.setval('public.payload_preferences_id_seq', 104, true);
 
 
 --
 -- Name: payload_preferences_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 373, true);
+SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 377, true);
 
 
 --
@@ -6308,14 +6402,14 @@ SELECT pg_catalog.setval('public.products_id_seq', 90, true);
 -- Name: products_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_rels_id_seq', 1452, true);
+SELECT pg_catalog.setval('public.products_rels_id_seq', 1468, true);
 
 
 --
 -- Name: products_tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_tags_id_seq', 769, true);
+SELECT pg_catalog.setval('public.products_tags_id_seq', 773, true);
 
 
 --
@@ -6726,6 +6820,22 @@ ALTER TABLE ONLY public.header
 
 ALTER TABLE ONLY public.header_rels
     ADD CONSTRAINT header_rels_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: hero_images_images hero_images_images_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.hero_images_images
+    ADD CONSTRAINT hero_images_images_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: hero_images hero_images_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.hero_images
+    ADD CONSTRAINT hero_images_pkey PRIMARY KEY (id);
 
 
 --
@@ -8058,6 +8168,34 @@ CREATE INDEX header_rels_path_idx ON public.header_rels USING btree (path);
 --
 
 CREATE INDEX header_rels_posts_id_idx ON public.header_rels USING btree (posts_id);
+
+
+--
+-- Name: hero_images_fallback_idx; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX hero_images_fallback_idx ON public.hero_images USING btree (fallback_id);
+
+
+--
+-- Name: hero_images_images_image_idx; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX hero_images_images_image_idx ON public.hero_images_images USING btree (image_id);
+
+
+--
+-- Name: hero_images_images_order_idx; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX hero_images_images_order_idx ON public.hero_images_images USING btree (_order);
+
+
+--
+-- Name: hero_images_images_parent_id_idx; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX hero_images_images_parent_id_idx ON public.hero_images_images USING btree (_parent_id);
 
 
 --
@@ -9639,6 +9777,30 @@ ALTER TABLE ONLY public.header_rels
 
 
 --
+-- Name: hero_images hero_images_fallback_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.hero_images
+    ADD CONSTRAINT hero_images_fallback_id_media_id_fk FOREIGN KEY (fallback_id) REFERENCES public.media(id) ON DELETE SET NULL;
+
+
+--
+-- Name: hero_images_images hero_images_images_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.hero_images_images
+    ADD CONSTRAINT hero_images_images_image_id_media_id_fk FOREIGN KEY (image_id) REFERENCES public.media(id) ON DELETE SET NULL;
+
+
+--
+-- Name: hero_images_images hero_images_images_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.hero_images_images
+    ADD CONSTRAINT hero_images_images_parent_id_fk FOREIGN KEY (_parent_id) REFERENCES public.hero_images(id) ON DELETE CASCADE;
+
+
+--
 -- Name: links_links links_links_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -10162,5 +10324,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 3DbI4qxPsc7o59f1lqiwQOw4IiAXxMmNrrNCo3Xj9LxbjDswjoIOhTkhDFlSr93
+\unrestrict kPy6owZBiH5nLHSso4bHdQeQSm7Spu0YGQNmNO8b0kcXvobuplpuWdFqkSnXL8V
 

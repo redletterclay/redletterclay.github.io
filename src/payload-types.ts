@@ -123,6 +123,7 @@ export interface Config {
     newsletter: Newsletter;
     faq: Faq;
     'collection-title': CollectionTitle;
+    'hero-images': HeroImage;
   };
   globalsSelect: {
     header: HeaderSelect<false> | HeaderSelect<true>;
@@ -134,6 +135,7 @@ export interface Config {
     newsletter: NewsletterSelect<false> | NewsletterSelect<true>;
     faq: FaqSelect<false> | FaqSelect<true>;
     'collection-title': CollectionTitleSelect<false> | CollectionTitleSelect<true>;
+    'hero-images': HeroImagesSelect<false> | HeroImagesSelect<true>;
   };
   locale: null;
   widgets: {
@@ -2100,6 +2102,29 @@ export interface CollectionTitle {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "hero-images".
+ */
+export interface HeroImage {
+  id: number;
+  /**
+   * Shown when no images are added to the carousel above.
+   */
+  fallback?: (number | null) | Media;
+  /**
+   * Recommended size: 2560×1600px, WebP or JPEG, under 400KB. Keep the subject centered — the image crops to fill the hero. Supports retina (2x) displays.
+   */
+  images?:
+    | {
+        image: number | Media;
+        alt?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "header_select".
  */
 export interface HeaderSelect<T extends boolean = true> {
@@ -2282,6 +2307,23 @@ export interface FaqSelect<T extends boolean = true> {
  */
 export interface CollectionTitleSelect<T extends boolean = true> {
   title?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "hero-images_select".
+ */
+export interface HeroImagesSelect<T extends boolean = true> {
+  fallback?: T;
+  images?:
+    | T
+    | {
+        image?: T;
+        alt?: T;
+        id?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
