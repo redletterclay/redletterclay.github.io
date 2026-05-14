@@ -89,6 +89,42 @@ export function LocalPickupScript() {
       w.Snipcart.store.subscribe(updateAttr)
       updateAttr()
 
+      // ── Cart item title links ────────────────────────────────────────────
+      function linkCartTitles() {
+        const state = w.Snipcart.store.getState()
+        const items: any[] = state.cart.items.items || []
+        document.querySelectorAll('.snipcart-item-line__title').forEach((el) => {
+          if (el.querySelector('a')) return
+          const text = el.textContent?.trim()
+          const item = items.find((i: any) => i.name === text)
+          if (!item?.url) return
+          const a = document.createElement('a')
+          a.href = item.url
+          a.textContent = text || ''
+          a.style.color = 'inherit'
+          a.style.textDecoration = 'none'
+          el.textContent = ''
+          el.appendChild(a)
+        })
+
+        document.querySelectorAll('.snipcart-item-line__image').forEach((img) => {
+          if (img.parentElement?.tagName === 'A') return
+          const line = img.closest('.snipcart-item-line')
+          const titleEl = line?.querySelector('.snipcart-item-line__title')
+          const text = titleEl?.textContent?.trim()
+          const item = items.find((i: any) => i.name === text)
+          if (!item?.url) return
+          const a = document.createElement('a')
+          a.href = item.url
+          img.parentElement?.insertBefore(a, img)
+          a.appendChild(img)
+        })
+      }
+      w.Snipcart.store.subscribe(linkCartTitles)
+      const observer = new MutationObserver(linkCartTitles)
+      observer.observe(document.body, { childList: true, subtree: true })
+      // ── End cart item title links ────────────────────────────────────────
+
       // Click handler for toggle + dismiss
       document.addEventListener('click', async (e: MouseEvent) => {
         const action = (e.target as Element).closest('[data-action]')?.getAttribute('data-action')
