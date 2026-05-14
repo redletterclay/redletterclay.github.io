@@ -33,7 +33,7 @@ export default async function AboutPage() {
             <div className="statement-lead animate__animated animate__fadeIn">
               <h1 className="ital" style={{ marginBottom: '1.5rem', color: 'white' }}>Hi!</h1>
 
-              <h3 style={{ paddingTop: '0.75rem' }}>About Me</h3>
+              <h2 style={{ paddingTop: '0.75rem', color: 'white' }}>About Me</h2>
               <p>
                 Red Letter Clay is operated by Davey Ball. By day I&rsquo;m a{' '}
                 <a href="https://www.raygun.org" target="_blank" rel="noopener noreferrer">
@@ -47,7 +47,7 @@ export default async function AboutPage() {
                 occasional updates throughout the year.
               </p>
 
-              <h3 style={{ paddingTop: '0.75rem' }}>Artist Statement</h3>
+              <h2 style={{ paddingTop: '0.75rem', color: 'white' }}>Artist Statement</h2>
               <p>
                 I was brought up in a{' '}
                 <a href="https://www.gnarwareworkshop.com" target="_blank" rel="noopener noreferrer">

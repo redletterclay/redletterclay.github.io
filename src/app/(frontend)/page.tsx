@@ -214,7 +214,15 @@ export default async function HomePage() {
               {featured.map((product: any) => (
                 <ProductCard key={product.id} product={product} featured={true} />
               ))}
-              <div style={{ width: '100%', textAlign: 'right', paddingTop: '0.5rem', paddingBottom: '3rem', paddingRight: '0.75rem' }}>
+              <div
+                style={{
+                  width: '100%',
+                  textAlign: 'right',
+                  paddingTop: '0.5rem',
+                  paddingBottom: '3rem',
+                  paddingRight: '0.75rem',
+                }}
+              >
                 <h3 style={{ margin: 0 }}>
                   <Link href="/shop/" title="Shop Handmade Ceramics" style={{ color: '#24A9CA' }}>
                     <i className="fa-regular fa-circle-right" aria-hidden="true" /> See More
@@ -241,7 +249,15 @@ export default async function HomePage() {
           style={{ flex: '1 1 300px', maxWidth: '58.33%', padding: '3rem 2rem' }}
         >
           <div className="statement-lead">
-            <h2 style={{ color: 'white' }}>Crafted, Not Manufactured</h2>
+            <h2
+              style={{
+                color: 'white',
+                paddingBottom: '1rem',
+                textAlign: 'center',
+              }}
+            >
+              Crafted, Not Manufactured
+            </h2>
             <p>
               My hope as a potter is to create pieces that make your daily ceremonies more special:
               your morning cup of coffee, tending to your houseplants, or meals with family and
@@ -258,6 +274,63 @@ export default async function HomePage() {
                 Davey
               </Link>
             </p>
+            <hr
+              style={{
+                borderColor: '#FFCED1',
+                borderWidth: '1px',
+                borderStyle: 'solid',
+                marginBottom: '3rem',
+                marginTop: '3rem',
+                width: '50%',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+              }}
+            />
+            <h2 style={{ color: 'white', paddingBottom: '1rem', textAlign: 'center' }}>
+              In a World of Cheap Disposable Goods,
+              <br /> Why Buy Handmade?
+            </h2>
+            <p>
+              A handmade pot is a commitment to quality over quantity — an investment in an object
+              that will still be on your table decades from now if cared for well. It isn't just a
+              dish; it's a permanent object designed to be used every day for a lifetime.
+            </p>
+            <p>
+              Unlike a factory mold, my hands leave unique marks on every piece. Because each pot is
+              shaped and glazed individually, you are receiving a one-of-a-kind object. There is a
+              quiet beauty in the subtle variations of form and finish that a machine simply cannot
+              replicate.
+            </p>
+            <p>Handmade objects also make for beloved gifts. They are perfect for:</p>
+            <div
+              className="gift-list-cols"
+              style={{ display: 'flex', gap: '0 2rem', flexWrap: 'wrap' }}
+            >
+              <ul style={{ paddingLeft: '2rem', margin: 0 }}>
+                <li>
+                  <i className="fa-solid fa-gift" aria-hidden="true" /> Weddings
+                </li>
+                <li>
+                  <i className="fa-solid fa-gift" aria-hidden="true" /> Valentine&rsquo;s Day
+                </li>
+                <li>
+                  <i className="fa-solid fa-gift" aria-hidden="true" />{' '}
+                  Mother&rsquo;s/Father&rsquo;s Day
+                </li>
+              </ul>
+              <ul style={{ paddingLeft: '2rem', margin: 0 }}>
+                <li>
+                  <i className="fa-solid fa-gift" aria-hidden="true" /> Housewarmings
+                </li>
+                <li>
+                  <i className="fa-solid fa-gift" aria-hidden="true" /> Birthdays
+                </li>
+                <li>
+                  <i className="fa-solid fa-gift" aria-hidden="true" /> Something special for
+                  yourself
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
