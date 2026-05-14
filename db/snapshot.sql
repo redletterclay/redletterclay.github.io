@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict I975xffjJvXZXGgVryUK7r6GKnlzYXvq7wQqjcZmvRlMRH3d8NE0yTesL1AkKQZ
+\restrict GLWXxG0nTxh7PcFKxk1GeDrQft3QIko510mWIlO978j62HEnwvt1cjkNlGuGlxI
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -3340,15 +3340,17 @@ COPY public._posts_v (id, parent_id, version_title, version_thumb_id, version_co
 10	11	Sculptural Juicer	291	\N	\N	\N	\N	2025-08-20 00:00:00+00	f	sculptural-juicer	2026-03-17 18:18:46.83+00	2026-03-17 18:18:46.83+00	published	2026-03-17 18:18:46.844+00	2026-03-17 18:18:46.844+00	t	f	Some new ceramic work — a juicer and cup. This piece is a technically advanced form incorporating wheel throwing, slab handbuilding, carving, and coils. The cup could be nice for making salad dressings, and it juices nicely!\n	\N		process	\N	\N	\N
 11	12	"Put a Lid on It" at the Belger Arts Center\n	299	\N	\N	\N	\N	2025-10-03 00:00:00+00	f	put-a-lid-on-it-belger-arts-center-exhibition	2026-03-17 18:18:56.006+00	2026-03-17 18:18:56.006+00	published	2026-03-17 18:18:56.01+00	2026-03-17 18:18:56.01+00	t	f	Put a Lid on It is an exploration of the lidded vessel form, showcasing how adding a lid can create a compelling separation between what is inside and what is outside. From beautifully crafted butter dishes to imaginatively designed trinket jars, each vessel demonstrates how this separation can be functional or emotional. The notion of what we choose to hold inside, whether literal or symbolic, practical or emotional, is at the heart of this exhibition.\n	\N	<div class="text-center">\n<a href="/assets/img/journal/belger-arts-flyer-1.jpg" class="glightbox" alt="Belger Arts Flyer for 'Put a Lid on It' Exhibition"><img src="/assets/img/journal/belger-arts-flyer-1.jpg" alt="Put a Lid on It Exhibition Flyer" class="img-fluid rounded-3 mb-4" style="height: 600px;"></a>\n</div>	exhibitions	\N	\N	\N
 12	13	Washi Paper Ceramic Lantern	307	\N	\N	\N	\N	2025-11-20 00:00:00+00	f	washi-paper-ceramic-lantern	2026-03-17 18:19:13.771+00	2026-03-17 18:19:13.77+00	published	2026-03-17 18:19:13.792+00	2026-03-17 18:19:13.792+00	t	f	<p>Last year I attended a <a href="https://www.switchgrasspaper.com/" target="_blank">Switchgrass Paper</a> workshop at a Chicago Public Library where we made washi paper from mulberry pulp. We took the paper we made as a group and created an installation to hang in the library with it. It was a fun collaborative art making process and I highly recommend Switchgrass Paper workshops!</p>\n	\N		process	\N	\N	\N
-13	14	Slipcast Bottle Process	319	\N	\N	\N	\N	2026-01-30 00:00:00+00	f	slipcast-bottle	2026-03-17 18:19:21.299+00	2026-03-17 18:19:21.299+00	published	2026-03-17 18:19:21.303+00	2026-03-17 18:19:21.303+00	t	f	A behind the scenes look at the making of the bottle slipcast mold that I made from an original design.\n	\N		process	\N	\N	\N
 7	8	In the Key of Clay	276	\N	\N	\N	\N	2024-06-24 00:00:00+00	f	in-the-key-of-clay-ken-jensen	2026-03-17 18:18:21.006+00	2026-03-17 18:18:21.006+00	published	2026-03-17 18:18:21.008+00	2026-03-17 18:18:21.008+00	f	f	A short documentary on artist Ken Jensen's clay instruments. <p><a href="https://www.youtube.com/watch?v=9jX1H3J5CBU" target="_blank" alt="In the Key of Clay Ken Jensen Documentary"><i class="fa-brands fa-youtube"></i> YouTube Link</a></p>	\N		video	\N	\N	\N
 14	7	Heath Ceramics	275	\N	\N	\N	\N	2024-06-21 00:00:00+00	f	heath-ceramics-documentary	2026-03-17 21:41:45.711+00	2026-03-17 18:18:20.276+00	published	2026-03-17 21:41:45.717+00	2026-03-17 21:41:45.717+00	t	f	<h3>1-hour Documentary on Heath Ceramics from KCET's Artbound program.</h3>\n<p>KCET shares the first-ever documentary about Heath. This is the story and history of Heath Ceramics from Edith Heath’s vision, philosophy, and craft to the evolution of the company as a fixture of American design. As part of the arts & culture series ARTBOUND, which examines the lives, works, and creative processes of arts and culture innovators making an impact in Southern California and beyond.</p>\n	\N		video	IJFM8Kui1W0	\N	\N
 8	9	Takeshi Yasuda	277	\N	\N	\N	\N	2025-02-17 00:00:00+00	f	takeshi-yasuda	2026-03-17 18:18:25.964+00	2026-03-17 18:18:25.964+00	published	2026-03-17 18:18:25.97+00	2026-03-17 18:18:25.97+00	f	f	Takeshi Yasuda is a Japanese potter who was born in Tokyo, Japan, in 1943. Yasuda trained at the Daisei-Kiln in Mashiko from 1963 to 1966 and established his first studio there. He served as Director of the Pottery Workshop in Jingdezhen, China and exhibits internationally.\n	\N		video	\N	\N	\N
+13	14	Slipcast Bottle Process	319	\N	\N	\N	\N	2026-01-30 00:00:00+00	f	slipcast-bottle	2026-03-17 18:19:21.299+00	2026-03-17 18:19:21.299+00	published	2026-03-17 18:19:21.303+00	2026-03-17 18:19:21.303+00	f	f	A behind the scenes look at the making of the bottle slipcast mold that I made from an original design.\n	\N		process	\N	\N	\N
 6	7	Heath Ceramics	275	\N	\N	\N	\N	2024-06-21 00:00:00+00	f	heath-ceramics-documentary	2026-03-17 18:18:20.276+00	2026-03-17 18:18:20.276+00	published	2026-03-17 18:18:20.279+00	2026-03-17 18:18:20.279+00	f	f	<h3>1-hour Documentary on Heath Ceramics from KCET's Artbound program.</h3>\n<p>KCET shares the first-ever documentary about Heath. This is the story and history of Heath Ceramics from Edith Heath’s vision, philosophy, and craft to the evolution of the company as a fixture of American design. As part of the arts & culture series ARTBOUND, which examines the lives, works, and creative processes of arts and culture innovators making an impact in Southern California and beyond.</p>\n	\N		video	\N	\N	\N
 15	8	In the Key of Clay	276	\N	\N	\N	\N	2024-06-24 00:00:00+00	f	in-the-key-of-clay-ken-jensen	2026-03-17 21:41:45.77+00	2026-03-17 18:18:21.006+00	published	2026-03-17 21:41:45.775+00	2026-03-17 21:41:45.775+00	t	f	A short documentary on artist Ken Jensen's clay instruments. <p><a href="https://www.youtube.com/watch?v=9jX1H3J5CBU" target="_blank" alt="In the Key of Clay Ken Jensen Documentary"><i class="fa-brands fa-youtube"></i> YouTube Link</a></p>	\N		video	9jX1H3J5CBU	\N	\N
 18	9	Takeshi Yasuda	277	\N	\N	\N	\N	2025-02-17 00:00:00+00	f	takeshi-yasuda	2026-03-19 16:29:42.652+00	2026-03-17 18:18:25.964+00	published	2026-03-19 16:29:42.667+00	2026-03-19 16:29:42.667+00	t	f	Takeshi Yasuda is a Japanese potter who was born in Tokyo, Japan, in 1943. Yasuda trained at the Daisei-Kiln in Mashiko from 1963 to 1966 and established his first studio there. He served as Director of the Pottery Workshop in Jingdezhen, China and exhibits internationally.\n	\N		video	6KS-bIPW3J4	435	\N
 17	9	Takeshi Yasuda	277	\N	\N	\N	\N	2025-02-17 00:00:00+00	f	takeshi-yasuda	2026-03-19 16:29:40.574+00	2026-03-17 18:18:25.964+00	draft	2026-03-19 16:29:40.574+00	2026-03-19 16:29:40.574+00	f	t	Takeshi Yasuda is a Japanese potter who was born in Tokyo, Japan, in 1943. Yasuda trained at the Daisei-Kiln in Mashiko from 1963 to 1966 and established his first studio there. He served as Director of the Pottery Workshop in Jingdezhen, China and exhibits internationally.\n	\N		video	6KS-bIPW3J4	435	\N
 16	9	Takeshi Yasuda	277	\N	\N	\N	\N	2025-02-17 00:00:00+00	f	takeshi-yasuda	2026-03-17 21:41:45.815+00	2026-03-17 18:18:25.964+00	published	2026-03-17 21:41:45.822+00	2026-03-17 21:41:45.822+00	f	f	Takeshi Yasuda is a Japanese potter who was born in Tokyo, Japan, in 1943. Yasuda trained at the Daisei-Kiln in Mashiko from 1963 to 1966 and established his first studio there. He served as Director of the Pottery Workshop in Jingdezhen, China and exhibits internationally.\n	\N		video	6KS-bIPW3J4	\N	\N
+20	14	Slipcast Bottle Process	319	\N	\N	\N	\N	2026-01-30 00:00:00+00	f	slipcast-bottle	2026-05-14 17:34:37.013+00	2026-03-17 18:19:21.299+00	published	2026-05-14 17:34:37.025+00	2026-05-14 17:34:37.025+00	t	f	A behind the scenes look at the making of the bottle slipcast mold that I made from an original design.\n	\N		process	\N	\N	\N
+19	14	Slipcast Bottle Process	319	\N	\N	\N	\N	2026-01-30 00:00:00+00	f	slipcast-bottle	2026-05-14 17:34:35.956+00	2026-03-17 18:19:21.299+00	draft	2026-05-14 17:34:14.97+00	2026-05-14 17:34:35.956+00	f	t	A behind the scenes look at the making of the bottle slipcast mold that I made from an original design.\n	\N		process	\N	\N	\N
 \.
 
 
@@ -3401,6 +3403,12 @@ COPY public._posts_v_version_gallery (_order, _parent_id, id, _uuid) FROM stdin;
 1	18	34	69b99af1aa9ac96a31121188
 2	18	35	69b99af1aa9ac96a3112118b
 3	18	36	69b99af1aa9ac96a3112118e
+1	19	91	69b99b29aa9ac96a311211c5
+2	19	92	69b99b29aa9ac96a311211c8
+3	19	93	69b99b29aa9ac96a311211ca
+1	20	94	69b99b29aa9ac96a311211c5
+2	20	95	69b99b29aa9ac96a311211c8
+3	20	96	69b99b29aa9ac96a311211ca
 \.
 
 
@@ -3483,6 +3491,18 @@ COPY public._posts_v_version_gallery_items (_order, _parent_id, id, image_id, al
 2	35	72	281	\N	Goblets	69b99af1aa9ac96a3112118a
 1	36	73	282	\N	Vase	69b99af1aa9ac96a3112118c
 2	36	74	283	\N	Teapot	69b99af1aa9ac96a3112118d
+1	91	201	320	Original Bottle	Original wheel thrown bottle	69b99b29aa9ac96a311211c2
+2	91	202	321	\N	Preparing mold	69b99b29aa9ac96a311211c3
+3	91	203	322	\N	Pouring plaster	69b99b29aa9ac96a311211c4
+1	92	204	323	\N	Slipcast bottle coming out of mold	69b99b29aa9ac96a311211c6
+2	92	205	324	\N	Slipcast bottle after being trimmed, ready for firing	69b99b29aa9ac96a311211c7
+1	93	206	555	Bottle Line Up	\N	6a0607969c7b8541d4d2073b
+1	94	207	320	Original Bottle	Original wheel thrown bottle	69b99b29aa9ac96a311211c2
+2	94	208	321	\N	Preparing mold	69b99b29aa9ac96a311211c3
+3	94	209	322	\N	Pouring plaster	69b99b29aa9ac96a311211c4
+1	95	210	323	\N	Slipcast bottle coming out of mold	69b99b29aa9ac96a311211c6
+2	95	211	324	\N	Slipcast bottle after being trimmed, ready for firing	69b99b29aa9ac96a311211c7
+1	96	212	555	Bottle Line Up	\N	6a0607969c7b8541d4d2073b
 \.
 
 
@@ -4542,7 +4562,7 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 9	20260318_161820	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 10	20260320_033436	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 11	20260513_products_thumb_array	7	2026-05-14 00:04:04.985+00	2026-05-14 00:04:04.984+00
-1	dev	-1	2026-05-14 16:55:25.518+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-05-14 17:38:46.663+00	2026-03-16 16:07:06.694+00
 \.
 
 
@@ -4783,9 +4803,9 @@ COPY public.posts (id, title, thumb_id, content, meta_title, meta_image_id, meta
 12	"Put a Lid on It" at the Belger Arts Center\n	299	\N	\N	\N	\N	2025-10-03 00:00:00+00	f	put-a-lid-on-it-belger-arts-center-exhibition	2026-03-17 18:18:56.006+00	2026-03-17 18:18:56.006+00	published	Put a Lid on It is an exploration of the lidded vessel form, showcasing how adding a lid can create a compelling separation between what is inside and what is outside. From beautifully crafted butter dishes to imaginatively designed trinket jars, each vessel demonstrates how this separation can be functional or emotional. The notion of what we choose to hold inside, whether literal or symbolic, practical or emotional, is at the heart of this exhibition.\n	\N	<div class="text-center">\n<a href="/assets/img/journal/belger-arts-flyer-1.jpg" class="glightbox" alt="Belger Arts Flyer for 'Put a Lid on It' Exhibition"><img src="/assets/img/journal/belger-arts-flyer-1.jpg" alt="Put a Lid on It Exhibition Flyer" class="img-fluid rounded-3 mb-4" style="height: 600px;"></a>\n</div>	exhibitions	\N	\N	\N
 13	Washi Paper Ceramic Lantern	307	\N	\N	\N	\N	2025-11-20 00:00:00+00	f	washi-paper-ceramic-lantern	2026-03-17 18:19:13.771+00	2026-03-17 18:19:13.77+00	published	<p>Last year I attended a <a href="https://www.switchgrasspaper.com/" target="_blank">Switchgrass Paper</a> workshop at a Chicago Public Library where we made washi paper from mulberry pulp. We took the paper we made as a group and created an installation to hang in the library with it. It was a fun collaborative art making process and I highly recommend Switchgrass Paper workshops!</p>\n	\N		process	\N	\N	\N
 8	In the Key of Clay	276	\N	\N	\N	\N	2024-06-24 00:00:00+00	f	in-the-key-of-clay-ken-jensen	2026-03-17 21:41:45.77+00	2026-03-17 18:18:21.006+00	published	A short documentary on artist Ken Jensen's clay instruments. <p><a href="https://www.youtube.com/watch?v=9jX1H3J5CBU" target="_blank" alt="In the Key of Clay Ken Jensen Documentary"><i class="fa-brands fa-youtube"></i> YouTube Link</a></p>	\N		video	9jX1H3J5CBU	\N	\N
-14	Slipcast Bottle Process	319	\N	\N	\N	\N	2026-01-30 00:00:00+00	f	slipcast-bottle	2026-03-17 18:19:21.299+00	2026-03-17 18:19:21.299+00	published	A behind the scenes look at the making of the bottle slipcast mold that I made from an original design.\n	\N		process	\N	\N	\N
 7	Heath Ceramics	275	\N	\N	\N	\N	2024-06-21 00:00:00+00	f	heath-ceramics-documentary	2026-03-17 21:41:45.711+00	2026-03-17 18:18:20.276+00	published	<h3>1-hour Documentary on Heath Ceramics from KCET's Artbound program.</h3>\n<p>KCET shares the first-ever documentary about Heath. This is the story and history of Heath Ceramics from Edith Heath’s vision, philosophy, and craft to the evolution of the company as a fixture of American design. As part of the arts & culture series ARTBOUND, which examines the lives, works, and creative processes of arts and culture innovators making an impact in Southern California and beyond.</p>\n	\N		video	IJFM8Kui1W0	\N	\N
 9	Takeshi Yasuda	277	\N	\N	\N	\N	2025-02-17 00:00:00+00	f	takeshi-yasuda	2026-03-19 16:29:42.652+00	2026-03-17 18:18:25.964+00	published	Takeshi Yasuda is a Japanese potter who was born in Tokyo, Japan, in 1943. Yasuda trained at the Daisei-Kiln in Mashiko from 1963 to 1966 and established his first studio there. He served as Director of the Pottery Workshop in Jingdezhen, China and exhibits internationally.\n	\N		video	6KS-bIPW3J4	435	\N
+14	Slipcast Bottle Process	319	\N	\N	\N	\N	2026-01-30 00:00:00+00	f	slipcast-bottle	2026-05-14 17:34:37.013+00	2026-03-17 18:19:21.299+00	published	A behind the scenes look at the making of the bottle slipcast mold that I made from an original design.\n	\N		process	\N	\N	\N
 \.
 
 
@@ -4815,12 +4835,12 @@ COPY public.posts_gallery (_order, _parent_id, id) FROM stdin;
 3	13	69b99b21aa9ac96a311211b9
 4	13	69b99b21aa9ac96a311211bc
 5	13	69b99b21aa9ac96a311211c0
-1	14	69b99b29aa9ac96a311211c5
-2	14	69b99b29aa9ac96a311211c8
-3	14	69b99b29aa9ac96a311211ca
 1	9	69b99af1aa9ac96a31121188
 2	9	69b99af1aa9ac96a3112118b
 3	9	69b99af1aa9ac96a3112118e
+1	14	69b99b29aa9ac96a311211c5
+2	14	69b99b29aa9ac96a311211c8
+3	14	69b99b29aa9ac96a311211ca
 \.
 
 
@@ -4873,18 +4893,18 @@ COPY public.posts_gallery_items (_order, _parent_id, id, image_id, alt, title) F
 1	69b99b21aa9ac96a311211c0	69b99b21aa9ac96a311211bd	316	\N	Mould and deckle
 2	69b99b21aa9ac96a311211c0	69b99b21aa9ac96a311211be	317	\N	Removing pulled washi paper
 3	69b99b21aa9ac96a311211c0	69b99b21aa9ac96a311211bf	318	\N	Finished washi paper
-1	69b99b29aa9ac96a311211c5	69b99b29aa9ac96a311211c2	320	Original Bottle	Original wheel thrown bottle
-2	69b99b29aa9ac96a311211c5	69b99b29aa9ac96a311211c3	321	\N	Preparing mold
-3	69b99b29aa9ac96a311211c5	69b99b29aa9ac96a311211c4	322	\N	Pouring plaster
-1	69b99b29aa9ac96a311211c8	69b99b29aa9ac96a311211c6	323	\N	Slipcast bottle coming out of mold
-2	69b99b29aa9ac96a311211c8	69b99b29aa9ac96a311211c7	324	\N	Slipcast bottle after being trimmed, ready for firing
-1	69b99b29aa9ac96a311211ca	69b99b29aa9ac96a311211c9	325	\N	Fired slipcast bottle
 1	69b99af1aa9ac96a31121188	69b99af1aa9ac96a31121186	278	\N	Platter
 2	69b99af1aa9ac96a31121188	69b99af1aa9ac96a31121187	279	\N	Platter Pedestal
 1	69b99af1aa9ac96a3112118b	69b99af1aa9ac96a31121189	280	\N	Bowls
 2	69b99af1aa9ac96a3112118b	69b99af1aa9ac96a3112118a	281	\N	Goblets
 1	69b99af1aa9ac96a3112118e	69b99af1aa9ac96a3112118c	282	\N	Vase
 2	69b99af1aa9ac96a3112118e	69b99af1aa9ac96a3112118d	283	\N	Teapot
+1	69b99b29aa9ac96a311211c5	69b99b29aa9ac96a311211c2	320	Original Bottle	Original wheel thrown bottle
+2	69b99b29aa9ac96a311211c5	69b99b29aa9ac96a311211c3	321	\N	Preparing mold
+3	69b99b29aa9ac96a311211c5	69b99b29aa9ac96a311211c4	322	\N	Pouring plaster
+1	69b99b29aa9ac96a311211c8	69b99b29aa9ac96a311211c6	323	\N	Slipcast bottle coming out of mold
+2	69b99b29aa9ac96a311211c8	69b99b29aa9ac96a311211c7	324	\N	Slipcast bottle after being trimmed, ready for firing
+1	69b99b29aa9ac96a311211ca	6a0607969c7b8541d4d2073b	555	Bottle Line Up	\N
 \.
 
 
@@ -5889,10 +5909,10 @@ COPY public.search (id, title, priority, slug, meta_title, meta_description, met
 10	Sculptural Juicer	0	sculptural-juicer	Sculptural Juicer	\N	\N	2026-03-17 18:18:46.869+00	2026-03-17 18:18:46.868+00
 11	"Put a Lid on It" at the Belger Arts Center\n	0	put-a-lid-on-it-belger-arts-center-exhibition	"Put a Lid on It" at the Belger Arts Center\n	\N	\N	2026-03-17 18:18:56.031+00	2026-03-17 18:18:56.031+00
 12	Washi Paper Ceramic Lantern	0	washi-paper-ceramic-lantern	Washi Paper Ceramic Lantern	\N	\N	2026-03-17 18:19:13.808+00	2026-03-17 18:19:13.808+00
-13	Slipcast Bottle Process	0	slipcast-bottle	Slipcast Bottle Process	\N	\N	2026-03-17 18:19:21.313+00	2026-03-17 18:19:21.313+00
 6	Heath Ceramics	0	heath-ceramics-documentary	Heath Ceramics	\N	\N	2026-03-17 21:41:45.741+00	2026-03-17 18:18:20.284+00
 7	In the Key of Clay	0	in-the-key-of-clay-ken-jensen	In the Key of Clay	\N	\N	2026-03-17 21:41:45.791+00	2026-03-17 18:18:21.011+00
 8	Takeshi Yasuda	0	takeshi-yasuda	Takeshi Yasuda	\N	\N	2026-03-19 16:29:42.7+00	2026-03-17 18:18:25.992+00
+13	Slipcast Bottle Process	0	slipcast-bottle	Slipcast Bottle Process	\N	\N	2026-05-14 17:34:37.05+00	2026-03-17 18:19:21.313+00
 \.
 
 
@@ -5910,10 +5930,10 @@ COPY public.search_categories (_order, _parent_id, id, relation_to, category_i_d
 1	10	69b99b06aa9ac96a311211a5	categories	\N	process
 1	11	69b99b10aa9ac96a311211b0	categories	\N	exhibitions
 1	12	69b99b21aa9ac96a311211c1	categories	\N	process
-1	13	69b99b29aa9ac96a311211cb	categories	\N	process
 1	6	69b9ca995de1eb23ad5e1b9f	categories	\N	video
 1	7	69b9ca995de1eb23ad5e1ba0	categories	\N	video
 1	8	69bc2476cc38200031b0f4b9	categories	\N	video
+1	13	6a0607adfa8b860031e7cad5	categories	\N	process
 \.
 
 
@@ -5931,10 +5951,10 @@ COPY public.search_rels (id, "order", parent_id, path, posts_id) FROM stdin;
 10	\N	10	doc	11
 11	\N	11	doc	12
 12	\N	12	doc	13
-13	\N	13	doc	14
 14	\N	6	doc	7
 15	\N	7	doc	8
 17	\N	8	doc	9
+18	\N	13	doc	14
 \.
 
 
@@ -6050,7 +6070,7 @@ SELECT pg_catalog.setval('public._pages_v_version_hero_links_id_seq', 1, false);
 -- Name: _posts_v_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public._posts_v_id_seq', 18, true);
+SELECT pg_catalog.setval('public._posts_v_id_seq', 20, true);
 
 
 --
@@ -6064,14 +6084,14 @@ SELECT pg_catalog.setval('public._posts_v_rels_id_seq', 1, false);
 -- Name: _posts_v_version_gallery_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public._posts_v_version_gallery_id_seq', 36, true);
+SELECT pg_catalog.setval('public._posts_v_version_gallery_id_seq', 96, true);
 
 
 --
 -- Name: _posts_v_version_gallery_items_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public._posts_v_version_gallery_items_id_seq', 74, true);
+SELECT pg_catalog.setval('public._posts_v_version_gallery_items_id_seq', 212, true);
 
 
 --
@@ -6225,14 +6245,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 431, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 435, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 805, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 813, true);
 
 
 --
@@ -6323,7 +6343,7 @@ SELECT pg_catalog.setval('public.search_id_seq', 13, true);
 -- Name: search_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.search_rels_id_seq', 17, true);
+SELECT pg_catalog.setval('public.search_rels_id_seq', 18, true);
 
 
 --
@@ -10142,5 +10162,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict I975xffjJvXZXGgVryUK7r6GKnlzYXvq7wQqjcZmvRlMRH3d8NE0yTesL1AkKQZ
+\unrestrict GLWXxG0nTxh7PcFKxk1GeDrQft3QIko510mWIlO978j62HEnwvt1cjkNlGuGlxI
 

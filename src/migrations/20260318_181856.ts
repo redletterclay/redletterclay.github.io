@@ -1,6 +1,6 @@
 import { MigrateUpArgs, MigrateDownArgs, sql } from '@payloadcms/db-postgres'
 
-export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
+export async function up({ db, payload: _payload, req: _req }: MigrateUpArgs): Promise<void> {
   // Convert existing plain text descriptions to Lexical JSON format, then change column type
   await db.execute(sql`
     ALTER TABLE "products"
@@ -57,7 +57,7 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   `)
 }
 
-export async function down({ db, payload, req }: MigrateDownArgs): Promise<void> {
+export async function down({ db, payload: _payload, req: _req }: MigrateDownArgs): Promise<void> {
   await db.execute(sql`
     ALTER TABLE "products" DROP CONSTRAINT IF EXISTS "products_meta_image_id_media_id_fk";
     DROP INDEX IF EXISTS "pages_meta_meta_image_1_idx";

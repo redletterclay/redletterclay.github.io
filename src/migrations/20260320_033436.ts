@@ -1,6 +1,6 @@
 import { MigrateUpArgs, MigrateDownArgs, sql } from '@payloadcms/db-postgres'
 
-export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
+export async function up({ db, payload: _payload, req: _req }: MigrateUpArgs): Promise<void> {
   await db.execute(sql`
    ALTER TABLE "posts" ALTER COLUMN "category" SET DATA TYPE text;
   DROP TYPE "public"."enum_posts_category";
@@ -22,7 +22,7 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   CREATE INDEX "_posts_v_version_version_video_thumb_idx" ON "_posts_v" USING btree ("version_video_thumb_id");`)
 }
 
-export async function down({ db, payload, req }: MigrateDownArgs): Promise<void> {
+export async function down({ db, payload: _payload, req: _req }: MigrateDownArgs): Promise<void> {
   await db.execute(sql`
    ALTER TYPE "public"."enum_posts_category" ADD VALUE 'inspiration' BEFORE 'process';
   ALTER TYPE "public"."enum_posts_category" ADD VALUE 'updates' BEFORE 'video';

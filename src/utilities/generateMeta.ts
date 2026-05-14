@@ -9,7 +9,8 @@ const DEFAULT_OG_IMAGE = 'https://ik.imagekit.io/raygun/redletterclay/social-ope
 const getImageURL = (image?: Media | Config['db']['defaultIDType'] | null): string => {
   if (image && typeof image === 'object' && 'url' in image) {
     // Prefer ImageKit CDN URL, then og size, then original
-    const url = (image as any).imagekitUrl || image.sizes?.og?.url || image.url
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const url = (image as any).imagekitUrl || image.sizes?.og?.url || image.url
     if (!url) return DEFAULT_OG_IMAGE
     // If already absolute (CDN), use as-is; otherwise it's a relative local path
     return url.startsWith('http') ? url : `https://www.redletterclay.com${url}`
@@ -27,6 +28,7 @@ export const generateMeta = async (args: {
   // Prefer explicit meta image, then post thumb, then default
   const ogImage = getImageURL(doc?.meta?.image || thumbImage || null)
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const docTitle = (doc as any)?.title || (doc as any)?.name || ''
   const title = doc?.meta?.title || docTitle || 'Red Letter Clay'
 

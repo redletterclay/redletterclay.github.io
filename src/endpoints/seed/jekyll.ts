@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import fs from 'fs'
 import path from 'path'
 import yaml from 'yaml'
 import type { Payload, PayloadRequest } from 'payload'
-// @ts-ignore
+// @ts-expect-error - no types for this internal export
 import { generateKeyBetween } from 'payload/shared'
 import { imagekit, IMAGEKIT_FOLDER } from '@/utilities/imagekit'
 import { toFile } from '@imagekit/nodejs'
