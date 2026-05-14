@@ -178,6 +178,7 @@ export function LocalPickupToggle() {
           type="button"
           className="local-pickup-switch"
           role="switch"
+          aria-checked="false"
           data-action="toggle_local_pickup_discount"
           aria-label="Local pickup 15% off"
         />
