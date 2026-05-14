@@ -10,7 +10,7 @@ import { notFound } from 'next/navigation'
 import { Stockists } from '@/components/Stockists'
 import { ShopTagFilter } from '../ShopTagFilter'
 import { ShopStockChecker } from '../ShopStockChecker.client'
-import { ProductCard, localPrice } from '@/components/ProductCard'
+import { ProductCard } from '@/components/ProductCard'
 import { ShopPagination } from '../ShopPagination'
 import { PricingNote } from '@/components/PricingNote'
 

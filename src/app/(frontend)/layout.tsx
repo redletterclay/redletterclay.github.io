@@ -11,7 +11,6 @@ import { Header } from '@/Header/Component'
 import { Providers } from '@/providers'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 import './globals.css'
-import { getServerSideURL } from '@/utilities/getURL'
 
 const vollkorn = Vollkorn({
   subsets: ['latin'],
@@ -46,9 +45,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body>
         <link rel="preconnect" href="https://app.snipcart.com" />
         <link rel="preconnect" href="https://cdn.snipcart.com" />
-        {/* eslint-disable-next-line @next/next/no-css-tags */}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-        {/* eslint-disable-next-line @next/next/no-css-tags */}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <Providers>
           <Header />

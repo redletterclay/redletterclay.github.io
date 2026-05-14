@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from 'next/types'
 
 import configPromise from '@payload-config'

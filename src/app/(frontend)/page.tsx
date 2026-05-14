@@ -292,8 +292,8 @@ export default async function HomePage() {
             </h2>
             <p>
               A handmade pot is a commitment to quality over quantity — an investment in an object
-              that will still be on your table decades from now if cared for well. It isn't just a
-              dish; it's a permanent object designed to be used every day for a lifetime.
+              that will still be on your table decades from now if cared for well. It isn&rsquo;t just a
+              dish; it&rsquo;s a permanent object designed to be used every day for a lifetime.
             </p>
             <p>
               Unlike a factory mold, my hands leave unique marks on every piece. Because each pot is

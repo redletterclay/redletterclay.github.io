@@ -3,7 +3,6 @@ import React from 'react'
 import type { Post } from '@/payload-types'
 
 export const PostHero: React.FC<{ post: Post }> = ({ post }) => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { category, thumb, publishedAt, title, description, descriptionTwo } = post as any
 
   const thumbMedia = thumb && typeof thumb !== 'string' ? thumb : null

@@ -15,13 +15,11 @@ import { getServerSideURL } from '@/utilities/getURL'
 
 const generateTitle: GenerateTitle<Post | Page> = ({ doc, collectionConfig: _collectionConfig }) => {
   const suffix = 'Handmade Pottery & Ceramics - Red Letter Clay'
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const name = (doc as any)?.name || doc?.title
   return name ? `${name} | ${suffix}` : suffix
 }
 
 const generateDescription: GenerateDescription<Post | Page> = ({ doc }) => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return (doc as any)?.description || (doc as any)?.excerpt || ''
 }
 
@@ -30,7 +28,6 @@ const generateURL: GenerateURL<Post | Page> = ({ doc, collectionConfig }) => {
 
   // Journal posts live at /journal/{category}/{slug}
   if (collectionConfig?.slug === 'posts') {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const category = (doc as any)?.category
     return doc?.slug ? `${url}/journal/${category}/${doc.slug}` : url
   }

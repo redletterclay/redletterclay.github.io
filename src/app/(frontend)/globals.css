@@ -1519,6 +1519,7 @@ legend {
 .snipcart-billing-completed .snipcart-checkout-step__icon,
 .snipcart-shipping-completed .snipcart-checkout-step__icon { color: #A73838 !important; }
 .snipcart-summary-fees__amount { font-weight: 600 !important; font-size: 1.4rem !important; }
+ul.snipcart-summary-fees__discounts { display: none !important; }
 .snipcart-cart__secondary-header { background-color: white !important; }
 .snipcart-cart-header { background-color: white !important; }
 .snipcart__font--std { font-family: var(--font-heading2) !important; }

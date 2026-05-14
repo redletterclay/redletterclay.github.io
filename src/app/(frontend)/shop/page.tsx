@@ -9,14 +9,13 @@ import Link from 'next/link'
 import { Stockists } from '@/components/Stockists'
 import { ShopTagFilter } from './ShopTagFilter'
 import { ShopStockChecker } from './ShopStockChecker.client'
-import { ProductCard, localPrice } from '@/components/ProductCard'
+import { ProductCard } from '@/components/ProductCard'
 import { ShopPagination } from './ShopPagination'
 import { PricingNote } from '@/components/PricingNote'
 
 export const dynamic = 'force-static'
 export const revalidate = 600
 
-const SHOP_TAGS = ['display', 'drink', 'eat', 'plant', 'pour', 'store'] as const
 
 export default async function ShopPage() {
   const payload = await getPayload({ config: configPromise })
