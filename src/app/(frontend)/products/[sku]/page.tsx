@@ -13,6 +13,7 @@ import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 import { ShopTagFilter } from '../../shop/ShopTagFilter'
 import { ProductAddToCart } from './ProductAddToCart.client'
 import { ProductImages } from './ProductImages.client'
+import { ProductFeaturedCarousel } from './ProductFeaturedCarousel.client'
 import { ProductCard } from '@/components/ProductCard'
 import { ShopStockChecker } from '../../shop/ShopStockChecker.client'
 import RichText from '@/components/RichText'
@@ -56,7 +57,9 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
   }
 
   const hasDetails = product.width || product.height || product.weight || product.holds || product.length
-  const featuredImage = product.featuredImage && typeof product.featuredImage !== 'string' ? product.featuredImage : null
+  const featuredImages: { url: string; alt?: string }[] = (product.featuredImage || [])
+    .map((item: any) => (item.image && typeof item.image !== 'string' ? item.image : null))
+    .filter(Boolean)
 
   const firingMethodLabels: Record<string, string> = {
     'electric-6': '▵ 6 electric oxidation',
@@ -288,17 +291,10 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
             </div>
           </div>
 
-          {/* Featured image */}
-          {featuredImage && (
-            <div style={{ textAlign: 'center', paddingTop: '1.5rem', paddingBottom: '1rem' }}>
-              <a href={featuredImage.url} className="glightbox cursor-zoom" data-type="image" data-zoomable="true">
-                <img
-                  src={featuredImage.url}
-                  alt={featuredImage.alt || product.name || product.title}
-                  className="cursor-zoom"
-                  style={{ width: '100%', borderRadius: '2rem' }}
-                />
-              </a>
+          {/* Featured images carousel */}
+          {featuredImages.length > 0 && (
+            <div style={{ paddingTop: '1.5rem', paddingBottom: '1rem' }}>
+              <ProductFeaturedCarousel images={featuredImages} title={product.name || product.title} />
             </div>
           )}
 
@@ -388,8 +384,8 @@ export async function generateMetadata({ params: paramsPromise }: Args): Promise
   })
   const product = result.docs?.[0] as any
   const firstImage = product?.images?.[0]?.image && typeof product.images[0].image !== 'string' ? product.images[0].image : null
-  const thumb = product?.thumb && typeof product.thumb !== 'string' ? product.thumb : null
-  const ogImageDoc = firstImage || thumb
+  const thumbFirst = product?.thumb && typeof product.thumb !== 'string' ? product.thumb : null
+  const ogImageDoc = firstImage || thumbFirst
   const ogImageUrl = ogImageDoc
     ? ((ogImageDoc as any).imagekitUrl || ogImageDoc.url || '').startsWith('http')
       ? (ogImageDoc as any).imagekitUrl || ogImageDoc.url

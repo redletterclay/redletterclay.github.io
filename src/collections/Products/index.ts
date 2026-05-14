@@ -120,9 +120,17 @@ export const Products: CollectionConfig<'products'> = {
             },
             {
               name: 'featuredImage',
-              type: 'upload',
-              relationTo: 'media',
-              admin: { allowCreate: false },
+              type: 'array',
+              label: 'Featured Images',
+              labels: { singular: 'Image', plural: 'Images' },
+              fields: [
+                {
+                  name: 'image',
+                  type: 'upload',
+                  relationTo: 'media',
+                  admin: { allowCreate: false },
+                },
+              ],
             },
             {
               name: 'relatedProducts',

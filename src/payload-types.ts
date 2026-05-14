@@ -891,7 +891,12 @@ export interface Product {
         id?: string | null;
       }[]
     | null;
-  featuredImage?: (number | null) | Media;
+  featuredImage?:
+    | {
+        image?: (number | null) | Media;
+        id?: string | null;
+      }[]
+    | null;
   relatedProducts?: (number | Product)[] | null;
   /**
    * in inches
@@ -1568,7 +1573,12 @@ export interface ProductsSelect<T extends boolean = true> {
         image?: T;
         id?: T;
       };
-  featuredImage?: T;
+  featuredImage?:
+    | T
+    | {
+        image?: T;
+        id?: T;
+      };
   relatedProducts?: T;
   width?: T;
   height?: T;
