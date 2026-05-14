@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import yaml from 'yaml'
 import type { Payload, PayloadRequest } from 'payload'
-// @ts-expect-error - no types for this internal export
+// @ts-ignore
 import { generateKeyBetween } from 'payload/shared'
 import { imagekit, IMAGEKIT_FOLDER } from '@/utilities/imagekit'
 import { toFile } from '@imagekit/nodejs'
