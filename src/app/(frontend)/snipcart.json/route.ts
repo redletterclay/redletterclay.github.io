@@ -39,6 +39,7 @@ export async function GET() {
       url: `${BASE_URL}/products/${product.sku}`,
       description,
       image: thumb?.url ?? '',
+      stock: 1,
     }
   })
 

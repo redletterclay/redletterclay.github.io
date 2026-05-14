@@ -79,12 +79,6 @@ export function LocalPickupScript() {
         const items = state.cart.discounts.items as any[]
         const hasDiscount = items.some((d: any) => d.code === DISCOUNT_CODE)
         document.body.setAttribute('data-local-pickup-discount', hasDiscount.toString())
-        if (hasDiscount) {
-          document.body.removeAttribute('data-local-pickup-dismissed')
-          try {
-            localStorage.removeItem('rlc.local-pickup-dismissed')
-          } catch {}
-        }
       }
       w.Snipcart.store.subscribe(updateAttr)
       updateAttr()
