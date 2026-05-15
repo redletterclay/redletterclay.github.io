@@ -76,17 +76,17 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
       <PricingNote />
 
       {/* Product layout */}
-      <div className="container" style={{ paddingTop: '2rem' }}>
+      <div className="container-fluid" style={{ paddingTop: '2rem', paddingLeft: 0, paddingRight: 0 }}>
         <section style={{ marginTop: 0 }}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 0 }}>
 
-            {/* Images — left col (lg: 2/3 width) */}
-            <div style={{ flex: '2 1 400px', minWidth: 0 }}>
+            {/* Images — left col (lg: 60%) */}
+            <div style={{ flex: '3 1 480px', minWidth: 0 }}>
               <ProductImages images={productImages} title={product.name || product.title} sku={product.sku} />
             </div>
 
-            {/* Info — right col (lg: 1/3 width) */}
-            <div style={{ flex: '1 1 280px', minWidth: 0 }}>
+            {/* Info — right col (lg: 40%) */}
+            <div style={{ flex: '2 1 320px', minWidth: 0, padding: '0 2rem' }}>
               {/* Name + price header */}
               <div
                 className="card-border-top"
@@ -292,7 +292,7 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
 
           {/* Featured images carousel */}
           {featuredImages.length > 0 && (
-            <div style={{ paddingTop: '1.5rem', paddingBottom: '1rem' }}>
+            <div style={{ paddingTop: '3rem', paddingBottom: '1rem' }}>
               <ProductFeaturedCarousel images={featuredImages} title={product.name || product.title} />
             </div>
           )}
@@ -306,6 +306,7 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
               gap: '2rem',
               marginTop: '3rem',
               justifyContent: 'center',
+              padding: '0 2rem',
             }}
           >
             <div style={{ flex: '1 1 220px', textAlign: 'center' }}>
