@@ -290,13 +290,6 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
             </div>
           </div>
 
-          {/* Featured images carousel */}
-          {featuredImages.length > 0 && (
-            <div style={{ paddingTop: '3rem', paddingBottom: '1rem' }}>
-              <ProductFeaturedCarousel images={featuredImages} title={product.name || product.title} />
-            </div>
-          )}
-
           {/* Shipping info */}
           <div
             style={{
@@ -342,6 +335,13 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
           </div>
         </section>
       </div>
+
+      {/* Featured images carousel */}
+      {featuredImages.length > 0 && (
+        <div className="container" style={{ paddingTop: '3rem', paddingBottom: '1rem' }}>
+          <ProductFeaturedCarousel images={featuredImages} title={product.name || product.title} />
+        </div>
+      )}
 
       {/* Related products — "Make It A Set" */}
       {product.relatedProducts && product.relatedProducts.length > 0 && (
