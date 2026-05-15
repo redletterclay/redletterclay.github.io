@@ -6,6 +6,7 @@ import React from 'react'
 import Script from 'next/script'
 
 import { GLightboxInit } from './GLightboxInit.client'
+import { SnipcartHistoryPatch } from './SnipcartHistoryPatch.client'
 import { Footer } from '@/Footer/Component'
 import { Header } from '@/Header/Component'
 import { Providers } from '@/providers'
@@ -66,6 +67,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           }}
         />
         <GLightboxInit />
+        <SnipcartHistoryPatch />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-BM1ZCVJZ0G" strategy="afterInteractive" />
         <Script
           id="google-analytics"

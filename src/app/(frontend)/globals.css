@@ -1525,8 +1525,15 @@ ul.snipcart-summary-fees__discounts { display: none !important; }
 .snipcart__font--std { font-family: var(--font-heading2) !important; }
 .snipcart-item-line--cart-edit .snipcart-item-line__image { min-height: 100px; min-width: 100px; }
 .snipcart-item-line--cart-edit { border-color: #FFCED1 !important; }
-.snipcart-item-line__media { min-height: 100px; min-width: 100px; }
+.snipcart-item-line__media { min-height: 100px; min-width: 100px; flex-shrink: 0; }
 .snipcart-item-line__content { display: flex; flex-direction: row; }
+@media (max-width: 575px) {
+  .snipcart-item-line__content { flex-wrap: wrap; }
+  .snipcart-item-line__media { flex: 0 0 80px; min-width: 80px; min-height: 80px; }
+  .snipcart-item-line--cart-edit .snipcart-item-line__image { min-width: 80px; min-height: 80px; }
+  .snipcart-item-line__product { flex: 1 1 0; min-width: 0; position: static !important; }
+  .snipcart-item-description { position: static !important; }
+}
 .snipcart-item-description {
   background: white !important;
   color: black !important;

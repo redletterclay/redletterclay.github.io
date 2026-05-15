@@ -54,14 +54,16 @@ export default async function HomePage() {
     ? { url: heroImagesData.fallback.url, alt: heroImagesData.fallback.alt || '' }
     : { url: 'https://ik.imagekit.io/raygun/redletterclay/jaw-bottle-tray-periwinkle-1.jpg', alt: 'Red Letter Clay ceramics' }
 
+  const heroList = heroImages.length > 0 ? heroImages : [heroFallback]
+
   return (
     <main style={{ overflowX: 'hidden' }}>
       <ShopStockChecker />
       {/* ── Landing Hero ────────────────────────────────────────────────── */}
-      <LgHero images={heroImages.length > 0 ? heroImages : [heroFallback]} />
+      <LgHero images={heroList} />
       <div className="container-fluid" style={{ padding: 0 }}>
         {/* Warm linen background: hero landing zone → Shop button */}
-        <div style={{ background: '#faf7f4', position: 'relative', paddingBottom: '5rem', overflow: 'hidden' }}>
+        <div style={{ background: 'linear-gradient(to bottom, #fdfbf9, #ede8e1)', position: 'relative', paddingBottom: '5rem', overflow: 'hidden' }}>
           {/* Announcement box */}
           {announcement?.live && (
             <div

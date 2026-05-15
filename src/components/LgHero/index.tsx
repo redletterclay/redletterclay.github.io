@@ -38,6 +38,9 @@ export function LgHero({ images }: Props) {
           key={img.url}
           src={img.url}
           alt={img.alt || ''}
+          fetchPriority={i === 0 ? 'high' : 'low'}
+          loading={i === 0 ? 'eager' : 'lazy'}
+          decoding={i === 0 ? 'sync' : 'async'}
           style={{
             position: 'absolute',
             inset: 0,
@@ -56,7 +59,7 @@ export function LgHero({ images }: Props) {
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.2) 100%)',
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.05) 100%)',
         }}
       />
 
@@ -108,24 +111,13 @@ export function LgHero({ images }: Props) {
         </div>
 
         <div style={{ padding: '0 1.5rem' }}>
-          <h1 className="ital" style={{ textAlign: 'center', color: 'white', textShadow: '0 2px 12px rgba(0,0,0,0.7)' }}>
+          <h1 className="ital" style={{ textAlign: 'center', color: 'white', textShadow: '0 1px 4px rgba(0,0,0,0.85)' }}>
             Welcome to
           </h1>
-          <h1 className="rlc" style={{ textAlign: 'center', color: 'white', textShadow: '0 2px 12px rgba(0,0,0,0.7)' }}>
+          <h1 className="rlc" style={{ textAlign: 'center', color: 'white', textShadow: '0 1px 4px rgba(0,0,0,0.85)' }}>
             Red Letter Clay
           </h1>
-          <hr
-            style={{
-              marginTop: '1rem',
-              marginBottom: '1rem',
-              width: '50%',
-              marginInline: 'auto',
-              borderTop: '2px solid rgba(255,255,255,0.6)',
-              borderBottom: 'none',
-              opacity: 1,
-            }}
-          />
-          <h4 style={{ paddingTop: '0.5rem', textAlign: 'center', fontSize: '1.4rem', color: 'white', textShadow: '0 2px 8px rgba(0,0,0,0.7)' }}>
+          <h4 style={{ marginTop: '0.2rem', textAlign: 'center', fontSize: '1.4rem', color: 'white', textShadow: '0 1px 4px rgba(0,0,0,0.85)', display: 'inline-block', background: 'rgba(0,0,0,0.2)', borderRadius: '9999px', padding: '0.25rem 1.25rem' }}>
             Made in Chicago by{' '}
             <Link href="/about/" style={{ color: 'white', textDecoration: 'underline' }}>
               Davey Ball
