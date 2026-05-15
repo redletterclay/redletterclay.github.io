@@ -81,7 +81,7 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 0 }}>
 
             {/* Images — left col (lg: 60%) */}
-            <div style={{ flex: '3 1 480px', minWidth: 0 }}>
+            <div style={{ flex: '3 1 480px', minWidth: 0, maxWidth: '900px' }}>
               <ProductImages images={productImages} title={product.name || product.title} sku={product.sku} />
             </div>
 
