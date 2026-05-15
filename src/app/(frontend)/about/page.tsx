@@ -23,7 +23,7 @@ export default async function AboutPage() {
   return (
     <main style={{ overflowX: 'hidden' }}>
       <div className="container-fluid about-hero-container" style={{ paddingLeft: 0, paddingRight: '1rem' }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
 
           {/* Red statement column */}
           <div

@@ -52,7 +52,7 @@ export default async function EventsPage() {
         />
       <div className="container" style={{ paddingTop: '1rem', position: 'relative', zIndex: 3 }}>
         {/* Announcement-style header block */}
-        <ScrollReveal delay={200}>
+        <ScrollReveal delay={400}>
           <div className="announcement-box" style={{ marginBottom: '2rem', marginTop: '2rem' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
               {/* Red header */}
