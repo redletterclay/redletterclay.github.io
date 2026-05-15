@@ -1670,5 +1670,10 @@ ul.details {
 .announcement-box {
   animation-delay: 600ms;
 }
+.subscribe-btn-blue .btn {
+  background-color: #24A9CA !important;
+  border-color: #24A9CA !important;
+  color: white !important;
+}
 .announcement-box p { color: #6E4E3C; }
 

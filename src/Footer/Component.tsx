@@ -81,10 +81,10 @@ export async function Footer() {
                 <h3 style={{ fontWeight: 600, margin: 0 }}>
                   <Link href="/faq" style={{ color: 'white' }}>FAQ</Link>
                 </h3>
-                <h3 style={{ fontWeight: 600, margin: 0 }}>
+                <h3 style={{ fontWeight: 600, margin: 0, textTransform: 'uppercase' }}>
                   <Link href="/sales" style={{ color: 'white' }}>Sales + Returns</Link>
                 </h3>
-                <h3 style={{ fontWeight: 600, margin: 0 }}>
+                <h3 style={{ fontWeight: 600, margin: 0, textTransform: 'uppercase' }}>
                   <Link href="/contact" style={{ color: 'white' }}>Contact</Link>
                 </h3>
               </div>

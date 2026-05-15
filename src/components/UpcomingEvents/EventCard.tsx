@@ -30,7 +30,7 @@ export function EventCard({
           observer.disconnect()
         }
       },
-      { threshold: 0.1 },
+      { threshold: 0.1, rootMargin: '0px 0px -60px 0px' },
     )
 
     observer.observe(el)
@@ -67,7 +67,7 @@ export function EventCard({
         </h3>
 
         {/* Row 3: ADDRESS */}
-        <h5 style={{ textAlign: 'center', lineHeight: '1.5rem', margin: '0.75rem 0 0', fontSize: '1rem', paddingBottom: '2rem' }}>
+        <h5 style={{ textAlign: 'center', lineHeight: '1.5rem', margin: '0.75rem 0 0', fontSize: '1.2rem', paddingBottom: '2rem' }}>
           {event.location}
           {event.location && event.address && <br />}
           {event.address}

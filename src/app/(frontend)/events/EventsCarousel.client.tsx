@@ -33,7 +33,6 @@ export function EventsCarousel() {
             height: '100%',
             objectFit: 'cover',
             objectPosition: 'center center',
-            borderRadius: '1rem',
             opacity: i === index ? 1 : 0,
             transition: 'opacity 0.8s ease-in-out',
           }}

@@ -35,61 +35,82 @@ export default async function EventsPage() {
 
   return (
     <main style={{ overflowX: 'hidden' }}>
-      <div className="container" style={{ paddingTop: '1rem' }}>
-        <h1
-          className="animate__animated animate__slideInDown"
-          style={{ textAlign: 'left', padding: '2rem 0 1rem' }}
-        >
-          Exhibitions &amp; Markets
-        </h1>
-        {/* Row 1 — carousel | text + subscribe */}
+      <div style={{ background: 'linear-gradient(to bottom, #ffffff, #ede8e1)', position: 'relative', paddingBottom: '5rem', overflow: 'hidden' }}>
+        {/* White half-circle cutout at bottom center */}
         <div
           style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            alignItems: 'flex-start',
-            gap: '1.5rem',
-            marginBottom: '2rem',
+            position: 'absolute',
+            bottom: -150,
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: 180,
+            height: 180,
+            background: 'white',
+            borderRadius: '50%',
+            zIndex: 2,
           }}
-        >
-          {/* Col 1 — market carousel */}
-          <div className="events-col-image" style={{ flex: '1 1 380px' }}>
-            <ScrollReveal delay={200}>
-              <EventsCarousel />
-            </ScrollReveal>
-          </div>
-
-          {/* Col 2 — text + subscribe */}
-          <div
-            className="events-col-content"
-            style={{
-              flex: '1 1 300px',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              gap: '1rem',
-            }}
-          >
-            <ScrollReveal delay={450}>
-              <p
+        />
+      <div className="container" style={{ paddingTop: '1rem', position: 'relative', zIndex: 3 }}>
+        {/* Announcement-style header block */}
+        <ScrollReveal delay={200}>
+          <div className="announcement-box" style={{ marginBottom: '2rem', marginTop: '2rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+              {/* Red header */}
+              <div
+                className="bg-red-alt"
+                style={{ padding: '1rem 1.5rem 0.5rem', width: '100%' }}
+              >
+                <h1
+                  className="animate__animated animate__fadeIn"
+                  style={{ textAlign: 'center', margin: 0, color: 'white', fontSize: '2rem', fontWeight: 400 }}
+                >
+                  Exhibitions &amp; Markets
+                </h1>
+              </div>
+              {/* Body */}
+              <div
                 style={{
-                  textAlign: 'center',
-                  margin: '1.5rem 0',
-                  padding: '1.25rem 1.5rem',
-                  borderRadius: '0.5rem',
+                  background: '#f8f9fa',
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  alignItems: 'stretch',
+                  justifyContent: 'center',
+                  borderLeft: '3px solid #c12121',
+                  borderRight: '3px solid #c12121',
+                  borderBottom: '3px solid #c12121',
                 }}
               >
-                I typically do 4-6 markets a year, mostly around Chicago. The best way to know where
-                I&apos;ll be next is to join the mailing list.
-              </p>
-            </ScrollReveal>
-            <ScrollReveal delay={600}>
-              <div style={{ textAlign: 'center', padding: '0 0 1.5rem' }}>
-                <SubscribeButton />
+                {/* Text + subscribe */}
+                <div
+                  style={{
+                    padding: '1.5rem',
+                    flex: '1 1 200px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    textAlign: 'center',
+                    fontSize: '1.6rem',
+                    lineHeight: '2.5rem',
+                  }}
+                >
+                  <p style={{ margin: '0 0 1.25rem' }}>
+                    I typically do 4–6 markets a year, mostly around Chicago. The best way to know
+                    where I&apos;ll be next is to join the mailing list.
+                  </p>
+                  <div style={{ marginTop: '1.5rem' }} className="subscribe-btn-blue">
+                    <SubscribeButton />
+                  </div>
+                </div>
+                {/* Carousel image */}
+                <div style={{ flex: '0 0 50%', width: '50%' }}>
+                  <EventsCarousel />
+                </div>
               </div>
-            </ScrollReveal>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
+      </div>
+      </div>{/* end beige gradient */}
 
         {/* Row 2 — upcoming events */}
         {upcoming.length > 0 && (
@@ -149,7 +170,6 @@ export default async function EventsPage() {
             </div>
           </section>
         )}
-      </div>
 
       {past.length > 0 && (
         <section style={{ paddingTop: '3rem', paddingBottom: '2rem' }}>
