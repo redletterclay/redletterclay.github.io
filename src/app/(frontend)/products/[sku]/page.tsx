@@ -78,15 +78,15 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
       {/* Product layout */}
       <div className="container-fluid" style={{ paddingTop: '2rem', paddingLeft: 0, paddingRight: 0 }}>
         <section style={{ marginTop: 0 }}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 0 }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 0, maxWidth: '1400px', margin: '0 auto' }}>
 
-            {/* Images — left col (lg: 60%) */}
+            {/* Images — left col (grows to fill, capped at 900px) */}
             <div style={{ flex: '3 1 480px', minWidth: 0, maxWidth: '900px' }}>
               <ProductImages images={productImages} title={product.name || product.title} sku={product.sku} />
             </div>
 
-            {/* Info — right col (lg: 40%) */}
-            <div style={{ flex: '2 1 320px', minWidth: 0, padding: '0 2rem' }}>
+            {/* Info — right col (fixed width, doesn't grow beyond 500px) */}
+            <div style={{ flex: '1 0 320px', minWidth: 0, maxWidth: '500px', padding: '0 2rem' }}>
               {/* Name + price header */}
               <div
                 className="card-border-top"
