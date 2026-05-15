@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict iVH1heRaoAaiRt6OVTo1bjDtQxVKwWzORIBELv7g4k4FSdHQu5bayT2SGQf8gb7
+\restrict f0z1Z7ftAcEecBdsgVNffmN2e0YIrnAuNy2GooBrhcpkvKS2Uq4YUgA1hw9RdGp
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -3881,7 +3881,7 @@ COPY public.header_rels (id, "order", parent_id, path, pages_id, posts_id) FROM 
 --
 
 COPY public.hero_images (id, updated_at, created_at, fallback_id) FROM stdin;
-1	2026-05-14 20:53:56.07+00	2026-05-14 20:11:04.502+00	559
+1	2026-05-15 23:46:24.593+00	2026-05-14 20:11:04.502+00	559
 \.
 
 
@@ -3893,6 +3893,7 @@ COPY public.hero_images_images (_order, _parent_id, id, image_id, alt) FROM stdi
 1	1	6a0634aac6d4604d31b8b208	561	\N
 2	1	6a0634afc6d4604d31b8b20a	558	\N
 3	1	6a0634efc6d4604d31b8b20c	559	\N
+4	1	6a07af89dbf14b953ba3236a	565	\N
 \.
 
 
@@ -4462,6 +4463,8 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 559	\N	\N	\N	2026-05-14 20:45:24.542+00	2026-05-14 20:45:21.803+00	/api/media/file/LgHero-berry-bowl-1.jpg	\N	LgHero-berry-bowl-1.jpg	image/jpeg	302658	2560	1600	50	50	/api/media/file/LgHero-berry-bowl-1-300x188.jpg	300	188	image/jpeg	11132	LgHero-berry-bowl-1-300x188.jpg	/api/media/file/LgHero-berry-bowl-1-500x500.jpg	500	500	image/jpeg	45387	LgHero-berry-bowl-1-500x500.jpg	/api/media/file/LgHero-berry-bowl-1-600x375.jpg	600	375	image/jpeg	35383	LgHero-berry-bowl-1-600x375.jpg	/api/media/file/LgHero-berry-bowl-1-900x563.jpg	900	563	image/jpeg	74326	LgHero-berry-bowl-1-900x563.jpg	/api/media/file/LgHero-berry-bowl-1-1400x875.jpg	1400	875	image/jpeg	161494	LgHero-berry-bowl-1-1400x875.jpg	/api/media/file/LgHero-berry-bowl-1-1920x1200.jpg	1920	1200	image/jpeg	274475	LgHero-berry-bowl-1-1920x1200.jpg	/api/media/file/LgHero-berry-bowl-1-1200x630.jpg	1200	630	image/jpeg	113313	LgHero-berry-bowl-1-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-berry-bowl-1.jpg
 561	\N	\N	\N	2026-05-14 20:53:15.133+00	2026-05-14 20:53:13.125+00	/api/media/file/LgHero-bottles.jpg	\N	LgHero-bottles.jpg	image/jpeg	309465	2560	1600	50	50	/api/media/file/LgHero-bottles-300x188.jpg	300	188	image/jpeg	11493	LgHero-bottles-300x188.jpg	/api/media/file/LgHero-bottles-500x500.jpg	500	500	image/jpeg	38901	LgHero-bottles-500x500.jpg	/api/media/file/LgHero-bottles-600x375.jpg	600	375	image/jpeg	34185	LgHero-bottles-600x375.jpg	/api/media/file/LgHero-bottles-900x563.jpg	900	563	image/jpeg	67953	LgHero-bottles-900x563.jpg	/api/media/file/LgHero-bottles-1400x875.jpg	1400	875	image/jpeg	144966	LgHero-bottles-1400x875.jpg	/api/media/file/LgHero-bottles-1920x1200.jpg	1920	1200	image/jpeg	247867	LgHero-bottles-1920x1200.jpg	/api/media/file/LgHero-bottles-1200x630.jpg	1200	630	image/jpeg	101351	LgHero-bottles-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-bottles.jpg
 563	\N	\N	\N	2026-05-14 21:32:13.838+00	2026-05-14 21:32:11.907+00	/api/media/file/green-bowl-and-petal-trays.jpg	\N	green-bowl-and-petal-trays.jpg	image/jpeg	587778	4062	2708	50	50	/api/media/file/green-bowl-and-petal-trays-300x200.jpg	300	200	image/jpeg	7716	green-bowl-and-petal-trays-300x200.jpg	/api/media/file/green-bowl-and-petal-trays-500x500.jpg	500	500	image/jpeg	29370	green-bowl-and-petal-trays-500x500.jpg	/api/media/file/green-bowl-and-petal-trays-600x400.jpg	600	400	image/jpeg	22410	green-bowl-and-petal-trays-600x400.jpg	/api/media/file/green-bowl-and-petal-trays-900x600.jpg	900	600	image/jpeg	44836	green-bowl-and-petal-trays-900x600.jpg	/api/media/file/green-bowl-and-petal-trays-1400x933.jpg	1400	933	image/jpeg	102868	green-bowl-and-petal-trays-1400x933.jpg	/api/media/file/green-bowl-and-petal-trays-1920x1280.jpg	1920	1280	image/jpeg	193618	green-bowl-and-petal-trays-1920x1280.jpg	/api/media/file/green-bowl-and-petal-trays-1200x630.jpg	1200	630	image/jpeg	68728	green-bowl-and-petal-trays-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/green-bowl-and-petal-trays.jpg
+564	Blue Teapot	\N	\N	2026-05-15 23:43:02.843+00	2026-05-15 23:42:59.225+00	/api/media/file/LgHero-teapot.jpg	\N	LgHero-teapot.jpg	image/jpeg	448325	2560	1600	50	50	/api/media/file/LgHero-teapot-300x188.jpg	300	188	image/jpeg	20543	LgHero-teapot-300x188.jpg	/api/media/file/LgHero-teapot-500x500.jpg	500	500	image/jpeg	70924	LgHero-teapot-500x500.jpg	/api/media/file/LgHero-teapot-600x375.jpg	600	375	image/jpeg	70219	LgHero-teapot-600x375.jpg	/api/media/file/LgHero-teapot-900x563.jpg	900	563	image/jpeg	141082	LgHero-teapot-900x563.jpg	/api/media/file/LgHero-teapot-1400x875.jpg	1400	875	image/jpeg	280189	LgHero-teapot-1400x875.jpg	/api/media/file/LgHero-teapot-1920x1200.jpg	1920	1200	image/jpeg	443292	LgHero-teapot-1920x1200.jpg	/api/media/file/LgHero-teapot-1200x630.jpg	1200	630	image/jpeg	182830	LgHero-teapot-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-teapot.jpg
+565	\N	\N	\N	2026-05-15 23:46:13.229+00	2026-05-15 23:46:10.708+00	/api/media/file/LgHero-teapot-2.jpg	\N	LgHero-teapot-2.jpg	image/jpeg	293012	2560	1600	50	50	/api/media/file/LgHero-teapot-2-300x188.jpg	300	188	image/jpeg	19200	LgHero-teapot-2-300x188.jpg	/api/media/file/LgHero-teapot-2-500x500.jpg	500	500	image/jpeg	55671	LgHero-teapot-2-500x500.jpg	/api/media/file/LgHero-teapot-2-600x375.jpg	600	375	image/jpeg	57281	LgHero-teapot-2-600x375.jpg	/api/media/file/LgHero-teapot-2-900x563.jpg	900	563	image/jpeg	106396	LgHero-teapot-2-900x563.jpg	/api/media/file/LgHero-teapot-2-1400x875.jpg	1400	875	image/jpeg	200441	LgHero-teapot-2-1400x875.jpg	/api/media/file/LgHero-teapot-2-1920x1200.jpg	1920	1200	image/jpeg	311856	LgHero-teapot-2-1920x1200.jpg	/api/media/file/LgHero-teapot-2-1200x630.jpg	1200	630	image/jpeg	134905	LgHero-teapot-2-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-teapot-2.jpg
 \.
 
 
@@ -4639,7 +4642,7 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 9	20260318_161820	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 10	20260320_033436	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 11	20260513_products_thumb_array	7	2026-05-14 00:04:04.985+00	2026-05-14 00:04:04.984+00
-1	dev	-1	2026-05-15 04:00:35.638+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-05-15 20:40:39.268+00	2026-03-16 16:07:06.694+00
 \.
 
 
@@ -4681,11 +4684,11 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 69	collection-products-84	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 01:12:24.395+00	2026-05-02 01:51:51.858+00
 75	collection-products-90	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-14 21:32:37.561+00	2026-05-02 03:17:56.53+00
 64	collection-products-80	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 15:22:28.293+00	2026-04-09 04:39:08.126+00
-17	nav	{"open": true}	2026-03-17 16:35:48.642+00	2026-03-17 16:35:48.643+00
 30	collection-products-60	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 16:12:02.358+00	2026-03-19 01:20:03.815+00
 38	collection-products-17	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 04:04:22.349+00	2026-03-19 04:04:22.35+00
 19	global-faq	{"editViewType": "default"}	2026-03-17 20:18:36.242+00	2026-03-17 20:18:36.246+00
 36	collection-products-66	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-05-08 16:46:09.582+00	2026-03-19 02:44:07.716+00
+17	nav	{"groups": {"Globals": {"open": true}}}	2026-05-15 14:35:28.541+00	2026-03-17 16:35:48.643+00
 42	collection-products-15	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 04:19:56.213+00	2026-03-19 04:19:56.214+00
 32	collection-products-63	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-03-19 04:23:25.8+00	2026-03-19 01:47:55.474+00
 44	collection-products-35	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 04:26:27.506+00	2026-03-19 04:26:27.507+00
@@ -4791,7 +4794,6 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 363	\N	12	user	1
 365	\N	1	user	1
 366	\N	23	user	1
-41	\N	17	user	1
 104	\N	28	user	1
 367	\N	31	user	1
 45	\N	19	user	1
@@ -4804,6 +4806,7 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 377	\N	104	user	1
 378	\N	75	user	1
 274	\N	60	user	1
+380	\N	17	user	1
 278	\N	52	user	1
 125	\N	34	user	1
 126	\N	35	user	1
@@ -6079,7 +6082,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	b96105a4-2ec9-4bf4-973f-bcfc246c7abd	2026-05-15 01:32:17.802+00	2026-05-15 03:32:17.802+00
+1	1	201b4cdf-65c3-45db-bb48-6ffb16fc0bc6	2026-05-15 23:42:32.773+00	2026-05-16 01:42:32.773+00
 \.
 
 
@@ -6283,7 +6286,7 @@ SELECT pg_catalog.setval('public.links_id_seq', 1, true);
 -- Name: media_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.media_id_seq', 563, true);
+SELECT pg_catalog.setval('public.media_id_seq', 565, true);
 
 
 --
@@ -6339,14 +6342,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 453, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 455, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 837, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 839, true);
 
 
 --
@@ -6367,7 +6370,7 @@ SELECT pg_catalog.setval('public.payload_preferences_id_seq', 104, true);
 -- Name: payload_preferences_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 378, true);
+SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 380, true);
 
 
 --
@@ -10324,5 +10327,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict iVH1heRaoAaiRt6OVTo1bjDtQxVKwWzORIBELv7g4k4FSdHQu5bayT2SGQf8gb7
+\unrestrict f0z1Z7ftAcEecBdsgVNffmN2e0YIrnAuNy2GooBrhcpkvKS2Uq4YUgA1hw9RdGp
 

@@ -404,11 +404,11 @@ function AnnouncementBox({ announcement }: { announcement: any }) {
 
 export const metadata: Metadata = {
   title: 'Red Letter Clay — Handmade Ceramics in Chicago',
-  description: 'Handmade pottery by Davey Ball, made in Chicago. Shop mugs, bowls, vases and more.',
+  description: 'Functional stoneware pottery by Davey Ball. Shop mugs, bowls, jars, planters, trays, vases and more.',
   openGraph: mergeOpenGraph({
     title: 'Red Letter Clay — Handmade Ceramics in Chicago',
     description:
-      'Handmade pottery by Davey Ball, made in Chicago. Shop mugs, bowls, vases and more.',
+      'Functional stoneware pottery by Davey Ball. Shop mugs, bowls, jars, planters, trays, vases and more.',
     url: '/',
   }),
 }

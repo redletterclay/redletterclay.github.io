@@ -155,11 +155,11 @@ export function generateMetadata(): Metadata {
   return {
     title: 'Shop Handmade Ceramics | Red Letter Clay',
     description:
-      'Shop handmade stoneware pottery by Davey Ball — mugs, bowls, vases, planters and more. Made in Chicago. Free shipping to the United States.',
+      'Shop handmade stoneware pottery by Davey Ball — mugs, bowls, vases, jars, planters, and more. Made in Chicago. Free shipping to the United States. 15% off with local Chicago pick-up.',
     openGraph: mergeOpenGraph({
       title: 'Shop Handmade Ceramics | Red Letter Clay',
       description:
-        'Shop handmade stoneware pottery by Davey Ball — mugs, bowls, vases, planters and more. Made in Chicago. Free shipping to the United States.',
+        'Shop handmade stoneware pottery by Davey Ball — mugs, bowls, vases, jars, planters, and more. Made in Chicago. Free shipping to the United States. 15% off with local Chicago pick-up.',
       url: '/shop',
     }),
   }
