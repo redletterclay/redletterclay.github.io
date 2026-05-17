@@ -21,26 +21,27 @@ export const revalidate = 600
 export default async function HomePage() {
   const payload = await getPayload({ config: configPromise })
 
-  const [featuredRes, announcementRes, eventsRes, collectionTitleRes, heroImagesRes] = await Promise.all([
-    payload.find({
-      collection: 'products',
-      depth: 1,
-      limit: 0,
-      overrideAccess: false,
-      sort: '_order',
-      where: { featured: { equals: true } },
-    }),
-    payload.findGlobal({ slug: 'announcement', depth: 1 }).catch(() => null),
-    payload.find({
-      collection: 'events',
-      depth: 0,
-      limit: 4,
-      overrideAccess: false,
-      sort: '-startDate',
-    }),
-    payload.findGlobal({ slug: 'collection-title', depth: 0 }).catch(() => null),
-    payload.findGlobal({ slug: 'hero-images', depth: 1 }).catch(() => null),
-  ])
+  const [featuredRes, announcementRes, eventsRes, collectionTitleRes, heroImagesRes] =
+    await Promise.all([
+      payload.find({
+        collection: 'products',
+        depth: 1,
+        limit: 0,
+        overrideAccess: false,
+        sort: '_order',
+        where: { featured: { equals: true } },
+      }),
+      payload.findGlobal({ slug: 'announcement', depth: 1 }).catch(() => null),
+      payload.find({
+        collection: 'events',
+        depth: 0,
+        limit: 4,
+        overrideAccess: false,
+        sort: '-startDate',
+      }),
+      payload.findGlobal({ slug: 'collection-title', depth: 0 }).catch(() => null),
+      payload.findGlobal({ slug: 'hero-images', depth: 1 }).catch(() => null),
+    ])
 
   const featured = featuredRes.docs
   const announcement = announcementRes as any
@@ -48,11 +49,19 @@ export default async function HomePage() {
   const collectionTitle = (collectionTitleRes as any)?.title || null
   const heroImagesData = heroImagesRes as any
   const heroImages: { url: string; alt?: string }[] = (heroImagesData?.images || [])
-    .map((row: any) => row.image && typeof row.image === 'object' ? { url: row.image.url, alt: row.alt || row.image.alt || '' } : null)
+    .map((row: any) =>
+      row.image && typeof row.image === 'object'
+        ? { url: row.image.url, alt: row.alt || row.image.alt || '' }
+        : null,
+    )
     .filter(Boolean)
-  const heroFallback = heroImagesData?.fallback && typeof heroImagesData.fallback === 'object'
-    ? { url: heroImagesData.fallback.url, alt: heroImagesData.fallback.alt || '' }
-    : { url: 'https://ik.imagekit.io/raygun/redletterclay/jaw-bottle-tray-periwinkle-1.jpg', alt: 'Red Letter Clay ceramics' }
+  const heroFallback =
+    heroImagesData?.fallback && typeof heroImagesData.fallback === 'object'
+      ? { url: heroImagesData.fallback.url, alt: heroImagesData.fallback.alt || '' }
+      : {
+          url: 'https://ik.imagekit.io/raygun/redletterclay/jaw-bottle-tray-periwinkle-1.jpg',
+          alt: 'Red Letter Clay ceramics',
+        }
 
   const heroList = heroImages.length > 0 ? heroImages : [heroFallback]
 
@@ -63,7 +72,14 @@ export default async function HomePage() {
       <LgHero images={heroList} />
       <div className="container-fluid" style={{ padding: 0 }}>
         {/* Warm linen background: hero landing zone → Shop button */}
-        <div style={{ background: 'linear-gradient(to bottom, #fdfbf9, #ede8e1)', position: 'relative', paddingBottom: '5rem', overflow: 'hidden' }}>
+        <div
+          style={{
+            background: 'linear-gradient(to bottom, #fdfbf9, #ede8e1)',
+            position: 'relative',
+            paddingBottom: '5rem',
+            overflow: 'hidden',
+          }}
+        >
           {/* Announcement box */}
           {announcement?.live && (
             <div
@@ -93,7 +109,8 @@ export default async function HomePage() {
               zIndex: 2,
             }}
           />
-        </div>{/* end linen background */}
+        </div>
+        {/* end linen background */}
 
         {/* Shop CTA */}
         <div
@@ -150,7 +167,14 @@ export default async function HomePage() {
         {collectionTitle && (
           <h2
             className="fc-1"
-            style={{ textAlign: 'center', paddingInline: '1rem', paddingBlock: '2rem' }}
+            style={{
+              textAlign: 'center',
+              paddingInline: '1rem',
+              paddingBlock: '2rem',
+              fontWeight: '800',
+              fontSize: '4rem',
+              lineHeight: '4.1rem',
+            }}
           >
             {collectionTitle}
           </h2>
@@ -249,8 +273,9 @@ export default async function HomePage() {
             </h2>
             <p>
               A handmade pot is a commitment to quality over quantity — an investment in an object
-              that will still be on your table decades from now if cared for well. It isn&rsquo;t just a
-              dish; it&rsquo;s a permanent object designed to be used every day for a lifetime.
+              that will still be on your table decades from now if cared for well. It isn&rsquo;t
+              just a dish; it&rsquo;s a permanent object designed to be used every day for a
+              lifetime.
             </p>
             <p>
               Unlike a factory mold, my hands leave unique marks on every piece. Because each pot is
@@ -404,7 +429,8 @@ function AnnouncementBox({ announcement }: { announcement: any }) {
 
 export const metadata: Metadata = {
   title: 'Red Letter Clay — Handmade Ceramics in Chicago',
-  description: 'Functional stoneware pottery by Davey Ball. Shop mugs, bowls, jars, planters, trays, vases and more.',
+  description:
+    'Functional stoneware pottery by Davey Ball. Shop mugs, bowls, jars, planters, trays, vases and more.',
   openGraph: mergeOpenGraph({
     title: 'Red Letter Clay — Handmade Ceramics in Chicago',
     description:
