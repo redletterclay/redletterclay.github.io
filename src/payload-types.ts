@@ -124,6 +124,7 @@ export interface Config {
     faq: Faq;
     'collection-title': CollectionTitle;
     'hero-images': HeroImage;
+    'store-settings': StoreSetting;
   };
   globalsSelect: {
     header: HeaderSelect<false> | HeaderSelect<true>;
@@ -136,6 +137,7 @@ export interface Config {
     faq: FaqSelect<false> | FaqSelect<true>;
     'collection-title': CollectionTitleSelect<false> | CollectionTitleSelect<true>;
     'hero-images': HeroImagesSelect<false> | HeroImagesSelect<true>;
+    'store-settings': StoreSettingsSelect<false> | StoreSettingsSelect<true>;
   };
   locale: null;
   widgets: {
@@ -946,7 +948,22 @@ export interface Event {
   address?: string | null;
   mapUrl?: string | null;
   url?: string | null;
-  description?: string | null;
+  image?: (number | null) | Media;
+  description?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -1611,6 +1628,7 @@ export interface EventsSelect<T extends boolean = true> {
   address?: T;
   mapUrl?: T;
   url?: T;
+  image?: T;
   description?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -2125,6 +2143,23 @@ export interface HeroImage {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "store-settings".
+ */
+export interface StoreSetting {
+  id: number;
+  /**
+   * Uncheck to hide all Add to Cart buttons across the shop and product pages.
+   */
+  storeOpen?: boolean | null;
+  /**
+   * Shown in the announcement banner on shop pages when the store is closed.
+   */
+  closedMessage?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "header_select".
  */
 export interface HeaderSelect<T extends boolean = true> {
@@ -2324,6 +2359,17 @@ export interface HeroImagesSelect<T extends boolean = true> {
         alt?: T;
         id?: T;
       };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "store-settings_select".
+ */
+export interface StoreSettingsSelect<T extends boolean = true> {
+  storeOpen?: T;
+  closedMessage?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

@@ -1327,6 +1327,152 @@ div.tags .btn { --animate-duration: 600ms; }
   align-items: stretch;
 }
 
+/* Event card "More Info" button */
+.event-more-info-btn {
+  background: transparent;
+  border: 2px solid #c12121;
+  border-radius: 0.5rem;
+  color: #c12121;
+  font-size: 1rem;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  font-family: 'Mohave', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.event-more-info-btn:hover { background: #FFCED1; }
+
+/* ─── Event detail drawer ─────────────────────────────────────────────────── */
+.event-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1100;
+  animation: fadeIn 0.15s ease;
+}
+.event-drawer-overlay-closing {
+  animation: fadeOut 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+.event-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(480px, 100vw);
+  background: #FFEEEF;
+  z-index: 1101;
+  overflow-y: auto;
+  overscroll-behavior: none;
+  padding: 2rem 1.75rem 3rem;
+  animation: slideInRight 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  border-left: 3px solid #dc3545;
+}
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+@keyframes slideOutRight {
+  from { transform: translateX(0); }
+  to   { transform: translateX(100%); }
+}
+.event-drawer-closing {
+  animation: slideOutRight 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@media (max-width: 767px) {
+  .event-drawer { width: 100vw; }
+}
+.event-drawer-header {
+  position: sticky;
+  top: -2rem;
+  background: #FFEEEF;
+  padding: 2rem 1.75rem 0.75rem;
+  margin: 0 -1.75rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.event-drawer-close {
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #c12121;
+  line-height: 1;
+  padding: 0.25rem;
+}
+.event-drawer-close:hover { color: #8c1414; }
+.event-drawer-title {
+  flex: 1;
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  line-height: 1.2;
+}
+.event-drawer-title a { color: inherit; }
+.event-drawer-date {
+  text-align: center;
+  font-family: var(--font-heading2);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #c12121;
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #f0c8cb;
+}
+.event-drawer-location-box {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.event-drawer-location {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 0 0.5rem;
+}
+.event-drawer-location-box .event-drawer-location:last-child { margin-bottom: 0; }
+.event-drawer-map {
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+  font-family: 'Mohave', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.event-drawer-map:hover { text-decoration: underline; }
+.event-drawer-image {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+.event-drawer-description {
+  background: #fff;
+  border-top: 1px solid #f0c8cb;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.event-drawer-description p { margin: 0 0 0.75rem; }
+.event-drawer a { color: #c12121; }
+.event-drawer a:hover { color: #8c1414; }
+
 /* ─── Nav stickiness ─────────────────────────────────────────────────────── */
 .nav-stick {
   z-index: 20;

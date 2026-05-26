@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict A5KdabUL9lPeY4mUFWWQLHqkf9JglQhqhEQpFGW9aDOgJ6QXBqwuFWWZrWgpeKH
+\restrict P0WM8vD55TWc4PtqmsgXLyMfeB0o4glZvaVH2juRavgQcjbzKl7kWFdTpWfiQ14
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -1066,9 +1066,10 @@ CREATE TABLE public.events (
     address character varying,
     map_url character varying,
     url character varying,
-    description character varying,
+    description jsonb,
     updated_at timestamp(3) with time zone DEFAULT now() NOT NULL,
-    created_at timestamp(3) with time zone DEFAULT now() NOT NULL
+    created_at timestamp(3) with time zone DEFAULT now() NOT NULL,
+    image_id integer
 );
 
 
@@ -2883,6 +2884,39 @@ CREATE TABLE public.stockists_stockists (
 
 
 --
+-- Name: store_settings; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.store_settings (
+    id integer NOT NULL,
+    store_open boolean DEFAULT true,
+    updated_at timestamp(3) with time zone,
+    created_at timestamp(3) with time zone,
+    closed_message character varying DEFAULT 'The online store is temporarily closed for an in-person market. Check back soon!'::character varying
+);
+
+
+--
+-- Name: store_settings_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.store_settings_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: store_settings_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.store_settings_id_seq OWNED BY public.store_settings.id;
+
+
+--
 -- Name: users; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3292,6 +3326,13 @@ ALTER TABLE ONLY public.stockists ALTER COLUMN id SET DEFAULT nextval('public.st
 
 
 --
+-- Name: store_settings id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.store_settings ALTER COLUMN id SET DEFAULT nextval('public.store_settings_id_seq'::regclass);
+
+
+--
 -- Name: users id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -3596,23 +3637,24 @@ COPY public.collection_title (id, title, updated_at, created_at) FROM stdin;
 -- Data for Name: events; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.events (id, title, start_date, "time", location, address, map_url, url, description, updated_at, created_at) FROM stdin;
-1	The Chicago Pottery Market	2026-05-31 00:00:00+00	11AM-6PM	Wilderhouse	1339 N Damen Ave\n\nChicago, IL 60607	https://maps.app.goo.gl/ZNpf2Dm1cszeLA3cA	\N	\N	2026-03-17 18:19:21.342+00	2026-03-17 18:19:21.342+00
-2	The Chicago Pottery Market	2026-05-30 00:00:00+00	11AM-6PM	Wilderhouse	1339 N Damen Ave\n\nChicago, IL 60607	https://maps.app.goo.gl/ZNpf2Dm1cszeLA3cA	\N	\N	2026-03-17 18:19:21.348+00	2026-03-17 18:19:21.348+00
-3	Oddball Market	2025-12-14 00:00:00+00	5PM-11PM	Broken Hearts	1009 W Lake St\n\nChicago, IL 60607	https://maps.app.goo.gl/GEGgrpWyuuVfQWyH9	\N	\N	2026-03-17 18:19:21.351+00	2026-03-17 18:19:21.351+00
-4	Gnarly or Nice Market	2025-12-13 00:00:00+00	1PM-5PM	Co-prosperity Sphere	3219 S Morgan Street\n\nChicago, IL 60608	https://maps.app.goo.gl/riSgCYyHTWwG1Kk18	\N	\N	2026-03-17 18:19:21.354+00	2026-03-17 18:19:21.354+00
-5	Put a Lid on It Exhibition	2025-10-03 00:00:00+00	6PM-8PM	Belger Arts Center	12011 Tracy Ave\n\nKansas City, MO	https://maps.app.goo.gl/Smcp35xuuNm8djDs5	\N	\N	2026-03-17 18:19:21.365+00	2026-03-17 18:19:21.365+00
-6	Oddball Market	2025-08-23 00:00:00+00	3PM-9PM	Thalia Hall	1807 S Allport St\n\nChicago, IL	https://maps.app.goo.gl/EVZVV7BFagxE7cPy5	\N	\N	2026-03-17 18:19:21.371+00	2026-03-17 18:19:21.371+00
-7	Mother's Day Market	2025-05-03 00:00:00+00	12PM-4PM	Gnarware Workshop	1838 W Cermak Ave\n\nChicago, IL	https://maps.app.goo.gl/h9i9FJcHpYUyNp7m7	\N	\N	2026-03-17 18:19:21.376+00	2026-03-17 18:19:21.376+00
-8	Coffee & Community	2025-02-16 00:00:00+00	11AM-6PM	Northside Cutlery	4316 N Lincoln Ave\n\nChicago, IL	https://maps.app.goo.gl/tLoiHQKkPCe8tY758	\N	\N	2026-03-17 18:19:21.38+00	2026-03-17 18:19:21.38+00
-9	Le Loft Holiday Pop-Up Market	2024-12-15 00:00:00+00	12PM-4PM	Le Loft	2418 W North Ave (2nd Flr)\n\nChicago, IL	https://maps.app.goo.gl/n1dF34jwY46ru8rq7	\N	\N	2026-03-17 18:19:21.384+00	2026-03-17 18:19:21.384+00
-10	GnarWare Holiday Market	2024-12-08 00:00:00+00	1PM-5PM	Bourbon on Division	2050 W Division St\n\nChicago, IL	https://maps.app.goo.gl/gEWcoPh5jZyr7imz5	\N	\N	2026-03-17 18:19:21.389+00	2026-03-17 18:19:21.389+00
-12	Secret Garden Arts	2024-07-28 00:00:00+00	1-6PM	Marz Brewery	3630 S Iron St\n\nChicago, IL	https://maps.app.goo.gl/At5uuVACCCNQz5Py7	\N	\N	2026-03-17 18:19:21.396+00	2026-03-17 18:19:21.396+00
-13	The Art of Pride	2024-06-02 00:00:00+00	12-4PM	Hyde Park Art Center	5020 S Cornell Ave\n\nChicago, IL	https://maps.app.goo.gl/dBD7CqVTeEdjhMfP7	\N	\N	2026-03-17 18:19:21.399+00	2026-03-17 18:19:21.399+00
-14	Mothers Day Market	2024-04-28 00:00:00+00	11AM-4PM	GnarWare Workshop	1838 W Cermak Ave\n\nChicago, IL	https://maps.app.goo.gl/h9i9FJcHpYUyNp7m7	\N	\N	2026-03-17 18:19:21.402+00	2026-03-17 18:19:21.402+00
-15	Holiday Market	2023-12-16 00:00:00+00	2PM-6PM	GnarWare Workshop	1838 W Cermak Ave\n\nChicago, IL	https://maps.app.goo.gl/h9i9FJcHpYUyNp7m7	\N	\N	2026-03-17 18:19:21.405+00	2026-03-17 18:19:21.405+00
-16	Summer Sale	2023-06-25 00:00:00+00	2PM-6PM	GnarWare Workshop	1838 W Cermak Ave\n\nChicago, IL	https://maps.app.goo.gl/h9i9FJcHpYUyNp7m7	\N	\N	2026-03-17 18:19:21.412+00	2026-03-17 18:19:21.412+00
-11	Exhibition: Community Unfolding a Path	2024-09-07 00:00:00+00	11AM-12PM	Ariadna Ginez Studio @ Mana Contemporary	2233 S Throop St Chicago, IL	https://maps.app.goo.gl/pvzdMVh2b5U3QUtq9	\N	\N	2026-03-19 14:30:27.624+00	2026-03-17 18:19:21.392+00
+COPY public.events (id, title, start_date, "time", location, address, map_url, url, description, updated_at, created_at, image_id) FROM stdin;
+3	Oddball Market	2025-12-14 00:00:00+00	5PM-11PM	Broken Hearts	1009 W Lake St\n\nChicago, IL 60607	https://maps.app.goo.gl/GEGgrpWyuuVfQWyH9	\N	\N	2026-03-17 18:19:21.351+00	2026-03-17 18:19:21.351+00	\N
+4	Gnarly or Nice Market	2025-12-13 00:00:00+00	1PM-5PM	Co-prosperity Sphere	3219 S Morgan Street\n\nChicago, IL 60608	https://maps.app.goo.gl/riSgCYyHTWwG1Kk18	\N	\N	2026-03-17 18:19:21.354+00	2026-03-17 18:19:21.354+00	\N
+5	Put a Lid on It Exhibition	2025-10-03 00:00:00+00	6PM-8PM	Belger Arts Center	12011 Tracy Ave\n\nKansas City, MO	https://maps.app.goo.gl/Smcp35xuuNm8djDs5	\N	\N	2026-03-17 18:19:21.365+00	2026-03-17 18:19:21.365+00	\N
+6	Oddball Market	2025-08-23 00:00:00+00	3PM-9PM	Thalia Hall	1807 S Allport St\n\nChicago, IL	https://maps.app.goo.gl/EVZVV7BFagxE7cPy5	\N	\N	2026-03-17 18:19:21.371+00	2026-03-17 18:19:21.371+00	\N
+7	Mother's Day Market	2025-05-03 00:00:00+00	12PM-4PM	Gnarware Workshop	1838 W Cermak Ave\n\nChicago, IL	https://maps.app.goo.gl/h9i9FJcHpYUyNp7m7	\N	\N	2026-03-17 18:19:21.376+00	2026-03-17 18:19:21.376+00	\N
+8	Coffee & Community	2025-02-16 00:00:00+00	11AM-6PM	Northside Cutlery	4316 N Lincoln Ave\n\nChicago, IL	https://maps.app.goo.gl/tLoiHQKkPCe8tY758	\N	\N	2026-03-17 18:19:21.38+00	2026-03-17 18:19:21.38+00	\N
+9	Le Loft Holiday Pop-Up Market	2024-12-15 00:00:00+00	12PM-4PM	Le Loft	2418 W North Ave (2nd Flr)\n\nChicago, IL	https://maps.app.goo.gl/n1dF34jwY46ru8rq7	\N	\N	2026-03-17 18:19:21.384+00	2026-03-17 18:19:21.384+00	\N
+10	GnarWare Holiday Market	2024-12-08 00:00:00+00	1PM-5PM	Bourbon on Division	2050 W Division St\n\nChicago, IL	https://maps.app.goo.gl/gEWcoPh5jZyr7imz5	\N	\N	2026-03-17 18:19:21.389+00	2026-03-17 18:19:21.389+00	\N
+12	Secret Garden Arts	2024-07-28 00:00:00+00	1-6PM	Marz Brewery	3630 S Iron St\n\nChicago, IL	https://maps.app.goo.gl/At5uuVACCCNQz5Py7	\N	\N	2026-03-17 18:19:21.396+00	2026-03-17 18:19:21.396+00	\N
+13	The Art of Pride	2024-06-02 00:00:00+00	12-4PM	Hyde Park Art Center	5020 S Cornell Ave\n\nChicago, IL	https://maps.app.goo.gl/dBD7CqVTeEdjhMfP7	\N	\N	2026-03-17 18:19:21.399+00	2026-03-17 18:19:21.399+00	\N
+14	Mothers Day Market	2024-04-28 00:00:00+00	11AM-4PM	GnarWare Workshop	1838 W Cermak Ave\n\nChicago, IL	https://maps.app.goo.gl/h9i9FJcHpYUyNp7m7	\N	\N	2026-03-17 18:19:21.402+00	2026-03-17 18:19:21.402+00	\N
+15	Holiday Market	2023-12-16 00:00:00+00	2PM-6PM	GnarWare Workshop	1838 W Cermak Ave\n\nChicago, IL	https://maps.app.goo.gl/h9i9FJcHpYUyNp7m7	\N	\N	2026-03-17 18:19:21.405+00	2026-03-17 18:19:21.405+00	\N
+16	Summer Sale	2023-06-25 00:00:00+00	2PM-6PM	GnarWare Workshop	1838 W Cermak Ave\n\nChicago, IL	https://maps.app.goo.gl/h9i9FJcHpYUyNp7m7	\N	\N	2026-03-17 18:19:21.412+00	2026-03-17 18:19:21.412+00	\N
+11	Exhibition: Community Unfolding a Path	2024-09-07 00:00:00+00	11AM-12PM	Ariadna Ginez Studio @ Mana Contemporary	2233 S Throop St Chicago, IL	https://maps.app.goo.gl/pvzdMVh2b5U3QUtq9	\N	\N	2026-03-19 14:30:27.624+00	2026-03-17 18:19:21.392+00	\N
+2	The Chicago Pottery Market	2026-05-30 00:00:00+00	11AM-6PM	Wilderhouse	1339 N Damen Ave\n\nChicago, IL 60607	https://maps.app.goo.gl/ZNpf2Dm1cszeLA3cA	https://www.instagram.com/p/DW9APngDmX0/	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"id": "6a15d2a321e1eb5d46976fd4", "type": "link", "fields": {"url": "https://www.wilderhouse.com/", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Wilderhouse", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " is excited to bring back The Chicago Pottery Market for its second year! The 2026 Spring market will take place May 30th & 31st and will feature 50+ local Chicago ceramic artists! Join us for a beautiful weekend of all things pottery.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "The market will go from 10am until 5 both days!", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "The Wicker Park Farmers Market will be happening nearby on Sunday, May 30th from 8am to 2pm.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	2026-05-26 17:05:36.189+00	2026-03-17 18:19:21.348+00	552
+1	The Chicago Pottery Market	2026-05-31 00:00:00+00	11AM-6PM	Wilderhouse	1339 N Damen Ave\n\nChicago, IL 60607	https://maps.app.goo.gl/ZNpf2Dm1cszeLA3cA	https://www.instagram.com/p/DW9APngDmX0/	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"id": "6a15d46021e1eb5d46976fd5", "type": "link", "fields": {"url": "https://www.wilderhouse.com/", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Wilderhouse", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " is excited to bring back The Chicago Pottery Market for its second year! The 2026 Spring market will take place May 30th & 31st and will feature 50+ local Chicago ceramic artists! Join us for a beautiful weekend of all things pottery.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "The market will go from 10am until 5 both days!", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "The Wicker Park Farmers Market will be happening nearby on Sunday, May 30th from 8am to 2pm.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	2026-05-26 17:12:15.519+00	2026-03-17 18:19:21.342+00	552
+17	Thalia Hall Free for All	2026-08-29 12:00:00+00	2:30PM	Thalia Hall	1807 S Allport St, Chicago, IL 60608	https://maps.app.goo.gl/AjrLwSwa5ji8AxXx8	https://www.ticketweb.com/event/thalia-hall-free-for-all-thalia-hall-tickets/14931693	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "The Thalia Hall Free For All presented by ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a15dfe85ffffd7ad6127dd6", "type": "link", "fields": {"url": "https://thaliahallchicago.com/", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Thalia Hall", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " and ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a15dff75ffffd7ad6127dd7", "type": "link", "fields": {"url": "https://wbez.org/", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "WBEZ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Thalia Hall is gearing up once again for a fully loaded summer edition of the Thalia Hall Free For All, a free-admission building crawl featuring programming across our main stage and Punch House, plus an expanded outdoor hangout on Allport Street and special street stage!", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Wander the building inside and out as you catch live music everywhere you turn, explore our curated vendor market, treat yourself to delicious food, and dive into a variety of games and activities that’ll keep the good times rolling.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "This event is entirely free, but on-site donations benefiting the Pilsen Food Pantry are greatly encouraged.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"id": "6a15d1f421e1eb5d46976fd1", "type": "link", "fields": {"url": "https://www.ticketweb.com/event/thalia-hall-free-for-all-thalia-hall-tickets/14931693", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "RSVP", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " does not guarantee entry and is subject to capacity.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	2026-05-26 18:01:32.857+00	2026-05-26 16:20:51.617+00	566
 \.
 
 
@@ -4465,6 +4507,7 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 563	\N	\N	\N	2026-05-14 21:32:13.838+00	2026-05-14 21:32:11.907+00	/api/media/file/green-bowl-and-petal-trays.jpg	\N	green-bowl-and-petal-trays.jpg	image/jpeg	587778	4062	2708	50	50	/api/media/file/green-bowl-and-petal-trays-300x200.jpg	300	200	image/jpeg	7716	green-bowl-and-petal-trays-300x200.jpg	/api/media/file/green-bowl-and-petal-trays-500x500.jpg	500	500	image/jpeg	29370	green-bowl-and-petal-trays-500x500.jpg	/api/media/file/green-bowl-and-petal-trays-600x400.jpg	600	400	image/jpeg	22410	green-bowl-and-petal-trays-600x400.jpg	/api/media/file/green-bowl-and-petal-trays-900x600.jpg	900	600	image/jpeg	44836	green-bowl-and-petal-trays-900x600.jpg	/api/media/file/green-bowl-and-petal-trays-1400x933.jpg	1400	933	image/jpeg	102868	green-bowl-and-petal-trays-1400x933.jpg	/api/media/file/green-bowl-and-petal-trays-1920x1280.jpg	1920	1280	image/jpeg	193618	green-bowl-and-petal-trays-1920x1280.jpg	/api/media/file/green-bowl-and-petal-trays-1200x630.jpg	1200	630	image/jpeg	68728	green-bowl-and-petal-trays-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/green-bowl-and-petal-trays.jpg
 564	Blue Teapot	\N	\N	2026-05-15 23:43:02.843+00	2026-05-15 23:42:59.225+00	/api/media/file/LgHero-teapot.jpg	\N	LgHero-teapot.jpg	image/jpeg	448325	2560	1600	50	50	/api/media/file/LgHero-teapot-300x188.jpg	300	188	image/jpeg	20543	LgHero-teapot-300x188.jpg	/api/media/file/LgHero-teapot-500x500.jpg	500	500	image/jpeg	70924	LgHero-teapot-500x500.jpg	/api/media/file/LgHero-teapot-600x375.jpg	600	375	image/jpeg	70219	LgHero-teapot-600x375.jpg	/api/media/file/LgHero-teapot-900x563.jpg	900	563	image/jpeg	141082	LgHero-teapot-900x563.jpg	/api/media/file/LgHero-teapot-1400x875.jpg	1400	875	image/jpeg	280189	LgHero-teapot-1400x875.jpg	/api/media/file/LgHero-teapot-1920x1200.jpg	1920	1200	image/jpeg	443292	LgHero-teapot-1920x1200.jpg	/api/media/file/LgHero-teapot-1200x630.jpg	1200	630	image/jpeg	182830	LgHero-teapot-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-teapot.jpg
 565	\N	\N	\N	2026-05-15 23:46:13.229+00	2026-05-15 23:46:10.708+00	/api/media/file/LgHero-teapot-2.jpg	\N	LgHero-teapot-2.jpg	image/jpeg	293012	2560	1600	50	50	/api/media/file/LgHero-teapot-2-300x188.jpg	300	188	image/jpeg	19200	LgHero-teapot-2-300x188.jpg	/api/media/file/LgHero-teapot-2-500x500.jpg	500	500	image/jpeg	55671	LgHero-teapot-2-500x500.jpg	/api/media/file/LgHero-teapot-2-600x375.jpg	600	375	image/jpeg	57281	LgHero-teapot-2-600x375.jpg	/api/media/file/LgHero-teapot-2-900x563.jpg	900	563	image/jpeg	106396	LgHero-teapot-2-900x563.jpg	/api/media/file/LgHero-teapot-2-1400x875.jpg	1400	875	image/jpeg	200441	LgHero-teapot-2-1400x875.jpg	/api/media/file/LgHero-teapot-2-1920x1200.jpg	1920	1200	image/jpeg	311856	LgHero-teapot-2-1920x1200.jpg	/api/media/file/LgHero-teapot-2-1200x630.jpg	1200	630	image/jpeg	134905	LgHero-teapot-2-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-teapot-2.jpg
+566	Thalia Hall Free for All	\N	\N	2026-05-26 17:12:44.798+00	2026-05-26 17:12:42.595+00	/api/media/file/thalia-hall-free-for-all-summer-2026.jpg	\N	thalia-hall-free-for-all-summer-2026.jpg	image/jpeg	680626	1100	1375	50	50	/api/media/file/thalia-hall-free-for-all-summer-2026-300x375.jpg	300	375	image/jpeg	25717	thalia-hall-free-for-all-summer-2026-300x375.jpg	/api/media/file/thalia-hall-free-for-all-summer-2026-500x500.jpg	500	500	image/jpeg	54230	thalia-hall-free-for-all-summer-2026-500x500.jpg	/api/media/file/thalia-hall-free-for-all-summer-2026-600x750.jpg	600	750	image/jpeg	84862	thalia-hall-free-for-all-summer-2026-600x750.jpg	/api/media/file/thalia-hall-free-for-all-summer-2026-900x1125.jpg	900	1125	image/jpeg	181895	thalia-hall-free-for-all-summer-2026-900x1125.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	/api/media/file/thalia-hall-free-for-all-summer-2026-1200x630.jpg	1200	630	image/jpeg	136127	thalia-hall-free-for-all-summer-2026-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/thalia-hall-free-for-all-summer-2026.jpg
 \.
 
 
@@ -4642,7 +4685,9 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 9	20260318_161820	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 10	20260320_033436	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 11	20260513_products_thumb_array	7	2026-05-14 00:04:04.985+00	2026-05-14 00:04:04.984+00
-1	dev	-1	2026-05-17 02:05:50.239+00	2026-03-16 16:07:06.694+00
+12	20260526_163601	8	2026-05-26 16:42:42.781+00	2026-05-26 16:42:42.781+00
+13	20260526_170229	9	2026-05-26 17:02:48.565+00	2026-05-26 17:02:48.565+00
+1	dev	-1	2026-05-26 17:37:36.63+00	2026-03-16 16:07:06.694+00
 \.
 
 
@@ -4694,6 +4739,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 44	collection-products-35	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 04:26:27.506+00	2026-03-19 04:26:27.507+00
 46	collection-products-27	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 04:28:00.428+00	2026-03-19 04:28:00.429+00
 49	collection-products-19	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 04:32:52.782+00	2026-03-19 04:32:52.783+00
+105	collection-search	{}	2026-05-21 15:34:09.509+00	2026-05-21 15:34:09.508+00
 4	collection-events	{"sort": "-startDate", "limit": 25, "editViewType": "default"}	2026-03-19 14:30:07.934+00	2026-03-16 17:14:19.057+00
 55	collection-products-72	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 19:32:41.009+00	2026-03-21 03:09:47.426+00
 81	collection-products-11	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 20:01:26.82+00	2026-05-08 20:01:26.821+00
@@ -4719,6 +4765,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 31	collection-products-62	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-14 02:53:02.341+00	2026-03-19 01:30:13.934+00
 25	collection-products-57	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-14 03:20:14.72+00	2026-03-19 00:07:46.991+00
 73	collection-products-88	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-14 20:05:29.569+00	2026-05-02 02:34:12.273+00
+106	global-store-settings	{"editViewType": "default"}	2026-05-21 15:38:53.543+00	2026-05-21 15:38:53.545+00
 52	collection-products-69	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-07 15:57:39.252+00	2026-03-21 02:08:27.468+00
 27	collection-products-51	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 01:06:53.348+00	2026-03-19 00:25:03.125+00
 70	collection-products-85	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 01:10:26.837+00	2026-05-02 02:08:17.676+00
@@ -4807,6 +4854,8 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 378	\N	75	user	1
 274	\N	60	user	1
 380	\N	17	user	1
+381	\N	105	user	1
+382	\N	106	user	1
 278	\N	52	user	1
 125	\N	34	user	1
 126	\N	35	user	1
@@ -6069,11 +6118,20 @@ COPY public.stockists_stockists (_order, _parent_id, id, name, info, address, ma
 
 
 --
+-- Data for Name: store_settings; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.store_settings (id, store_open, updated_at, created_at, closed_message) FROM stdin;
+1	t	2026-05-26 17:16:18.318+00	2026-05-21 15:45:30.29+00	The online store is closed for an in-person market (The Chicago Pottery Market).\n\nIt will re-open Monday, May 25th.
+\.
+
+
+--
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.users (id, name, updated_at, created_at, email, reset_password_token, reset_password_expiration, salt, hash, login_attempts, lock_until) FROM stdin;
-1	Davey	2026-05-08 15:22:06.818+00	2026-03-16 16:07:37.97+00	david@raygun.org	\N	\N	47703bd813d08425779cea2bd6bf41310bc07fd68676424f2bb6acde4138730f	bff9886c23205b99d2a90f8a17f87f0c42d080bd92cb555baa851b9093789884486119fb317952455e541426686f7d16dac41ebec78c9ae581bf03b0314a9c341380f0ca883734c8c7a74c47661683de978a44a5b1d2124dfc54d9a4b49baffe8980b92b32ebeba718b5b779c5e7c507efeba97697392c487353f25f68696f14bb42e1a04d02b00bf174592d1980208ae55ae0ae4af5d27bba3b04e52169d41341b342ac60585082dd5f3e8741269ff095c34c5ef98aaaba2b0e8cf08c23f94ffb3f752a9cb10e0c352729f9dadd9b3d4a5f87b70b50db03f57b7f7191209ba8a02435a743023afccbcc15ceb21e1dcd2daaec7ebe8eba1ca27c297700758c1cb9436cc6cb670b15fdcbfbd33b98536dbc7e29c0126ab2cae4edf44499e7757f9a2522ec63ee2f9df98a1a3c9cf87d9773422695c0e6718129124abdfb6fdd701e07b217f299879e003fb11714c560e118034cfc3644e92dcb12e0cabae29789cd6e253529a97f116a16ecc0fdd273a652143af4cb233412a12d68fdf5f0f10a02377a59164401d8e204c59f396e204985441f7cf2a0def4de838aea8ef5cfa1dd06f203f23a84c0b989f101f44d88eae1bb44a2ff397fe1fac1aa83348698c7c000f7b1650ec576e70d63292f6c82a5e345368def8d97d4bec093d00399f3709ea5dd66801f3fec40f8dd360f833c50da09d497de938c00d3c227e49ff7b58f	0	\N
+1	Davey	2026-05-22 02:47:48.09+00	2026-03-16 16:07:37.97+00	david@raygun.org	\N	\N	47703bd813d08425779cea2bd6bf41310bc07fd68676424f2bb6acde4138730f	bff9886c23205b99d2a90f8a17f87f0c42d080bd92cb555baa851b9093789884486119fb317952455e541426686f7d16dac41ebec78c9ae581bf03b0314a9c341380f0ca883734c8c7a74c47661683de978a44a5b1d2124dfc54d9a4b49baffe8980b92b32ebeba718b5b779c5e7c507efeba97697392c487353f25f68696f14bb42e1a04d02b00bf174592d1980208ae55ae0ae4af5d27bba3b04e52169d41341b342ac60585082dd5f3e8741269ff095c34c5ef98aaaba2b0e8cf08c23f94ffb3f752a9cb10e0c352729f9dadd9b3d4a5f87b70b50db03f57b7f7191209ba8a02435a743023afccbcc15ceb21e1dcd2daaec7ebe8eba1ca27c297700758c1cb9436cc6cb670b15fdcbfbd33b98536dbc7e29c0126ab2cae4edf44499e7757f9a2522ec63ee2f9df98a1a3c9cf87d9773422695c0e6718129124abdfb6fdd701e07b217f299879e003fb11714c560e118034cfc3644e92dcb12e0cabae29789cd6e253529a97f116a16ecc0fdd273a652143af4cb233412a12d68fdf5f0f10a02377a59164401d8e204c59f396e204985441f7cf2a0def4de838aea8ef5cfa1dd06f203f23a84c0b989f101f44d88eae1bb44a2ff397fe1fac1aa83348698c7c000f7b1650ec576e70d63292f6c82a5e345368def8d97d4bec093d00399f3709ea5dd66801f3fec40f8dd360f833c50da09d497de938c00d3c227e49ff7b58f	0	\N
 \.
 
 
@@ -6082,7 +6140,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	1a637180-d149-4d8d-b021-45e1b2adef40	2026-05-17 02:01:17.286+00	2026-05-17 04:01:17.286+00
+1	1	907d6de7-7a14-4c99-ae72-db9bc2bbfc80	2026-05-26 15:54:44.68+00	2026-05-26 19:52:57.726+00
 \.
 
 
@@ -6209,7 +6267,7 @@ SELECT pg_catalog.setval('public.collection_title_id_seq', 1, true);
 -- Name: events_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.events_id_seq', 16, true);
+SELECT pg_catalog.setval('public.events_id_seq', 17, true);
 
 
 --
@@ -6286,7 +6344,7 @@ SELECT pg_catalog.setval('public.links_id_seq', 1, true);
 -- Name: media_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.media_id_seq', 565, true);
+SELECT pg_catalog.setval('public.media_id_seq', 566, true);
 
 
 --
@@ -6342,35 +6400,35 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 455, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 475, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 839, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 869, true);
 
 
 --
 -- Name: payload_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_migrations_id_seq', 11, true);
+SELECT pg_catalog.setval('public.payload_migrations_id_seq', 13, true);
 
 
 --
 -- Name: payload_preferences_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_id_seq', 104, true);
+SELECT pg_catalog.setval('public.payload_preferences_id_seq', 106, true);
 
 
 --
 -- Name: payload_preferences_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 380, true);
+SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 382, true);
 
 
 --
@@ -6448,6 +6506,13 @@ SELECT pg_catalog.setval('public.search_rels_id_seq', 18, true);
 --
 
 SELECT pg_catalog.setval('public.stockists_id_seq', 1, true);
+
+
+--
+-- Name: store_settings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.store_settings_id_seq', 1, true);
 
 
 --
@@ -7178,6 +7243,14 @@ ALTER TABLE ONLY public.stockists_stockists
 
 
 --
+-- Name: store_settings store_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.store_settings
+    ADD CONSTRAINT store_settings_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7695,6 +7768,13 @@ CREATE INDEX categories_updated_at_idx ON public.categories USING btree (updated
 --
 
 CREATE INDEX events_created_at_idx ON public.events USING btree (created_at);
+
+
+--
+-- Name: events_image_idx; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX events_image_idx ON public.events USING btree (image_id);
 
 
 --
@@ -9548,6 +9628,14 @@ ALTER TABLE ONLY public.categories
 
 
 --
+-- Name: events events_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.events
+    ADD CONSTRAINT events_image_id_media_id_fk FOREIGN KEY (image_id) REFERENCES public.media(id) ON DELETE SET NULL;
+
+
+--
 -- Name: faq_items faq_items_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -10327,5 +10415,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict A5KdabUL9lPeY4mUFWWQLHqkf9JglQhqhEQpFGW9aDOgJ6QXBqwuFWWZrWgpeKH
+\unrestrict P0WM8vD55TWc4PtqmsgXLyMfeB0o4glZvaVH2juRavgQcjbzKl7kWFdTpWfiQ14
 

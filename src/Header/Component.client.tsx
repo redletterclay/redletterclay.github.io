@@ -25,7 +25,7 @@ const MOBILE_NAV_LINKS = [
   { href: '/about', label: 'About' },
 ]
 
-export const RLCHeaderClient: React.FC = () => {
+export const RLCHeaderClient: React.FC<{ storeOpen: boolean }> = ({ storeOpen }) => {
   const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -79,8 +79,8 @@ export const RLCHeaderClient: React.FC = () => {
 
             {/* Right: local pickup toggle + cart + hamburger */}
             <div className="rlc-nav-right" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0, paddingRight: '1rem' }}>
-              <LocalPickupToggle />
-              <CartButton />
+              {storeOpen && <LocalPickupToggle />}
+              {storeOpen && <CartButton />}
               {/* Hamburger — hidden at 1200px+ via CSS */}
               <button
                 type="button"
@@ -132,7 +132,7 @@ export const RLCHeaderClient: React.FC = () => {
             <span className="navbar-brand" style={{ color: 'white', paddingTop: 4 }}>Red Letter Clay</span>
           </Link>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <CartButton onClose={() => setMenuOpen(false)} iconColor="white" />
+            {storeOpen && <CartButton onClose={() => setMenuOpen(false)} iconColor="white" />}
             <button
               type="button"
               aria-label="Close"

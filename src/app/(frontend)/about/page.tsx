@@ -13,7 +13,7 @@ export default async function AboutPage() {
 
   const eventsRes = await payload.find({
     collection: 'events',
-    depth: 0,
+    depth: 1,
     limit: 4,
     overrideAccess: false,
     sort: '-startDate',

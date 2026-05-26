@@ -20,14 +20,19 @@ export const revalidate = 600
 export default async function ShopPage() {
   const payload = await getPayload({ config: configPromise })
 
-  const products = await payload.find({
-    collection: 'products',
-    depth: 1,
-    limit: 20,
-    page: 1,
-    overrideAccess: false,
-    sort: '_order',
-  })
+  const [products, storeSettingsRes] = await Promise.all([
+    payload.find({
+      collection: 'products',
+      depth: 1,
+      limit: 20,
+      page: 1,
+      overrideAccess: false,
+      sort: '_order',
+    }),
+    payload.findGlobal({ slug: 'store-settings', depth: 0 }).catch(() => null),
+  ])
+  const storeOpen = (storeSettingsRes as any)?.storeOpen !== false
+  const closedMessage = (storeSettingsRes as any)?.closedMessage || 'The online store is temporarily closed for an in-person market. Check back soon!'
 
   return (
     <main style={{ overflowX: 'hidden' }}>
@@ -36,6 +41,29 @@ export default async function ShopPage() {
       <ShopTagFilter />
 
       <PricingNote />
+
+      {/* Store closed announcement */}
+      {!storeOpen && (
+        <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem 1rem' }}>
+          <div style={{ width: '100%', maxWidth: '1200px' }}>
+            <div className="announcement-box">
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+                <div className="bg-red-alt" style={{ padding: '1rem 1.5rem 0.5rem', width: '100%' }}>
+                  <h3 style={{ textAlign: 'center', margin: 0, color: 'white', fontSize: '2rem', fontWeight: 400, textTransform: 'none' }}>
+                    <i className="fa-solid fa-store-slash" style={{ marginRight: '0.75rem' }} aria-hidden="true" />
+                    Store Temporarily Closed
+                  </h3>
+                </div>
+                <div style={{ background: '#f8f9fa', borderLeft: '3px solid #c12121', borderRight: '3px solid #c12121', borderBottom: '3px solid #c12121', padding: '1.25rem 1.5rem', textAlign: 'center', fontSize: '1.6rem', lineHeight: '2.5rem' }}>
+                  {closedMessage.split('\n').filter(Boolean).map((line: string, i: number) => (
+                    <p key={i} style={{ margin: 0 }}>{line}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Product grid */}
       <div className="container-fluid" style={{ padding: '0 0.5rem' }}>

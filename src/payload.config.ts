@@ -21,6 +21,7 @@ import { Stockists } from './Stockists/config'
 import { FAQ } from './FAQ/config'
 import { CollectionTitle } from './CollectionTitle/config'
 import { HeroImages } from './HeroImages/config'
+import { StoreSettings } from './StoreSettings/config'
 import { plugins } from './plugins'
 import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
@@ -74,7 +75,7 @@ export default buildConfig({
   }),
   collections: [Pages, Posts, Media, Categories, Users, Products, Events],
   cors: [getServerSideURL()].filter(Boolean),
-  globals: [Header, Footer, Gallery, Stockists, Announcement, Links, Newsletter, FAQ, CollectionTitle, HeroImages],
+  globals: [Header, Footer, Gallery, Stockists, Announcement, Links, Newsletter, FAQ, CollectionTitle, HeroImages, StoreSettings],
   plugins,
   secret: process.env.PAYLOAD_SECRET,
   sharp,

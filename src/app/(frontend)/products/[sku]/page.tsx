@@ -28,13 +28,17 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
   const { sku } = await paramsPromise
   const payload = await getPayload({ config: configPromise })
 
-  const result = await payload.find({
-    collection: 'products',
-    limit: 1,
-    depth: 3,
-    overrideAccess: false,
-    where: { sku: { equals: sku } },
-  })
+  const [result, storeSettingsRes] = await Promise.all([
+    payload.find({
+      collection: 'products',
+      limit: 1,
+      depth: 3,
+      overrideAccess: false,
+      where: { sku: { equals: sku } },
+    }),
+    payload.findGlobal({ slug: 'store-settings', depth: 0 }).catch(() => null),
+  ])
+  const storeOpen = (storeSettingsRes as any)?.storeOpen !== false
 
   const product = result.docs?.[0] as any
   if (!product) notFound()
@@ -215,13 +219,35 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
 
               {/* Add to cart */}
               <div className="add_cart" data-product-id={product.sku} style={{ padding: '1.5rem 0.75rem' }}>
-                <ProductAddToCart
-                  sku={product.sku}
-                  price={product.price}
-                  name={product.name || product.title}
-                  imageUrl={thumb?.url ? (thumb.url.startsWith('http') ? thumb.url : `${getServerSideURL()}${thumb.url}`) : undefined}
-                  description={firstParagraphText(product.description)}
-                />
+                {!storeOpen && (
+                  <button
+                    disabled
+                    style={{
+                      borderRadius: '9999px',
+                      width: '100%',
+                      padding: '0.75rem 1rem',
+                      fontSize: '1.4rem',
+                      marginTop: '2rem',
+                      marginBottom: '2rem',
+                      background: '#ccc',
+                      color: '#888',
+                      border: 'none',
+                      cursor: 'not-allowed',
+                    }}
+                  >
+                    <i className="fa-solid fa-store-slash" style={{ marginRight: '0.5rem' }} aria-hidden="true" />
+                    Store Temporarily Closed
+                  </button>
+                )}
+                {storeOpen && (
+                  <ProductAddToCart
+                    sku={product.sku}
+                    price={product.price}
+                    name={product.name || product.title}
+                    imageUrl={thumb?.url ? (thumb.url.startsWith('http') ? thumb.url : `${getServerSideURL()}${thumb.url}`) : undefined}
+                    description={firstParagraphText(product.description)}
+                  />
+                )}
 
                 {/* Food/dishwasher safe */}
                 {(product.foodSafe || product.dishwasherSafe) && (

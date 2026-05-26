@@ -2,6 +2,7 @@ import type { CollectionConfig } from 'payload'
 
 import { anyone } from '../../access/anyone'
 import { authenticated } from '../../access/authenticated'
+import { defaultLexical } from '../../fields/defaultLexical'
 
 export const Events: CollectionConfig<'events'> = {
   slug: 'events',
@@ -52,8 +53,14 @@ export const Events: CollectionConfig<'events'> = {
       type: 'text',
     },
     {
+      name: 'image',
+      type: 'upload',
+      relationTo: 'media',
+    },
+    {
       name: 'description',
-      type: 'textarea',
+      type: 'richText',
+      editor: defaultLexical,
     },
   ],
 }
