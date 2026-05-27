@@ -27,21 +27,21 @@ export async function Last4Journal() {
           const thumb = post.thumb && typeof post.thumb !== 'string' ? post.thumb : null
           return (
             <div key={post.id} className="event-col">
-              <Link href={`/journal/${post.category}/${post.slug}`}>
-                {thumb && (
-                  <img
-                    src={thumb.url}
-                    alt={thumb.alt || post.title}
-                    className="border-thumb"
-                    style={{
-                      width: '100%',
-                      display: 'block',
-                      borderRadius: '1rem',
-                      border: '5px solid #c12121',
-                    }}
-                  />
-                )}
-                <h3 style={{ margin: '1rem 0 0.5rem', textAlign: 'center' }}>{post.title}</h3>
+              <Link href={`/journal/${post.category}/${post.slug}`} style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                <div style={{ borderRadius: '1rem', border: '3px solid #c12121', overflow: 'hidden', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                  {thumb && (
+                    <img
+                      src={thumb.url}
+                      alt={thumb.alt || post.title}
+                      className="border-thumb"
+                      style={{
+                        width: '100%',
+                        display: 'block',
+                      }}
+                    />
+                  )}
+                  <h3 style={{ flex: 1, margin: 0, textAlign: 'center', background: '#fff', padding: '0.5rem 0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 600 }}>{post.title}</h3>
+                </div>
               </Link>
             </div>
           )
