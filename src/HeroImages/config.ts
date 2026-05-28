@@ -38,6 +38,16 @@ export const HeroImages: GlobalConfig = {
           type: 'text',
           label: 'Alt text',
         },
+        {
+          name: 'position',
+          type: 'select',
+          label: 'Image position',
+          defaultValue: 'top center',
+          options: [
+            { label: 'Center', value: 'center' },
+            { label: 'Top Center', value: 'top center' },
+          ],
+        },
       ],
     },
   ],

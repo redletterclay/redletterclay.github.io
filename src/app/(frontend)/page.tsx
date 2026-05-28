@@ -51,7 +51,7 @@ export default async function HomePage() {
   const heroImages: { url: string; alt?: string }[] = (heroImagesData?.images || [])
     .map((row: any) =>
       row.image && typeof row.image === 'object'
-        ? { url: row.image.url, alt: row.alt || row.image.alt || '' }
+        ? { url: row.image.url, alt: row.alt || row.image.alt || '', position: row.position ?? 'top center' }
         : null,
     )
     .filter(Boolean)

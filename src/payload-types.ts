@@ -2135,6 +2135,7 @@ export interface HeroImage {
     | {
         image: number | Media;
         alt?: string | null;
+        position?: ('center' | 'top center') | null;
         id?: string | null;
       }[]
     | null;
@@ -2357,6 +2358,7 @@ export interface HeroImagesSelect<T extends boolean = true> {
     | {
         image?: T;
         alt?: T;
+        position?: T;
         id?: T;
       };
   updatedAt?: T;

@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict W2PdIYyRQsvi3aPJQehpBbIlyaSdiTjWR7ItQBpUjZNLcdxrqqldSHX8dIUuJGY
+\restrict TcEIzf1yVN7kgfUqaU7tbZpTbxWPH32nShbmCScwe5oCBSQf02tuxONZCicebEZ
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -191,6 +191,16 @@ CREATE TYPE public.enum_gallery_blocks_equal_row_image_fit AS ENUM (
 CREATE TYPE public.enum_header_nav_items_link_type AS ENUM (
     'reference',
     'custom'
+);
+
+
+--
+-- Name: enum_hero_images_images_position; Type: TYPE; Schema: public; Owner: -
+--
+
+CREATE TYPE public.enum_hero_images_images_position AS ENUM (
+    'center',
+    'top center'
 );
 
 
@@ -1692,7 +1702,8 @@ CREATE TABLE public.hero_images_images (
     _parent_id integer NOT NULL,
     id character varying NOT NULL,
     image_id integer NOT NULL,
-    alt character varying
+    alt character varying,
+    "position" public.enum_hero_images_images_position DEFAULT 'top center'::public.enum_hero_images_images_position
 );
 
 
@@ -3828,16 +3839,18 @@ COPY public.gallery (id, updated_at, created_at) FROM stdin;
 --
 
 COPY public.gallery_blocks_equal_row (_order, _parent_id, _path, id, block_name, image_fit) FROM stdin;
-2	1	rows	69b99b48aa9ac96a311211dd	\N	cover
-3	1	rows	69bf5a3ae2d1da234e7e6c30	\N	cover
-4	1	rows	69b99b48aa9ac96a311211e1	\N	cover
-5	1	rows	69b99b48aa9ac96a311211e4	\N	cover
-6	1	rows	69b99b48aa9ac96a311211e8	\N	cover
-7	1	rows	69b99b48aa9ac96a311211eb	\N	cover
-8	1	rows	69b99b48aa9ac96a311211ef	\N	cover
-9	1	rows	69b99b48aa9ac96a311211f3	\N	cover
-10	1	rows	69b99b48aa9ac96a311211f6	\N	cover
-11	1	rows	69b99b48aa9ac96a311211fa	\N	cover
+1	1	rows	6a17c040d096cd4d71f5babd	\N	cover
+3	1	rows	6a17c0a0d096cd4d71f5bac5	\N	cover
+4	1	rows	69b99b48aa9ac96a311211e4	\N	cover
+5	1	rows	69b99b48aa9ac96a311211dd	\N	cover
+6	1	rows	69bf5a3ae2d1da234e7e6c30	\N	cover
+7	1	rows	69b99b48aa9ac96a311211e1	\N	cover
+8	1	rows	69b99b48aa9ac96a311211e8	\N	cover
+9	1	rows	69b99b48aa9ac96a311211eb	\N	cover
+10	1	rows	69b99b48aa9ac96a311211ef	\N	cover
+11	1	rows	69b99b48aa9ac96a311211f3	\N	cover
+12	1	rows	69b99b48aa9ac96a311211f6	\N	cover
+13	1	rows	69b99b48aa9ac96a311211fa	\N	cover
 \.
 
 
@@ -3846,6 +3859,14 @@ COPY public.gallery_blocks_equal_row (_order, _parent_id, _path, id, block_name,
 --
 
 COPY public.gallery_blocks_equal_row_items (_order, _parent_id, id, image_id, title) FROM stdin;
+1	6a17c040d096cd4d71f5babd	6a17c04cd096cd4d71f5babf	568	Tableware
+2	6a17c040d096cd4d71f5babd	6a17c068d096cd4d71f5bac1	570	Tableware
+3	6a17c040d096cd4d71f5babd	6a17c070d096cd4d71f5bac3	572	Tableware
+1	6a17c0a0d096cd4d71f5bac5	6a17c0c2d096cd4d71f5bac9	567	Tableware
+2	6a17c0a0d096cd4d71f5bac5	6a17c0bcd096cd4d71f5bac7	571	Tableware
+3	6a17c0a0d096cd4d71f5bac5	6a17c0cfd096cd4d71f5bacb	573	Tableware
+1	69b99b48aa9ac96a311211e4	69b99b48aa9ac96a311211e2	338	Blue Planter
+2	69b99b48aa9ac96a311211e4	69b99b48aa9ac96a311211e3	339	Square Vase
 1	69b99b48aa9ac96a311211dd	69b99b48aa9ac96a311211da	333	Luminary with Washi Paper
 2	69b99b48aa9ac96a311211dd	69b99b48aa9ac96a311211db	308	Luminary Lit
 3	69b99b48aa9ac96a311211dd	69b99b48aa9ac96a311211dc	334	Luminary with Washi Paper
@@ -3854,8 +3875,6 @@ COPY public.gallery_blocks_equal_row_items (_order, _parent_id, id, image_id, ti
 1	69b99b48aa9ac96a311211e1	69b99b48aa9ac96a311211de	335	Canteen Vase
 2	69b99b48aa9ac96a311211e1	69b99b48aa9ac96a311211df	336	Canteen Vase
 3	69b99b48aa9ac96a311211e1	69b99b48aa9ac96a311211e0	337	Canteen Vase
-1	69b99b48aa9ac96a311211e4	69b99b48aa9ac96a311211e2	338	Blue Planter
-2	69b99b48aa9ac96a311211e4	69b99b48aa9ac96a311211e3	339	Square Vase
 1	69b99b48aa9ac96a311211e8	69b99b48aa9ac96a311211e5	340	Mugs
 2	69b99b48aa9ac96a311211e8	69b99b48aa9ac96a311211e6	58	Textured Lidded Jars
 3	69b99b48aa9ac96a311211e8	69b99b48aa9ac96a311211e7	228	Slipcast Work
@@ -3880,7 +3899,7 @@ COPY public.gallery_blocks_equal_row_items (_order, _parent_id, id, image_id, ti
 --
 
 COPY public.gallery_blocks_featured_row (_order, _parent_id, _path, id, featured_image_id, featured_title, block_name) FROM stdin;
-1	1	rows	69b99b48aa9ac96a311211d9	330	Lidded Jar	\N
+2	1	rows	69b99b48aa9ac96a311211d9	330	Lidded Jar	\N
 \.
 
 
@@ -3923,7 +3942,7 @@ COPY public.header_rels (id, "order", parent_id, path, pages_id, posts_id) FROM 
 --
 
 COPY public.hero_images (id, updated_at, created_at, fallback_id) FROM stdin;
-1	2026-05-28 03:57:41.977+00	2026-05-14 20:11:04.502+00	559
+1	2026-05-28 04:10:22.955+00	2026-05-14 20:11:04.502+00	559
 \.
 
 
@@ -3931,17 +3950,17 @@ COPY public.hero_images (id, updated_at, created_at, fallback_id) FROM stdin;
 -- Data for Name: hero_images_images; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.hero_images_images (_order, _parent_id, id, image_id, alt) FROM stdin;
-1	1	6a0634aac6d4604d31b8b208	561	\N
-2	1	6a17bae63b5a3359c8785271	568	\N
-3	1	6a0634efc6d4604d31b8b20c	559	\N
-4	1	6a17bafa3b5a3359c8785275	571	\N
-5	1	6a07af89dbf14b953ba3236a	565	\N
-6	1	6a17bad03b5a3359c878526b	573	\N
-7	1	6a0634afc6d4604d31b8b20a	558	\N
-8	1	6a17bad93b5a3359c878526d	567	\N
-9	1	6a17bae13b5a3359c878526f	572	\N
-10	1	6a17baf13b5a3359c8785273	570	\N
+COPY public.hero_images_images (_order, _parent_id, id, image_id, alt, "position") FROM stdin;
+1	1	6a0634aac6d4604d31b8b208	561	\N	center
+2	1	6a17bae63b5a3359c8785271	568	\N	top center
+3	1	6a0634efc6d4604d31b8b20c	559	\N	center
+4	1	6a17bafa3b5a3359c8785275	571	\N	top center
+5	1	6a07af89dbf14b953ba3236a	565	\N	center
+6	1	6a17bad03b5a3359c878526b	573	\N	top center
+7	1	6a0634afc6d4604d31b8b20a	558	\N	center
+8	1	6a17bad93b5a3359c878526d	567	\N	top center
+9	1	6a17bae13b5a3359c878526f	572	\N	top center
+10	1	6a17baf13b5a3359c8785273	570	\N	top center
 \.
 
 
@@ -4700,7 +4719,7 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 11	20260513_products_thumb_array	7	2026-05-14 00:04:04.985+00	2026-05-14 00:04:04.984+00
 12	20260526_163601	8	2026-05-26 16:42:42.781+00	2026-05-26 16:42:42.781+00
 13	20260526_170229	9	2026-05-26 17:02:48.565+00	2026-05-26 17:02:48.565+00
-1	dev	-1	2026-05-27 19:02:36.593+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-05-28 04:08:50.858+00	2026-03-16 16:07:06.694+00
 \.
 
 
@@ -4728,7 +4747,6 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 53	collection-products-70	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-22 02:40:08.361+00	2026-03-21 02:24:53.59+00
 14	collection-users	{}	2026-03-16 17:21:21.413+00	2026-03-16 17:21:21.413+00
 15	browse-by-folder	{}	2026-03-16 17:21:44.903+00	2026-03-16 17:21:44.903+00
-18	global-gallery	{"fields": {"rows": {"collapsed": ["69bf5a3ae2d1da234e7e6c30"]}}, "editViewType": "default"}	2026-03-22 03:26:14.835+00	2026-03-17 16:39:13.008+00
 72	collection-products-87	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-14 03:10:11.256+00	2026-05-02 02:25:58.686+00
 3	collection-posts	{"limit": 10, "editViewType": "default"}	2026-03-16 18:17:09.442+00	2026-03-16 17:13:52.931+00
 20	collection-products-53	{"fields": {"_index-1": {"tabIndex": 1}, "_index-1-0-1": {"tabIndex": 0}, "featuredImage": {"collapsed": []}}}	2026-05-14 16:48:55.066+00	2026-03-18 16:38:27.529+00
@@ -4798,6 +4816,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 79	collection-products-43	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 19:59:31.764+00	2026-05-08 19:59:31.765+00
 82	collection-products-12	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 20:02:16.612+00	2026-05-08 20:02:16.613+00
 59	collection-products-75	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-09 01:24:30.753+00	2026-04-09 03:36:27.141+00
+18	global-gallery	{"fields": {"rows": {"collapsed": ["6a17c040d096cd4d71f5babd", "69b99b48aa9ac96a311211d9", "6a17c0a0d096cd4d71f5bac5", "69b99b48aa9ac96a311211dd", "69b99b48aa9ac96a311211e4", "69bf5a3ae2d1da234e7e6c30", "69b99b48aa9ac96a311211e1", "69b99b48aa9ac96a311211e8", "69b99b48aa9ac96a311211eb", "69b99b48aa9ac96a311211ef", "69b99b48aa9ac96a311211f3", "69b99b48aa9ac96a311211f6", "69b99b48aa9ac96a311211fa"]}}, "editViewType": "default"}	2026-05-28 04:15:32.737+00	2026-03-17 16:39:13.008+00
 85	collection-products-13	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-10 01:47:34.612+00	2026-05-09 03:44:10.031+00
 88	collection-products-49	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-10 21:13:04.17+00	2026-05-10 21:13:04.171+00
 43	collection-products-16	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-10 21:14:47.442+00	2026-03-19 04:21:03.436+00
@@ -4844,7 +4863,6 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 187	\N	53	user	1
 22	\N	14	user	1
 23	\N	15	user	1
-188	\N	18	user	1
 26	\N	3	user	1
 359	\N	61	user	1
 30	\N	8	user	1
@@ -4901,6 +4919,7 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 304	\N	76	user	1
 305	\N	77	user	1
 306	\N	65	user	1
+400	\N	18	user	1
 236	\N	67	user	1
 308	\N	58	user	1
 244	\N	62	user	1
@@ -6415,14 +6434,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 477, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 485, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 871, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 879, true);
 
 
 --
@@ -6443,7 +6462,7 @@ SELECT pg_catalog.setval('public.payload_preferences_id_seq', 107, true);
 -- Name: payload_preferences_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 383, true);
+SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 400, true);
 
 
 --
@@ -10430,5 +10449,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict W2PdIYyRQsvi3aPJQehpBbIlyaSdiTjWR7ItQBpUjZNLcdxrqqldSHX8dIUuJGY
+\unrestrict TcEIzf1yVN7kgfUqaU7tbZpTbxWPH32nShbmCScwe5oCBSQf02tuxONZCicebEZ
 

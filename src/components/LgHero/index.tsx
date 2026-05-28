@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
-type HeroImage = { url: string; alt?: string }
+type HeroImage = { url: string; alt?: string; position?: string }
 
 type Props = {
   images: HeroImage[]
@@ -47,7 +47,7 @@ export function LgHero({ images }: Props) {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            objectPosition: 'top center',
+            objectPosition: img.position ?? 'top center',
             opacity: i === index ? 1 : 0,
             transition: 'opacity 1.2s ease-in-out',
           }}
