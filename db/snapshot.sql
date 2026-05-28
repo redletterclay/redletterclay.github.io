@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict eNxwnGCdQwKrUQaqYoJIEox381CnlkfPu0CXMYodiLfpjly2qJqK2GvKV4Iil3e
+\restrict sJcTs1PbZwoPFvElOQWxvuxAtTBNe7aiIdtmMNt9I0AwTNrIDsGZsnTJKSTrkEn
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -4557,12 +4557,13 @@ COPY public.newsletter (id, updated_at, created_at) FROM stdin;
 --
 
 COPY public.newsletter_issues (_order, _parent_id, id, name, url) FROM stdin;
-1	1	69f500001558293d9f08123c	Shop Mothers Day + The Chicago Pottery Market	https://preview.mailerlite.io/preview/1180415/emails/186098830926677956
-2	1	69b99b2daa9ac96a311211d1	2025 Holiday Markets » Bridgeport & West Loop Venues	https://preview.mailerlite.io/emails/webview/1180415/173072140190352712
-3	1	69b99b2daa9ac96a311211d2	Put a Lid on It Exhibition @ Belger Arts Center (St Louis, MO)	https://preview.mailerlite.io/emails/webview/1180415/165915421823731444
-4	1	69b99b2daa9ac96a311211d3	Oddball Market @ Thalia Hall Block Party (Pilsen, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/163272327241402286
-5	1	69b99b2daa9ac96a311211d4	New Store Partnership - Northside Cutlery (Lincoln Square, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/146465753395102952
-6	1	69b99b2daa9ac96a311211d5	New Store Partnership - Spilt Milk Pastry (Oak Park, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/147339301509662186
+1	1	6a1872587f2b5faa56fbbf55	 This Weekend — The Chicago Pottery Market! 50 vendors, all handmade pottery	https://preview.mailerlite.io/preview/1180415/emails/188726753732069021
+2	1	69f500001558293d9f08123c	Shop Mothers Day + The Chicago Pottery Market	https://preview.mailerlite.io/preview/1180415/emails/186098830926677956
+3	1	69b99b2daa9ac96a311211d1	2025 Holiday Markets » Bridgeport & West Loop Venues	https://preview.mailerlite.io/emails/webview/1180415/173072140190352712
+4	1	69b99b2daa9ac96a311211d2	Put a Lid on It Exhibition @ Belger Arts Center (St Louis, MO)	https://preview.mailerlite.io/emails/webview/1180415/165915421823731444
+5	1	69b99b2daa9ac96a311211d3	Oddball Market @ Thalia Hall Block Party (Pilsen, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/163272327241402286
+6	1	69b99b2daa9ac96a311211d4	New Store Partnership - Northside Cutlery (Lincoln Square, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/146465753395102952
+7	1	69b99b2daa9ac96a311211d5	New Store Partnership - Spilt Milk Pastry (Oak Park, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/147339301509662186
 \.
 
 
@@ -6434,14 +6435,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 487, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 488, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 883, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 884, true);
 
 
 --
@@ -10449,5 +10450,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict eNxwnGCdQwKrUQaqYoJIEox381CnlkfPu0CXMYodiLfpjly2qJqK2GvKV4Iil3e
+\unrestrict sJcTs1PbZwoPFvElOQWxvuxAtTBNe7aiIdtmMNt9I0AwTNrIDsGZsnTJKSTrkEn
 

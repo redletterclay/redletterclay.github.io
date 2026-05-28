@@ -151,9 +151,12 @@ export function EventCard({
 
         {/* Row 2: TITLE */}
         <h3 style={{ textAlign: 'center', fontWeight: 700, fontSize: '2rem', margin: 0, paddingTop: '2rem' }}>
-          {event.url ? (
-            <a href={event.url} target="_blank" rel="noopener noreferrer">{event.title}</a>
-          ) : event.title}
+          <button
+            onClick={() => setDrawerOpen(true)}
+            style={{ background: 'none', border: 'none', padding: 0, font: 'inherit', color: '#c12121', cursor: 'pointer', textAlign: 'center', textTransform: 'uppercase' }}
+          >
+            {event.title}
+          </button>
         </h3>
 
         {/* Row 3: ADDRESS */}
