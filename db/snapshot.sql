@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict gMJDmMwQswx6dQLwOAuOuStWafACp8imSTrq15jWBrlayfhdn1YgL9Fh9tK256U
+\restrict W2PdIYyRQsvi3aPJQehpBbIlyaSdiTjWR7ItQBpUjZNLcdxrqqldSHX8dIUuJGY
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -3923,7 +3923,7 @@ COPY public.header_rels (id, "order", parent_id, path, pages_id, posts_id) FROM 
 --
 
 COPY public.hero_images (id, updated_at, created_at, fallback_id) FROM stdin;
-1	2026-05-15 23:46:24.593+00	2026-05-14 20:11:04.502+00	559
+1	2026-05-28 03:57:41.977+00	2026-05-14 20:11:04.502+00	559
 \.
 
 
@@ -3933,9 +3933,15 @@ COPY public.hero_images (id, updated_at, created_at, fallback_id) FROM stdin;
 
 COPY public.hero_images_images (_order, _parent_id, id, image_id, alt) FROM stdin;
 1	1	6a0634aac6d4604d31b8b208	561	\N
-2	1	6a0634afc6d4604d31b8b20a	558	\N
+2	1	6a17bae63b5a3359c8785271	568	\N
 3	1	6a0634efc6d4604d31b8b20c	559	\N
-4	1	6a07af89dbf14b953ba3236a	565	\N
+4	1	6a17bafa3b5a3359c8785275	571	\N
+5	1	6a07af89dbf14b953ba3236a	565	\N
+6	1	6a17bad03b5a3359c878526b	573	\N
+7	1	6a0634afc6d4604d31b8b20a	558	\N
+8	1	6a17bad93b5a3359c878526d	567	\N
+9	1	6a17bae13b5a3359c878526f	572	\N
+10	1	6a17baf13b5a3359c8785273	570	\N
 \.
 
 
@@ -4508,6 +4514,13 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 564	Blue Teapot	\N	\N	2026-05-15 23:43:02.843+00	2026-05-15 23:42:59.225+00	/api/media/file/LgHero-teapot.jpg	\N	LgHero-teapot.jpg	image/jpeg	448325	2560	1600	50	50	/api/media/file/LgHero-teapot-300x188.jpg	300	188	image/jpeg	20543	LgHero-teapot-300x188.jpg	/api/media/file/LgHero-teapot-500x500.jpg	500	500	image/jpeg	70924	LgHero-teapot-500x500.jpg	/api/media/file/LgHero-teapot-600x375.jpg	600	375	image/jpeg	70219	LgHero-teapot-600x375.jpg	/api/media/file/LgHero-teapot-900x563.jpg	900	563	image/jpeg	141082	LgHero-teapot-900x563.jpg	/api/media/file/LgHero-teapot-1400x875.jpg	1400	875	image/jpeg	280189	LgHero-teapot-1400x875.jpg	/api/media/file/LgHero-teapot-1920x1200.jpg	1920	1200	image/jpeg	443292	LgHero-teapot-1920x1200.jpg	/api/media/file/LgHero-teapot-1200x630.jpg	1200	630	image/jpeg	182830	LgHero-teapot-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-teapot.jpg
 565	\N	\N	\N	2026-05-15 23:46:13.229+00	2026-05-15 23:46:10.708+00	/api/media/file/LgHero-teapot-2.jpg	\N	LgHero-teapot-2.jpg	image/jpeg	293012	2560	1600	50	50	/api/media/file/LgHero-teapot-2-300x188.jpg	300	188	image/jpeg	19200	LgHero-teapot-2-300x188.jpg	/api/media/file/LgHero-teapot-2-500x500.jpg	500	500	image/jpeg	55671	LgHero-teapot-2-500x500.jpg	/api/media/file/LgHero-teapot-2-600x375.jpg	600	375	image/jpeg	57281	LgHero-teapot-2-600x375.jpg	/api/media/file/LgHero-teapot-2-900x563.jpg	900	563	image/jpeg	106396	LgHero-teapot-2-900x563.jpg	/api/media/file/LgHero-teapot-2-1400x875.jpg	1400	875	image/jpeg	200441	LgHero-teapot-2-1400x875.jpg	/api/media/file/LgHero-teapot-2-1920x1200.jpg	1920	1200	image/jpeg	311856	LgHero-teapot-2-1920x1200.jpg	/api/media/file/LgHero-teapot-2-1200x630.jpg	1200	630	image/jpeg	134905	LgHero-teapot-2-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-teapot-2.jpg
 566	Thalia Hall Free for All	\N	\N	2026-05-26 17:12:44.798+00	2026-05-26 17:12:42.595+00	/api/media/file/thalia-hall-free-for-all-summer-2026.jpg	\N	thalia-hall-free-for-all-summer-2026.jpg	image/jpeg	680626	1100	1375	50	50	/api/media/file/thalia-hall-free-for-all-summer-2026-300x375.jpg	300	375	image/jpeg	25717	thalia-hall-free-for-all-summer-2026-300x375.jpg	/api/media/file/thalia-hall-free-for-all-summer-2026-500x500.jpg	500	500	image/jpeg	54230	thalia-hall-free-for-all-summer-2026-500x500.jpg	/api/media/file/thalia-hall-free-for-all-summer-2026-600x750.jpg	600	750	image/jpeg	84862	thalia-hall-free-for-all-summer-2026-600x750.jpg	/api/media/file/thalia-hall-free-for-all-summer-2026-900x1125.jpg	900	1125	image/jpeg	181895	thalia-hall-free-for-all-summer-2026-900x1125.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	/api/media/file/thalia-hall-free-for-all-summer-2026-1200x630.jpg	1200	630	image/jpeg	136127	thalia-hall-free-for-all-summer-2026-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/thalia-hall-free-for-all-summer-2026.jpg
+567	\N	\N	\N	2026-05-28 03:47:10.294+00	2026-05-28 03:47:08.191+00	/api/media/file/LgHero-black.jpg	\N	LgHero-black.jpg	image/jpeg	249880	2560	1600	50	50	/api/media/file/LgHero-black-300x188.jpg	300	188	image/jpeg	14410	LgHero-black-300x188.jpg	/api/media/file/LgHero-black-500x500.jpg	500	500	image/jpeg	45396	LgHero-black-500x500.jpg	/api/media/file/LgHero-black-600x375.jpg	600	375	image/jpeg	41842	LgHero-black-600x375.jpg	/api/media/file/LgHero-black-900x563.jpg	900	563	image/jpeg	79512	LgHero-black-900x563.jpg	/api/media/file/LgHero-black-1400x875.jpg	1400	875	image/jpeg	157808	LgHero-black-1400x875.jpg	/api/media/file/LgHero-black-1920x1200.jpg	1920	1200	image/jpeg	257352	LgHero-black-1920x1200.jpg	/api/media/file/LgHero-black-1200x630.jpg	1200	630	image/jpeg	114498	LgHero-black-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-black.jpg
+568	\N	\N	\N	2026-05-28 03:47:11.629+00	2026-05-28 03:47:09.359+00	/api/media/file/LgHero-chambray.jpg	\N	LgHero-chambray.jpg	image/jpeg	270733	2560	1600	50	50	/api/media/file/LgHero-chambray-300x188.jpg	300	188	image/jpeg	14462	LgHero-chambray-300x188.jpg	/api/media/file/LgHero-chambray-500x500.jpg	500	500	image/jpeg	48563	LgHero-chambray-500x500.jpg	/api/media/file/LgHero-chambray-600x375.jpg	600	375	image/jpeg	43407	LgHero-chambray-600x375.jpg	/api/media/file/LgHero-chambray-900x563.jpg	900	563	image/jpeg	84645	LgHero-chambray-900x563.jpg	/api/media/file/LgHero-chambray-1400x875.jpg	1400	875	image/jpeg	170412	LgHero-chambray-1400x875.jpg	/api/media/file/LgHero-chambray-1920x1200.jpg	1920	1200	image/jpeg	277472	LgHero-chambray-1920x1200.jpg	/api/media/file/LgHero-chambray-1200x630.jpg	1200	630	image/jpeg	124296	LgHero-chambray-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-chambray.jpg
+569	\N	\N	\N	2026-05-28 03:47:11.633+00	2026-05-28 03:47:10.301+00	/api/media/file/LgHero-cobalt-green-flux.jpg	\N	LgHero-cobalt-green-flux.jpg	image/jpeg	220930	2560	1600	50	50	/api/media/file/LgHero-cobalt-green-flux-300x188.jpg	300	188	image/jpeg	13373	LgHero-cobalt-green-flux-300x188.jpg	/api/media/file/LgHero-cobalt-green-flux-500x500.jpg	500	500	image/jpeg	46154	LgHero-cobalt-green-flux-500x500.jpg	/api/media/file/LgHero-cobalt-green-flux-600x375.jpg	600	375	image/jpeg	39784	LgHero-cobalt-green-flux-600x375.jpg	/api/media/file/LgHero-cobalt-green-flux-900x563.jpg	900	563	image/jpeg	75196	LgHero-cobalt-green-flux-900x563.jpg	/api/media/file/LgHero-cobalt-green-flux-1400x875.jpg	1400	875	image/jpeg	145969	LgHero-cobalt-green-flux-1400x875.jpg	/api/media/file/LgHero-cobalt-green-flux-1920x1200.jpg	1920	1200	image/jpeg	232751	LgHero-cobalt-green-flux-1920x1200.jpg	/api/media/file/LgHero-cobalt-green-flux-1200x630.jpg	1200	630	image/jpeg	106749	LgHero-cobalt-green-flux-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-cobalt-green-flux.jpg
+570	\N	\N	\N	2026-05-28 03:47:13.211+00	2026-05-28 03:47:11.249+00	/api/media/file/LgHero-green-shino.jpg	\N	LgHero-green-shino.jpg	image/jpeg	287240	2560	1600	50	50	/api/media/file/LgHero-green-shino-300x188.jpg	300	188	image/jpeg	15143	LgHero-green-shino-300x188.jpg	/api/media/file/LgHero-green-shino-500x500.jpg	500	500	image/jpeg	51058	LgHero-green-shino-500x500.jpg	/api/media/file/LgHero-green-shino-600x375.jpg	600	375	image/jpeg	45982	LgHero-green-shino-600x375.jpg	/api/media/file/LgHero-green-shino-900x563.jpg	900	563	image/jpeg	90322	LgHero-green-shino-900x563.jpg	/api/media/file/LgHero-green-shino-1400x875.jpg	1400	875	image/jpeg	180716	LgHero-green-shino-1400x875.jpg	/api/media/file/LgHero-green-shino-1920x1200.jpg	1920	1200	image/jpeg	291965	LgHero-green-shino-1920x1200.jpg	/api/media/file/LgHero-green-shino-1200x630.jpg	1200	630	image/jpeg	130691	LgHero-green-shino-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-green-shino.jpg
+571	\N	\N	\N	2026-05-28 03:47:14.672+00	2026-05-28 03:47:12+00	/api/media/file/LgHero-green-white.jpg	\N	LgHero-green-white.jpg	image/jpeg	392729	2560	1600	50	50	/api/media/file/LgHero-green-white-300x188.jpg	300	188	image/jpeg	16628	LgHero-green-white-300x188.jpg	/api/media/file/LgHero-green-white-500x500.jpg	500	500	image/jpeg	56688	LgHero-green-white-500x500.jpg	/api/media/file/LgHero-green-white-600x375.jpg	600	375	image/jpeg	53711	LgHero-green-white-600x375.jpg	/api/media/file/LgHero-green-white-900x563.jpg	900	563	image/jpeg	111041	LgHero-green-white-900x563.jpg	/api/media/file/LgHero-green-white-1400x875.jpg	1400	875	image/jpeg	233185	LgHero-green-white-1400x875.jpg	/api/media/file/LgHero-green-white-1920x1200.jpg	1920	1200	image/jpeg	380642	LgHero-green-white-1920x1200.jpg	/api/media/file/LgHero-green-white-1200x630.jpg	1200	630	image/jpeg	152771	LgHero-green-white-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-green-white.jpg
+572	\N	\N	\N	2026-05-28 03:47:16.224+00	2026-05-28 03:47:12.787+00	/api/media/file/LgHero-pink%2Bwhite.jpg	\N	LgHero-pink+white.jpg	image/jpeg	395868	2560	1600	50	50	/api/media/file/LgHero-pink%2Bwhite-300x188.jpg	300	188	image/jpeg	17278	LgHero-pink+white-300x188.jpg	/api/media/file/LgHero-pink%2Bwhite-500x500.jpg	500	500	image/jpeg	57778	LgHero-pink+white-500x500.jpg	/api/media/file/LgHero-pink%2Bwhite-600x375.jpg	600	375	image/jpeg	54070	LgHero-pink+white-600x375.jpg	/api/media/file/LgHero-pink%2Bwhite-900x563.jpg	900	563	image/jpeg	111384	LgHero-pink+white-900x563.jpg	/api/media/file/LgHero-pink%2Bwhite-1400x875.jpg	1400	875	image/jpeg	235227	LgHero-pink+white-1400x875.jpg	/api/media/file/LgHero-pink%2Bwhite-1920x1200.jpg	1920	1200	image/jpeg	385643	LgHero-pink+white-1920x1200.jpg	/api/media/file/LgHero-pink%2Bwhite-1200x630.jpg	1200	630	image/jpeg	154239	LgHero-pink+white-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-pink_white.jpg
+573	\N	\N	\N	2026-05-28 03:47:17.624+00	2026-05-28 03:47:13.599+00	/api/media/file/LgHero-rustic-blue.jpg	\N	LgHero-rustic-blue.jpg	image/jpeg	201004	2560	1600	50	50	/api/media/file/LgHero-rustic-blue-300x188.jpg	300	188	image/jpeg	13117	LgHero-rustic-blue-300x188.jpg	/api/media/file/LgHero-rustic-blue-500x500.jpg	500	500	image/jpeg	40562	LgHero-rustic-blue-500x500.jpg	/api/media/file/LgHero-rustic-blue-600x375.jpg	600	375	image/jpeg	37420	LgHero-rustic-blue-600x375.jpg	/api/media/file/LgHero-rustic-blue-900x563.jpg	900	563	image/jpeg	69799	LgHero-rustic-blue-900x563.jpg	/api/media/file/LgHero-rustic-blue-1400x875.jpg	1400	875	image/jpeg	134329	LgHero-rustic-blue-1400x875.jpg	/api/media/file/LgHero-rustic-blue-1920x1200.jpg	1920	1200	image/jpeg	214676	LgHero-rustic-blue-1920x1200.jpg	/api/media/file/LgHero-rustic-blue-1200x630.jpg	1200	630	image/jpeg	94795	LgHero-rustic-blue-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-rustic-blue.jpg
 \.
 
 
@@ -6142,7 +6155,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	907d6de7-7a14-4c99-ae72-db9bc2bbfc80	2026-05-26 15:54:44.68+00	2026-05-26 21:52:14.389+00
+1	1	34fa29c9-a8a2-49fc-8a6d-9a35602c9182	2026-05-28 03:45:54.933+00	2026-05-28 05:45:54.933+00
 \.
 
 
@@ -6346,7 +6359,7 @@ SELECT pg_catalog.setval('public.links_id_seq', 1, true);
 -- Name: media_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.media_id_seq', 566, true);
+SELECT pg_catalog.setval('public.media_id_seq', 573, true);
 
 
 --
@@ -6402,14 +6415,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 475, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 477, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 869, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 871, true);
 
 
 --
@@ -10417,5 +10430,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict gMJDmMwQswx6dQLwOAuOuStWafACp8imSTrq15jWBrlayfhdn1YgL9Fh9tK256U
+\unrestrict W2PdIYyRQsvi3aPJQehpBbIlyaSdiTjWR7ItQBpUjZNLcdxrqqldSHX8dIUuJGY
 

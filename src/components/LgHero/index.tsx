@@ -36,7 +36,7 @@ export function LgHero({ images }: Props) {
       {images.map((img, i) => (
         <img
           key={img.url}
-          src={img.url}
+          src={img.url.includes('imagekit.io') ? `${img.url}?tr=w-1920,f-webp` : img.url}
           alt={img.alt || ''}
           fetchPriority={i === 0 ? 'high' : 'low'}
           loading={i === 0 ? 'eager' : 'lazy'}
@@ -47,7 +47,7 @@ export function LgHero({ images }: Props) {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            objectPosition: 'center',
+            objectPosition: 'top center',
             opacity: i === index ? 1 : 0,
             transition: 'opacity 1.2s ease-in-out',
           }}

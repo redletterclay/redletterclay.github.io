@@ -24,18 +24,18 @@ export function HomeCarousel() {
   }, [])
 
   return (
-    <div style={{ position: 'relative', padding: '2.5rem 0' }}>
+    <div style={{ position: 'relative', width: '100%', aspectRatio: '1' }}>
       {SLIDES.map((slide, i) => (
         <img
           key={slide.src}
           src={slide.src}
           alt={slide.alt}
           style={{
+            position: 'absolute',
+            inset: 0,
             width: '100%',
-            display: 'block',
-            position: i === 0 ? 'relative' : 'absolute',
-            top: i === 0 ? undefined : 0,
-            left: 0,
+            height: '100%',
+            objectFit: 'contain',
             opacity: i === index ? 1 : 0,
             transition: 'opacity 0.8s ease-in-out',
           }}
