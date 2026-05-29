@@ -92,43 +92,49 @@ export function EventCard({
           </button>
         </div>
 
-        <div className="event-drawer-location-box">
-          <p className="event-drawer-date">
-            {day}, {month} {date}, {year}
-            {event.time && <><br />{event.time}</>}
-          </p>
-          {(event.location || event.address) && (
-            <p className="event-drawer-location">
-              {event.location}
-              {event.location && event.address && <br />}
-              {event.address}
+        <div style={{ flex: 1, paddingBottom: '2rem' }}>
+          <div className="event-drawer-location-box">
+            <p className="event-drawer-date">
+              {day}, {month} {date}, {year}
+              {event.time && <><br />{event.time}</>}
             </p>
+            {(event.location || event.address) && (
+              <p className="event-drawer-location">
+                {event.location}
+                {event.location && event.address && <br />}
+                {event.address}
+              </p>
+            )}
+            {event.mapUrl && (
+              <a
+                href={event.mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="event-drawer-map fc-1"
+              >
+                <i className="fa-solid fa-map" aria-hidden="true" /> View on map
+              </a>
+            )}
+          </div>
+
+          {event.image?.url && (
+            <img
+              src={event.image.url}
+              alt={event.image.alt || event.title}
+              className="event-drawer-image"
+            />
           )}
-          {event.mapUrl && (
-            <a
-              href={event.mapUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="event-drawer-map fc-1"
-            >
-              <i className="fa-solid fa-map" aria-hidden="true" /> View on map
-            </a>
+
+          {event.description && (
+            <div className="event-drawer-description">
+              <ConvertRichText data={event.description} />
+            </div>
           )}
         </div>
 
-        {event.image?.url && (
-          <img
-            src={event.image.url}
-            alt={event.image.alt || event.title}
-            className="event-drawer-image"
-          />
-        )}
-
-        {event.description && (
-          <div className="event-drawer-description">
-            <ConvertRichText data={event.description} />
-          </div>
-        )}
+        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center', background: '#FFEEEF', marginInline: '-1.75rem', height: '60px', overflow: 'hidden', flexShrink: 0 }}>
+          <div style={{ width: 120, height: 120, background: 'white', borderRadius: '50%', flexShrink: 0 }} />
+        </div>
       </div>
     </>
   )
