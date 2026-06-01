@@ -124,6 +124,7 @@ export interface Config {
     faq: Faq;
     'collection-title': CollectionTitle;
     'hero-images': HeroImage;
+    'events-carousel-images': EventsCarouselImage;
     'store-settings': StoreSetting;
   };
   globalsSelect: {
@@ -137,6 +138,7 @@ export interface Config {
     faq: FaqSelect<false> | FaqSelect<true>;
     'collection-title': CollectionTitleSelect<false> | CollectionTitleSelect<true>;
     'hero-images': HeroImagesSelect<false> | HeroImagesSelect<true>;
+    'events-carousel-images': EventsCarouselImagesSelect<false> | EventsCarouselImagesSelect<true>;
     'store-settings': StoreSettingsSelect<false> | StoreSettingsSelect<true>;
   };
   locale: null;
@@ -2144,6 +2146,27 @@ export interface HeroImage {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "events-carousel-images".
+ */
+export interface EventsCarouselImage {
+  id: number;
+  /**
+   * Image shown above the upcoming events list on the events page.
+   */
+  upcomingImage?: (number | null) | Media;
+  images?:
+    | {
+        image: number | Media;
+        alt?: string | null;
+        position?: ('center center' | 'top center') | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "store-settings".
  */
 export interface StoreSetting {
@@ -2353,6 +2376,24 @@ export interface CollectionTitleSelect<T extends boolean = true> {
  */
 export interface HeroImagesSelect<T extends boolean = true> {
   fallback?: T;
+  images?:
+    | T
+    | {
+        image?: T;
+        alt?: T;
+        position?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "events-carousel-images_select".
+ */
+export interface EventsCarouselImagesSelect<T extends boolean = true> {
+  upcomingImage?: T;
   images?:
     | T
     | {

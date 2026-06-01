@@ -17,15 +17,41 @@ export const revalidate = 3600
 export default async function EventsPage() {
   const payload = await getPayload({ config: configPromise })
 
-  const events = await payload.find({
-    collection: 'events',
-    limit: 1000,
-    overrideAccess: false,
-    pagination: false,
-    sort: '-startDate',
-  })
+  const [eventsRes, carouselRes] = await Promise.all([
+    payload.find({
+      collection: 'events',
+      limit: 1000,
+      overrideAccess: false,
+      pagination: false,
+      sort: '-startDate',
+    }),
+    payload.findGlobal({ slug: 'events-carousel-images', depth: 1 }).catch(() => null),
+  ])
 
-  preload('https://ik.imagekit.io/raygun/redletterclay/market-table.jpeg', { as: 'image' })
+  const events = eventsRes
+
+  const carouselSlides = ((carouselRes as any)?.images ?? [])
+    .map((row: any) =>
+      row.image && typeof row.image === 'object'
+        ? { src: row.image.url, alt: row.alt || row.image.alt || '', position: row.position ?? 'center center' }
+        : null,
+    )
+    .filter(Boolean)
+
+  const fallbackSlides = [
+    { src: 'https://ik.imagekit.io/raygun/redletterclay/market-table.jpeg', alt: 'Market table', position: 'center center' },
+    { src: 'https://ik.imagekit.io/raygun/redletterclay/table-leloft.jpeg', alt: 'Table at Le Loft', position: 'center center' },
+    { src: 'https://ik.imagekit.io/raygun/redletterclay/table-2026-holiday-gnar.jpeg', alt: 'Holiday market table', position: 'center center' },
+  ]
+
+  const slides = carouselSlides.length > 0 ? carouselSlides : fallbackSlides
+
+  const upcomingImageUrl =
+    (carouselRes as any)?.upcomingImage && typeof (carouselRes as any).upcomingImage === 'object'
+      ? (carouselRes as any).upcomingImage.url
+      : 'https://ik.imagekit.io/raygun/redletterclay/chicago-pottery-market.webp'
+
+  if (slides[0]) preload(slides[0].src, { as: 'image' })
 
   const now = new Date()
   now.setHours(0, 0, 0, 0)
@@ -103,7 +129,7 @@ export default async function EventsPage() {
                 </div>
                 {/* Carousel image */}
                 <div style={{ flex: '0 0 50%', width: '50%' }}>
-                  <EventsCarousel />
+                  <EventsCarousel slides={slides} />
                 </div>
               </div>
             </div>
@@ -152,7 +178,7 @@ export default async function EventsPage() {
             </ScrollReveal>
             <ScrollReveal delay={900}>
               <img
-                src="https://ik.imagekit.io/raygun/redletterclay/chicago-pottery-market.webp"
+                src={upcomingImageUrl}
                 alt="Chicago Pottery Market"
                 style={{ maxWidth: '450px', width: '100%', display: 'block', margin: '0 auto' }}
               />

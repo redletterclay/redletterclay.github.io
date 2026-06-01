@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict PGcOXfDYtYdujlohPL8CO1I0mMtXHrcqMYS52eX2J4Sx98bAdJnmMUl0tVHv4cs
+\restrict 7rvAlDT0YbmheSYvFaIlNafTx2gU93eU6UwHv4YYLAv05rfedhjgdg0YdxdO14R
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -151,6 +151,16 @@ CREATE TYPE public.enum__posts_v_version_category AS ENUM (
 CREATE TYPE public.enum__posts_v_version_status AS ENUM (
     'draft',
     'published'
+);
+
+
+--
+-- Name: enum_events_carousel_images_images_position; Type: TYPE; Schema: public; Owner: -
+--
+
+CREATE TYPE public.enum_events_carousel_images_images_position AS ENUM (
+    'center center',
+    'top center'
 );
 
 
@@ -1080,6 +1090,52 @@ CREATE TABLE public.events (
     updated_at timestamp(3) with time zone DEFAULT now() NOT NULL,
     created_at timestamp(3) with time zone DEFAULT now() NOT NULL,
     image_id integer
+);
+
+
+--
+-- Name: events_carousel_images; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.events_carousel_images (
+    id integer NOT NULL,
+    updated_at timestamp(3) with time zone,
+    created_at timestamp(3) with time zone,
+    upcoming_image_id integer
+);
+
+
+--
+-- Name: events_carousel_images_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.events_carousel_images_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: events_carousel_images_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.events_carousel_images_id_seq OWNED BY public.events_carousel_images.id;
+
+
+--
+-- Name: events_carousel_images_images; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.events_carousel_images_images (
+    _order integer NOT NULL,
+    _parent_id integer NOT NULL,
+    id character varying NOT NULL,
+    image_id integer NOT NULL,
+    alt character varying,
+    "position" public.enum_events_carousel_images_images_position DEFAULT 'center center'::public.enum_events_carousel_images_images_position
 );
 
 
@@ -3106,6 +3162,13 @@ ALTER TABLE ONLY public.events ALTER COLUMN id SET DEFAULT nextval('public.event
 
 
 --
+-- Name: events_carousel_images id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.events_carousel_images ALTER COLUMN id SET DEFAULT nextval('public.events_carousel_images_id_seq'::regclass);
+
+
+--
 -- Name: faq id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -3615,7 +3678,7 @@ COPY public._posts_v_version_gallery_items (_order, _parent_id, id, image_id, al
 --
 
 COPY public.announcement (id, name, live, url, thumb_id, cta, updated_at, created_at, info) FROM stdin;
-1	Shop in Person at My Next Market	t	/shop/	552	\N	2026-05-14 21:29:19.974+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Join me and over 50 ceramicists ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "May 30 + 31", "type": "text", "style": "", "detail": 0, "format": 1, "version": 1}, {"mode": "normal", "text": " at The Chicago Pottery Market, sponsored by ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a03394c0e5ae159276faa1a", "type": "link", "fields": {"url": "https://www.wilderhouse.com/", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Wilderhouse", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": ".", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Entry is free, and if you’re visiting on Sunday, the Wicker Park Farmers Market is just a block away. I’ll have plenty of new work with me—hope to see you there.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "See the ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a03509b0e5ae159276faa24", "type": "link", "fields": {"url": "/events", "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Calendar", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " for more details.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}
+1	Shop in Person at My Next Market	f	/shop/	552	\N	2026-06-01 20:22:18.925+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Join me and over 50 ceramicists ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "May 30 + 31", "type": "text", "style": "", "detail": 0, "format": 1, "version": 1}, {"mode": "normal", "text": " at The Chicago Pottery Market, sponsored by ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a03394c0e5ae159276faa1a", "type": "link", "fields": {"url": "https://www.wilderhouse.com/", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Wilderhouse", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": ".", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Entry is free, and if you’re visiting on Sunday, the Wicker Park Farmers Market is just a block away. I’ll have plenty of new work with me—hope to see you there.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "See the ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a03509b0e5ae159276faa24", "type": "link", "fields": {"url": "/events", "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Calendar", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " for more details.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}
 \.
 
 
@@ -3666,6 +3729,28 @@ COPY public.events (id, title, start_date, "time", location, address, map_url, u
 2	The Chicago Pottery Market	2026-05-30 00:00:00+00	10AM-5PM	Wilderhouse	1339 N Damen Ave\n\nChicago, IL 60607	https://maps.app.goo.gl/ZNpf2Dm1cszeLA3cA	https://www.instagram.com/p/DW9APngDmX0/	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"id": "6a15d2a321e1eb5d46976fd4", "type": "link", "fields": {"url": "https://www.wilderhouse.com/", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Wilderhouse", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " is excited to bring back The Chicago Pottery Market for its second year! The 2026 Spring market will take place May 30th & 31st and will feature 50+ local Chicago ceramic artists! Join us for a beautiful weekend of all things pottery.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "The market will go from 10am until 5 both days!", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "The Wicker Park Farmers Market will be happening nearby on Sunday, May 30th from 8am to 2pm.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	2026-05-28 15:40:52.007+00	2026-03-17 18:19:21.348+00	552
 1	The Chicago Pottery Market	2026-05-31 00:00:00+00	10AM-5PM	Wilderhouse	1339 N Damen Ave\n\nChicago, IL 60607	https://maps.app.goo.gl/ZNpf2Dm1cszeLA3cA	https://www.instagram.com/p/DW9APngDmX0/	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"id": "6a15d46021e1eb5d46976fd5", "type": "link", "fields": {"url": "https://www.wilderhouse.com/", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Wilderhouse", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " is excited to bring back The Chicago Pottery Market for its second year! The 2026 Spring market will take place May 30th & 31st and will feature 50+ local Chicago ceramic artists! Join us for a beautiful weekend of all things pottery.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "The market will go from 10am until 5 both days!", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "The Wicker Park Farmers Market will be happening nearby on Sunday, May 30th from 8am to 2pm.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	2026-05-28 15:41:03.738+00	2026-03-17 18:19:21.342+00	552
 17	Thalia Hall Free for All	2026-08-29 12:00:00+00	2:30PM	Thalia Hall	1807 S Allport St, Chicago, IL 60608	https://maps.app.goo.gl/AjrLwSwa5ji8AxXx8	https://www.ticketweb.com/event/thalia-hall-free-for-all-thalia-hall-tickets/14931693	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "The Thalia Hall Free For All presented by ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a15dfe85ffffd7ad6127dd6", "type": "link", "fields": {"url": "https://thaliahallchicago.com/", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Thalia Hall", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " and ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a15dff75ffffd7ad6127dd7", "type": "link", "fields": {"url": "https://wbez.org/", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "WBEZ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Thalia Hall is gearing up once again for a fully loaded summer edition of the Thalia Hall Free For All, a free-admission building crawl featuring programming across our main stage and Punch House, plus an expanded outdoor hangout on Allport Street and special street stage!", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Wander the building inside and out as you catch live music everywhere you turn, explore our curated vendor market, treat yourself to delicious food, and dive into a variety of games and activities that’ll keep the good times rolling.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "This event is entirely free, but on-site donations benefiting the Pilsen Food Pantry are greatly encouraged.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"id": "6a15d1f421e1eb5d46976fd1", "type": "link", "fields": {"url": "https://www.ticketweb.com/event/thalia-hall-free-for-all-thalia-hall-tickets/14931693", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "RSVP", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " does not guarantee entry and is subject to capacity.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	2026-05-26 18:01:32.857+00	2026-05-26 16:20:51.617+00	566
+\.
+
+
+--
+-- Data for Name: events_carousel_images; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.events_carousel_images (id, updated_at, created_at, upcoming_image_id) FROM stdin;
+1	2026-06-01 22:18:50.846+00	2026-06-01 22:14:31.028+00	566
+\.
+
+
+--
+-- Data for Name: events_carousel_images_images; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.events_carousel_images_images (_order, _parent_id, id, image_id, alt, "position") FROM stdin;
+1	1	6a1e040d7c1749393658873b	574	\N	top center
+2	1	6a1e041b7c1749393658873d	575	\N	top center
+3	1	6a1e04297c1749393658873f	578	\N	center center
+4	1	6a1e04347c17493936588741	576	\N	center center
+5	1	6a1e04417c17493936588743	577	\N	center center
 \.
 
 
@@ -4540,6 +4625,11 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 571	\N	\N	\N	2026-05-28 03:47:14.672+00	2026-05-28 03:47:12+00	/api/media/file/LgHero-green-white.jpg	\N	LgHero-green-white.jpg	image/jpeg	392729	2560	1600	50	50	/api/media/file/LgHero-green-white-300x188.jpg	300	188	image/jpeg	16628	LgHero-green-white-300x188.jpg	/api/media/file/LgHero-green-white-500x500.jpg	500	500	image/jpeg	56688	LgHero-green-white-500x500.jpg	/api/media/file/LgHero-green-white-600x375.jpg	600	375	image/jpeg	53711	LgHero-green-white-600x375.jpg	/api/media/file/LgHero-green-white-900x563.jpg	900	563	image/jpeg	111041	LgHero-green-white-900x563.jpg	/api/media/file/LgHero-green-white-1400x875.jpg	1400	875	image/jpeg	233185	LgHero-green-white-1400x875.jpg	/api/media/file/LgHero-green-white-1920x1200.jpg	1920	1200	image/jpeg	380642	LgHero-green-white-1920x1200.jpg	/api/media/file/LgHero-green-white-1200x630.jpg	1200	630	image/jpeg	152771	LgHero-green-white-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-green-white.jpg
 572	\N	\N	\N	2026-05-28 03:47:16.224+00	2026-05-28 03:47:12.787+00	/api/media/file/LgHero-pink%2Bwhite.jpg	\N	LgHero-pink+white.jpg	image/jpeg	395868	2560	1600	50	50	/api/media/file/LgHero-pink%2Bwhite-300x188.jpg	300	188	image/jpeg	17278	LgHero-pink+white-300x188.jpg	/api/media/file/LgHero-pink%2Bwhite-500x500.jpg	500	500	image/jpeg	57778	LgHero-pink+white-500x500.jpg	/api/media/file/LgHero-pink%2Bwhite-600x375.jpg	600	375	image/jpeg	54070	LgHero-pink+white-600x375.jpg	/api/media/file/LgHero-pink%2Bwhite-900x563.jpg	900	563	image/jpeg	111384	LgHero-pink+white-900x563.jpg	/api/media/file/LgHero-pink%2Bwhite-1400x875.jpg	1400	875	image/jpeg	235227	LgHero-pink+white-1400x875.jpg	/api/media/file/LgHero-pink%2Bwhite-1920x1200.jpg	1920	1200	image/jpeg	385643	LgHero-pink+white-1920x1200.jpg	/api/media/file/LgHero-pink%2Bwhite-1200x630.jpg	1200	630	image/jpeg	154239	LgHero-pink+white-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-pink_white.jpg
 573	\N	\N	\N	2026-05-28 03:47:17.624+00	2026-05-28 03:47:13.599+00	/api/media/file/LgHero-rustic-blue.jpg	\N	LgHero-rustic-blue.jpg	image/jpeg	201004	2560	1600	50	50	/api/media/file/LgHero-rustic-blue-300x188.jpg	300	188	image/jpeg	13117	LgHero-rustic-blue-300x188.jpg	/api/media/file/LgHero-rustic-blue-500x500.jpg	500	500	image/jpeg	40562	LgHero-rustic-blue-500x500.jpg	/api/media/file/LgHero-rustic-blue-600x375.jpg	600	375	image/jpeg	37420	LgHero-rustic-blue-600x375.jpg	/api/media/file/LgHero-rustic-blue-900x563.jpg	900	563	image/jpeg	69799	LgHero-rustic-blue-900x563.jpg	/api/media/file/LgHero-rustic-blue-1400x875.jpg	1400	875	image/jpeg	134329	LgHero-rustic-blue-1400x875.jpg	/api/media/file/LgHero-rustic-blue-1920x1200.jpg	1920	1200	image/jpeg	214676	LgHero-rustic-blue-1920x1200.jpg	/api/media/file/LgHero-rustic-blue-1200x630.jpg	1200	630	image/jpeg	94795	LgHero-rustic-blue-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-rustic-blue.jpg
+574	\N	\N	\N	2026-06-01 20:33:39.919+00	2026-06-01 20:33:36.506+00	/api/media/file/VrtHero-wilderhouse-mugs.jpg	\N	VrtHero-wilderhouse-mugs.jpg	image/jpeg	692359	1500	2000	50	50	/api/media/file/VrtHero-wilderhouse-mugs-300x400.jpg	300	400	image/jpeg	39654	VrtHero-wilderhouse-mugs-300x400.jpg	/api/media/file/VrtHero-wilderhouse-mugs-500x500.jpg	500	500	image/jpeg	85164	VrtHero-wilderhouse-mugs-500x500.jpg	/api/media/file/VrtHero-wilderhouse-mugs-600x800.jpg	600	800	image/jpeg	168041	VrtHero-wilderhouse-mugs-600x800.jpg	/api/media/file/VrtHero-wilderhouse-mugs-900x1200.jpg	900	1200	image/jpeg	379049	VrtHero-wilderhouse-mugs-900x1200.jpg	/api/media/file/VrtHero-wilderhouse-mugs-1400x1867.jpg	1400	1867	image/jpeg	819295	VrtHero-wilderhouse-mugs-1400x1867.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/VrtHero-wilderhouse-mugs-1200x630.jpg	1200	630	image/jpeg	236938	VrtHero-wilderhouse-mugs-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/VrtHero-wilderhouse-mugs.jpg
+575	\N	\N	\N	2026-06-01 20:33:41.445+00	2026-06-01 20:33:38.792+00	/api/media/file/VrtHero-wilderhouse-pots.jpg	\N	VrtHero-wilderhouse-pots.jpg	image/jpeg	471041	1500	2000	50	50	/api/media/file/VrtHero-wilderhouse-pots-300x400.jpg	300	400	image/jpeg	32556	VrtHero-wilderhouse-pots-300x400.jpg	/api/media/file/VrtHero-wilderhouse-pots-500x500.jpg	500	500	image/jpeg	63119	VrtHero-wilderhouse-pots-500x500.jpg	/api/media/file/VrtHero-wilderhouse-pots-600x800.jpg	600	800	image/jpeg	124054	VrtHero-wilderhouse-pots-600x800.jpg	/api/media/file/VrtHero-wilderhouse-pots-900x1200.jpg	900	1200	image/jpeg	267714	VrtHero-wilderhouse-pots-900x1200.jpg	/api/media/file/VrtHero-wilderhouse-pots-1400x1867.jpg	1400	1867	image/jpeg	569625	VrtHero-wilderhouse-pots-1400x1867.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/VrtHero-wilderhouse-pots-1200x630.jpg	1200	630	image/jpeg	151657	VrtHero-wilderhouse-pots-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/VrtHero-wilderhouse-pots.jpg
+577	\N	\N	\N	2026-06-01 22:13:30.431+00	2026-06-01 22:13:27.538+00	/api/media/file/VrtHero-table-holiday-market.jpg	\N	VrtHero-table-holiday-market.jpg	image/jpeg	287585	1500	2000	50	50	/api/media/file/VrtHero-table-holiday-market-300x400.jpg	300	400	image/jpeg	31860	VrtHero-table-holiday-market-300x400.jpg	/api/media/file/VrtHero-table-holiday-market-500x500.jpg	500	500	image/jpeg	57026	VrtHero-table-holiday-market-500x500.jpg	/api/media/file/VrtHero-table-holiday-market-600x800.jpg	600	800	image/jpeg	97292	VrtHero-table-holiday-market-600x800.jpg	/api/media/file/VrtHero-table-holiday-market-900x1200.jpg	900	1200	image/jpeg	182285	VrtHero-table-holiday-market-900x1200.jpg	/api/media/file/VrtHero-table-holiday-market-1400x1867.jpg	1400	1867	image/jpeg	349635	VrtHero-table-holiday-market-1400x1867.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/VrtHero-table-holiday-market-1200x630.jpg	1200	630	image/jpeg	124614	VrtHero-table-holiday-market-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/VrtHero-table-holiday-market.jpg
+578	\N	\N	\N	2026-06-01 22:13:31.596+00	2026-06-01 22:13:27.766+00	/api/media/file/VrtHero-market-table-holiday-gnar.jpg	\N	VrtHero-market-table-holiday-gnar.jpg	image/jpeg	225014	1500	2000	50	50	/api/media/file/VrtHero-market-table-holiday-gnar-300x400.jpg	300	400	image/jpeg	24663	VrtHero-market-table-holiday-gnar-300x400.jpg	/api/media/file/VrtHero-market-table-holiday-gnar-500x500.jpg	500	500	image/jpeg	50703	VrtHero-market-table-holiday-gnar-500x500.jpg	/api/media/file/VrtHero-market-table-holiday-gnar-600x800.jpg	600	800	image/jpeg	76023	VrtHero-market-table-holiday-gnar-600x800.jpg	/api/media/file/VrtHero-market-table-holiday-gnar-900x1200.jpg	900	1200	image/jpeg	142008	VrtHero-market-table-holiday-gnar-900x1200.jpg	/api/media/file/VrtHero-market-table-holiday-gnar-1400x1867.jpg	1400	1867	image/jpeg	270116	VrtHero-market-table-holiday-gnar-1400x1867.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/VrtHero-market-table-holiday-gnar-1200x630.jpg	1200	630	image/jpeg	134839	VrtHero-market-table-holiday-gnar-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/VrtHero-market-table-holiday-gnar.jpg
+576	\N	\N	\N	2026-06-01 22:13:29.006+00	2026-06-01 22:13:27.28+00	/api/media/file/VrtHero-table-leloft.jpg	\N	VrtHero-table-leloft.jpg	image/jpeg	218883	1500	2000	50	50	/api/media/file/VrtHero-table-leloft-300x400.jpg	300	400	image/jpeg	22235	VrtHero-table-leloft-300x400.jpg	/api/media/file/VrtHero-table-leloft-500x500.jpg	500	500	image/jpeg	43084	VrtHero-table-leloft-500x500.jpg	/api/media/file/VrtHero-table-leloft-600x800.jpg	600	800	image/jpeg	71588	VrtHero-table-leloft-600x800.jpg	/api/media/file/VrtHero-table-leloft-900x1200.jpg	900	1200	image/jpeg	137235	VrtHero-table-leloft-900x1200.jpg	/api/media/file/VrtHero-table-leloft-1400x1867.jpg	1400	1867	image/jpeg	266453	VrtHero-table-leloft-1400x1867.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/VrtHero-table-leloft-1200x630.jpg	1200	630	image/jpeg	97341	VrtHero-table-leloft-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/VrtHero-table-leloft.jpg
 \.
 
 
@@ -4720,7 +4810,9 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 11	20260513_products_thumb_array	7	2026-05-14 00:04:04.985+00	2026-05-14 00:04:04.984+00
 12	20260526_163601	8	2026-05-26 16:42:42.781+00	2026-05-26 16:42:42.781+00
 13	20260526_170229	9	2026-05-26 17:02:48.565+00	2026-05-26 17:02:48.565+00
-1	dev	-1	2026-05-29 21:48:07.941+00	2026-03-16 16:07:06.694+00
+14	20260601_220009	10	2026-06-01 22:04:41.959+00	2026-06-01 22:04:41.959+00
+15	20260601_221724	11	2026-06-01 22:18:16.436+00	2026-06-01 22:18:16.435+00
+1	dev	-1	2026-06-01 22:21:17.317+00	2026-03-16 16:07:06.694+00
 \.
 
 
@@ -4784,6 +4876,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 90	collection-products-14	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-11 13:08:48.35+00	2026-05-11 13:08:48.351+00
 24	collection-products-47	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-11 13:09:50.43+00	2026-03-18 21:39:51.456+00
 93	collection-products-28	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-11 13:22:27.307+00	2026-05-11 13:22:27.308+00
+108	global-events-carousel-images	{"editViewType": "default"}	2026-06-01 22:13:32.163+00	2026-06-01 22:13:32.165+00
 96	collection-products-2	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-11 13:58:06.477+00	2026-05-11 13:58:04.018+00
 21	collection-products-48	{"fields": {"_index-1": {"tabIndex": 1}, "_index-1-0-1": {"tabIndex": 0}}}	2026-05-11 14:13:54.079+00	2026-03-18 18:37:16.858+00
 54	collection-products-71	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-21 03:14:09.581+00	2026-03-21 02:42:14.187+00
@@ -4922,6 +5015,7 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 236	\N	67	user	1
 401	\N	40	user	1
 402	\N	41	user	1
+403	\N	108	user	1
 308	\N	58	user	1
 244	\N	62	user	1
 310	\N	79	user	1
@@ -6159,7 +6253,7 @@ COPY public.stockists_stockists (_order, _parent_id, id, name, info, address, ma
 --
 
 COPY public.store_settings (id, store_open, updated_at, created_at, closed_message) FROM stdin;
-1	f	2026-05-29 21:47:36.489+00	2026-05-21 15:45:30.29+00	The online store is closed for an in-person market (The Chicago Pottery Market).\n\nIt will re-open Monday, May 25th.
+1	t	2026-06-01 20:23:34.515+00	2026-05-21 15:45:30.29+00	The online store is closed for an in-person market (The Chicago Pottery Market).\n\nIt will re-open Monday, May 25th.
 \.
 
 
@@ -6177,7 +6271,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	232f4e0b-662c-4f50-8520-8182fbed1727	2026-05-29 21:47:24.002+00	2026-05-29 23:47:24.002+00
+1	1	17b9b912-a28b-4174-b947-5d080e16ee81	2026-06-01 20:21:51.46+00	2026-06-01 22:21:51.46+00
 \.
 
 
@@ -6301,6 +6395,13 @@ SELECT pg_catalog.setval('public.collection_title_id_seq', 1, true);
 
 
 --
+-- Name: events_carousel_images_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.events_carousel_images_id_seq', 1, true);
+
+
+--
 -- Name: events_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -6381,7 +6482,7 @@ SELECT pg_catalog.setval('public.links_id_seq', 1, true);
 -- Name: media_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.media_id_seq', 573, true);
+SELECT pg_catalog.setval('public.media_id_seq', 578, true);
 
 
 --
@@ -6437,35 +6538,35 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 491, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 496, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 889, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 894, true);
 
 
 --
 -- Name: payload_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_migrations_id_seq', 13, true);
+SELECT pg_catalog.setval('public.payload_migrations_id_seq', 15, true);
 
 
 --
 -- Name: payload_preferences_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_id_seq', 107, true);
+SELECT pg_catalog.setval('public.payload_preferences_id_seq', 108, true);
 
 
 --
 -- Name: payload_preferences_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 402, true);
+SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 403, true);
 
 
 --
@@ -6701,6 +6802,22 @@ ALTER TABLE ONLY public.categories
 
 ALTER TABLE ONLY public.collection_title
     ADD CONSTRAINT collection_title_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: events_carousel_images_images events_carousel_images_images_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.events_carousel_images_images
+    ADD CONSTRAINT events_carousel_images_images_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: events_carousel_images events_carousel_images_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.events_carousel_images
+    ADD CONSTRAINT events_carousel_images_pkey PRIMARY KEY (id);
 
 
 --
@@ -7798,6 +7915,34 @@ CREATE UNIQUE INDEX categories_slug_idx ON public.categories USING btree (slug);
 --
 
 CREATE INDEX categories_updated_at_idx ON public.categories USING btree (updated_at);
+
+
+--
+-- Name: events_carousel_images_images_image_idx; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX events_carousel_images_images_image_idx ON public.events_carousel_images_images USING btree (image_id);
+
+
+--
+-- Name: events_carousel_images_images_order_idx; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX events_carousel_images_images_order_idx ON public.events_carousel_images_images USING btree (_order);
+
+
+--
+-- Name: events_carousel_images_images_parent_id_idx; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX events_carousel_images_images_parent_id_idx ON public.events_carousel_images_images USING btree (_parent_id);
+
+
+--
+-- Name: events_carousel_images_upcoming_image_idx; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX events_carousel_images_upcoming_image_idx ON public.events_carousel_images USING btree (upcoming_image_id);
 
 
 --
@@ -9665,6 +9810,30 @@ ALTER TABLE ONLY public.categories
 
 
 --
+-- Name: events_carousel_images_images events_carousel_images_images_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.events_carousel_images_images
+    ADD CONSTRAINT events_carousel_images_images_image_id_media_id_fk FOREIGN KEY (image_id) REFERENCES public.media(id) ON DELETE SET NULL;
+
+
+--
+-- Name: events_carousel_images_images events_carousel_images_images_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.events_carousel_images_images
+    ADD CONSTRAINT events_carousel_images_images_parent_id_fk FOREIGN KEY (_parent_id) REFERENCES public.events_carousel_images(id) ON DELETE CASCADE;
+
+
+--
+-- Name: events_carousel_images events_carousel_images_upcoming_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.events_carousel_images
+    ADD CONSTRAINT events_carousel_images_upcoming_image_id_media_id_fk FOREIGN KEY (upcoming_image_id) REFERENCES public.media(id) ON DELETE SET NULL;
+
+
+--
 -- Name: events events_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -10452,5 +10621,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict PGcOXfDYtYdujlohPL8CO1I0mMtXHrcqMYS52eX2J4Sx98bAdJnmMUl0tVHv4cs
+\unrestrict 7rvAlDT0YbmheSYvFaIlNafTx2gU93eU6UwHv4YYLAv05rfedhjgdg0YdxdO14R
 
