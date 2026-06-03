@@ -86,7 +86,7 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
 
             {/* Images — left col (grows to fill, capped at 900px) */}
             <div style={{ flex: '3 1 480px', minWidth: 0, maxWidth: '900px' }}>
-              <ProductImages images={productImages} title={product.name || product.title} sku={product.sku} />
+              <ProductImages images={productImages} title={product.name || product.title} sku={product.sku} soldOut={product.active === false} />
             </div>
 
             {/* Info — right col (fixed width, doesn't grow beyond 500px) */}
@@ -239,7 +239,7 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
                     Store Temporarily Closed
                   </button>
                 )}
-                {storeOpen && (
+                {storeOpen && product.active !== false && (
                   <ProductAddToCart
                     sku={product.sku}
                     price={product.price}

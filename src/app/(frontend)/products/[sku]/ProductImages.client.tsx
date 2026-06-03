@@ -9,9 +9,10 @@ type Props = {
   images: (MediaDoc | null)[]
   title: string
   sku: string
+  soldOut?: boolean
 }
 
-export function ProductImages({ images, title, sku }: Props) {
+export function ProductImages({ images, title, sku, soldOut = false }: Props) {
   const [current, setCurrent] = useState(0)
 
   const img0 = images[0] ?? null
@@ -51,6 +52,7 @@ export function ProductImages({ images, title, sku }: Props) {
       <div
         className="product-thumb product-thumb-desktop"
         data-product-id={sku}
+        {...(soldOut ? { 'data-stock': '0' } : {})}
         style={{ position: 'relative' }}
       >
         {/* Main image — sold sticker centered over this image only */}
@@ -122,6 +124,7 @@ export function ProductImages({ images, title, sku }: Props) {
         <div
           className="product-thumb product-thumb-mobile"
           data-product-id={sku}
+          {...(soldOut ? { 'data-stock': '0' } : {})}
           style={{ position: 'relative' }}
         >
           {sold}
