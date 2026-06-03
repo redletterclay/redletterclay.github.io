@@ -11,6 +11,10 @@ NEXT_API_DIR="$FRONTEND_DIR/next"
 NEXT_API_TMP="$FRONTEND_DIR/_next-api-disabled"
 SEARCH_DIR="$FRONTEND_DIR/search"
 SEARCH_TMP="$FRONTEND_DIR/_search-disabled"
+SHOP_PAGINATED_DIR="$FRONTEND_DIR/shop/p"
+SHOP_PAGINATED_TMP="$FRONTEND_DIR/shop/_p-disabled"
+SHOP_CAT_PAGINATED_DIR="$FRONTEND_DIR/shop/[category]/p"
+SHOP_CAT_PAGINATED_TMP="$FRONTEND_DIR/shop/[category]/_p-disabled"
 NOT_FOUND="$FRONTEND_DIR/not-found.tsx"
 NOT_FOUND_TMP="$FRONTEND_DIR/_not-found.tsx.bak"
 BUILD_INDEX="node_modules/next/dist/build/index.js"
@@ -19,11 +23,13 @@ PATCH_SCRIPT="/tmp/next-static-patch.js"
 
 # Register restore trap FIRST so it runs on any exit
 restore() {
-  [ -d "$PAYLOAD_TMP" ]    && mv "$PAYLOAD_TMP" "$PAYLOAD_DIR"
-  [ -d "$SLUG_TMP" ]       && mv "$SLUG_TMP" "$SLUG_DIR"
-  [ -d "$NEXT_API_TMP" ]   && mv "$NEXT_API_TMP" "$NEXT_API_DIR"
-  [ -d "$SEARCH_TMP" ]     && mv "$SEARCH_TMP" "$SEARCH_DIR"
-  [ -f "$NOT_FOUND_TMP" ]  && mv "$NOT_FOUND_TMP" "$NOT_FOUND"
+  [ -d "$PAYLOAD_TMP" ]             && mv "$PAYLOAD_TMP" "$PAYLOAD_DIR"
+  [ -d "$SLUG_TMP" ]                && mv "$SLUG_TMP" "$SLUG_DIR"
+  [ -d "$NEXT_API_TMP" ]            && mv "$NEXT_API_TMP" "$NEXT_API_DIR"
+  [ -d "$SEARCH_TMP" ]              && mv "$SEARCH_TMP" "$SEARCH_DIR"
+  [ -d "$SHOP_PAGINATED_TMP" ]      && mv "$SHOP_PAGINATED_TMP" "$SHOP_PAGINATED_DIR"
+  [ -d "$SHOP_CAT_PAGINATED_TMP" ]  && mv "$SHOP_CAT_PAGINATED_TMP" "$SHOP_CAT_PAGINATED_DIR"
+  [ -f "$NOT_FOUND_TMP" ]           && mv "$NOT_FOUND_TMP" "$NOT_FOUND"
   [ -f "$BUILD_INDEX_BAK" ] && mv "$BUILD_INDEX_BAK" "$BUILD_INDEX"
   rm -f "$PATCH_SCRIPT"
   echo "→ Restored."
@@ -39,6 +45,30 @@ mv "$SLUG_DIR" "$SLUG_TMP"
 [ -d "$NEXT_API_DIR" ] && mv "$NEXT_API_DIR" "$NEXT_API_TMP"
 [ -d "$SEARCH_DIR" ]    && mv "$SEARCH_DIR" "$SEARCH_TMP"
 [ -f "$NOT_FOUND" ] && mv "$NOT_FOUND" "$NOT_FOUND_TMP"
+
+# Next.js 15.4 treats generateStaticParams returning [] as "missing" in output:export mode.
+# Query postgres to check whether paginated routes will produce any pages (need >20 products).
+# If the query fails (docker down, etc.) we hide both routes as a safe fallback.
+echo "→ Checking product counts for paginated shop routes..."
+TOTAL_ACTIVE=$(docker compose exec -T db psql -U payload -d payload -t \
+  -c "SELECT COUNT(*) FROM products WHERE active = true;" 2>/dev/null | tr -d ' \n')
+MAX_PER_CAT=$(docker compose exec -T db psql -U payload -d payload -t \
+  -c "SELECT COALESCE(MAX(n),0) FROM (SELECT COUNT(*) AS n FROM products p JOIN products_tags t ON t.parent_id = p.id WHERE p.active = true GROUP BY t.value) s;" \
+  2>/dev/null | tr -d ' \n')
+
+if [[ ! "$TOTAL_ACTIVE" =~ ^[0-9]+$ ]] || [ "$TOTAL_ACTIVE" -le 20 ]; then
+  echo "  /shop/p — hiding (${TOTAL_ACTIVE:-unknown} total active products, need >20)"
+  [ -d "$SHOP_PAGINATED_DIR" ] && mv "$SHOP_PAGINATED_DIR" "$SHOP_PAGINATED_TMP"
+else
+  echo "  /shop/p — keeping ($TOTAL_ACTIVE total active products)"
+fi
+
+if [[ ! "$MAX_PER_CAT" =~ ^[0-9]+$ ]] || [ "$MAX_PER_CAT" -le 20 ]; then
+  echo "  /shop/[category]/p — hiding (max ${MAX_PER_CAT:-unknown} per category, need >20)"
+  [ -d "$SHOP_CAT_PAGINATED_DIR" ] && mv "$SHOP_CAT_PAGINATED_DIR" "$SHOP_CAT_PAGINATED_TMP"
+else
+  echo "  /shop/[category]/p — keeping (max $MAX_PER_CAT products in a category)"
+fi
 
 echo "→ Patching Next.js to skip error-page generation (not needed for GitHub Pages)..."
 cp "$BUILD_INDEX" "$BUILD_INDEX_BAK"
@@ -104,3 +134,6 @@ cp out/index.html out/404.html 2>/dev/null || true
 touch out/.nojekyll
 
 echo "→ Done. Output in out/"
+
+echo "→ Restarting dev server (build wiped .next)..."
+docker compose restart app
