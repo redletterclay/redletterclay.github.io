@@ -25,6 +25,7 @@ export async function GET() {
     depth: 1,
     overrideAccess: false,
     pagination: false,
+    where: { active: { equals: true } },
   })
 
   const items = result.docs.map((product: any) => {

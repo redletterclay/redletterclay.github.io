@@ -40,7 +40,7 @@ export default async function ShopCategoryPage({ params: paramsPromise }: Args) 
       page: 1,
       overrideAccess: false,
       sort: '_order',
-      where: { tags: { in: [category] } },
+      where: { tags: { in: [category] }, active: { equals: true } },
     }),
     payload.findGlobal({ slug: 'store-settings', depth: 0 }).catch(() => null),
   ])

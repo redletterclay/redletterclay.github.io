@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { revalidatePath } from 'next/cache'
 
 import { anyone } from '../../access/anyone'
 import { authenticated } from '../../access/authenticated'
@@ -24,6 +25,16 @@ export const Products: CollectionConfig<'products'> = {
     },
   },
   fields: [
+    {
+      name: 'active',
+      type: 'checkbox',
+      label: 'Active',
+      defaultValue: true,
+      admin: {
+        description: 'Uncheck to hide this product from the shop without deleting it.',
+        position: 'sidebar',
+      },
+    },
     {
       type: 'tabs',
       tabs: [
@@ -201,6 +212,16 @@ export const Products: CollectionConfig<'products'> = {
         const name = data.name ?? originalDoc?.name ?? ''
         data.adminTitle = sku && name ? `${sku} — ${name}` : name || sku || ''
         return data
+      },
+    ],
+    afterChange: [
+      ({ doc, context }) => {
+        if (!context.disableRevalidate) {
+          revalidatePath('/')
+          revalidatePath('/shop')
+          revalidatePath('/shop/[category]', 'page')
+        }
+        return doc
       },
     ],
   },

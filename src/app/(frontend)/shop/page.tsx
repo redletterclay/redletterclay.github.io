@@ -28,6 +28,7 @@ export default async function ShopPage() {
       page: 1,
       overrideAccess: false,
       sort: '_order',
+      where: { active: { equals: true } },
     }),
     payload.findGlobal({ slug: 'store-settings', depth: 0 }).catch(() => null),
   ])

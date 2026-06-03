@@ -34,7 +34,7 @@ export default async function ShopCategoryPageN({ params: paramsPromise }: Args)
     page,
     overrideAccess: false,
     sort: '_order',
-    where: { tags: { in: [category] } },
+    where: { tags: { in: [category] }, active: { equals: true } },
   })
 
   if (!products.docs.length) notFound()
@@ -83,7 +83,7 @@ export async function generateStaticParams() {
     const { totalDocs } = await payload.count({
       collection: 'products',
       overrideAccess: false,
-      where: { tags: { in: [category] } },
+      where: { tags: { in: [category] }, active: { equals: true } },
     })
     const totalPages = Math.ceil(totalDocs / 20)
     for (let p = 2; p <= totalPages; p++) {

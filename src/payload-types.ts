@@ -855,6 +855,10 @@ export interface Product {
   id: number;
   _order?: string | null;
   /**
+   * Uncheck to hide this product from the shop without deleting it.
+   */
+  active?: boolean | null;
+  /**
    * Auto-generated from SKU + title
    */
   adminTitle?: string | null;
@@ -1571,6 +1575,7 @@ export interface UsersSelect<T extends boolean = true> {
  */
 export interface ProductsSelect<T extends boolean = true> {
   _order?: T;
+  active?: T;
   adminTitle?: T;
   sku?: T;
   name?: T;

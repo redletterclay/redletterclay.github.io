@@ -30,6 +30,7 @@ export default async function ShopPageN({ params: paramsPromise }: Args) {
     page,
     overrideAccess: false,
     sort: '_order',
+    where: { active: { equals: true } },
   })
 
   if (!products.docs.length) notFound()
@@ -72,7 +73,7 @@ export async function generateMetadata({ params: paramsPromise }: Args): Promise
 
 export async function generateStaticParams() {
   const payload = await getPayload({ config: configPromise })
-  const { totalDocs } = await payload.count({ collection: 'products', overrideAccess: false })
+  const { totalDocs } = await payload.count({ collection: 'products', overrideAccess: false, where: { active: { equals: true } } })
   const totalPages = Math.ceil(totalDocs / 20)
   return Array.from({ length: Math.max(0, totalPages - 1) }, (_, i) => ({ pageNumber: String(i + 2) }))
 }

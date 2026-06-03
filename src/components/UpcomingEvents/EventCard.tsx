@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { RichText as ConvertRichText } from '@payloadcms/richtext-lexical/react'
+import RichText from '@/components/RichText'
 
 const MONTH_ABBR = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
 const DAY_ABBR = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
@@ -127,7 +127,7 @@ export function EventCard({
 
           {event.description && (
             <div className="event-drawer-description">
-              <ConvertRichText data={event.description} />
+              <RichText data={event.description} enableGutter={false} enableProse={false} />
             </div>
           )}
         </div>

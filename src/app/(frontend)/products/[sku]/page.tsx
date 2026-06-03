@@ -370,7 +370,7 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
       )}
 
       {/* Related products — "Make It A Set" */}
-      {product.relatedProducts && product.relatedProducts.length > 0 && (
+      {product.relatedProducts?.filter((r: any) => typeof r === 'object' && r.active !== false).length > 0 && (
         <div className="container-fluid" style={{ paddingTop: '1rem', paddingBottom: '2rem' }}>
           <ShopStockChecker />
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
@@ -381,6 +381,7 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
             {product.relatedProducts.map((related: any) => {
               if (typeof related !== 'object') return null
+              if (related.active === false) return null
               return <ProductCard key={related.id} product={related} />
             })}
           </div>

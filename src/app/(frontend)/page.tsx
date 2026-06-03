@@ -29,7 +29,7 @@ export default async function HomePage() {
         limit: 0,
         overrideAccess: false,
         sort: '_order',
-        where: { featured: { equals: true } },
+        where: { featured: { equals: true }, active: { equals: true } },
       }),
       payload.findGlobal({ slug: 'announcement', depth: 1 }).catch(() => null),
       payload.find({
