@@ -4,6 +4,7 @@ export function ShippingInfo() {
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem' }}>
       <div style={{ flex: '1 1 280px', textAlign: 'center' }}>
+        <hr style={{ borderWidth: '2px', marginBottom: '1.5rem', borderColor: '#FFCED1' }} />
         <h3 style={{ fontWeight: 500, paddingBottom: '0.75rem', textAlign: 'center' }}>
           <i className="fa-solid fa-route fc-7" style={{ marginRight: '0.5rem' }} aria-hidden="true" />
           Local Pick Up Available
@@ -16,6 +17,7 @@ export function ShippingInfo() {
         </p>
       </div>
       <div style={{ flex: '1 1 280px' }}>
+        <hr style={{ borderWidth: '2px', marginBottom: '1.5rem', borderColor: '#FFCED1' }} />
         <h3 style={{ fontWeight: 500, paddingBottom: '0.75rem', textAlign: 'center' }}>
           <i className="fa-solid fa-truck-fast fc-7" style={{ marginRight: '0.5rem' }} aria-hidden="true" />
           FREE Shipping to United States
@@ -27,6 +29,7 @@ export function ShippingInfo() {
         </p>
       </div>
       <div style={{ flex: '1 1 280px', textAlign: 'center' }}>
+        <hr style={{ borderWidth: '2px', marginBottom: '1.5rem', borderColor: '#FFCED1' }} />
         <h3 style={{ fontWeight: 500, paddingBottom: '0.75rem', textAlign: 'center' }}>
           <i className="fa-solid fa-circle-check fc-7" style={{ marginRight: '0.5rem' }} aria-hidden="true" />
           Plan for Success
