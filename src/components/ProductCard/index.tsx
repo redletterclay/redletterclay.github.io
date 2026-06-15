@@ -7,7 +7,7 @@ export function localPrice(price: number): string {
   return discounted.toFixed(2).replace(/\.00$/, '')
 }
 
-export function ProductCard({ product, featured = false }: { product: any; featured?: boolean }) {
+export function ProductCard({ product, featured = false, soldOut = false }: { product: any; featured?: boolean; soldOut?: boolean }) {
   const thumbRaw = product.thumb && typeof product.thumb !== 'string' ? product.thumb : null
   const thumb = thumbRaw ? { ...thumbRaw, url: thumbRaw.imagekitUrl || thumbRaw.url } : null
 
@@ -15,6 +15,7 @@ export function ProductCard({ product, featured = false }: { product: any; featu
     <div
       className={`card stockable mb-5 animate__animated animate__zoomIn ${featured ? 'featured-product-card-col' : 'product-card-col'}`}
       data-product-id={product.sku}
+      {...(soldOut ? { 'data-stock': '0' } : {})}
       style={{
         width: '100%',
         maxWidth: '420px',
