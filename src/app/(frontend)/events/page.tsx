@@ -180,7 +180,7 @@ export default async function EventsPage() {
               <img
                 src={upcomingImageUrl}
                 alt="Chicago Pottery Market"
-                style={{ maxWidth: '450px', width: '100%', display: 'block', margin: '0 auto' }}
+                style={{ maxWidth: '450px', width: '100%', display: 'block', margin: '0 auto', marginBottom: '3rem' }}
               />
             </ScrollReveal>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>

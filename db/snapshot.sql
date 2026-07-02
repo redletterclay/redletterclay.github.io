@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict c8fBusTBDJrihXXsYQgF2siw4djTfDHNOdXK9O4ldagRoT8yRdwzAXKWzdTf1iQ
+\restrict tykoOWrarrfWSOkSh73ZoNiZdl2PqDesAZo7FHBjvR52QazKYc8TD0hULml60il
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -3704,7 +3704,7 @@ COPY public.categories_breadcrumbs (_order, _parent_id, id, doc_id, url, label) 
 --
 
 COPY public.collection_title (id, title, updated_at, created_at) FROM stdin;
-1	Set the Table for Spring	2026-05-12 14:37:06.876+00	2026-04-10 15:47:29.768+00
+1	Set the Table for Summer	2026-07-02 02:33:36.886+00	2026-04-10 15:47:29.768+00
 \.
 
 
@@ -3730,6 +3730,7 @@ COPY public.events (id, title, start_date, "time", location, address, map_url, u
 1	The Chicago Pottery Market	2026-05-31 00:00:00+00	10AM-5PM	Wilderhouse	1339 N Damen Ave\n\nChicago, IL 60607	https://maps.app.goo.gl/ZNpf2Dm1cszeLA3cA	https://www.instagram.com/p/DW9APngDmX0/	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"id": "6a15d46021e1eb5d46976fd5", "type": "link", "fields": {"url": "https://www.wilderhouse.com/", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Wilderhouse", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " is excited to bring back The Chicago Pottery Market for its second year! The 2026 Spring market will take place May 30th & 31st and will feature 50+ local Chicago ceramic artists! Join us for a beautiful weekend of all things pottery.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "The market will go from 10am until 5 both days!", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "The Wicker Park Farmers Market will be happening nearby on Sunday, May 30th from 8am to 2pm.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	2026-05-28 15:41:03.738+00	2026-03-17 18:19:21.342+00	552
 17	Thalia Hall Free for All	2026-08-29 12:00:00+00	2:30PM	Thalia Hall	1807 S Allport St, Chicago, IL 60608	https://maps.app.goo.gl/AjrLwSwa5ji8AxXx8	https://www.ticketweb.com/event/thalia-hall-free-for-all-thalia-hall-tickets/14931693	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "The Thalia Hall Free For All presented by ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a15dfe85ffffd7ad6127dd6", "type": "link", "fields": {"url": "https://thaliahallchicago.com/", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Thalia Hall", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " and ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a15dff75ffffd7ad6127dd7", "type": "link", "fields": {"url": "https://wbez.org/", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "WBEZ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Thalia Hall is gearing up once again for a fully loaded summer edition of the Thalia Hall Free For All, a free-admission building crawl featuring programming across our main stage and Punch House, plus an expanded outdoor hangout on Allport Street and special street stage!", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Wander the building inside and out as you catch live music everywhere you turn, explore our curated vendor market, treat yourself to delicious food, and dive into a variety of games and activities that’ll keep the good times rolling.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "This event is entirely free, but on-site donations benefiting the Pilsen Food Pantry are greatly encouraged.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"id": "6a15d1f421e1eb5d46976fd1", "type": "link", "fields": {"url": "https://www.ticketweb.com/event/thalia-hall-free-for-all-thalia-hall-tickets/14931693", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "RSVP", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " does not guarantee entry and is subject to capacity.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	2026-05-26 18:01:32.857+00	2026-05-26 16:20:51.617+00	566
 5	Put a Lid on It Exhibition	2025-10-03 00:00:00+00	6PM-8PM	Belger Arts Center	12011 Tracy Ave\n\nKansas City, MO	https://maps.app.goo.gl/Smcp35xuuNm8djDs5	\N	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Put a Lid on It is an exploration of the lidded vessel form, showcasing how adding a lid can create a compelling separation between what is inside and what is outside. From beautifully crafted butter dishes to imaginatively designed trinket jars, each vessel demonstrates how this separation can be functional or emotional. The notion of what we choose to hold inside, whether literal or symbolic, practical or emotional, is at the heart of this exhibition.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"id": "6a1e4ca4714ec4d047282a04", "type": "link", "fields": {"doc": {"label": "\\"Put a Lid on It\\" at the Belger Arts Center\\n", "value": 12, "relationTo": "posts"}, "linkType": "internal"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "See Journal Entry", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	2026-06-02 03:23:48.766+00	2026-03-17 18:19:21.365+00	299
+18	Shared Earth	2026-07-26 12:00:00+00	12pm - 4pm	Phyllis' Musical Inn	1800 W. Division St, Chicago IL	https://maps.app.goo.gl/SUz26AwDQcXHqhR4A	\N	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Join us in the outdoor patio at Phyllis' Musical Inn, where seven artists converge for a showcase of earth, fire, form & community.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	2026-07-02 03:33:53.331+00	2026-07-02 03:33:28.368+00	579
 \.
 
 
@@ -3738,7 +3739,7 @@ COPY public.events (id, title, start_date, "time", location, address, map_url, u
 --
 
 COPY public.events_carousel_images (id, updated_at, created_at, upcoming_image_id) FROM stdin;
-1	2026-06-02 03:19:17.395+00	2026-06-01 22:14:31.028+00	566
+1	2026-07-02 03:47:25.964+00	2026-06-01 22:14:31.028+00	580
 \.
 
 
@@ -4629,6 +4630,8 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 577	\N	\N	\N	2026-06-01 22:13:30.431+00	2026-06-01 22:13:27.538+00	/api/media/file/VrtHero-table-holiday-market.jpg	\N	VrtHero-table-holiday-market.jpg	image/jpeg	287585	1500	2000	50	50	/api/media/file/VrtHero-table-holiday-market-300x400.jpg	300	400	image/jpeg	31860	VrtHero-table-holiday-market-300x400.jpg	/api/media/file/VrtHero-table-holiday-market-500x500.jpg	500	500	image/jpeg	57026	VrtHero-table-holiday-market-500x500.jpg	/api/media/file/VrtHero-table-holiday-market-600x800.jpg	600	800	image/jpeg	97292	VrtHero-table-holiday-market-600x800.jpg	/api/media/file/VrtHero-table-holiday-market-900x1200.jpg	900	1200	image/jpeg	182285	VrtHero-table-holiday-market-900x1200.jpg	/api/media/file/VrtHero-table-holiday-market-1400x1867.jpg	1400	1867	image/jpeg	349635	VrtHero-table-holiday-market-1400x1867.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/VrtHero-table-holiday-market-1200x630.jpg	1200	630	image/jpeg	124614	VrtHero-table-holiday-market-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/VrtHero-table-holiday-market.jpg
 578	\N	\N	\N	2026-06-01 22:13:31.596+00	2026-06-01 22:13:27.766+00	/api/media/file/VrtHero-market-table-holiday-gnar.jpg	\N	VrtHero-market-table-holiday-gnar.jpg	image/jpeg	225014	1500	2000	50	50	/api/media/file/VrtHero-market-table-holiday-gnar-300x400.jpg	300	400	image/jpeg	24663	VrtHero-market-table-holiday-gnar-300x400.jpg	/api/media/file/VrtHero-market-table-holiday-gnar-500x500.jpg	500	500	image/jpeg	50703	VrtHero-market-table-holiday-gnar-500x500.jpg	/api/media/file/VrtHero-market-table-holiday-gnar-600x800.jpg	600	800	image/jpeg	76023	VrtHero-market-table-holiday-gnar-600x800.jpg	/api/media/file/VrtHero-market-table-holiday-gnar-900x1200.jpg	900	1200	image/jpeg	142008	VrtHero-market-table-holiday-gnar-900x1200.jpg	/api/media/file/VrtHero-market-table-holiday-gnar-1400x1867.jpg	1400	1867	image/jpeg	270116	VrtHero-market-table-holiday-gnar-1400x1867.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/VrtHero-market-table-holiday-gnar-1200x630.jpg	1200	630	image/jpeg	134839	VrtHero-market-table-holiday-gnar-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/VrtHero-market-table-holiday-gnar.jpg
 576	\N	\N	\N	2026-06-01 22:13:29.006+00	2026-06-01 22:13:27.28+00	/api/media/file/VrtHero-table-leloft.jpg	\N	VrtHero-table-leloft.jpg	image/jpeg	218883	1500	2000	50	50	/api/media/file/VrtHero-table-leloft-300x400.jpg	300	400	image/jpeg	22235	VrtHero-table-leloft-300x400.jpg	/api/media/file/VrtHero-table-leloft-500x500.jpg	500	500	image/jpeg	43084	VrtHero-table-leloft-500x500.jpg	/api/media/file/VrtHero-table-leloft-600x800.jpg	600	800	image/jpeg	71588	VrtHero-table-leloft-600x800.jpg	/api/media/file/VrtHero-table-leloft-900x1200.jpg	900	1200	image/jpeg	137235	VrtHero-table-leloft-900x1200.jpg	/api/media/file/VrtHero-table-leloft-1400x1867.jpg	1400	1867	image/jpeg	266453	VrtHero-table-leloft-1400x1867.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/VrtHero-table-leloft-1200x630.jpg	1200	630	image/jpeg	97341	VrtHero-table-leloft-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/VrtHero-table-leloft.jpg
+579	Shared Earth Poster	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	\N	2026-07-02 03:32:50.48+00	2026-07-02 03:32:35.802+00	/api/media/file/F1-shared-earth-digital.JPG	/api/media/file/F1-shared-earth-digital-300x497.jpg	F1-shared-earth-digital.JPG	image/jpeg	561687	1154	1912	50	50	/api/media/file/F1-shared-earth-digital-300x497.jpg	300	497	image/jpeg	37160	F1-shared-earth-digital-300x497.jpg	/api/media/file/F1-shared-earth-digital-500x500.jpg	500	500	image/jpeg	49505	F1-shared-earth-digital-500x500.jpg	/api/media/file/F1-shared-earth-digital-600x994.jpg	600	994	image/jpeg	115671	F1-shared-earth-digital-600x994.jpg	/api/media/file/F1-shared-earth-digital-900x1491.jpg	900	1491	image/jpeg	226076	F1-shared-earth-digital-900x1491.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	/api/media/file/F1-shared-earth-digital-1200x630.jpg	1200	630	image/jpeg	99324	F1-shared-earth-digital-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/F1-shared-earth-digital.JPG
+580	\N	\N	\N	2026-07-02 03:47:31.109+00	2026-07-02 03:47:19.259+00	/api/media/file/F2-shared-earth-digital.JPG.jpg	\N	F2-shared-earth-digital.JPG.jpg	image/jpeg	11050690	3300	5500	50	50	/api/media/file/F2-shared-earth-digital.JPG-300x500.jpg	300	500	image/jpeg	36601	F2-shared-earth-digital.JPG-300x500.jpg	/api/media/file/F2-shared-earth-digital.JPG-500x500.jpg	500	500	image/jpeg	48669	F2-shared-earth-digital.JPG-500x500.jpg	/api/media/file/F2-shared-earth-digital.JPG-600x1000.jpg	600	1000	image/jpeg	113719	F2-shared-earth-digital.JPG-600x1000.jpg	/api/media/file/F2-shared-earth-digital.JPG-900x1500.jpg	900	1500	image/jpeg	224041	F2-shared-earth-digital.JPG-900x1500.jpg	/api/media/file/F2-shared-earth-digital.JPG-1400x2333.jpg	1400	2333	image/jpeg	469443	F2-shared-earth-digital.JPG-1400x2333.jpg	/api/media/file/F2-shared-earth-digital.JPG-1920x3200.jpg	1920	3200	image/jpeg	797824	F2-shared-earth-digital.JPG-1920x3200.jpg	/api/media/file/F2-shared-earth-digital.JPG-1200x630.jpg	1200	630	image/jpeg	105112	F2-shared-earth-digital.JPG-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/F2-shared-earth-digital.JPG.jpg
 \.
 
 
@@ -4807,9 +4810,9 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 9	20260318_161820	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 10	20260320_033436	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 11	20260513_products_thumb_array	7	2026-05-14 00:04:04.985+00	2026-05-14 00:04:04.984+00
-1	dev	-1	2026-06-15 03:22:41.913+00	2026-03-16 16:07:06.694+00
 12	20260526_163601	8	2026-05-26 16:42:42.781+00	2026-05-26 16:42:42.781+00
 13	20260526_170229	9	2026-05-26 17:02:48.565+00	2026-05-26 17:02:48.565+00
+1	dev	-1	2026-07-01 15:33:35.357+00	2026-03-16 16:07:06.694+00
 14	20260601_220009	10	2026-06-01 22:04:41.959+00	2026-06-01 22:04:41.959+00
 15	20260601_221724	11	2026-06-01 22:18:16.436+00	2026-06-01 22:18:16.435+00
 16	20260602_021903	12	2026-06-02 02:19:36.4+00	2026-06-02 02:19:36.4+00
@@ -6272,7 +6275,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	55c2d80e-ee21-4327-b2f3-85f21dcaa9bb	2026-06-02 02:18:19.313+00	2026-06-02 04:18:19.313+00
+1	1	1f2341c0-bd22-409e-b0e1-88945fda0193	2026-07-02 02:33:24.781+00	2026-07-02 04:33:24.781+00
 \.
 
 
@@ -6406,7 +6409,7 @@ SELECT pg_catalog.setval('public.events_carousel_images_id_seq', 1, true);
 -- Name: events_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.events_id_seq', 17, true);
+SELECT pg_catalog.setval('public.events_id_seq', 18, true);
 
 
 --
@@ -6483,7 +6486,7 @@ SELECT pg_catalog.setval('public.links_id_seq', 1, true);
 -- Name: media_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.media_id_seq', 578, true);
+SELECT pg_catalog.setval('public.media_id_seq', 580, true);
 
 
 --
@@ -6539,14 +6542,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 499, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 506, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 899, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 909, true);
 
 
 --
@@ -10622,5 +10625,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict c8fBusTBDJrihXXsYQgF2siw4djTfDHNOdXK9O4ldagRoT8yRdwzAXKWzdTf1iQ
+\unrestrict tykoOWrarrfWSOkSh73ZoNiZdl2PqDesAZo7FHBjvR52QazKYc8TD0hULml60il
 
