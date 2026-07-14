@@ -51,31 +51,33 @@ mv "$SLUG_DIR" "$SLUG_TMP"
 # If the query fails (docker down, etc.) we hide both routes as a safe fallback.
 # In CI (GitHub Actions) Docker is not available — always hide paginated routes as safe fallback.
 # Locally, query postgres to only hide routes that would produce an empty generateStaticParams.
+echo "→ Checking product counts for paginated shop routes..."
 if [ -n "$CI" ]; then
-  echo "→ CI environment — hiding paginated shop routes (no DB access)..."
-  [ -d "$SHOP_PAGINATED_DIR" ]     && mv "$SHOP_PAGINATED_DIR" "$SHOP_PAGINATED_TMP"
-  [ -d "$SHOP_CAT_PAGINATED_DIR" ] && mv "$SHOP_CAT_PAGINATED_DIR" "$SHOP_CAT_PAGINATED_TMP"
+  TOTAL_ACTIVE=$(PGPASSWORD=password psql -h localhost -U payload -d payload -t \
+    -c "SELECT COUNT(*) FROM products WHERE active = true;" 2>/dev/null | tr -d ' \n')
+  MAX_PER_CAT=$(PGPASSWORD=password psql -h localhost -U payload -d payload -t \
+    -c "SELECT COALESCE(MAX(n),0) FROM (SELECT COUNT(*) AS n FROM products p JOIN products_tags t ON t.parent_id = p.id WHERE p.active = true GROUP BY t.value) s;" \
+    2>/dev/null | tr -d ' \n')
 else
-  echo "→ Checking product counts for paginated shop routes..."
   TOTAL_ACTIVE=$(docker compose exec -T db psql -U payload -d payload -t \
     -c "SELECT COUNT(*) FROM products WHERE active = true;" 2>/dev/null | tr -d ' \n')
   MAX_PER_CAT=$(docker compose exec -T db psql -U payload -d payload -t \
     -c "SELECT COALESCE(MAX(n),0) FROM (SELECT COUNT(*) AS n FROM products p JOIN products_tags t ON t.parent_id = p.id WHERE p.active = true GROUP BY t.value) s;" \
     2>/dev/null | tr -d ' \n')
+fi
 
-  if [[ ! "$TOTAL_ACTIVE" =~ ^[0-9]+$ ]] || [ "$TOTAL_ACTIVE" -le 20 ]; then
-    echo "  /shop/p — hiding (${TOTAL_ACTIVE:-unknown} total active products, need >20)"
-    [ -d "$SHOP_PAGINATED_DIR" ] && mv "$SHOP_PAGINATED_DIR" "$SHOP_PAGINATED_TMP"
-  else
-    echo "  /shop/p — keeping ($TOTAL_ACTIVE total active products)"
-  fi
+if [[ ! "$TOTAL_ACTIVE" =~ ^[0-9]+$ ]] || [ "$TOTAL_ACTIVE" -le 20 ]; then
+  echo "  /shop/p — hiding (${TOTAL_ACTIVE:-unknown} total active products, need >20)"
+  [ -d "$SHOP_PAGINATED_DIR" ] && mv "$SHOP_PAGINATED_DIR" "$SHOP_PAGINATED_TMP"
+else
+  echo "  /shop/p — keeping ($TOTAL_ACTIVE total active products)"
+fi
 
-  if [[ ! "$MAX_PER_CAT" =~ ^[0-9]+$ ]] || [ "$MAX_PER_CAT" -le 20 ]; then
-    echo "  /shop/[category]/p — hiding (max ${MAX_PER_CAT:-unknown} per category, need >20)"
-    [ -d "$SHOP_CAT_PAGINATED_DIR" ] && mv "$SHOP_CAT_PAGINATED_DIR" "$SHOP_CAT_PAGINATED_TMP"
-  else
-    echo "  /shop/[category]/p — keeping (max $MAX_PER_CAT products in a category)"
-  fi
+if [[ ! "$MAX_PER_CAT" =~ ^[0-9]+$ ]] || [ "$MAX_PER_CAT" -le 20 ]; then
+  echo "  /shop/[category]/p — hiding (max ${MAX_PER_CAT:-unknown} per category, need >20)"
+  [ -d "$SHOP_CAT_PAGINATED_DIR" ] && mv "$SHOP_CAT_PAGINATED_DIR" "$SHOP_CAT_PAGINATED_TMP"
+else
+  echo "  /shop/[category]/p — keeping (max $MAX_PER_CAT products in a category)"
 fi
 
 echo "→ Patching Next.js to skip error-page generation (not needed for GitHub Pages)..."
