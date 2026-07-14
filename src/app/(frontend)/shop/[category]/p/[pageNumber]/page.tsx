@@ -78,24 +78,20 @@ export async function generateMetadata({ params: paramsPromise }: Args): Promise
 }
 
 export async function generateStaticParams() {
-  try {
-    const payload = await getPayload({ config: configPromise })
-    const params: { category: string; pageNumber: string }[] = []
+  const payload = await getPayload({ config: configPromise })
+  const params: { category: string; pageNumber: string }[] = []
 
-    for (const category of SHOP_TAGS) {
-      const { totalDocs } = await payload.count({
-        collection: 'products',
-        overrideAccess: false,
-        where: { tags: { in: [category] }, active: { equals: true } },
-      })
-      const totalPages = Math.ceil(totalDocs / 20)
-      for (let p = 2; p <= totalPages; p++) {
-        params.push({ category, pageNumber: String(p) })
-      }
+  for (const category of SHOP_TAGS) {
+    const { totalDocs } = await payload.count({
+      collection: 'products',
+      overrideAccess: false,
+      where: { tags: { in: [category] }, active: { equals: true } },
+    })
+    const totalPages = Math.ceil(totalDocs / 20)
+    for (let p = 2; p <= totalPages; p++) {
+      params.push({ category, pageNumber: String(p) })
     }
-
-    return params
-  } catch {
-    return []
   }
+
+  return params
 }

@@ -74,12 +74,8 @@ export async function generateMetadata({ params: paramsPromise }: Args): Promise
 }
 
 export async function generateStaticParams() {
-  try {
-    const payload = await getPayload({ config: configPromise })
-    const { totalDocs } = await payload.count({ collection: 'products', overrideAccess: false, where: { active: { equals: true } } })
-    const totalPages = Math.ceil(totalDocs / 20)
-    return Array.from({ length: Math.max(0, totalPages - 1) }, (_, i) => ({ pageNumber: String(i + 2) }))
-  } catch {
-    return []
-  }
+  const payload = await getPayload({ config: configPromise })
+  const { totalDocs } = await payload.count({ collection: 'products', overrideAccess: false, where: { active: { equals: true } } })
+  const totalPages = Math.ceil(totalDocs / 20)
+  return Array.from({ length: Math.max(0, totalPages - 1) }, (_, i) => ({ pageNumber: String(i + 2) }))
 }
