@@ -10,6 +10,7 @@ import { ShopStockChecker } from '../../ShopStockChecker.client'
 import { ProductCard } from '@/components/ProductCard'
 import { ShopPagination } from '../../ShopPagination'
 import { PricingNote } from '@/components/PricingNote'
+import { ShippingInfo } from '@/components/ShippingInfo'
 
 export const revalidate = 600
 export const dynamic = 'force-static'
@@ -50,6 +51,10 @@ export default async function ShopPageN({ params: paramsPromise }: Args) {
           ))}
         </div>
         <ShopPagination currentPage={page} totalPages={products.totalPages} />
+      </div>
+
+      <div className="container" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
+        <ShippingInfo />
       </div>
 
       <div className="hero-field" />
