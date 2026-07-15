@@ -333,7 +333,7 @@ export default async function HomePage() {
         {/* Calendar */}
         {events.length > 0 && (
           <div style={{ paddingTop: '2.5rem' }}>
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', justifyContent: 'center' }}>
               {events.map((event: any) => (
                 <EventCard key={event.id} event={event} isUpcoming={true} />
               ))}
