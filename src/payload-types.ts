@@ -970,6 +970,11 @@ export interface Event {
     };
     [k: string]: unknown;
   } | null;
+  googleCalUrl?: string | null;
+  /**
+   * Filename only, e.g. chicago-pottery-market-2026.ics — file must exist in public/ical/
+   */
+  icalFile?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -1637,6 +1642,8 @@ export interface EventsSelect<T extends boolean = true> {
   url?: T;
   image?: T;
   description?: T;
+  googleCalUrl?: T;
+  icalFile?: T;
   updatedAt?: T;
   createdAt?: T;
 }

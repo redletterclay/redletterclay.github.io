@@ -130,6 +130,24 @@ export function EventCard({
               <RichText data={event.description} enableGutter={false} enableProse={false} />
             </div>
           )}
+
+          {(event.googleCalUrl || event.icalFile) && (
+            <div style={{ marginTop: '1.5rem' }}>
+              <h3 style={{ textAlign: 'center', marginBottom: '0.75rem', fontWeight: 700 }}>Save the Date</h3>
+              <div className="event-cal-buttons" style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+                {event.googleCalUrl && (
+                  <a href={event.googleCalUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary rounded-pill" style={{ padding: '0.3rem 1rem', borderRadius: '50rem' }}>
+                    Google Calendar
+                  </a>
+                )}
+                {event.icalFile && (
+                  <a href={`/ical/${event.icalFile}`} download className="btn btn-outline-primary rounded-pill" style={{ padding: '0.3rem 1rem', borderRadius: '50rem' }}>
+                    Apple Calendar
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
         </div>
 
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center', background: '#FFEEEF', marginInline: '-1.75rem', height: '60px', overflow: 'hidden', flexShrink: 0 }}>

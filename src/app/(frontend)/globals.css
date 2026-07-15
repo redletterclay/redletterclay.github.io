@@ -1392,6 +1392,8 @@ div.tags .btn { --animate-duration: 600ms; }
 }
 @media (max-width: 767px) {
   .event-drawer { width: 100vw; }
+  .event-cal-buttons { flex-direction: column; }
+  .event-cal-buttons a { width: 100%; text-align: center; }
 }
 .event-drawer-header {
   position: sticky;

@@ -68,7 +68,7 @@ export default async function ShopPage() {
       )}
 
       {/* Product grid */}
-      <div className="container-fluid" style={{ padding: '0 0.5rem' }}>
+      <div className="container-fluid" style={{ padding: '0 0.5rem 1rem' }}>
         <div
           className="animate__animated animate__fadeIn"
           style={{

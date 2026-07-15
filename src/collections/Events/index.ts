@@ -62,5 +62,18 @@ export const Events: CollectionConfig<'events'> = {
       type: 'richText',
       editor: defaultLexical,
     },
+    {
+      name: 'googleCalUrl',
+      type: 'text',
+      label: 'Google Calendar Link',
+    },
+    {
+      name: 'icalFile',
+      type: 'text',
+      label: 'Apple Calendar (.ics filename)',
+      admin: {
+        description: 'Filename only, e.g. chicago-pottery-market-2026.ics — file must exist in public/ical/',
+      },
+    },
   ],
 }
