@@ -133,7 +133,10 @@ export function EventCard({
 
           {(event.googleCalUrl || event.icalFile) && (
             <div style={{ marginTop: '1.5rem' }}>
-              <h3 style={{ textAlign: 'center', marginBottom: '0.75rem', fontWeight: 700 }}>Save the Date</h3>
+              <h3 style={{ textAlign: 'center', marginBottom: '0.75rem', fontWeight: 700 }}>
+                <i className="fa-regular fa-clock" style={{ marginRight: '0.5rem' }} aria-hidden="true" />
+                Save the Date
+              </h3>
               <div className="event-cal-buttons" style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                 {event.googleCalUrl && (
                   <a href={event.googleCalUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary rounded-pill" style={{ padding: '0.3rem 1rem', borderRadius: '50rem' }}>
