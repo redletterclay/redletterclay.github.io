@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Red Letter Clay//Shared Earth Pop-Up//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:shared-earth-popup-20260726@redletterclay.com
+DTSTAMP:20260714T000000Z
+DTSTART:20260726T170000Z
+DTEND:20260726T210000Z
+SUMMARY:Shared Earth: An Outdoor Pottery Pop-Up
+DESCRIPTION:Join Davey Ball and 6 other ceramicists on the patio of Phyllis' Music Inn in Wicker Park.
+LOCATION:1800 W Division St\, Chicago\, IL 60622
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR
