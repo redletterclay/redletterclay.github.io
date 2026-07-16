@@ -153,7 +153,7 @@ export function EventCard({
           )}
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center', background: '#FFEEEF', marginInline: '-1.75rem', height: '60px', overflow: 'hidden', flexShrink: 0 }}>
+        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center', background: isUpcoming ? '#FFEEEF' : '#e9e9e9', marginInline: '-1.75rem', height: '60px', overflow: 'hidden', flexShrink: 0 }}>
           <div style={{ width: 120, height: 120, background: 'white', borderRadius: '50%', flexShrink: 0 }} />
         </div>
       </div>
@@ -164,7 +164,7 @@ export function EventCard({
     <div ref={ref} className={`event-col${scrollReveal ? ' scroll-reveal' : ''}`}>
       <div
         className="event"
-        style={{ borderRadius: '1rem', border: '3px solid #dc3545', padding: '0.75rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', flex: 1 }}
+        style={{ borderRadius: '1rem', border: `3px solid ${isUpcoming ? '#dc3545' : '#ccc'}`, padding: '0.75rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', flex: 1 }}
       >
         {/* Row 1: DAY DATE MONTH | TIME */}
         <div className="event-row1" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>

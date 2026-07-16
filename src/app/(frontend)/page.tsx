@@ -7,7 +7,7 @@ import { getPayload } from 'payload'
 import React from 'react'
 import Link from 'next/link'
 import { HomeCarousel } from './HomeCarousel.client'
-import { EventCard } from '@/components/UpcomingEvents/EventCard'
+import { Last4Events } from '@/components/UpcomingEvents/Last4Events'
 import { ProductCard } from '@/components/ProductCard'
 import { ShopStockChecker } from './shop/ShopStockChecker.client'
 import { Last4Journal } from '@/components/Last4Journal'
@@ -21,7 +21,7 @@ export const revalidate = 600
 export default async function HomePage() {
   const payload = await getPayload({ config: configPromise })
 
-  const [featuredRes, announcementRes, eventsRes, collectionTitleRes, heroImagesRes] =
+  const [featuredRes, announcementRes, collectionTitleRes, heroImagesRes] =
     await Promise.all([
       payload.find({
         collection: 'products',
@@ -32,20 +32,12 @@ export default async function HomePage() {
         where: { featured: { equals: true }, active: { equals: true } },
       }),
       payload.findGlobal({ slug: 'announcement', depth: 1 }).catch(() => null),
-      payload.find({
-        collection: 'events',
-        depth: 1,
-        limit: 4,
-        overrideAccess: false,
-        sort: '-startDate',
-      }),
       payload.findGlobal({ slug: 'collection-title', depth: 0 }).catch(() => null),
       payload.findGlobal({ slug: 'hero-images', depth: 1 }).catch(() => null),
     ])
 
   const featured = featuredRes.docs
   const announcement = announcementRes as any
-  const events = eventsRes.docs
   const collectionTitle = (collectionTitleRes as any)?.title || null
   const heroImagesData = heroImagesRes as any
   const heroImages: { url: string; alt?: string }[] = (heroImagesData?.images || [])
@@ -331,22 +323,7 @@ export default async function HomePage() {
       {/* ── Sub-footer: Calendar + Journal ──────────────────────────────── */}
       <div className="container-fluid sub-footer">
         {/* Calendar */}
-        {events.length > 0 && (
-          <div style={{ paddingTop: '2.5rem' }}>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', justifyContent: 'center' }}>
-              {events.map((event: any) => (
-                <EventCard key={event.id} event={event} isUpcoming={true} />
-              ))}
-            </div>
-            <div style={{ textAlign: 'right', paddingRight: '1rem', paddingTop: '0.5rem' }}>
-              <h3 style={{ margin: 0 }}>
-                <Link href="/events/" title="Event Archive">
-                  <i className="fa-regular fa-circle-right" aria-hidden="true" /> Event Archive
-                </Link>
-              </h3>
-            </div>
-          </div>
-        )}
+        <Last4Events />
 
         {/* Footer journal */}
         <Last4Journal />
