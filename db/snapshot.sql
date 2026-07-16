@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict gTnlZLDQySUNFY3ZP7n6e17W5Lg89bVY1zRmOXkQUaGuduKYlPdeOZ1jjf4ff9A
+\restrict oeTJD66Z2bmR0de3oHWBrK2TCYkkF9jwrNEP6bgbbpzRPbYus3cX8wqeRYEdBDP
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -3681,7 +3681,7 @@ COPY public._posts_v_version_gallery_items (_order, _parent_id, id, image_id, al
 --
 
 COPY public.announcement (id, name, live, url, thumb_id, cta, updated_at, created_at, info) FROM stdin;
-1	Shop in Person at My Next Market	t	/shop/	581	\N	2026-07-09 14:29:14.036+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Join me and 6 other ceramicists ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "Sunday, July 26", "type": "text", "style": "", "detail": 0, "format": 1, "version": 1}, {"mode": "normal", "text": " from 12-4pm for an outdoor poppery pop-up, Shared Earth.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "See the ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a03509b0e5ae159276faa24", "type": "link", "fields": {"url": "/events", "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Calendar", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " for more details.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}
+1	Shop in Person at My Next Market	t	/shop/	581	\N	2026-07-16 17:26:45.39+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Join me and 6 other ceramicists ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "Sunday, July 26", "type": "text", "style": "", "detail": 0, "format": 1, "version": 1}, {"mode": "normal", "text": " from 12-4pm for an outdoor pottery pop-up, Shared Earth.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "See the ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a03509b0e5ae159276faa24", "type": "link", "fields": {"url": "/events", "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Calendar", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " for more details.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}
 \.
 
 
@@ -4818,7 +4818,7 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 11	20260513_products_thumb_array	7	2026-05-14 00:04:04.985+00	2026-05-14 00:04:04.984+00
 12	20260526_163601	8	2026-05-26 16:42:42.781+00	2026-05-26 16:42:42.781+00
 13	20260526_170229	9	2026-05-26 17:02:48.565+00	2026-05-26 17:02:48.565+00
-1	dev	-1	2026-07-16 16:18:32.623+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-07-16 17:26:02.92+00	2026-03-16 16:07:06.694+00
 14	20260601_220009	10	2026-06-01 22:04:41.959+00	2026-06-01 22:04:41.959+00
 15	20260601_221724	11	2026-06-01 22:18:16.436+00	2026-06-01 22:18:16.435+00
 16	20260602_021903	12	2026-06-02 02:19:36.4+00	2026-06-02 02:19:36.4+00
@@ -6548,14 +6548,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 524, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 525, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 943, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 944, true);
 
 
 --
@@ -10631,5 +10631,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict gTnlZLDQySUNFY3ZP7n6e17W5Lg89bVY1zRmOXkQUaGuduKYlPdeOZ1jjf4ff9A
+\unrestrict oeTJD66Z2bmR0de3oHWBrK2TCYkkF9jwrNEP6bgbbpzRPbYus3cX8wqeRYEdBDP
 
