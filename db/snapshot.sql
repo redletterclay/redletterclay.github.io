@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict oeTJD66Z2bmR0de3oHWBrK2TCYkkF9jwrNEP6bgbbpzRPbYus3cX8wqeRYEdBDP
+\restrict 2qOFUPAwdwPfUnjjni2YPnOSbtUkTGJOYZHTmXRhZkll9orKGGGBTO0AZxNyPSp
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -3681,7 +3681,7 @@ COPY public._posts_v_version_gallery_items (_order, _parent_id, id, image_id, al
 --
 
 COPY public.announcement (id, name, live, url, thumb_id, cta, updated_at, created_at, info) FROM stdin;
-1	Shop in Person at My Next Market	t	/shop/	581	\N	2026-07-16 17:26:45.39+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Join me and 6 other ceramicists ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "Sunday, July 26", "type": "text", "style": "", "detail": 0, "format": 1, "version": 1}, {"mode": "normal", "text": " from 12-4pm for an outdoor pottery pop-up, Shared Earth.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "center", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "See the ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a03509b0e5ae159276faa24", "type": "link", "fields": {"url": "/events", "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Calendar", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " for more details.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}
+1	Shop in Person at My Next Market	t	/shop/	566	\N	2026-07-28 16:36:11.82+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Thalia Hall is gearing up once again for a fully loaded summer edition of the Thalia Hall Free For All, a free-admission building crawl featuring programming across our main stage and Punch House, plus an expanded outdoor hangout on Allport Street and special street stage!", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Wander the building inside and out as you catch live music everywhere you turn, explore our curated vendor market, treat yourself to delicious food, and dive into a variety of games and activities that’ll keep the good times rolling.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "This event is entirely free, but on-site donations benefiting the Pilsen Food Pantry are greatly encouraged.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "SAT, AUG 29 | 2:30pm — 9pm", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"id": "6a68da4bc150148cbbc64acc", "type": "link", "fields": {"url": "https://www.ticketweb.com/event/thalia-hall-free-for-all-thalia-hall-tickets/14931693", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "RSVP", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " does not guarantee entry and is subject to capacity.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}
 \.
 
 
@@ -3743,7 +3743,7 @@ COPY public.events (id, title, start_date, "time", location, address, map_url, u
 --
 
 COPY public.events_carousel_images (id, updated_at, created_at, upcoming_image_id) FROM stdin;
-1	2026-07-02 03:47:25.964+00	2026-06-01 22:14:31.028+00	580
+1	2026-07-28 16:41:42.865+00	2026-06-01 22:14:31.028+00	566
 \.
 
 
@@ -4655,13 +4655,14 @@ COPY public.newsletter (id, updated_at, created_at) FROM stdin;
 --
 
 COPY public.newsletter_issues (_order, _parent_id, id, name, url) FROM stdin;
-1	1	6a1872587f2b5faa56fbbf55	 This Weekend — The Chicago Pottery Market! 50 vendors, all handmade pottery	https://preview.mailerlite.io/preview/1180415/emails/188726753732069021
-2	1	69f500001558293d9f08123c	Shop Mothers Day + The Chicago Pottery Market	https://preview.mailerlite.io/preview/1180415/emails/186098830926677956
-3	1	69b99b2daa9ac96a311211d1	2025 Holiday Markets » Bridgeport & West Loop Venues	https://preview.mailerlite.io/emails/webview/1180415/173072140190352712
-4	1	69b99b2daa9ac96a311211d2	Put a Lid on It Exhibition @ Belger Arts Center (St Louis, MO)	https://preview.mailerlite.io/emails/webview/1180415/165915421823731444
-5	1	69b99b2daa9ac96a311211d3	Oddball Market @ Thalia Hall Block Party (Pilsen, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/163272327241402286
-6	1	69b99b2daa9ac96a311211d4	New Store Partnership - Northside Cutlery (Lincoln Square, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/146465753395102952
-7	1	69b99b2daa9ac96a311211d5	New Store Partnership - Spilt Milk Pastry (Oak Park, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/147339301509662186
+1	1	6a68dca2ecb62d01c2e71e0d	 Wicker Park Pottery Pop-Up	https://preview.mailerlite.io/preview/1180415/emails/192529686281061445
+2	1	6a1872587f2b5faa56fbbf55	 This Weekend — The Chicago Pottery Market! 50 vendors, all handmade pottery	https://preview.mailerlite.io/preview/1180415/emails/188726753732069021
+3	1	69f500001558293d9f08123c	Shop Mothers Day + The Chicago Pottery Market	https://preview.mailerlite.io/preview/1180415/emails/186098830926677956
+4	1	69b99b2daa9ac96a311211d1	2025 Holiday Markets » Bridgeport & West Loop Venues	https://preview.mailerlite.io/emails/webview/1180415/173072140190352712
+5	1	69b99b2daa9ac96a311211d2	Put a Lid on It Exhibition @ Belger Arts Center (St Louis, MO)	https://preview.mailerlite.io/emails/webview/1180415/165915421823731444
+6	1	69b99b2daa9ac96a311211d3	Oddball Market @ Thalia Hall Block Party (Pilsen, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/163272327241402286
+7	1	69b99b2daa9ac96a311211d4	New Store Partnership - Northside Cutlery (Lincoln Square, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/146465753395102952
+8	1	69b99b2daa9ac96a311211d5	New Store Partnership - Spilt Milk Pastry (Oak Park, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/147339301509662186
 \.
 
 
@@ -4818,7 +4819,7 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 11	20260513_products_thumb_array	7	2026-05-14 00:04:04.985+00	2026-05-14 00:04:04.984+00
 12	20260526_163601	8	2026-05-26 16:42:42.781+00	2026-05-26 16:42:42.781+00
 13	20260526_170229	9	2026-05-26 17:02:48.565+00	2026-05-26 17:02:48.565+00
-1	dev	-1	2026-07-16 17:26:02.92+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-07-28 16:31:42.425+00	2026-03-16 16:07:06.694+00
 14	20260601_220009	10	2026-06-01 22:04:41.959+00	2026-06-01 22:04:41.959+00
 15	20260601_221724	11	2026-06-01 22:18:16.436+00	2026-06-01 22:18:16.435+00
 16	20260602_021903	12	2026-06-02 02:19:36.4+00	2026-06-02 02:19:36.4+00
@@ -6281,7 +6282,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	39cd93e2-73ad-4470-834b-b2bf6d3b6492	2026-07-16 16:33:34.062+00	2026-07-16 18:33:34.062+00
+1	1	f113fdaf-eb0e-4eee-b282-0a664668c933	2026-07-28 16:32:36.425+00	2026-07-28 18:32:36.425+00
 \.
 
 
@@ -6548,14 +6549,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 525, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 529, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 944, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 948, true);
 
 
 --
@@ -10631,5 +10632,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict oeTJD66Z2bmR0de3oHWBrK2TCYkkF9jwrNEP6bgbbpzRPbYus3cX8wqeRYEdBDP
+\unrestrict 2qOFUPAwdwPfUnjjni2YPnOSbtUkTGJOYZHTmXRhZkll9orKGGGBTO0AZxNyPSp
 
