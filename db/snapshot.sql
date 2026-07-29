@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 2qOFUPAwdwPfUnjjni2YPnOSbtUkTGJOYZHTmXRhZkll9orKGGGBTO0AZxNyPSp
+\restrict entRZSpzrOm2X46gWE0vaxpM8ycyE6BtMPMF7oRrte6DMKVTvlydrWN3cVsblqy
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -3743,7 +3743,7 @@ COPY public.events (id, title, start_date, "time", location, address, map_url, u
 --
 
 COPY public.events_carousel_images (id, updated_at, created_at, upcoming_image_id) FROM stdin;
-1	2026-07-28 16:41:42.865+00	2026-06-01 22:14:31.028+00	566
+1	2026-07-29 16:21:36.336+00	2026-06-01 22:14:31.028+00	566
 \.
 
 
@@ -3753,8 +3753,9 @@ COPY public.events_carousel_images (id, updated_at, created_at, upcoming_image_i
 
 COPY public.events_carousel_images_images (_order, _parent_id, id, image_id, alt, "position") FROM stdin;
 1	1	6a1e040d7c1749393658873b	574	\N	top center
-2	1	6a1e041b7c1749393658873d	575	\N	top center
-3	1	6a1e04297c1749393658873f	578	\N	center center
+2	1	6a6a288698849e7f490422bb	583	\N	center center
+3	1	6a1e041b7c1749393658873d	575	\N	top center
+4	1	6a1e04297c1749393658873f	578	\N	center center
 \.
 
 
@@ -4638,6 +4639,7 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 579	Shared Earth Poster	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	\N	2026-07-02 03:32:50.48+00	2026-07-02 03:32:35.802+00	/api/media/file/F1-shared-earth-digital.JPG	/api/media/file/F1-shared-earth-digital-300x497.jpg	F1-shared-earth-digital.JPG	image/jpeg	561687	1154	1912	50	50	/api/media/file/F1-shared-earth-digital-300x497.jpg	300	497	image/jpeg	37160	F1-shared-earth-digital-300x497.jpg	/api/media/file/F1-shared-earth-digital-500x500.jpg	500	500	image/jpeg	49505	F1-shared-earth-digital-500x500.jpg	/api/media/file/F1-shared-earth-digital-600x994.jpg	600	994	image/jpeg	115671	F1-shared-earth-digital-600x994.jpg	/api/media/file/F1-shared-earth-digital-900x1491.jpg	900	1491	image/jpeg	226076	F1-shared-earth-digital-900x1491.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	/api/media/file/F1-shared-earth-digital-1200x630.jpg	1200	630	image/jpeg	99324	F1-shared-earth-digital-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/F1-shared-earth-digital.JPG
 580	\N	\N	\N	2026-07-02 03:47:31.109+00	2026-07-02 03:47:19.259+00	/api/media/file/F2-shared-earth-digital.JPG.jpg	\N	F2-shared-earth-digital.JPG.jpg	image/jpeg	11050690	3300	5500	50	50	/api/media/file/F2-shared-earth-digital.JPG-300x500.jpg	300	500	image/jpeg	36601	F2-shared-earth-digital.JPG-300x500.jpg	/api/media/file/F2-shared-earth-digital.JPG-500x500.jpg	500	500	image/jpeg	48669	F2-shared-earth-digital.JPG-500x500.jpg	/api/media/file/F2-shared-earth-digital.JPG-600x1000.jpg	600	1000	image/jpeg	113719	F2-shared-earth-digital.JPG-600x1000.jpg	/api/media/file/F2-shared-earth-digital.JPG-900x1500.jpg	900	1500	image/jpeg	224041	F2-shared-earth-digital.JPG-900x1500.jpg	/api/media/file/F2-shared-earth-digital.JPG-1400x2333.jpg	1400	2333	image/jpeg	469443	F2-shared-earth-digital.JPG-1400x2333.jpg	/api/media/file/F2-shared-earth-digital.JPG-1920x3200.jpg	1920	3200	image/jpeg	797824	F2-shared-earth-digital.JPG-1920x3200.jpg	/api/media/file/F2-shared-earth-digital.JPG-1200x630.jpg	1200	630	image/jpeg	105112	F2-shared-earth-digital.JPG-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/F2-shared-earth-digital.JPG.jpg
 581	Shared Earth Pottery Pop-Up	\N	\N	2026-07-09 14:27:24.612+00	2026-07-09 14:27:20.853+00	/api/media/file/F1-shared-earth-Instagram-4_5.png	\N	F1-shared-earth-Instagram-4_5.png	image/png	1875569	1600	2000	50	50	/api/media/file/F1-shared-earth-Instagram-4_5-300x375.png	300	375	image/png	131266	F1-shared-earth-Instagram-4_5-300x375.png	/api/media/file/F1-shared-earth-Instagram-4_5-500x500.png	500	500	image/png	269135	F1-shared-earth-Instagram-4_5-500x500.png	/api/media/file/F1-shared-earth-Instagram-4_5-600x750.png	600	750	image/png	413489	F1-shared-earth-Instagram-4_5-600x750.png	/api/media/file/F1-shared-earth-Instagram-4_5-900x1125.png	900	1125	image/png	854180	F1-shared-earth-Instagram-4_5-900x1125.png	/api/media/file/F1-shared-earth-Instagram-4_5-1400x1750.png	1400	1750	image/png	1897589	F1-shared-earth-Instagram-4_5-1400x1750.png	\N	\N	\N	\N	\N	\N	/api/media/file/F1-shared-earth-Instagram-4_5-1200x630.png	1200	630	image/png	701530	F1-shared-earth-Instagram-4_5-1200x630.png	https://ik.imagekit.io/raygun/redletterclay/F1-shared-earth-Instagram-4_5.png
+583	\N	\N	\N	2026-07-29 16:21:18.434+00	2026-07-29 16:21:15.576+00	/api/media/file/shared-earth-table-carousel.jpg	\N	shared-earth-table-carousel.jpg	image/jpeg	4549379	1500	2000	50	50	/api/media/file/shared-earth-table-carousel-300x400.jpg	300	400	image/jpeg	46519	shared-earth-table-carousel-300x400.jpg	/api/media/file/shared-earth-table-carousel-500x500.jpg	500	500	image/jpeg	91844	shared-earth-table-carousel-500x500.jpg	/api/media/file/shared-earth-table-carousel-600x800.jpg	600	800	image/jpeg	168562	shared-earth-table-carousel-600x800.jpg	/api/media/file/shared-earth-table-carousel-900x1200.jpg	900	1200	image/jpeg	360123	shared-earth-table-carousel-900x1200.jpg	/api/media/file/shared-earth-table-carousel-1400x1867.jpg	1400	1867	image/jpeg	789811	shared-earth-table-carousel-1400x1867.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/shared-earth-table-carousel-1200x630.jpg	1200	630	image/jpeg	209123	shared-earth-table-carousel-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/shared-earth-table-carousel.jpg
 \.
 
 
@@ -6282,7 +6284,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	f113fdaf-eb0e-4eee-b282-0a664668c933	2026-07-28 16:32:36.425+00	2026-07-28 18:32:36.425+00
+1	1	78351ecc-e815-4553-88fe-d9e5a47220c7	2026-07-29 16:17:20.576+00	2026-07-29 18:17:20.576+00
 \.
 
 
@@ -6493,7 +6495,7 @@ SELECT pg_catalog.setval('public.links_id_seq', 1, true);
 -- Name: media_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.media_id_seq', 582, true);
+SELECT pg_catalog.setval('public.media_id_seq', 583, true);
 
 
 --
@@ -6549,14 +6551,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 529, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 530, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 948, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 949, true);
 
 
 --
@@ -10632,5 +10634,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 2qOFUPAwdwPfUnjjni2YPnOSbtUkTGJOYZHTmXRhZkll9orKGGGBTO0AZxNyPSp
+\unrestrict entRZSpzrOm2X46gWE0vaxpM8ycyE6BtMPMF7oRrte6DMKVTvlydrWN3cVsblqy
 
