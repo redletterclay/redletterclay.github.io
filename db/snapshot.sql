@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict IzrHiOOpvdzA9iEew63kawBopIVFZ8MBi2bE9sXExHMAjijFDkRn0dtwuB1cazI
+\restrict nwOWx9SoglZbeIiNWc3qIWnsivMh8Pi2zFITOIYEfFUjFtF5kWfKahvjlm7QvNX
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -3980,18 +3980,19 @@ COPY public.gallery (id, updated_at, created_at) FROM stdin;
 --
 
 COPY public.gallery_blocks_equal_row (_order, _parent_id, _path, id, block_name, image_fit) FROM stdin;
-1	1	rows	6a17c040d096cd4d71f5babd	\N	cover
-3	1	rows	6a17c0a0d096cd4d71f5bac5	\N	cover
-4	1	rows	69b99b48aa9ac96a311211e4	\N	cover
-5	1	rows	69b99b48aa9ac96a311211dd	\N	cover
-6	1	rows	69bf5a3ae2d1da234e7e6c30	\N	cover
-7	1	rows	69b99b48aa9ac96a311211e1	\N	cover
-8	1	rows	69b99b48aa9ac96a311211e8	\N	cover
-9	1	rows	69b99b48aa9ac96a311211eb	\N	cover
-10	1	rows	69b99b48aa9ac96a311211ef	\N	cover
-11	1	rows	69b99b48aa9ac96a311211f3	\N	cover
-12	1	rows	69b99b48aa9ac96a311211f6	\N	cover
-13	1	rows	69b99b48aa9ac96a311211fa	\N	cover
+1	1	rows	6a7609f4c495171555a5b417	\N	cover
+2	1	rows	6a17c040d096cd4d71f5babd	\N	cover
+4	1	rows	6a17c0a0d096cd4d71f5bac5	\N	cover
+5	1	rows	69b99b48aa9ac96a311211e4	\N	cover
+6	1	rows	69b99b48aa9ac96a311211dd	\N	cover
+7	1	rows	69bf5a3ae2d1da234e7e6c30	\N	cover
+8	1	rows	69b99b48aa9ac96a311211e1	\N	cover
+9	1	rows	69b99b48aa9ac96a311211e8	\N	cover
+10	1	rows	69b99b48aa9ac96a311211eb	\N	cover
+11	1	rows	69b99b48aa9ac96a311211ef	\N	cover
+12	1	rows	69b99b48aa9ac96a311211f3	\N	cover
+13	1	rows	69b99b48aa9ac96a311211f6	\N	cover
+14	1	rows	69b99b48aa9ac96a311211fa	\N	cover
 \.
 
 
@@ -4000,6 +4001,8 @@ COPY public.gallery_blocks_equal_row (_order, _parent_id, _path, id, block_name,
 --
 
 COPY public.gallery_blocks_equal_row_items (_order, _parent_id, id, image_id, title) FROM stdin;
+1	6a7609f4c495171555a5b417	6a7609fac495171555a5b419	588	Salt Jars
+2	6a7609f4c495171555a5b417	6a760a1fc495171555a5b41b	589	Salt Jars
 1	6a17c040d096cd4d71f5babd	6a17c04cd096cd4d71f5babf	568	Tableware
 2	6a17c040d096cd4d71f5babd	6a17c068d096cd4d71f5bac1	570	Tableware
 3	6a17c040d096cd4d71f5babd	6a17c070d096cd4d71f5bac3	572	Tableware
@@ -4040,7 +4043,7 @@ COPY public.gallery_blocks_equal_row_items (_order, _parent_id, id, image_id, ti
 --
 
 COPY public.gallery_blocks_featured_row (_order, _parent_id, _path, id, featured_image_id, featured_title, block_name) FROM stdin;
-2	1	rows	69b99b48aa9ac96a311211d9	330	Lidded Jar	\N
+3	1	rows	69b99b48aa9ac96a311211d9	330	Lidded Jar	\N
 \.
 
 
@@ -4695,6 +4698,8 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 584	Covered Salt Jars	\N	\N	2026-08-07 15:37:56.235+00	2026-08-07 15:37:53.887+00	/api/media/file/salt-jars-covered.png	\N	salt-jars-covered.png	image/png	832743	1080	1920	50	50	/api/media/file/salt-jars-covered-300x533.png	300	533	image/png	100537	salt-jars-covered-300x533.png	/api/media/file/salt-jars-covered-500x500.png	500	500	image/png	248391	salt-jars-covered-500x500.png	/api/media/file/salt-jars-covered-600x1067.png	600	1067	image/png	369394	salt-jars-covered-600x1067.png	/api/media/file/salt-jars-covered-900x1600.png	900	1600	image/png	797163	salt-jars-covered-900x1600.png	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	/api/media/file/salt-jars-covered-1200x630.png	1200	630	image/png	1113789	salt-jars-covered-1200x630.png	https://ik.imagekit.io/raygun/redletterclay/salt-jars-covered.png
 585	Lidded Salt Jar with Carved Lid	\N	\N	2026-08-07 15:40:06.777+00	2026-08-07 15:40:04.334+00	/api/media/file/salt-jar-covered-lid_16x9.png	\N	salt-jar-covered-lid_16x9.png	image/png	1253383	1080	1920	50	50	/api/media/file/salt-jar-covered-lid_16x9-300x533.jpg	300	533	image/jpeg	20207	salt-jar-covered-lid_16x9-300x533.jpg	/api/media/file/salt-jar-covered-lid_16x9-500x500.jpg	500	500	image/jpeg	46349	salt-jar-covered-lid_16x9-500x500.jpg	/api/media/file/salt-jar-covered-lid_16x9-600x1067.jpg	600	1067	image/jpeg	67606	salt-jar-covered-lid_16x9-600x1067.jpg	/api/media/file/salt-jar-covered-lid_16x9-900x1600.jpg	900	1600	image/jpeg	134807	salt-jar-covered-lid_16x9-900x1600.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	/api/media/file/salt-jar-covered-lid_16x9-1200x630.jpg	1200	630	image/jpeg	127519	salt-jar-covered-lid_16x9-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/salt-jar-covered-lid_16x9.png
 587	Green Lidded Jar	\N	\N	2026-08-07 16:27:12.942+00	2026-08-07 16:27:10.644+00	/api/media/file/lidded-jar-green-16x9.jpg	\N	lidded-jar-green-16x9.jpg	image/jpeg	934714	1080	1920	50	50	/api/media/file/lidded-jar-green-16x9-300x533.jpg	300	533	image/jpeg	18991	lidded-jar-green-16x9-300x533.jpg	/api/media/file/lidded-jar-green-16x9-500x500.jpg	500	500	image/jpeg	40745	lidded-jar-green-16x9-500x500.jpg	/api/media/file/lidded-jar-green-16x9-600x1067.jpg	600	1067	image/jpeg	66067	lidded-jar-green-16x9-600x1067.jpg	/api/media/file/lidded-jar-green-16x9-900x1600.jpg	900	1600	image/jpeg	127483	lidded-jar-green-16x9-900x1600.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	/api/media/file/lidded-jar-green-16x9-1200x630.jpg	1200	630	image/jpeg	105460	lidded-jar-green-16x9-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/lidded-jar-green-16x9.jpg
+588	Salt Jars	\N	\N	2026-08-07 16:37:39.957+00	2026-08-07 16:37:38.011+00	/api/media/file/Salt-pots-landscape.jpg	\N	Salt-pots-landscape.jpg	image/jpeg	512416	2000	1333	50	50	/api/media/file/Salt-pots-landscape-300x200.jpg	300	200	image/jpeg	7961	Salt-pots-landscape-300x200.jpg	/api/media/file/Salt-pots-landscape-500x500.jpg	500	500	image/jpeg	36775	Salt-pots-landscape-500x500.jpg	/api/media/file/Salt-pots-landscape-600x400.jpg	600	400	image/jpeg	25968	Salt-pots-landscape-600x400.jpg	/api/media/file/Salt-pots-landscape-900x600.jpg	900	600	image/jpeg	54185	Salt-pots-landscape-900x600.jpg	/api/media/file/Salt-pots-landscape-1400x933.jpg	1400	933	image/jpeg	120199	Salt-pots-landscape-1400x933.jpg	/api/media/file/Salt-pots-landscape-1920x1280.jpg	1920	1280	image/jpeg	210164	Salt-pots-landscape-1920x1280.jpg	/api/media/file/Salt-pots-landscape-1200x630.jpg	1200	630	image/jpeg	88718	Salt-pots-landscape-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/Salt-pots-landscape.jpg
+589	Salt Jars - Covered	\N	\N	2026-08-07 16:41:10.789+00	2026-08-07 16:41:08.085+00	/api/media/file/salt-jars-covered-landscape.jpg	\N	salt-jars-covered-landscape.jpg	image/jpeg	697247	2000	1333	50	50	/api/media/file/salt-jars-covered-landscape-300x200.jpg	300	200	image/jpeg	6979	salt-jars-covered-landscape-300x200.jpg	/api/media/file/salt-jars-covered-landscape-500x500.jpg	500	500	image/jpeg	28297	salt-jars-covered-landscape-500x500.jpg	/api/media/file/salt-jars-covered-landscape-600x400.jpg	600	400	image/jpeg	22718	salt-jars-covered-landscape-600x400.jpg	/api/media/file/salt-jars-covered-landscape-900x600.jpg	900	600	image/jpeg	45373	salt-jars-covered-landscape-900x600.jpg	/api/media/file/salt-jars-covered-landscape-1400x933.jpg	1400	933	image/jpeg	93546	salt-jars-covered-landscape-1400x933.jpg	/api/media/file/salt-jars-covered-landscape-1920x1280.jpg	1920	1280	image/jpeg	152777	salt-jars-covered-landscape-1920x1280.jpg	/api/media/file/salt-jars-covered-landscape-1200x630.jpg	1200	630	image/jpeg	70872	salt-jars-covered-landscape-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/salt-jars-covered-landscape.jpg
 \.
 
 
@@ -6573,7 +6578,7 @@ SELECT pg_catalog.setval('public.links_id_seq', 1, true);
 -- Name: media_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.media_id_seq', 587, true);
+SELECT pg_catalog.setval('public.media_id_seq', 589, true);
 
 
 --
@@ -6629,14 +6634,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 535, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 537, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 954, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 956, true);
 
 
 --
@@ -10772,5 +10777,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict IzrHiOOpvdzA9iEew63kawBopIVFZ8MBi2bE9sXExHMAjijFDkRn0dtwuB1cazI
+\unrestrict nwOWx9SoglZbeIiNWc3qIWnsivMh8Pi2zFITOIYEfFUjFtF5kWfKahvjlm7QvNX
 
