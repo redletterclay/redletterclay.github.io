@@ -22,6 +22,7 @@ import { FAQ } from './FAQ/config'
 import { CollectionTitle } from './CollectionTitle/config'
 import { HeroImages } from './HeroImages/config'
 import { EventsCarouselImages } from './EventsCarouselImages/config'
+import { StatementCarousel } from './StatementCarousel/config'
 import { StoreSettings } from './StoreSettings/config'
 import { plugins } from './plugins'
 import { defaultLexical } from '@/fields/defaultLexical'
@@ -76,7 +77,7 @@ export default buildConfig({
   }),
   collections: [Pages, Posts, Media, Categories, Users, Products, Events],
   cors: [getServerSideURL()].filter(Boolean),
-  globals: [Header, Footer, Gallery, Stockists, Announcement, Links, Newsletter, FAQ, CollectionTitle, HeroImages, EventsCarouselImages, StoreSettings],
+  globals: [Header, Footer, Gallery, Stockists, Announcement, Links, Newsletter, FAQ, CollectionTitle, HeroImages, EventsCarouselImages, StatementCarousel, StoreSettings],
   plugins,
   secret: process.env.PAYLOAD_SECRET,
   sharp,

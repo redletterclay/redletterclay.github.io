@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict entRZSpzrOm2X46gWE0vaxpM8ycyE6BtMPMF7oRrte6DMKVTvlydrWN3cVsblqy
+\restrict IzrHiOOpvdzA9iEew63kawBopIVFZ8MBi2bE9sXExHMAjijFDkRn0dtwuB1cazI
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -2905,6 +2905,50 @@ ALTER SEQUENCE public.search_rels_id_seq OWNED BY public.search_rels.id;
 
 
 --
+-- Name: statement_carousel; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.statement_carousel (
+    id integer NOT NULL,
+    updated_at timestamp(3) with time zone,
+    created_at timestamp(3) with time zone
+);
+
+
+--
+-- Name: statement_carousel_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.statement_carousel_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: statement_carousel_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.statement_carousel_id_seq OWNED BY public.statement_carousel.id;
+
+
+--
+-- Name: statement_carousel_images; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.statement_carousel_images (
+    _order integer NOT NULL,
+    _parent_id integer NOT NULL,
+    id character varying NOT NULL,
+    image_id integer NOT NULL,
+    alt character varying
+);
+
+
+--
 -- Name: stockists; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3393,6 +3437,13 @@ ALTER TABLE ONLY public.search ALTER COLUMN id SET DEFAULT nextval('public.searc
 --
 
 ALTER TABLE ONLY public.search_rels ALTER COLUMN id SET DEFAULT nextval('public.search_rels_id_seq'::regclass);
+
+
+--
+-- Name: statement_carousel id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.statement_carousel ALTER COLUMN id SET DEFAULT nextval('public.statement_carousel_id_seq'::regclass);
 
 
 --
@@ -4544,6 +4595,7 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 436	\N	\N	\N	2026-03-21 01:52:24.482+00	2026-03-21 01:52:22.429+00	/api/media/file/M-0031-GRN-01.jpg	\N	M-0031-GRN-01.jpg	image/jpeg	512267	1820	1366	50	50	/api/media/file/M-0031-GRN-01-300x225.jpg	300	225	image/jpeg	6391	M-0031-GRN-01-300x225.jpg	/api/media/file/M-0031-GRN-01-500x500.jpg	500	500	image/jpeg	23854	M-0031-GRN-01-500x500.jpg	/api/media/file/M-0031-GRN-01-600x450.jpg	600	450	image/jpeg	20520	M-0031-GRN-01-600x450.jpg	/api/media/file/M-0031-GRN-01-900x675.jpg	900	675	image/jpeg	41650	M-0031-GRN-01-900x675.jpg	/api/media/file/M-0031-GRN-01-1400x1051.jpg	1400	1051	image/jpeg	88018	M-0031-GRN-01-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0031-GRN-01-1200x630.jpg	1200	630	image/jpeg	62333	M-0031-GRN-01-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0031-GRN-01.jpg
 437	\N	\N	\N	2026-03-21 01:52:25.671+00	2026-03-21 01:52:23.938+00	/api/media/file/M-0031-GRN-02.jpg	\N	M-0031-GRN-02.jpg	image/jpeg	426980	1820	1366	50	50	/api/media/file/M-0031-GRN-02-300x225.jpg	300	225	image/jpeg	5317	M-0031-GRN-02-300x225.jpg	/api/media/file/M-0031-GRN-02-500x500.jpg	500	500	image/jpeg	19768	M-0031-GRN-02-500x500.jpg	/api/media/file/M-0031-GRN-02-600x450.jpg	600	450	image/jpeg	17158	M-0031-GRN-02-600x450.jpg	/api/media/file/M-0031-GRN-02-900x675.jpg	900	675	image/jpeg	34243	M-0031-GRN-02-900x675.jpg	/api/media/file/M-0031-GRN-02-1400x1051.jpg	1400	1051	image/jpeg	72897	M-0031-GRN-02-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0031-GRN-02-1200x630.jpg	1200	630	image/jpeg	51543	M-0031-GRN-02-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0031-GRN-02.jpg
 438	\N	\N	\N	2026-03-21 01:52:26.377+00	2026-03-21 01:52:25.602+00	/api/media/file/M-0031-GRN-04.jpg	\N	M-0031-GRN-04.jpg	image/jpeg	765053	1820	1366	50	50	/api/media/file/M-0031-GRN-04-300x225.jpg	300	225	image/jpeg	8948	M-0031-GRN-04-300x225.jpg	/api/media/file/M-0031-GRN-04-500x500.jpg	500	500	image/jpeg	35181	M-0031-GRN-04-500x500.jpg	/api/media/file/M-0031-GRN-04-600x450.jpg	600	450	image/jpeg	30128	M-0031-GRN-04-600x450.jpg	/api/media/file/M-0031-GRN-04-900x675.jpg	900	675	image/jpeg	61210	M-0031-GRN-04-900x675.jpg	/api/media/file/M-0031-GRN-04-1400x1051.jpg	1400	1051	image/jpeg	127310	M-0031-GRN-04-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0031-GRN-04-1200x630.jpg	1200	630	image/jpeg	91574	M-0031-GRN-04-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0031-GRN-04.jpg
+586	Pink mug with plant	\N	\N	2026-08-07 16:09:45.169+00	2026-08-07 16:09:42.844+00	/api/media/file/pink-cup-16x9.jpg	\N	pink-cup-16x9.jpg	image/jpeg	1450020	1080	1920	50	50	/api/media/file/pink-cup-16x9-300x533.jpg	300	533	image/jpeg	19097	pink-cup-16x9-300x533.jpg	/api/media/file/pink-cup-16x9-500x500.jpg	500	500	image/jpeg	29372	pink-cup-16x9-500x500.jpg	/api/media/file/pink-cup-16x9-600x1067.jpg	600	1067	image/jpeg	66455	pink-cup-16x9-600x1067.jpg	/api/media/file/pink-cup-16x9-900x1600.jpg	900	1600	image/jpeg	136498	pink-cup-16x9-900x1600.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	/api/media/file/pink-cup-16x9-1200x630.jpg	1200	630	image/jpeg	61844	pink-cup-16x9-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/pink-cup-16x9.jpg
 440	\N	\N	\N	2026-03-21 01:54:15.899+00	2026-03-21 01:54:14.534+00	/api/media/file/M-0031-GRN-4.jpg	\N	M-0031-GRN-4.jpg	image/jpeg	629647	1820	1366	50	50	/api/media/file/M-0031-GRN-4-300x225.jpg	300	225	image/jpeg	7843	M-0031-GRN-4-300x225.jpg	/api/media/file/M-0031-GRN-4-500x500.jpg	500	500	image/jpeg	29167	M-0031-GRN-4-500x500.jpg	/api/media/file/M-0031-GRN-4-600x450.jpg	600	450	image/jpeg	24937	M-0031-GRN-4-600x450.jpg	/api/media/file/M-0031-GRN-4-900x675.jpg	900	675	image/jpeg	50304	M-0031-GRN-4-900x675.jpg	/api/media/file/M-0031-GRN-4-1400x1051.jpg	1400	1051	image/jpeg	105815	M-0031-GRN-4-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0031-GRN-4-1200x630.jpg	1200	630	image/jpeg	76165	M-0031-GRN-4-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0031-GRN-4.jpg
 441	\N	\N	\N	2026-03-21 02:05:08.833+00	2026-03-21 02:05:07.178+00	/api/media/file/M-0032-WHT-01.jpg	\N	M-0032-WHT-01.jpg	image/jpeg	527976	1820	1366	50	50	/api/media/file/M-0032-WHT-01-300x225.jpg	300	225	image/jpeg	6519	M-0032-WHT-01-300x225.jpg	/api/media/file/M-0032-WHT-01-500x500.jpg	500	500	image/jpeg	25761	M-0032-WHT-01-500x500.jpg	/api/media/file/M-0032-WHT-01-600x450.jpg	600	450	image/jpeg	22313	M-0032-WHT-01-600x450.jpg	/api/media/file/M-0032-WHT-01-900x675.jpg	900	675	image/jpeg	43283	M-0032-WHT-01-900x675.jpg	/api/media/file/M-0032-WHT-01-1400x1051.jpg	1400	1051	image/jpeg	84911	M-0032-WHT-01-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0032-WHT-01-1200x630.jpg	1200	630	image/jpeg	61351	M-0032-WHT-01-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0032-WHT-01.jpg
 444	\N	\N	\N	2026-03-21 02:05:11.191+00	2026-03-21 02:05:10.186+00	/api/media/file/M-0032-WHT-04.jpg	\N	M-0032-WHT-04.jpg	image/jpeg	646983	1820	1366	50	50	/api/media/file/M-0032-WHT-04-300x225.jpg	300	225	image/jpeg	7541	M-0032-WHT-04-300x225.jpg	/api/media/file/M-0032-WHT-04-500x500.jpg	500	500	image/jpeg	30053	M-0032-WHT-04-500x500.jpg	/api/media/file/M-0032-WHT-04-600x450.jpg	600	450	image/jpeg	25834	M-0032-WHT-04-600x450.jpg	/api/media/file/M-0032-WHT-04-900x675.jpg	900	675	image/jpeg	51110	M-0032-WHT-04-900x675.jpg	/api/media/file/M-0032-WHT-04-1400x1051.jpg	1400	1051	image/jpeg	102633	M-0032-WHT-04-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0032-WHT-04-1200x630.jpg	1200	630	image/jpeg	73323	M-0032-WHT-04-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0032-WHT-04.jpg
@@ -4640,6 +4692,9 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 580	\N	\N	\N	2026-07-02 03:47:31.109+00	2026-07-02 03:47:19.259+00	/api/media/file/F2-shared-earth-digital.JPG.jpg	\N	F2-shared-earth-digital.JPG.jpg	image/jpeg	11050690	3300	5500	50	50	/api/media/file/F2-shared-earth-digital.JPG-300x500.jpg	300	500	image/jpeg	36601	F2-shared-earth-digital.JPG-300x500.jpg	/api/media/file/F2-shared-earth-digital.JPG-500x500.jpg	500	500	image/jpeg	48669	F2-shared-earth-digital.JPG-500x500.jpg	/api/media/file/F2-shared-earth-digital.JPG-600x1000.jpg	600	1000	image/jpeg	113719	F2-shared-earth-digital.JPG-600x1000.jpg	/api/media/file/F2-shared-earth-digital.JPG-900x1500.jpg	900	1500	image/jpeg	224041	F2-shared-earth-digital.JPG-900x1500.jpg	/api/media/file/F2-shared-earth-digital.JPG-1400x2333.jpg	1400	2333	image/jpeg	469443	F2-shared-earth-digital.JPG-1400x2333.jpg	/api/media/file/F2-shared-earth-digital.JPG-1920x3200.jpg	1920	3200	image/jpeg	797824	F2-shared-earth-digital.JPG-1920x3200.jpg	/api/media/file/F2-shared-earth-digital.JPG-1200x630.jpg	1200	630	image/jpeg	105112	F2-shared-earth-digital.JPG-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/F2-shared-earth-digital.JPG.jpg
 581	Shared Earth Pottery Pop-Up	\N	\N	2026-07-09 14:27:24.612+00	2026-07-09 14:27:20.853+00	/api/media/file/F1-shared-earth-Instagram-4_5.png	\N	F1-shared-earth-Instagram-4_5.png	image/png	1875569	1600	2000	50	50	/api/media/file/F1-shared-earth-Instagram-4_5-300x375.png	300	375	image/png	131266	F1-shared-earth-Instagram-4_5-300x375.png	/api/media/file/F1-shared-earth-Instagram-4_5-500x500.png	500	500	image/png	269135	F1-shared-earth-Instagram-4_5-500x500.png	/api/media/file/F1-shared-earth-Instagram-4_5-600x750.png	600	750	image/png	413489	F1-shared-earth-Instagram-4_5-600x750.png	/api/media/file/F1-shared-earth-Instagram-4_5-900x1125.png	900	1125	image/png	854180	F1-shared-earth-Instagram-4_5-900x1125.png	/api/media/file/F1-shared-earth-Instagram-4_5-1400x1750.png	1400	1750	image/png	1897589	F1-shared-earth-Instagram-4_5-1400x1750.png	\N	\N	\N	\N	\N	\N	/api/media/file/F1-shared-earth-Instagram-4_5-1200x630.png	1200	630	image/png	701530	F1-shared-earth-Instagram-4_5-1200x630.png	https://ik.imagekit.io/raygun/redletterclay/F1-shared-earth-Instagram-4_5.png
 583	\N	\N	\N	2026-07-29 16:21:18.434+00	2026-07-29 16:21:15.576+00	/api/media/file/shared-earth-table-carousel.jpg	\N	shared-earth-table-carousel.jpg	image/jpeg	4549379	1500	2000	50	50	/api/media/file/shared-earth-table-carousel-300x400.jpg	300	400	image/jpeg	46519	shared-earth-table-carousel-300x400.jpg	/api/media/file/shared-earth-table-carousel-500x500.jpg	500	500	image/jpeg	91844	shared-earth-table-carousel-500x500.jpg	/api/media/file/shared-earth-table-carousel-600x800.jpg	600	800	image/jpeg	168562	shared-earth-table-carousel-600x800.jpg	/api/media/file/shared-earth-table-carousel-900x1200.jpg	900	1200	image/jpeg	360123	shared-earth-table-carousel-900x1200.jpg	/api/media/file/shared-earth-table-carousel-1400x1867.jpg	1400	1867	image/jpeg	789811	shared-earth-table-carousel-1400x1867.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/shared-earth-table-carousel-1200x630.jpg	1200	630	image/jpeg	209123	shared-earth-table-carousel-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/shared-earth-table-carousel.jpg
+584	Covered Salt Jars	\N	\N	2026-08-07 15:37:56.235+00	2026-08-07 15:37:53.887+00	/api/media/file/salt-jars-covered.png	\N	salt-jars-covered.png	image/png	832743	1080	1920	50	50	/api/media/file/salt-jars-covered-300x533.png	300	533	image/png	100537	salt-jars-covered-300x533.png	/api/media/file/salt-jars-covered-500x500.png	500	500	image/png	248391	salt-jars-covered-500x500.png	/api/media/file/salt-jars-covered-600x1067.png	600	1067	image/png	369394	salt-jars-covered-600x1067.png	/api/media/file/salt-jars-covered-900x1600.png	900	1600	image/png	797163	salt-jars-covered-900x1600.png	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	/api/media/file/salt-jars-covered-1200x630.png	1200	630	image/png	1113789	salt-jars-covered-1200x630.png	https://ik.imagekit.io/raygun/redletterclay/salt-jars-covered.png
+585	Lidded Salt Jar with Carved Lid	\N	\N	2026-08-07 15:40:06.777+00	2026-08-07 15:40:04.334+00	/api/media/file/salt-jar-covered-lid_16x9.png	\N	salt-jar-covered-lid_16x9.png	image/png	1253383	1080	1920	50	50	/api/media/file/salt-jar-covered-lid_16x9-300x533.jpg	300	533	image/jpeg	20207	salt-jar-covered-lid_16x9-300x533.jpg	/api/media/file/salt-jar-covered-lid_16x9-500x500.jpg	500	500	image/jpeg	46349	salt-jar-covered-lid_16x9-500x500.jpg	/api/media/file/salt-jar-covered-lid_16x9-600x1067.jpg	600	1067	image/jpeg	67606	salt-jar-covered-lid_16x9-600x1067.jpg	/api/media/file/salt-jar-covered-lid_16x9-900x1600.jpg	900	1600	image/jpeg	134807	salt-jar-covered-lid_16x9-900x1600.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	/api/media/file/salt-jar-covered-lid_16x9-1200x630.jpg	1200	630	image/jpeg	127519	salt-jar-covered-lid_16x9-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/salt-jar-covered-lid_16x9.png
+587	Green Lidded Jar	\N	\N	2026-08-07 16:27:12.942+00	2026-08-07 16:27:10.644+00	/api/media/file/lidded-jar-green-16x9.jpg	\N	lidded-jar-green-16x9.jpg	image/jpeg	934714	1080	1920	50	50	/api/media/file/lidded-jar-green-16x9-300x533.jpg	300	533	image/jpeg	18991	lidded-jar-green-16x9-300x533.jpg	/api/media/file/lidded-jar-green-16x9-500x500.jpg	500	500	image/jpeg	40745	lidded-jar-green-16x9-500x500.jpg	/api/media/file/lidded-jar-green-16x9-600x1067.jpg	600	1067	image/jpeg	66067	lidded-jar-green-16x9-600x1067.jpg	/api/media/file/lidded-jar-green-16x9-900x1600.jpg	900	1600	image/jpeg	127483	lidded-jar-green-16x9-900x1600.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	/api/media/file/lidded-jar-green-16x9-1200x630.jpg	1200	630	image/jpeg	105460	lidded-jar-green-16x9-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/lidded-jar-green-16x9.jpg
 \.
 
 
@@ -4821,7 +4876,7 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 11	20260513_products_thumb_array	7	2026-05-14 00:04:04.985+00	2026-05-14 00:04:04.984+00
 12	20260526_163601	8	2026-05-26 16:42:42.781+00	2026-05-26 16:42:42.781+00
 13	20260526_170229	9	2026-05-26 17:02:48.565+00	2026-05-26 17:02:48.565+00
-1	dev	-1	2026-07-28 16:31:42.425+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-08-07 15:37:07.945+00	2026-03-16 16:07:06.694+00
 14	20260601_220009	10	2026-06-01 22:04:41.959+00	2026-06-01 22:04:41.959+00
 15	20260601_221724	11	2026-06-01 22:18:16.436+00	2026-06-01 22:18:16.435+00
 16	20260602_021903	12	2026-06-02 02:19:36.4+00	2026-06-02 02:19:36.4+00
@@ -4889,6 +4944,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 24	collection-products-47	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-11 13:09:50.43+00	2026-03-18 21:39:51.456+00
 93	collection-products-28	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-11 13:22:27.307+00	2026-05-11 13:22:27.308+00
 108	global-events-carousel-images	{"editViewType": "default"}	2026-06-01 22:13:32.163+00	2026-06-01 22:13:32.165+00
+110	global-statement-carousel	{"editViewType": "default"}	2026-08-07 15:37:17.303+00	2026-08-07 15:37:17.305+00
 96	collection-products-2	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-11 13:58:06.477+00	2026-05-11 13:58:04.018+00
 21	collection-products-48	{"fields": {"_index-1": {"tabIndex": 1}, "_index-1-0-1": {"tabIndex": 0}}}	2026-05-11 14:13:54.079+00	2026-03-18 18:37:16.858+00
 54	collection-products-71	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-21 03:14:09.581+00	2026-03-21 02:42:14.187+00
@@ -5039,6 +5095,7 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 409	\N	65	user	1
 319	\N	83	user	1
 320	\N	84	user	1
+410	\N	110	user	1
 323	\N	85	user	1
 324	\N	86	user	1
 325	\N	87	user	1
@@ -6242,6 +6299,27 @@ COPY public.search_rels (id, "order", parent_id, path, posts_id) FROM stdin;
 
 
 --
+-- Data for Name: statement_carousel; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.statement_carousel (id, updated_at, created_at) FROM stdin;
+1	2026-08-07 15:38:08.996+00	2026-08-07 15:38:08.996+00
+\.
+
+
+--
+-- Data for Name: statement_carousel_images; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.statement_carousel_images (_order, _parent_id, id, image_id, alt) FROM stdin;
+1	1	6a75fbdac495171555a5b40d	584	\N
+2	1	6a75fc58c495171555a5b40f	585	\N
+3	1	6a76034bc495171555a5b411	586	\N
+4	1	6a760763c495171555a5b413	587	\N
+\.
+
+
+--
 -- Data for Name: stockists; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -6284,7 +6362,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	78351ecc-e815-4553-88fe-d9e5a47220c7	2026-07-29 16:17:20.576+00	2026-07-29 18:17:20.576+00
+1	1	6f89bcbc-dbc8-48b6-a0e4-de18e34989a6	2026-08-07 15:31:49.241+00	2026-08-07 17:31:49.241+00
 \.
 
 
@@ -6495,7 +6573,7 @@ SELECT pg_catalog.setval('public.links_id_seq', 1, true);
 -- Name: media_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.media_id_seq', 583, true);
+SELECT pg_catalog.setval('public.media_id_seq', 587, true);
 
 
 --
@@ -6551,14 +6629,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 530, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 535, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 949, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 954, true);
 
 
 --
@@ -6572,14 +6650,14 @@ SELECT pg_catalog.setval('public.payload_migrations_id_seq', 16, true);
 -- Name: payload_preferences_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_id_seq', 109, true);
+SELECT pg_catalog.setval('public.payload_preferences_id_seq', 110, true);
 
 
 --
 -- Name: payload_preferences_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 409, true);
+SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 410, true);
 
 
 --
@@ -6650,6 +6728,13 @@ SELECT pg_catalog.setval('public.search_id_seq', 13, true);
 --
 
 SELECT pg_catalog.setval('public.search_rels_id_seq', 18, true);
+
+
+--
+-- Name: statement_carousel_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.statement_carousel_id_seq', 1, true);
 
 
 --
@@ -7391,6 +7476,22 @@ ALTER TABLE ONLY public.search
 
 ALTER TABLE ONLY public.search_rels
     ADD CONSTRAINT search_rels_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: statement_carousel_images statement_carousel_images_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.statement_carousel_images
+    ADD CONSTRAINT statement_carousel_images_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: statement_carousel statement_carousel_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.statement_carousel
+    ADD CONSTRAINT statement_carousel_pkey PRIMARY KEY (id);
 
 
 --
@@ -9527,6 +9628,27 @@ CREATE INDEX search_updated_at_idx ON public.search USING btree (updated_at);
 
 
 --
+-- Name: statement_carousel_images_image_idx; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX statement_carousel_images_image_idx ON public.statement_carousel_images USING btree (image_id);
+
+
+--
+-- Name: statement_carousel_images_order_idx; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX statement_carousel_images_order_idx ON public.statement_carousel_images USING btree (_order);
+
+
+--
+-- Name: statement_carousel_images_parent_id_idx; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX statement_carousel_images_parent_id_idx ON public.statement_carousel_images USING btree (_parent_id);
+
+
+--
 -- Name: stockists_stockists_image_idx; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -10607,6 +10729,22 @@ ALTER TABLE ONLY public.search_rels
 
 
 --
+-- Name: statement_carousel_images statement_carousel_images_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.statement_carousel_images
+    ADD CONSTRAINT statement_carousel_images_image_id_media_id_fk FOREIGN KEY (image_id) REFERENCES public.media(id) ON DELETE SET NULL;
+
+
+--
+-- Name: statement_carousel_images statement_carousel_images_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.statement_carousel_images
+    ADD CONSTRAINT statement_carousel_images_parent_id_fk FOREIGN KEY (_parent_id) REFERENCES public.statement_carousel(id) ON DELETE CASCADE;
+
+
+--
 -- Name: stockists_stockists stockists_stockists_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -10634,5 +10772,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict entRZSpzrOm2X46gWE0vaxpM8ycyE6BtMPMF7oRrte6DMKVTvlydrWN3cVsblqy
+\unrestrict IzrHiOOpvdzA9iEew63kawBopIVFZ8MBi2bE9sXExHMAjijFDkRn0dtwuB1cazI
 

@@ -6,7 +6,7 @@ import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 import React from 'react'
 import Link from 'next/link'
-import { HomeCarousel } from './HomeCarousel.client'
+import { StatementCarousel } from './StatementCarousel.client'
 import { Last4Events } from '@/components/UpcomingEvents/Last4Events'
 import { ProductCard } from '@/components/ProductCard'
 import { ShopStockChecker } from './shop/ShopStockChecker.client'
@@ -21,7 +21,7 @@ export const revalidate = 600
 export default async function HomePage() {
   const payload = await getPayload({ config: configPromise })
 
-  const [featuredRes, announcementRes, collectionTitleRes, heroImagesRes] =
+  const [featuredRes, announcementRes, collectionTitleRes, heroImagesRes, statementCarouselRes] =
     await Promise.all([
       payload.find({
         collection: 'products',
@@ -34,16 +34,31 @@ export default async function HomePage() {
       payload.findGlobal({ slug: 'announcement', depth: 1 }).catch(() => null),
       payload.findGlobal({ slug: 'collection-title', depth: 0 }).catch(() => null),
       payload.findGlobal({ slug: 'hero-images', depth: 1 }).catch(() => null),
+      payload.findGlobal({ slug: 'statement-carousel' as any, depth: 1 }).catch(() => null),
     ])
 
   const featured = featuredRes.docs
   const announcement = announcementRes as any
+
+  const statementSlides: { src: string; alt: string }[] = (
+    (statementCarouselRes as any)?.images ?? []
+  )
+    .map((row: any) =>
+      row.image && typeof row.image === 'object'
+        ? { src: row.image.url, alt: row.alt || row.image.alt || '' }
+        : null,
+    )
+    .filter(Boolean)
   const collectionTitle = (collectionTitleRes as any)?.title || null
   const heroImagesData = heroImagesRes as any
   const heroImages: { url: string; alt?: string }[] = (heroImagesData?.images || [])
     .map((row: any) =>
       row.image && typeof row.image === 'object'
-        ? { url: row.image.url, alt: row.alt || row.image.alt || '', position: row.position ?? 'top center' }
+        ? {
+            url: row.image.url,
+            alt: row.alt || row.image.alt || '',
+            position: row.position ?? 'top center',
+          }
         : null,
     )
     .filter(Boolean)
@@ -213,7 +228,7 @@ export default async function HomePage() {
           display: 'flex',
           flexWrap: 'wrap',
           justifyContent: 'center',
-          alignItems: 'center',
+          alignItems: 'stretch',
         }}
       >
         {/* Red statement column */}
@@ -311,9 +326,17 @@ export default async function HomePage() {
         {/* Carousel column */}
         <div
           className="carousel-col"
-          style={{ flex: '1 1 300px', maxWidth: '41.66%', padding: '0 3rem' }}
+          style={{
+            flex: '1 1 300px',
+            maxWidth: '41.66%',
+            alignSelf: 'stretch',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            overflow: 'hidden',
+          }}
         >
-          <HomeCarousel />
+          <StatementCarousel slides={statementSlides} />
         </div>
       </div>
 
@@ -374,8 +397,8 @@ function AnnouncementBox({ announcement }: { announcement: any }) {
               flexDirection: 'column',
               justifyContent: 'center',
               textAlign: 'center',
-              fontSize: '1.6rem',
-              lineHeight: '2.5rem',
+              fontSize: '1.4rem',
+              lineHeight: '2.2rem',
             }}
           >
             {announcement.info && (

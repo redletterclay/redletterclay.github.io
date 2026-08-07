@@ -819,11 +819,13 @@ a.ul {
 
 @media (max-width: 767px) {
   .statement-col,
-  .carousel-col,
   .about-text-col,
   .about-photo-col {
     max-width: 100% !important;
     flex: 0 0 100% !important;
+  }
+  .carousel-col {
+    display: none !important;
   }
   .about-hero-container {
     padding-right: 0 !important;
@@ -833,9 +835,6 @@ a.ul {
     padding-right: 1.5rem !important;
     border-top-right-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
-  }
-  .carousel-col {
-    padding-top: 2rem !important;
   }
   .footer-journal-container {
     padding-left: 1.25rem !important;

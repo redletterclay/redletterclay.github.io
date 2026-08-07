@@ -125,6 +125,7 @@ export interface Config {
     'collection-title': CollectionTitle;
     'hero-images': HeroImage;
     'events-carousel-images': EventsCarouselImage;
+    'statement-carousel': StatementCarousel;
     'store-settings': StoreSetting;
   };
   globalsSelect: {
@@ -139,6 +140,7 @@ export interface Config {
     'collection-title': CollectionTitleSelect<false> | CollectionTitleSelect<true>;
     'hero-images': HeroImagesSelect<false> | HeroImagesSelect<true>;
     'events-carousel-images': EventsCarouselImagesSelect<false> | EventsCarouselImagesSelect<true>;
+    'statement-carousel': StatementCarouselSelect<false> | StatementCarouselSelect<true>;
     'store-settings': StoreSettingsSelect<false> | StoreSettingsSelect<true>;
   };
   locale: null;
@@ -2178,6 +2180,27 @@ export interface EventsCarouselImage {
   createdAt?: string | null;
 }
 /**
+ * Portrait (9:16) images shown alongside the "Crafted, Not Manufactured" statement on the homepage.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "statement-carousel".
+ */
+export interface StatementCarousel {
+  id: number;
+  /**
+   * Portrait (9:16) images. Upload in order — first image shows first.
+   */
+  images?:
+    | {
+        image: number | Media;
+        alt?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "store-settings".
  */
@@ -2412,6 +2435,22 @@ export interface EventsCarouselImagesSelect<T extends boolean = true> {
         image?: T;
         alt?: T;
         position?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "statement-carousel_select".
+ */
+export interface StatementCarouselSelect<T extends boolean = true> {
+  images?:
+    | T
+    | {
+        image?: T;
+        alt?: T;
         id?: T;
       };
   updatedAt?: T;
