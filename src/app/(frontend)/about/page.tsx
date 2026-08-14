@@ -1,24 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from 'next/types'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
-import configPromise from '@payload-config'
-import { getPayload } from 'payload'
 import Link from 'next/link'
-import { EventCard } from '@/components/UpcomingEvents/EventCard'
+import { Last4Events } from '@/components/UpcomingEvents/Last4Events'
 
 export const revalidate = 3600
 
 export default async function AboutPage() {
-  const payload = await getPayload({ config: configPromise })
-
-  const eventsRes = await payload.find({
-    collection: 'events',
-    depth: 1,
-    limit: 4,
-    overrideAccess: false,
-    sort: '-startDate',
-  })
-  const events = eventsRes.docs as any[]
 
   return (
     <main style={{ overflowX: 'hidden' }}>
@@ -85,22 +73,7 @@ export default async function AboutPage() {
 
       {/* Sub-footer: Calendar */}
       <div className="container-fluid sub-footer" style={{ paddingBottom: '3rem' }}>
-        {events.length > 0 && (
-          <div style={{ paddingTop: '2.5rem' }}>
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-              {events.map((event: any) => (
-                <EventCard key={event.id} event={event} isUpcoming={true} />
-              ))}
-            </div>
-            <div style={{ textAlign: 'right', paddingRight: '1rem', paddingTop: '0.5rem' }}>
-              <h3 style={{ margin: 0 }}>
-                <Link href="/events/" title="Event Archive">
-                  <i className="fa-regular fa-circle-right" aria-hidden="true" /> Event Archive
-                </Link>
-              </h3>
-            </div>
-          </div>
-        )}
+        <Last4Events />
       </div>
     </main>
   )

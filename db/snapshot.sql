@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict nwOWx9SoglZbeIiNWc3qIWnsivMh8Pi2zFITOIYEfFUjFtF5kWfKahvjlm7QvNX
+\restrict VOA90Rh4tPJgGcaTAaAAeQlgff0hfh9XIZxOuHFamDPFQ0CLh5vxZAxtyv0iSQS
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -4086,7 +4086,7 @@ COPY public.header_rels (id, "order", parent_id, path, pages_id, posts_id) FROM 
 --
 
 COPY public.hero_images (id, updated_at, created_at, fallback_id) FROM stdin;
-1	2026-05-28 04:10:22.955+00	2026-05-14 20:11:04.502+00	559
+1	2026-08-07 18:28:12.415+00	2026-05-14 20:11:04.502+00	559
 \.
 
 
@@ -4700,6 +4700,7 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 587	Green Lidded Jar	\N	\N	2026-08-07 16:27:12.942+00	2026-08-07 16:27:10.644+00	/api/media/file/lidded-jar-green-16x9.jpg	\N	lidded-jar-green-16x9.jpg	image/jpeg	934714	1080	1920	50	50	/api/media/file/lidded-jar-green-16x9-300x533.jpg	300	533	image/jpeg	18991	lidded-jar-green-16x9-300x533.jpg	/api/media/file/lidded-jar-green-16x9-500x500.jpg	500	500	image/jpeg	40745	lidded-jar-green-16x9-500x500.jpg	/api/media/file/lidded-jar-green-16x9-600x1067.jpg	600	1067	image/jpeg	66067	lidded-jar-green-16x9-600x1067.jpg	/api/media/file/lidded-jar-green-16x9-900x1600.jpg	900	1600	image/jpeg	127483	lidded-jar-green-16x9-900x1600.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	/api/media/file/lidded-jar-green-16x9-1200x630.jpg	1200	630	image/jpeg	105460	lidded-jar-green-16x9-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/lidded-jar-green-16x9.jpg
 588	Salt Jars	\N	\N	2026-08-07 16:37:39.957+00	2026-08-07 16:37:38.011+00	/api/media/file/Salt-pots-landscape.jpg	\N	Salt-pots-landscape.jpg	image/jpeg	512416	2000	1333	50	50	/api/media/file/Salt-pots-landscape-300x200.jpg	300	200	image/jpeg	7961	Salt-pots-landscape-300x200.jpg	/api/media/file/Salt-pots-landscape-500x500.jpg	500	500	image/jpeg	36775	Salt-pots-landscape-500x500.jpg	/api/media/file/Salt-pots-landscape-600x400.jpg	600	400	image/jpeg	25968	Salt-pots-landscape-600x400.jpg	/api/media/file/Salt-pots-landscape-900x600.jpg	900	600	image/jpeg	54185	Salt-pots-landscape-900x600.jpg	/api/media/file/Salt-pots-landscape-1400x933.jpg	1400	933	image/jpeg	120199	Salt-pots-landscape-1400x933.jpg	/api/media/file/Salt-pots-landscape-1920x1280.jpg	1920	1280	image/jpeg	210164	Salt-pots-landscape-1920x1280.jpg	/api/media/file/Salt-pots-landscape-1200x630.jpg	1200	630	image/jpeg	88718	Salt-pots-landscape-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/Salt-pots-landscape.jpg
 589	Salt Jars - Covered	\N	\N	2026-08-07 16:41:10.789+00	2026-08-07 16:41:08.085+00	/api/media/file/salt-jars-covered-landscape.jpg	\N	salt-jars-covered-landscape.jpg	image/jpeg	697247	2000	1333	50	50	/api/media/file/salt-jars-covered-landscape-300x200.jpg	300	200	image/jpeg	6979	salt-jars-covered-landscape-300x200.jpg	/api/media/file/salt-jars-covered-landscape-500x500.jpg	500	500	image/jpeg	28297	salt-jars-covered-landscape-500x500.jpg	/api/media/file/salt-jars-covered-landscape-600x400.jpg	600	400	image/jpeg	22718	salt-jars-covered-landscape-600x400.jpg	/api/media/file/salt-jars-covered-landscape-900x600.jpg	900	600	image/jpeg	45373	salt-jars-covered-landscape-900x600.jpg	/api/media/file/salt-jars-covered-landscape-1400x933.jpg	1400	933	image/jpeg	93546	salt-jars-covered-landscape-1400x933.jpg	/api/media/file/salt-jars-covered-landscape-1920x1280.jpg	1920	1280	image/jpeg	152777	salt-jars-covered-landscape-1920x1280.jpg	/api/media/file/salt-jars-covered-landscape-1200x630.jpg	1200	630	image/jpeg	70872	salt-jars-covered-landscape-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/salt-jars-covered-landscape.jpg
+590	4 Mugs	\N	\N	2026-08-07 18:27:34.063+00	2026-08-07 18:27:31.344+00	/api/media/file/LgHero-4-Mugs.jpg	\N	LgHero-4-Mugs.jpg	image/jpeg	1120530	2560	1600	50	50	/api/media/file/LgHero-4-Mugs-300x188.jpg	300	188	image/jpeg	9204	LgHero-4-Mugs-300x188.jpg	/api/media/file/LgHero-4-Mugs-500x500.jpg	500	500	image/jpeg	39135	LgHero-4-Mugs-500x500.jpg	/api/media/file/LgHero-4-Mugs-600x375.jpg	600	375	image/jpeg	30189	LgHero-4-Mugs-600x375.jpg	/api/media/file/LgHero-4-Mugs-900x563.jpg	900	563	image/jpeg	59870	LgHero-4-Mugs-900x563.jpg	/api/media/file/LgHero-4-Mugs-1400x875.jpg	1400	875	image/jpeg	118080	LgHero-4-Mugs-1400x875.jpg	/api/media/file/LgHero-4-Mugs-1920x1200.jpg	1920	1200	image/jpeg	188425	LgHero-4-Mugs-1920x1200.jpg	/api/media/file/LgHero-4-Mugs-1200x630.jpg	1200	630	image/jpeg	92134	LgHero-4-Mugs-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/LgHero-4-Mugs.jpg
 \.
 
 
@@ -4881,7 +4882,7 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 11	20260513_products_thumb_array	7	2026-05-14 00:04:04.985+00	2026-05-14 00:04:04.984+00
 12	20260526_163601	8	2026-05-26 16:42:42.781+00	2026-05-26 16:42:42.781+00
 13	20260526_170229	9	2026-05-26 17:02:48.565+00	2026-05-26 17:02:48.565+00
-1	dev	-1	2026-08-07 15:37:07.945+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-08-14 17:17:38.179+00	2026-03-16 16:07:06.694+00
 14	20260601_220009	10	2026-06-01 22:04:41.959+00	2026-06-01 22:04:41.959+00
 15	20260601_221724	11	2026-06-01 22:18:16.436+00	2026-06-01 22:18:16.435+00
 16	20260602_021903	12	2026-06-02 02:19:36.4+00	2026-06-02 02:19:36.4+00
@@ -4973,7 +4974,6 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 39	collection-products-39	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 04:16:23.536+00	2026-03-19 04:16:23.537+00
 45	collection-products-36	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 04:27:04.81+00	2026-03-19 04:27:04.811+00
 47	collection-products-30	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 04:29:13.308+00	2026-03-19 04:29:13.309+00
-48	collection-products-37	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 04:29:52.577+00	2026-03-19 04:29:52.578+00
 50	collection-products-20	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 04:34:17.962+00	2026-03-19 04:34:17.963+00
 79	collection-products-43	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 19:59:31.764+00	2026-05-08 19:59:31.765+00
 82	collection-products-12	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 20:02:16.612+00	2026-05-08 20:02:16.613+00
@@ -4991,6 +4991,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 23	collection-products-55	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-07-15 13:20:25.759+00	2026-03-18 19:52:20.363+00
 58	collection-products-74	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-07-15 13:24:46.681+00	2026-04-09 03:29:58.739+00
 65	collection-products-58	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-07-15 13:27:25.23+00	2026-04-09 04:53:07.637+00
+48	collection-products-37	{"fields": {"_index-1": {"tabIndex": 0}, "_index-1-0-1": {"tabIndex": 1}}}	2026-08-14 17:21:43.464+00	2026-03-19 04:29:52.578+00
 101	collection-products-10	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-11 14:26:25.114+00	2026-05-11 14:26:25.115+00
 71	collection-products-86	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-14 20:03:35.183+00	2026-05-02 02:18:37.222+00
 109	collection-products	{"sort": "sku", "limit": 100, "columns": [{"active": true, "accessor": "sku"}, {"active": true, "accessor": "thumb"}, {"active": false, "accessor": "adminTitle"}, {"active": true, "accessor": "title"}, {"active": true, "accessor": "price"}, {"active": true, "accessor": "featured"}, {"active": false, "accessor": "id"}, {"active": false, "accessor": "name"}, {"active": false, "accessor": "tags"}, {"active": false, "accessor": "featuredImage"}, {"active": false, "accessor": "images"}, {"active": false, "accessor": "description"}, {"active": false, "accessor": "width"}, {"active": false, "accessor": "height"}, {"active": false, "accessor": "weight"}, {"active": false, "accessor": "holds"}, {"active": false, "accessor": "firingMethod"}, {"active": false, "accessor": "foodSafe"}, {"active": false, "accessor": "dishwasherSafe"}, {"active": false, "accessor": "relatedProducts"}, {"active": false, "accessor": "updatedAt"}, {"active": true, "accessor": "createdAt"}, {"active": false, "accessor": "makingLinks"}, {"active": false, "accessor": "length"}, {"active": false, "accessor": "meta.overview"}, {"active": false, "accessor": "meta.title"}, {"active": false, "accessor": "meta.description"}, {"active": false, "accessor": "meta.image"}, {"active": false, "accessor": "meta.preview"}, {"active": true, "accessor": "active"}], "editViewType": "default"}	2026-07-15 13:19:23.22+00	2026-06-02 02:18:50.056+00
@@ -5070,7 +5071,6 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 146	\N	45	user	1
 147	\N	46	user	1
 148	\N	47	user	1
-149	\N	48	user	1
 150	\N	49	user	1
 151	\N	50	user	1
 154	\N	4	user	1
@@ -5114,6 +5114,7 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 334	\N	93	user	1
 335	\N	94	user	1
 336	\N	95	user	1
+412	\N	48	user	1
 339	\N	96	user	1
 340	\N	97	user	1
 341	\N	98	user	1
@@ -6358,7 +6359,7 @@ COPY public.store_settings (id, store_open, updated_at, created_at, closed_messa
 --
 
 COPY public.users (id, name, updated_at, created_at, email, reset_password_token, reset_password_expiration, salt, hash, login_attempts, lock_until) FROM stdin;
-1	Davey	2026-05-22 02:47:48.09+00	2026-03-16 16:07:37.97+00	david@raygun.org	\N	\N	47703bd813d08425779cea2bd6bf41310bc07fd68676424f2bb6acde4138730f	bff9886c23205b99d2a90f8a17f87f0c42d080bd92cb555baa851b9093789884486119fb317952455e541426686f7d16dac41ebec78c9ae581bf03b0314a9c341380f0ca883734c8c7a74c47661683de978a44a5b1d2124dfc54d9a4b49baffe8980b92b32ebeba718b5b779c5e7c507efeba97697392c487353f25f68696f14bb42e1a04d02b00bf174592d1980208ae55ae0ae4af5d27bba3b04e52169d41341b342ac60585082dd5f3e8741269ff095c34c5ef98aaaba2b0e8cf08c23f94ffb3f752a9cb10e0c352729f9dadd9b3d4a5f87b70b50db03f57b7f7191209ba8a02435a743023afccbcc15ceb21e1dcd2daaec7ebe8eba1ca27c297700758c1cb9436cc6cb670b15fdcbfbd33b98536dbc7e29c0126ab2cae4edf44499e7757f9a2522ec63ee2f9df98a1a3c9cf87d9773422695c0e6718129124abdfb6fdd701e07b217f299879e003fb11714c560e118034cfc3644e92dcb12e0cabae29789cd6e253529a97f116a16ecc0fdd273a652143af4cb233412a12d68fdf5f0f10a02377a59164401d8e204c59f396e204985441f7cf2a0def4de838aea8ef5cfa1dd06f203f23a84c0b989f101f44d88eae1bb44a2ff397fe1fac1aa83348698c7c000f7b1650ec576e70d63292f6c82a5e345368def8d97d4bec093d00399f3709ea5dd66801f3fec40f8dd360f833c50da09d497de938c00d3c227e49ff7b58f	0	\N
+1	Davey	2026-08-14 17:21:02.137+00	2026-03-16 16:07:37.97+00	david@raygun.org	\N	\N	47703bd813d08425779cea2bd6bf41310bc07fd68676424f2bb6acde4138730f	bff9886c23205b99d2a90f8a17f87f0c42d080bd92cb555baa851b9093789884486119fb317952455e541426686f7d16dac41ebec78c9ae581bf03b0314a9c341380f0ca883734c8c7a74c47661683de978a44a5b1d2124dfc54d9a4b49baffe8980b92b32ebeba718b5b779c5e7c507efeba97697392c487353f25f68696f14bb42e1a04d02b00bf174592d1980208ae55ae0ae4af5d27bba3b04e52169d41341b342ac60585082dd5f3e8741269ff095c34c5ef98aaaba2b0e8cf08c23f94ffb3f752a9cb10e0c352729f9dadd9b3d4a5f87b70b50db03f57b7f7191209ba8a02435a743023afccbcc15ceb21e1dcd2daaec7ebe8eba1ca27c297700758c1cb9436cc6cb670b15fdcbfbd33b98536dbc7e29c0126ab2cae4edf44499e7757f9a2522ec63ee2f9df98a1a3c9cf87d9773422695c0e6718129124abdfb6fdd701e07b217f299879e003fb11714c560e118034cfc3644e92dcb12e0cabae29789cd6e253529a97f116a16ecc0fdd273a652143af4cb233412a12d68fdf5f0f10a02377a59164401d8e204c59f396e204985441f7cf2a0def4de838aea8ef5cfa1dd06f203f23a84c0b989f101f44d88eae1bb44a2ff397fe1fac1aa83348698c7c000f7b1650ec576e70d63292f6c82a5e345368def8d97d4bec093d00399f3709ea5dd66801f3fec40f8dd360f833c50da09d497de938c00d3c227e49ff7b58f	0	\N
 \.
 
 
@@ -6367,7 +6368,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	6f89bcbc-dbc8-48b6-a0e4-de18e34989a6	2026-08-07 15:31:49.241+00	2026-08-07 17:31:49.241+00
+1	1	e1062950-973c-4bb2-89c3-135ed0f04cae	2026-08-14 17:21:02.126+00	2026-08-14 19:21:02.126+00
 \.
 
 
@@ -6578,7 +6579,7 @@ SELECT pg_catalog.setval('public.links_id_seq', 1, true);
 -- Name: media_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.media_id_seq', 589, true);
+SELECT pg_catalog.setval('public.media_id_seq', 590, true);
 
 
 --
@@ -6634,14 +6635,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 537, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 541, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 956, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 960, true);
 
 
 --
@@ -6662,7 +6663,7 @@ SELECT pg_catalog.setval('public.payload_preferences_id_seq', 110, true);
 -- Name: payload_preferences_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 410, true);
+SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 412, true);
 
 
 --
@@ -10777,5 +10778,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict nwOWx9SoglZbeIiNWc3qIWnsivMh8Pi2zFITOIYEfFUjFtF5kWfKahvjlm7QvNX
+\unrestrict VOA90Rh4tPJgGcaTAaAAeQlgff0hfh9XIZxOuHFamDPFQ0CLh5vxZAxtyv0iSQS
 
