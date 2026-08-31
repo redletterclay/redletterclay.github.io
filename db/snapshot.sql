@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict Q8qDtFXeaqVv1ZDNuC77Q4xJzoJKXiFlQUWoZUPlsYr67bWBNKZc18As2GCMnhn
+\restrict 4apYaVPOaUHGWwg6gcqPCAVQH2VsIXy3KuaaiTJvZ7BbhoQ9kKs0XNMv0WnIKiE
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -3732,7 +3732,7 @@ COPY public._posts_v_version_gallery_items (_order, _parent_id, id, image_id, al
 --
 
 COPY public.announcement (id, name, live, url, thumb_id, cta, updated_at, created_at, info) FROM stdin;
-1	Shop in Person at My Next Market	t	/shop/	566	\N	2026-08-19 17:25:27.213+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Thalia Hall is gearing up once again for a fully loaded summer edition of the Thalia Hall Free For All, a free-admission building crawl featuring programming across our main stage and Punch House, plus an expanded outdoor hangout on Allport Street and special street stage!", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Wander the building inside and out as you catch live music everywhere you turn, explore our curated vendor market, treat yourself to delicious food, and dive into a variety of games and activities that’ll keep the good times rolling.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "This event is entirely free, but on-site donations benefiting the Pilsen Food Pantry are greatly encouraged.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "SAT, AUG 29 | 3:00pm — 9pm", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Save the date in your calendar: ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a85e6e9a7008abd8c86eea0", "type": "link", "fields": {"url": "https://redletterclay.com/ical/thalia-hall-free-for-all-2026-final.ics", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Apple", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " | ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6a85e6c7a7008abd8c86ee9f", "type": "link", "fields": {"url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Thalia+Hall+Free+For+All&dates=20260829T200000Z/20260830T020000Z&details=Free+community+event+at+Thalia+Hall.&location=1807+S+Allport+St,+Chicago,+IL+60608", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Google", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}
+1	Shop in Person at My Next Market	t	https://www.wilderhouse.com/pages/2026-pottery-market-autumn-edition	582	\N	2026-08-31 02:24:06.213+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"id": "6a94df3d9f59267270213a7b", "type": "link", "fields": {"url": "https://www.wilderhouse.com/", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Wilderhouse", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " is excited to bring back The Chicago Pottery Market for its second year! The 2026 Autumn market will take place September 12th & 13th and will feature 60+ local Chicago ceramic artists! Join us for a beautiful weekend of all things pottery.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Renegade Craft Fair will be nearby in Wicker Park, as well as Wicker Park Fest. The Wicker Park Farmers Market will be happening on Sunday morning.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "SAT, SEPT 12 + 13 | 10:00am — 5pm", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}
 \.
 
 
@@ -4925,7 +4925,6 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 66	collection-products-45	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-07 19:03:03.878+00	2026-04-09 04:59:27.582+00
 104	global-hero-images	{"editViewType": "default"}	2026-05-14 20:10:28.95+00	2026-05-14 20:10:28.969+00
 69	collection-products-84	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 01:12:24.395+00	2026-05-02 01:51:51.858+00
-75	collection-products-90	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-14 21:32:37.561+00	2026-05-02 03:17:56.53+00
 64	collection-products-80	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 15:22:28.293+00	2026-04-09 04:39:08.126+00
 30	collection-products-60	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 16:12:02.358+00	2026-03-19 01:20:03.815+00
 19	global-faq	{"editViewType": "default"}	2026-03-17 20:18:36.242+00	2026-03-17 20:18:36.246+00
@@ -4955,6 +4954,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 21	collection-products-48	{"fields": {"_index-1": {"tabIndex": 1}, "_index-1-0-1": {"tabIndex": 0}}}	2026-05-11 14:13:54.079+00	2026-03-18 18:37:16.858+00
 38	collection-products-17	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-08-28 17:30:54.903+00	2026-03-19 04:04:22.35+00
 90	collection-products-14	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-08-28 17:31:07.759+00	2026-05-11 13:08:48.351+00
+75	collection-products-90	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-08-30 15:06:20.32+00	2026-05-02 03:17:56.53+00
 54	collection-products-71	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-21 03:14:09.581+00	2026-03-21 02:42:14.187+00
 68	collection-products-83	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-05-02 01:46:13.978+00	2026-04-11 02:38:31.802+00
 100	collection-products-4	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-11 14:24:54.953+00	2026-05-11 14:24:52.615+00
@@ -5049,7 +5049,6 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 375	\N	71	user	1
 376	\N	73	user	1
 377	\N	104	user	1
-378	\N	75	user	1
 274	\N	60	user	1
 380	\N	17	user	1
 381	\N	105	user	1
@@ -5122,6 +5121,7 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 342	\N	21	user	1
 344	\N	99	user	1
 414	\N	90	user	1
+415	\N	75	user	1
 347	\N	100	user	1
 \.
 
@@ -6370,7 +6370,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	6c021392-397c-4a4d-a1fd-be68bda82429	2026-08-28 17:12:37.488+00	2026-08-28 19:12:37.488+00
+1	1	510a36d0-89b3-41be-9ad8-a7cc40c3d945	2026-08-31 01:55:48.493+00	2026-08-31 03:55:48.493+00
 \.
 
 
@@ -6637,14 +6637,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 555, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 558, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 981, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 984, true);
 
 
 --
@@ -6665,7 +6665,7 @@ SELECT pg_catalog.setval('public.payload_preferences_id_seq', 110, true);
 -- Name: payload_preferences_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 414, true);
+SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 415, true);
 
 
 --
@@ -10780,5 +10780,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Q8qDtFXeaqVv1ZDNuC77Q4xJzoJKXiFlQUWoZUPlsYr67bWBNKZc18As2GCMnhn
+\unrestrict 4apYaVPOaUHGWwg6gcqPCAVQH2VsIXy3KuaaiTJvZ7BbhoQ9kKs0XNMv0WnIKiE
 
