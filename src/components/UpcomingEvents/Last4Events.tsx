@@ -29,8 +29,8 @@ export async function Last4Events() {
       sort: '-startDate',
       where: { startDate: { less_than: now } },
     })
-    // Reverse so oldest of the fillers is leftmost (chronological L→R)
-    past = [...pastRes.docs].reverse()
+    // Most recent past event first, continuing outward from "now" (newest → oldest)
+    past = pastRes.docs
   }
 
   const events = [...upcoming, ...past]
