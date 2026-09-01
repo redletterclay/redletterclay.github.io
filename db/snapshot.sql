@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict Z5kyILSCtRZdyOFcTdLYDh7nwyBUeozRJubzrzVb1tNfVLEh3q0veEiB87BPdv0
+\restrict jlmgflUt3xPgP7iU9SEPVbZjyL8nthux6zCHMrPXfQihS3KoT6xZvvxd0489k16
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -3794,7 +3794,7 @@ COPY public.events (id, title, start_date, "time", location, address, map_url, u
 --
 
 COPY public.events_carousel_images (id, updated_at, created_at, upcoming_image_id) FROM stdin;
-1	2026-07-29 16:21:36.336+00	2026-06-01 22:14:31.028+00	566
+1	2026-08-31 23:44:40.202+00	2026-06-01 22:14:31.028+00	582
 \.
 
 
@@ -6370,7 +6370,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	510a36d0-89b3-41be-9ad8-a7cc40c3d945	2026-08-31 01:55:48.493+00	2026-08-31 03:55:48.493+00
+1	1	84ced838-7c2d-4019-9a4b-ad04f1755efe	2026-08-31 23:41:19.464+00	2026-09-01 01:41:19.464+00
 \.
 
 
@@ -6637,14 +6637,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 558, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 559, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 984, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 985, true);
 
 
 --
@@ -10780,5 +10780,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Z5kyILSCtRZdyOFcTdLYDh7nwyBUeozRJubzrzVb1tNfVLEh3q0veEiB87BPdv0
+\unrestrict jlmgflUt3xPgP7iU9SEPVbZjyL8nthux6zCHMrPXfQihS3KoT6xZvvxd0489k16
 
