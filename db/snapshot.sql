@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict CSUGcqriD4m2Yg0XsGnlkTCmUsYNNSTjNu6Ow1KpPpX9M57AlHl4xtZ0VaNfA3I
+\restrict qjEzlayogdwCHK01pFGXOg3yhI86SCe65WONc7xeZGH8uMz8OpDbQWkqvKLCZai
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -4861,7 +4861,6 @@ COPY public.payload_kv (id, key, data) FROM stdin;
 --
 
 COPY public.payload_locked_documents (id, global_slug, updated_at, created_at) FROM stdin;
-564	store-settings	2026-09-11 01:57:18.011+00	2026-09-11 01:57:18.01+00
 \.
 
 
@@ -4870,7 +4869,6 @@ COPY public.payload_locked_documents (id, global_slug, updated_at, created_at) F
 --
 
 COPY public.payload_locked_documents_rels (id, "order", parent_id, path, pages_id, posts_id, media_id, categories_id, users_id, redirects_id, forms_id, form_submissions_id, search_id, payload_folders_id, products_id, events_id) FROM stdin;
-990	\N	564	user	\N	\N	\N	\N	1	\N	\N	\N	\N	\N	\N	\N
 \.
 
 
@@ -6359,7 +6357,7 @@ COPY public.stockists_stockists (_order, _parent_id, id, name, info, address, ma
 --
 
 COPY public.store_settings (id, store_open, updated_at, created_at, closed_message) FROM stdin;
-1	f	2026-09-11 01:57:17.712+00	2026-05-21 15:45:30.29+00	The online store is closed for an in-person market (The Chicago Pottery Market).\n\nIt will re-open Monday, May 25th.
+1	f	2026-09-11 02:01:39.063+00	2026-05-21 15:45:30.29+00	The online store is closed for an in-person market (The Chicago Pottery Market).
 \.
 
 
@@ -10787,5 +10785,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict CSUGcqriD4m2Yg0XsGnlkTCmUsYNNSTjNu6Ow1KpPpX9M57AlHl4xtZ0VaNfA3I
+\unrestrict qjEzlayogdwCHK01pFGXOg3yhI86SCe65WONc7xeZGH8uMz8OpDbQWkqvKLCZai
 
