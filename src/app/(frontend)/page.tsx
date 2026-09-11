@@ -21,7 +21,7 @@ export const revalidate = 600
 export default async function HomePage() {
   const payload = await getPayload({ config: configPromise })
 
-  const [featuredRes, announcementRes, collectionTitleRes, heroImagesRes, statementCarouselRes] =
+  const [featuredRes, announcementRes, collectionTitleRes, heroImagesRes, statementCarouselRes, storeSettingsRes] =
     await Promise.all([
       payload.find({
         collection: 'products',
@@ -35,10 +35,12 @@ export default async function HomePage() {
       payload.findGlobal({ slug: 'collection-title', depth: 0 }).catch(() => null),
       payload.findGlobal({ slug: 'hero-images', depth: 1 }).catch(() => null),
       payload.findGlobal({ slug: 'statement-carousel' as any, depth: 1 }).catch(() => null),
+      payload.findGlobal({ slug: 'store-settings', depth: 0 }).catch(() => null),
     ])
 
   const featured = featuredRes.docs
   const announcement = announcementRes as any
+  const storeOpen = (storeSettingsRes as any)?.storeOpen !== false
 
   const statementSlides: { src: string; alt: string }[] = (
     (statementCarouselRes as any)?.images ?? []
@@ -120,104 +122,107 @@ export default async function HomePage() {
         {/* end linen background */}
 
         {/* Shop CTA */}
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '1rem',
-            paddingTop: '2rem',
-            paddingBottom: '2rem',
-            paddingInline: '1.5rem',
-            position: 'relative',
-            zIndex: 3,
-          }}
-        >
-          <hr
-            style={{ flex: 1, borderColor: '#c12121', borderWidth: '2px', borderStyle: 'solid' }}
-            className="animate__animated animate__zoomIn"
-          />
-          <Link
-            href="/shop/"
-            className="btn animate__animated animate__flipInX"
+        {storeOpen && (
+          <div
             style={{
-              borderRadius: '9999px',
-              padding: '0.5rem 2rem',
-              textAlign: 'center',
-              whiteSpace: 'nowrap',
-              backgroundColor: '#24A9CA',
-              color: 'white',
-              border: '2px solid #24A9CA',
-              fontSize: '1.4rem',
-              fontFamily: 'var(--font-heading2)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
+              paddingTop: '2rem',
+              paddingBottom: '2rem',
+              paddingInline: '1.5rem',
+              position: 'relative',
+              zIndex: 3,
             }}
           >
-            <i
-              className="fa-solid fa-cart-shopping no-anim"
-              style={{ marginRight: '0.5rem', color: 'white' }}
-              aria-hidden="true"
+            <hr
+              style={{ flex: 1, borderColor: '#c12121', borderWidth: '2px', borderStyle: 'solid' }}
+              className="animate__animated animate__zoomIn"
             />
-            Shop{' '}
-            <i
-              className="fa-solid fa-angles-right slide"
-              style={{ marginLeft: '0.5rem', color: 'white' }}
-              aria-hidden="true"
-            />
-          </Link>
-          <hr
-            style={{ flex: 1, borderColor: '#c12121', borderWidth: '2px', borderStyle: 'solid' }}
-            className="animate__animated animate__zoomIn"
-          />
-        </div>
-        <PricingNote />
-
-        {/* Collection Title */}
-        {collectionTitle && (
-          <h2
-            className="fc-1"
-            style={{
-              textAlign: 'center',
-              paddingInline: '1rem',
-              paddingBlock: '2rem',
-              fontWeight: '800',
-              fontSize: '4rem',
-              lineHeight: '4.1rem',
-            }}
-          >
-            {collectionTitle}
-          </h2>
-        )}
-
-        {/* Featured products */}
-        {featured.length > 0 && (
-          <>
-            <div
-              className="animate__animated animate__fadeIn featured-products-grid"
+            <Link
+              href="/shop/"
+              className="btn animate__animated animate__flipInX"
               style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                justifyContent: 'center',
-                padding: '0 0.5rem',
+                borderRadius: '9999px',
+                padding: '0.5rem 2rem',
+                textAlign: 'center',
+                whiteSpace: 'nowrap',
+                backgroundColor: '#24A9CA',
+                color: 'white',
+                border: '2px solid #24A9CA',
+                fontSize: '1.4rem',
+                fontFamily: 'var(--font-heading2)',
               }}
             >
-              {featured.map((product: any) => (
-                <ProductCard key={product.id} product={product} featured={true} />
-              ))}
-              <div
+              <i
+                className="fa-solid fa-cart-shopping no-anim"
+                style={{ marginRight: '0.5rem', color: 'white' }}
+                aria-hidden="true"
+              />
+              Shop{' '}
+              <i
+                className="fa-solid fa-angles-right slide"
+                style={{ marginLeft: '0.5rem', color: 'white' }}
+                aria-hidden="true"
+              />
+            </Link>
+            <hr
+              style={{ flex: 1, borderColor: '#c12121', borderWidth: '2px', borderStyle: 'solid' }}
+              className="animate__animated animate__zoomIn"
+            />
+          </div>
+        )}
+        {storeOpen && <PricingNote />}
+
+        {/* Collection Title + Featured products */}
+        {storeOpen && (
+          <>
+            {collectionTitle && (
+              <h2
+                className="fc-1"
                 style={{
-                  width: '100%',
-                  textAlign: 'right',
-                  paddingTop: '0.5rem',
-                  paddingBottom: '3rem',
-                  paddingRight: '0.75rem',
+                  textAlign: 'center',
+                  paddingInline: '1rem',
+                  paddingBlock: '2rem',
+                  fontWeight: '800',
+                  fontSize: '4rem',
+                  lineHeight: '4.1rem',
                 }}
               >
-                <h3 style={{ margin: 0 }}>
-                  <Link href="/shop/" title="Shop Handmade Ceramics" style={{ color: '#24A9CA' }}>
-                    <i className="fa-regular fa-circle-right" aria-hidden="true" /> See More
-                  </Link>
-                </h3>
+                {collectionTitle}
+              </h2>
+            )}
+
+            {featured.length > 0 && (
+              <div
+                className="animate__animated animate__fadeIn featured-products-grid"
+                style={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  justifyContent: 'center',
+                  padding: '0 0.5rem',
+                }}
+              >
+                {featured.map((product: any) => (
+                  <ProductCard key={product.id} product={product} featured={true} />
+                ))}
+                <div
+                  style={{
+                    width: '100%',
+                    textAlign: 'right',
+                    paddingTop: '0.5rem',
+                    paddingBottom: '3rem',
+                    paddingRight: '0.75rem',
+                  }}
+                >
+                  <h3 style={{ margin: 0 }}>
+                    <Link href="/shop/" title="Shop Handmade Ceramics" style={{ color: '#24A9CA' }}>
+                      <i className="fa-regular fa-circle-right" aria-hidden="true" /> See More
+                    </Link>
+                  </h3>
+                </div>
               </div>
-            </div>
+            )}
           </>
         )}
       </div>
@@ -229,6 +234,7 @@ export default async function HomePage() {
           flexWrap: 'wrap',
           justifyContent: 'center',
           alignItems: 'stretch',
+          paddingTop: storeOpen ? 0 : '4rem',
         }}
       >
         {/* Red statement column */}
