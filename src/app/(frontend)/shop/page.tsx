@@ -35,6 +35,7 @@ export default async function ShopPage() {
   ])
   const storeOpen = (storeSettingsRes as any)?.storeOpen !== false
   const closedMessage = (storeSettingsRes as any)?.closedMessage || 'The online store is temporarily closed for an in-person market. Check back soon!'
+  const showClosedAnnouncement = !storeOpen || products.totalDocs === 0
 
   return (
     <main style={{ overflowX: 'hidden' }}>
@@ -45,7 +46,7 @@ export default async function ShopPage() {
       <PricingNote />
 
       {/* Store closed announcement */}
-      {!storeOpen && (
+      {showClosedAnnouncement && (
         <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem 1rem' }}>
           <div style={{ width: '100%', maxWidth: '1200px' }}>
             <div className="announcement-box">

@@ -21,7 +21,7 @@ export const revalidate = 600
 export default async function HomePage() {
   const payload = await getPayload({ config: configPromise })
 
-  const [featuredRes, announcementRes, collectionTitleRes, heroImagesRes, statementCarouselRes, storeSettingsRes] =
+  const [featuredRes, announcementRes, collectionTitleRes, heroImagesRes, statementCarouselRes, storeSettingsRes, activeProductsCountRes] =
     await Promise.all([
       payload.find({
         collection: 'products',
@@ -36,11 +36,14 @@ export default async function HomePage() {
       payload.findGlobal({ slug: 'hero-images', depth: 1 }).catch(() => null),
       payload.findGlobal({ slug: 'statement-carousel' as any, depth: 1 }).catch(() => null),
       payload.findGlobal({ slug: 'store-settings', depth: 0 }).catch(() => null),
+      payload.count({ collection: 'products', overrideAccess: false, where: { active: { equals: true } } }),
     ])
 
   const featured = featuredRes.docs
   const announcement = announcementRes as any
   const storeOpen = (storeSettingsRes as any)?.storeOpen !== false
+  const hasActiveProducts = activeProductsCountRes.totalDocs > 0
+  const showShopSection = storeOpen && hasActiveProducts
 
   const statementSlides: { src: string; alt: string }[] = (
     (statementCarouselRes as any)?.images ?? []
@@ -122,7 +125,7 @@ export default async function HomePage() {
         {/* end linen background */}
 
         {/* Shop CTA */}
-        {storeOpen && (
+        {showShopSection && (
           <div
             style={{
               display: 'flex',
@@ -172,10 +175,10 @@ export default async function HomePage() {
             />
           </div>
         )}
-        {storeOpen && <PricingNote />}
+        {showShopSection && <PricingNote />}
 
         {/* Collection Title + Featured products */}
-        {storeOpen && (
+        {showShopSection && (
           <>
             {collectionTitle && (
               <h2
@@ -234,7 +237,7 @@ export default async function HomePage() {
           flexWrap: 'wrap',
           justifyContent: 'center',
           alignItems: 'stretch',
-          paddingTop: storeOpen ? 0 : '4rem',
+          paddingTop: showShopSection ? 0 : '4rem',
         }}
       >
         {/* Red statement column */}
