@@ -14,6 +14,7 @@ import { ProductCard } from '@/components/ProductCard'
 import { ShopPagination } from '../ShopPagination'
 import { PricingNote } from '@/components/PricingNote'
 import { ShippingInfo } from '@/components/ShippingInfo'
+import RichText from '@/components/RichText'
 
 export const revalidate = 600
 
@@ -46,7 +47,7 @@ export default async function ShopCategoryPage({ params: paramsPromise }: Args) 
     payload.findGlobal({ slug: 'store-settings', depth: 0 }).catch(() => null),
   ])
   const storeOpen = (storeSettingsRes as any)?.storeOpen !== false
-  const closedMessage = (storeSettingsRes as any)?.closedMessage || 'The online store is temporarily closed for an in-person market. Check back soon!'
+  const closedMessage = (storeSettingsRes as any)?.closedMessage
 
   return (
     <main style={{ overflowX: 'hidden' }}>
@@ -67,10 +68,14 @@ export default async function ShopCategoryPage({ params: paramsPromise }: Args) 
                     Store Temporarily Closed
                   </h3>
                 </div>
-                <div style={{ background: '#f8f9fa', borderLeft: '3px solid #c12121', borderRight: '3px solid #c12121', borderBottom: '3px solid #c12121', padding: '1.25rem 1.5rem', textAlign: 'center', fontSize: '1.6rem', lineHeight: '2.5rem' }}>
-                  {closedMessage.split('\n').filter(Boolean).map((line: string, i: number) => (
-                    <p key={i} style={{ margin: 0 }}>{line}</p>
-                  ))}
+                <div style={{ background: '#f8f9fa', borderLeft: '3px solid #c12121', borderRight: '3px solid #c12121', borderBottom: '3px solid #c12121', padding: '1.25rem 1.5rem', textAlign: 'center', fontSize: '1.4rem', lineHeight: '2.2rem' }}>
+                  {closedMessage ? (
+                    <RichText data={closedMessage} enableProse={false} enableGutter={false} />
+                  ) : (
+                    <p style={{ margin: 0 }}>
+                      The online store is temporarily closed for an in-person market. Check back soon!
+                    </p>
+                  )}
                 </div>
               </div>
             </div>

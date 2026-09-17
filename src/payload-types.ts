@@ -2213,7 +2213,21 @@ export interface StoreSetting {
   /**
    * Shown in the announcement banner on shop pages when the store is closed.
    */
-  closedMessage?: string | null;
+  closedMessage?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }

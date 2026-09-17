@@ -1,4 +1,37 @@
 import type { GlobalConfig } from 'payload'
+import { lexicalEditor } from '@payloadcms/richtext-lexical'
+
+const defaultClosedMessage = {
+  root: {
+    type: 'root' as const,
+    format: '' as const,
+    indent: 0,
+    version: 1,
+    direction: 'ltr' as const,
+    children: [
+      {
+        type: 'paragraph',
+        format: '' as const,
+        indent: 0,
+        version: 1,
+        direction: 'ltr' as const,
+        textFormat: 0,
+        textStyle: '',
+        children: [
+          {
+            type: 'text',
+            format: 0 as const,
+            style: '',
+            mode: 'normal' as const,
+            detail: 0,
+            text: 'The online store is temporarily closed for an in-person market. Check back soon!',
+            version: 1,
+          },
+        ],
+      },
+    ],
+  },
+}
 
 export const StoreSettings: GlobalConfig = {
   slug: 'store-settings',
@@ -18,9 +51,10 @@ export const StoreSettings: GlobalConfig = {
     },
     {
       name: 'closedMessage',
-      type: 'textarea',
+      type: 'richText',
+      editor: lexicalEditor({}),
       label: 'Closed message',
-      defaultValue: 'The online store is temporarily closed for an in-person market. Check back soon!',
+      defaultValue: defaultClosedMessage,
       admin: {
         description: 'Shown in the announcement banner on shop pages when the store is closed.',
         condition: (data) => !data.storeOpen,

@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 8Wdawxwb3ixaehmpf2qdlZvvaiow6Sf9vNkIZUEpOprOYF3qq5CRaKgDx3b9Zvp
+\restrict 3EkmiZoxjf2KrowgvDeBjfpgg8CeVcYnsTy6iEAgHR0M7QVeipZtwrromxMwo0k
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -3006,7 +3006,7 @@ CREATE TABLE public.store_settings (
     store_open boolean DEFAULT true,
     updated_at timestamp(3) with time zone,
     created_at timestamp(3) with time zone,
-    closed_message character varying DEFAULT 'The online store is temporarily closed for an in-person market. Check back soon!'::character varying
+    closed_message jsonb DEFAULT '{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "The online store is temporarily closed for an in-person market. Check back soon!", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}'::jsonb
 );
 
 
@@ -3732,7 +3732,7 @@ COPY public._posts_v_version_gallery_items (_order, _parent_id, id, image_id, al
 --
 
 COPY public.announcement (id, name, live, url, thumb_id, cta, updated_at, created_at, info) FROM stdin;
-1	The Chicago Pottery Market Was Unbelievable — Here’s What’s Next	t		\N	\N	2026-09-15 16:23:21.311+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Thanks to everyone who came to the Fall edition of  The Chicago Pottery Market. It was such a great turnout. My online store will be down for a few weeks while I work on restocking. If you'd like to be notified when it reopens, please sign up for the mailing list.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}
+1	The Chicago Pottery Market Was Unbelievable — Here’s What’s Next	t		\N	\N	2026-09-16 17:52:25.168+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Thanks to everyone who came to the Fall edition of  The Chicago Pottery Market. It was such a great turnout. My online store will be down for a few weeks while I work on restocking. If you'd like to be notified when it reopens, please ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6aaad7453eff237b8db67fad", "type": "link", "fields": {"url": "https://dashboard.mailerlite.com/forms/1180415/139804329901032987/share", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "sign up for the mailing list", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": ".", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}
 \.
 
 
@@ -4892,7 +4892,7 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 14	20260601_220009	10	2026-06-01 22:04:41.959+00	2026-06-01 22:04:41.959+00
 15	20260601_221724	11	2026-06-01 22:18:16.436+00	2026-06-01 22:18:16.435+00
 16	20260602_021903	12	2026-06-02 02:19:36.4+00	2026-06-02 02:19:36.4+00
-1	dev	-1	2026-09-16 01:08:06.123+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-09-16 20:41:06.976+00	2026-03-16 16:07:06.694+00
 \.
 
 
@@ -6357,7 +6357,7 @@ COPY public.stockists_stockists (_order, _parent_id, id, name, info, address, ma
 --
 
 COPY public.store_settings (id, store_open, updated_at, created_at, closed_message) FROM stdin;
-1	t	2026-09-15 23:51:28.792+00	2026-05-21 15:45:30.29+00	Thanks to everyone who came to the Fall edition of  The Chicago Pottery Market. It was such a great turnout. My online store will be down for a few weeks while I work on restocking. If you'd like to be notified when it reopens, please sign up for the mailing list.
+1	f	2026-09-16 17:52:35.099+00	2026-05-21 15:45:30.29+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Thanks to everyone who came to the Fall edition of  The Chicago Pottery Market. It was such a great turnout. My online store will be down for a few weeks while I work on restocking. If you'd like to be notified when it reopens, please ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6aaad75d3eff237b8db67fae", "type": "link", "fields": {"url": "https://dashboard.mailerlite.com/forms/1180415/139804329901032987/share", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "sign up for the mailing list", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": ".", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}
 \.
 
 
@@ -6375,7 +6375,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	8845bd19-4b17-4830-8345-b201755fa9b1	2026-09-15 23:47:00.146+00	2026-09-16 01:47:00.146+00
+1	1	a678cd7a-e251-47d4-8ece-80a1107e9f9c	2026-09-16 17:34:15.4+00	2026-09-16 19:34:15.4+00
 \.
 
 
@@ -6642,14 +6642,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 567, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 572, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 993, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 998, true);
 
 
 --
@@ -10785,5 +10785,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 8Wdawxwb3ixaehmpf2qdlZvvaiow6Sf9vNkIZUEpOprOYF3qq5CRaKgDx3b9Zvp
+\unrestrict 3EkmiZoxjf2KrowgvDeBjfpgg8CeVcYnsTy6iEAgHR0M7QVeipZtwrromxMwo0k
 

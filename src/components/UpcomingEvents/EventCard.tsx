@@ -153,7 +153,7 @@ export function EventCard({
           )}
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center', background: isUpcoming ? '#FFEEEF' : '#e9e9e9', marginInline: '-1.75rem', height: '60px', overflow: 'hidden', flexShrink: 0 }}>
+        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center', background: '#FFEEEF', marginInline: '-1.75rem', height: '60px', overflow: 'hidden', flexShrink: 0 }}>
           <div style={{ width: 120, height: 120, background: 'white', borderRadius: '50%', flexShrink: 0 }} />
         </div>
       </div>
