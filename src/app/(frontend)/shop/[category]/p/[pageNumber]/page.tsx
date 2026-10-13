@@ -10,6 +10,7 @@ import { ShopStockChecker } from '../../../ShopStockChecker.client'
 import { ProductCard } from '@/components/ProductCard'
 import { ShopPagination } from '../../../ShopPagination'
 import { PricingNote } from '@/components/PricingNote'
+import { getAvailableShopTags } from '@/utilities/getAvailableShopTags'
 
 export const revalidate = 600
 export const dynamic = 'force-static'
@@ -29,22 +30,25 @@ export default async function ShopCategoryPageN({ params: paramsPromise }: Args)
 
   const payload = await getPayload({ config: configPromise })
 
-  const products = await payload.find({
-    collection: 'products',
-    depth: 1,
-    limit: 20,
-    page,
-    overrideAccess: false,
-    sort: '_order',
-    where: { tags: { in: [category] }, active: { equals: true } },
-  })
+  const [products, availableTags] = await Promise.all([
+    payload.find({
+      collection: 'products',
+      depth: 1,
+      limit: 20,
+      page,
+      overrideAccess: false,
+      sort: '_order',
+      where: { tags: { in: [category] }, active: { equals: true } },
+    }),
+    getAvailableShopTags(payload),
+  ])
 
   if (!products.docs.length) notFound()
 
   return (
     <main style={{ overflowX: 'hidden' }}>
       <ShopStockChecker />
-      <ShopTagFilter current={category} />
+      <ShopTagFilter current={category} availableTags={availableTags} />
       <PricingNote />
 
       <div className="container-fluid" style={{ padding: '0 0.5rem' }}>

@@ -6,6 +6,7 @@ import React from 'react'
 import { Stockists } from '@/components/Stockists'
 import { ShopTagFilter } from '../ShopTagFilter'
 import { ProductCard } from '@/components/ProductCard'
+import { getAvailableShopTags } from '@/utilities/getAvailableShopTags'
 
 
 export const dynamic = 'force-static'
@@ -14,18 +15,21 @@ export const revalidate = 600
 export default async function ShopArchivePage() {
   const payload = await getPayload({ config: configPromise })
 
-  const products = await payload.find({
-    collection: 'products',
-    depth: 1,
-    limit: 1000,
-    overrideAccess: false,
-    sort: '_order',
-    where: { active: { equals: false } },
-  })
+  const [products, availableTags] = await Promise.all([
+    payload.find({
+      collection: 'products',
+      depth: 1,
+      limit: 1000,
+      overrideAccess: false,
+      sort: '_order',
+      where: { active: { equals: false } },
+    }),
+    getAvailableShopTags(payload),
+  ])
 
   return (
     <main style={{ overflowX: 'hidden' }}>
-      <ShopTagFilter />
+      <ShopTagFilter availableTags={availableTags} />
 
       <div className="container" style={{ paddingTop: '2rem', paddingBottom: '1rem', textAlign: 'center' }}>
         <h2 className="fc-1" style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Archive</h2>

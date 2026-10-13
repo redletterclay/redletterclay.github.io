@@ -18,6 +18,7 @@ import { ShopStockChecker } from '../../shop/ShopStockChecker.client'
 import RichText from '@/components/RichText'
 import { PricingNote } from '@/components/PricingNote'
 import { ShippingInfo } from '@/components/ShippingInfo'
+import { getAvailableShopTags } from '@/utilities/getAvailableShopTags'
 
 export const dynamic = 'force-static'
 
@@ -29,7 +30,7 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
   const { sku } = await paramsPromise
   const payload = await getPayload({ config: configPromise })
 
-  const [result, storeSettingsRes] = await Promise.all([
+  const [result, storeSettingsRes, availableTags] = await Promise.all([
     payload.find({
       collection: 'products',
       limit: 1,
@@ -38,6 +39,7 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
       where: { sku: { equals: sku } },
     }),
     payload.findGlobal({ slug: 'store-settings', depth: 0 }).catch(() => null),
+    getAvailableShopTags(payload),
   ])
   const storeOpen = (storeSettingsRes as any)?.storeOpen !== false
 
@@ -77,7 +79,7 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
   return (
     <main style={{ overflowX: 'hidden' }}>
       {/* Tag filter — highlight the product's own tag(s), never "All" */}
-      <ShopTagFilter current={product.tags?.length ? product.tags : undefined} />
+      <ShopTagFilter current={product.tags?.length ? product.tags : undefined} availableTags={availableTags} />
       <PricingNote />
 
       {/* Product layout */}

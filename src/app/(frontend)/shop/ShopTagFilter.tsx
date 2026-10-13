@@ -7,12 +7,15 @@ const SHOP_TAGS = ['display', 'drink', 'eat', 'plant', 'pour', 'store'] as const
 interface Props {
   /** Single tag (category page) or array of tags (product page). Undefined = "All" is current. */
   current?: string | string[]
+  /** Tags with at least one active product. Tags not in this list are hidden from the nav. */
+  availableTags: string[]
 }
 
-export function ShopTagFilter({ current }: Props) {
+export function ShopTagFilter({ current, availableTags }: Props) {
   const currentTags = Array.isArray(current) ? current : current ? [current] : []
   const allActive = currentTags.length === 0
   const isActive = (tag: string) => currentTags.includes(tag)
+  const visibleTags = SHOP_TAGS.filter((tag) => availableTags.includes(tag))
 
   // Mobile select: first active tag, or empty for All
   const mobileValue = currentTags.length === 1 ? `/shop/${currentTags[0]}` : '/shop'
@@ -42,7 +45,7 @@ export function ShopTagFilter({ current }: Props) {
           >
             All
           </Link>
-          {SHOP_TAGS.map((tag) => (
+          {visibleTags.map((tag) => (
             <Link
               key={tag}
               href={`/shop/${tag}`}
@@ -89,7 +92,7 @@ export function ShopTagFilter({ current }: Props) {
         >
           <option value="">Browse By{mobileLabel}</option>
           <option value="/shop">All</option>
-          {SHOP_TAGS.map((tag) => (
+          {visibleTags.map((tag) => (
             <option key={tag} value={`/shop/${tag}`}>
               {tag.charAt(0).toUpperCase() + tag.slice(1)}
             </option>

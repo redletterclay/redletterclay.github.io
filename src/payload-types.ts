@@ -1992,6 +1992,10 @@ export interface Gallery {
     | (
         | {
             imageFit?: ('cover' | 'contain') | null;
+            /**
+             * Use Square, Portrait, Landscape, or Classic for photos matching that shape so they don’t get cropped.
+             */
+            aspectRatio?: ('default' | 'square' | 'portrait' | 'landscape' | 'classic') | null;
             items?:
               | {
                   image: number | Media;
@@ -2019,6 +2023,218 @@ export interface Gallery {
             id?: string | null;
             blockName?: string | null;
             blockType: 'featuredRow';
+          }
+        | {
+            imageFit?: ('cover' | 'contain') | null;
+            /**
+             * Use Square, Portrait, Landscape, or Classic for photos matching that shape so they don’t get cropped.
+             */
+            aspectRatio?: ('default' | 'square' | 'portrait' | 'landscape' | 'classic') | null;
+            image: number | Media;
+            title: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'singleImage';
+          }
+      )[]
+    | null;
+  mugRows?:
+    | (
+        | {
+            imageFit?: ('cover' | 'contain') | null;
+            /**
+             * Use Square, Portrait, Landscape, or Classic for photos matching that shape so they don’t get cropped.
+             */
+            aspectRatio?: ('default' | 'square' | 'portrait' | 'landscape' | 'classic') | null;
+            items?:
+              | {
+                  image: number | Media;
+                  title: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'equalRow';
+          }
+        | {
+            featured: {
+              image: number | Media;
+              title: string;
+              id?: string | null;
+            };
+            stacked?:
+              | {
+                  image: number | Media;
+                  title: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'featuredRow';
+          }
+        | {
+            imageFit?: ('cover' | 'contain') | null;
+            /**
+             * Use Square, Portrait, Landscape, or Classic for photos matching that shape so they don’t get cropped.
+             */
+            aspectRatio?: ('default' | 'square' | 'portrait' | 'landscape' | 'classic') | null;
+            image: number | Media;
+            title: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'singleImage';
+          }
+      )[]
+    | null;
+  bowlRows?:
+    | (
+        | {
+            imageFit?: ('cover' | 'contain') | null;
+            /**
+             * Use Square, Portrait, Landscape, or Classic for photos matching that shape so they don’t get cropped.
+             */
+            aspectRatio?: ('default' | 'square' | 'portrait' | 'landscape' | 'classic') | null;
+            items?:
+              | {
+                  image: number | Media;
+                  title: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'equalRow';
+          }
+        | {
+            featured: {
+              image: number | Media;
+              title: string;
+              id?: string | null;
+            };
+            stacked?:
+              | {
+                  image: number | Media;
+                  title: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'featuredRow';
+          }
+        | {
+            imageFit?: ('cover' | 'contain') | null;
+            /**
+             * Use Square, Portrait, Landscape, or Classic for photos matching that shape so they don’t get cropped.
+             */
+            aspectRatio?: ('default' | 'square' | 'portrait' | 'landscape' | 'classic') | null;
+            image: number | Media;
+            title: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'singleImage';
+          }
+      )[]
+    | null;
+  teapotRows?:
+    | (
+        | {
+            imageFit?: ('cover' | 'contain') | null;
+            /**
+             * Use Square, Portrait, Landscape, or Classic for photos matching that shape so they don’t get cropped.
+             */
+            aspectRatio?: ('default' | 'square' | 'portrait' | 'landscape' | 'classic') | null;
+            items?:
+              | {
+                  image: number | Media;
+                  title: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'equalRow';
+          }
+        | {
+            featured: {
+              image: number | Media;
+              title: string;
+              id?: string | null;
+            };
+            stacked?:
+              | {
+                  image: number | Media;
+                  title: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'featuredRow';
+          }
+        | {
+            imageFit?: ('cover' | 'contain') | null;
+            /**
+             * Use Square, Portrait, Landscape, or Classic for photos matching that shape so they don’t get cropped.
+             */
+            aspectRatio?: ('default' | 'square' | 'portrait' | 'landscape' | 'classic') | null;
+            image: number | Media;
+            title: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'singleImage';
+          }
+      )[]
+    | null;
+  jarRows?:
+    | (
+        | {
+            imageFit?: ('cover' | 'contain') | null;
+            /**
+             * Use Square, Portrait, Landscape, or Classic for photos matching that shape so they don’t get cropped.
+             */
+            aspectRatio?: ('default' | 'square' | 'portrait' | 'landscape' | 'classic') | null;
+            items?:
+              | {
+                  image: number | Media;
+                  title: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'equalRow';
+          }
+        | {
+            featured: {
+              image: number | Media;
+              title: string;
+              id?: string | null;
+            };
+            stacked?:
+              | {
+                  image: number | Media;
+                  title: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'featuredRow';
+          }
+        | {
+            imageFit?: ('cover' | 'contain') | null;
+            /**
+             * Use Square, Portrait, Landscape, or Classic for photos matching that shape so they don’t get cropped.
+             */
+            aspectRatio?: ('default' | 'square' | 'portrait' | 'landscape' | 'classic') | null;
+            image: number | Media;
+            title: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'singleImage';
           }
       )[]
     | null;
@@ -2289,6 +2505,7 @@ export interface GallerySelect<T extends boolean = true> {
           | T
           | {
               imageFit?: T;
+              aspectRatio?: T;
               items?:
                 | T
                 | {
@@ -2316,6 +2533,212 @@ export interface GallerySelect<T extends boolean = true> {
                     title?: T;
                     id?: T;
                   };
+              id?: T;
+              blockName?: T;
+            };
+        singleImage?:
+          | T
+          | {
+              imageFit?: T;
+              aspectRatio?: T;
+              image?: T;
+              title?: T;
+              id?: T;
+              blockName?: T;
+            };
+      };
+  mugRows?:
+    | T
+    | {
+        equalRow?:
+          | T
+          | {
+              imageFit?: T;
+              aspectRatio?: T;
+              items?:
+                | T
+                | {
+                    image?: T;
+                    title?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        featuredRow?:
+          | T
+          | {
+              featured?:
+                | T
+                | {
+                    image?: T;
+                    title?: T;
+                    id?: T;
+                  };
+              stacked?:
+                | T
+                | {
+                    image?: T;
+                    title?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        singleImage?:
+          | T
+          | {
+              imageFit?: T;
+              aspectRatio?: T;
+              image?: T;
+              title?: T;
+              id?: T;
+              blockName?: T;
+            };
+      };
+  bowlRows?:
+    | T
+    | {
+        equalRow?:
+          | T
+          | {
+              imageFit?: T;
+              aspectRatio?: T;
+              items?:
+                | T
+                | {
+                    image?: T;
+                    title?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        featuredRow?:
+          | T
+          | {
+              featured?:
+                | T
+                | {
+                    image?: T;
+                    title?: T;
+                    id?: T;
+                  };
+              stacked?:
+                | T
+                | {
+                    image?: T;
+                    title?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        singleImage?:
+          | T
+          | {
+              imageFit?: T;
+              aspectRatio?: T;
+              image?: T;
+              title?: T;
+              id?: T;
+              blockName?: T;
+            };
+      };
+  teapotRows?:
+    | T
+    | {
+        equalRow?:
+          | T
+          | {
+              imageFit?: T;
+              aspectRatio?: T;
+              items?:
+                | T
+                | {
+                    image?: T;
+                    title?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        featuredRow?:
+          | T
+          | {
+              featured?:
+                | T
+                | {
+                    image?: T;
+                    title?: T;
+                    id?: T;
+                  };
+              stacked?:
+                | T
+                | {
+                    image?: T;
+                    title?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        singleImage?:
+          | T
+          | {
+              imageFit?: T;
+              aspectRatio?: T;
+              image?: T;
+              title?: T;
+              id?: T;
+              blockName?: T;
+            };
+      };
+  jarRows?:
+    | T
+    | {
+        equalRow?:
+          | T
+          | {
+              imageFit?: T;
+              aspectRatio?: T;
+              items?:
+                | T
+                | {
+                    image?: T;
+                    title?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        featuredRow?:
+          | T
+          | {
+              featured?:
+                | T
+                | {
+                    image?: T;
+                    title?: T;
+                    id?: T;
+                  };
+              stacked?:
+                | T
+                | {
+                    image?: T;
+                    title?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        singleImage?:
+          | T
+          | {
+              imageFit?: T;
+              aspectRatio?: T;
+              image?: T;
+              title?: T;
               id?: T;
               blockName?: T;
             };

@@ -13,6 +13,15 @@ import * as migration_20260526_170229 from './20260526_170229';
 import * as migration_20260601_220009 from './20260601_220009';
 import * as migration_20260601_221724 from './20260601_221724';
 import * as migration_20260602_021903 from './20260602_021903';
+import * as migration_20261009_164928_gallery_row_tags from './20261009_164928_gallery_row_tags';
+import * as migration_20261009_165813_gallery_row_aspect_ratio from './20261009_165813_gallery_row_aspect_ratio';
+import * as migration_20261009_175353_gallery_category_tabs from './20261009_175353_gallery_category_tabs';
+import * as migration_20261009_175932_gallery_add_jars from './20261009_175932_gallery_add_jars';
+import * as migration_20261009_192547_gallery_portrait_aspect_ratio from './20261009_192547_gallery_portrait_aspect_ratio';
+import * as migration_20261009_192749_gallery_landscape_aspect_ratio from './20261009_192749_gallery_landscape_aspect_ratio';
+import * as migration_20261009_225222_gallery_single_image_block from './20261009_225222_gallery_single_image_block';
+import * as migration_20261009_225508_gallery_classic_aspect_ratio from './20261009_225508_gallery_classic_aspect_ratio';
+import * as migration_20261009_230131_gallery_contain_default from './20261009_230131_gallery_contain_default';
 
 export const migrations = [
   {
@@ -88,6 +97,51 @@ export const migrations = [
   {
     up: migration_20260602_021903.up,
     down: migration_20260602_021903.down,
-    name: '20260602_021903'
+    name: '20260602_021903',
+  },
+  {
+    up: migration_20261009_164928_gallery_row_tags.up,
+    down: migration_20261009_164928_gallery_row_tags.down,
+    name: '20261009_164928_gallery_row_tags',
+  },
+  {
+    up: migration_20261009_165813_gallery_row_aspect_ratio.up,
+    down: migration_20261009_165813_gallery_row_aspect_ratio.down,
+    name: '20261009_165813_gallery_row_aspect_ratio',
+  },
+  {
+    up: migration_20261009_175353_gallery_category_tabs.up,
+    down: migration_20261009_175353_gallery_category_tabs.down,
+    name: '20261009_175353_gallery_category_tabs',
+  },
+  {
+    up: migration_20261009_175932_gallery_add_jars.up,
+    down: migration_20261009_175932_gallery_add_jars.down,
+    name: '20261009_175932_gallery_add_jars',
+  },
+  {
+    up: migration_20261009_192547_gallery_portrait_aspect_ratio.up,
+    down: migration_20261009_192547_gallery_portrait_aspect_ratio.down,
+    name: '20261009_192547_gallery_portrait_aspect_ratio',
+  },
+  {
+    up: migration_20261009_192749_gallery_landscape_aspect_ratio.up,
+    down: migration_20261009_192749_gallery_landscape_aspect_ratio.down,
+    name: '20261009_192749_gallery_landscape_aspect_ratio',
+  },
+  {
+    up: migration_20261009_225222_gallery_single_image_block.up,
+    down: migration_20261009_225222_gallery_single_image_block.down,
+    name: '20261009_225222_gallery_single_image_block',
+  },
+  {
+    up: migration_20261009_225508_gallery_classic_aspect_ratio.up,
+    down: migration_20261009_225508_gallery_classic_aspect_ratio.down,
+    name: '20261009_225508_gallery_classic_aspect_ratio',
+  },
+  {
+    up: migration_20261009_230131_gallery_contain_default.up,
+    down: migration_20261009_230131_gallery_contain_default.down,
+    name: '20261009_230131_gallery_contain_default'
   },
 ];

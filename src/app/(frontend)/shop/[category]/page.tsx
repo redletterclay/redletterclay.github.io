@@ -15,6 +15,7 @@ import { ShopPagination } from '../ShopPagination'
 import { PricingNote } from '@/components/PricingNote'
 import { ShippingInfo } from '@/components/ShippingInfo'
 import RichText from '@/components/RichText'
+import { getAvailableShopTags } from '@/utilities/getAvailableShopTags'
 
 export const revalidate = 600
 
@@ -34,7 +35,7 @@ export default async function ShopCategoryPage({ params: paramsPromise }: Args) 
 
   const payload = await getPayload({ config: configPromise })
 
-  const [products, storeSettingsRes] = await Promise.all([
+  const [products, storeSettingsRes, availableTags] = await Promise.all([
     payload.find({
       collection: 'products',
       depth: 1,
@@ -45,6 +46,7 @@ export default async function ShopCategoryPage({ params: paramsPromise }: Args) 
       where: { tags: { in: [category] }, active: { equals: true } },
     }),
     payload.findGlobal({ slug: 'store-settings', depth: 0 }).catch(() => null),
+    getAvailableShopTags(payload),
   ])
   const storeOpen = (storeSettingsRes as any)?.storeOpen !== false
   const closedMessage = (storeSettingsRes as any)?.closedMessage
@@ -53,7 +55,7 @@ export default async function ShopCategoryPage({ params: paramsPromise }: Args) 
     <main style={{ overflowX: 'hidden' }}>
       <ShopStockChecker />
       {/* Tag filter */}
-      <ShopTagFilter current={category} />
+      <ShopTagFilter current={category} availableTags={availableTags} />
       <PricingNote />
 
       {/* Store closed announcement */}

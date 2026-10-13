@@ -926,6 +926,10 @@ a.ul {
   transition: transform 0.3s ease;
   min-height: 200px;
 }
+.bento-frame {
+  overflow: hidden;
+  border-radius: 12px;
+}
 .bento-item a {
   display: block;
   height: 100%;
@@ -948,13 +952,17 @@ a.ul {
   color: white;
   padding: 0.4rem 1rem 0;
   background: white;
-  transform: translateY(100%);
-  transition: transform 0.3s ease-in-out;
-  opacity: 0.8;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
   transition-delay: 100ms;
 }
-.bento-overlay h5 { color: #000000; }
-.bento-item:hover .bento-overlay { transform: translateY(0); }
+.bento-overlay h5 {
+  color: #000000;
+  font-family: var(--font-heading2);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.bento-item:hover .bento-overlay { opacity: 0.8; }
 @media (max-width: 768px) {
   .bento-overlay { display: none; }
   .bento-item { min-height: 250px; }
@@ -1094,6 +1102,13 @@ div.stockable[data-stock="0"] .icon { padding: 1em; display: inline-block; }
 .gslide-image img { box-shadow: none !important; border: none !important; outline: none !important; }
 .glightbox-clean .gslide-media { -webkit-box-shadow: none !important; box-shadow: none !important; }
 .glightbox-mobile .glightbox-container .gslide-description { background: none !important; }
+/* GLightbox's own CDN stylesheet sets the caption text to Arial — override to match site fonts */
+.gslide-desc,
+.gdesc-inner,
+.gdesc-title,
+.gdesc-description {
+  font-family: var(--font-heading2) !important;
+}
 .safe-and-amp { display: none; }
 /* Scroll-reveal fade-up */
 /* Hide "shipping and" in PricingNote when local pickup discount is active */
@@ -1763,8 +1778,10 @@ ul.details {
   padding-right: 0.75rem !important;
 }
 
-/* Equal-row bento items: consistent aspect ratio so row height = shortest image */
-.gallery-container > div > .bento-item {
+/* Equal-row bento items: consistent aspect ratio so row height = shortest image.
+   Targets .gallery-row by class (not position) so wrapper elements like
+   ScrollReveal's animation div don't break the selector. */
+.gallery-row > .bento-item {
   aspect-ratio: 4 / 3;
 }
 
@@ -1776,18 +1793,18 @@ ul.details {
 
 @media (max-width: 767px) {
   /* All gallery rows wrap on mobile */
-  .gallery-container > div {
+  .gallery-row {
     flex-wrap: wrap !important;
     gap: 0.5rem !important;
   }
   /* Equal rows: bento items are direct flex children */
-  .gallery-container > div > .bento-item {
+  .gallery-row > .bento-item {
     flex: 0 0 100% !important;
     min-width: 0 !important;
   }
   /* Featured row: flex-2 (large) and flex-1 (stacked column) */
-  .gallery-container > div > .flex-2,
-  .gallery-container > div > .flex-1 {
+  .gallery-row > .flex-2,
+  .gallery-row > .flex-1 {
     flex: 0 0 100% !important;
     min-width: 0 !important;
   }
