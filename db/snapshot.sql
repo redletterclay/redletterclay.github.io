@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict fKHAXhnEtUr5lPh8f9Pre3ybehAxfI9aec8JzWcCLpcIwbx2CbJioWs2teWlRrp
+\restrict bHroTdgRyY179q6S62Tfx0acWcqA07kuCo4IUd6LP3ZEENTYLg9TVMVW8fDYkwN
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -3923,7 +3923,7 @@ COPY public.categories_breadcrumbs (_order, _parent_id, id, doc_id, url, label) 
 --
 
 COPY public.collection_title (id, title, updated_at, created_at) FROM stdin;
-1	Set the Table for Summer	2026-07-02 02:33:36.886+00	2026-04-10 15:47:29.768+00
+1	Set the Table for Fall	2026-10-13 01:39:30.076+00	2026-04-10 15:47:29.768+00
 \.
 
 
@@ -5217,7 +5217,7 @@ COPY public.payload_kv (id, key, data) FROM stdin;
 --
 
 COPY public.payload_locked_documents (id, global_slug, updated_at, created_at) FROM stdin;
-629	\N	2026-10-13 01:35:10.526+00	2026-10-13 01:35:10.526+00
+629	\N	2026-10-13 01:37:14+00	2026-10-13 01:35:10.526+00
 \.
 
 
@@ -5241,7 +5241,7 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 6	20260318_191703	5	2026-03-18 19:17:08.293+00	2026-03-18 19:17:08.293+00
 2	20260317_061117	1	2026-03-17 06:12:15.302+00	2026-03-17 06:12:15.302+00
 5	20260318_181856	4	2026-03-18 18:25:43.589+00	2026-03-18 18:25:43.589+00
-1	dev	-1	2026-10-13 01:36:42.416+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-10-13 01:38:44.009+00	2026-03-16 16:07:06.694+00
 7	20260320_041255	6	2026-03-20 04:16:57.288+00	2026-03-20 04:16:57.288+00
 8	20260317_180300	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 9	20260318_161820	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
@@ -7102,14 +7102,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 631, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 632, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 1101, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 1102, true);
 
 
 --
@@ -11685,5 +11685,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict fKHAXhnEtUr5lPh8f9Pre3ybehAxfI9aec8JzWcCLpcIwbx2CbJioWs2teWlRrp
+\unrestrict bHroTdgRyY179q6S62Tfx0acWcqA07kuCo4IUd6LP3ZEENTYLg9TVMVW8fDYkwN
 
