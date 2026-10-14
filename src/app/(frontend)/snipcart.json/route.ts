@@ -40,7 +40,9 @@ export async function GET() {
       url: `${BASE_URL}/products/${product.sku}`,
       description,
       image: thumb?.url ?? '',
+      inventoryManagementMethod: 'Single',
       stock: 1,
+      allowOutOfStockPurchases: false,
     }
   })
 

@@ -9,6 +9,9 @@ node_modules
 # Payload default media upload directory
 public/media/
 
+# Drop folder for scripts/bulk-add-media.ts
+/uploads-pending/
+
 public/robots.txt
 public/sitemap*.xml
 
