@@ -69,10 +69,10 @@ export const Media: CollectionConfig = {
         // Delete from ImageKit asynchronously — don't block the Payload response
         ;(async () => {
           try {
-            const results = await imagekit.assets.list({
+            const results = (await imagekit.assets.list({
               searchQuery: `name = "${docFilename}"`,
               path: IMAGEKIT_FOLDER,
-            })
+            })) as any[]
             const file = results.find(
               (f: any) => f.filePath === `${IMAGEKIT_FOLDER}/${docFilename}`,
             )
