@@ -73,8 +73,15 @@ jobs:
 
       - name: Trigger Snipcart recrawl
         run: |
-          curl -sS -X POST "https://app.snipcart.com/api/products" \
+          http_code=$(curl -sS -o /tmp/snipcart-response.json -w "%{http_code}" -X POST "https://app.snipcart.com/api/products" \
             -H "Accept: application/json" \
             -H "Content-Type: application/json" \
             -u "${{ secrets.SNIPCART_API_KEY }}:" \
-            -d '{"fetchUrl": "https://redletterclay.com/snipcart.json"}'
+            -d '{"fetchUrl": "https://redletterclay.com/snipcart.json"}')
+          echo "Snipcart response (HTTP $http_code):"
+          cat /tmp/snipcart-response.json
+          echo
+          if [ "$http_code" -lt 200 ] || [ "$http_code" -ge 300 ]; then
+            echo "::error::Snipcart recrawl failed with HTTP $http_code"
+            exit 1
+          fi
