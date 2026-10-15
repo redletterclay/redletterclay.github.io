@@ -148,7 +148,10 @@ export const Products: CollectionConfig<'products'> = {
               type: 'relationship',
               relationTo: 'products',
               hasMany: true,
-              filterOptions: ({ id }) => id ? { id: { not_in: [id] } } : true,
+              filterOptions: ({ id }) =>
+                id
+                  ? { and: [{ id: { not_in: [id] } }, { active: { equals: true } }] }
+                  : { active: { equals: true } },
             },
           ],
         },
