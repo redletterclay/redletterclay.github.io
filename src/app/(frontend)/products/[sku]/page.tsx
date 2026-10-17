@@ -343,7 +343,7 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
 
       {/* Related products — "Make It A Set" */}
       {product.relatedProducts?.filter((r: any) => typeof r === 'object' && r.active !== false).length > 0 && (
-        <div className="container-fluid" style={{ paddingTop: '1rem', paddingBottom: '2rem' }}>
+        <div className="container-fluid" style={{ paddingTop: '3rem', paddingBottom: '2rem' }}>
           <ShopStockChecker />
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
             <hr className="animate__animated animate__zoomIn opacity-60" style={{ flexGrow: 1, borderWidth: '1px', margin: 0 }} />

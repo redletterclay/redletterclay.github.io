@@ -1,7 +1,7 @@
 'use client'
 /* eslint-disable @next/next/no-img-element */
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 type MediaDoc = { url: string; alt?: string }
 
@@ -13,13 +13,31 @@ type Props = {
 export function ProductFeaturedCarousel({ images, title }: Props) {
   const [index, setIndex] = useState(0)
   const [tick, setTick] = useState(0)
+  const [inView, setInView] = useState(false)
+  const containerRef = useRef<HTMLDivElement>(null)
   const multi = images.length > 1
 
   useEffect(() => {
-    if (!multi) return
-    const id = setInterval(() => setIndex((i) => (i + 1) % images.length), 4000)
+    const el = containerRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.3 },
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    if (!multi || !inView) return
+    const id = setInterval(() => setIndex((i) => (i + 1) % images.length), 6000)
     return () => clearInterval(id)
-  }, [multi, images.length, tick])
+  }, [multi, images.length, tick, inView])
 
   function navigate(next: number) {
     setIndex(next)
@@ -29,7 +47,7 @@ export function ProductFeaturedCarousel({ images, title }: Props) {
   if (images.length === 0) return null
 
   return (
-    <div style={{ position: 'relative', width: '100%' }}>
+    <div ref={containerRef} style={{ position: 'relative', width: '100%' }}>
       {images.map((img, i) => (
         <img
           key={img.url}
