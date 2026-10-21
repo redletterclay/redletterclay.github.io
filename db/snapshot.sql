@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict ODwSiCfzmTOsDHZlbwtvkn4C716qDhOX7JxBQMAlc1Z84kV3emQrSlFsTKhaXJF
+\restrict vEV2lZvgJWULIv0bwOIPDQStuP0W55C5Btz36ad1kmXdHwpOS8eVgM2EpCpdsoq
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -3899,7 +3899,7 @@ COPY public._posts_v_version_gallery_items (_order, _parent_id, id, image_id, al
 --
 
 COPY public.announcement (id, name, live, url, thumb_id, cta, updated_at, created_at, info) FROM stdin;
-1	The Chicago Pottery Market  — Holiday Edition	t		771	\N	2026-10-21 18:23:59.852+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Join me and 80 other ceramic artists for a market of all things pottery. This is the first Chicago Pottery Market indoors, featuring the best holiday gifts ever: handmade ceramics!", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Shop for yourself or your loved ones and join us for a cozy event this holiday season.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}
+1	The Chicago Pottery Market  — Holiday Edition	t		771	\N	2026-10-21 19:25:02.851+00	2026-03-17 18:19:25.846+00	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Join me and 80 other ceramic artists for a market of all things pottery. This is the first Chicago Pottery Market indoors, featuring the best holiday gifts ever: handmade ceramics!", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Shop for yourself or your loved ones and join us for a cozy event this holiday season.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "horizontalrule", "version": 1}, {"tag": "h4", "type": "heading", "format": "", "indent": 0, "version": 1, "children": [{"type": "linebreak", "version": 1}, {"mode": "normal", "text": "Save the date:", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Sat, Dec 12: ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6ad910c2f350291ebf920b50", "type": "link", "fields": {"url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=The%20Chicago%20Pottery%20Market&dates=20261212T100000/20261212T170000&ctz=America/Chicago&details=Join%20Red%20Letter%20Clay%20and%2080%20other%20ceramic%20artists%20at%20the%20first%20indoor%20Chicago%20Pottery%20Market%20%E2%80%94%20handmade%20ceramics%20for%20holiday%20gifting.&location=1400%20W%20Hubbard%20St%2C%20Chicago%2C%20IL%2060642", "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Google Calendar ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": "| ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6ad910cff350291ebf920b51", "type": "link", "fields": {"url": "https://redletterclay.com/ical/chicago-pottery-market-dec12-2026.ics", "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "iCal", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"type": "linebreak", "version": 1}, {"mode": "normal", "text": "Sun, Dec 13: ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6ad910e2f350291ebf920b52", "type": "link", "fields": {"url": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=The%20Chicago%20Pottery%20Market&dates=20261213T100000/20261213T170000&ctz=America/Chicago&details=Join%20Red%20Letter%20Clay%20and%2080%20other%20ceramic%20artists%20at%20the%20first%20indoor%20Chicago%20Pottery%20Market%20%E2%80%94%20handmade%20ceramics%20for%20holiday%20gifting.&location=1400%20W%20Hubbard%20St%2C%20Chicago%2C%20IL%2060642", "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Google Calendar", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"mode": "normal", "text": " | ", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"id": "6ad910ecf350291ebf920b53", "type": "link", "fields": {"url": "https://redletterclay.com/ical/chicago-pottery-market-dec13-2026.ics", "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "iCal", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}, {"type": "linebreak", "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"id": "6ad91118f350291ebf920b56", "type": "link", "fields": {"url": "https://maps.app.goo.gl/HxeLS4TsNDJ4o7Up7", "newTab": true, "linkType": "custom"}, "format": "", "indent": 0, "version": 3, "children": [{"mode": "normal", "text": "Get Directions", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}
 \.
 
 
@@ -7459,14 +7459,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 740, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 746, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 1313, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 1319, true);
 
 
 --
@@ -12042,5 +12042,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict ODwSiCfzmTOsDHZlbwtvkn4C716qDhOX7JxBQMAlc1Z84kV3emQrSlFsTKhaXJF
+\unrestrict vEV2lZvgJWULIv0bwOIPDQStuP0W55C5Btz36ad1kmXdHwpOS8eVgM2EpCpdsoq
 
