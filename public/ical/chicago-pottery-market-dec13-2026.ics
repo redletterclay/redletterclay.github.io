@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Red Letter Clay//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:chicago-pottery-market-20261213@redletterclay.com
+DTSTAMP:20261021T000000Z
+DTSTART:20261213T160000Z
+DTEND:20261213T230000Z
+SUMMARY:The Chicago Pottery Market
+DESCRIPTION:Join Red Letter Clay and 80 other ceramic artists at the first indoor Chicago Pottery Market — handmade ceramics for holiday gifting.
+LOCATION:1400 W Hubbard St\, Chicago\, IL 60642
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR
