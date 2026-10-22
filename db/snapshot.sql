@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict nXRQ6HmacaC7dgsf4402nObTn9jAaeUvxkHderGN4Dq8lMazCITQtTQY9fkN31V
+\restrict mhIvuVKUVLC2a4QTxgQjXTswTe9ROlJtpelsdb9v3o90MNRx75tsjjlFqy5YUpC
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -5203,15 +5203,16 @@ COPY public.newsletter (id, updated_at, created_at) FROM stdin;
 --
 
 COPY public.newsletter_issues (_order, _parent_id, id, name, url) FROM stdin;
-1	1	6a8f5ea57560c20f91ed73ec	 Thalia Hall Free For All: Pottery, free music & more Saturday, August 29th	https://preview.mailerlite.io/preview/1180415/emails/196427918664009349
-2	1	6a68dca2ecb62d01c2e71e0d	 Wicker Park Pottery Pop-Up	https://preview.mailerlite.io/preview/1180415/emails/192529686281061445
-3	1	6a1872587f2b5faa56fbbf55	 This Weekend — The Chicago Pottery Market! 50 vendors, all handmade pottery	https://preview.mailerlite.io/preview/1180415/emails/188726753732069021
-4	1	69f500001558293d9f08123c	Shop Mothers Day + The Chicago Pottery Market	https://preview.mailerlite.io/preview/1180415/emails/186098830926677956
-5	1	69b99b2daa9ac96a311211d1	2025 Holiday Markets » Bridgeport & West Loop Venues	https://preview.mailerlite.io/emails/webview/1180415/173072140190352712
-6	1	69b99b2daa9ac96a311211d2	Put a Lid on It Exhibition @ Belger Arts Center (St Louis, MO)	https://preview.mailerlite.io/emails/webview/1180415/165915421823731444
-7	1	69b99b2daa9ac96a311211d3	Oddball Market @ Thalia Hall Block Party (Pilsen, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/163272327241402286
-8	1	69b99b2daa9ac96a311211d4	New Store Partnership - Northside Cutlery (Lincoln Square, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/146465753395102952
-9	1	69b99b2daa9ac96a311211d5	New Store Partnership - Spilt Milk Pastry (Oak Park, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/147339301509662186
+1	1	6ada52c454fa9260bf80598b	 Mark your calendar for the Chicago Pottery Market (Holiday Edition)	https://preview.mailerlite.io/preview/1180415/emails/202043795415500318
+2	1	6a8f5ea57560c20f91ed73ec	 Thalia Hall Free For All: Pottery, free music & more Saturday, August 29th	https://preview.mailerlite.io/preview/1180415/emails/196427918664009349
+3	1	6a68dca2ecb62d01c2e71e0d	 Wicker Park Pottery Pop-Up	https://preview.mailerlite.io/preview/1180415/emails/192529686281061445
+4	1	6a1872587f2b5faa56fbbf55	 This Weekend — The Chicago Pottery Market! 50 vendors, all handmade pottery	https://preview.mailerlite.io/preview/1180415/emails/188726753732069021
+5	1	69f500001558293d9f08123c	Shop Mothers Day + The Chicago Pottery Market	https://preview.mailerlite.io/preview/1180415/emails/186098830926677956
+6	1	69b99b2daa9ac96a311211d1	2025 Holiday Markets » Bridgeport & West Loop Venues	https://preview.mailerlite.io/emails/webview/1180415/173072140190352712
+7	1	69b99b2daa9ac96a311211d2	Put a Lid on It Exhibition @ Belger Arts Center (St Louis, MO)	https://preview.mailerlite.io/emails/webview/1180415/165915421823731444
+8	1	69b99b2daa9ac96a311211d3	Oddball Market @ Thalia Hall Block Party (Pilsen, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/163272327241402286
+9	1	69b99b2daa9ac96a311211d4	New Store Partnership - Northside Cutlery (Lincoln Square, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/146465753395102952
+10	1	69b99b2daa9ac96a311211d5	New Store Partnership - Spilt Milk Pastry (Oak Park, Chicago)	https://preview.mailerlite.io/preview/1180415/emails/147339301509662186
 \.
 
 
@@ -5361,7 +5362,7 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 6	20260318_191703	5	2026-03-18 19:17:08.293+00	2026-03-18 19:17:08.293+00
 2	20260317_061117	1	2026-03-17 06:12:15.302+00	2026-03-17 06:12:15.302+00
 5	20260318_181856	4	2026-03-18 18:25:43.589+00	2026-03-18 18:25:43.589+00
-1	dev	-1	2026-10-22 02:16:55.139+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-10-22 18:14:45.986+00	2026-03-16 16:07:06.694+00
 7	20260320_041255	6	2026-03-20 04:16:57.288+00	2026-03-20 04:16:57.288+00
 8	20260317_180300	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 9	20260318_161820	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
@@ -7275,7 +7276,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	13c7ab71-a429-4dab-bfcb-ed0f37ad71c7	2026-10-22 02:36:20.399+00	2026-10-22 04:36:20.399+00
+1	1	162458a2-ce3f-4d2a-9b52-b8825ce87881	2026-10-22 18:15:21.807+00	2026-10-22 20:15:21.807+00
 \.
 
 
@@ -7542,14 +7543,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 773, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 776, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 1373, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 1376, true);
 
 
 --
@@ -12125,5 +12126,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict nXRQ6HmacaC7dgsf4402nObTn9jAaeUvxkHderGN4Dq8lMazCITQtTQY9fkN31V
+\unrestrict mhIvuVKUVLC2a4QTxgQjXTswTe9ROlJtpelsdb9v3o90MNRx75tsjjlFqy5YUpC
 
