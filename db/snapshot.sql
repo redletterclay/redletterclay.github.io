@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict gdOzHxA2VQcUDL1XrntfNF4ABH3B7eb7IXzUG45P8kFm8GdSBxXziBaaEAIhnQS
+\restrict hIK79eM3L6eYCoain1MskH6bHgG0F0wQpRSSa7hX32zPqILlv8DAMNaQy2kXVgh
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -5216,6 +5216,7 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 809	Mug - Green on Speckled Terracotta	\N	\N	2026-10-27 01:45:53.008+00	2026-10-27 01:45:49.133+00	/api/media/file/M-0067-GRN-02.jpg	\N	M-0067-GRN-02.jpg	image/jpeg	817637	1820	1366	50	50	/api/media/file/M-0067-GRN-02-300x225.jpg	300	225	image/jpeg	8812	M-0067-GRN-02-300x225.jpg	/api/media/file/M-0067-GRN-02-500x500.jpg	500	500	image/jpeg	34643	M-0067-GRN-02-500x500.jpg	/api/media/file/M-0067-GRN-02-600x450.jpg	600	450	image/jpeg	29599	M-0067-GRN-02-600x450.jpg	/api/media/file/M-0067-GRN-02-900x675.jpg	900	675	image/jpeg	59987	M-0067-GRN-02-900x675.jpg	/api/media/file/M-0067-GRN-02-1400x1051.jpg	1400	1051	image/jpeg	127259	M-0067-GRN-02-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0067-GRN-02-1200x630.jpg	1200	630	image/jpeg	84266	M-0067-GRN-02-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0067-GRN-02.jpg
 808	Mug - Green on Speckled Terracotta	\N	\N	2026-10-27 01:45:50.724+00	2026-10-27 01:45:48.4+00	/api/media/file/M-0067-GRN-01.jpg	\N	M-0067-GRN-01.jpg	image/jpeg	807974	1820	1366	50	50	/api/media/file/M-0067-GRN-01-300x225.jpg	300	225	image/jpeg	9666	M-0067-GRN-01-300x225.jpg	/api/media/file/M-0067-GRN-01-500x500.jpg	500	500	image/jpeg	35945	M-0067-GRN-01-500x500.jpg	/api/media/file/M-0067-GRN-01-600x450.jpg	600	450	image/jpeg	31250	M-0067-GRN-01-600x450.jpg	/api/media/file/M-0067-GRN-01-900x675.jpg	900	675	image/jpeg	61446	M-0067-GRN-01-900x675.jpg	/api/media/file/M-0067-GRN-01-1400x1051.jpg	1400	1051	image/jpeg	126425	M-0067-GRN-01-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0067-GRN-01-1200x630.jpg	1200	630	image/jpeg	86123	M-0067-GRN-01-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0067-GRN-01.jpg
 812	Mug - Green on Speckled Terracotta	\N	\N	2026-10-27 01:46:22.925+00	2026-10-27 01:46:20.971+00	/api/media/file/M-0067-GRN-5.jpg	\N	M-0067-GRN-5.jpg	image/jpeg	1022993	1820	1366	50	50	/api/media/file/M-0067-GRN-5-300x225.jpg	300	225	image/jpeg	10241	M-0067-GRN-5-300x225.jpg	/api/media/file/M-0067-GRN-5-500x500.jpg	500	500	image/jpeg	40146	M-0067-GRN-5-500x500.jpg	/api/media/file/M-0067-GRN-5-600x450.jpg	600	450	image/jpeg	34470	M-0067-GRN-5-600x450.jpg	/api/media/file/M-0067-GRN-5-900x675.jpg	900	675	image/jpeg	70003	M-0067-GRN-5-900x675.jpg	/api/media/file/M-0067-GRN-5-1400x1051.jpg	1400	1051	image/jpeg	150479	M-0067-GRN-5-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0067-GRN-5-1200x630.jpg	1200	630	image/jpeg	96244	M-0067-GRN-5-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0067-GRN-5.jpg
+840	Ceramic Lidded Jar - Honey & Pink	\N	\N	2026-10-30 15:26:43.073+00	2026-10-30 15:26:40.963+00	/api/media/file/J-0009-TAN-thumb-updated.jpg	\N	J-0009-TAN-thumb-updated.jpg	image/jpeg	114600	400	400	50	50	/api/media/file/J-0009-TAN-thumb-updated-300x300.jpg	300	300	image/jpeg	9195	J-0009-TAN-thumb-updated-300x300.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	https://ik.imagekit.io/raygun/redletterclay/J-0009-TAN-thumb-updated.jpg
 815	Stoneware Mug - Green on Speckled Terracotta	\N	\N	2026-10-27 02:02:22.859+00	2026-10-27 02:02:20.753+00	/api/media/file/M-0068-GRN-03.jpg	\N	M-0068-GRN-03.jpg	image/jpeg	879243	1820	1366	50	50	/api/media/file/M-0068-GRN-03-300x225.jpg	300	225	image/jpeg	10234	M-0068-GRN-03-300x225.jpg	/api/media/file/M-0068-GRN-03-500x500.jpg	500	500	image/jpeg	38252	M-0068-GRN-03-500x500.jpg	/api/media/file/M-0068-GRN-03-600x450.jpg	600	450	image/jpeg	33270	M-0068-GRN-03-600x450.jpg	/api/media/file/M-0068-GRN-03-900x675.jpg	900	675	image/jpeg	65455	M-0068-GRN-03-900x675.jpg	/api/media/file/M-0068-GRN-03-1400x1051.jpg	1400	1051	image/jpeg	135528	M-0068-GRN-03-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0068-GRN-03-1200x630.jpg	1200	630	image/jpeg	87745	M-0068-GRN-03-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0068-GRN-03.jpg
 816	Stoneware Mug - Green on Speckled Terracotta	\N	\N	2026-10-27 02:02:24.796+00	2026-10-27 02:02:22.377+00	/api/media/file/M-0068-GRN-04.jpg	\N	M-0068-GRN-04.jpg	image/jpeg	972534	1820	1366	50	50	/api/media/file/M-0068-GRN-04-300x225.jpg	300	225	image/jpeg	9358	M-0068-GRN-04-300x225.jpg	/api/media/file/M-0068-GRN-04-500x500.jpg	500	500	image/jpeg	37153	M-0068-GRN-04-500x500.jpg	/api/media/file/M-0068-GRN-04-600x450.jpg	600	450	image/jpeg	31779	M-0068-GRN-04-600x450.jpg	/api/media/file/M-0068-GRN-04-900x675.jpg	900	675	image/jpeg	65173	M-0068-GRN-04-900x675.jpg	/api/media/file/M-0068-GRN-04-1400x1051.jpg	1400	1051	image/jpeg	141307	M-0068-GRN-04-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0068-GRN-04-1200x630.jpg	1200	630	image/jpeg	93368	M-0068-GRN-04-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0068-GRN-04.jpg
 813	Stoneware Mug - Green on Speckled Terracotta	\N	\N	2026-10-27 02:02:27.384+00	2026-10-27 02:02:18.397+00	/api/media/file/M-0068-GRN-01.jpg	\N	M-0068-GRN-01.jpg	image/jpeg	939806	1820	1366	50	50	/api/media/file/M-0068-GRN-01-300x225.jpg	300	225	image/jpeg	10333	M-0068-GRN-01-300x225.jpg	/api/media/file/M-0068-GRN-01-500x500.jpg	500	500	image/jpeg	39941	M-0068-GRN-01-500x500.jpg	/api/media/file/M-0068-GRN-01-600x450.jpg	600	450	image/jpeg	34777	M-0068-GRN-01-600x450.jpg	/api/media/file/M-0068-GRN-01-900x675.jpg	900	675	image/jpeg	70072	M-0068-GRN-01-900x675.jpg	/api/media/file/M-0068-GRN-01-1400x1051.jpg	1400	1051	image/jpeg	147085	M-0068-GRN-01-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0068-GRN-01-1200x630.jpg	1200	630	image/jpeg	99069	M-0068-GRN-01-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0068-GRN-01.jpg
@@ -5395,7 +5396,7 @@ COPY public.payload_locked_documents_rels (id, "order", parent_id, path, pages_i
 
 COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM stdin;
 3	20260317_155832	2	2026-03-17 16:08:56.588+00	2026-03-17 16:08:56.587+00
-1	dev	-1	2026-10-30 01:24:21.425+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-10-30 15:27:21.909+00	2026-03-16 16:07:06.694+00
 4	20260317_163359	3	2026-03-17 16:35:45.671+00	2026-03-17 16:35:45.67+00
 6	20260318_191703	5	2026-03-18 19:17:08.293+00	2026-03-18 19:17:08.293+00
 2	20260317_061117	1	2026-03-17 06:12:15.302+00	2026-03-17 06:12:15.302+00
@@ -5528,6 +5529,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 135	collection-products-96	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-10-30 01:06:15.07+00	2026-10-15 15:32:45.278+00
 98	collection-products-82	{"fields": {"_index-1": {"tabIndex": 0}, "_index-1-0-1": {"tabIndex": 0}}}	2026-10-15 01:19:10.856+00	2026-05-11 14:10:27.439+00
 149	collection-products-123	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-10-30 01:23:50.166+00	2026-10-30 01:23:16.397+00
+123	collection-products-105	{"fields": {"_index-1-0-1": {"tabIndex": 1}}}	2026-10-30 15:26:51.776+00	2026-10-14 02:13:05.69+00
 71	collection-products-86	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-14 20:03:35.183+00	2026-05-02 02:18:37.222+00
 125	collection-products-104	{"fields": {"_index-1-0-1": {"tabIndex": 1}}}	2026-10-15 15:40:31.339+00	2026-10-14 03:57:02.015+00
 74	collection-products-89	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-08 16:47:13.74+00	2026-05-02 03:10:49.211+00
@@ -5548,7 +5550,6 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 128	collection-products-110	{"fields": {"_index-1-0-1": {"tabIndex": 1}}}	2026-10-17 01:23:09.371+00	2026-10-14 14:22:48.548+00
 18	global-gallery	{"fields": {"rows": {"collapsed": ["6a17c040d096cd4d71f5babd", "6a7609f4c495171555a5b417", "69b99b48aa9ac96a311211d9", "6a17c0a0d096cd4d71f5bac5", "69b99b48aa9ac96a311211e4", "69b99b48aa9ac96a311211dd", "69bf5a3ae2d1da234e7e6c30", "69b99b48aa9ac96a311211e1", "69b99b48aa9ac96a311211e8", "69b99b48aa9ac96a311211eb", "69b99b48aa9ac96a311211ef", "69b99b48aa9ac96a311211f3", "69b99b48aa9ac96a311211f6", "69b99b48aa9ac96a311211fa"]}, "jarRows": {"collapsed": ["6acbbe1d8babdc443e0133ab"]}, "_index-0": {"tabIndex": 4}, "rows.0.items": {"collapsed": ["6a7609fac495171555a5b419"]}, "rows.13.items": {"collapsed": ["69b99b48aa9ac96a311211f7", "69b99b48aa9ac96a311211f8"]}}, "editViewType": "default"}	2026-10-11 17:06:50.379+00	2026-03-17 16:39:13.008+00
 129	collection-products-112	{"fields": {"_index-1-0-1": {"tabIndex": 1}}}	2026-10-17 01:27:48.474+00	2026-10-14 15:31:42.121+00
-123	collection-products-105	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-10-22 02:36:31.436+00	2026-10-14 02:13:05.69+00
 144	collection-products-127	{"fields": {"_index-1-0-1": {"tabIndex": 0}}}	2026-10-27 01:46:53.176+00	2026-10-22 01:50:29.183+00
 31	collection-products-62	{"fields": {"_index-1": {"tabIndex": 0}, "_index-1-0-1": {"tabIndex": 2}}}	2026-10-30 00:42:27.839+00	2026-03-19 01:30:13.934+00
 114	collection-products-94	{"fields": {"_index-1-0-1": {"tabIndex": 1}}}	2026-10-30 00:45:15.031+00	2026-10-12 22:07:22.584+00
@@ -5567,7 +5568,8 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 143	collection-products-126	{"fields": {"_index-1-0-1": {"tabIndex": 0}}}	2026-10-22 02:14:57.237+00	2026-10-22 01:40:49.771+00
 136	collection-products-109	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-10-30 00:43:05.987+00	2026-10-15 15:50:55.559+00
 140	collection-products-122	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-10-30 00:50:10.425+00	2026-10-16 17:17:30.271+00
-109	collection-products	{"sort": "_order", "limit": 100, "columns": [{"active": true, "accessor": "sku"}, {"active": true, "accessor": "thumb"}, {"active": false, "accessor": "adminTitle"}, {"active": true, "accessor": "title"}, {"active": true, "accessor": "price"}, {"active": true, "accessor": "featured"}, {"active": false, "accessor": "id"}, {"active": false, "accessor": "name"}, {"active": false, "accessor": "tags"}, {"active": false, "accessor": "featuredImage"}, {"active": false, "accessor": "images"}, {"active": false, "accessor": "description"}, {"active": false, "accessor": "width"}, {"active": false, "accessor": "height"}, {"active": false, "accessor": "weight"}, {"active": false, "accessor": "holds"}, {"active": false, "accessor": "firingMethod"}, {"active": false, "accessor": "foodSafe"}, {"active": false, "accessor": "dishwasherSafe"}, {"active": false, "accessor": "relatedProducts"}, {"active": false, "accessor": "updatedAt"}, {"active": true, "accessor": "createdAt"}, {"active": false, "accessor": "makingLinks"}, {"active": false, "accessor": "length"}, {"active": false, "accessor": "meta.overview"}, {"active": false, "accessor": "meta.title"}, {"active": false, "accessor": "meta.description"}, {"active": false, "accessor": "meta.image"}, {"active": false, "accessor": "meta.preview"}, {"active": true, "accessor": "active"}], "editViewType": "default"}	2026-10-30 00:51:48.597+00	2026-06-02 02:18:50.056+00
+109	collection-products	{"sort": "-sku", "limit": 100, "columns": [{"active": true, "accessor": "sku"}, {"active": true, "accessor": "thumb"}, {"active": false, "accessor": "adminTitle"}, {"active": true, "accessor": "title"}, {"active": true, "accessor": "price"}, {"active": true, "accessor": "featured"}, {"active": false, "accessor": "id"}, {"active": false, "accessor": "name"}, {"active": false, "accessor": "tags"}, {"active": false, "accessor": "featuredImage"}, {"active": false, "accessor": "images"}, {"active": false, "accessor": "description"}, {"active": false, "accessor": "width"}, {"active": false, "accessor": "height"}, {"active": false, "accessor": "weight"}, {"active": false, "accessor": "holds"}, {"active": false, "accessor": "firingMethod"}, {"active": false, "accessor": "foodSafe"}, {"active": false, "accessor": "dishwasherSafe"}, {"active": false, "accessor": "relatedProducts"}, {"active": false, "accessor": "updatedAt"}, {"active": true, "accessor": "createdAt"}, {"active": false, "accessor": "makingLinks"}, {"active": false, "accessor": "length"}, {"active": false, "accessor": "meta.overview"}, {"active": false, "accessor": "meta.title"}, {"active": false, "accessor": "meta.description"}, {"active": false, "accessor": "meta.image"}, {"active": false, "accessor": "meta.preview"}, {"active": true, "accessor": "active"}], "editViewType": "default"}	2026-10-30 15:22:31.052+00	2026-06-02 02:18:50.056+00
+151	collection-products-132	{"fields": {"_index-1-0-1": {"tabIndex": 1}}}	2026-10-30 15:22:34.732+00	2026-10-30 15:22:34.733+00
 \.
 
 
@@ -5608,7 +5610,6 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 363	\N	12	user	1
 636	\N	143	user	1
 104	\N	28	user	1
-638	\N	123	user	1
 639	\N	52	user	1
 45	\N	19	user	1
 368	\N	57	user	1
@@ -5638,7 +5639,6 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 289	\N	30	user	1
 656	\N	139	user	1
 139	\N	39	user	1
-657	\N	109	user	1
 658	\N	147	user	1
 142	\N	42	user	1
 144	\N	32	user	1
@@ -5665,10 +5665,13 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 576	\N	125	user	1
 577	\N	127	user	1
 667	\N	149	user	1
+668	\N	109	user	1
+669	\N	151	user	1
 236	\N	67	user	1
 401	\N	40	user	1
 402	\N	41	user	1
 403	\N	108	user	1
+670	\N	123	user	1
 583	\N	132	user	1
 585	\N	65	user	1
 244	\N	62	user	1
@@ -5890,7 +5893,6 @@ COPY public.products (id, admin_title, sku, title, name, price, featured, thumb_
 98	M-0052-BLK — Mug	M-0052-BLK	Stoneware Mug - Black	Mug	55	f	657	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	3.75	4.4	338	17.5	electric-6	t	t	2026-10-16 16:24:09.539+00	2026-10-13 00:23:07.645+00	b0n	\N	\N	\N	\N	t
 73	T-0009-GRN — Petal Tray	T-0009-GRN	Petal Tray - Green & Brown	Petal Tray	28	f	462	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray glazed in green, designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	0.75	110	\N	electric-6	t	t	2026-08-28 17:27:50.787+00	2026-04-09 03:14:12.737+00	aui	5.5	\N	\N	\N	f
 125	M-0062-PUR — Mug	M-0062-PUR	Mug - Glacial Blue	Mug	55	f	786	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug with carvings designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.75	4	382	14.75	electric-6	t	t	2026-10-22 01:13:14.649+00	2026-10-22 01:12:54.613+00	b0l9	\N	\N	\N	\N	t
-132	T-0023-PNK — Petal Tray	T-0023-PNK	Petal Tray - Speckled Pink & White	Petal Tray	28	f	820	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray glazed in white, designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	0.75	110		electric-6	t	t	2026-10-30 00:44:17.16+00	2026-10-30 00:43:18.92+00	b0jni	5.5	\N	\N	\N	t
 69	M-0032-WHT — Mug	M-0032-WHT	Mug - White	Mug	50	t	445	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug with carvings designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.5	4.75	386	18.5	electric-6	t	t	2026-06-02 02:22:47.91+00	2026-03-21 02:08:25.892+00	9w	\N	\N	\N	\N	f
 116	T-0020-YEL — Petal Tray	T-0020-YEL	Ceramic Petal Tray - Yellow	Petal Tray	28	f	741	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "\\t", "type": "tab", "style": "", "detail": 2, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	0.75	110	\N	electric-6	t	t	2026-10-17 01:27:22.162+00	2026-10-14 16:55:05.4+00	b0ui	5.5	\N	\N	\N	t
 35	M-0019-GRN — Mug	M-0019-GRN	Ceramic Mug - Glacial Green	Mug	50	f	169	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The wide barreled body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	4	4.25	404	19.7	electric-6	t	t	2026-06-02 02:22:48.779+00	2026-03-17 18:16:49.742+00	ac	\N	\N	\N	\N	f
@@ -5928,7 +5930,6 @@ COPY public.products (id, admin_title, sku, title, name, price, featured, thumb_
 48	P-0005-COP — Cruet	P-0005-COP	Ceramic Cruet - White & Copper Green	Cruet	38	f	233	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small bottle perfect for broth, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Its compact size makes it easy to handle at the table while adding a thoughtful, handmade touch to everyday meals and gatherings.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	2.5	4.25	273	6.8	electric-6	t	t	2026-09-15 23:59:44.356+00	2026-03-17 18:17:45.681+00	b06	\N	\N	\N	\N	f
 101	M-0055-BLK — Mug	M-0055-BLK	Stoneware Mug - Black	Mug	55	t	671	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	4	4.25	330	17.2	electric-6	t	t	2026-10-16 16:21:45.516+00	2026-10-13 01:27:34.388+00	b0o	\N	\N	\N	\N	t
 108	T-0012-PUR — Petal Tray	T-0012-PUR	Ceramic Petal Tray -  Glacier	Petal Tray	28	f	709	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	0.75	110	\N	electric-6	t	t	2026-10-17 00:59:32.497+00	2026-10-14 13:56:26.947+00	b0k9	5.5	\N	\N	\N	t
-136	M-0070-PUR — Mug	M-0070-PUR	Mug - Purple &  Blue	Mug	55	f	838	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug with carvings designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "\\t", "type": "tab", "style": "", "detail": 2, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.8	4.5	405	19.6	electric-6	t	t	2026-10-30 01:24:08.085+00	2026-10-30 01:23:21.479+00	b0z	\N	\N	\N	\N	t
 64	M-0029-PUR — Mug	M-0029-PUR	Ceramic Mug - Purple	Mug	50	f	411	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug with carvings designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	3.5	4	437	19	electric-6	t	t	2026-06-02 02:22:49.109+00	2026-03-19 02:17:39.41+00	aji	\N	\N	\N	\N	f
 10	C-0002-COP — Cup	C-0002-COP	Ceramic Cup - White & Copper Green	Cup	40	f	40	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Glazed in a clean white finish and accented with a hand-brushed green copper wash around the rim, each cup carries subtle variation and depth. Wheel-thrown from durable stoneware, it’s made to be used daily — whether for drink or creative workspaces.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textFormat": 0}], "direction": "ltr"}}	3.75	4.5	324	16.83	electric-6	t	t	2026-09-15 23:59:44.435+00	2026-03-17 18:14:55.963+00	b0a	\N	\N	\N	\N	f
 56	P-0006-PUR — Cruet	P-0006-PUR	Ceramic Cruet - Periwinkle	Cruet	38	f	378	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small bottle perfect for broth, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Its compact size makes it easy to handle at the table while adding a thoughtful, handmade touch to everyday meals and gatherings.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	2.5	4.25	273	6.8	electric-6	t	t	2026-10-15 16:56:35.414+00	2026-03-18 21:40:18.812+00	b0k5	\N	\N	\N	\N	t
@@ -5942,6 +5943,7 @@ COPY public.products (id, admin_title, sku, title, name, price, featured, thumb_
 34	M-0018-COP — Mug	M-0018-COP	Ceramic Mug - White & Copper Green	Mug	50	f	164	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.75	4.25	376	16.5	electric-6	t	t	2026-09-15 23:59:44.498+00	2026-03-17 18:16:45.105+00	b0d	\N	\N	\N	\N	f
 84	M-0043-PNK — Mug	M-0043-PNK	Ceramic Mug - Pink	Mug	50	f	522	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and handle design give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	4.4	420	16.4	electric-6	t	t	2026-06-02 02:22:48.111+00	2026-05-02 01:51:50.101+00	a1l	\N	\N	\N	\N	f
 58	P-0008-GRN — Cruet	P-0008-GRN	Ceramic Cruet - Green & White	Cruet	38	f	386	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small bottle perfect for broth, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Its compact size makes it easy to handle at the table while adding a thoughtful, handmade touch to everyday meals and gatherings.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	2.5	4.25	273	6.8	electric-6	t	t	2026-10-15 16:17:09.013+00	2026-03-19 00:19:29.278+00	a3i	\N	\N	\N	\N	t
+136	M-0070-PUR — Mug	M-0070-PUR	Mug - Purple &  Blue	Mug	55	f	838	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug with carvings designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "\\t", "type": "tab", "style": "", "detail": 2, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.8	4.5	405	19.6	electric-6	t	t	2026-10-30 01:25:07.096+00	2026-10-30 01:23:21.479+00	b0k2i	\N	\N	\N	\N	t
 83	M-0042-PUR — Mug	M-0042-PUR	Ceramic Mug - Blue & White Striped	Mug	50	f	514	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and handle design give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	3.25	4.5	368	16.75	electric-6	t	t	2026-06-02 02:22:48.875+00	2026-04-11 02:34:17.924+00	adr	\N	\N	\N	\N	f
 81	P-0009-GRN — Cruet	P-0009-GRN	Ceramic Cruet - Green & White	Cruet	38	f	505	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small bottle perfect for broth, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Its compact size makes it easy to handle at the table while adding a thoughtful, handmade touch to everyday meals and gatherings.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	2.5	4.25	273	6.8	electric-6	t	t	2026-08-28 17:29:25.086+00	2026-04-09 04:53:24.783+00	a39	\N	\N	\N	\N	f
 24	M-0008-PNK — Mug	M-0008-PNK	Square Ceramic Mug - Pink	Mug	50	f	114	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A square wheel-thrown and altered mug designed for coffee and tea lovers alike. The softly defined corners give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Decorated with a pink and white design created using a wax resist technique, each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	4	4.1	386	15.2	electric-6	t	t	2026-09-15 23:59:43.454+00	2026-03-17 18:15:58.937+00	a2	\N	\N	\N	\N	f
@@ -5954,7 +5956,9 @@ COPY public.products (id, admin_title, sku, title, name, price, featured, thumb_
 85	M-0044-PNK — Mug	M-0044-PNK	Ceramic Mug - Pink	Mug	50	f	527	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and handle design give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.75	4.25	399	16.6	electric-6	t	t	2026-06-02 02:22:48.074+00	2026-05-02 02:05:46.781+00	a1k	\N	\N	\N	\N	f
 126	M-0063-GRN — Mug	M-0063-GRN	Stoneware Mug - Green on Speckled Terracotta	Mug	55	f	797	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug with carvings designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.75	4.2	362	14.2	electric-6	t	t	2026-10-22 02:00:31.822+00	2026-10-22 01:39:37.495+00	b0hi	\N	\N	\N	\N	t
 60	T-0007-YEL — Petal Tray	T-0007-YEL	Petal Tray - Yellow & White	Petal Tray	28	f	394	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray glazed in yellow and white, designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	0.75	110	\N	electric-6	t	t	2026-08-28 17:27:50.57+00	2026-03-19 01:07:34.802+00	a29	5.5	\N	\N	\N	f
+132	T-0023-PNK — Petal Tray	T-0023-PNK	Petal Tray - Speckled Pink & White	Petal Tray	28	f	820	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray glazed in white, designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	0.75	110		electric-6	t	t	2026-10-30 15:22:56.48+00	2026-10-30 00:43:18.92+00	b0jni	5.5	\N	\N	\N	t
 9	C-0001-BRN — SM Cups	C-0001-BRN	Faceted Sipping Cups - Brown	SM Cups	42	f	36	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A pair of small faceted cups designed for sipping sake, whiskey, tequila, or espresso. The hand-faceted surfaces create subtle angles that catch the light while offering a comfortable, tactile grip. Their compact size makes them ideal for intimate pours and slow, intentional sipping.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A versatile addition to any barware or espresso setup, they balance function, craftsmanship, and everyday elegance.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	2.25	2.4	123	3.4	electric-6	t	t	2026-09-15 23:59:44.152+00	2026-03-17 18:14:51.874+00	az	\N	\N	\N	\N	f
+105	J-0009-TAN — Jar	J-0009-TAN	Ceramic Jar - Honey & Pink	Jar	75	t	840	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A ceramic lidded jar finished in a honey glaze, offering a surface with subtle depth and variation. Topped with a handmade pink knob that encourages the hand to see what's hidden inside. Interior glazed purple.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Both functional and decorative, this stoneware jar transitions beautifully from kitchen counter to open shelving, adding one-of-a-kind visual interest, intention, and artisan character to your everyday storage.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	5	6.5	619	22.5	electric-6	t	t	2026-10-30 15:26:59.437+00	2026-10-14 02:13:04.148+00	b0jr	\N	\N	\N	\N	t
 61	T-0008-YEL — Petal Tray	T-0008-YEL	Petal Tray - Yellow	Petal Tray	28	f	406	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray glazed in yellow, designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	0.75	110	\N	electric-6	t	t	2026-08-28 17:27:50.619+00	2026-03-19 01:20:19.133+00	a2e	5.5	\N	\N	\N	f
 59	T-0006-GRN — Petal Tray	T-0006-GRN	Petal Tray - Green	Petal Tray	28	f	390	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray glazed in a rustic bluish green glaze and white tip, designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	9.75	110	\N	electric-6	t	t	2026-08-28 17:27:50.668+00	2026-03-19 00:35:54.966+00	a2r	5.5	\N	\N	\N	f
 7	B-0007-BLK — MD Bowl	B-0007-BLK	Carved Stoneware Bowl - Black	MD Bowl	52	f	28	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A medium wheel thrown bowl perfect for entrees. Dipped in a black glaze, with carvings decorating the outside providing a tactile experience and visual interest.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware bowls are made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	6.75	2.75	471	24	electric-6	t	t	2026-09-15 23:59:44.328+00	2026-03-17 18:14:45.237+00	b05	\N	\N	\N	\N	f
@@ -5972,7 +5976,6 @@ COPY public.products (id, admin_title, sku, title, name, price, featured, thumb_
 39	M-0023-WHY — Mug	M-0023-WHY	Ceramic Mug - White	Mug	50	f	189	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.5	4.75	361	15.75	electric-6	t	t	2026-06-02 02:22:47.991+00	2026-03-17 18:17:06.678+00	9y	\N	\N	\N	\N	f
 89	B-0011-BLU — Med Bowl	B-0011-BLU	Ceramic Bowl - Blue	Med Bowl	42	f	546	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A medium wheel thrown bowl perfect for entrees. Dipped in a rustic bluish green glaze.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware bowls are made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	5.3	3.6	428	23.8	electric-6	t	t	2026-06-02 02:22:48.342+00	2026-05-02 03:10:47.57+00	a2gi	\N	\N	\N	\N	f
 96	M-0050-PUR — Mug	M-0050-PUR	Mug - Purple glaze over black Slip	Mug	55	t	646	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and handle design give the form a distinctive silhouette while maintaining a comfortable grip in hand. Glazed in a glacial purplish blue over a black slip.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.75	4.25	387	17	electric-6	t	t	2026-10-16 17:18:07.761+00	2026-10-12 23:03:16.785+00	b0l	\N	\N	\N	\N	t
-105	J-0009-TAN — Jar	J-0009-TAN	Ceramic Jar - Honey & Pink	Jar	75	t	691	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A ceramic lidded jar finished in a honey glaze, offering a surface with subtle depth and variation. Topped with a handmade pink knob that encourages the hand to see what's hidden inside. Interior glazed purple.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Both functional and decorative, this stoneware jar transitions beautifully from kitchen counter to open shelving, adding one-of-a-kind visual interest, intention, and artisan character to your everyday storage.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	5	6.5	619	22.5	electric-6	t	t	2026-10-22 02:36:38.098+00	2026-10-14 02:13:04.148+00	b0jr	\N	\N	\N	\N	t
 57	P-0007-GRN — Cruet	P-0007-GRN	Ceramic Cruet - Green	Cruet	38	f	382	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small bottle perfect for broth, soy sauce, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Its compact size makes it easy to handle at the table while adding a thoughtful, handmade touch to everyday meals and gatherings.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	2.5	4.25	272	6.8	electric-6	f	f	2026-10-15 01:20:27.441+00	2026-03-19 00:05:49.096+00	axr	\N	\N	\N	\N	f
 62	T-0008-WHT — Petal Tray	T-0008-WHT	Petal Tray - White	Petal Tray	28	f	401	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray glazed in white, designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	0.75	110	\N	electric-6	t	t	2026-09-15 23:59:43.243+00	2026-03-19 01:28:46.593+00	9v	5.5	\N	\N	\N	f
 51	T-0001-PNK — Petal Tray	T-0001-PNK	Petal Tray - Pink & White	Petal Tray	28	t	244	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray glazed in soft pink and white, designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.6	0.75	110	\N	electric-6	t	t	2026-09-15 23:59:43.381+00	2026-03-17 18:17:54.334+00	a0	5.5	\N	\N	\N	f
@@ -6132,6 +6135,7 @@ COPY public.products_featured_image (id, _order, _parent_id, image_id) FROM stdi
 6acfa04a81e8080f3da7e1e3	3	112	553
 6acfa05481e8080f3da7e1e5	4	112	373
 6ad2cf3045d07f72a32a0e07	1	113	769
+6ae4b63b35bbbf2909667481	1	132	769
 \.
 
 
@@ -6278,9 +6282,6 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 3	59	69bb4412ca37cd57293813f5	389
 1	58	69bb40e3ca37cd57293813eb	383
 2	58	69bb40e8ca37cd57293813ed	384
-1	105	6acee5da75531a2e21ba2cc7	688
-2	105	6acee5e575531a2e21ba2cc9	689
-3	105	6acee5eb75531a2e21ba2ccb	690
 1	73	69d71b4b00eb0cbb3b798779	463
 2	73	69d71b5700eb0cbb3b79877b	464
 3	73	69d71b5d00eb0cbb3b79877d	465
@@ -6321,16 +6322,15 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 3	3	69b99a04aa9ac96a311210b9	15
 1	4	69b99a08aa9ac96a311210ba	17
 2	4	69b99a08aa9ac96a311210bb	18
-1	136	6ae3f151527d440729127ddc	835
-2	136	6ae3f157527d440729127dde	836
-3	136	6ae3f15c527d440729127de0	837
 3	4	69b99a08aa9ac96a311210bc	19
 1	10	69b99a1faa9ac96a311210ca	41
 2	10	69b99a1faa9ac96a311210cb	42
 3	10	69b99a1faa9ac96a311210cc	43
 1	29	69b99a76aa9ac96a31121111	140
 2	29	69b99a76aa9ac96a31121112	141
-4	136	6ae3f162527d440729127de2	839
+1	105	6acee5da75531a2e21ba2cc7	688
+2	105	6acee5e575531a2e21ba2cc9	689
+3	105	6acee5eb75531a2e21ba2ccb	690
 3	29	69b99a76aa9ac96a31121113	142
 4	29	69b99a76aa9ac96a31121114	143
 1	34	69b99a8daa9ac96a31121125	165
@@ -6383,6 +6383,10 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 1	104	6acee17a75531a2e21ba2cc3	686
 2	104	6acee17675531a2e21ba2cc1	685
 3	104	6acee18075531a2e21ba2cc5	687
+1	136	6ae3f151527d440729127ddc	835
+2	136	6ae3f157527d440729127dde	836
+3	136	6ae3f15c527d440729127de0	837
+4	136	6ae3f162527d440729127de2	839
 1	120	6ad029d2cba7d4731559c7db	755
 2	120	6ad029d6cba7d4731559c7dd	756
 3	120	6ad029dbcba7d4731559c7df	758
@@ -6398,12 +6402,9 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 2	131	6ae0067e4cd23b6d7be81e36	814
 3	131	6ae006824cd23b6d7be81e38	815
 4	131	6ae006874cd23b6d7be81e3a	816
-1	132	6ae3e7ce527d440729127dc6	818
-2	132	6ae3e7d5527d440729127dc8	821
 1	97	6acd6c813b227a81c124d283	648
 2	97	6acd6cb358d90e87d1561c35	649
 3	97	6acd6cb958d90e87d1561c37	650
-3	132	6ae3e7dc527d440729127dca	819
 1	122	6ad25bc045d07f72a32a0de7	764
 2	122	6ad25bc445d07f72a32a0de9	765
 4	97	6acd6cbe58d90e87d1561c39	651
@@ -6479,6 +6480,9 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 2	123	6ad9575d9bbc7c2c61cb0ee3	773
 3	123	6ad957629bbc7c2c61cb0ee5	774
 4	123	6ad957689bbc7c2c61cb0ee7	775
+1	132	6ae3e7ce527d440729127dc6	818
+2	132	6ae3e7d5527d440729127dc8	821
+3	132	6ae3e7dc527d440729127dca	819
 1	1	69b999fdaa9ac96a311210b1	3
 2	1	69b999fdaa9ac96a311210b2	4
 3	1	69b999fdaa9ac96a311210b3	5
@@ -6907,12 +6911,8 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 2184	3	127	relatedProducts	92
 2185	4	127	relatedProducts	109
 2014	1	57	relatedProducts	59
-2196	1	105	relatedProducts	112
-2197	2	105	relatedProducts	113
-2198	3	105	relatedProducts	120
 2015	2	57	relatedProducts	66
 2016	3	57	relatedProducts	63
-2199	4	105	relatedProducts	118
 1766	1	81	relatedProducts	74
 1767	2	81	relatedProducts	58
 1768	3	81	relatedProducts	43
@@ -6953,8 +6953,6 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 1535	1	89	relatedProducts	59
 1536	2	89	relatedProducts	68
 1537	3	89	relatedProducts	90
-2232	1	132	relatedProducts	129
-2233	2	132	relatedProducts	94
 2093	1	103	relatedProducts	102
 2094	2	103	relatedProducts	111
 2095	3	103	relatedProducts	115
@@ -6966,7 +6964,6 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 2106	3	95	relatedProducts	93
 2113	1	98	relatedProducts	101
 2114	1	99	relatedProducts	100
-2234	3	132	relatedProducts	114
 2142	1	117	relatedProducts	120
 2148	1	111	relatedProducts	102
 2149	2	111	relatedProducts	103
@@ -6986,9 +6983,14 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 1545	3	72	relatedProducts	90
 1546	4	72	relatedProducts	66
 2276	1	123	relatedProducts	136
+2278	1	136	relatedProducts	123
+2282	1	105	relatedProducts	112
 1550	1	63	relatedProducts	59
 1551	2	63	relatedProducts	66
 1552	3	63	relatedProducts	57
+2283	2	105	relatedProducts	113
+2284	3	105	relatedProducts	120
+2285	4	105	relatedProducts	118
 1569	1	1	relatedProducts	25
 1570	2	1	relatedProducts	26
 1571	3	1	relatedProducts	11
@@ -7089,7 +7091,9 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 2268	2	134	relatedProducts	102
 2269	3	134	relatedProducts	115
 2270	4	134	relatedProducts	119
-2277	1	136	relatedProducts	123
+2279	1	132	relatedProducts	129
+2280	2	132	relatedProducts	94
+2281	3	132	relatedProducts	114
 \.
 
 
@@ -7108,8 +7112,10 @@ COPY public.products_tags ("order", parent_id, value, id) FROM stdin;
 1	45	pour	888
 1	24	drink	889
 1	90	eat	890
-1	136	drink	1262
 1	71	drink	891
+1	136	drink	1263
+1	132	eat	1264
+2	132	display	1265
 1	46	pour	892
 1	56	pour	1166
 1	74	display	894
@@ -7124,6 +7130,7 @@ COPY public.products_tags ("order", parent_id, value, id) FROM stdin;
 1	79	drink	789
 1	43	drink	896
 1	78	drink	897
+1	105	store	1266
 1	44	drink	898
 1	11	drink	899
 1	12	drink	900
@@ -7246,11 +7253,8 @@ COPY public.products_tags ("order", parent_id, value, id) FROM stdin;
 1	82	pour	877
 1	126	drink	1234
 1	128	drink	1236
-1	105	store	1237
 1	130	drink	1241
 1	131	drink	1244
-1	132	eat	1249
-2	132	display	1250
 1	94	drink	1251
 1	129	drink	1252
 1	122	pour	1253
@@ -7402,8 +7406,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	d8a206d8-d517-4f61-b5fa-1d4f9d16d8f0	2026-10-30 00:02:05.612+00	2026-10-30 02:02:05.612+00
-2	1	8679708d-17f1-4ac3-b182-dc8f1b10379a	2026-10-30 00:02:13.289+00	2026-10-30 02:02:13.289+00
+1	1	3213e9bd-aab7-4921-80a1-c150f8ec1e9f	2026-10-30 15:20:23.337+00	2026-10-30 17:20:23.337+00
 \.
 
 
@@ -7614,7 +7617,7 @@ SELECT pg_catalog.setval('public.links_id_seq', 1, true);
 -- Name: media_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.media_id_seq', 839, true);
+SELECT pg_catalog.setval('public.media_id_seq', 840, true);
 
 
 --
@@ -7670,14 +7673,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 791, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 793, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 1406, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 1410, true);
 
 
 --
@@ -7691,14 +7694,14 @@ SELECT pg_catalog.setval('public.payload_migrations_id_seq', 16, true);
 -- Name: payload_preferences_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_id_seq', 150, true);
+SELECT pg_catalog.setval('public.payload_preferences_id_seq', 151, true);
 
 
 --
 -- Name: payload_preferences_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 667, true);
+SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 670, true);
 
 
 --
@@ -7733,14 +7736,14 @@ SELECT pg_catalog.setval('public.products_id_seq', 136, true);
 -- Name: products_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_rels_id_seq', 2277, true);
+SELECT pg_catalog.setval('public.products_rels_id_seq', 2285, true);
 
 
 --
 -- Name: products_tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_tags_id_seq', 1262, true);
+SELECT pg_catalog.setval('public.products_tags_id_seq', 1266, true);
 
 
 --
@@ -12253,5 +12256,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict gdOzHxA2VQcUDL1XrntfNF4ABH3B7eb7IXzUG45P8kFm8GdSBxXziBaaEAIhnQS
+\unrestrict hIK79eM3L6eYCoain1MskH6bHgG0F0wQpRSSa7hX32zPqILlv8DAMNaQy2kXVgh
 
