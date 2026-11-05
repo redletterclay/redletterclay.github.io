@@ -23,6 +23,7 @@ jobs:
       IMAGEKIT_PUBLIC_KEY: public_Q2fTsXleg/A7qsgEk8TmGXpmNho=
       IMAGEKIT_PRIVATE_KEY: ${{ secrets.IMAGEKIT_PRIVATE_KEY }}
       NEXT_PUBLIC_SNIPCART_API_KEY: N2M2YjYyZjYtNzI1Yy00YjgzLTgzNGQtOTYwNmVlNDNiZmM5NjM4MjA3MTM4MDAzMDcwNjM2
+      SNIPCART_API_KEY: ${{ secrets.SNIPCART_API_KEY }}
 
     services:
       postgres:
