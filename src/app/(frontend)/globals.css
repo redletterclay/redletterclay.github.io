@@ -1228,6 +1228,11 @@ div.tags .btn { --animate-duration: 600ms; }
 }
 .carousel-control-prev { left: 0; }
 .carousel-control-next { right: 0; }
+.product-thumb-mobile .carousel-control-prev,
+.product-thumb-mobile .carousel-control-next {
+  top: auto;
+  bottom: 0.75rem;
+}
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: inline-block;

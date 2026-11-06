@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict jXOFoU6yGQjhVn8p065bRkQcLj0waK274p71GgnBzPjePPcw1vJxLcsCcn2Go7c
+\restrict ae4cnMEWioB52zPhr7DhLgqUiQItwgo5NBui6bVro1g1CrqEZ6denrUSYm6jwHQ
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -5103,6 +5103,8 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 829	Ceramic Cruet - Turquoise	\N	\N	2026-10-30 00:31:40.23+00	2026-10-30 00:31:26.721+00	/api/media/file/P-0016-BLU-3.jpg	/api/media/file/P-0016-BLU-3-300x225.jpg	P-0016-BLU-3.jpg	image/jpeg	580516	1820	1366	50	50	/api/media/file/P-0016-BLU-3-300x225.jpg	300	225	image/jpeg	5076	P-0016-BLU-3-300x225.jpg	/api/media/file/P-0016-BLU-3-500x500.jpg	500	500	image/jpeg	20532	P-0016-BLU-3-500x500.jpg	/api/media/file/P-0016-BLU-3-600x450.jpg	600	450	image/jpeg	17403	P-0016-BLU-3-600x450.jpg	/api/media/file/P-0016-BLU-3-900x675.jpg	900	675	image/jpeg	38393	P-0016-BLU-3-900x675.jpg	/api/media/file/P-0016-BLU-3-1400x1051.jpg	1400	1051	image/jpeg	87956	P-0016-BLU-3-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/P-0016-BLU-3-1200x630.jpg	1200	630	image/jpeg	57658	P-0016-BLU-3-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/P-0016-BLU-3.jpg
 826	Ceramic Cruet - Turquoise	\N	\N	2026-10-30 00:31:52.505+00	2026-10-30 00:31:21.923+00	/api/media/file/P-0016-BLU-03.jpg	/api/media/file/P-0016-BLU-03-300x225.jpg	P-0016-BLU-03.jpg	image/jpeg	818880	1820	1366	50	50	/api/media/file/P-0016-BLU-03-300x225.jpg	300	225	image/jpeg	7234	P-0016-BLU-03-300x225.jpg	/api/media/file/P-0016-BLU-03-500x500.jpg	500	500	image/jpeg	25478	P-0016-BLU-03-500x500.jpg	/api/media/file/P-0016-BLU-03-600x450.jpg	600	450	image/jpeg	23599	P-0016-BLU-03-600x450.jpg	/api/media/file/P-0016-BLU-03-900x675.jpg	900	675	image/jpeg	50516	P-0016-BLU-03-900x675.jpg	/api/media/file/P-0016-BLU-03-1400x1051.jpg	1400	1051	image/jpeg	115655	P-0016-BLU-03-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/P-0016-BLU-03-1200x630.jpg	1200	630	image/jpeg	77779	P-0016-BLU-03-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/P-0016-BLU-03.jpg
 846	Ceramic Cruet - Purple over Terracotta	\N	\N	2026-11-05 02:24:09.121+00	2026-11-05 02:24:05.979+00	/api/media/file/P-0017-PUR-02.jpg	\N	P-0017-PUR-02.jpg	image/jpeg	549688	1820	1366	50	50	/api/media/file/P-0017-PUR-02-300x225.jpg	300	225	image/jpeg	5711	P-0017-PUR-02-300x225.jpg	/api/media/file/P-0017-PUR-02-500x500.jpg	500	500	image/jpeg	22646	P-0017-PUR-02-500x500.jpg	/api/media/file/P-0017-PUR-02-600x450.jpg	600	450	image/jpeg	19323	P-0017-PUR-02-600x450.jpg	/api/media/file/P-0017-PUR-02-900x675.jpg	900	675	image/jpeg	40448	P-0017-PUR-02-900x675.jpg	/api/media/file/P-0017-PUR-02-1400x1051.jpg	1400	1051	image/jpeg	88448	P-0017-PUR-02-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/P-0017-PUR-02-1200x630.jpg	1200	630	image/jpeg	59331	P-0017-PUR-02-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/P-0017-PUR-02.jpg
+853	Stoneware Mug - Turquoise on Speckled Terracotta	\N	\N	2026-11-06 03:12:33.513+00	2026-11-06 03:12:30.128+00	/api/media/file/M-0071-BLU-01.jpg	\N	M-0071-BLU-01.jpg	image/jpeg	774783	1820	1366	50	50	/api/media/file/M-0071-BLU-01-300x225.jpg	300	225	image/jpeg	8036	M-0071-BLU-01-300x225.jpg	/api/media/file/M-0071-BLU-01-500x500.jpg	500	500	image/jpeg	31705	M-0071-BLU-01-500x500.jpg	/api/media/file/M-0071-BLU-01-600x450.jpg	600	450	image/jpeg	27039	M-0071-BLU-01-600x450.jpg	/api/media/file/M-0071-BLU-01-900x675.jpg	900	675	image/jpeg	55676	M-0071-BLU-01-900x675.jpg	/api/media/file/M-0071-BLU-01-1400x1051.jpg	1400	1051	image/jpeg	119847	M-0071-BLU-01-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0071-BLU-01-1200x630.jpg	1200	630	image/jpeg	76920	M-0071-BLU-01-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0071-BLU-01.jpg
+860	Handmade Ceramic Mug - Levender Glaze over Black Slip	\N	\N	2026-11-06 03:24:46.163+00	2026-11-06 03:24:41.645+00	/api/media/file/M-0072-PUR-03.jpg	\N	M-0072-PUR-03.jpg	image/jpeg	775407	1820	1366	50	50	/api/media/file/M-0072-PUR-03-300x225.jpg	300	225	image/jpeg	10346	M-0072-PUR-03-300x225.jpg	/api/media/file/M-0072-PUR-03-500x500.jpg	500	500	image/jpeg	39021	M-0072-PUR-03-500x500.jpg	/api/media/file/M-0072-PUR-03-600x450.jpg	600	450	image/jpeg	33897	M-0072-PUR-03-600x450.jpg	/api/media/file/M-0072-PUR-03-900x675.jpg	900	675	image/jpeg	65538	M-0072-PUR-03-900x675.jpg	/api/media/file/M-0072-PUR-03-1400x1051.jpg	1400	1051	image/jpeg	129930	M-0072-PUR-03-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0072-PUR-03-1200x630.jpg	1200	630	image/jpeg	90505	M-0072-PUR-03-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0072-PUR-03.jpg
 827	Ceramic Cruet - Turquoise	\N	\N	2026-10-30 00:31:47.231+00	2026-10-30 00:31:22.549+00	/api/media/file/P-0016-BLU-thumb.jpg	/api/media/file/P-0016-BLU-thumb-300x300.jpg	P-0016-BLU-thumb.jpg	image/jpeg	90460	400	400	50	50	/api/media/file/P-0016-BLU-thumb-300x300.jpg	300	300	image/jpeg	8051	P-0016-BLU-thumb-300x300.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	https://ik.imagekit.io/raygun/redletterclay/P-0016-BLU-thumb.jpg
 698	Stoneware Mug - White	\N	\N	2026-10-14 13:11:30.436+00	2026-10-14 13:11:28.462+00	/api/media/file/M-0058-WHT-02.jpg	\N	M-0058-WHT-02.jpg	image/jpeg	485474	1820	1366	50	50	/api/media/file/M-0058-WHT-02-300x225.jpg	300	225	image/jpeg	6695	M-0058-WHT-02-300x225.jpg	/api/media/file/M-0058-WHT-02-500x500.jpg	500	500	image/jpeg	23888	M-0058-WHT-02-500x500.jpg	/api/media/file/M-0058-WHT-02-600x450.jpg	600	450	image/jpeg	20931	M-0058-WHT-02-600x450.jpg	/api/media/file/M-0058-WHT-02-900x675.jpg	900	675	image/jpeg	39293	M-0058-WHT-02-900x675.jpg	/api/media/file/M-0058-WHT-02-1400x1051.jpg	1400	1051	image/jpeg	76939	M-0058-WHT-02-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0058-WHT-02-1200x630.jpg	1200	630	image/jpeg	53880	M-0058-WHT-02-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0058-WHT-02.jpg
 700	Stoneware Mug - White	\N	\N	2026-10-14 13:11:31.388+00	2026-10-14 13:11:29.815+00	/api/media/file/M-0058-WHT-thumb.jpg	\N	M-0058-WHT-thumb.jpg	image/jpeg	109490	400	400	50	50	/api/media/file/M-0058-WHT-thumb-300x300.jpg	300	300	image/jpeg	10035	M-0058-WHT-thumb-300x300.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	https://ik.imagekit.io/raygun/redletterclay/M-0058-WHT-thumb.jpg
@@ -5170,8 +5172,14 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 760	Ceramic Bottle - Green & White	\N	\N	2026-10-22 01:49:05.891+00	2026-10-15 23:13:33.141+00	/api/media/file/P-0013-COP-02.jpg	/api/media/file/P-0013-COP-02-300x225.jpg	P-0013-COP-02.jpg	image/jpeg	191995	1820	1366	50	50	/api/media/file/P-0013-COP-02-300x225.jpg	300	225	image/jpeg	3026	P-0013-COP-02-300x225.jpg	/api/media/file/P-0013-COP-02-500x500.jpg	500	500	image/jpeg	8583	P-0013-COP-02-500x500.jpg	/api/media/file/P-0013-COP-02-600x450.jpg	600	450	image/jpeg	7856	P-0013-COP-02-600x450.jpg	/api/media/file/P-0013-COP-02-900x675.jpg	900	675	image/jpeg	14224	P-0013-COP-02-900x675.jpg	/api/media/file/P-0013-COP-02-1400x1051.jpg	1400	1051	image/jpeg	28449	P-0013-COP-02-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/P-0013-COP-02-1200x630.jpg	1200	630	image/jpeg	18479	P-0013-COP-02-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/P-0013-COP-02.jpg
 761	Ceramic Bottle - Green & White	\N	\N	2026-10-22 01:49:09.917+00	2026-10-15 23:13:34.055+00	/api/media/file/P-0013-COP-03.jpg	/api/media/file/P-0013-COP-03-300x225.jpg	P-0013-COP-03.jpg	image/jpeg	329790	1820	1366	50	50	/api/media/file/P-0013-COP-03-300x225.jpg	300	225	image/jpeg	3948	P-0013-COP-03-300x225.jpg	/api/media/file/P-0013-COP-03-500x500.jpg	500	500	image/jpeg	11659	P-0013-COP-03-500x500.jpg	/api/media/file/P-0013-COP-03-600x450.jpg	600	450	image/jpeg	10725	P-0013-COP-03-600x450.jpg	/api/media/file/P-0013-COP-03-900x675.jpg	900	675	image/jpeg	20051	P-0013-COP-03-900x675.jpg	/api/media/file/P-0013-COP-03-1400x1051.jpg	1400	1051	image/jpeg	40675	P-0013-COP-03-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/P-0013-COP-03-1200x630.jpg	1200	630	image/jpeg	28350	P-0013-COP-03-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/P-0013-COP-03.jpg
 762	Ceramic Bottle - Green & White	\N	\N	2026-10-22 01:49:13.255+00	2026-10-15 23:13:34.815+00	/api/media/file/P-0013-COP-thumb.jpg	/api/media/file/P-0013-COP-thumb-300x300.jpg	P-0013-COP-thumb.jpg	image/jpeg	52447	400	400	50	50	/api/media/file/P-0013-COP-thumb-300x300.jpg	300	300	image/jpeg	5271	P-0013-COP-thumb-300x300.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	https://ik.imagekit.io/raygun/redletterclay/P-0013-COP-thumb.jpg
+856	Stoneware Mug - Turquoise on Speckled Terracotta	\N	\N	2026-11-06 03:12:38.665+00	2026-11-06 03:12:34.463+00	/api/media/file/M-0071-BLU-04.jpg	\N	M-0071-BLU-04.jpg	image/jpeg	993343	1820	1366	50	50	/api/media/file/M-0071-BLU-04-300x225.jpg	300	225	image/jpeg	9881	M-0071-BLU-04-300x225.jpg	/api/media/file/M-0071-BLU-04-500x500.jpg	500	500	image/jpeg	39130	M-0071-BLU-04-500x500.jpg	/api/media/file/M-0071-BLU-04-600x450.jpg	600	450	image/jpeg	33451	M-0071-BLU-04-600x450.jpg	/api/media/file/M-0071-BLU-04-900x675.jpg	900	675	image/jpeg	68826	M-0071-BLU-04-900x675.jpg	/api/media/file/M-0071-BLU-04-1400x1051.jpg	1400	1051	image/jpeg	148330	M-0071-BLU-04-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0071-BLU-04-1200x630.jpg	1200	630	image/jpeg	98107	M-0071-BLU-04-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0071-BLU-04.jpg
+858	Handmade Ceramic Mug - Levender Glaze over Black Slip	\N	\N	2026-11-06 03:24:41.832+00	2026-11-06 03:24:39.093+00	/api/media/file/M-0072-PUR-01.jpg	\N	M-0072-PUR-01.jpg	image/jpeg	824101	1820	1366	50	50	/api/media/file/M-0072-PUR-01-300x225.jpg	300	225	image/jpeg	9638	M-0072-PUR-01-300x225.jpg	/api/media/file/M-0072-PUR-01-500x500.jpg	500	500	image/jpeg	38965	M-0072-PUR-01-500x500.jpg	/api/media/file/M-0072-PUR-01-600x450.jpg	600	450	image/jpeg	33059	M-0072-PUR-01-600x450.jpg	/api/media/file/M-0072-PUR-01-900x675.jpg	900	675	image/jpeg	66914	M-0072-PUR-01-900x675.jpg	/api/media/file/M-0072-PUR-01-1400x1051.jpg	1400	1051	image/jpeg	138755	M-0072-PUR-01-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0072-PUR-01-1200x630.jpg	1200	630	image/jpeg	95416	M-0072-PUR-01-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0072-PUR-01.jpg
+861	Handmade Ceramic Mug - Levender Glaze over Black Slip	\N	\N	2026-11-06 03:24:48.481+00	2026-11-06 03:24:42.794+00	/api/media/file/M-0072-PUR-04.jpg	\N	M-0072-PUR-04.jpg	image/jpeg	954302	1820	1366	50	50	/api/media/file/M-0072-PUR-04-300x225.jpg	300	225	image/jpeg	11282	M-0072-PUR-04-300x225.jpg	/api/media/file/M-0072-PUR-04-500x500.jpg	500	500	image/jpeg	43806	M-0072-PUR-04-500x500.jpg	/api/media/file/M-0072-PUR-04-600x450.jpg	600	450	image/jpeg	37571	M-0072-PUR-04-600x450.jpg	/api/media/file/M-0072-PUR-04-900x675.jpg	900	675	image/jpeg	74713	M-0072-PUR-04-900x675.jpg	/api/media/file/M-0072-PUR-04-1400x1051.jpg	1400	1051	image/jpeg	154926	M-0072-PUR-04-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0072-PUR-04-1200x630.jpg	1200	630	image/jpeg	106425	M-0072-PUR-04-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0072-PUR-04.jpg
 833	Carved Stoneware Mug - Glacial Blue & White on Speckled Brick Red	\N	\N	2026-10-30 00:33:53.653+00	2026-10-30 00:33:50.007+00	/api/media/file/M-0069-PUR-thumb.jpg	\N	M-0069-PUR-thumb.jpg	image/jpeg	144965	400	400	50	50	/api/media/file/M-0069-PUR-thumb-300x300.jpg	300	300	image/jpeg	14197	M-0069-PUR-thumb-300x300.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	https://ik.imagekit.io/raygun/redletterclay/M-0069-PUR-thumb.jpg
 763	Ceramic Cruet - Glacier Blue & Purple	\N	\N	2026-10-16 17:13:59.838+00	2026-10-16 17:13:58.174+00	/api/media/file/P-0014-PUR-01-thumb.jpg	\N	P-0014-PUR-01-thumb.jpg	image/jpeg	89168	400	400	50	50	/api/media/file/P-0014-PUR-01-thumb-300x300.jpg	300	300	image/jpeg	7585	P-0014-PUR-01-thumb-300x300.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	https://ik.imagekit.io/raygun/redletterclay/P-0014-PUR-01-thumb.jpg
+849	Stoneware Ceramic Bowl - Purple over Terracotta	\N	\N	2026-11-06 02:21:24.485+00	2026-11-06 02:21:21.889+00	/api/media/file/B-0014-PUR-01.jpg	\N	B-0014-PUR-01.jpg	image/jpeg	1117051	1820	1366	50	50	/api/media/file/B-0014-PUR-01-300x225.jpg	300	225	image/jpeg	11466	B-0014-PUR-01-300x225.jpg	/api/media/file/B-0014-PUR-01-500x500.jpg	500	500	image/jpeg	46727	B-0014-PUR-01-500x500.jpg	/api/media/file/B-0014-PUR-01-600x450.jpg	600	450	image/jpeg	39446	B-0014-PUR-01-600x450.jpg	/api/media/file/B-0014-PUR-01-900x675.jpg	900	675	image/jpeg	81945	B-0014-PUR-01-900x675.jpg	/api/media/file/B-0014-PUR-01-1400x1051.jpg	1400	1051	image/jpeg	173605	B-0014-PUR-01-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/B-0014-PUR-01-1200x630.jpg	1200	630	image/jpeg	112359	B-0014-PUR-01-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/B-0014-PUR-01.jpg
+850	Stoneware Ceramic Bowl - Purple over Terracotta	\N	\N	2026-11-06 02:21:26.787+00	2026-11-06 02:21:23.18+00	/api/media/file/B-0014-PUR-02.jpg	\N	B-0014-PUR-02.jpg	image/jpeg	930683	1820	1366	50	50	/api/media/file/B-0014-PUR-02-300x225.jpg	300	225	image/jpeg	10137	B-0014-PUR-02-300x225.jpg	/api/media/file/B-0014-PUR-02-500x500.jpg	500	500	image/jpeg	38944	B-0014-PUR-02-500x500.jpg	/api/media/file/B-0014-PUR-02-600x450.jpg	600	450	image/jpeg	33288	B-0014-PUR-02-600x450.jpg	/api/media/file/B-0014-PUR-02-900x675.jpg	900	675	image/jpeg	67728	B-0014-PUR-02-900x675.jpg	/api/media/file/B-0014-PUR-02-1400x1051.jpg	1400	1051	image/jpeg	143635	B-0014-PUR-02-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/B-0014-PUR-02-1200x630.jpg	1200	630	image/jpeg	92977	B-0014-PUR-02-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/B-0014-PUR-02.jpg
+857	Stoneware Mug - Turquoise on Speckled Terracotta	\N	\N	2026-11-06 03:12:39.775+00	2026-11-06 03:12:35.767+00	/api/media/file/M-0071-BLU-thumb.jpg	\N	M-0071-BLU-thumb.jpg	image/jpeg	127929	400	400	50	50	/api/media/file/M-0071-BLU-thumb-300x300.jpg	300	300	image/jpeg	10481	M-0071-BLU-thumb-300x300.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	https://ik.imagekit.io/raygun/redletterclay/M-0071-BLU-thumb.jpg
 767	Ceramic Petal Trays	\N	\N	2026-10-16 23:30:21.989+00	2026-10-16 23:30:19.541+00	/api/media/file/petal-trays-01-L.jpg	\N	petal-trays-01-L.jpg	image/jpeg	1759396	2000	1600	50	50	/api/media/file/petal-trays-01-L-300x240.jpg	300	240	image/jpeg	20444	petal-trays-01-L-300x240.jpg	/api/media/file/petal-trays-01-L-500x500.jpg	500	500	image/jpeg	69323	petal-trays-01-L-500x500.jpg	/api/media/file/petal-trays-01-L-600x480.jpg	600	480	image/jpeg	76705	petal-trays-01-L-600x480.jpg	/api/media/file/petal-trays-01-L-900x720.jpg	900	720	image/jpeg	175291	petal-trays-01-L-900x720.jpg	/api/media/file/petal-trays-01-L-1400x1120.jpg	1400	1120	image/jpeg	421579	petal-trays-01-L-1400x1120.jpg	/api/media/file/petal-trays-01-L-1920x1536.jpg	1920	1536	image/jpeg	757778	petal-trays-01-L-1920x1536.jpg	/api/media/file/petal-trays-01-L-1200x630.jpg	1200	630	image/jpeg	206285	petal-trays-01-L-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/petal-trays-01-L.jpg
 768	Ceramic Petal Trays	\N	\N	2026-10-22 01:46:45.727+00	2026-10-16 23:30:21.356+00	/api/media/file/petal-trays-01-P.jpg	/api/media/file/petal-trays-01-P-300x375.jpg	petal-trays-01-P.jpg	image/jpeg	1723790	1600	2000	50	50	/api/media/file/petal-trays-01-P-300x375.jpg	300	375	image/jpeg	31122	petal-trays-01-P-300x375.jpg	/api/media/file/petal-trays-01-P-500x500.jpg	500	500	image/jpeg	70142	petal-trays-01-P-500x500.jpg	/api/media/file/petal-trays-01-P-600x750.jpg	600	750	image/jpeg	123095	petal-trays-01-P-600x750.jpg	/api/media/file/petal-trays-01-P-900x1125.jpg	900	1125	image/jpeg	282873	petal-trays-01-P-900x1125.jpg	/api/media/file/petal-trays-01-P-1400x1750.jpg	1400	1750	image/jpeg	656614	petal-trays-01-P-1400x1750.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/petal-trays-01-P-1200x630.jpg	1200	630	image/jpeg	216866	petal-trays-01-P-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/petal-trays-01-P.jpg
 764	Ceramic Cruet - Glacier Blue & Purple	\N	\N	2026-10-22 01:48:50.431+00	2026-10-16 17:13:58.957+00	/api/media/file/P-0014-PUR-01.jpg	/api/media/file/P-0014-PUR-01-300x225.jpg	P-0014-PUR-01.jpg	image/jpeg	577908	1820	1366	50	50	/api/media/file/P-0014-PUR-01-300x225.jpg	300	225	image/jpeg	5440	P-0014-PUR-01-300x225.jpg	/api/media/file/P-0014-PUR-01-500x500.jpg	500	500	image/jpeg	23694	P-0014-PUR-01-500x500.jpg	/api/media/file/P-0014-PUR-01-600x450.jpg	600	450	image/jpeg	20024	P-0014-PUR-01-600x450.jpg	/api/media/file/P-0014-PUR-01-900x675.jpg	900	675	image/jpeg	43022	P-0014-PUR-01-900x675.jpg	/api/media/file/P-0014-PUR-01-1400x1051.jpg	1400	1051	image/jpeg	93389	P-0014-PUR-01-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/P-0014-PUR-01-1200x630.jpg	1200	630	image/jpeg	63190	P-0014-PUR-01-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/P-0014-PUR-01.jpg
@@ -5190,8 +5198,11 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 835	Stoneware Mug - Purple on Terracotta	\N	\N	2026-10-30 00:40:06.709+00	2026-10-30 00:40:04.697+00	/api/media/file/M-0070-PUR-01.jpg	\N	M-0070-PUR-01.jpg	image/jpeg	810998	1820	1366	50	50	/api/media/file/M-0070-PUR-01-300x225.jpg	300	225	image/jpeg	8186	M-0070-PUR-01-300x225.jpg	/api/media/file/M-0070-PUR-01-500x500.jpg	500	500	image/jpeg	30117	M-0070-PUR-01-500x500.jpg	/api/media/file/M-0070-PUR-01-600x450.jpg	600	450	image/jpeg	26039	M-0070-PUR-01-600x450.jpg	/api/media/file/M-0070-PUR-01-900x675.jpg	900	675	image/jpeg	53341	M-0070-PUR-01-900x675.jpg	/api/media/file/M-0070-PUR-01-1400x1051.jpg	1400	1051	image/jpeg	116916	M-0070-PUR-01-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0070-PUR-01-1200x630.jpg	1200	630	image/jpeg	76807	M-0070-PUR-01-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0070-PUR-01.jpg
 777	Handmade Ceramic Mug - Levender glaze over speckled terracotta	\N	\N	2026-10-22 00:53:30.613+00	2026-10-22 00:53:28.36+00	/api/media/file/M-0061-PUR-01.jpg	\N	M-0061-PUR-01.jpg	image/jpeg	622396	1820	1366	50	50	/api/media/file/M-0061-PUR-01-300x225.jpg	300	225	image/jpeg	8127	M-0061-PUR-01-300x225.jpg	/api/media/file/M-0061-PUR-01-500x500.jpg	500	500	image/jpeg	29152	M-0061-PUR-01-500x500.jpg	/api/media/file/M-0061-PUR-01-600x450.jpg	600	450	image/jpeg	25505	M-0061-PUR-01-600x450.jpg	/api/media/file/M-0061-PUR-01-900x675.jpg	900	675	image/jpeg	49321	M-0061-PUR-01-900x675.jpg	/api/media/file/M-0061-PUR-01-1400x1051.jpg	1400	1051	image/jpeg	100594	M-0061-PUR-01-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0061-PUR-01-1200x630.jpg	1200	630	image/jpeg	72253	M-0061-PUR-01-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0061-PUR-01.jpg
 836	Stoneware Mug - Purple on Terracotta	\N	\N	2026-10-30 00:40:08.567+00	2026-10-30 00:40:05.565+00	/api/media/file/M-0070-PUR-02.jpg	\N	M-0070-PUR-02.jpg	image/jpeg	719291	1820	1366	50	50	/api/media/file/M-0070-PUR-02-300x225.jpg	300	225	image/jpeg	7320	M-0070-PUR-02-300x225.jpg	/api/media/file/M-0070-PUR-02-500x500.jpg	500	500	image/jpeg	27025	M-0070-PUR-02-500x500.jpg	/api/media/file/M-0070-PUR-02-600x450.jpg	600	450	image/jpeg	23435	M-0070-PUR-02-600x450.jpg	/api/media/file/M-0070-PUR-02-900x675.jpg	900	675	image/jpeg	47951	M-0070-PUR-02-900x675.jpg	/api/media/file/M-0070-PUR-02-1400x1051.jpg	1400	1051	image/jpeg	104563	M-0070-PUR-02-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0070-PUR-02-1200x630.jpg	1200	630	image/jpeg	64612	M-0070-PUR-02-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0070-PUR-02.jpg
+851	Stoneware Ceramic Bowl - Purple over Terracotta	\N	\N	2026-11-06 02:21:27.205+00	2026-11-06 02:21:24.779+00	/api/media/file/B-0014-PUR-03.jpg	\N	B-0014-PUR-03.jpg	image/jpeg	1056002	1820	1366	50	50	/api/media/file/B-0014-PUR-03-300x225.jpg	300	225	image/jpeg	10744	B-0014-PUR-03-300x225.jpg	/api/media/file/B-0014-PUR-03-500x500.jpg	500	500	image/jpeg	43572	B-0014-PUR-03-500x500.jpg	/api/media/file/B-0014-PUR-03-600x450.jpg	600	450	image/jpeg	37010	B-0014-PUR-03-600x450.jpg	/api/media/file/B-0014-PUR-03-900x675.jpg	900	675	image/jpeg	76503	B-0014-PUR-03-900x675.jpg	/api/media/file/B-0014-PUR-03-1400x1051.jpg	1400	1051	image/jpeg	162681	B-0014-PUR-03-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/B-0014-PUR-03-1200x630.jpg	1200	630	image/jpeg	108364	B-0014-PUR-03-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/B-0014-PUR-03.jpg
 778	Handmade Ceramic Mug - Levender glaze over speckled terracotta	\N	\N	2026-10-22 01:46:21.991+00	2026-10-22 00:53:29.476+00	/api/media/file/M-0061-PUR-02.jpg	/api/media/file/M-0061-PUR-02-300x225.jpg	M-0061-PUR-02.jpg	image/jpeg	560509	1820	1366	50	50	/api/media/file/M-0061-PUR-02-300x225.jpg	300	225	image/jpeg	7515	M-0061-PUR-02-300x225.jpg	/api/media/file/M-0061-PUR-02-500x500.jpg	500	500	image/jpeg	27059	M-0061-PUR-02-500x500.jpg	/api/media/file/M-0061-PUR-02-600x450.jpg	600	450	image/jpeg	23622	M-0061-PUR-02-600x450.jpg	/api/media/file/M-0061-PUR-02-900x675.jpg	900	675	image/jpeg	45228	M-0061-PUR-02-900x675.jpg	/api/media/file/M-0061-PUR-02-1400x1051.jpg	1400	1051	image/jpeg	90640	M-0061-PUR-02-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0061-PUR-02-1200x630.jpg	1200	630	image/jpeg	61352	M-0061-PUR-02-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0061-PUR-02.jpg
 779	Handmade Ceramic Mug - Levender glaze over speckled terracotta	\N	\N	2026-10-22 01:46:31.034+00	2026-10-22 00:53:31.64+00	/api/media/file/M-0061-PUR-04.jpg	/api/media/file/M-0061-PUR-04-300x225.jpg	M-0061-PUR-04.jpg	image/jpeg	779114	1820	1366	50	50	/api/media/file/M-0061-PUR-04-300x225.jpg	300	225	image/jpeg	10249	M-0061-PUR-04-300x225.jpg	/api/media/file/M-0061-PUR-04-500x500.jpg	500	500	image/jpeg	35877	M-0061-PUR-04-500x500.jpg	/api/media/file/M-0061-PUR-04-600x450.jpg	600	450	image/jpeg	31237	M-0061-PUR-04-600x450.jpg	/api/media/file/M-0061-PUR-04-900x675.jpg	900	675	image/jpeg	59443	M-0061-PUR-04-900x675.jpg	/api/media/file/M-0061-PUR-04-1400x1051.jpg	1400	1051	image/jpeg	120317	M-0061-PUR-04-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0061-PUR-04-1200x630.jpg	1200	630	image/jpeg	81276	M-0061-PUR-04-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0061-PUR-04.jpg
+855	Stoneware Mug - Turquoise on Speckled Terracotta	\N	\N	2026-11-06 03:12:37.136+00	2026-11-06 03:12:32.86+00	/api/media/file/M-0071-BLU-03.jpg	\N	M-0071-BLU-03.jpg	image/jpeg	958732	1820	1366	50	50	/api/media/file/M-0071-BLU-03-300x225.jpg	300	225	image/jpeg	9657	M-0071-BLU-03-300x225.jpg	/api/media/file/M-0071-BLU-03-500x500.jpg	500	500	image/jpeg	35934	M-0071-BLU-03-500x500.jpg	/api/media/file/M-0071-BLU-03-600x450.jpg	600	450	image/jpeg	31964	M-0071-BLU-03-600x450.jpg	/api/media/file/M-0071-BLU-03-900x675.jpg	900	675	image/jpeg	65190	M-0071-BLU-03-900x675.jpg	/api/media/file/M-0071-BLU-03-1400x1051.jpg	1400	1051	image/jpeg	139780	M-0071-BLU-03-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0071-BLU-03-1200x630.jpg	1200	630	image/jpeg	91423	M-0071-BLU-03-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0071-BLU-03.jpg
+862	Handmade Ceramic Mug - Levender Glaze over Black Slip	\N	\N	2026-11-06 03:24:51.807+00	2026-11-06 03:24:50.545+00	/api/media/file/M-0072-PUR-thumb.jpg	\N	M-0072-PUR-thumb.jpg	image/jpeg	139379	400	400	50	50	/api/media/file/M-0072-PUR-thumb-300x300.jpg	300	300	image/jpeg	13572	M-0072-PUR-thumb-300x300.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	https://ik.imagekit.io/raygun/redletterclay/M-0072-PUR-thumb.jpg
 781	Handmade Ceramic Mug - Levender glaze over speckled terracotta	\N	\N	2026-10-22 00:53:37.928+00	2026-10-22 00:53:36.191+00	/api/media/file/M-0061-PUR-4.jpg	\N	M-0061-PUR-4.jpg	image/jpeg	667024	1820	1366	50	50	/api/media/file/M-0061-PUR-4-300x225.jpg	300	225	image/jpeg	8649	M-0061-PUR-4-300x225.jpg	/api/media/file/M-0061-PUR-4-500x500.jpg	500	500	image/jpeg	30866	M-0061-PUR-4-500x500.jpg	/api/media/file/M-0061-PUR-4-600x450.jpg	600	450	image/jpeg	27015	M-0061-PUR-4-600x450.jpg	/api/media/file/M-0061-PUR-4-900x675.jpg	900	675	image/jpeg	51640	M-0061-PUR-4-900x675.jpg	/api/media/file/M-0061-PUR-4-1400x1051.jpg	1400	1051	image/jpeg	103627	M-0061-PUR-4-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0061-PUR-4-1200x630.jpg	1200	630	image/jpeg	73841	M-0061-PUR-4-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0061-PUR-4.jpg
 838	Stoneware Mug - Purple on Terracotta	\N	\N	2026-10-30 00:40:11.443+00	2026-10-30 00:40:07.664+00	/api/media/file/M-0070-PUR-thumb.jpg	\N	M-0070-PUR-thumb.jpg	image/jpeg	152694	400	400	50	50	/api/media/file/M-0070-PUR-thumb-300x300.jpg	300	300	image/jpeg	11747	M-0070-PUR-thumb-300x300.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	https://ik.imagekit.io/raygun/redletterclay/M-0070-PUR-thumb.jpg
 839	Stoneware Mug - Purple on Terracotta	\N	\N	2026-10-30 00:40:13.557+00	2026-10-30 00:40:12.061+00	/api/media/file/M-0070-PUR-5.jpg	\N	M-0070-PUR-5.jpg	image/jpeg	980891	1820	1366	50	50	/api/media/file/M-0070-PUR-5-300x225.jpg	300	225	image/jpeg	9847	M-0070-PUR-5-300x225.jpg	/api/media/file/M-0070-PUR-5-500x500.jpg	500	500	image/jpeg	37286	M-0070-PUR-5-500x500.jpg	/api/media/file/M-0070-PUR-5-600x450.jpg	600	450	image/jpeg	31958	M-0070-PUR-5-600x450.jpg	/api/media/file/M-0070-PUR-5-900x675.jpg	900	675	image/jpeg	64862	M-0070-PUR-5-900x675.jpg	/api/media/file/M-0070-PUR-5-1400x1051.jpg	1400	1051	image/jpeg	139876	M-0070-PUR-5-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0070-PUR-5-1200x630.jpg	1200	630	image/jpeg	89648	M-0070-PUR-5-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0070-PUR-5.jpg
@@ -5213,6 +5224,7 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 795	Green Mug on Speckled Terracotta	\N	\N	2026-10-22 01:54:19.475+00	2026-10-22 01:54:14.59+00	/api/media/file/M-0064-GRN-04.jpg	\N	M-0064-GRN-04.jpg	image/jpeg	856643	1820	1366	50	50	/api/media/file/M-0064-GRN-04-300x225.jpg	300	225	image/jpeg	8295	M-0064-GRN-04-300x225.jpg	/api/media/file/M-0064-GRN-04-500x500.jpg	500	500	image/jpeg	32058	M-0064-GRN-04-500x500.jpg	/api/media/file/M-0064-GRN-04-600x450.jpg	600	450	image/jpeg	27504	M-0064-GRN-04-600x450.jpg	/api/media/file/M-0064-GRN-04-900x675.jpg	900	675	image/jpeg	55957	M-0064-GRN-04-900x675.jpg	/api/media/file/M-0064-GRN-04-1400x1051.jpg	1400	1051	image/jpeg	121602	M-0064-GRN-04-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0064-GRN-04-1200x630.jpg	1200	630	image/jpeg	80872	M-0064-GRN-04-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0064-GRN-04.jpg
 799	Handmade Ceramic Mug - Honey & White 	\N	\N	2026-10-22 02:14:43.706+00	2026-10-22 02:14:40.716+00	/api/media/file/M-0065-TAN-02.jpg	\N	M-0065-TAN-02.jpg	image/jpeg	536688	1820	1366	50	50	/api/media/file/M-0065-TAN-02-300x225.jpg	300	225	image/jpeg	6221	M-0065-TAN-02-300x225.jpg	/api/media/file/M-0065-TAN-02-500x500.jpg	500	500	image/jpeg	23627	M-0065-TAN-02-500x500.jpg	/api/media/file/M-0065-TAN-02-600x450.jpg	600	450	image/jpeg	20481	M-0065-TAN-02-600x450.jpg	/api/media/file/M-0065-TAN-02-900x675.jpg	900	675	image/jpeg	40462	M-0065-TAN-02-900x675.jpg	/api/media/file/M-0065-TAN-02-1400x1051.jpg	1400	1051	image/jpeg	83574	M-0065-TAN-02-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0065-TAN-02-1200x630.jpg	1200	630	image/jpeg	58977	M-0065-TAN-02-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0065-TAN-02.jpg
 798	Handmade Ceramic Mug - Honey & White 	\N	\N	2026-10-22 02:14:41.901+00	2026-10-22 02:14:39.659+00	/api/media/file/M-0065-TAN-01.jpg	\N	M-0065-TAN-01.jpg	image/jpeg	605660	1820	1366	50	50	/api/media/file/M-0065-TAN-01-300x225.jpg	300	225	image/jpeg	7401	M-0065-TAN-01-300x225.jpg	/api/media/file/M-0065-TAN-01-500x500.jpg	500	500	image/jpeg	27464	M-0065-TAN-01-500x500.jpg	/api/media/file/M-0065-TAN-01-600x450.jpg	600	450	image/jpeg	23869	M-0065-TAN-01-600x450.jpg	/api/media/file/M-0065-TAN-01-900x675.jpg	900	675	image/jpeg	46661	M-0065-TAN-01-900x675.jpg	/api/media/file/M-0065-TAN-01-1400x1051.jpg	1400	1051	image/jpeg	94734	M-0065-TAN-01-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0065-TAN-01-1200x630.jpg	1200	630	image/jpeg	67004	M-0065-TAN-01-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0065-TAN-01.jpg
+852	Stoneware Ceramic Bowl - Purple over Terracotta	\N	\N	2026-11-06 02:21:28.703+00	2026-11-06 02:21:25.752+00	/api/media/file/B-0014-PUR-thumb.jpg	\N	B-0014-PUR-thumb.jpg	image/jpeg	152224	400	400	50	50	/api/media/file/B-0014-PUR-thumb-300x300.jpg	300	300	image/jpeg	12541	B-0014-PUR-thumb-300x300.jpg	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	https://ik.imagekit.io/raygun/redletterclay/B-0014-PUR-thumb.jpg
 800	Handmade Ceramic Mug - Honey & White 	\N	\N	2026-10-22 02:14:45.497+00	2026-10-22 02:14:41.502+00	/api/media/file/M-0065-TAN-03.jpg	\N	M-0065-TAN-03.jpg	image/jpeg	754296	1820	1366	50	50	/api/media/file/M-0065-TAN-03-300x225.jpg	300	225	image/jpeg	9485	M-0065-TAN-03-300x225.jpg	/api/media/file/M-0065-TAN-03-500x500.jpg	500	500	image/jpeg	33080	M-0065-TAN-03-500x500.jpg	/api/media/file/M-0065-TAN-03-600x450.jpg	600	450	image/jpeg	29430	M-0065-TAN-03-600x450.jpg	/api/media/file/M-0065-TAN-03-900x675.jpg	900	675	image/jpeg	56316	M-0065-TAN-03-900x675.jpg	/api/media/file/M-0065-TAN-03-1400x1051.jpg	1400	1051	image/jpeg	113181	M-0065-TAN-03-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0065-TAN-03-1200x630.jpg	1200	630	image/jpeg	77119	M-0065-TAN-03-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0065-TAN-03.jpg
 801	Handmade Ceramic Mug - Honey & White 	\N	\N	2026-10-22 02:14:47.273+00	2026-10-22 02:14:42.078+00	/api/media/file/M-0065-TAN-04.jpg	\N	M-0065-TAN-04.jpg	image/jpeg	767632	1820	1366	50	50	/api/media/file/M-0065-TAN-04-300x225.jpg	300	225	image/jpeg	8917	M-0065-TAN-04-300x225.jpg	/api/media/file/M-0065-TAN-04-500x500.jpg	500	500	image/jpeg	33786	M-0065-TAN-04-500x500.jpg	/api/media/file/M-0065-TAN-04-600x450.jpg	600	450	image/jpeg	29015	M-0065-TAN-04-600x450.jpg	/api/media/file/M-0065-TAN-04-900x675.jpg	900	675	image/jpeg	57753	M-0065-TAN-04-900x675.jpg	/api/media/file/M-0065-TAN-04-1400x1051.jpg	1400	1051	image/jpeg	118397	M-0065-TAN-04-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0065-TAN-04-1200x630.jpg	1200	630	image/jpeg	79690	M-0065-TAN-04-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0065-TAN-04.jpg
 803	Handmade Ceramic Mug - Pink & White	\N	\N	2026-10-27 01:36:51.758+00	2026-10-27 01:36:49.626+00	/api/media/file/M-0066-PNK-01.jpg	\N	M-0066-PNK-01.jpg	image/jpeg	740930	1820	1366	50	50	/api/media/file/M-0066-PNK-01-300x225.jpg	300	225	image/jpeg	8852	M-0066-PNK-01-300x225.jpg	/api/media/file/M-0066-PNK-01-500x500.jpg	500	500	image/jpeg	33295	M-0066-PNK-01-500x500.jpg	/api/media/file/M-0066-PNK-01-600x450.jpg	600	450	image/jpeg	28854	M-0066-PNK-01-600x450.jpg	/api/media/file/M-0066-PNK-01-900x675.jpg	900	675	image/jpeg	56989	M-0066-PNK-01-900x675.jpg	/api/media/file/M-0066-PNK-01-1400x1051.jpg	1400	1051	image/jpeg	118059	M-0066-PNK-01-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0066-PNK-01-1200x630.jpg	1200	630	image/jpeg	80985	M-0066-PNK-01-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0066-PNK-01.jpg
@@ -5232,6 +5244,8 @@ COPY public.media (id, alt, caption, folder_id, updated_at, created_at, url, thu
 821	Ceramic Petal Tray - Speckled Pink & White	\N	\N	2026-10-30 00:30:10.63+00	2026-10-30 00:30:08.96+00	/api/media/file/T-0023-PNK-3.jpg	\N	T-0023-PNK-3.jpg	image/jpeg	774503	1820	1366	50	50	/api/media/file/T-0023-PNK-3-300x225.jpg	300	225	image/jpeg	8274	T-0023-PNK-3-300x225.jpg	/api/media/file/T-0023-PNK-3-500x500.jpg	500	500	image/jpeg	31920	T-0023-PNK-3-500x500.jpg	/api/media/file/T-0023-PNK-3-600x450.jpg	600	450	image/jpeg	27319	T-0023-PNK-3-600x450.jpg	/api/media/file/T-0023-PNK-3-900x675.jpg	900	675	image/jpeg	56257	T-0023-PNK-3-900x675.jpg	/api/media/file/T-0023-PNK-3-1400x1051.jpg	1400	1051	image/jpeg	120604	T-0023-PNK-3-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/T-0023-PNK-3-1200x630.jpg	1200	630	image/jpeg	85165	T-0023-PNK-3-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/T-0023-PNK-3.jpg
 841	Ceramic Berry Bowl - Glacial Blue on Black Slip	\N	\N	2026-11-05 02:06:43.177+00	2026-11-05 02:06:40.557+00	/api/media/file/B-0013-PUR-01.jpg	\N	B-0013-PUR-01.jpg	image/jpeg	980292	1820	1366	50	50	/api/media/file/B-0013-PUR-01-300x225.jpg	300	225	image/jpeg	12998	B-0013-PUR-01-300x225.jpg	/api/media/file/B-0013-PUR-01-500x500.jpg	500	500	image/jpeg	49868	B-0013-PUR-01-500x500.jpg	/api/media/file/B-0013-PUR-01-600x450.jpg	600	450	image/jpeg	42732	B-0013-PUR-01-600x450.jpg	/api/media/file/B-0013-PUR-01-900x675.jpg	900	675	image/jpeg	83441	B-0013-PUR-01-900x675.jpg	/api/media/file/B-0013-PUR-01-1400x1051.jpg	1400	1051	image/jpeg	167190	B-0013-PUR-01-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/B-0013-PUR-01-1200x630.jpg	1200	630	image/jpeg	111414	B-0013-PUR-01-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/B-0013-PUR-01.jpg
 842	Ceramic Berry Bowl - Glacial Blue on Black Slip	\N	\N	2026-11-05 02:06:45.549+00	2026-11-05 02:06:41.668+00	/api/media/file/B-0013-PUR-02.jpg	\N	B-0013-PUR-02.jpg	image/jpeg	1116986	1820	1366	50	50	/api/media/file/B-0013-PUR-02-300x225.jpg	300	225	image/jpeg	13466	B-0013-PUR-02-300x225.jpg	/api/media/file/B-0013-PUR-02-500x500.jpg	500	500	image/jpeg	49379	B-0013-PUR-02-500x500.jpg	/api/media/file/B-0013-PUR-02-600x450.jpg	600	450	image/jpeg	45543	B-0013-PUR-02-600x450.jpg	/api/media/file/B-0013-PUR-02-900x675.jpg	900	675	image/jpeg	90810	B-0013-PUR-02-900x675.jpg	/api/media/file/B-0013-PUR-02-1400x1051.jpg	1400	1051	image/jpeg	187371	B-0013-PUR-02-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/B-0013-PUR-02-1200x630.jpg	1200	630	image/jpeg	130003	B-0013-PUR-02-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/B-0013-PUR-02.jpg
+854	Stoneware Mug - Turquoise on Speckled Terracotta	\N	\N	2026-11-06 03:12:35.588+00	2026-11-06 03:12:31.622+00	/api/media/file/M-0071-BLU-02.jpg	\N	M-0071-BLU-02.jpg	image/jpeg	644549	1820	1366	50	50	/api/media/file/M-0071-BLU-02-300x225.jpg	300	225	image/jpeg	6852	M-0071-BLU-02-300x225.jpg	/api/media/file/M-0071-BLU-02-500x500.jpg	500	500	image/jpeg	26727	M-0071-BLU-02-500x500.jpg	/api/media/file/M-0071-BLU-02-600x450.jpg	600	450	image/jpeg	22833	M-0071-BLU-02-600x450.jpg	/api/media/file/M-0071-BLU-02-900x675.jpg	900	675	image/jpeg	46846	M-0071-BLU-02-900x675.jpg	/api/media/file/M-0071-BLU-02-1400x1051.jpg	1400	1051	image/jpeg	100902	M-0071-BLU-02-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0071-BLU-02-1200x630.jpg	1200	630	image/jpeg	63778	M-0071-BLU-02-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0071-BLU-02.jpg
+859	Handmade Ceramic Mug - Levender Glaze over Black Slip	\N	\N	2026-11-06 03:24:44.04+00	2026-11-06 03:24:40.461+00	/api/media/file/M-0072-PUR-02.jpg	\N	M-0072-PUR-02.jpg	image/jpeg	749274	1820	1366	50	50	/api/media/file/M-0072-PUR-02-300x225.jpg	300	225	image/jpeg	8576	M-0072-PUR-02-300x225.jpg	/api/media/file/M-0072-PUR-02-500x500.jpg	500	500	image/jpeg	34118	M-0072-PUR-02-500x500.jpg	/api/media/file/M-0072-PUR-02-600x450.jpg	600	450	image/jpeg	29409	M-0072-PUR-02-600x450.jpg	/api/media/file/M-0072-PUR-02-900x675.jpg	900	675	image/jpeg	58791	M-0072-PUR-02-900x675.jpg	/api/media/file/M-0072-PUR-02-1400x1051.jpg	1400	1051	image/jpeg	122013	M-0072-PUR-02-1400x1051.jpg	\N	\N	\N	\N	\N	\N	/api/media/file/M-0072-PUR-02-1200x630.jpg	1200	630	image/jpeg	80903	M-0072-PUR-02-1200x630.jpg	https://ik.imagekit.io/raygun/redletterclay/M-0072-PUR-02.jpg
 \.
 
 
@@ -5408,12 +5422,12 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 6	20260318_191703	5	2026-03-18 19:17:08.293+00	2026-03-18 19:17:08.293+00
 2	20260317_061117	1	2026-03-17 06:12:15.302+00	2026-03-17 06:12:15.302+00
 5	20260318_181856	4	2026-03-18 18:25:43.589+00	2026-03-18 18:25:43.589+00
-1	dev	-1	2026-11-05 03:01:48.173+00	2026-03-16 16:07:06.694+00
 7	20260320_041255	6	2026-03-20 04:16:57.288+00	2026-03-20 04:16:57.288+00
 8	20260317_180300	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 9	20260318_161820	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 10	20260320_033436	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 11	20260513_products_thumb_array	7	2026-05-14 00:04:04.985+00	2026-05-14 00:04:04.984+00
+1	dev	-1	2026-11-06 03:37:02.02+00	2026-03-16 16:07:06.694+00
 12	20260526_163601	8	2026-05-26 16:42:42.781+00	2026-05-26 16:42:42.781+00
 13	20260526_170229	9	2026-05-26 17:02:48.565+00	2026-05-26 17:02:48.565+00
 14	20260601_220009	10	2026-06-01 22:04:41.959+00	2026-06-01 22:04:41.959+00
@@ -5440,6 +5454,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 9	global-header	{"editViewType": "default"}	2026-03-16 17:16:22.252+00	2026-03-16 17:16:22.254+00
 10	global-footer	{"editViewType": "default"}	2026-03-16 17:16:24.879+00	2026-03-16 17:16:24.88+00
 11	collection-redirects	{}	2026-03-16 17:16:30.831+00	2026-03-16 17:16:30.831+00
+96	collection-products-2	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-11-06 02:22:25.614+00	2026-05-11 13:58:04.018+00
 51	collection-products-68	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-21 03:17:13.326+00	2026-03-21 01:53:41.481+00
 28	collection-products-8	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-03-19 00:35:34.752+00	2026-03-19 00:35:34.753+00
 78	collection-products-1	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-05-12 16:37:20.428+00	2026-05-08 19:47:29.669+00
@@ -5482,7 +5497,6 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 93	collection-products-28	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-11 13:22:27.307+00	2026-05-11 13:22:27.308+00
 108	global-events-carousel-images	{"editViewType": "default"}	2026-06-01 22:13:32.163+00	2026-06-01 22:13:32.165+00
 110	global-statement-carousel	{"editViewType": "default"}	2026-08-07 15:37:17.303+00	2026-08-07 15:37:17.305+00
-96	collection-products-2	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-11 13:58:06.477+00	2026-05-11 13:58:04.018+00
 21	collection-products-48	{"fields": {"_index-1": {"tabIndex": 1}, "_index-1-0-1": {"tabIndex": 0}}}	2026-05-11 14:13:54.079+00	2026-03-18 18:37:16.858+00
 38	collection-products-17	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-08-28 17:30:54.903+00	2026-03-19 04:04:22.35+00
 90	collection-products-14	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-08-28 17:31:07.759+00	2026-05-11 13:08:48.351+00
@@ -5491,7 +5505,6 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 68	collection-products-83	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-05-02 01:46:13.978+00	2026-04-11 02:38:31.802+00
 134	collection-products-119	{"fields": {"_index-1-0-1": {"tabIndex": 1}}}	2026-10-15 01:20:42.779+00	2026-10-15 01:20:42.78+00
 94	collection-products-38	{"fields": {"_index-1": {"tabIndex": 0}, "_index-1-0-1": {"tabIndex": 0}}}	2026-10-13 00:19:36.793+00	2026-05-11 13:41:17.01+00
-100	collection-products-4	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-11 14:24:54.953+00	2026-05-11 14:24:52.615+00
 103	collection-products-34	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-12 14:21:45.855+00	2026-05-12 14:21:45.856+00
 37	collection-products-67	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-05-12 16:27:05.563+00	2026-03-19 03:06:08.217+00
 61	collection-products-77	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-05-12 16:35:35.011+00	2026-04-09 04:13:31.139+00
@@ -5551,6 +5564,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 132	collection-products-118	{"fields": {"_index-1-0-1": {"tabIndex": 1}}}	2026-10-15 16:13:28.38+00	2026-10-14 17:54:46.71+00
 138	collection-products-111	{"fields": {"_index-1-0-1": {"tabIndex": 1}}}	2026-10-15 16:55:14.224+00	2026-10-15 16:51:53.746+00
 149	collection-products-123	{"fields": {"_index-1-0-1": {"tabIndex": 0}}}	2026-11-05 02:40:47.696+00	2026-10-30 01:23:16.397+00
+155	collection-products-141	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-11-06 03:33:19.514+00	2026-11-06 03:33:19.138+00
 113	collection-products-93	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-10-16 16:19:38.792+00	2026-10-12 21:53:32.943+00
 117	collection-products-99	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-10-16 16:20:51.786+00	2026-10-13 00:35:58.879+00
 120	collection-products-102	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-10-16 16:21:51.507+00	2026-10-13 01:35:38.074+00
@@ -5569,17 +5583,19 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 130	collection-products-115	{"fields": {"_index-1-0-1": {"tabIndex": 1}}}	2026-10-15 16:55:43.336+00	2026-10-14 16:33:35.488+00
 26	collection-products-56	{"fields": {"_index-1": {"tabIndex": 0}, "_index-1-0-1": {"tabIndex": 1}}}	2026-10-15 16:56:20.546+00	2026-03-19 00:19:14.941+00
 121	collection-products-95	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-10-16 16:20:02.41+00	2026-10-13 03:05:21.032+00
-118	collection-products-100	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-10-16 16:21:33.092+00	2026-10-13 00:55:09.725+00
 152	collection-products-137	{"fields": {"_index-1-0-1": {"tabIndex": 0}}}	2026-11-05 03:01:32.301+00	2026-11-05 02:09:24.214+00
 119	collection-products-101	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-10-16 16:21:40.221+00	2026-10-13 01:27:35.87+00
+100	collection-products-4	{"fields": {"_index-1": {"tabIndex": 0}}}	2026-11-06 02:22:16.216+00	2026-05-11 14:24:52.615+00
 124	collection-products-106	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-10-16 16:22:20.212+00	2026-10-14 02:29:01.449+00
 66	collection-products-45	{"fields": {"_index-1": {"tabIndex": 0}, "_index-1-0-1": {"tabIndex": 0}}}	2026-10-16 17:14:48.221+00	2026-04-09 04:59:27.582+00
+118	collection-products-100	{"fields": {"_index-1-0-1": {"tabIndex": 1}}}	2026-11-06 03:14:30.786+00	2026-10-13 00:55:09.725+00
 142	collection-products-116	{"fields": {"_index-1-0-1": {"tabIndex": 1}}}	2026-10-17 01:27:12.661+00	2026-10-17 01:27:12.663+00
 143	collection-products-126	{"fields": {"_index-1-0-1": {"tabIndex": 0}}}	2026-10-22 02:14:57.237+00	2026-10-22 01:40:49.771+00
 136	collection-products-109	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-10-30 00:43:05.987+00	2026-10-15 15:50:55.559+00
 140	collection-products-122	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-10-30 00:50:10.425+00	2026-10-16 17:17:30.271+00
 151	collection-products-132	{"fields": {"_index-1-0-1": {"tabIndex": 1}}}	2026-10-30 15:22:34.732+00	2026-10-30 15:22:34.733+00
 153	collection-products-134	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-11-05 02:26:54.548+00	2026-11-05 02:26:54.549+00
+154	collection-products-139	{"fields": {"_index-1-0-1": {"tabIndex": 0}}}	2026-11-06 02:30:49.62+00	2026-11-06 02:24:26.046+00
 \.
 
 
@@ -5707,14 +5723,12 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 336	\N	95	user	1
 412	\N	48	user	1
 413	\N	38	user	1
-339	\N	96	user	1
 340	\N	97	user	1
 342	\N	21	user	1
 500	\N	22	user	1
 344	\N	99	user	1
 414	\N	90	user	1
 415	\N	75	user	1
-347	\N	100	user	1
 593	\N	138	user	1
 506	\N	111	user	1
 507	\N	112	user	1
@@ -5726,7 +5740,6 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 607	\N	121	user	1
 610	\N	116	user	1
 611	\N	117	user	1
-612	\N	118	user	1
 613	\N	119	user	1
 614	\N	120	user	1
 615	\N	122	user	1
@@ -5740,6 +5753,11 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 680	\N	109	user	1
 682	\N	149	user	1
 683	\N	152	user	1
+684	\N	100	user	1
+685	\N	96	user	1
+692	\N	154	user	1
+694	\N	118	user	1
+696	\N	155	user	1
 \.
 
 
@@ -5948,6 +5966,7 @@ COPY public.products (id, admin_title, sku, title, name, price, featured, thumb_
 133	P-0015-OLI — Cruet	P-0015-OLI	Ceramic Cruet - Olive	Cruet	38	f	824	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small bottle perfect for broth, soy sauce, salad dressings, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Its compact size makes it easy to handle at the table while adding a thoughtful, handmade touch to everyday meals and gatherings.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	2.5	4.25	273	6.8	electric-6	t	t	2026-10-30 00:52:30.485+00	2026-10-30 00:51:01.732+00	b0oi	\N	\N	\N	\N	t
 74	T-0010-GRN — Petal Tray	T-0010-GRN	Petal Tray - Green & White	Petal Tray	28	f	469	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray glazed in green and white, designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	0.75	110	\N	electric-6	t	t	2026-09-15 23:59:43.631+00	2026-04-09 03:29:57.622+00	a3r	5.5	\N	\N	\N	f
 29	M-0013-COP — Mug	M-0013-COP	Ceramic Mug - White & Copper Green	Mug	50	f	139	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.5	4.25	382	17	electric-6	t	t	2026-09-15 23:59:44.461+00	2026-03-17 18:16:22.392+00	b0c	\N	\N	\N	\N	f
+139	B-0014-PUR — Med Bowl	B-0014-PUR	Stoneware Ceramic Bowl - Purple over Terracotta	Med Bowl	46	f	852	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A medium wheel thrown bowl perfect for rice, soup & small entrees. Dipped in a purple and blue glaze over terracotta slip..", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware bowls are made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	5.75	3	477	20.75	electric-6	t	t	2026-11-06 03:16:08.72+00	2026-11-06 02:24:24.664+00	b0k3i	\N	\N	\N	\N	t
 114	T-0018-PNK — Petal Tray	T-0018-PNK	Ceramic Petal Tray - Pink & White	Petal Tray	28	f	733	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	0.75	110	\N	electric-6	t	t	2026-10-17 00:53:15.274+00	2026-10-14 15:53:18.75+00	b0jn	5.5	\N	\N	\N	t
 79	M-0040-PNK — Sm Mug	M-0040-PNK	Latte Mug - Pink & White	Sm Mug	40	f	501	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A compact 9oz wheel-thrown mug designed for coffee and tea lovers alike. The curved body and one-finger handle design give the form a distinctive silhouette while maintaining a comfortable grip in hand.  A perfect size for lattes, macchiatos and cortados.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	3.4	2.5	273	9	electric-6	t	t	2026-06-02 02:22:48.187+00	2026-04-09 04:32:44.131+00	a1r	\N	\N	\N	\N	f
 113	T-0017-TAN — Petal Tray	T-0017-TAN	Ceramic Petal Tray - Tan	Petal Tray	28	f	728	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "\\t", "type": "tab", "style": "", "detail": 2, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	0.75	110	\N	electric-6	t	t	2026-10-17 01:28:20.859+00	2026-10-14 15:44:11.436+00	b0x	5,5	\N	\N	\N	t
@@ -6013,6 +6032,8 @@ COPY public.products (id, admin_title, sku, title, name, price, featured, thumb_
 131	M-0068-GRN — Mug	M-0068-GRN	Stoneware Mug - Green on Speckled Terracotta	Mug	55	f	817	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug with carvings designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "\\t", "type": "tab", "style": "", "detail": 2, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.75	4	405	17.9	electric-6	t	t	2026-10-27 02:05:33.638+00	2026-10-27 02:04:49.932+00	b0h3	\N	\N	\N	\N	t
 138	P-0017-PUR — Cruet	P-0017-PUR	Ceramic Cruet - Purple over Terracotta	Cruet	38	f	847	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small bottle perfect for broth, soy sauce, salad dressings, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Its compact size makes it easy to handle at the table while adding a thoughtful, handmade touch to everyday meals and gatherings.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "\\t", "type": "tab", "style": "", "detail": 2, "format": 0, "version": 1}, {"mode": "normal", "text": "\\t", "type": "tab", "style": "", "detail": 2, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	2.5	4.25	273	6.8	electric-6	t	t	2026-11-05 02:27:56.26+00	2026-11-05 02:27:14.545+00	b0k4	\N	\N	\N	\N	t
 137	B-0013-PUR — Berry Bowl	B-0013-PUR	Stoneware Berry Bowl - Glacial Blue on Black Slip	Berry Bowl	55	t	844	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small berry bowl for rinsing fresh fruit and vegetables, complete with handbuilt handles. Perfect for spring mornings and summer gatherings. Also serves as a great display bowl for your citrus on your countertop when not in use.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware is made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "\\t", "type": "tab", "style": "", "detail": 2, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	6	2.8	607	\N	electric-6	t	t	2026-11-05 03:08:40.007+00	2026-11-05 02:09:22.828+00	b0kr	8.5	\N	\N	\N	t
+140	U — Med Bowl	U	Stoneware Mug - Turquoise on Speckled Terracotta	Med Bowl	55	f	857	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and handle design give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	4.4	371	16	electric-6	t	t	2026-11-06 03:16:25.348+00	2026-11-06 03:15:48.989+00	b0q5	\N	\N	\N	\N	t
+141	M-0072-PUR — Mug	M-0072-PUR	Mug - Purple glaze over Brick Red	Mug	55	f	862	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug with carvings designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "\\t", "type": "tab", "style": "", "detail": 2, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.5	4.25	442	18.25	electric-6	t	t	2026-11-06 03:36:38.802+00	2026-11-06 03:33:17.056+00	b0kn	\N	\N	\N	\N	t
 \.
 
 
@@ -6361,6 +6382,9 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 1	137	6aebe50578baae4162289504	842
 2	137	6aebe50178baae4162289502	841
 3	137	6aebe51478baae4162289506	843
+1	139	6aed3a3f293d1555e85774cd	849
+2	139	6aed3a47293d1555e85774cf	850
+3	139	6aed3a4e293d1555e85774d1	851
 1	121	6ad15e585750b2a9a399d7ef	759
 2	121	6ad15e615750b2a9a399d7f1	760
 3	121	6ad15e665750b2a9a399d7f3	761
@@ -6414,6 +6438,14 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 1	138	6aebe94f78baae4162289508	845
 2	138	6aebe95378baae416228950a	846
 3	138	6aebe95878baae416228950c	848
+1	140	6aed463e293d1555e85774d3	853
+2	140	6aed4643293d1555e85774d5	854
+3	140	6aed4648293d1555e85774d7	855
+4	140	6aed464d293d1555e85774d9	856
+1	141	6aed4a3718515ddae3c212b6	858
+2	141	6aed4a3d18515ddae3c212b8	859
+3	141	6aed4a4218515ddae3c212ba	860
+4	141	6aed4a4718515ddae3c212bc	861
 1	103	6acecf1b75531a2e21ba2cb9	679
 2	103	6acecf1f75531a2e21ba2cbb	683
 3	103	6acecf2675531a2e21ba2cbd	680
@@ -7016,6 +7048,10 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 1572	4	1	relatedProducts	78
 1573	1	25	relatedProducts	1
 1574	2	25	relatedProducts	31
+2327	1	141	relatedProducts	137
+2328	2	141	relatedProducts	124
+2329	3	141	relatedProducts	108
+2330	4	141	relatedProducts	122
 1620	4	70	relatedProducts	55
 1621	1	64	relatedProducts	55
 1622	2	64	relatedProducts	41
@@ -7118,6 +7154,10 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 2308	2	137	relatedProducts	108
 2309	3	137	relatedProducts	125
 2310	4	137	relatedProducts	124
+2315	1	140	relatedProducts	102
+2316	2	140	relatedProducts	103
+2317	3	140	relatedProducts	115
+2318	4	140	relatedProducts	134
 \.
 
 
@@ -7197,9 +7237,11 @@ COPY public.products_tags ("order", parent_id, value, id) FROM stdin;
 1	138	pour	1273
 1	137	eat	1275
 1	121	pour	1173
+1	139	eat	1279
 1	26	drink	810
 1	35	drink	811
 1	36	drink	812
+1	140	drink	1280
 1	91	drink	986
 1	92	drink	987
 1	75	drink	813
@@ -7207,6 +7249,7 @@ COPY public.products_tags ("order", parent_id, value, id) FROM stdin;
 1	101	drink	1177
 1	83	drink	814
 1	27	drink	815
+1	141	drink	1283
 1	103	drink	1179
 1	15	store	816
 1	106	drink	1180
@@ -7432,8 +7475,8 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	997d6c49-4fed-41c7-8399-355fb8a99296	2026-11-05 01:48:27.069+00	2026-11-05 03:48:27.069+00
-2	1	6aa28a1c-155b-48f5-9f3d-4784ec63ac33	2026-11-05 01:49:33.083+00	2026-11-05 03:49:33.083+00
+1	1	6230469a-5c32-4c46-933a-0fd354e6cb4a	2026-11-06 02:00:59.112+00	2026-11-06 04:00:59.112+00
+2	1	8586963a-9f58-4474-8f10-74f7a4180fd9	2026-11-06 02:01:05.24+00	2026-11-06 04:01:05.24+00
 \.
 
 
@@ -7644,7 +7687,7 @@ SELECT pg_catalog.setval('public.links_id_seq', 1, true);
 -- Name: media_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.media_id_seq', 848, true);
+SELECT pg_catalog.setval('public.media_id_seq', 862, true);
 
 
 --
@@ -7700,14 +7743,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 798, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 800, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 1420, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 1424, true);
 
 
 --
@@ -7721,14 +7764,14 @@ SELECT pg_catalog.setval('public.payload_migrations_id_seq', 16, true);
 -- Name: payload_preferences_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_id_seq', 153, true);
+SELECT pg_catalog.setval('public.payload_preferences_id_seq', 155, true);
 
 
 --
 -- Name: payload_preferences_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 683, true);
+SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 696, true);
 
 
 --
@@ -7756,21 +7799,21 @@ SELECT pg_catalog.setval('public.products_featured_image_id_seq', 31, true);
 -- Name: products_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_id_seq', 138, true);
+SELECT pg_catalog.setval('public.products_id_seq', 141, true);
 
 
 --
 -- Name: products_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_rels_id_seq', 2310, true);
+SELECT pg_catalog.setval('public.products_rels_id_seq', 2330, true);
 
 
 --
 -- Name: products_tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_tags_id_seq', 1275, true);
+SELECT pg_catalog.setval('public.products_tags_id_seq', 1283, true);
 
 
 --
@@ -12283,5 +12326,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict jXOFoU6yGQjhVn8p065bRkQcLj0waK274p71GgnBzPjePPcw1vJxLcsCcn2Go7c
+\unrestrict ae4cnMEWioB52zPhr7DhLgqUiQItwgo5NBui6bVro1g1CrqEZ6denrUSYm6jwHQ
 

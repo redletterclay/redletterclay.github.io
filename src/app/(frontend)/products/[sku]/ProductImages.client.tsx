@@ -1,7 +1,7 @@
 'use client'
 /* eslint-disable @next/next/no-img-element */
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 type MediaDoc = { url: string; alt?: string }
 
@@ -12,8 +12,11 @@ type Props = {
   soldOut?: boolean
 }
 
+const SWIPE_THRESHOLD = 50
+
 export function ProductImages({ images, title, sku, soldOut = false }: Props) {
   const [current, setCurrent] = useState(0)
+  const touchStartX = useRef<number | null>(null)
 
   const img0 = images[0] ?? null
   const img1 = images[1] ?? null
@@ -129,7 +132,23 @@ export function ProductImages({ images, title, sku, soldOut = false }: Props) {
         >
           {sold}
 
-          <div style={{ overflow: 'hidden', position: 'relative', borderRadius: '0.75rem' }}>
+          <div
+            style={{ overflow: 'hidden', position: 'relative', borderRadius: '0.75rem' }}
+            onTouchStart={(e) => {
+              touchStartX.current = e.touches[0].clientX
+            }}
+            onTouchEnd={(e) => {
+              if (touchStartX.current === null) return
+              const deltaX = e.changedTouches[0].clientX - touchStartX.current
+              touchStartX.current = null
+              if (allImages.length < 2 || Math.abs(deltaX) < SWIPE_THRESHOLD) return
+              if (deltaX < 0) {
+                setCurrent((c) => (c + 1) % allImages.length)
+              } else {
+                setCurrent((c) => (c - 1 + allImages.length) % allImages.length)
+              }
+            }}
+          >
             {allImages.map((img, i) => (
               <div key={i} style={{ display: i === current ? 'block' : 'none' }}>
                 <img
