@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict ae4cnMEWioB52zPhr7DhLgqUiQItwgo5NBui6bVro1g1CrqEZ6denrUSYm6jwHQ
+\restrict OsHirVYGWAJosGgLmHn2L8EtY3vTSIBcBGVzfShp5UIThZG7WFiAtco6QZJq4QI
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -5427,7 +5427,7 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 9	20260318_161820	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 10	20260320_033436	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 11	20260513_products_thumb_array	7	2026-05-14 00:04:04.985+00	2026-05-14 00:04:04.984+00
-1	dev	-1	2026-11-06 03:37:02.02+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-11-06 03:41:09.79+00	2026-03-16 16:07:06.694+00
 12	20260526_163601	8	2026-05-26 16:42:42.781+00	2026-05-26 16:42:42.781+00
 13	20260526_170229	9	2026-05-26 17:02:48.565+00	2026-05-26 17:02:48.565+00
 14	20260601_220009	10	2026-06-01 22:04:41.959+00	2026-06-01 22:04:41.959+00
@@ -6032,8 +6032,8 @@ COPY public.products (id, admin_title, sku, title, name, price, featured, thumb_
 131	M-0068-GRN — Mug	M-0068-GRN	Stoneware Mug - Green on Speckled Terracotta	Mug	55	f	817	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug with carvings designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "\\t", "type": "tab", "style": "", "detail": 2, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.75	4	405	17.9	electric-6	t	t	2026-10-27 02:05:33.638+00	2026-10-27 02:04:49.932+00	b0h3	\N	\N	\N	\N	t
 138	P-0017-PUR — Cruet	P-0017-PUR	Ceramic Cruet - Purple over Terracotta	Cruet	38	f	847	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small bottle perfect for broth, soy sauce, salad dressings, cooking oils, or dairy like half and half for coffee service, or milk for cereal and tea. Cork included.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Its compact size makes it easy to handle at the table while adding a thoughtful, handmade touch to everyday meals and gatherings.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "\\t", "type": "tab", "style": "", "detail": 2, "format": 0, "version": 1}, {"mode": "normal", "text": "\\t", "type": "tab", "style": "", "detail": 2, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	2.5	4.25	273	6.8	electric-6	t	t	2026-11-05 02:27:56.26+00	2026-11-05 02:27:14.545+00	b0k4	\N	\N	\N	\N	t
 137	B-0013-PUR — Berry Bowl	B-0013-PUR	Stoneware Berry Bowl - Glacial Blue on Black Slip	Berry Bowl	55	t	844	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small berry bowl for rinsing fresh fruit and vegetables, complete with handbuilt handles. Perfect for spring mornings and summer gatherings. Also serves as a great display bowl for your citrus on your countertop when not in use.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware is made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "\\t", "type": "tab", "style": "", "detail": 2, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	6	2.8	607	\N	electric-6	t	t	2026-11-05 03:08:40.007+00	2026-11-05 02:09:22.828+00	b0kr	8.5	\N	\N	\N	t
-140	U — Med Bowl	U	Stoneware Mug - Turquoise on Speckled Terracotta	Med Bowl	55	f	857	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and handle design give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	4.4	371	16	electric-6	t	t	2026-11-06 03:16:25.348+00	2026-11-06 03:15:48.989+00	b0q5	\N	\N	\N	\N	t
 141	M-0072-PUR — Mug	M-0072-PUR	Mug - Purple glaze over Brick Red	Mug	55	f	862	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug with carvings designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}, {"mode": "normal", "text": "\\t", "type": "tab", "style": "", "detail": 2, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.5	4.25	442	18.25	electric-6	t	t	2026-11-06 03:36:38.802+00	2026-11-06 03:33:17.056+00	b0kn	\N	\N	\N	\N	t
+140	M-0071-BLU — Mug	M-0071-BLU	Stoneware Mug - Turquoise on Speckled Terracotta	Mug	55	f	857	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and handle design give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	4.4	371	16	electric-6	t	t	2026-11-06 03:54:30.675+00	2026-11-06 03:15:48.989+00	b0q5	\N	\N	\N	\N	t
 \.
 
 
@@ -6438,10 +6438,6 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 1	138	6aebe94f78baae4162289508	845
 2	138	6aebe95378baae416228950a	846
 3	138	6aebe95878baae416228950c	848
-1	140	6aed463e293d1555e85774d3	853
-2	140	6aed4643293d1555e85774d5	854
-3	140	6aed4648293d1555e85774d7	855
-4	140	6aed464d293d1555e85774d9	856
 1	141	6aed4a3718515ddae3c212b6	858
 2	141	6aed4a3d18515ddae3c212b8	859
 3	141	6aed4a4218515ddae3c212ba	860
@@ -6554,6 +6550,10 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 2	35	69b99a91aa9ac96a3112112a	171
 3	35	69b99a91aa9ac96a3112112b	172
 4	35	69b99a91aa9ac96a3112112c	173
+1	140	6aed463e293d1555e85774d3	853
+2	140	6aed4643293d1555e85774d5	854
+3	140	6aed4648293d1555e85774d7	855
+4	140	6aed464d293d1555e85774d9	856
 1	36	69b99a95aa9ac96a3112112d	175
 2	36	69b99a95aa9ac96a3112112e	176
 3	36	69b99a95aa9ac96a3112112f	177
@@ -7154,10 +7154,10 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 2308	2	137	relatedProducts	108
 2309	3	137	relatedProducts	125
 2310	4	137	relatedProducts	124
-2315	1	140	relatedProducts	102
-2316	2	140	relatedProducts	103
-2317	3	140	relatedProducts	115
-2318	4	140	relatedProducts	134
+2331	1	140	relatedProducts	102
+2332	2	140	relatedProducts	103
+2333	3	140	relatedProducts	115
+2334	4	140	relatedProducts	134
 \.
 
 
@@ -7241,7 +7241,6 @@ COPY public.products_tags ("order", parent_id, value, id) FROM stdin;
 1	26	drink	810
 1	35	drink	811
 1	36	drink	812
-1	140	drink	1280
 1	91	drink	986
 1	92	drink	987
 1	75	drink	813
@@ -7253,6 +7252,7 @@ COPY public.products_tags ("order", parent_id, value, id) FROM stdin;
 1	103	drink	1179
 1	15	store	816
 1	106	drink	1180
+1	140	drink	1284
 1	107	drink	1181
 1	41	drink	819
 1	95	drink	1183
@@ -7743,14 +7743,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 800, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 801, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 1424, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 1426, true);
 
 
 --
@@ -7806,14 +7806,14 @@ SELECT pg_catalog.setval('public.products_id_seq', 141, true);
 -- Name: products_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_rels_id_seq', 2330, true);
+SELECT pg_catalog.setval('public.products_rels_id_seq', 2334, true);
 
 
 --
 -- Name: products_tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_tags_id_seq', 1283, true);
+SELECT pg_catalog.setval('public.products_tags_id_seq', 1284, true);
 
 
 --
@@ -12326,5 +12326,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict ae4cnMEWioB52zPhr7DhLgqUiQItwgo5NBui6bVro1g1CrqEZ6denrUSYm6jwHQ
+\unrestrict OsHirVYGWAJosGgLmHn2L8EtY3vTSIBcBGVzfShp5UIThZG7WFiAtco6QZJq4QI
 
