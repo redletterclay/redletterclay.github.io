@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict IgeNQxD19F2wx0f1ie1C1wGxCVGWrAOEg1rXodFp0rEgdhCSQB4PrBnTEAbtaus
+\restrict e4pY5HTm7MU6QTABc6WSFQv9IBrBUNem3U0c6Jdombfkr97xYfYWjfhqi96V6IG
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -5439,7 +5439,7 @@ COPY public.payload_locked_documents_rels (id, "order", parent_id, path, pages_i
 COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM stdin;
 3	20260317_155832	2	2026-03-17 16:08:56.588+00	2026-03-17 16:08:56.587+00
 4	20260317_163359	3	2026-03-17 16:35:45.671+00	2026-03-17 16:35:45.67+00
-1	dev	-1	2026-11-11 04:19:05.912+00	2026-03-16 16:07:06.694+00
+1	dev	-1	2026-11-11 04:19:47.804+00	2026-03-16 16:07:06.694+00
 6	20260318_191703	5	2026-03-18 19:17:08.293+00	2026-03-18 19:17:08.293+00
 2	20260317_061117	1	2026-03-17 06:12:15.302+00	2026-03-17 06:12:15.302+00
 5	20260318_181856	4	2026-03-18 18:25:43.589+00	2026-03-18 18:25:43.589+00
@@ -5568,7 +5568,6 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 101	collection-products-10	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-11 14:26:25.114+00	2026-05-11 14:26:25.115+00
 135	collection-products-96	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-10-30 01:06:15.07+00	2026-10-15 15:32:45.278+00
 98	collection-products-82	{"fields": {"_index-1": {"tabIndex": 0}, "_index-1-0-1": {"tabIndex": 0}}}	2026-10-15 01:19:10.856+00	2026-05-11 14:10:27.439+00
-123	collection-products-105	{"fields": {"_index-1-0-1": {"tabIndex": 1}}}	2026-10-30 15:26:51.776+00	2026-10-14 02:13:05.69+00
 71	collection-products-86	{"fields": {"_index-1": {"tabIndex": 1}}}	2026-05-14 20:03:35.183+00	2026-05-02 02:18:37.222+00
 125	collection-products-104	{"fields": {"_index-1-0-1": {"tabIndex": 1}}}	2026-10-15 15:40:31.339+00	2026-10-14 03:57:02.015+00
 72	collection-products-87	{"fields": {"_index-1": {"tabIndex": 0}, "_index-1-0-1": {"tabIndex": 0}}}	2026-11-05 01:51:35.635+00	2026-05-02 02:25:58.686+00
@@ -5586,6 +5585,7 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 149	collection-products-123	{"fields": {"_index-1-0-1": {"tabIndex": 0}}}	2026-11-05 02:40:47.696+00	2026-10-30 01:23:16.397+00
 155	collection-products-141	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-11-06 03:33:19.514+00	2026-11-06 03:33:19.138+00
 113	collection-products-93	{"fields": {"_index-1-0-1": {"tabIndex": 0}}}	2026-11-11 04:15:34.661+00	2026-10-12 21:53:32.943+00
+123	collection-products-105	{"fields": {"_index-1-0-1": {"tabIndex": 0}}}	2026-11-17 20:19:25.97+00	2026-10-14 02:13:05.69+00
 117	collection-products-99	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-10-16 16:20:51.786+00	2026-10-13 00:35:58.879+00
 120	collection-products-102	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-10-16 16:21:51.507+00	2026-10-13 01:35:38.074+00
 126	collection-products-107	{"fields": {"_index-1-0-1": {"tabIndex": 2}}}	2026-10-16 16:22:34.413+00	2026-10-14 13:31:26.157+00
@@ -5714,7 +5714,6 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 401	\N	40	user	1
 402	\N	41	user	1
 403	\N	108	user	1
-670	\N	123	user	1
 583	\N	132	user	1
 585	\N	65	user	1
 244	\N	62	user	1
@@ -5780,6 +5779,7 @@ COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FR
 697	\N	150	user	1
 704	\N	156	user	1
 705	\N	113	user	1
+706	\N	123	user	1
 \.
 
 
@@ -6013,11 +6013,11 @@ COPY public.products (id, admin_title, sku, title, name, price, featured, thumb_
 60	T-0007-YEL — Petal Tray	T-0007-YEL	Petal Tray - Yellow & White	Petal Tray	28	f	394	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray glazed in yellow and white, designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	0.75	110	\N	electric-6	t	t	2026-08-28 17:27:50.57+00	2026-03-19 01:07:34.802+00	a29	5.5	\N	\N	\N	f
 132	T-0023-PNK — Petal Tray	T-0023-PNK	Petal Tray - Speckled Pink & White	Petal Tray	28	f	820	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray glazed in white, designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	0.75	110		electric-6	t	t	2026-10-30 15:22:56.48+00	2026-10-30 00:43:18.92+00	b0jni	5.5	\N	\N	\N	t
 9	C-0001-BRN — SM Cups	C-0001-BRN	Faceted Sipping Cups - Brown	SM Cups	42	f	36	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A pair of small faceted cups designed for sipping sake, whiskey, tequila, or espresso. The hand-faceted surfaces create subtle angles that catch the light while offering a comfortable, tactile grip. Their compact size makes them ideal for intimate pours and slow, intentional sipping.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A versatile addition to any barware or espresso setup, they balance function, craftsmanship, and everyday elegance.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	2.25	2.4	123	3.4	electric-6	t	t	2026-09-15 23:59:44.152+00	2026-03-17 18:14:51.874+00	az	\N	\N	\N	\N	f
-105	J-0009-TAN — Jar	J-0009-TAN	Ceramic Jar - Honey & Pink	Jar	75	t	840	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A ceramic lidded jar finished in a honey glaze, offering a surface with subtle depth and variation. Topped with a handmade pink knob that encourages the hand to see what's hidden inside. Interior glazed purple.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Both functional and decorative, this stoneware jar transitions beautifully from kitchen counter to open shelving, adding one-of-a-kind visual interest, intention, and artisan character to your everyday storage.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	5	6.5	619	22.5	electric-6	t	t	2026-10-30 15:26:59.437+00	2026-10-14 02:13:04.148+00	b0jr	\N	\N	\N	\N	t
 61	T-0008-YEL — Petal Tray	T-0008-YEL	Petal Tray - Yellow	Petal Tray	28	f	406	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray glazed in yellow, designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	0.75	110	\N	electric-6	t	t	2026-08-28 17:27:50.619+00	2026-03-19 01:20:19.133+00	a2e	5.5	\N	\N	\N	f
 59	T-0006-GRN — Petal Tray	T-0006-GRN	Petal Tray - Green	Petal Tray	28	f	390	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray glazed in a rustic bluish green glaze and white tip, designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	9.75	110	\N	electric-6	t	t	2026-08-28 17:27:50.668+00	2026-03-19 00:35:54.966+00	a2r	5.5	\N	\N	\N	f
 7	B-0007-BLK — MD Bowl	B-0007-BLK	Carved Stoneware Bowl - Black	MD Bowl	52	f	28	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A medium wheel thrown bowl perfect for entrees. Dipped in a black glaze, with carvings decorating the outside providing a tactile experience and visual interest.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware bowls are made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	6.75	2.75	471	24	electric-6	t	t	2026-09-15 23:59:44.328+00	2026-03-17 18:14:45.237+00	b05	\N	\N	\N	\N	f
 86	B-0009-GRN — Berry Bowl	B-0009-GRN	Stoneware Berry Bowl - Green	Berry Bowl	48	t	530	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small berry bowl for rinsing fresh fruit and vegetables, complete with handbuilt handles. Perfect for spring mornings and summer gatherings. Decorated with a verdant green dip glaze.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "start", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware is made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	6	3	526	\N	electric-6	t	t	2026-09-15 23:59:44.535+00	2026-05-02 02:18:35.65+00	b0e	\N	\N	\N	\N	f
+105	J-0009-TAN — Jar	J-0009-TAN	Ceramic Jar - Honey & Pink	Jar	75	t	840	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A ceramic lidded jar finished in a honey glaze, offering a surface with subtle depth and variation. Topped with a handmade pink knob that encourages the hand to see what's hidden inside.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Both functional and decorative, this stoneware jar transitions beautifully from kitchen counter to open shelving, adding one-of-a-kind visual interest, intention, and artisan character to your everyday storage.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	5	6.5	619	22.5	electric-6	t	t	2026-11-17 20:19:31.851+00	2026-10-14 02:13:04.148+00	b0jr	\N	\N	\N	\N	t
 112	T-0016-TAN — Petal Tray	T-0016-TAN	Ceramic Petal Tray - Tan	Petal Tray	28	f	725	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A slipcast ceramic petal tray designed to add a delicate, sculptural touch to your table or vanity. The gently curved form is perfect for serving condiments, dipping sauces, olives, tea bags, or small bites, making it a charming addition to dinner parties, charcuterie boards, and everyday meals.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Beyond the table, this versatile stoneware tray doubles as a jewelry dish for rings and earrings or a catchall for small essentials. Both decorative and functional, the handmade ceramic design brings subtle color, texture, and artisan craftsmanship to any space.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	3.6	0.75	110	\N	electric-6	t	t	2026-10-17 01:27:58.369+00	2026-10-14 15:31:40.736+00	b0w	5.5	\N	\N	\N	t
 27	M-0011-BLU — Mug	M-0011-BLU	Ceramic Mug - Glacial Blue	Mug	50	f	129	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "An ample wheel-thrown mug designed for coffee and tea lovers alike. The curved body and thick handle give the form a distinctive silhouette while maintaining a comfortable grip in hand.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Each mug carries subtle variation and layered detail. Crafted from durable stoneware, it’s a functional yet expressive piece made to elevate your daily coffee or tea ritual. Cared for well, it will warm your hands for many winters to come.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	3.75	4.9	450	21.2	electric-6	t	t	2026-06-02 02:22:48.906+00	2026-03-17 18:16:13.402+00	ae	\N	\N	\N	\N	f
 87	B-0010-GRN — Berry Bowl	B-0010-GRN	Stoneware Berry Bowl - Green	Berry Bowl	48	t	533	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "A small berry bowl for rinsing fresh fruit and vegetables, complete with handbuilt handles. Perfect for spring mornings and summer gatherings. Decorated with a verdant green dip glaze.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}, {"type": "paragraph", "format": "left", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Durable stoneware is made to last a lifetime — bringing beauty, balance, and intention to the meals you return to every day.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": null, "textStyle": "", "textFormat": 0}], "direction": null}}	5.75	2.75	526	\N	electric-6	t	t	2026-06-02 02:22:49.508+00	2026-05-02 02:25:35.506+00	b0f	\N	\N	\N	\N	f
@@ -6397,9 +6397,6 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 3	10	69b99a1faa9ac96a311210cc	43
 1	29	69b99a76aa9ac96a31121111	140
 2	29	69b99a76aa9ac96a31121112	141
-1	105	6acee5da75531a2e21ba2cc7	688
-2	105	6acee5e575531a2e21ba2cc9	689
-3	105	6acee5eb75531a2e21ba2ccb	690
 3	29	69b99a76aa9ac96a31121113	142
 4	29	69b99a76aa9ac96a31121114	143
 1	34	69b99a8daa9ac96a31121125	165
@@ -6487,6 +6484,9 @@ COPY public.products_images (_order, _parent_id, id, image_id) FROM stdin;
 2	144	6af3eaf87799e92e9fed4589	879
 3	144	6af3eafc7799e92e9fed458b	880
 4	144	6af3eb007799e92e9fed458d	881
+1	105	6acee5da75531a2e21ba2cc7	688
+2	105	6acee5e575531a2e21ba2cc9	689
+3	105	6acee5eb75531a2e21ba2ccb	690
 1	103	6acecf1b75531a2e21ba2cb9	679
 2	103	6acecf1f75531a2e21ba2cbb	683
 3	103	6acecf2675531a2e21ba2cbd	680
@@ -7077,13 +7077,9 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 1545	3	72	relatedProducts	90
 1546	4	72	relatedProducts	66
 2278	1	136	relatedProducts	123
-2282	1	105	relatedProducts	112
 1550	1	63	relatedProducts	59
 1551	2	63	relatedProducts	66
 1552	3	63	relatedProducts	57
-2283	2	105	relatedProducts	113
-2284	3	105	relatedProducts	120
-2285	4	105	relatedProducts	118
 1569	1	1	relatedProducts	25
 1570	2	1	relatedProducts	26
 1571	3	1	relatedProducts	11
@@ -7214,6 +7210,10 @@ COPY public.products_rels (id, "order", parent_id, path, products_id) FROM stdin
 2332	2	140	relatedProducts	103
 2333	3	140	relatedProducts	115
 2334	4	140	relatedProducts	134
+2370	1	105	relatedProducts	112
+2371	2	105	relatedProducts	113
+2372	3	105	relatedProducts	120
+2373	4	105	relatedProducts	118
 \.
 
 
@@ -7249,7 +7249,6 @@ COPY public.products_tags ("order", parent_id, value, id) FROM stdin;
 1	79	drink	789
 1	43	drink	896
 1	78	drink	897
-1	105	store	1266
 1	44	drink	898
 1	11	drink	899
 1	12	drink	900
@@ -7331,6 +7330,7 @@ COPY public.products_tags ("order", parent_id, value, id) FROM stdin;
 2	110	eat	1297
 1	42	drink	825
 1	109	eat	1197
+1	105	store	1298
 2	109	display	1198
 1	114	display	1199
 2	114	eat	1200
@@ -7535,8 +7535,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	7ddf9efe-f781-4477-9639-d7be4aaa9c36	2026-11-11 03:51:22.133+00	2026-11-11 05:51:22.133+00
-2	1	e1ed1720-a7db-469e-a8e3-d4b1771de281	2026-11-11 03:51:27.945+00	2026-11-11 05:51:27.945+00
+1	1	2f1d7342-0f13-4cca-b9d3-e49d880d0366	2026-11-17 20:19:14.243+00	2026-11-17 22:19:14.243+00
 \.
 
 
@@ -7803,14 +7802,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 803, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 804, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 1430, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 1432, true);
 
 
 --
@@ -7831,7 +7830,7 @@ SELECT pg_catalog.setval('public.payload_preferences_id_seq', 156, true);
 -- Name: payload_preferences_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 705, true);
+SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 706, true);
 
 
 --
@@ -7866,14 +7865,14 @@ SELECT pg_catalog.setval('public.products_id_seq', 145, true);
 -- Name: products_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_rels_id_seq', 2369, true);
+SELECT pg_catalog.setval('public.products_rels_id_seq', 2373, true);
 
 
 --
 -- Name: products_tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.products_tags_id_seq', 1297, true);
+SELECT pg_catalog.setval('public.products_tags_id_seq', 1298, true);
 
 
 --
@@ -12386,5 +12385,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict IgeNQxD19F2wx0f1ie1C1wGxCVGWrAOEg1rXodFp0rEgdhCSQB4PrBnTEAbtaus
+\unrestrict e4pY5HTm7MU6QTABc6WSFQv9IBrBUNem3U0c6Jdombfkr97xYfYWjfhqi96V6IG
 
