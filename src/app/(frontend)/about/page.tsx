@@ -7,49 +7,75 @@ import { Last4Events } from '@/components/UpcomingEvents/Last4Events'
 export const revalidate = 3600
 
 export default async function AboutPage() {
-
   return (
     <main style={{ overflowX: 'hidden' }}>
-      <div className="container-fluid about-hero-container" style={{ paddingLeft: 0, paddingRight: '1rem' }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
-
+      <div
+        className="container-fluid about-hero-container"
+        style={{ paddingLeft: 0, paddingRight: '1rem' }}
+      >
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
           {/* Red statement column */}
           <div
             className="bg-red about-text-col"
             style={{ flex: '1 1 300px', maxWidth: '58.33%', padding: '2rem 3rem 3rem 3rem' }}
           >
             <div className="statement-lead animate__animated animate__fadeIn">
-              <h1 className="ital" style={{ marginBottom: '1.5rem', color: 'white' }}>Hi!</h1>
+              <h1 className="ital" style={{ marginBottom: '1.5rem', color: 'white' }}>
+                Hi!
+              </h1>
 
               <h2 style={{ paddingTop: '0.75rem', color: 'white' }}>About Me</h2>
               <p>
                 Red Letter Clay is operated by Davey Ball. By day I&rsquo;m a{' '}
                 <a href="https://www.raygun.org" target="_blank" rel="noopener noreferrer">
                   digital marketer, designer and video editor
-                </a>.
+                </a>
+                .
               </p>
               <p>
                 I sell at a{' '}
-                <Link href="/shop/#shop-in-person">couple stores in the Chicago area</Link>, and you can find me at a few
-                markets in-person a few times a year. You can subscribe to my mailing list below for
-                occasional updates throughout the year.
+                <Link href="/shop/#shop-in-person">couple stores in the Chicago area</Link>, and you
+                can find me at a few markets in-person a few times a year. You can subscribe to my
+                mailing list below for occasional updates throughout the year.
               </p>
 
               <h2 style={{ paddingTop: '0.75rem', color: 'white' }}>Artist Statement</h2>
               <p>
                 I was brought up in a{' '}
-                <a href="https://www.gnarwareworkshop.com" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.gnarwareworkshop.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   community studio
                 </a>{' '}
-                in Chicago, IL. I like to work with various stoneware clay bodies — often combining wheel
-                thrown pieces with hand built techniques. I strive to create straightforward work that
-                focuses on the natural material beauty of clay and glaze to craft functional pots that
-                stand alone in their stillness as sculptural objects when not in use.
+                in Chicago, IL. I like to work with various stoneware clay bodies — often combining
+                wheel thrown pieces with hand built techniques. I strive to create straightforward
+                work that focuses on the natural material beauty of clay and glaze to craft
+                functional pots that stand alone in their stillness as sculptural objects when not
+                in use.
               </p>
               <p>
-                I want my pots to be picked up, touched, used and enjoyed. When you enjoy a well made pot
-                you find many uses for it and develop a connection to its maker — something that I find
-                wonderfully unique to clay as my chosen medium.
+                I want my pots to be picked up, touched, used and enjoyed. When you enjoy a well
+                made pot you find many uses for it and develop a connection to its maker — something
+                that I find wonderfully unique to clay as my chosen medium.
+              </p>
+
+              <h2 style={{ paddingTop: '0.75rem', color: 'white' }}>Why Red Letter Clay?</h2>
+              <p>
+                Historically, the most memorable days of the year were marked on calendars in red
+                ink. Red Letter Clay is built on a simple idea: every day deserves that kind of
+                attention. I make durable, handmade stoneware meant to be used, not saved in a
+                cabinet for holidays. By bringing real craftsmanship to the bowls, cups and mugs you
+                reach for most, an ordinary meal stops feeling routine and starts feeling like an
+                occasion.
               </p>
             </div>
           </div>
@@ -65,7 +91,6 @@ export default async function AboutPage() {
               style={{ width: '100%', display: 'block', padding: '3rem' }}
             />
           </div>
-
         </div>
       </div>
 
@@ -84,6 +109,11 @@ export function generateMetadata(): Metadata {
     title: 'About Davey Ball Chicago Potter & Ceramic Artist',
     description:
       'Meet Davey Ball, Chicago-based ceramic artist behind Red Letter Clay. Discover the story behind thoughtfully made pottery inspired by Japanese and mid-century ceramics.',
-    openGraph: mergeOpenGraph({ title: 'About Davey Ball Chicago Potter & Ceramic Artist', description: 'Meet Davey Ball, Chicago-based ceramic artist behind Red Letter Clay. Discover the story behind thoughtfully made pottery inspired by Japanese and mid-century ceramics.', url: '/about' }),
+    openGraph: mergeOpenGraph({
+      title: 'About Davey Ball Chicago Potter & Ceramic Artist',
+      description:
+        'Meet Davey Ball, Chicago-based ceramic artist behind Red Letter Clay. Discover the story behind thoughtfully made pottery inspired by Japanese and mid-century ceramics.',
+      url: '/about',
+    }),
   }
 }
