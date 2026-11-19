@@ -357,6 +357,27 @@ div.eyebrow {
   font-family: var(--font-heading);
 }
 
+.collection-title-heading {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  line-height: 1.05;
+}
+
+.collection-title-icon {
+  opacity: 0.7;
+}
+
+.collection-title-heading i.collection-title-icon:last-of-type {
+  transform: scaleX(-1);
+}
+
+@media (max-width: 768px) {
+  .collection-title-heading {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    gap: 0.5rem;
+  }
+}
+
 /* ─── RLC Color Utilities ─────────────────────────────────────────────────── */
 .fc-1 { color: #c12121; }
 .fc-2 { color: #F9E1B7; }

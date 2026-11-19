@@ -2340,6 +2340,14 @@ export interface Faq {
 export interface CollectionTitle {
   id: number;
   title?: string | null;
+  /**
+   * FontAwesome icon code, e.g. "fa-snowflake" — renders as <i class="fa-solid fa-snowflake">. Leave blank for no icon.
+   */
+  icon?: string | null;
+  /**
+   * Hex color for the icon, e.g. "#E8DECC".
+   */
+  iconColor?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -2831,6 +2839,8 @@ export interface FaqSelect<T extends boolean = true> {
  */
 export interface CollectionTitleSelect<T extends boolean = true> {
   title?: T;
+  icon?: T;
+  iconColor?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

@@ -70,12 +70,13 @@ export default async function AboutPage() {
 
               <h2 style={{ paddingTop: '0.75rem', color: 'white' }}>Why Red Letter Clay?</h2>
               <p>
-                Historically, the most memorable days of the year were marked on calendars in red
-                ink. Red Letter Clay is built on a simple idea: every day deserves that kind of
-                attention. I make durable, handmade stoneware meant to be used, not saved in a
-                cabinet for holidays. By bringing real craftsmanship to the bowls, cups and mugs you
-                reach for most, an ordinary meal stops feeling routine and starts feeling like an
-                occasion.
+                For centuries, calendars marked special days in red ink. Red Letter Clay starts from
+                the idea that any day can be one.
+              </p>
+              <p>
+                I make durable, handmade stoneware meant for everyday use: the bowls, cups and mugs
+                you reach for most, not the ones saved in a cabinet for holidays. Pieces like these
+                shouldn't wait for an occasion. Used every day, it makes one.
               </p>
             </div>
           </div>

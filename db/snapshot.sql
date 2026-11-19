@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict Fgyc6aOHu2r6tVeIeqm0gUV6Wy7Pie1R8jRs4jULLL7SwOdR0S0jAZWLPXcihfY
+\restrict NRogyGd4wpVbeEw3TRjbnFHlDZbxlCsrZdXiCi82YcmInhNzzcVsirmbefHC1na
 
 -- Dumped from database version 16.13 (Debian 16.13-1.pgdg13+1)
 -- Dumped by pg_dump version 16.13 (Debian 16.13-1.pgdg13+1)
@@ -1085,7 +1085,9 @@ CREATE TABLE public.collection_title (
     id integer NOT NULL,
     title character varying,
     updated_at timestamp(3) with time zone,
-    created_at timestamp(3) with time zone
+    created_at timestamp(3) with time zone,
+    icon character varying,
+    icon_color character varying DEFAULT '#E8DECC'::character varying
 );
 
 
@@ -3923,8 +3925,8 @@ COPY public.categories_breadcrumbs (_order, _parent_id, id, doc_id, url, label) 
 -- Data for Name: collection_title; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.collection_title (id, title, updated_at, created_at) FROM stdin;
-1	Set the Table for Fall	2026-10-13 01:39:30.076+00	2026-04-10 15:47:29.768+00
+COPY public.collection_title (id, title, updated_at, created_at, icon, icon_color) FROM stdin;
+1	Shop One-of-a-Kind Gifts to Enjoy Daily	2026-11-19 17:48:27.615+00	2026-04-10 15:47:29.768+00	fa-gifts	#E8DECC
 \.
 
 
@@ -5439,7 +5441,6 @@ COPY public.payload_locked_documents_rels (id, "order", parent_id, path, pages_i
 COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM stdin;
 3	20260317_155832	2	2026-03-17 16:08:56.588+00	2026-03-17 16:08:56.587+00
 4	20260317_163359	3	2026-03-17 16:35:45.671+00	2026-03-17 16:35:45.67+00
-1	dev	-1	2026-11-18 17:39:00.708+00	2026-03-16 16:07:06.694+00
 6	20260318_191703	5	2026-03-18 19:17:08.293+00	2026-03-18 19:17:08.293+00
 2	20260317_061117	1	2026-03-17 06:12:15.302+00	2026-03-17 06:12:15.302+00
 5	20260318_181856	4	2026-03-18 18:25:43.589+00	2026-03-18 18:25:43.589+00
@@ -5447,6 +5448,7 @@ COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM st
 8	20260317_180300	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 9	20260318_161820	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
 10	20260320_033436	1	2026-03-20 04:23:22.711+00	2026-03-20 04:23:22.711+00
+1	dev	-1	2026-11-19 18:01:49.242+00	2026-03-16 16:07:06.694+00
 11	20260513_products_thumb_array	7	2026-05-14 00:04:04.985+00	2026-05-14 00:04:04.984+00
 12	20260526_163601	8	2026-05-26 16:42:42.781+00	2026-05-26 16:42:42.781+00
 13	20260526_170229	9	2026-05-26 17:02:48.565+00	2026-05-26 17:02:48.565+00
@@ -7535,7 +7537,7 @@ COPY public.users (id, name, updated_at, created_at, email, reset_password_token
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	1	2f1d7342-0f13-4cca-b9d3-e49d880d0366	2026-11-17 20:19:14.243+00	2026-11-17 22:19:14.243+00
+1	1	5629e816-a5b4-46c0-9ba0-f978253c818a	2026-11-19 17:47:13.582+00	2026-11-19 19:47:13.582+00
 \.
 
 
@@ -7802,14 +7804,14 @@ SELECT pg_catalog.setval('public.payload_kv_id_seq', 1, false);
 -- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 804, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 817, true);
 
 
 --
 -- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 1432, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 1445, true);
 
 
 --
@@ -12385,5 +12387,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Fgyc6aOHu2r6tVeIeqm0gUV6Wy7Pie1R8jRs4jULLL7SwOdR0S0jAZWLPXcihfY
+\unrestrict NRogyGd4wpVbeEw3TRjbnFHlDZbxlCsrZdXiCi82YcmInhNzzcVsirmbefHC1na
 

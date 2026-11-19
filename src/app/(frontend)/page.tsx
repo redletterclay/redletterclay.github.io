@@ -55,6 +55,8 @@ export default async function HomePage() {
     )
     .filter(Boolean)
   const collectionTitle = (collectionTitleRes as any)?.title || null
+  const collectionTitleIcon = (collectionTitleRes as any)?.icon || null
+  const collectionTitleIconColor = (collectionTitleRes as any)?.iconColor || '#E8DECC'
   const heroImagesData = heroImagesRes as any
   const heroImages: { url: string; alt?: string }[] = (heroImagesData?.images || [])
     .map((row: any) =>
@@ -182,17 +184,32 @@ export default async function HomePage() {
           <>
             {collectionTitle && (
               <h2
-                className="fc-1"
+                className="fc-1 collection-title-heading"
                 style={{
-                  textAlign: 'center',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '1rem',
                   paddingInline: '1rem',
                   paddingBlock: '2rem',
                   fontWeight: '800',
-                  fontSize: '4rem',
-                  lineHeight: '4.1rem',
                 }}
               >
-                {collectionTitle}
+                {collectionTitleIcon && (
+                  <i
+                    className={`fa-solid ${collectionTitleIcon} collection-title-icon`}
+                    style={{ flexShrink: 0, color: collectionTitleIconColor }}
+                    aria-hidden="true"
+                  />
+                )}
+                <span style={{ minWidth: 0, textAlign: 'center' }}>{collectionTitle}</span>
+                {collectionTitleIcon && (
+                  <i
+                    className={`fa-solid ${collectionTitleIcon} collection-title-icon`}
+                    style={{ flexShrink: 0, color: collectionTitleIconColor }}
+                    aria-hidden="true"
+                  />
+                )}
               </h2>
             )}
 
