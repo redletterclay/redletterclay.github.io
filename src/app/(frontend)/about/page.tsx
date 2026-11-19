@@ -76,7 +76,7 @@ export default async function AboutPage() {
               <p>
                 I make durable, handmade stoneware meant for everyday use: the bowls, cups and mugs
                 you reach for most, not the ones saved in a cabinet for holidays. Pieces like these
-                shouldn't wait for an occasion. Used every day, it makes one.
+                shouldn&apos;t wait for an occasion. Used every day, it makes one.
               </p>
             </div>
           </div>
